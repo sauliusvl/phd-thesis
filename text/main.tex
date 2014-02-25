@@ -1,15 +1,144 @@
 \documentclass[a4paper]{article}
 
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{amsmath, amssymb}
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage[bookmarks=false,pdfstartview=FitH,colorlinks=false]{hyperref}
+\usepackage{fancyhdr}
+
+\def\({\left(}
+\def\){\right)}
+\def\[{\left[}
+\def\]{\right]}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqq}{\begin{equation*}}
+\newcommand{\eeqq}{\end{equation*}}
+\newcommand\beqa{\begin{eqnarray}}
+\newcommand\eeqa{\end{eqnarray}}
+
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\ord}[1]{\mathcal{O}\left(#1\right)}
+\newcommand{\adsfive}{AdS_5 \times S^5}
+\newcommand{\pmu}{{\bf P}\mu}
+
+\hypersetup{pdfborder = {0 0 0}}
+
+\numberwithin{equation}{section}
+
+\setlength{\cftaftertoctitleskip}{40pt}
+\setlength{\cftbeforesubsecskip}{5pt}
+
+\linespread{1.5}
 
 \begin{document}
 
-\title{\bf PhD Thesis}
+\begin{titlepage}
 
-\author{Saulius Valatka}
+\thispagestyle{empty}
+
+\begin{center}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.25\textwidth]{../graphics/kcl_logo}
+\end{figure}
+
+\vspace*{50pt}
+
+\LARGE
+\textbf{Exact Results in $\N=4$ Super Yang-Mills}
+
+\vspace{40pt}
+
+\Large
+Saulius Valatka
+
+\vspace{30pt}
+
+\small
+\it{Department of Mathematics, King's College London, \\
+Strand, London WC2R 2LS, U.K.}
+
+\vspace{230pt}
+
+\Large\rm
+Thesis supervisor Dr. Nikolay Gromov
+
+\vspace{30pt}
+
+\small
+Thesis submitted in partial fulfilment of the requirements \\
+of the Degree of Doctor of Philosophy
+
+\vspace{40pt}
+
+\large
+June 2014
+
+\end{center}
+
+\end{titlepage}
+
+
+\newgeometry{top=30mm, bottom=25mm, left=40mm, right=25mm}
+\pagestyle{fancy}
 
 
 
-\maketitle
+\input{abstract.tex}
+
+\newpage 
+
+%\input{acknowledgements.tex}
+
+%\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{introduction.tex}
+
+\newpage 
+
+\input{cft.tex}
+
+\newpage 
+
+\input{strings.tex}
+
+\newpage 
+
+\input{integrability.tex}
+
+\newpage 
+
+\input{exact.tex}
+
+\newpage 
+
+\input{conclusions.tex}
+
+\newpage
+
+\bibliography{bibliography}
 
 
+
+\begin{thebibliography} {9}
+
+%\cite{Maldacena:1997re}
+\bibitem{Maldacena:1997re} 
+  J.~M.~Maldacena,
+  ``The Large N limit of superconformal field theories and supergravity,''
+  Adv.\ Theor.\ Math.\ Phys.\  {\bf 2}, 231 (1998)
+  [hep-th/9711200].
+  %%CITATION = HEP-TH/9711200;%%
+  %9597 citations counted in INSPIRE as of 25 Feb 2014
+
+\end{thebibliography}
+  
 \end{document}
