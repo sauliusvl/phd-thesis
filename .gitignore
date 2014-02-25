@@ -1,2 +1,6 @@
 *.aux
 *.log
+
+*.toc
+text/*.dvi
+text/*.pdf
