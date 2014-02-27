@@ -8,6 +8,8 @@
 \usepackage{fancyhdr}
 \usepackage{tikz}
 \usepackage{verbatim}
+\usepackage{titlesec}
+
 \usetikzlibrary{snakes}
 
 \def\({\left(}
@@ -33,6 +35,9 @@
 
 \setlength{\cftaftertoctitleskip}{40pt}
 \setlength{\cftbeforesubsecskip}{5pt}
+
+\titlespacing*{\section}{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
 
 \linespread{1.5}
 
@@ -109,9 +114,9 @@ June 2014
 
 \input{cft.tex}
 
-\newpage 
+%\newpage 
 
-\input{strings.tex}
+%\input{strings.tex}
 
 \newpage 
 
@@ -133,14 +138,30 @@ June 2014
 
 \begin{thebibliography} {9}
 
+%\cite{Veneziano:1968}
+\bibitem{Veneziano:1968} 
+  G.~Veneziano, 
+  ``Construction of a crossing - symmetric, Regge behaved amplitude for linearly rising trajectories,'' 
+  Nuovo.\ Cim.\ A57, 190 (1968).
+  
+%\cite{Wilson:1974}
+\bibitem{Wilson:1974}
+  K.~G.~Wilson,
+  ``Confinement of quarks,''
+  Phys.\ Rev.\ D10 2445-2459 (1974).
+  
+%\cite{THooft:1974}
+\bibitem{THooft:1974} 
+  G.~'t Hooft, 
+  ``A planar diagram theory for strong interactions,'' 
+  Nucl.\ Phys.\ B72.\ 461-473 (1974).
+
 %\cite{Maldacena:1997re}
 \bibitem{Maldacena:1997re} 
   J.~M.~Maldacena,
   ``The Large N limit of superconformal field theories and supergravity,''
   Adv.\ Theor.\ Math.\ Phys.\  {\bf 2}, 231 (1998)
   [hep-th/9711200].
-  %%CITATION = HEP-TH/9711200;%%
-  %9597 citations counted in INSPIRE as of 25 Feb 2014
 
 \end{thebibliography}
   
