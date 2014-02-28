@@ -12,7 +12,7 @@ Another (and probably the main) reason why $\N=4$ has been receiving so much att
 The theory has been surprising the theoretical physics community from the very beginning: it is a rare instance of a conformal theory in dimensions higher than two, it has a dual description in terms of a string theory and more recently it was discovered to be integrable. 
 All of these properties give reasonable hope for actually solving the theory exactly, something that has never been achieved before for any four dimensional interacting QFT.
 
-In the remainder of the section we give a proper introduction to the subject from a historic point of view focusing on its integrability aspect, for it is integrability that allows one to actually find exact results in the theory. We then give an overview of the thesis itself, emphasizing which parts of the text that are reviews of known material and which parts constitute original work.
+In the remainder of the section we give a proper introduction to the subject from a historic point of view focusing on its integrability aspect, for it is integrability that allows one to actually find exact results in the theory. We then give an overview of the thesis itself, emphasizing which parts of the text are reviews of known material and which parts constitute original work.
 
 \subsection{Brief history of the subject}
 
@@ -21,9 +21,9 @@ Ultimately it worked: the theory of strong interactions, quantum chromodynamics 
 
 However nature did not give away her secrets without a fight. 
 For some time it was though that strong interactions were described by a theory of vibrating strings, as it seemed to incorporate the so-called Regge trajectories observed in experiments \cite{Veneziano:1968}. 
-Even after discovering QCD as a Yang-Mills gauge theory, stringy aspects of it were still evident and largely mysterious. 
+Even after discovering QCD, which is a Yang-Mills gauge theory, stringy aspects of it were still evident and largely mysterious. 
 Most notably lattice gauge theory calculations at strong coupling suggested that surfaces of color-electric fluxes between quarks could be given the interpretation of stretched strings \cite{Wilson:1974}, thus an idea of a gauge-string duality was starting to emerge. 
-It was strongly re-enforced by t'Hooft, who showed that the perturbative expansion of $U(N)$ gauge theories in the large $N$ limit could be rearranged into a genus expansion of surfaces triangulated by the Feynman diagrams, which strongly resembles string theory genus expansions \cite{THooft:1974}.
+It was strongly re-enforced by t'Hooft, who showed that the perturbative expansion of $U(N)$ gauge theories in the large $N$ limit could be rearranged into a genus expansion of surfaces triangulated by the double-line Feynman graphs, which strongly resembles string theory genus expansions \cite{THooft:1974}.
 
 \vspace{20pt}
 \newlength\yearposx
@@ -45,29 +45,81 @@ It was strongly re-enforced by t'Hooft, who showed that the perturbative expansi
 \end{tikzpicture}
 \vspace{20pt}
 
-However it was the work of Maldacena in 1997 that sparked a true revolution \cite{Maldacena:1997re}. He formulated the first concrete conjecture for a duality between a gauge theory, the maximally supersymmetric $\N=4$ super Yang-Mills, and type IIB string theory on $\adsfive$, now universally referred to as the AdS/CFT duality.
+However it was the work of Maldacena in 1997 that sparked a true revolution \cite{Maldacena:1997re}. 
+He formulated the first concrete conjecture, now universally referred to as \emph{AdS/CFT}, for a duality between a gauge theory, the maximally supersymmetric $\N=4$ super Yang-Mills, and type IIB string theory on $\adsfive$. 
+Polyakov had already shown that non-critical string theory in four-dimensions describing gauge fields should be complemented with an extra Liouville-like direction thus enriching the space to a curved five dimensional manifold \cite{Polyakov:1997tj}. Furthermore the gauge theory had to be defined on the boundary of this manifold.
+Maldacena's conjecture was consistent with this view, as the gauge theory was defined on the boundary of $AdS_5$, whereas the $S^5$ was associated with the internal symmetries of the gauge fields.
+The idea of a higher dimensional theory being fully described by a theory living on the boundary was also considered before in the context of black hole physics \cite{'tHooft:1993gx, Susskind:1994vu} and goes by the name of holography.
+
+The duality can be motivated by considering a stack of parallel D3 branes in type IIB string theory. 
+Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$. 
+Roughly the idea is that there are six extra dimensions transverse to the stack of branes, thus a string stretching between two of them can be viewed as a set of six scalar fields ${(\Phi^i)^a}_b$ defined in four dimensional spacetime carrying two extra indices denoting the branes it is attached to. 
+These are precisely the indices of the adjoint representation of $SU(N)$.
+A similar argument can be put forward for other fields thus recovering the field content of $\N=4$ SYM.
+Far away from the branes we have closed strings propagating in empty space. 
+In the low energy limit these systems decouple and far away from the branes we are left with ten dimensional supergravity.
+
+Another way of looking at this system is considering the branes as a defect in spacetime, which from the point of view of supergravity is a source of curvature. 
+The supergravity solution carrying D3 brane charge can be written down explicity \cite{Horowitz:1991cd}.
+Far away from the branes it is obviously once again the usual flat space ten dimensional supergravity.
+However the near horizon geometry of the brane system becomes $\adsfive$.
+
+Since both points of view end up with supergravity far away from the branes, one is tempted to identify the theories close to the branes -- $\N=4$ SYM and type IIB string theory on $\adsfive$. 
+This is exactly what Maldacena did in his seminal paper \cite{Maldacena:1997re}. Since then other dualities have been discovered that are very similar in spirit \cite{Aharony:2008ug}, however in this thesis we will only concentrate on the original one.
+
+By studying the supergravity solution one can identify the parameters of the theories, namely $\N=4$ SYM is parameterized by the coupling constant $g_{YM}$ and the number of colors $N$, whereas string theory has the string coupling constant $g_s$ and the string length squared $\alpha'$. 
+These are identified in the following way
+\beq
+	 4\pi g_s = g_{YM}^2 \equiv \frac{\lambda}{N}, \;\;\;\;\;\;\; \frac{R^4}{\alpha'^2} = \lambda,
+\eeq
+where $\lambda$ is the t'Hooft coupling and $R$ is the radius of both $AdS_5$ and $S_5$, which is fixed as only the ratio $R^2/\alpha'$ is measurable.
+A few things are to be noted here. First of all, the identification directly implements t'Hooft's idea of large $N$ expansion of gauge theory, since $g_s \sim 1/N$. 
+In fact in the large $N$ limit only planar Feynman graphs survive and everything simplifies dramatically, a fact that we will take advantage of a lot in this thesis.
+In this limit the effective coupling constant of the gauge theory is $\lambda$. 
+
+The supergravity approximation is valid when $\alpha' \ll R^2$, which corresponds to strongly coupled gauge theory, thus the conjecture is of the weak-strong type. 
+This fact is a blessing in disguise, since initially it seems very restrictive as one can not easily compare results of the theories. 
+However it provides a possibility to access strongly coupled regimes of both theories, which was beyond reach before. 
+Prescriptions for matching up observables on both sides of the correspondence were given in \cite{Gubser:1998bc, Witten:1998qj}. 
+However because of the weak-strong nature of the duality initial tests were performed only for BPS states, which are protected from quantum corrections.
+The first direct match was observed in \cite{Witten:1998qj} where it was shown that the spectrum of half-BPS single trace operators matches the Kaluza-Klein modes of Type IIB supergravity.
+
+The situation changed dramatically in 2002 when Berenstein, Maldacena and Nastase devised a way to go beyond BPS checks \cite{Berenstein:2002jq}. 
+The idea was to take an operator in gauge theory with large R-charge $J$ and add some some impurities, effectively making it ``near-BPS''.
+The canonical example of such an operator is $\tr(Z^J X^S)$, where $Z$ and $X$ are two complex scalar fields of $\N=4$ SYM, with $X$ being the impurities ($S \ll J$).
+Since anomalous dimensions are suppressed like $\lambda/J^2$, perturbative gauge theory calculations are valid even at large $\lambda$, as long as $\lambda' \equiv \lambda / J^2 \ll 1$ and $N$ is large.
+It is thus possible to compare gauge theory calculations with string theory results.
+From the string theory point of view this limit corresponds to excitations of point-like strings with angular momentum $J$ moving at the speed of light around the great circle of $S^5$. 
+The background seen by this string is the so-called pp-wave geometry and string theory in this background is tractible.
+
+The discovery of the BMN limit was arguably the first time it was explicitly demonstrated how the world sheet theory of a string can be reconstructed by a physical picture of scalar fields dubbed as ``impurities'' propagating in a closed single trace operator of ``background'' scalar fields of the gauge theory. 
+Shortly after this discovery Minahan and Zarembo revolutionized the subject once again by discovering Integrability at the end of 2002 \cite{Minahan:2002ve}.
+They showed that single-trace operators of scalar fields can be identified with spin chains and their anomalous dimensions at one-loop in weak coupling are given by the energies of the corresponding spin chain states.
+These spin-chain systems are known to be integrable, which in practice allows one to solve the problem exactly using techniques such as the Bethe ansatz \cite{Bethe:1931}. 
+This discovery sparked a very rapid development of integrability methods in AdS/CFT during the coming years.
 
 \vspace{20pt}
-\begin{tikzpicture}[scale=5.56]
+\begin{tikzpicture}[scale=3.87]
     
 	\coordinate (start) at (0,0);
-	\coordinate (end) at (2.3cm,0);
+	\coordinate (end) at (3.3cm,0);
 	
-    \foreach \x in {2004,2005,2006}{
-        \pgfmathsetlength\yearposx{((\x-2004)*1cm + 0.1cm)};
+    \foreach \x in {2003,2004,2005,2006}{
+        \pgfmathsetlength\yearposx{((\x-2003)*1cm + 0.1cm)};
         \coordinate (y\x)   at (\yearposx,0);
         \coordinate (y\x t) at (\yearposx,+0.5pt);
         \coordinate (y\x b) at (\yearposx,-0.5pt);
     }
 	
     \draw [->] (start) -- (end);
-    \foreach \x in {2004,2005,2006} \draw (y\x t) -- (y\x b);
+    \foreach \x in {2003,2004,2005,2006} \draw (y\x t) -- (y\x b);
 
-	 \node at (y2004) [below=3pt] {2004}; 
+	\node at (y2003) [below=3pt] {2003}; 
+	\node at (y2004) [below=3pt] {2004}; 
 		% \node at (y2003) [above=4pt] {AdS/CFT}; 
-	 \node at (y2005) [below=3pt] {2005}; 
+	\node at (y2005) [below=3pt] {2005}; 
 		% \node at (y2004) [above=5pt] {KMMZ}; 
-	 \node at (y2006) [below=3pt] {2006}; 
+	\node at (y2006) [below=3pt] {2006}; 
 		% \node at (y2006) [above=4pt] {ABA}; 
 \end{tikzpicture}
 \vspace{20pt}
@@ -91,16 +143,15 @@ Very rapid development.
     \draw [decorate, decoration={snake, segment length=5mm, amplitude=1mm}] (7cm,0) -- (8.05cm,0);
 	\draw [->] (8.05cm,0) -- (10cm,0);
 	
-	% draw ticks
-	\foreach \x in {2008,2009,2010,2014}
-        \draw (y\x t) -- (y\x b);
+	\foreach \x in {2008,2010,2014} \draw (y\x t) -- (y\x b);
+	
+    \node at (y2008) [below=3pt] {2008}; \node at (y2008) [above=4pt] {TBA}; 
+	\node at (y2010) [below=3pt] {2010}; \node at (y2010) [above=3pt] {Y-system}; 
+	\node at (y2014) [below=3pt] {2014}; \node at (y2014) [above=4pt] {$\pmu$}; 
 		
 	\draw (8.9cm,-2pt) -- (8.9cm,+2pt);
 	\node at (8.9cm,0) [below=4pt] {??}; \node at (8.9cm,0) [above=8pt] {$\N=4$ solved!}; 
 	
-	%\node at (y1997) [below=3pt] {1997}; \node at (y1997) [above=4pt] {AdS/CFT}; 
-	%\node at (y2002) [below=3pt] {2002}; \node at (y2002) [above=5pt] {BMN}; 
-	%\node at (y2003) [below=3pt] {???}; \node at (y2003) [above=4pt] {$\N=4$ solved!}; 
 \end{tikzpicture}
 \vspace{20pt}
 
