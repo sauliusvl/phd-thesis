@@ -63,8 +63,7 @@ Another way of looking at this system is considering the branes as a defect in s
 The supergravity solution carrying D3 brane charge can be written down explicity \cite{Horowitz:1991cd}.
 Far away from the branes it is obviously once again the usual flat space ten dimensional supergravity.
 However the near horizon geometry of the brane system becomes $\adsfive$.
-
-Since both points of view end up with supergravity far away from the branes, one is tempted to identify the theories close to the branes -- $\N=4$ SYM and type IIB string theory on $\adsfive$. 
+Since both points of view end up with supergravity far away from the branes, one is tempted to identify the theories close to the branes, $\N=4$ SYM and type IIB string theory on $\adsfive$. 
 This is exactly what Maldacena did in his seminal paper \cite{Maldacena:1997re}. Since then other dualities have been discovered that are very similar in spirit \cite{Aharony:2008ug}, however in this thesis we will only concentrate on the original one.
 
 By studying the supergravity solution one can identify the parameters of the theories, namely $\N=4$ SYM is parameterized by the coupling constant $g_{YM}$ and the number of colors $N$, whereas string theory has the string coupling constant $g_s$ and the string length squared $\alpha'$. 
@@ -83,6 +82,7 @@ However it provides a possibility to access strongly coupled regimes of both the
 Prescriptions for matching up observables on both sides of the correspondence were given in \cite{Gubser:1998bc, Witten:1998qj}. 
 However because of the weak-strong nature of the duality initial tests were performed only for BPS states, which are protected from quantum corrections.
 The first direct match was observed in \cite{Witten:1998qj} where it was shown that the spectrum of half-BPS single trace operators matches the Kaluza-Klein modes of Type IIB supergravity.
+Another indirect confirmation of the conjecture was the formulation of type IIB string theory as a super-coset sigma model on the target space $PSU(2,2|4) / SO(2,4) \otimes SO(6)$, which has the same global symmetries as $\N=4$ SYM \cite{Metsaev:1998it}.
 
 The situation changed dramatically in 2002 when Berenstein, Maldacena and Nastase devised a way to go beyond BPS checks \cite{Berenstein:2002jq}. 
 The idea was to take an operator in gauge theory with large R-charge $J$ and add some some impurities, effectively making it ``near-BPS''.
@@ -94,7 +94,7 @@ The background seen by this string is the so-called pp-wave geometry and string 
 
 The discovery of the BMN limit was arguably the first time it was explicitly demonstrated how the world sheet theory of a string can be reconstructed by a physical picture of scalar fields dubbed as ``impurities'' propagating in a closed single trace operator of ``background'' scalar fields of the gauge theory. 
 Shortly after this discovery Minahan and Zarembo revolutionized the subject once again by discovering Integrability at the end of 2002 \cite{Minahan:2002ve}.
-They showed that single-trace operators of scalar fields can be identified with spin chains and their anomalous dimensions at one-loop in weak coupling are given by the energies of the corresponding spin chain states.
+They showed that in the large $N$ limit single-trace operators of scalar fields can be identified with spin chains and their anomalous dimensions at one-loop in weak coupling are given by the energies of the corresponding spin chain states.
 These spin-chain systems are known to be integrable, which in practice allows one to solve the problem exactly using techniques such as the Bethe ansatz \cite{Bethe:1931}. 
 This discovery sparked a very rapid development of integrability methods in AdS/CFT during the coming years.
 
@@ -115,8 +115,9 @@ This discovery sparked a very rapid development of integrability methods in AdS/
     \foreach \x in {2003,2004,2005,2006} \draw (y\x t) -- (y\x b);
 
 	\node at (y2003) [below=3pt] {2003}; 
+	%	\node at (y2003) [above=4pt] {}; 
 	\node at (y2004) [below=3pt] {2004}; 
-		% \node at (y2003) [above=4pt] {AdS/CFT}; 
+		 \node at (y2004) [above=4pt] {KMMZ}; 
 	\node at (y2005) [below=3pt] {2005}; 
 		% \node at (y2004) [above=5pt] {KMMZ}; 
 	\node at (y2006) [below=3pt] {2006}; 
@@ -124,7 +125,20 @@ This discovery sparked a very rapid development of integrability methods in AdS/
 \end{tikzpicture}
 \vspace{20pt}
 
-Very rapid development.
+Solving a quantum field theory in principle means finding all $n$-point correlation functions of all physical observables. 
+Since $\N=4$ SYM is conformal it is enough to find all 2-point and 3-point correlators, as all higher point correlation functions can be decomposed in terms of these basic constituents.
+Due to conformal symmetry the two-point functions only depend on the scaling dimensions of operators, whereas for three point functions one also needs the so called structure constants $C_{ijk}$ in addtion to the scaling dimensions.
+Integrability methods from the very beginning mainly focused on solving the spectral problem in the large $N$ limit, that is finding the spectrum of operators with definite anomalous dimensions and their exact numeric values.
+The initial discovery of \cite{Minahan:2002ve} was that the spectral problem was analogous to diagonalizing a spin chain Hamiltonian, which is the dilatation operator of the superconformal symmetry of the theory.
+The eigenstates correspond to operators in the gauge theory and the eigenvalues are their anomalous dimensions.
+
+Soon after the initial discovery of integrability a spin chain formulation at one-loop was found for the full $PSU(2,2|4)$ theory, not only the scalar sector \cite{Beisert:2003jj}. 
+The result was also extended to two and three loops \cite{Beisert:2003tq}. 
+Integrability was also discovered at strong coupling as it was shown that the Metsaev-Tseytlin sigma model is classicaly integrable \cite{Bena:2003wd}. 
+This result was then reformulated in the elegant language of algebraic curves by Kazakov, Marshakov, Minahan and Zarembo (KMMZ) \cite{Kazakov:2004qf}.
+Comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement [??], however an order of limits problem emerged at three loops [??]. 
+
+All of these results seemed to suggest that integrability may be an all loop phenomenon, only the surface of it being scratched so far. 
 
 \vspace{20pt}
 \begin{tikzpicture}[scale=1.28]
