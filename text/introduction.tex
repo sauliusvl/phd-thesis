@@ -138,7 +138,7 @@ Soon after the initial discovery of integrability a spin chain formulation at on
 The result was also extended to two and three loops \cite{Beisert:2003tq}. 
 Integrability was also discovered at strong coupling as it was shown that the Metsaev-Tseytlin sigma model is classicaly integrable \cite{Bena:2003wd}. 
 With integrability methods now being available at both weak and strong coupling it was now possible to compare results in the BMN limit.
-As expected, comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement \cite{Frolov:2003qc, Frolov:2003xy, Arutyunov:2003uj}, however an order of limits problem emerged at three loops [??]. 
+As expected, comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement \cite{Frolov:2003qc, Frolov:2003xy, Arutyunov:2003uj}, however an order of limits problem emerged at three loops \cite{Beisert:2003tq}. 
 
 All of these results seemed to suggest that integrability may be an all loop phenomenon, only the surface of it being scratched so far. 
 This notion was strongly reinforced when classical string integrability was reformulated in the elegant language of algebraic curves by Kazakov, Marshakov, Minahan and Zarembo (KMMZ), which made the connection with weak coupling more manifest \cite{Kazakov:2004qf}. 
@@ -150,7 +150,7 @@ It was found to leading order at strong coupling in \cite{Arutyunov:2004vx} and 
 A crossing equation satisfied by the dressing phase was soon found \cite{Janik:2006dc} and eventually solved by Beisert, Hernandez and Lopez (BHL) \cite{Beisert:2006ib}.  
 Collectively these results are often refered to as the asymptotic Bethe ansatz (ABA), reminding that they are valid only for asymptotically long spin chains. 
 When the states are short so-called wrapping effects become relevant. 
-At weak coupling they manifest as long-range spin chain interactions wrapping around the chain, whereas at strong coupling they are due to virtual particles self-interacting across the circumreference of the worldsheet.
+At weak coupling they manifest as long-range spin chain interactions wrapping around the chain, whereas at strong coupling they are due to virtual particles self-interacting across the circumreference of the worldsheet \cite{Sieg:2005kd, Ambjorn:2005wa}.
 
 \vspace{20pt}
 \begin{tikzpicture}[scale=1.28]
@@ -158,7 +158,7 @@ At weak coupling they manifest as long-range spin chain interactions wrapping ar
 	\coordinate (start) at (0,0);
 	\coordinate (end) at (6.5cm,0);
 	
-    \foreach \x in {2008,2009,2010,2012,2014}{
+    \foreach \x in {2009,2010,2012,2014}{
         \pgfmathsetlength\yearposx{(\x-2008)*1cm + 0.4cm};
         \coordinate (y\x)   at (\yearposx,0);
         \coordinate (y\x t) at (\yearposx,+2pt);
@@ -169,10 +169,10 @@ At weak coupling they manifest as long-range spin chain interactions wrapping ar
     \draw [decorate, decoration={snake, segment length=5mm, amplitude=1mm}] (7cm,0) -- (8.05cm,0);
 	\draw [->] (8.05cm,0) -- (10cm,0);
 	
-	\foreach \x in {2008,2010,2014} \draw (y\x t) -- (y\x b);
+	\foreach \x in {2009,2014} \draw (y\x t) -- (y\x b);
 	
-    \node at (y2008) [below=3pt] {2008}; \node at (y2008) [above=4pt] {TBA}; 
-	\node at (y2010) [below=3pt] {2010}; \node at (y2010) [above=3pt] {Y-system}; 
+    \node at (y2009) [below=3pt] {2009}; \node at (y2009) [above=4pt] {TBA}; 
+	%\node at (y2010) [below=3pt] {2010}; \node at (y2010) [above=3pt] {Y-system}; 
 	\node at (y2014) [below=3pt] {2014}; \node at (y2014) [above=4pt] {$\pmu$}; 
 		
 	\draw (8.9cm,-2pt) -- (8.9cm,+2pt);
@@ -181,7 +181,32 @@ At weak coupling they manifest as long-range spin chain interactions wrapping ar
 \end{tikzpicture}
 \vspace{20pt}
 
-Exact solutions. Bright future ahead.
+Once the asymptotic solution was found attention shifted to finite size corrections, resolving which would give the complete solution to the spectral problem. 
+Finite size scattering corrections in finite volume for any QFT were first addressed by L\"{u}scher \cite{Luscher:1986}, who derived a set of universal formulas. 
+This approach, while very general and not directly related to integrability, was employed to calculate four \cite{Bajnok:2008bm} and five loop coefficients \cite{Bajnok:2009vm} of the anomalous dimension of the simplest non-BPS operator with length two, the Konishi operator.
+The results agreed with available diagramatic four-loop calculations \cite{Fiamberti:2007rj} and gave a new prediction for five loops.
+
+An alternative approach more in line with integrability is the Thermodynamic Bete Ansatz (TBA), which can be traced back to Yang and Yang \cite{Yang} and was popularized by Alexei Zamolodchikov \cite{Zamolodchikov1, Zamolodchikov2}. 
+The idea is to consider the partition function of a two dimensional CFT and it's ``mirror'' image found after exchanging length and time with a modular transformation.
+At large imaginary times the partition function will be dominated by the ground state energy, whereas in the mirror theory large time means asymptotic length, which is under control using the asymptotic Bethe ansatz techniques.
+Thus one can evaluate the partition function using the saddle point method and after rotating back to the original theory compute the exact ground state energy. 
+Excited states can then be reached using analytic continuation. 
+This approach was already proposed as an option for the AdS/CFT system in \cite{Ambjorn:2005wa} and was first discussed in \cite{Arutyunov:2007tc}.
+The TBA approach crystalized in 2009 with multiple groups publishing results almost simultaneously \cite{Gromov:2009tv, Bombardelli:2009ns, Gromov:2009bc, Arutyunov:2009ur, Cavaglia:2010nm}.
+Soon the Konishi anomalous dimension was checked at four \cite{Gromov:2009bc} and five \cite{Arutyunov:2010gb, Balog:2010xa} loops by linearizing the TBA equations, showing precise agreement with results obtained using the L\"{u}scher method.
+
+The TBA equations seem to be the ultimate result in the quest of solving the spectral problem as they offer the full and complete result, all contributions are accounted for.
+However it soon became apparent that something is still lacking in our understanding of the solution as it seemed to be too complicated.
+Indeed the TBA equations are an infinite set of coupled integral equations, furthermore there is no recipe to formulate them for an arbitrary state, only isolated cases such as the Konishi and cusped Wilson lines are known [??].
+Once the equations are found one has to employ numerous numerical tricks to actually solve them, again this mostly works in a case-by-case basis.
+Some attempts at simplifying the TBA approach were already seen in [??], where the equations were recast into a set of algebraic equations for an infinite set of $Y$-functions together with some analyticity constraints.
+A further step was taken when it was discovered that the infinite set of equations can be traded in for a finite set of non-linear integral equations (FiNLIE) [??].
+The latest development in this area was the introduction of the $\pmu$ system in 2014 [??], also refered to as the quantum spectral curve.
+In this approach the spectral problem is formulated as a Riemann-Hilbert problem for 5 functions, reducing all the complexity to a problem in complex analysis.
+The $\pmu$ system quickly showed its potential as many results were derived without much effort [??].
+
+Even though there are still many things to be learned, it is safe to say that the spectral problem is mostly understood. 
+
 
 \subsection{Thesis overview}
 
