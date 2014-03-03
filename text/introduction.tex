@@ -39,7 +39,8 @@ It was strongly re-enforced by t'Hooft, who showed that the perturbative expansi
     \draw [->] (y1996) -- (y2004);
     \foreach \x in {1997,2002,2003} \draw (y\x t) -- (y\x b);
 
-	\node at (y1997) [below=3pt] {1997}; \node at (y1997) [above=4pt] {AdS/CFT}; 
+	\node at (y1997) [below=3pt] {1997}; 
+		\node at (1.8cm, 0) [above=4pt] {AdS/CFT}; 
 	\node at (y2002) [below=3pt] {2002}; \node at (y2002) [above=5pt] {BMN}; 
 	\node at (y2003) [below=3pt] {2003}; \node at (y2003) [above=4pt] {Integrability}; 
 \end{tikzpicture}
@@ -52,7 +53,7 @@ Maldacena's conjecture was consistent with this view, as the gauge theory was de
 The idea of a higher dimensional theory being fully described by a theory living on the boundary was also considered before in the context of black hole physics \cite{'tHooft:1993gx, Susskind:1994vu} and goes by the name of holography.
 
 The duality can be motivated by considering a stack of parallel D3 branes in type IIB string theory. 
-Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$. 
+Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$ [??]. 
 Roughly the idea is that there are six extra dimensions transverse to the stack of branes, thus a string stretching between two of them can be viewed as a set of six scalar fields ${(\Phi^i)^a}_b$ defined in four dimensional spacetime carrying two extra indices denoting the branes it is attached to. 
 These are precisely the indices of the adjoint representation of $SU(N)$.
 A similar argument can be put forward for other fields thus recovering the field content of $\N=4$ SYM.
@@ -99,12 +100,12 @@ These spin-chain systems are known to be integrable, which in practice allows on
 This discovery sparked a very rapid development of integrability methods in AdS/CFT during the coming years.
 
 \vspace{20pt}
-\begin{tikzpicture}[scale=3.87]
+\begin{tikzpicture}[scale=2.97]
     
 	\coordinate (start) at (0,0);
-	\coordinate (end) at (3.3cm,0);
+	\coordinate (end) at (4.3cm,0);
 	
-    \foreach \x in {2003,2004,2005,2006}{
+    \foreach \x in {2003,2004,2005,2006,2007}{
         \pgfmathsetlength\yearposx{((\x-2003)*1cm + 0.1cm)};
         \coordinate (y\x)   at (\yearposx,0);
         \coordinate (y\x t) at (\yearposx,+0.5pt);
@@ -112,16 +113,17 @@ This discovery sparked a very rapid development of integrability methods in AdS/
     }
 	
     \draw [->] (start) -- (end);
-    \foreach \x in {2003,2004,2005,2006} \draw (y\x t) -- (y\x b);
+    \foreach \x in {2003,2004,2005,2006,2007} \draw (y\x t) -- (y\x b);
 
 	\node at (y2003) [below=3pt] {2003}; 
-	%	\node at (y2003) [above=4pt] {}; 
+		\node at (0.5cm, 0) [above=4pt] {}; 
 	\node at (y2004) [below=3pt] {2004}; 
 		 \node at (y2004) [above=4pt] {KMMZ}; 
 	\node at (y2005) [below=3pt] {2005}; 
-		% \node at (y2004) [above=5pt] {KMMZ}; 
+		 \node at (1.6cm, 0) [above=4pt] {BDS}; 
 	\node at (y2006) [below=3pt] {2006}; 
-		% \node at (y2006) [above=4pt] {ABA}; 
+		 \node at (3.8cm, 0) [above=4pt] {BHL}; 
+	\node at (y2007) [below=3pt] {2007}; 
 \end{tikzpicture}
 \vspace{20pt}
 
@@ -135,10 +137,20 @@ The eigenstates correspond to operators in the gauge theory and the eigenvalues 
 Soon after the initial discovery of integrability a spin chain formulation at one-loop was found for the full $PSU(2,2|4)$ theory, not only the scalar sector \cite{Beisert:2003jj}. 
 The result was also extended to two and three loops \cite{Beisert:2003tq}. 
 Integrability was also discovered at strong coupling as it was shown that the Metsaev-Tseytlin sigma model is classicaly integrable \cite{Bena:2003wd}. 
-This result was then reformulated in the elegant language of algebraic curves by Kazakov, Marshakov, Minahan and Zarembo (KMMZ) \cite{Kazakov:2004qf}.
-Comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement [??], however an order of limits problem emerged at three loops [??]. 
+With integrability methods now being available at both weak and strong coupling it was now possible to compare results in the BMN limit.
+As expected, comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement \cite{Frolov:2003qc, Frolov:2003xy, Arutyunov:2003uj}, however an order of limits problem emerged at three loops [??]. 
 
 All of these results seemed to suggest that integrability may be an all loop phenomenon, only the surface of it being scratched so far. 
+This notion was strongly reinforced when classical string integrability was reformulated in the elegant language of algebraic curves by Kazakov, Marshakov, Minahan and Zarembo (KMMZ), which made the connection with weak coupling more manifest \cite{Kazakov:2004qf}. 
+The algebraic curve was interpreted as the continuum limit of Bethe equations, which made it possible to speculate about all loop equations.
+The first such attempt was made by Beisert, Dippel and Staudacher (BDS), who conjectured a set of Bethe equations and a dispresion relation which together sucessfully showcased some all-loop features \cite{Beisert:2004hm}.
+This result was later extended to all sectors of the theory \cite{Beisert:2005fw}.
+The BDS result was quickly shown to be incomplete as it was lacking a so-called dressing phase \cite{Arutyunov:2004vx}, a scalar function not constrained by symmetry of the problem.
+It was found to leading order at strong coupling in \cite{Arutyunov:2004vx} and later to one-loop in \cite{Hernandez:2006tk}.
+A crossing equation satisfied by the dressing phase was soon found \cite{Janik:2006dc} and eventually solved by Beisert, Hernandez and Lopez (BHL) \cite{Beisert:2006ib}.  
+Collectively these results are often refered to as the asymptotic Bethe ansatz (ABA), reminding that they are valid only for asymptotically long spin chains. 
+When the states are short so-called wrapping effects become relevant. 
+At weak coupling they manifest as long-range spin chain interactions wrapping around the chain, whereas at strong coupling they are due to virtual particles self-interacting across the circumreference of the worldsheet.
 
 \vspace{20pt}
 \begin{tikzpicture}[scale=1.28]
