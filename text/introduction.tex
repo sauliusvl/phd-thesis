@@ -27,19 +27,19 @@ It was strongly re-enforced by t'Hooft, who showed that the perturbative expansi
 
 \vspace{20pt}
 \newlength\yearposx
-\begin{tikzpicture}[scale=1.6]
+\begin{tikzpicture}[scale=1.82]
 
-    \foreach \x in {1996,1997,2002,2003,2004}{
+    \foreach \x in {1997,1998,2002,2003,2004}{
         \pgfmathsetlength\yearposx{(\x-1996)*1cm};
         \coordinate (y\x)   at (\yearposx,0);
         \coordinate (y\x t) at (\yearposx,+2pt);
         \coordinate (y\x b) at (\yearposx,-2pt);
     }
 	
-    \draw [->] (y1996) -- (y2004);
-    \foreach \x in {1997,2002,2003} \draw (y\x t) -- (y\x b);
+    \draw [->] (y1997) -- (y2004);
+    \foreach \x in {1998,2002,2003} \draw (y\x t) -- (y\x b);
 
-	\node at (y1997) [below=3pt] {1997}; 
+	\node at (y1998) [below=3pt] {1998}; 
 		\node at (1.8cm, 0) [above=4pt] {AdS/CFT}; 
 	\node at (y2002) [below=3pt] {2002}; \node at (y2002) [above=5pt] {BMN}; 
 	\node at (y2003) [below=3pt] {2003}; \node at (y2003) [above=4pt] {Integrability}; 
@@ -53,7 +53,7 @@ Maldacena's conjecture was consistent with this view, as the gauge theory was de
 The idea of a higher dimensional theory being fully described by a theory living on the boundary was also considered before in the context of black hole physics \cite{'tHooft:1993gx, Susskind:1994vu} and goes by the name of holography.
 
 The duality can be motivated by considering a stack of parallel D3 branes in type IIB string theory. 
-Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$ [??]. 
+Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$. 
 Roughly the idea is that there are six extra dimensions transverse to the stack of branes, thus a string stretching between two of them can be viewed as a set of six scalar fields ${(\Phi^i)^a}_b$ defined in four dimensional spacetime carrying two extra indices denoting the branes it is attached to. 
 These are precisely the indices of the adjoint representation of $SU(N)$.
 A similar argument can be put forward for other fields thus recovering the field content of $\N=4$ SYM.
@@ -153,13 +153,13 @@ When the states are short so-called wrapping effects become relevant.
 At weak coupling they manifest as long-range spin chain interactions wrapping around the chain, whereas at strong coupling they are due to virtual particles self-interacting across the circumreference of the worldsheet \cite{Sieg:2005kd, Ambjorn:2005wa}.
 
 \vspace{20pt}
-\begin{tikzpicture}[scale=1.28]
+\begin{tikzpicture}[scale=1.32]
 
 	\coordinate (start) at (0,0);
 	\coordinate (end) at (6.5cm,0);
 	
     \foreach \x in {2009,2010,2012,2014}{
-        \pgfmathsetlength\yearposx{(\x-2008)*1cm + 0.4cm};
+        \pgfmathsetlength\yearposx{(\x-2008)*1cm + 0.2cm};
         \coordinate (y\x)   at (\yearposx,0);
         \coordinate (y\x t) at (\yearposx,+2pt);
         \coordinate (y\x b) at (\yearposx,-2pt);
@@ -172,8 +172,8 @@ At weak coupling they manifest as long-range spin chain interactions wrapping ar
 	\foreach \x in {2009,2014} \draw (y\x t) -- (y\x b);
 	
     \node at (y2009) [below=3pt] {2009}; \node at (y2009) [above=4pt] {TBA}; 
-	%\node at (y2010) [below=3pt] {2010}; \node at (y2010) [above=3pt] {Y-system}; 
-	\node at (y2014) [below=3pt] {2014}; \node at (y2014) [above=4pt] {$\pmu$}; 
+	\node at (y2014) [below=3pt] {2014}; 
+		\node at (5.8cm, 0) [above=4pt] {$\pmu$}; 
 		
 	\draw (8.9cm,-2pt) -- (8.9cm,+2pt);
 	\node at (8.9cm,0) [below=4pt] {??}; \node at (8.9cm,0) [above=8pt] {$\N=4$ solved!}; 
@@ -187,7 +187,7 @@ This approach, while very general and not directly related to integrability, was
 The results agreed with available diagramatic four-loop calculations \cite{Fiamberti:2007rj} and gave a new prediction for five loops.
 
 An alternative approach more in line with integrability is the Thermodynamic Bete Ansatz (TBA).
-Its origins can be traced back to Yang and Yang \cite{Yang}, however it was the work of Alexey Zamolodchikov \cite{Zamolodchikov1, Zamolodchikov2} that made it mainstream. 
+Its origins can be traced back to Yang and Yang \cite{Yang}, however it was the work of Alexey Zamolodchikov \cite{Zamolodchikov1, Zamolodchikov2} that brought it to the mainstream. 
 The idea is to consider the partition function of a two dimensional integrable CFT and it's ``mirror'' image found after exchanging length and time with a modular transformation.
 At large imaginary times the partition function will be dominated by the ground state energy, whereas in the mirror theory large time means asymptotic length, which is under control using the asymptotic Bethe ansatz techniques.
 Thus one can evaluate the partition function using the saddle point method and after rotating back to the original theory compute the exact ground state energy. 
@@ -209,7 +209,7 @@ The whole TBA construction was ultimately reduced to a Riemann-Hilbert problem f
 The $\pmu$ system quickly showed its potential as previously known results were rederived almost without any effort and new results were being rapidly discovered \cite{Gromov:2013qga, Gromov:2014bva}.
 
 Thus one can safely say that the spectral problem in $\N=4$ SYM is by now very well understood with numerical results readilly available and deeper understanding of the structure being within reach.
-Integrabillity methods have also been useful in other areas such as three point functions \cite{Escobedo:2010xs, Gromov:2012vu} and scattering amplitudes, however the situation there is still not as complete.
+Integrabillity methods have also been useful in other areas such as three point functions \cite{Escobedo:2010xs, Gromov:2012vu} and scattering amplitudes \cite{Drummond:2010km, Alday:2010kn}, however the situation there is still not as complete.
 Having witnessed the successful resolution of the spectral problem it appears that $\N=4$ SYM is within reach of being solved completely.
 If this programme were to be successfuly carried out it would be the first example of a four dimensional interacting quantum field theory being solved exactly.
 Undoubtadly this would provide a huge boost to our understanding of QFTs in general and hopefully bring us closed to solving QCD.
