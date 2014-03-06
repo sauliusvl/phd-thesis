@@ -4,7 +4,7 @@
 
 The title of this thesis is \emph{Exact Results in $\N=4$ Super Yang-Mills}. A reasonable question to ask is -- why would anyone care about that ? 
 After all $\N=4$ is just a toy theory, it is not something that nature implements and thus we can not observe it in particle accelerators, as opposed to say the Standard Model of particle physics. 
-And indeed those are all valid points, however there are very good reasons for studying $\N=4$ SYM. 
+And indeed these are all valid points, however there are very good reasons for studying $\N=4$ SYM. 
 
 From a pragmatic point of view, it is the simplest non-trivial quantum field theory in four spacetime dimensions and since attempts at solving realistic QFTs such as the theory of strong interactions (QCD) have so far been futile, it seems like a good starting point -- some go as far as calling it the harmonic oscillator of QFTs. 
 
@@ -46,13 +46,13 @@ It was strongly re-enforced by t'Hooft, who showed that the perturbative expansi
 \end{tikzpicture}
 \vspace{20pt}
 
-However it was the work of Maldacena in 1997 that sparked a true revolution \cite{Maldacena:1997re}. 
+However it was the work of Maldacena in the end of 1997 that sparked a true revolution in the field \cite{Maldacena:1997re}. 
 He formulated the first concrete conjecture, now universally referred to as \emph{AdS/CFT}, for a duality between a gauge theory, the maximally supersymmetric $\N=4$ super Yang-Mills, and type IIB string theory on $\adsfive$. 
 Polyakov had already shown that non-critical string theory in four-dimensions describing gauge fields should be complemented with an extra Liouville-like direction thus enriching the space to a curved five dimensional manifold \cite{Polyakov:1997tj}. Furthermore the gauge theory had to be defined on the boundary of this manifold.
 Maldacena's conjecture was consistent with this view, as the gauge theory was defined on the boundary of $AdS_5$, whereas the $S^5$ was associated with the internal symmetries of the gauge fields.
-The idea of a higher dimensional theory being fully described by a theory living on the boundary was also considered before in the context of black hole physics \cite{'tHooft:1993gx, Susskind:1994vu} and goes by the name of holography.
+The idea of a higher dimensional theory being fully described by a theory living on the boundary was also considered before in the context of black hole physics \cite{'tHooft:1993gx, Susskind:1994vu} and goes by the name of holography, thus AdS/CFT is also refered to as a holographic duality.
 
-The duality can be motivated by considering a stack of parallel D3 branes in type IIB string theory. 
+The duality can be motivated by considering a stack of $N$ parallel D3 branes in type IIB string theory. 
 Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$. 
 Roughly the idea is that there are six extra dimensions transverse to the stack of branes, thus a string stretching between two of them can be viewed as a set of six scalar fields ${(\Phi^i)^a}_b$ defined in four dimensional spacetime carrying two extra indices denoting the branes it is attached to. 
 These are precisely the indices of the adjoint representation of $SU(N)$.
@@ -82,7 +82,7 @@ This fact is a blessing in disguise, since initially it seems very restrictive a
 However it provides a possibility to access strongly coupled regimes of both theories, which was beyond reach before. 
 Prescriptions for matching up observables on both sides of the correspondence were given in \cite{Gubser:1998bc, Witten:1998qj}. 
 However because of the weak-strong nature of the duality initial tests were performed only for BPS states, which are protected from quantum corrections.
-The first direct match was observed in \cite{Witten:1998qj} where it was shown that the spectrum of half-BPS single trace operators matches the Kaluza-Klein modes of Type IIB supergravity.
+The first direct match was observed in \cite{Witten:1998qj} where it was shown that the spectrum of half-BPS single trace operators matches the Kaluza-Klein modes of type IIB supergravity.
 Another indirect confirmation of the conjecture was the formulation of type IIB string theory as a super-coset sigma model on the target space $PSU(2,2|4) / SO(2,4) \otimes SO(6)$, which has the same global symmetries as $\N=4$ SYM \cite{Metsaev:1998it}.
 
 The situation changed dramatically in 2002 when Berenstein, Maldacena and Nastase devised a way to go beyond BPS checks \cite{Berenstein:2002jq}. 
@@ -131,7 +131,7 @@ Solving a quantum field theory in principle means finding all $n$-point correlat
 Since $\N=4$ SYM is conformal it is enough to find all 2-point and 3-point correlators, as all higher point correlation functions can be decomposed in terms of these basic constituents.
 Due to conformal symmetry the two-point functions only depend on the scaling dimensions of operators, whereas for three point functions one also needs the so called structure constants $C_{ijk}$ in addtion to the scaling dimensions.
 Integrability methods from the very beginning mainly focused on solving the spectral problem in the large $N$ limit, that is finding the spectrum of operators with definite anomalous dimensions and their exact numeric values.
-The initial discovery of \cite{Minahan:2002ve} was that the spectral problem was analogous to diagonalizing a spin chain Hamiltonian, which is the dilatation operator of the superconformal symmetry of the theory.
+The initial discovery of \cite{Minahan:2002ve} was that the spectral problem was analogous to diagonalizing a spin chain Hamiltonian, which was identified with the dilatation operator of the superconformal symmetry of the theory.
 The eigenstates correspond to operators in the gauge theory and the eigenvalues are their anomalous dimensions.
 
 Soon after the initial discovery of integrability a spin chain formulation at one-loop was found for the full $PSU(2,2|4)$ theory, not only the scalar sector \cite{Beisert:2003jj}. 
@@ -166,7 +166,8 @@ At weak coupling they manifest as long-range spin chain interactions wrapping ar
     }
     
     \draw [-] (0,0) -- (7cm,0);
-    \draw [decorate, decoration={snake, segment length=5mm, amplitude=1mm}] (7cm,0) -- (8.05cm,0);
+    %\draw [decorate, decoration={snake, segment length=5mm, amplitude=1mm}, dashed] (7cm,0) -- (8.05cm,0);
+	\draw [-, dashed] (7cm,0) -- (8.05cm,0);
 	\draw [->] (8.05cm,0) -- (10cm,0);
 	
 	\foreach \x in {2009,2014} \draw (y\x t) -- (y\x b);
@@ -192,7 +193,7 @@ The idea is to consider the partition function of a two dimensional integrable C
 At large imaginary times the partition function will be dominated by the ground state energy, whereas in the mirror theory large time means asymptotic length, which is under control using the asymptotic Bethe ansatz techniques.
 Thus one can evaluate the partition function using the saddle point method and after rotating back to the original theory compute the exact ground state energy. 
 Excited states can then be reached using analytic continuation. 
-This approach was already proposed as an option for the AdS/CFT system in \cite{Ambjorn:2005wa} and was first discussed in \cite{Arutyunov:2007tc}.
+This approach was already proposed as an option for the AdS/CFT system in \cite{Ambjorn:2005wa} and was first discussed in depth in \cite{Arutyunov:2007tc}.
 The TBA approach crystalized in 2009 with multiple groups publishing results almost simultaneously \cite{Gromov:2009tv, Bombardelli:2009ns, Gromov:2009bc, Arutyunov:2009ur}.
 The Konishi anomalous dimension was initially checked at four \cite{Gromov:2009bc} and five \cite{Arutyunov:2010gb, Balog:2010xa} loops by linearizing the TBA equations, showing precise agreement with results obtained using the L\"{u}scher method.
 Ultimately the Konishi anomalous dimension was calculated numerically for a wide range of values of the t'Hooft coupling constant \cite{Gromov:2009zb}.
@@ -200,7 +201,7 @@ Ultimately the Konishi anomalous dimension was calculated numerically for a wide
 And so the spectral problem seemed to be solved, at least in the case of Konishi an exact and complete result was finally found, even if only numerically.
 However it was increasingly becoming clear that the solution was not in its final and most elegant form.
 Indeed the TBA equations are an infinite set of coupled integral equations, obviously one has to employ various numerical tricks to actually solve them and this mostly works in a case-by-case basis. 
-Cases such as the $\mathfrak{sl}(2)$ sector of the theory, containing the Konishi operator \cite{Gromov:2009bc} and cusped Wilson lines \cite{Correa:2012hh, Gromov:2012eu} have been worked out explicitly, however its still remains a hard problem.
+Cases such as the $\mathfrak{sl}(2)$ sector of the theory, containing the Konishi operator \cite{Gromov:2009bc} and cusped Wilson lines \cite{Correa:2012hh, Gromov:2012eu} have been worked out explicitly, however it still remains a hard problem in general.
 From the very beginning alternative formulations of the solution were being proposed. 
 An infinite set of non-linear functional equations, the so called Y-system was proposed already in \cite{Gromov:2009bc}, later completed with analytical constraints comming from the TBA equations \cite{Cavaglia:2010nm}.
 Connections of the Y-system with the Hirota bilinear relation were later explored in \cite{Gromov:2011cx} and the Y-system was reduced to a finite set of non-linear integral equations (FiNLIE).
