@@ -8,6 +8,127 @@
 
 \subsection{Algebraic curve}
 
-\subsection{The $\pmu$ system}
+
+This section describes a newly performed semiclassical analysis in $AdS_4/CFT_3$ by the author which culminated in the publications \cite{Beccaria:2012qd} and \cite{Beccaria:2012vb}. All of the analysis has been largely carried out by the author individualy, however the publications were co-authored with three other researchers in order not to compete and effectively duplicate the results, instead focusing on cross checking and speeding up the calculations. This work largely follows the analysis in $AdS_5/CFT_4$, however it turns out to be more technically involved, posing some very interesting questions in the process. 
+
+We will write all equations in terms of the $\sigma$-model coupling $g$. For large $g$, it is  related to the 't Hooft coupling by $\lambda = N/k = 8\,g^{2}$, but, contrary to the $\adsfive$ case, this relation will get corrections at finite $g$.  The classical algebraic curve for $\adscp$ is a 10-sheeted Riemann surface. The spectral parameter moves on it and  we shall consider 10 symmetric quasi momenta $q_{i}(x)$ 
+\begin{equation}
+(q_{1}, q_{2}, q_{3}, q_{4}, q_{5}) = (-q_{10}, -q_{9}, -q_{8}, -q_{7}, -q_{6}).
+\end{equation}
+They can have branch cuts connecting the sheets with $q_{i}^{+}-q_{j}^{-} = 2\,\pi\,n_{ij}$. In the terminology of \cite{Gromov:2008bz}, the physical polarizations $(ij)$ can be split into {\em heavy} and {\em light} ones and are summarized in the following table:
+ $$
+ \begin{array}{c|ccc}
+  & \mbox{AdS${}_{4}$} & \mbox{Fermions} & \mathbb{CP}^{3} \\
+  \hline
+  \mbox{heavy} & \quad (1,10) (2,9) (1,9)\quad & (1,7) (1,8) (2,7) (2,8) & (3,7) \\
+  \mbox{light} & & (1,5) (1,6) (2,5) (2,6) & \quad (3,5) (3,6) (4,5) (4,6)\quad
+  \end{array}
+ $$
+Inversion symmetry imposes these other constraints on the quasi momenta
+\begin{equation}
+q_{1}(x) = -q_{2}(1/x), \qquad
+q_{3}(x) = 2\,\pi\,m-q_{4}(1/x), \qquad
+q_{5}(x) = q_{5}(1/x),
+\end{equation}
+where $m\in\mathbb Z$ is a winding number. Thus, only 3 out of 10 quasi momenta are independent.
+
+Semiclassical quantization is achieved by perturbing quasi-momenta introducing extra poles that shift the quasi-momenta
+$q_{i}\to q_{i}+\delta q_{i}$.
+The asymptotic expression of $\delta q_{i}$ are related to the number $N_{ij}$ of extra fluctuations and to the energy correction $\delta E$.
+The off-shell frequencies $\Omega^{ij}(x)$ are defined in order to have %$\delta E = \sum_{n, ij} N^{ij}_{n}\,\Omega^{ij}(x^{ij}_{n})$,
+\begin{equation}
+\delta E = \sum_{n, ij} N^{ij}_{n}\,\Omega^{ij}(x^{ij}_{n}),
+\end{equation}
+where the sum is over all pairs $(ij)\equiv (ji)$ of physical polarizations and integer values of $n$ with $q_{i}(x^{ij}_{n})-q_{j}(x^{ij}_{n}) = 2\,\pi\,n$.
+By linear combination of frequencies and inversion (as in the ${\rm AdS}_{5}/{\rm CFT}_{4}$ case), we can derive all  the off-shell frequencies in terms of two fundamental ones $\Omega_{A}(x) = \Omega^{15}(x)$, $\Omega_{B}(x) = \Omega^{45}(x)$.
+Their explicit expressions turn out to be 
+\begin{eqnarray}
+&& \Omega^{29} =  2\,\left[-\Omega_{A}(1/x)+\Omega_{A}(0)\right], \nonumber \qquad \quad\ \ 
+\Omega^{1, 10} =  2\,\Omega_{A}(x),\nonumber \\
+&& \Omega^{19} =  \Omega_{A}(x)-\Omega_{A}(1/x)+\Omega_{A}(0), \nonumber \qquad \,
+\Omega^{37} =\Omega_{B}(x)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
+&& \Omega^{35}  = \Omega^{36} = -\Omega_{B}(1/x)+\Omega_{B}(0),\nonumber \qquad \ 
+\Omega^{45} = \Omega^{46} = \Omega_{B}(x), \nonumber \\
+&&\Omega^{17} = \Omega_{A}(x)+\Omega_{B}(x), \nonumber \qquad \qquad \qquad \ 
+\Omega^{18} = \Omega_{A}(x)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
+&& \Omega^{27} = \Omega_{B}(x)-\Omega_{A}(1/x)+\Omega_{A}(0), \nonumber \qquad
+\Omega^{28} = -\Omega_{A}(1/x)+\Omega_{A}(0)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
+&& \Omega^{15} = \Omega^{16} = \Omega_{A}(x), \nonumber \qquad \qquad \qquad \quad \ 
+\Omega^{25} = \Omega^{26} = -\Omega_{A}(1/x)+\Omega_{A}(0).
+\end{eqnarray}
+In terms of the semiclassical variables $\mathcal S = \frac{S}{4\,\pi\,g}$ and $\mathcal J = \frac{J}{4\,\pi\,g}$, the energy of the folded string can be expanded according to 
+\begin{equation}
+E = 4\,\pi\,g\,\,\mathcal E_{0}(\mathcal J, \mathcal S)+\delta E(\mathcal J, \mathcal S)+\mathcal O\left(\frac{1}{g}\right),
+\end{equation}
+where the small $\mathcal S$ expansion of the classical contribution $\mathcal E_{0}$ reads
+\begin{equation}
+\label{eq:classical}
+ \mathcal E_{0}= \mathcal J+\frac{\sqrt{\mathcal J^{2}+1}}{\mathcal J}\,\mathcal S-\frac{\mathcal J^{2}+2}{4\,\mathcal J^{3}(\mathcal J^{2}+1)}\,\mathcal S^{2}+ 
+ \frac{3\,\mathcal J^{6}+13\,\mathcal J^{4}+20\,\mathcal J^{2}+8}{16\,\mathcal J^{5}\,(\mathcal J^{2}+1)^{5/2}}\,\mathcal S^{3}+\cdots.
+\end{equation}
+The quasi momenta are cloosely related to those of the $AdS_5 \times S^5$ folded string since motion is still in $AdS_{3}\times S^{1}$
+and the $\mathbb{CP}^{3}$ part of the background plays almost no role. The only non-trivial case is 
+\begin{eqnarray}
+q_{1}(x) &=& \pi\,f(x)\,\left\{-\frac{J}{4\,\pi\,g}\,\left(\frac{1}{f(1)\,(1-x)}-\frac{1}{f(-1)(1+x)}\right) 
+-\frac{4}{\pi\,(a+b)(a-x)(a+x)}\ \times \right. \nonumber \\
+&& \left.\qquad \ \ \ \ \  \times \left[
+(x-a)\,\mathbb K\left(\frac{(b-a)^{2}}{(b+a)^{2}}\right)
++ 2\,a\,\Pi\left(\left.
+\frac{(b-a)(a+x)}{(a+b)(x-a)} \right| \frac{(b-a)^{2}}{(b+a)^{2}}
+\right)
+\right]
+\right\}-\pi,
+\end{eqnarray}
+where $1<a<b$, $f(x) = \sqrt{x-a}\,\sqrt{x+a}\,\sqrt{x-b}\,\sqrt{x+b}$ and
+\begin{eqnarray}
+&& S = 2\,g\,\frac{ab+1}{ab}\,\left[b\,\mathbb E\left(1-\frac{a^{2}}{b^{2}}\right)
+-a\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right)\right], 
+\quad \nonumber 
+J = \frac{4\,g}{b}\,\sqrt{(a^{2}-1)(b^{2}-1)}\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right), \\
+&&\phantom{MBnmnpfdmdqctpdm} E = 2\,g\,\frac{ab-1}{ab}\,\left[b\,\mathbb E\left(1-\frac{a^{2}}{b^{2}}\right)
++a\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right)\right].
+\end{eqnarray}
+The other independent quasi-momenta are $q_{3}(x) = \frac{J}{2\,g}\,\frac{x}{x^{2}-1}$, $q_{5}(x) = 0$. The above expressions are valid for a folded string with minimal winding. Adding winding is trivial at the classical level, but requires non-trivial changes at the one-loop level \cite{Gromov:2011bz}. The independent off-shell frequencies can be determined by the methods of \cite{Gromov:2008ec} and read
+\begin{eqnarray}
+&& \Omega_{A}(x) =  \frac{1}{ab-1}\left(1-\frac{f(x)}{x^{2}-1}\right),   \qquad \Omega_{B}(x) = \frac{\sqrt{a^{2}-1}\,\sqrt{b^{2}-1}}{ab-1}\,\frac{1}{x^{2}-1}.
+\end{eqnarray}
+Finally the one-loop shift of the energy is given in full generality by the following sum of zero point energies
+\begin{equation}
+\label{eq:one-loop-correction}
+\delta E = \frac{1}{2}\,\sum_{n=-\infty}^{\infty}\,\sum_{ij}(-1)^{F_{ij}}\,\omega^{ij}_{n},\qquad
+\omega_{n}^{ij} = \Omega^{ij}(x^{ij}_{n}),
+\end{equation}
+where the sum over $(ij)$ is over the $8_{B}+8_{F}$ physical polarizations and $x^{ij}_{n}$ is the unique solution to the equation $q_{i}(x^{ij}_{n})-q_{j}(x^{ij}_{n}) = 2\,\pi\,n$ under the condition $|x_{n}^{ij}|>1$. The explicit sum over the infinite number of on-shell frequencies requires some care and a definite prescription  since the sums are not absolutely convergent due to cancellations between bosonic and fermionic contributions (see \cite{Beccaria:2012qd} for an exhaustive discussion about this point).
+
+The short string limit is generically $\mathcal S\to 0$. After a straightforward computation, our main result is 
+\begin{eqnarray}
+\label{eq:GV}
+\delta E &=& 
+\bigg(
+-\frac{1}{2 \mathcal{J}^2}+\frac{\log (2)-\frac{1}{2}}{\mathcal{J}}+\frac{1}{4}+\mathcal{J} \left(-\frac{3 \,\zeta (3)}{8}+\frac{1}{2}-\frac{\log (2)}{2}\right)-\frac{3
+   \mathcal{J}^2}{16}+\\
+   &&+\mathcal{J}^3 \left(\frac{3 \,\zeta (3)}{16}+\frac{45 \,\zeta (5)}{128}-\frac{1}{2}+\frac{3 \log (2)}{8}\right)+
+   \cdots
+\bigg)\,\mathcal S+ \nonumber \\
+&& +\bigg(
+\frac{3}{4 \mathcal{J}^4}+\frac{\frac{1}{2}-\log (2)}{\mathcal{J}^3}-\frac{1}{8 \mathcal{J}^2}+\frac{\frac{1}{16}-\frac{3 \,\zeta (3)}{4}}{\mathcal{J}}-\frac{1}{8}+\mathcal{J} \left(\frac{69 \,\zeta
+   (3)}{64}+\frac{165 \,\zeta (5)}{128}-\frac{27}{32}+\frac{\log (2)}{2}\right)+\nonumber \\
+   && +\frac{3 \mathcal{J}^2}{8}+\mathcal{J}^3 \left(-\frac{163 \,\zeta (3)}{128}-\frac{405 \,\zeta (5)}{256}-\frac{875 \,\zeta
+   (7)}{512}+\frac{235}{128}-\log (2)\right)+\cdots
+\bigg)\,\mathcal S^{2}+ \dots
+% && + 
+% \bigg(
+% -\frac{5}{4 \mathcal{J}^6}+\frac{\frac{3 \log (2)}{2}-\frac{3}{4}}{\mathcal{J}^5}+\frac{\frac{9 \,\zeta (3)}{16}+\frac{1}{16}}{\mathcal{J}^3}+\frac{1}{16 \mathcal{J}^2}+\frac{\frac{45 \,\zeta
+   % (3)}{64}+\frac{75 \,\zeta (5)}{256}-\frac{7}{32}+\frac{\log (2)}{8}}{\mathcal{J}}+\frac{11}{64}+\nonumber \\
+   % &&  +\mathcal{J} \left(-\frac{89 \,\zeta (3)}{32}-\frac{745 \,\zeta (5)}{256}-\frac{3815 \,\zeta
+   % (7)}{2048}+2-\frac{33 \log (2)}{32}\right)-\frac{465 \mathcal{J}^2}{512}+\nonumber \\
+   % && + \mathcal{J}^3 \left(\frac{5833 \,\zeta (3)}{1024}+\frac{1585 \,\zeta (5)}{256}+\frac{98035 \,\zeta (7)}{16384}+\frac{259455
+   % \,\zeta (9)}{65536}-\frac{405}{64}+\frac{775 \log (2)}{256}\right)+\cdots
+%\bigg)\,\mathcal S^{3}+ \cdots\nonumber
+\end{eqnarray}
+This is the $AdS_4/CFT_3$ equivalent of the result \ref{delta_oneloop} in $AdS_5/CFT_4$. Unfortunately, since there is no analogue for Basso's conjecture, we were not able to do the same trick here.
+
+
+\subsection{The $\pmu$-system}
 
 \subsubsection{Applications}

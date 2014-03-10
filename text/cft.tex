@@ -6,11 +6,103 @@ Here we describe the theory that is the main interest of the thesis.
 
 \subsection{Action and observables}
 
+
+$\N=4$ Super Yang-Mills theory is a quantum field theory much like the Standard Model of particle physics with a certain field content and interaction pattern. What is special about it is the amount of symmetry available -- not only is it a supersymmetric gauge theory, it is also conformally invariant both at the classical and quantum levels, i.e. it is a conformal field theory. In four dimensions a field theory with 16 supercharges is uniquely determined by specifying the gauge group, the fields then live in the vector multiplet of the supersymmetry algebra and in the adjoint of the gauge group. The action is given by [??]
+\begin{equation}
+\begin{split}
+S = & \int d^4 x \, \tr \, \left( - \frac{1}{4}  F_{\mu\nu} F^{\mu\nu}  - \frac{1}{2} \mathcal{D}_\mu \Phi_I \mathcal{D}^\mu \Phi^I - \bar{\psi}^a \sigma^\mu \mathcal{D}_\mu \psi_a \right. \\
+	& \left. - \frac{ig}{2} \sigma^{ab}_I \psi_a [\Phi^I, \psi_b] - \frac{ig}{2} \sigma_{ab}^I \bar{\psi}^a [\Phi_I, \bar{\psi}^b] - \frac{g^2}{4} [\Phi_I, \Phi_J] [\Phi^I, \Phi^J] \right)
+\end{split}
+\label{eq:n4_action}
+\end{equation}
+where $\mu= 1, ..., 4$ as usual, $I, J = 1, ..., 6$, $a, b = 1, ..., 4$ and $\sigma_\mu$ and $\sigma_I$ are the chiral versions of the gamma matrices in four and six dimensions respectively. The covariant derivative $\mathcal{D}_\mu$ is defined as
+\begin{equation}
+	\mathcal{D}_\mu = \partial_\mu - ig \; [A_\mu, \, ].
+\end{equation}
+Alternatively the action can be formulated as a $N=1$ supersymmetric gauge theory in 10 dimensions with the action given by
+\begin{equation}
+	S = \int d^{10} x \, \mathrm{Tr} \, \left( - \frac{1}{4}  F_{MN} F^{MN}  - \frac{1}{2} \Psi \Gamma^M \mathcal{D}_M \Psi \right)
+\end{equation}
+where $\Psi$ is now a Majorana-Weyl spinor in 16 dimensions and $\Gamma^M$ is the 16 dimensional gamma matrix. The action (\ref{eq:n4_action}) can be recovered by dimensional reduction to four dimensions. The gauge field $A_M$ decomposes to the four dimensional gauge field $A_\mu$ and to six real scalar fields $\Phi_I$ whereas the Majorana-Weyl spinor $\Psi_A$ breaks up into four copies of the left and right Weyl spinors in four dimensions 
+\begin{equation}
+	\Psi_A \, \, (A = 1, ..., 16) \, \, \, \rightarrow \, \, \,  \bar{\psi}^a_{\dot{\alpha}}, \; \psi_{a\alpha} \, \, (\alpha, \dot{\alpha} = 1, 2, \; \; a = 1, ..., 4).
+\end{equation}
+
+This theory has an additional $SU(4) \simeq SO(6)$ symmetry called \emph{R-symmetry} that permutes the scalars, which live in the fundamental representation of $SO(6)$ and the spinors, which live in the fundamental of $SU(4)$. From this it follows that we can combine the six real scalars $\Phi^I$ into three complex scalars $\phi^{ab}$, which then transform under the second rank antisymmetric representation of $SU(4)$. The gauge field is a singlet under R-symmetry.
+
+It is now a straightforward but rather tedious task to calculate the beta function for this theory. For any $SU(N)$ gauge theory at one loop level it is given by [??]
+\begin{equation}
+	\beta(g) = - \frac{g^3}{16\pi^2} \left( \frac{11}{3} N - \frac{1}{6} \sum_s C_s - \frac{1}{3} \sum_f \tilde{C}_f \right)
+\end{equation}
+where the first sum is over the real scalars and the second one over the fermions. $C_s$ and $\tilde{C}_f$ are the quadratic casimirs, which in our case are equal to $N$ since all fields are in the adjoint representation of the group. It is then easy to see that at least at one loop level the theory is conformally invariant. It can be shown that the $\beta$ function is identically zero to all orders in perturbation theory \cite{beisert_all_loops}, hence the theory is fully conformally invariant even after quantization. After discussing the full symmetry algebra of the theory and its representations we will give an elegant argument why this is true.
+
 Write the action, maybe also show dimensional reduction from 10d. Talk about observables: traces, Wilson lines. 
 
 Planar limit.
 
 \subsection{Symmetry}
+
+
+
+Conformal symmetry, supersymmetry and R-symmetry are a part of a bigger group $PSU(2,2|4)$, which is known as the \emph{$\N=4$ superconformal group}. It is the full symmetry group of $\N=4$ SYM and is unbroken by quantum corrections \cite{minahan_spinchains}. Hence studying it and its representations further can provide more insights into the theory itself. It is an example of a \emph{supergroup}, i.e. a graded group containing bosonic and fermionic generators. The theory of supergroups is highly developed (see \cite{beisert_conformal}) and much of the techniques from studying simple groups carry over to supergroups with some additional complications, i.e. Dynkin diagrams, root spaces, weights etc. The cover sheet of this thesis features the Dynkin diagram of $PSU(2,2|4)$.
+
+$PSU(2,2|4)$ has the bosonic subgroup of $SU(2,2) \times SU(4)$, where $SU(2,2) \simeq SO(2,4)$ is the conformal group in four dimensions and $SU(4) \simeq SO(6)$ is the R-symmetry. The conformal group has the Poincar\'{e} group as a subgroup, which has 10 generators $P_\mu$ and $M_{\mu\nu}$, in addition there is the generator for dilatations $D$ and four special conformal generators $K_\mu$. Their commutation relations are given by \cite{minahan_spinchains}
+\begin{eqnarray}
+ &[D, M_{\mu\nu}] = 0 \; \; \; [D, P_\mu] = -i P_\mu \; \; \; [D, K_\mu] = +i K_\mu  \nonumber\\
+ &[M_{\mu\nu}, P_\lambda] = -i(\eta_{\mu\nu} P_\nu - \eta_{\lambda\nu} P_\mu) \; \; \; [M_{\mu\nu}, K_\lambda] = -i(\eta_{\mu\lambda} K_\nu - \eta_{\lambda\nu} K_\mu)  \nonumber\\
+ &[P_\mu, K_\nu] = 2i(M_{\mu\nu} - \eta_{\mu\nu} D).
+ \label{eq:conformal_group}
+\end{eqnarray}
+$\N=4$ supersymmetry has 16 supercharges $Q_{a\alpha}$ and $\tilde{Q}^a_{\dot{\alpha}}$ where $\alpha, \dot{\alpha} = 1, 2$ are the Weyl spinor indices and $a = 1,...,4$ are the R-symmetry indices. These generators have the usual commutation and anti-commutation relations with the Poincar\'{e} generators given by
+\begin{eqnarray}
+	& \{Q_{\alpha a}, \tilde{Q}^b_{\dot{\alpha}}\} = \gamma^\mu_{\alpha\dot{\alpha}} \delta_a^b P_\mu \; \; \; \{Q_{\alpha a}, Q_{\alpha b}\} = \{ \tilde{Q}^a_{\dot{\alpha}}, \tilde{Q}^b_{\dot{\alpha}} \} = 0 \nonumber\\
+	& [M^{\mu\nu}, Q_{\alpha a}] = i \gamma^{\mu\nu}_{\alpha\beta} \epsilon^{\beta\gamma} Q_{\gamma a} \; \; \; [M^{\mu\nu}, \tilde{Q}^a_{\dot{\alpha}}] = i \gamma^{\mu\nu}_{\dot{\alpha}\dot{\beta}} \epsilon^{\dot{\beta}\dot{\gamma}} \tilde{Q}_{\dot{\gamma}}^a \nonumber \\
+	& [P_\mu, Q_{\alpha a}] = [P_\mu, \tilde{Q}^b_{\dot{\alpha}}] = 0 
+\end{eqnarray} 
+where $\gamma_{\alpha\beta}^{\mu\nu} = \gamma^{[\mu}_{\alpha\dot{\alpha}} \gamma^{\nu]}_{\beta\dot{\beta}} \epsilon^{\dot{\alpha}\dot{\beta}}$. Commutators between supercharges and the conformal generators are also non trivial and even introduce new supercharges,
+\begin{eqnarray}
+	& [D, Q_{\alpha a}] = -\frac{i}{2} Q_{\alpha a} \; \; \; [D, \tilde{Q}_{\dot{\alpha}}^a] = -\frac{i}{2} \tilde{Q}_{\dot{\alpha}}^a \nonumber \\
+	& [K^\mu,  Q_{\alpha a}] = \gamma^\mu_{\alpha\dot{\alpha}} \epsilon^{\dot{\alpha} \dot{\beta}} \tilde{S}_{\dot{\beta} a} \; \; \; [K^\mu, \tilde{Q}_{\dot{\alpha}}^a] = \gamma^\mu_{\alpha\dot{\alpha}} \epsilon^{\alpha\beta} S_\beta^a
+	\label{eq:dq_commutators}
+\end{eqnarray}
+where $\tilde{S}_{\dot{\alpha} a}$ and $S_\alpha^a$ are the \emph{special conformal supercharges}. They have a reversed Weyl/R-symmetry representation matching from the usual supercharges and together with them bring the total of supercharges to 32. The commutation and anti-commutation relations for the special conformal supercharges are very much like the ones for normal supercharges,
+\begin{eqnarray}
+	& \{S_{\alpha}^a, \tilde{S}_{\dot{\alpha} b}\} = \gamma^\mu_{\alpha\dot{\alpha}} \delta_b^a K_\mu \; \; \; \{S_{\alpha}^a, S_{\alpha}^b\} = \{ \tilde{S}_{\dot{\alpha} a}, \tilde{S}_{\dot{\alpha} b} \} = 0 \nonumber\\
+	& [M^{\mu\nu}, S_{\alpha}^a] = i \gamma^{\mu\nu}_{\alpha\beta} \epsilon^{\beta\gamma} S_{\gamma}^a \; \; \; [M^{\mu\nu}, \tilde{S}_{\dot{\alpha} a}] = i \gamma^{\mu\nu}_{\dot{\alpha}\dot{\beta}} \epsilon^{\dot{\beta}\dot{\gamma}} \tilde{S}_{\dot{\gamma} a} \nonumber \\
+	& [K_\mu, S_{\alpha}^a] = [K_\mu, \tilde{S}_{\dot{\alpha} a}] = 0.
+\end{eqnarray} 
+Finally the anti-commutation relations between the special conformal and usual supercharges close the algebra,
+\begin{eqnarray}
+	\{ Q_{\alpha a}, S_\beta^b \} & = & - i \epsilon_{\alpha\beta} {{\sigma^{IJ}}_a}^b R_{IJ} + \gamma_{\alpha\beta}^{\mu\nu} {\delta_a}^b M_{\mu\nu} - \frac{1}{2} \epsilon_{\alpha\beta} {\delta_a}^b D \nonumber \\
+	\{ \tilde{Q}_{\dot{\alpha}}^a, \tilde{S}_{\dot{\beta} b} \} & = & + i \epsilon_{\dot{\alpha}\dot{\beta}} {{\sigma^{IJ}}^a}_b R_{IJ} + \gamma_{\dot{\alpha}\dot{\beta}}^{\mu\nu} {\delta^a}_b M_{\mu\nu} - \frac{1}{2} \epsilon_{\dot{\alpha}\dot{\beta}} {\delta^a}_b D \nonumber \\
+	\{ Q_{\alpha a}, \tilde{S}_{\dot{\beta} b} \} & = & \{ \tilde{Q}_{\dot{\alpha}}^a, S_\beta^b \} = 0
+	\label{eq:qs_anticommutators}
+\end{eqnarray}
+where $R_{IJ}$ are the generators of R-symmetry with $I,J = 1, ..., 6$. All supercharges transform under the two spinor representations of the R-symmetry group and all other generators commute with it. 
+
+Looking at the commutation relations of the conformal subgroup (\ref{eq:conformal_group}), we see that the operators $P_\mu$ and $K_\mu$ act as raising and lowering operators for the dilatation operator $D$ -- this gives a hint as to how we could construct representations of the group. The dilatation operator $D$ is the generator of scalings, i.e. upon a rescaling $x \rightarrow \lambda x$ a local operator in a field theory scales as 
+\begin{equation}
+	\mathcal{O}(x) \rightarrow \lambda^{-\Delta} \mathcal{O}(\lambda x) = \lambda^{-iD} \mathcal{O}(x) \lambda^{iD}
+\end{equation}
+where $\Delta$ is the \emph{conformal dimension} of the operator $\mathcal{O}(x)$. Classically it is simply the energy dimension of the operator, but as we will see later it can (and often does) get quantum corrections. Restricting to the point $x = 0$, which is a fixed point of scalings, we see that the conformal dimension is the eigenvalue of the dilatation operator,
+\begin{equation}
+	[D,\mathcal{O}(0)] = -i \Delta \mathcal{O}(0).
+\end{equation}
+It is now clear that acting on a field with $K_\mu$ should lower the dimension by one and acting with $P_\mu$ -- raise it by one. We can show this explicitly using the Jacobi identity. Since operators in a unitary quantum field theory should have positive dimensions (aside from the identity operator), we should not be able to keep lowering the dimension indefinitely, i.e. there should always be an operator that satisfies
+\begin{equation}
+	[K_\mu, \tilde{\mathcal{O}}(0)] = 0.
+\end{equation} 
+We call such operators \emph{primary operators}. Acting on these with $P_\mu$ keeps producing operators with a dimension one higher -- we call these the \emph{descendants} of $\tilde{\mathcal{O}}(0)$. We can also act with the supercharges and looking at the commutators in (\ref{eq:dq_commutators}) we see that they raise the dimension by $1/2$, while the special conformal supercharges lower it by $1/2$. A primary operator along with its descendants makes up an irreducible representation of $PSU(2,2|4)$, which is infinite dimensional. However we can get smaller representations by requiring that operators commute with some of the supercharges, i.e.
+\begin{equation}
+	[Q_{\alpha a}, \tilde{\mathcal{O}}(0)] = 0
+\end{equation}
+for some $\alpha, a$. Using the algebra one can show that there is a class of operators that satisfy the condition $J = \Delta$, where $J$ is the charge for any of the 3 \text{R-symmetry} generators in the Cartan algebra of $SO(6)$. It can also be shown that they commute with half of the supercharges. Such operators are called \emph{chiral primary} or half BPS operators.
+
+As stated before, an operator's conformal dimension may get renormalized through quantum corrections, i.e. it acquires an \emph{anomalous dimension}, which depends on the gauge coupling of the theory. An important fact is that operators in the same $PSU(2,2|4)$ representation must have the same anomalous dimension, because the generators of the group can only change it by half integer steps and there's only a finite number of generators. What is more, chiral primary operators are protected from quantum corrections, because at any coupling the total dimension is related to some charge of $SO(6)$ by $\Delta = J$, but charges of compact groups are quantized, meaning that the dimension can't continuously depend on the coupling and hence the anomalous dimension must vanish. As an example of a chiral primary operator we can take the trace of $L$ complex scalar fields, e.g. $Z = \frac{1}{\sqrt{2}}(\phi^1 + i \phi^2)$,
+\begin{equation}
+	\Psi = \tr [Z^L], \; \; \; \; L \geq 2.
+\end{equation}
+This is a chiral primary, since the classical dimension of $\Psi$ is $L$ and it has the R-charges $[L, 0, 0]$, hence it satisfies the chiral primary condition. We will have more to say about these single trace local operators when we discuss integrability. In a similar fashion it can be shown that the operators $\tr \mathcal{F}_+ \mathcal{F}_+$ and $\tr \mathcal{F}_- \mathcal{F}_- $, where $\mathcal{F}_+$ and $\mathcal{F}_-$ are the self-dual and anti self-dual field strengths, are also chiral primaries \cite{minahan_spinchains}, meaning that the $\tr F_{\mu\nu} F^{\mu\nu}$ term in the Lagrangian of $\N=4$ SYM is protected from anomalous dimensions and hence so is the coupling constant $g$. This argument is valid to all orders in perturbation theory, which means that $\N=4$ SYM is conformally invariant to all orders in perturbation theory.
 
 Talk about conformal symmetry, write down the algebra ? Oscillator representation ? Discuss subgroups of psu(2,2|4), closed sectors. 
 
@@ -25,6 +117,67 @@ Since it's a CFT we want to find 2pt and 3pt function. The spectral problem.
 Here we talk about the alternative description of the theory as strings moving in AdS.
 
 \subsubsection{Sigma model formulation}
+
+Type IIB string theory on any curved background is defined by the Green-Schwarz action \cite{green}, which has the bosonic part of
+\begin{equation}
+	S_B = \frac{1}{4\pi\alpha'} \int d^2 \sigma \sqrt{-h} h^{ab} G_{\mu\nu}(X) \partial_a X^\mu \partial_b X^\nu,
+	\label{eq:gs_action}
+\end{equation}
+where $X^\mu(\sigma, \tau)$ is the string embedding map into the target space, which has the metric $G_{\mu\nu}$ and $h^{ab}$ is the string worldsheet metric. In the low energy limit this action reduces to the type IIB supergravity action given in (\ref{eq:IIb_action}). Strings on $AdS_5 \times S^5$ are described by a coset space sigma model \cite{tseytlin_nlsm} with the target superspace of
+\begin{equation}
+	\frac{PSU(2,2|4)}{SO(4,1) \times SO(5)},
+\end{equation}
+\vspace{1pt}
+which has the bosonic part of $AdS_5 \times S^5$. The action can also be reformulated in terms of the algebra current 
+\begin{equation}
+	J = -g^{-1} \mathrm{d} g \in \mathfrak{psu(2,2|4)},
+	\label{eq:j_current}
+\end{equation}
+where $g(\sigma, \tau) \in PSU(2,2|4)$ is the map from the string worldsheet to the supergroup $PSU(2,2|4)$. Since the target space is the coset of $PSU(2,2|4)$ by $SO(4,1) \times SO(5)$, the map $g$ has an extra gauge symmetry
+\begin{equation}
+	g \rightarrow gH, \,\,\,\,\, H \in SO(4,1) \times SO(5)
+\end{equation}
+and the supercurrent transforms as
+\begin{equation}
+	J \rightarrow H^{-1} J H \pm H^{-1} \mathrm{d} H
+	\label{eq:j_gauge}
+\end{equation}
+It can also be decomposed as 
+\begin{equation}
+	J = J^{(0)} + J^{(1)} + J^{(2)} + J^{(3)}
+\end{equation}
+under the $\mathbb{Z}_2$ grading of $PSU(2,2|4)$. The Green-Schwarz action (\ref{eq:gs_action}) for the string in $AdS_5 \times S^5$ can now be written as \cite{current_action}
+\begin{equation}
+	S = \frac{\sqrt{\lambda}}{4 \pi} \int \str \left( J^{(2)} \wedge * J^{(2)} - J^{(1)} \wedge J^{(3)} + \Lambda \wedge J^{(2)} \right),
+\end{equation}
+where $\Lambda$ is a Lagrange multiplier, which ensures that $J^{(2)}$ is supertraceless. A supertrace $\str M$ for an element of a supergroup is defined as
+\begin{equation}
+\str M = \str
+\left( {\begin{array}{c|c}
+ A & B  \\
+ \hline
+ C & D  \\
+ \end{array} } \right) = \tr A - \tr D.
+\end{equation}
+Here the supergroup element $M$ is written as a matrix with the $\mathbb{Z}_2$ grading made manifest, $A$ and $D$ are the bosonic parts.
+
+Once the action is in place, all that's left to do is to derive the equations of motion and solve them. Unfortunately that is easier said that done, in fact, currently there is no way to solve the full quantum string theory on a curved background, which makes the action highly non-linear. However since the background is highly symmetric there are various limits one can take and hope that the problem simplifies tremendously \cite{algebraic_curve}. A popular approach is to look for classical string solutions in $AdS_5 \times S^5$, which can be shown to very well approximate quantum solutions under certain limits. The machinery of finding classical solutions is very involved (see \cite{tseytlin_classical}) and the solutions involve complicated elliptic and hyperelliptic functions. Some examples of solutions are conceptually shown in fig. \ref{fig:string_solutions}, these include rotating circular strings, rotating folded strings and many more. 
+
+One of the simplest examples of a string solution is the so called BMN ground state of the string \cite{dorey}. It is a solution restricted to the $S^3 \times \mathbb{R}$ submanifold of the target space, where the $\mathbb{R}$ factor corresponds to the global time direction of $AdS_5$. Since a string is restricted to a $S^3$ spacelike manifold, it carries two charges under the isometry group of this space, these correspond to two of the three charges of $S^5$, which we denoted as \text{[$J_1$, $J_2$, $J_3$]}, we can choose the two charges to be $J_1$ and $J_3$. The charge under $\mathbb{R}$ is obviously the string energy $E$. Thus we see that such a string is labeled by the same charges as a spin chain state in the $SU(2)$ sector of $\N=4$ SYM, where states are characterized by the number of $W$ and $X$ fields in the trace, which correspond to $J_1$ and $J_3$, and by the anomalous dimension $\Gamma$, which corresponds to the energy for the string. The action for such a string is given by
+\begin{equation}
+	S = \frac{\sqrt{\lambda}}{4 \pi} \int d^2 \sigma \, \partial_a \vec{X} \cdot \partial^a \vec{X} + \Lambda\left(  |\vec{X}|^2 - 1 \right),
+\end{equation}
+which is simply the Nambu-Goto action for a string on a 3-sphere, hence the Lagrange multiplier. Here $\vec{X}(\sigma, \tau)$ is the embedding map from the worldsheet to the 4 dimensional target space, which satisfies $|\vec{X}|^2 = 1$. We can now introduce complex coordinates
+\begin{equation}
+Z_1 = X_1 + iX_2, \,\,\,\,\,\, Z_2 = X_3 + iX_4.
+\end{equation}
+The BMN ground state solution is then simply
+\begin{equation}
+	Z_1 = e^{i \kappa \tau}, \,\,\,\, Z_2 = 0,
+\end{equation}
+which has charges $E = J_1 = \sqrt{\lambda} \, \kappa$ and $J_3 = 0$. We immediately identify this solution with the chiral primary operator $\tr [Z^L]$ in $\N=4$ SYM or the ferromagnetic ground state in the spin chain picture. In the string picture this solution corresponds to a point-like massless string moving at the speed of light around the equator of $S^3$ \cite{dorey}. 
+
+One could go further and find classical solutions corresponding to magnon states in the spin chain picture, which indeed can be done -- magnons turn out to be described by the so called \emph{giant magnon} solutions in string \text{theory \cite{giant_magnons}}. These are closely related to sine-Gordon models, which are known to be integrable, hence once again confirming the expectation that string theory on $AdS_5 \times S^5$ should be integrable (at least on the classical level). However since we are trying to solve the spectral problem, i.e. find the energy levels of the string solutions, we should remind ourselves that in the spin chain picture we were able to do it without actually finding explicit solutions of the spin chain states. This is a hint that there should be a way of doing the same in string theory, i.e. finding the energy levels of strings without actually solving the equations of motion. 
 
 Metsaev-Tseytlin
 

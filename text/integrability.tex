@@ -7,13 +7,265 @@ Give picture summarizing all techniques and their ranges of applicability.
 
 \subsection{One loop at weak coupling}
 
+
+
+Integrability in $\N=4$ SYM was first discovered while trying to find the spectrum of the theory, i.e. the conformal dimensions of various operators. We already saw that in any conformal field theory the two-point correlation functions are very restricted at tree level. For operators that are eigenvalues of dilatations, the correlators have the same form at all loop levels,
+\begin{equation}
+	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta(g)}},
+\end{equation}
+where $\Delta(g)$ is the dimension of the operator. Classically $\Delta = \Delta_0$ is simply the mass dimension, but at the quantum level it receives radiative corrections and acquires an \emph{anomalous dimension} $\gamma$, such that $\Delta(g) = \Delta_0 + \gamma(g)$, where the anomalous dimension depends on the coupling. Usually the corrections are small and the correlator can be expanded as
+\begin{equation}
+	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta_0}} \left(1 - \gamma \ln \Lambda^2|x-y|^2 \right).
+	\label{eq:anomdim_expansion}
+\end{equation}
+Obviously we want to calculate the spectrum for operators that are gauge invariant and since all fields are in the adjoint representation of the gauge group, all gauge invariant operators will consist of traces over the color indices. In general such an operator has the form of
+\begin{eqnarray}
+	\mathcal{O}_{i_1 \mu i_2 \alpha \dots i_n \dots j_1 \nu \beta \dots j_n}(x) & = \tr \left[ \Phi_{i_1}(x) \mathcal{D}_\mu \Phi_{i_2}(x) \psi_\alpha(x) \dots \Phi_{i_n}(x) \right] \times \dots \nonumber \\
+	& \dots \times \tr \left[ \Phi_{j_1}(x) \mathcal{D}_\nu \psi_\beta(x) \dots \Phi_{j_n}(x) \right]. 
+\end{eqnarray} 
+We assume that all the fields are evaluated at the same spacetime point $x$ making the operators local. In the planar limit we can restrict ourselves to single trace operators, since states with multiple traces always involve non-planar Feynman diagrams, which are suppressed in the planar limit. To see how non-planar diagrams emerge and get suppressed consider the chiral primary operator
+\begin{equation}
+	\Psi = \tr [ Z^L ] = {Z^a}_b {Z^b}_c \dots {Z^l}_a,
+	\label{eq:primary_op}
+\end{equation}
+where the scalar field $Z$ and its conjugate $\tilde{Z}$ have the standard tree level correlator
+\begin{equation}
+	\left< {Z^a}_b(x) {{\tilde{Z^{b'}}}}_{a'}(y) \right>_{\mathrm{tree}} \approx \frac{{\delta^a}_{a'} {\delta_b}^{b'}}{|x-y|^{2}}.
+	\label{eq:z_correlator}
+\end{equation}  
+In order to find the anomalous dimension of the chiral primary operator $\Psi$ we must calculate $<\Psi(x) \tilde{\Psi}(x)>$. We do this by using Wick's theorem and plugging in the two-point correlator (\ref{eq:z_correlator}), which produces a lot of terms with delta function contractions between the adjoint indices. Some examples are
+\begin{subequations}
+	\begin{equation} 
+	\dots {\delta^{a'}}_{a} \; {\delta^{a}}_{a'} \; {\delta^{b'}}_{b} \; {\delta^{b}}_{b'} \; {\delta^{c'}}_{c} \;  {\delta^{c}}_{c'} \; \dots 
+	\end{equation}
+	\vspace{-22pt}
+	\begin{equation}
+	\dots {\delta^{a'}}_{c} \; {\delta^{c}}_{a'} \; {\delta^{b'}}_{a} \; {\delta^{a}}_{b'} \; {\delta^{c'}}_{b} \;  {\delta^{b}}_{c'} \; \dots 
+	\end{equation}
+	\begin{equation}
+	\dots {\delta^{a'}}_{a} \; {\delta^{a}}_{b'} \; {\delta^{c'}}_{b} \; {\delta^{b}}_{a'} \; {\delta^{b'}}_{c} \;  {\delta^{c}}_{c'} \; \dots 
+	\end{equation}
+	\label{eq:delta_contractions}
+\end{subequations}
+These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in fig. \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
+% \begin{figure}[b]
+	% \centering
+		% \includegraphics[width=0.9\textwidth]{images/planar_nonplanar}
+	% \caption{Possible types of contractions between fields in traces of operators, which are represented by horizontal lines. Vertical lines represent the contractions. (a) and (b) are two examples of planar contractions while (c) is an example of a non-planar contraction.}
+	% \label{fig:planar_nonplanar}
+% \end{figure}
+All that's left then are cyclic permutations of lines by shifting all of them as seen in fig. \ref{fig:planar_nonplanar} while going from (a) to (b). There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. Thus finally for the chiral primary correlator at tree level we find
+\begin{equation}
+	\left< \Psi(x) \, \tilde{\Psi}(y) \right>_{\mathrm{tree}} \approx \frac{L N^L}{|x-y|^{2L}},
+\end{equation}
+where $N^L$ comes from the contractions and $L$ from all the possible planar ways we can contract. This can easily be generalized for correlators of operators with arbitrary scalar fields $\Phi_{I_1 I_2 \dots I_L}(x) = \tr \left[ \Phi_{I_1}(x) \Phi_{I_2}(x) \dots \Phi_{I_L}(x) \right]$ to
+\begin{equation}
+	\left< \Phi_{I_1 I_2 \dots I_L}(x) \, \tilde{\Phi}^{J_1 J_2 \dots J_L}(y)  \right>_{\mathrm{tree}} \approx \frac{1}{|x-y|^{2L}} \left( \delta_{I_1}^{J_1} \delta_{I_2}^{J_2} \dots \delta_{I_L}^{J_L} + \mathrm{cycles} \right),
+	\label{eq:tree_correlator}
+\end{equation}
+where ``cycles'' refers to terms with the $J$ indices pushed. $I$ and $J$ are flavor indices, the color indices are suppressed.
+ 
+So far so good, but in order to calculate anomalous dimensions we have to go beyond tree level. This may seen like a highly nontrivial thing to do, since we expect not only scalar interactions, but also gluon exchanges and fermion loops appearing. Luckily the symmetry of the theory allows one to calculate all gluon and fermion effects in one go. First let's concentrate on the bosonic sector of the theory ignoring gluons. The action (\ref{eq:n4_action}) contains a single scalar-only interaction term
+%\symbolfootnote[2]{A careful reader might notice that we raise and lower the $I$ and $J$ indices at will, but that's not a problem, because they are $SO(6)$ indices and there is no distinction between upper and lower.}
+\begin{eqnarray}
+S_{\Phi} & = & - \frac{g^2}{4} \sum_{I,J} \int d^4 x \, \tr \, [\Phi_I, \Phi_J] [\Phi_I, \Phi_J] \nonumber \\
+& = & - \frac{g^2}{4} \sum_{I,J} \int d^4 x \, \left( \tr \, [\Phi_I\Phi_I\Phi_J\Phi_J] - \tr \, [\Phi_I\Phi_J\Phi_I\Phi_J]  \right).
+\end{eqnarray} 
+In order to calculate the correlator (\ref{eq:tree_correlator}) at one-loop level, one should insert this term and Wick contract. Just like in tree level, we only have to keep planar diagrams. For the interaction terms this means that only neighboring fields can interact. This drastically reduces the number of terms we get after Wick contracting. Because of that it is enough to consider a length two operator $\Phi_{I_k I_{k+1}}$ and with a bit of work one can show that at one-loop level we get \cite{minahan_spinchains}
+\begin{eqnarray}
+	& \left< \Phi_{I_k I_{k+1}}(x) \, \tilde{\Phi}^{J_k J_{k+1}} \right>_{\mathrm{one-loop}}  = \frac{\lambda}{16\pi^2} \frac{\ln (\Lambda^2|x-y|^2)}{|x-y|^{2L}} \times \nonumber \\ 
+	& \times  \left( 2 {\delta_{I_k}}^{J_{k+1}} {\delta_{I_{k+1}}}^{J_{k}} - \delta_{I_k I_{k+1}} \delta^{J_k J_{k+1}} - {\delta_{I_k}}^{J_{k}} {\delta_{I_{k+1}}}^{J_{k+1}} \right),
+	\label{eq:loop_correlator}
+\end{eqnarray}
+where $\lambda = g^2 N$ is the t'Hooft coupling. Comparing this to (\ref{eq:tree_correlator}) we see that effectively the interactions permute and contract the delta function indices. We can introduce exchange and trace operators to make this explicit. The permutation operator, also called the exchange operator, $\mathcal{P}_{l,l+1}$ is defined by it's action on a set of delta functions as
+\begin{equation}
+	\mathcal{P}_{l,l+1} \; {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l}} {\delta_{I_{l+1}}}^{J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}} = {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l+1}} {\delta_{I_{l+1}}}^{J_{l}} \dots {\delta_{I_{L}}}^{J_{L}}
+\end{equation}
+and the trace operator $\mathcal{K}_{l,l+1}$ is defined as
+\begin{equation}
+	\mathcal{K}_{l,l+1} \; {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l}} {\delta_{I_{l+1}}}^{J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}} = {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_l I_{l+1}}} {\delta}^{J_{l} J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}}.
+\end{equation}
+Using these operators we can rewrite the correlator in (\ref{eq:loop_correlator}) in a more compact notation
+\begin{eqnarray}
+	  \left< \Phi_{I_k I_{k+1}}(x) \, \tilde{\Phi}^{J_k J_{k+1}} \right>_{\mathrm{one-loop}} = &  \nonumber \\
+	  = \frac{\lambda}{16\pi^2} \frac{\ln (\Lambda^2|x-y|^2)}{|x-y|^{2L}} 
+	 & \left( 2 \; \mathcal{P}_{k,k+1} - \mathcal{K}_{k,k+1} - 1 \right) \delta_{I_k}^{J_{k}} \delta_{I_{k+1}}^{J_{k+1}}.
+\end{eqnarray}
+This result includes four scalar interactions only, however as mentioned before at one-loop level we can also have gluon interactions and fermion loops in scalar propagators. The nice thing about these is that such interactions don't alter the flavor index structure, i.e. there are no permutations or traces. Basically this happens because the gluon transforms trivially under R-symmetry and hence can't change the flavor index (which transforms under R-symmetry). Fermions on the other hand do transform under R-symmetry and it is a miracle that happens only at one-loop level that they don't alter the flavor structure. Thus all of these interactions contribute a constant term $C$, which we can determine later. We can generalize our one-loop result with all interactions included for operators of arbitrary length,
+\begin{equation}
+\begin{split}
+	 & \left< \Phi_{I_1 I_2 \dots I_L}(x) \, \tilde{\Phi}^{J_1 J_2 \dots J_L}(y)  \right>_{\mathrm{one-loop}}
+	  = \frac{\lambda}{16\pi^2} \frac{\ln (\Lambda^2|x-y|^2)}{|x-y|^{2L}} \times \nonumber \\
+	 & \times \sum_{l=1}^L \left( 2 \; \mathcal{P}_{l,l+1} - \mathcal{K}_{l,l+1} - 1 + C\right)
+	  \left( \delta_{I_1}^{J_1} \delta_{I_2}^{J_2} \dots \delta_{I_L}^{J_L} + \mathrm{cycles} \right).
+\end{split}
+\end{equation}
+Combining this with the tree level result (\ref{eq:tree_correlator}) and comparing to the general expression of a two-point function at one-loop level (\ref{eq:anomdim_expansion}) we can deduce the anomalous dimension $\gamma$, which now becomes an operator $\Gamma$ because of the flavor mixing. It is given by
+\begin{equation}
+	\Gamma = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left( - 2 \; \mathcal{P}_{l,l+1} + \mathcal{K}_{l,l+1} + 1 - C\right).
+\end{equation}
+At first sight it may seem strange that what was supposed to be a number, i.e. a correction to the mass dimension of an operator has turned out to be an operator acting on the flavor space, i.e. a matrix. But this is very natural and in fact expected, since interactions can change the flavor of fields and we can't be sure that an operator at the quantum level has the same flavor indices as it does at the classical level. This line of thinking may lead to a natural question, why do we have mixing between the scalars only and not between all the fields in the theory including fermions, which miraculously do not appear. It turns out that this is a one-loop feature only and mixing becomes a problem at higher loop levels. In fact, the next subsection about closed sectors is devoted to the question of operator mixing. 
+
+Now that we have acknowledged that the anomalous dimension is a matrix and found an expression for it, the next logical step would be diagonalizing it and finding the flavor eigenstates. One example of such an eigenstate is the chiral primary operator $\Psi$. Since it contains scalar fields of only one type, the permutation and trace operators act trivially on it. Thus we see that
+\begin{equation}
+	\Gamma \, \Psi = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left( -2 + 1 - C \right) \Psi,
+\end{equation}
+but by definition a chiral primary has an anomalous dimension of zero, which then fixes the constant $C$ to $-1$. And finally we get
+\begin{equation}
+	\Gamma = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left(2 - 2 \; \mathcal{P}_{l,l+1} + \mathcal{K}_{l,l+1} \right).
+\end{equation}
+A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. In fact, this is hardly surprising, since from the very beginning we were talking about fields as points in some closed line, which indeed resembles a spin chain. Furthermore the correlators that we were calculating are nothing more that propagators from one state of the chain to another, hence no wonder that the operator describing this evolution looks like a Hamiltonian for a spin chain. This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ exactly. This is indeed what was first done in the seminal paper \cite{minahan_original}, which launched the integrability program in AdS/CFT. However saying that the spectral problem can be solved exactly in this particular case is too strong, since we are only at one-loop level. Nevertheless it turns out that one can apply the same techniques going beyond one-loop level. What happens is that long range interactions start appearing in the Hamiltonian as one goes higher in loops. What is more unexpected is that under certain limits one can actually guess how the solution should look like at all loops. Further techniques like the thermodynamic Bethe ansatz can then be applied to solve the spectral problem exactly without assuming any limits. The coming sections will explore these techniques in more detail.
+
 Roughly rederive the Minahan/Zarembo result.
 
 \subsubsection{The $\mathfrak{sl}(2)$ sector}
 
+
+Let us now focus on the $SU(2)$ sector of $\N=4$ SYM. The anomalous dimension operator is then given by
+\begin{equation}
+	\Gamma = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(1 - \; \mathcal{P}_{l,l+1} \right).
+\end{equation}
+Up to a constant factor this is the same as the Hamiltonian for the Heisenberg spin chain (also called the XXX spin chain), which is a quantum description of a one dimensional magnet. The Hamiltonian is given by
+\begin{equation}
+	\mathbf{H} = \sum_{l=1}^L \left(1 - \mathcal{P}_{l,l+1} \right),
+\end{equation}
+which can also be rewritten in terms of Pauli matrices as
+\begin{equation}
+	\mathbf{H} = 2 \sum_{l=1}^L \left( \frac{1}{4} - \vec{S}_l \cdot \vec{S}_{l+1} \right), \;\;\;\; \vec{S}_l = \frac{1}{2} \vec{\sigma}_l.
+\end{equation}
+Hence solving the spectral problem in $\N=4$ SYM translates into solving the Schr\"{o}dinger equation
+\begin{equation}
+	\mathbf{H} \, \ket{\psi} = E \, \ket{\psi},
+	\label{eq:Schrodinger}
+\end{equation}
+where we now seek to find the energy eigenvalues for the Hamiltonian of the spin chain. If the chain is short, this is a trivial diagonalization problem that can be easily solved by a present day computer. However this problem was first solved analytically by Hans Bethe in a time when computers were still in their infancy. The original solution (English translation available in \cite{bethe_original}) now goes by the name of \emph{coordinate Bethe ansatz} and it is by far one of the most important and beautiful solutions in physics in the past century, which is still very widely used even to this day. The idea is to make an educated guess for the wave function $\ket{\psi}$, plug it in to the Schr\"{o}dinger equation and determine when does it actually hold. This produces a set of algebraic Bethe ansatz equations for a set of variables unimaginatively called the Bethe roots. All observables can then be expressed in terms of these numbers as simple algebraic functions, thus transforming a diagonalization problem to an algebraic problem. This has an enormous advantage, since in the asymptotic limit, when the spin chain is very large, instead of diagonalizing an infinite matrix, the set of algebraic equations actually simplify and produce integral equations, which can be solved.
+
+We already discussed that the anomalous dimension $\Gamma$ must be a matrix due to operator mixing in $\N=4$ SYM. In the $SU(2)$ sector we have mixing only between two scalar fields, e.g. $W$ and $Z$. In the spin chain picture these fields can be treated as up and down spin states, i.e.
+\begin{equation}
+	\ket{\uparrow\,} = Z = \left( \begin{matrix} 1 \\ 0 \end{matrix} \right), \,\,\,\, \ket{\downarrow\,} = W = \left( \begin{matrix} 0 \\ 1 \end{matrix} \right),
+\end{equation}
+thus local single trace operators can be treated as states of a spin chain, e.g.
+\begin{equation}
+	\tr \left( WWZWWZW \right) = \ket{\downarrow \, \downarrow \, \uparrow \, \downarrow \, \downarrow \, \uparrow \, \downarrow \,}
+\end{equation}
+Due to the cyclicity of the trace all rotations of the chain are equivalent. We should also specify the periodicity boundary condition
+\begin{equation}
+	\vec{S}_{L+1} = \vec{S}_1.
+\end{equation}
+The operators $\vec{S}_l$ act as Pauli matrices on the $l$'th spin site and trivially on all the others. Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $\mathbb{C}^{\otimes_L 2}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize. Working directly with Pauli matrices one can find some simple results directly, e.g. it is trivial to show that the chiral primary operator
+\begin{equation}
+	\ket{\Psi} = \tr \left[ Z^L \right] = \ket{\uparrow \, \uparrow \, \dots \, \uparrow \,}
+\end{equation}
+is an eigenstate of the Hamiltonian with zero energy, i.e. it is the ferromagnetic ground state of the spin chain, which we will denote as $\ket{0}$ from now on. This is expected, since we know that chiral primaries have zero anomalous dimensions. Another eigenstate of the Hamiltonian is the \emph{single magnon} state, defined as
+\begin{equation}
+	\ket{p} = \sum_{n=1}^L e^{ipn} \ket{n},
+\end{equation} 
+where $\ket{n}$ is the ground state with the $n$'th spin flipped,
+\begin{equation}
+	\ket{n} = S^-_n \, \ket{0} = \ket{\uparrow \, \uparrow \, \uparrow \, \dots \, \downarrow \, \dots \, \uparrow \, \uparrow \, \uparrow \,},
+\end{equation}
+here $p$ is formally just a parameter, but it can be interpreted as the momentum of the excitation travelling in the spin chain. Due to the cyclicity of the chain the momentum is quantized,
+\begin{equation}
+	p = \frac{2\pi}{L} n, \,\,\,\,\, n \in \mathbb{Z},
+\end{equation}
+where $n$ is the mode number. The energy of the excitation is given by the dispersion relation
+\begin{equation}
+	E(p) = 4 \, \mathrm{sin}^2 \, \frac{p}{2}.
+	\label{eq:magnon_energy}
+\end{equation}
+Now consider a two magnon state
+\begin{equation}
+	\ket{\psi} = \sum_{n<m} \psi(n, m) \, \ket{n,m},  \,\,\,\,\, \ket{n,m} = S^-_n \, S^-_m \, \ket{0}.
+\end{equation}
+The situation is not so trivial this time, since the two magnons might scatter among themselves. We now plug this into (\ref{eq:Schrodinger}) and find the conditions for $\psi(n,m)$, which are
+\begin{equation}
+\begin{split}
+	E \, \psi(n,m) = 4 \, \psi(n,m) & -  \psi(n+1,m)  -  \psi(n-1,m) \\ 
+	                              & -  \psi(n, m+1)  -  \psi(n, m-1)
+\end{split}
+\end{equation}
+when $m > n+1$ and
+\begin{equation}
+	E \, \psi(n, n+1) = 2 \, \psi(n, n+1) - \psi(n-1, n+1) - \psi(n, n+2)
+\end{equation}
+when $m = n+1$, i.e. when the two magnons scatter. The solution is now a superposition of single magnon states
+\begin{equation}
+	\psi(n,m) = e^{ikn + ipm} + S(k,p) e^{ipn + ikm},
+\end{equation}
+where
+\begin{equation}
+	S(p,k) = \frac{\frac{1}{2} \mathrm{cot} \frac{k}{2} - \frac{1}{2} \mathrm{cot} \frac{p}{2} - i}{\frac{1}{2} \mathrm{cot} \frac{k}{2} - \frac{1}{2} \mathrm{cot} \frac{p}{2} + i}
+\end{equation}
+is the scattering matrix. As required, such a state is an eigenstate and the energy is given by
+\begin{equation}
+	E = E(p) + E(k),
+\end{equation}
+i.e. it is simply the sum of the single magnon energies. Finally the spin chain periodicity condition imposes the following equations
+\begin{equation}
+	e^{ikL} \, S(p,k) = e^{ipL} \, S(k, p) = 1.
+\end{equation}
+It is now straightforward to generalize this procedure, which is exactly what Bethe did in his seminal paper \cite{bethe_original}. The wave function for $M$ spins down can be written as
+\begin{equation}
+	\ket{\psi} = \sum_{1 \leq l_1 < l_2 < \dots < l_M \leq L} \psi(l_1, l_2, \dots, l_M) \, S^-_{l_1} \, S^-_{l_2} \, \dots \, S^-_{l_M} \, \ket{0}.
+\end{equation}
+The sum is chosen in a way so as not to over count states. The Bethe ansatz is the educated guess of the wave function
+\begin{equation}
+	\psi(l_1, l_2, \dots, l_M) = \sum_{\sigma \, \in \; perm(1,2,\dots\,M)} A(p) \, e^{ip_{\sigma_1} l_1 + ip_{\sigma_2} l_2 + \dots + ip_{\sigma_M} l_M}, 
+\end{equation}
+where the sum runs over all permutations of the down spin labels $1, 2, \dots, M$. $p_i$ are the momenta of the down spins, which can be treated as excitations moving in the vacuum state of the spin chain. The ansatz then looks like a superposition of plane waves. As in the two magnon case, one should now plug in the ansatz and find the conditions that make it work. The result is a set of algebraic equations, called the \emph{Bethe equations} \cite{staudacher}
+\begin{equation}
+	e^{ip_k L} = - \prod_{\substack{j=1 \\ j \neq k}}^M \frac{e^{ip_j} - e^{ip_k} + 1}{e^{ip_k} - e^{ip_j} + 1} \,\,\,\, \mathrm{for} \,\, k = 1,2, \dots, M
+	\label{eq:bethe_coordinate}
+\end{equation}
+and the amplitude is given by
+\begin{equation}
+	A(r) = \mathrm{sign}(\sigma) \prod_{j<k} \left( e^{ip_j} - e^{ip_k} + 1 \right).
+\end{equation}
+These equations can be interpreted physically once rewritten as
+\begin{equation}
+	e^{ip_k L} \prod_{\substack{j=1 \\ j \neq k}}^M S(p_j, p_k) = 1, \,\,\,\, \mathrm{where} \,\, S(p_j, p_k) = -\frac{e^{ip_k} - e^{ip_j} + 1}{e^{ip_j} - e^{ip_k} + 1}.
+	\label{eq:CBA}
+\end{equation}
+This is simply saying that if we take a magnon, carry it around the spin chain, the total phase change which is a result of free propagation ($e^{ip_k L}$) and scattering with other magnons ($S(p_j,p_k)$) must be trivial.  Changing variables to
+\begin{equation}
+	e^{ip_k} = \frac{u_k + i/2}{u_k - i/2}, \;\;\;\; u_k = \frac{1}{2} \, \mathrm{cot} \, \frac{p_k}{2},
+\end{equation}
+brings the Bethe equations (\ref{eq:bethe_coordinate}) to a more familiar form
+\begin{equation}
+	\left( \frac{u_k + i/2}{u_k - i/2} \right)^L = \prod_{\substack{j=1 \\ j \neq k}}^M \frac{u_k - u_j + i}{u_k - u_j - i},
+\end{equation}
+where now one solves for the Bethe roots $u_k$, also known as magnon rapidities. It is now straightforward to see that this general solution reproduces the two magnon scenario we discussed earlier. The energy of the $M$ magnon state is given by
+\begin{equation}
+	E = \sum_{k=1}^M \frac{1}{u_k^2 + 1/4},
+\end{equation}
+ which also agrees with the single and two magnon examples. 
+ 
+They key thing worth noting in (\ref{eq:CBA}) is that the spin chain can be fully described in terms of the scattering matrix for just two particles, i.e. the full $M$ particle scattering matrix factorizes. This is the defining property of integrability \cite{dorey}, since factorized scattering means that individual momenta are conserved in each two particle scattering producing a tower of conserved quantities -- just the thing one would want in an integrable system. 
+ 
+ 
 Give the sl(2) Hamiltonian, example states and energies.
 
 \subsection{Higher loops}
+
+
+The next step in solving the spectral problem is increasing the loop level. For the $SU(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. The resulting dilatation operator is given by \cite{su2_loops}
+\begin{equation}
+	\Gamma_{2-loop} = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(-4 + 6 \, \mathcal{P}_{l,l+1} - \left( \mathcal{P}_{l,l+1} \, \mathcal{P}_{l+1,l+2} + \mathcal{P}_{l+1,l+2} \, \mathcal{P}_{l,l+1} \right) \right).
+\end{equation}
+In the spin chain picture this corresponds to a Hamiltonian for a long range spin chain with two nearest neighbour interactions. This spin chain has been shown to be integrable \cite{su2_loops}. This result has been extended to three, four and five loops \cite{beisert_all_loops}. The explicit expressions for the dilatation operator at higher loops get more and more lengthy and complicated, but a pattern emerges that at loop level $l$ the dilatation operator can be identified with a Hamiltonian of a long range spin chain where at most $l$ nearest neighbours in the chain interact. What is even more remarkable is that these spin chains also turn out to be integrable \cite{three_loops}, which hints that integrability may be an all loop phenomenon. This was in part verified by solving the spectral problem in the asymptotic limit, i.e. when the spin chain length $L$ becomes infinite, but the number of excitations $M$ is kept finite. The solution is given by conjecturing a set of \emph{asymptotic Bethe ansatz equations}, which since their original inception have been extensively verified \cite{aba_tests,aba_tests2}. The equations have the same form as in the one-loop case (\ref{eq:CBA}), but the scattering function for two magnons gets modified to \cite{dorey}
+\begin{equation}
+	S(p_i, p_j) = \frac{u(p_i) - u(p_j) + i}{u(p_i) - u(p_j) - i} \times S_D(p_i, p_j),
+\end{equation}
+where $S_D(p_i, p_j)$ is the so called dressing factor (an explicit expression for it can be found in \cite{dressing}) and the rapidities are now defined as
+\begin{equation}
+	u(p) = \frac{1}{2} \, \mathrm{cot} \, \frac{p}{2} \, \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}}.
+\end{equation}
+The outcome is that all one-loop results get slightly modified, e.g. the magnon dispersion relation (\ref{eq:magnon_energy}) becomes
+\begin{equation}
+	E(p) = \frac{8\pi^2}{\lambda} \left( \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}} - 1 \right),
+	\label{eq:ABA_e}
+\end{equation}  
+which in the low coupling limit $\lambda \rightarrow 0$ agrees with the one-loop result as it should. For many magnon states the energy is still given by the sum of individual magnon energies. It is truly remarkable that such a simple solution exists even though the Hamiltonian of the all-loop spin chain is not known. But even though such an easy generalization to an all-loop solution looks promising, it is only the first step towards the full solution of the spectral problem in $\N=4$ SYM. 
 
 Short example of a two loop Hamiltonian, perturbative corrections for the states found above with contact terms.
 
@@ -27,6 +279,127 @@ Derive slope from ABA.
 
 \subsection{Strong coupling and the algebraic curve construction}
 
+
+
+In the previous section we defined strings on $AdS_5 \times S^5$ in terms of the algebra current $J$, given in (\ref{eq:j_current}). This current has the property of being flat,
+\begin{equation}
+	dJ - J \wedge J = 0,
+\end{equation}
+and what is more, one can even define a one parameter family of connections from it by \cite{sakura}
+\begin{equation}
+\begin{split}
+	L(x) = J^{(0)} & + \,\,\, \frac{x^2 + 1}{x^2 - 1} \; J^{(2)}  - \,\,\,\, \frac{2x}{x^2 - 1} \; \left( * J^{(0)} - \Lambda \right) \\ 
+	 & + \sqrt{\frac{x+1}{x-1}} \; J^{(1)} + \sqrt{\frac{x-1}{x+1}} \; J^{(3)},
+\end{split}
+\end{equation} 
+which are flat for all $x$,
+\begin{equation}
+	dL(x) - L(x) \wedge L(x) = 0.
+\end{equation}
+Here $L(x)$ is the \emph{Lax connection} and $x$ is the spectral parameter. The existence of such a set of connections signals that the theory is at least classically integrable. This can be shown by constructing the monodromy matrix
+\begin{equation}
+	\Omega(x) = \mathcal{P} \; \mathrm{exp} \oint_\gamma L(x),
+\end{equation}
+where $\gamma$ is any path wrapping the worldsheet cylinder. Since the connection is flat, by definition it is path independent and we can evaluate the integral along any $\tau = const$ loop. Furthermore, shifting the $\tau$ value corresponds to doing a similarity transformation on the monodromy matrix \cite{gromov_quasiclassical}, meaning that the eigenvalues must be time independent. Thus we have an infinite tower of conserved charges, hinting that the theory may be integrable. Denote the eigenvalues of the monodromy matrix as
+\begin{equation}
+	\{ e^{i\hat{p}_1(x)}, \; e^{i\hat{p}_2(x)}, \; e^{i\hat{p}_3(x)}, \; e^{i\hat{p}_4(x)} \; | \; e^{i\tilde{p}_1(x)}, \; e^{i\tilde{p}_2(x)}, \; e^{i\tilde{p}_3(x)}, \; e^{i\tilde{p}_4(x)} \}.
+\end{equation} 
+Here the quantities $p(x)$ are called \emph{quasi-momenta}. The bar as always denotes the $\mathbb{Z}_2$ grading and we use the convention that hatted quantities correspond to $AdS_5$ variables and quantities with tildes correspond to $S^5$. From elementary algebraic geometry we know that the zeroes of any polynomial define an algebraic curve and since the eigenvalues $e^{ip(x)}$ are the zeroes of the characteristic polynomial of the monodromy matrix, they must also define an algebraic curve. A key idea in the development of integrability was the realization that this algebraic curve also known as the \emph{spectral curve} can be used to define classical string solutions \cite{action_variables2}. It is highly nontrivial to reconstruct a classical string solution given a set of quasi-momenta, yet they provide a very convenient way of describing solutions and they are very useful for solving the spectral problem. In that sense the spectral curve is the string analogue of the Bethe equations, which can also be used to find explicit solutions, but the their true power lies in their ability to efficiently solve the spectral problem. 
+
+The characteristic equation for the monodromy matrix is of order eight, meaning that the algebraic curves it defines can be thought of as cuts connecting eight sheets of a Riemann surface. A cut connecting sheets $i$ and $j$ is denoted as $\mathcal{C}^{ij}$ and the quasi-momenta on these sheets have discontinuities
+\begin{equation}
+	p_i(x + i\epsilon) - p_j(x - i\epsilon) = 2 \pi n_{ij},
+	\label{eq:cut_condition}
+\end{equation}  
+where $n_{ij}$ is an integer. Four of the eight sheets correspond to the $AdS_5$ part of the string target space and the other four to the $S^5$ part, hence the indices $i$ and $j$ take on values
+\begin{equation}
+	i \in \{ \, \tilde{1}, \, \tilde{2}, \, \hat{1}, \, \hat{2} \, \}, \;\;\;\; j \in \{ \, \tilde{3}, \, \tilde{4}, \, \hat{3}, \, \hat{4} \, \}
+\end{equation}
+and we define $p$ to have either a hat or a tilde based on the index, i.e. 
+\begin{equation}
+	p_{\hat{i}} (x) \equiv \hat{p}_i (x) \;\;\;\; \mathrm{and} \;\;\;\; p_{\tilde{i}} (x) \equiv \tilde{p}_i (x).
+\end{equation}
+We determine the polarization of a solution by the type of sheets the corresponding cut connects, e.g. if it connects two hatted sheets, the string is polarized in the $AdS_5$ part of the background and if it connects mixed sheets it is a fermionic excitation. Solutions in closed sectors, e.g. strings moving in the $\mathbb{R} \times S^3$ submanifold of the target space will be limited to cuts between a subset of the eight sheets. Some examples of cuts are shown in fig. \ref{fig:cuts}. For each cut we associate the so called \emph{filling fraction} defined by
+\begin{equation}
+	S_{ij} = \pm \frac{\lambda}{8 \pi^2 i} \oint_{\mathcal{C}^{ij}} \left( 1 - \frac{1}{x^2} \right) p_i(x) dx,
+\end{equation}
+where a plus sign is used for indices with a hat and a minus for indices with a tilde. These are the action angle variables for the theory, which is another concept from classical integrability \cite{action_variables}. Roughly they measure the length of the cut, it is also known that they correspond to the excitation numbers of strings or the number of Bethe roots in the spin chain picture \cite{action_variables2}, hence they are integers. 
+
+% \begin{figure}[t]
+	% \centering
+		% \includegraphics[width=0.9\textwidth]{images/cuts}
+	% \caption{Examples of cuts connecting the eight sheets of the Riemann surface corresponding to the spectral curve for strings in $AdS_5 \times S^5$. The wavy line corresponds to the pole at $x = 1$.}
+	% \label{fig:cuts}
+% \end{figure}
+
+Since the Lax connection has poles at $x = \pm 1$, so do the quasi-momenta. Due to the Virasoro constraint, which comes about from the diffeomorphism invariance of the worldsheet, the residues of the quasi-momenta are constrained to
+\begin{equation}
+	\{ \hat{p}_1, \; \hat{p}_2, \; \hat{p}_3, \; \hat{p}_4 \; | \; \tilde{p}_1, \; \tilde{p}_2, \; \tilde{p}_3, \; \tilde{p}_4 \} = \frac{\{ \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm}, \, | \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm} \}}{x \pm 1}.
+\end{equation}
+An additional constraint on the quasi-momenta comes from the fact that the algebra $\mathfrak{psu(2,2|4)}$ has an automorphism, which is the cause for an additional $\mathbb{Z}_4$ grading. The constraints are given by \cite{sakura}
+\begin{eqnarray}
+	\tilde{p}_{1,2}(x) & = & -\tilde{p}_{2,1}(1/x) - 2 \pi m \nonumber \\
+	\tilde{p}_{3,4}(x) & = & -\tilde{p}_{4,3}(1/x) - 2 \pi m \nonumber \\
+	\hat{p}_{1,2,3,4}(x) & = & -\hat{p}_{2,1,4,3}(1/x).
+\end{eqnarray}
+These relations define an inversion symmetry. Finally one can look at the asymptotics of the quasi-momenta as the spectral parameter becomes infinite. In this limit the Lax connection becomes related to the Noether currents of the theory and hence one can relate the quasi-momenta to the charges of the global symmetry algebra by \cite{algebraic_curve}
+\begin{equation}
+\left(
+\begin{array}{c}
+  \hat{p}_1 \\
+  \hat{p}_2 \\
+  \hat{p}_3 \\
+  \hat{p}_4 \\
+  \hline
+  \tilde{p}_1 \\
+  \tilde{p}_2 \\
+  \tilde{p}_3 \\
+  \tilde{p}_4 \\
+\end{array}
+\right) = \frac{2 \pi}{x}
+\left(
+\begin{array}{c}
+  + \mathcal{E} - \mathcal{S}_1 + \mathcal{S}_2 \\
+  + \mathcal{E} + \mathcal{S}_1 - \mathcal{S}_2 \\
+  - \mathcal{E} - \mathcal{S}_1 - \mathcal{S}_2 \\
+  - \mathcal{E} + \mathcal{S}_1 + \mathcal{S}_2 \\
+  \hline
+  + \mathcal{J}_1 + \mathcal{J}_2 - \mathcal{J}_3 \\
+  + \mathcal{J}_1 - \mathcal{J}_2 + \mathcal{J}_3 \\
+  - \mathcal{J}_1 + \mathcal{J}_2 + \mathcal{J}_3 \\
+  - \mathcal{J}_1 - \mathcal{J}_2 - \mathcal{J}_3 \\
+\end{array}
+\right),
+\label{eq:asymptotics}
+\end{equation}
+where the charges are rescaled by $\mathcal{Q} = Q / \sqrt{\lambda}$. Thus we see that we can characterize the quasi-momenta by describing their behaviour at poles and under symmetries, by their asymptotics and their filling fractions. 
+
+Let us now revisit the simplest string solution we know, the BMN string and describe it using the spectral curve. Not surprisingly it is the simplest algebraic curve possible, containing no poles or cuts except the trivial ones at $x = \pm 1$. The quasi-momenta are given by \cite{bmn_from_curve}
+\begin{equation}
+	\tilde{p}_{1,2} = -\tilde{p}_{3,4} = \hat{p}_{1,2} = -\hat{p}_{3,4} = \frac{2 \pi \mathcal{J} x}{x^2 - 1}.
+\end{equation}
+From the asymptotic behaviour as $x \rightarrow \infty$ we can determine the charges of this solution by comparing to (\ref{eq:asymptotics}) and we find
+\begin{equation}
+	\mathcal{J}_1 = \mathcal{J}, \;\;\;\;\; \mathcal{E} = \kappa = \mathcal{J},
+\end{equation}
+all other charges being zero. Many other solutions can be characterized this way, e.g. the giant magnon corresponds to a two cut solution \cite{gromov_quasiclassical}.
+
+As already mentioned, the key advantage of describing solutions using algebraic curves is the ability to solve the spectral problem without actually solving the equations of motion. We already saw this at the classical level, where finding the energy of a solution amounts to looking at the asymptotic behaviour of the quasi-momenta. Quasi-classical analysis of the spectral curve enables one to go beyond the classical theory and find quantum corrections to the energy levels of classical solutions. The idea of quasi-classical analysis and the spectral curve for that matter traces back to the early days of quantum mechanics. Consider a particle in a smooth one dimensional potential described by the wave function $\psi(x)$. Define the quasi-momentum by
+\begin{equation}
+	p(x) \equiv \frac{\hbar}{i} \frac{\psi'(x)}{\psi(x)},
+\end{equation}
+the Schr\"{o}dinger equation then looks like
+\begin{equation}
+	p^2(x) - i \hbar \, p'(x) = 2m (E - V),
+\end{equation}
+which would be the classic energy momentum relation if it were not for the $\hbar$ term. The quasi-momentum has a pole for each zero of the wave function, so for a highly excited state this will be some big number $N \rightarrow \infty$ and we would recover the classical solution. What is more, the poles get closer and closer to each other and in the classical limit they condense to form a cut connecting two sheets in a Riemann surface. Thus in the classical limit we recover the spectral curve of this system. We also know that the number of poles is given by
+\begin{equation}
+	\frac{1}{2 \pi \hbar} \oint_\mathcal{C} p(x) \, dx = N,
+\end{equation}
+which is also the Bohr-Sommerfield quantization condition. This integral effectively measures the size of the cut when the poles condense to a cut, thus this is the filling fraction. This simplified discussion illustrates how one could go from a classical system to a quantum one. The idea of quasi-classical analysis is to start with a classical solution and perturb it by adding microscopic cuts to the Riemann surface, which effectively describe some quantum excitations. This is exactly what has been done for various string solutions in $AdS_5 \times S^5$ \cite{gromov_quasiclassical}. One can then proceed with comparing the spectra of string solutions beyond the classical level with spectra of spin chain states at higher loop levels and the results so far have been encouraging \cite{gromov_psu}.
+
+
+
 Describe flat connections, monodromies, sheets etc.
 
 \subsubsection{Folded string}
@@ -38,6 +411,89 @@ Give solution
 Describe the quantization procedure. Derive next coefficient for Konishi.
 
 \subsection{Short strings}
+
+
+This section describes the work performed by the author which culminated in the publication \cite{Gromov:2011bz}, which itself is largely based on the semiclassical analysis performed in \cite{Gromov:2011de}. 
+
+Here we are interested in the so called $SL(2)$ sector of the theory, which is composed of operators of the form $\mathrm{Tr}( D^S Z^J ) + \mathrm{permutations}$, where $D$ is the covariant derivative, $S$ is the spin and $J$ is the angular momentum of the operator. This sector is convenient, since equations suitable for numerical studies were formulated for it and thus one can cross check everything against numerics. On the string theory side operators from this sector correspond to the so-called spinning folded strings. At the classical level, it is convenient to describe them in terms of the scaled charges $\mc S = S/\sqrt\lambda$, $\mc J = J/\sqrt\lambda$. They have a simple and clear dynamical meaning: the spin $\mc S$ is associated with rotation around the center of  $AdS_{5}$ while $\mc J$ is an angular momentum on the sphere. At small $\mc S$, the string is short and admits a near-flat space description. At large $\mc S$, the string stretches and reaches the boundary of $AdS$ with the characteristic scaling $E \sim \log \mc S$ of its energy. Short strings are especially interesting, since their strong coupling limit looks very difficult to address both within the gauge theory and perturbative string theory approaches, on the other hand, quantum corrections in the semiclassical approximation are fully under control and can be studied by algebraic curve tools.
+
+The algebraic curve method is one of the most advanced ways of computing the semi-classical corrections AdS/CFT. The method is heavily based on integrability and is naturally free from any perturbation theory ambiguities. The only input needed to proceed with the quantization is a set of quasi-momenta $\hat p_i,\, \tilde p_i,\;i=1,2,3,4$ which were mentioned in the previous section on integrability. In particular, the folded string solution corresponds to the curve with two symmetric cuts with real branch-points $\pm b, \pm a$ such that $1<a<b$. The explicit form of the quasi-momenta depends on the twist $J$ and the Lorentz spin $S$ and can be constructed using the methods of \cite{Beisert:2003ea}, \cite{Kazakov:2004qf}, \cite{Kazakov:2004nh}. 
+  
+A more detailed description of the procedure will be given in the following section on $AdS_4/CFT_3$, since the author has performed the analysis in that case and published the result in \cite{Beccaria:2012qd} \cite{Beccaria:2012vb}. At this stage the take away point is that the semiclassical quantization procedure produces the following result for the energy of a folded string up to one loop level
+ \beq \Delta^{\rm classical}+\delta E=\lambda^{1/4}\sqrt{2S}
+ +\frac{1}{\lambda^{1/4}}\frac{2J^2+S(3S-2)}{4\sqrt{2S}}\;.  \eeq
+
+The authors contribution to the $AdS_5/CFT_4$ case is the publication \cite{Gromov:2011bz}, which builds on top of the aforementioned semiclassical analysis in the following way. Consider the limit $\cal{S} \rightarrow \mathrm{0}$ where the semiclassical correction to the string energy can be written as
+\beqa
+\label{delta_oneloop}
+\delta E &\simeq&
+\frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
+   }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
+\!-\!\sum_{m>0,m\neq n}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
+   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]\;.
+\eeqa
+If the parameters $\cal{S}$ and $\cal{J}$ are fixed to some values then the sums can be evaluated. Note that this expression mixes various orders of the coupling. Now consider the conjecture in \cite{Basso:2011rs}. It says that making expansions of the scaling dimension squared first in ${\cal S}\to 0$ and then in $\lambda\to \infty$ should reveal the following structure
+\beq
+\Delta^2=J^2+S
+\(
+A_1\sqrt{\mu}+A_2+\dots
+\)
++S^2
+\(
+B_1+\frac{B_2}{\sqrt\mu}
++\dots%+\frac{J^4}{2\mu^2}
+\)
++{\cal O}({ S}^3)\;,
+\eeq
+where the coefficients $A_i,\;B_i,\;C_i$ are some functions of $J$ and $\sqrt{\mu} = n \sqrt{\lambda}$ with $n$ being the mode number. This is, as can be easily seen, a nontrivial constraint on $\Delta$ itself as
+\beqa
+\Delta&=&J+\frac{S}{2J}
+\(
+A_1\sqrt{\mu}+A_2+\frac{A_3}{\sqrt{\mu}}+\dots
+\)\\
+\nn&+&S^2
+\(
+- \frac{A_1^2}{8J^3} \, \mu
+-  \frac{A_1A_2}{4J^3} \, \sqrt{\mu}
++\[\frac{B_1}{2J}-\frac{A_2^2+2A_1 A_3}{8J^3}\]
++
+\[
+\frac{B_2}{2J}
+-\frac{A_2A_3+A_1A_4}{4J^3}
+\]  \frac{1}{\sqrt\mu}
++\dots
+\)
++{\cal O}(S^3)\;.
+\eeqa
+One of the results of \cite{Basso:2011rs} is the exact formula for all the coefficients $A_i$. They can be found easily by expanding a simple combination of Bessel functions, called the ``slope", around infinity and it produces~\cite{Basso:2011rs}:
+\beq
+A_1=2\;\;,\;\;
+A_2=-1\;\;,\;\;
+A_3=J^2-\frac{1}{4}\;\;,\;\;
+A_4=J^2-\frac{1}{4}\dots\;.
+\eeq
+Comparing with our one-loop result \ref{delta_oneloop} we can also find the $B_i$'s,
+\beq
+B_1=\frac{3}{2}\;\;,\;\;
+B_2=
+\left\{
+\bea{ll}
+-3\,\zeta_3+\frac{3}{8}&\;\;,\;\;n=1\\
+-24\,\zeta_3-\frac{13}{8}&\;\;,\;\;n=2\\
+-81\,\zeta_3-\frac{24}{8}&\;\;,\;\;n=3
+\eea
+\right.\;.
+\eeq
+The equation \ref{Delta} allows one to make a very nontrivial prediction for the strong coupling expansion of operators with fixed length $J$ and the number of derivatives $S$. For that end we simply fix $S$ and $J$ in \ref{Delta} and expand for large $\lambda$ or, equivalently, $\mu$. This procedure gives:
+\beq
+\Delta_{S,J,n}\simeq\sqrt{2S}\mu^{1/4}
++\frac{2J^2+3S^2-2S}{4\,(2 S)^{1/2}\,\mu^{1/4}}
++\frac{-21S^4+(32B_2+12)S^3+(20J^2-12)S^2+8J^2 S-4J^4}{32\,(2S)^{3/2}\,\mu^{3/4}}\;
+\eeq
+where $B_2$ is given in \ref{BB}. Note that according to our observations there are some inconsistencies in the conjecture that this derivation relies on when $n>1$ and thus this result should be treated with great care.
+
+The end result is that we were able to boost the one loop result \ref{eq:loopres} to two loops simply by utilizing Basso's conjecture. We checked the prediction against exact TBA results and the agreement was very convincing.
+
 
 Combine with slope, derive next coeffient for Konishi.
 
