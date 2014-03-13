@@ -2,18 +2,91 @@
 
 \section{Exact results}
 
-Exact results are rare and important.
+In this section we leave the perturbative regime (weak and strong coupling) behind and move on towards exact results in $\N=4$ super Yang-Mills, where by ``exact'' we mean available at any value of the coupling constant.
+In principle such results are the ultimate goal of the whole AdS/CFT programme and being able to extract them is a remarkable achievement.
+
+One can argue that the spectral problem has been worked out exactly, at least conceptually, as we will review shortly.
+However in practice one immediately runs into technical difficulties with finding solutions, thus at the moment only certain calculations have been carried out explicitly.
+In this section we will present a few examples of exact results, most notably the slope and curvature functions, which basically are the two leading coefficients in the small spin expansion of the anomalous dimension of the folded string.
+As mentioned before, they are indeed exact in the coupling constant, yet they are not physical observables of the theory, thus one may argue that they are of little use.
+We will argue the opposite by demonstrating how one can use them in order to find new information about phyiscally relevant quantities such as the Konishi anomalous dimension.
+
+We will start the section by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel $\pmu$ approach.
+We then devote the rest of the section to various exact results, mostly achieved using the $\pmu$-system.
+
 
 \subsection{Solution to the spectral problem}
 
-\subsubsection{TBA and the Y-system}
+Historically the first solution to the spectral problem that fully incorporated finite length corrections was the thermodynamic Bethe ansatz (TBA). 
+Being a set of infinite integral equations it was obviously very hard to use in practice and was thus soon reformulated as an infinite set of functional relations, the so called Y-system.
+Both of these formulations can now be seen as intermediary steps towards the more elegant $\pmu$-system, which we cover in more depth in the next subsection.
+
+\subsubsection{TBA}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{../graphics/yt_hooks}
 \end{figure}
 
-\subsubsection{The $\pmu$-system}
+ The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{frolov}
+\begin{equation}
+	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsin} \, \frac{\sqrt{\tilde{p} \left( 16 \, \pi^2 + \tilde{p} \, \lambda \right)}}{8 \pi},
+\end{equation}
+the scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz \cite{tba}. One can use this fact, since the partition functions for these theories satisfy the obvious identity
+\begin{equation}
+	Z(L,R) = \tilde{Z}(R,L),
+\end{equation}
+where $L$ is the length scale of the original theory and $R$ is the time scale. At asymptotic time scales the partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
+\begin{equation}
+	Z(L,R) = \tr e^{-R \, H(L)} \xrightarrow[\text{$R \rightarrow \infty$}]{} e^{-R \, E_0(L)}.
+\end{equation}
+This limit corresponds to the infinite length limit for the mirror model, which we can solve using the asymptotic Bethe ansatz, thus
+\begin{equation}
+	\tilde{Z}(R,L) = \tr e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
+\end{equation}
+where $\tilde{H}$ is the Hamiltonian of the mirror theory. Now we simply identify the partition functions and solve for the ground state energy in the original theory at any length $L$. The result is then a simple integral given by \cite{tba}
+\begin{equation}
+	E_0(L) = - \frac{1}{2 \pi} \sum_r \int du \left( \partial_u \tilde{p} \right) \log \left( 1 + e^{-\epsilon_r(u)} \right), 
+\end{equation}
+where $\epsilon_r(u)$ is the so called pseudo energy, defined in terms of the density of solutions with some charge $r$ in the mirror theory and we sum over all charges that describe the solutions. Energies of excited states at finite length can then be found by analytic continuation \cite{excited_tba}.
+
+The argument for the finite size solution presented here is very sketchy and for the full $PSU(2,2|4)$ theory the story is obviously way more complicated, but everything that we discussed has indeed been done for the full theory. The solution is written in terms of a Y-system \cite{gromov_tba}, which is a set of algebraic equations frequently found in integrable systems \cite{gromov_hirota}. The \text{Y-system} equations have been verified on numerous occasions and have thus far passed every test \cite{gromov_tests}.
+
+\beq
+	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \)
+\eeq
+
+\beq
+	E = \sum_j \epsilon_1(u_{4,j}) + \sum_{a=1}^\infty \int_{-\infty}^\infty \frac{du}{2\pi i} \frac{\pd \epsilon_a^*}{\pd u} \log \(1 + Y_{a,0}^* (u) \)
+\eeq
+
+\subsubsection{The Y-system}
+
+
+
+The Y-system
+\beq
+	\frac{Y_{a,s}^{+} Y_{a,s}^{-}}{Y_{a+1,s} Y_{a-1,s}} = \frac{\(1+Y_{a,s+1}\)\(1+Y_{a,s-1}\)}{\(1+Y_{a+1,s}\)\(1+Y_{a-1,s}\)}
+\eeq
+
+
+
+\beq
+	T_{a,s}^+ T_{a,s}^- = T_{a+1,s} T_{a-1,s} + T_{a,s+1} T_{a,s-1} 
+\eeq
+
+\beq
+	Y_{a,s} = \frac{T_{a,s+1} T_{a,s-1}}{T_{a+1,s} T_{a-1,s}}
+\eeq
+
+\beq
+	T_{a,s} \rightarrow g_1^{[a+s]} g_2^{[a-s]} g_3^{[s-1]} g_4^{[-a-s]} \; T_{a,s}
+\eeq
+
+
+
+
+\subsection{The $\pmu$-system}
 
 
 In this section we review the formulation of the $\bP\mu$-system, and also discuss its symmetries which will be useful later.
