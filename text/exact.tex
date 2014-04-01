@@ -23,11 +23,6 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 
 \subsubsection{TBA}
 
-%\begin{figure}[t]
-%	\centering
-%	\includegraphics[width=\textwidth]{../graphics/yt_hooks}
-%\end{figure}
-
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}
@@ -52,16 +47,16 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 	
 	\begin{scope}[shift={(11,0)}]
 	
-		\draw[->,thick] (0,0) -- (10,0); \draw[->,thick] (5,0) -- (5,5);
-		\node[below] at (10,0) {s}; \node[right] at (5,5) {a};
-		
 		\draw[gray] (1,0) grid (9,2); 
-		\draw[gray] (3,2) grid (7,4); 
+		\draw[gray] (3,2) grid (7,4); 		
 		
 		\draw[gray,dashed] (0,1) -- (1,1);  \draw[gray,dashed] (0,2) -- (1,2);
 		\draw[gray,dashed] (9,1) -- (10,1); \draw[gray,dashed] (9,2) -- (10,2);
 		\draw[gray,dashed] (3,4) -- (3,5);  \draw[gray,dashed] (4,4) -- (4,5); 
 		\draw[gray,dashed] (6,4) -- (6,5);  \draw[gray,dashed] (7,4) -- (7,5); 
+		
+		\draw[->,thick] (0,0) -- (10,0); \draw[->,thick] (5,0) -- (5,5);
+		\node[below] at (10,0) {s}; \node[right] at (5,5) {a};
 	
 	\end{scope}
 	
@@ -69,9 +64,6 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 	
 	\begin{scope}[shift={(0,0)}]
 	
-		\draw[->,thick] (0,0) -- (10,0); \draw[->,thick] (5,0) -- (5,5);
-		\node[below] at (10,0) {s}; \node[right] at (5,5) {a};
-
 		\draw[gray] (4,1) grid (6,4); 
 		\draw[gray] (3,1) grid (4,2); \draw[gray] (6,1) grid (7,2);
 		\draw[gray] (1,1) -- (9,1);
@@ -79,6 +71,9 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 		
 		\draw[gray,dashed] (0,1) -- (1,1); \draw[gray,dashed] (9,1) -- (10,1); 
 		\draw[gray,dashed] (4,4) -- (4,5); \draw[gray,dashed] (6,4) -- (6,5); 
+		
+		\draw[->,thick] (0,0) -- (10,0); \draw[->,thick] (5,0) -- (5,5);
+		\node[below] at (10,0) {s}; \node[right] at (5,5) {a};
 		
 		\node[hooknode=black] at (5,1) {};
 		\node[hooknode=black] at (5,2) {};
