@@ -7,8 +7,8 @@ In principle such results are the ultimate goal of the whole AdS/CFT programme a
 
 One can argue that the spectral problem has been worked out exactly, at least conceptually, as we will review shortly.
 However in practice one immediately runs into technical difficulties with finding solutions, thus at the moment only certain calculations have been carried out explicitly.
-In this section we will present a few examples of exact results, most notably the slope and curvature functions, which basically are the two leading coefficients in the small spin expansion of the anomalous dimension of the folded string.
-As mentioned before, they are indeed exact in the coupling constant, yet they are not physical observables of the theory, thus one may argue that they are of little use.
+In this section we will present a few examples of exact results, most notably the slope and curvature functions, which are the two leading coefficients in the small spin expansion of the anomalous dimension of the folded string.
+As mentioned before, they are indeed exact in the coupling constant, yet they are somewhat abstract, one might even say not physical and thus of little use.
 We will argue the opposite by demonstrating how one can use them in order to find new information about phyiscally relevant quantities such as the Konishi anomalous dimension.
 
 We will start the section by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel $\pmu$ approach.
@@ -23,9 +23,94 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 
 \subsubsection{TBA}
 
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=\textwidth]{../graphics/yt_hooks}
+%\end{figure}
+
 \begin{figure}[t]
-	\centering
-	\includegraphics[width=\textwidth]{../graphics/yt_hooks}
+\centering
+\begin{tikzpicture}
+	
+	\draw[help lines] (-3,-3) grid (8,3);
+	
+	\node[draw,cylinder,black,rotate=0, minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
+	\node[draw,cylinder,black,rotate=90,minimum height=3cm,minimum width=2cm,aspect=2] (c) at (5, 0) {};
+	
+	
+\end{tikzpicture}
+\caption{Blah}
+\end{figure}
+
+\begin{figure}[t]
+\begin{tikzpicture}[scale=0.7]
+	
+	\tikzset{hooknode/.style={draw,circle,minimum size=1.5ex,fill=#1}}
+	\tikzset{hooknodecross/.style={draw,cross out,minimum size=1.5ex}}
+	
+	% T-hook
+	
+	\begin{scope}[shift={(11,0)}]
+	
+		\draw[->,thick] (0,0) -- (10,0); \draw[->,thick] (5,0) -- (5,5);
+		\node[below] at (10,0) {s}; \node[right] at (5,5) {a};
+		
+		\draw[gray] (1,0) grid (9,2); 
+		\draw[gray] (3,2) grid (7,4); 
+		
+		\draw[gray,dashed] (0,1) -- (1,1);  \draw[gray,dashed] (0,2) -- (1,2);
+		\draw[gray,dashed] (9,1) -- (10,1); \draw[gray,dashed] (9,2) -- (10,2);
+		\draw[gray,dashed] (3,4) -- (3,5);  \draw[gray,dashed] (4,4) -- (4,5); 
+		\draw[gray,dashed] (6,4) -- (6,5);  \draw[gray,dashed] (7,4) -- (7,5); 
+	
+	\end{scope}
+	
+	% Y-hook
+	
+	\begin{scope}[shift={(0,0)}]
+	
+		\draw[->,thick] (0,0) -- (10,0); \draw[->,thick] (5,0) -- (5,5);
+		\node[below] at (10,0) {s}; \node[right] at (5,5) {a};
+
+		\draw[gray] (4,1) grid (6,4); 
+		\draw[gray] (3,1) grid (4,2); \draw[gray] (6,1) grid (7,2);
+		\draw[gray] (1,1) -- (9,1);
+		\draw[black,ultra thick] (3,2) -- (3,1) -- (7,1) -- (7,2);
+		
+		\draw[gray,dashed] (0,1) -- (1,1); \draw[gray,dashed] (9,1) -- (10,1); 
+		\draw[gray,dashed] (4,4) -- (4,5); \draw[gray,dashed] (6,4) -- (6,5); 
+		
+		\node[hooknode=black] at (5,1) {};
+		\node[hooknode=black] at (5,2) {};
+		\node[hooknode=black] at (5,3) {};
+		\node[hooknode=black] at (5,4) {};
+		
+		\node[hooknode=white] at (4,1) {}; \node[hooknodecross] at (4,1) {};
+		\node[hooknode=white] at (4,2) {};
+		\node[hooknode=white] at (4,3) {};
+		\node[hooknode=white] at (4,4) {};
+		
+		\node[hooknode=white] at (6,1) {}; \node[hooknodecross] at (6,1) {};
+		\node[hooknode=white] at (6,2) {};
+		\node[hooknode=white] at (6,3) {};
+		\node[hooknode=white] at (6,4) {};
+		
+		\node[hooknode=white] at (3,1) {}; 
+		\node[hooknode=white] at (3,2) {}; \node[hooknodecross] at (3,2) {};
+		
+		\node[hooknode=white] at (7,1) {}; 
+		\node[hooknode=white] at (7,2) {}; \node[hooknodecross] at (7,2) {};
+		
+		\node[hooknode=white] at (8,1) {}; 
+		\node[hooknode=white] at (9,1) {}; 
+		
+		\node[hooknode=white] at (2,1) {}; 
+		\node[hooknode=white] at (1,1) {}; 
+	
+	\end{scope}
+	
+\end{tikzpicture}
+\caption{Blah}
 \end{figure}
 
  The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{frolov}
