@@ -25,17 +25,72 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.7]
 	
-	\draw[help lines] (-3,-3) grid (8,3);
+	\draw[help lines] (-5,-5) grid (15,5);
 	
-	\node[draw,cylinder,black,rotate=0, minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
-	\node[draw,cylinder,black,rotate=90,minimum height=3cm,minimum width=2cm,aspect=2] (c) at (5, 0) {};
+	\begin{scope}[shift={(0,0)}]
+		\node[red] at (0,0) {x};
+		
+		\node[draw,cylinder,black,rotate=0, minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
+		
+		\draw[->] (-3,-2) -- (3,-2);
+		\draw[->] (-3,-2) -- (-3,2);
+		
+	\end{scope}
+	
+	\begin{scope}[shift={(8,0)}]
+	
+		\node[red] at (0,0) {x};
+	
+		\node[draw,cylinder,black,rotate=90,minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
+		
+	\end{scope}
 	
 	
 \end{tikzpicture}
-\caption{Blah}
+\label{fig:tba_cylinders}
+\caption{A high level illustration of the idea behind the TBA method: by double Wick rotating the theory one can exchange time with length and thus finite volume scattering with the ground state scattering at finite length.}
 \end{figure}
+
+
+ The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{frolov}
+\begin{equation}
+	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsin} \, \frac{\sqrt{\tilde{p} \left( 16 \, \pi^2 + \tilde{p} \, \lambda \right)}}{8 \pi},
+\end{equation}
+the scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz \cite{tba}. One can use this fact, since the partition functions for these theories satisfy the obvious identity
+\begin{equation}
+	Z(L,R) = \tilde{Z}(R,L),
+\end{equation}
+where $L$ is the length scale of the original theory and $R$ is the time scale. At asymptotic time scales the partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
+\begin{equation}
+	Z(L,R) = \tr e^{-R \, H(L)} \xrightarrow[\text{$R \rightarrow \infty$}]{} e^{-R \, E_0(L)}.
+\end{equation}
+This limit corresponds to the infinite length limit for the mirror model, which we can solve using the asymptotic Bethe ansatz, thus
+\begin{equation}
+	\tilde{Z}(R,L) = \tr e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
+\end{equation}
+where $\tilde{H}$ is the Hamiltonian of the mirror theory. Now we simply identify the partition functions and solve for the ground state energy in the original theory at any length $L$. The result is then a simple integral given by \cite{tba}
+\begin{equation}
+	E_0(L) = - \frac{1}{2 \pi} \sum_r \int du \left( \partial_u \tilde{p} \right) \log \left( 1 + e^{-\epsilon_r(u)} \right), 
+\end{equation}
+where $\epsilon_r(u)$ is the so called pseudo energy, defined in terms of the density of solutions with some charge $r$ in the mirror theory and we sum over all charges that describe the solutions. Energies of excited states at finite length can then be found by analytic continuation \cite{excited_tba}.
+
+The argument for the finite size solution presented here is very sketchy and for the full $PSU(2,2|4)$ theory the story is obviously way more complicated, but everything that we discussed has indeed been done for the full theory. The solution is written in terms of a Y-system \cite{gromov_tba}, which is a set of algebraic equations frequently found in integrable systems \cite{gromov_hirota}. The \text{Y-system} equations have been verified on numerous occasions and have thus far passed every test \cite{gromov_tests}.
+
+\beq
+	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \)
+\eeq
+
+\beq
+	E = \sum_j \epsilon_1(u_{4,j}) + \sum_{a=1}^\infty \int_{-\infty}^\infty \frac{du}{2\pi i} \frac{\pd \epsilon_a^*}{\pd u} \log \(1 + Y_{a,0}^* (u) \)
+\eeq
+
+\subsubsection{The Y-system}
+
+
+
+The Y-system
 
 \begin{figure}[t]
 \begin{tikzpicture}[scale=0.7]
@@ -105,46 +160,10 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 	\end{scope}
 	
 \end{tikzpicture}
-\caption{Blah}
+\label{fig:yt_hooks}
+\caption{The domains of the $Y_{a,s}$ and $T_{a,s}$ functions (left and right respectively). The $Y_{a,s}$ functions are defined on the nodes, where the type of node signifies the type of excitation. The $T_{a,s}$ functions are defined on the latttice points of the grid.}
 \end{figure}
 
- The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{frolov}
-\begin{equation}
-	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsin} \, \frac{\sqrt{\tilde{p} \left( 16 \, \pi^2 + \tilde{p} \, \lambda \right)}}{8 \pi},
-\end{equation}
-the scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz \cite{tba}. One can use this fact, since the partition functions for these theories satisfy the obvious identity
-\begin{equation}
-	Z(L,R) = \tilde{Z}(R,L),
-\end{equation}
-where $L$ is the length scale of the original theory and $R$ is the time scale. At asymptotic time scales the partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
-\begin{equation}
-	Z(L,R) = \tr e^{-R \, H(L)} \xrightarrow[\text{$R \rightarrow \infty$}]{} e^{-R \, E_0(L)}.
-\end{equation}
-This limit corresponds to the infinite length limit for the mirror model, which we can solve using the asymptotic Bethe ansatz, thus
-\begin{equation}
-	\tilde{Z}(R,L) = \tr e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
-\end{equation}
-where $\tilde{H}$ is the Hamiltonian of the mirror theory. Now we simply identify the partition functions and solve for the ground state energy in the original theory at any length $L$. The result is then a simple integral given by \cite{tba}
-\begin{equation}
-	E_0(L) = - \frac{1}{2 \pi} \sum_r \int du \left( \partial_u \tilde{p} \right) \log \left( 1 + e^{-\epsilon_r(u)} \right), 
-\end{equation}
-where $\epsilon_r(u)$ is the so called pseudo energy, defined in terms of the density of solutions with some charge $r$ in the mirror theory and we sum over all charges that describe the solutions. Energies of excited states at finite length can then be found by analytic continuation \cite{excited_tba}.
-
-The argument for the finite size solution presented here is very sketchy and for the full $PSU(2,2|4)$ theory the story is obviously way more complicated, but everything that we discussed has indeed been done for the full theory. The solution is written in terms of a Y-system \cite{gromov_tba}, which is a set of algebraic equations frequently found in integrable systems \cite{gromov_hirota}. The \text{Y-system} equations have been verified on numerous occasions and have thus far passed every test \cite{gromov_tests}.
-
-\beq
-	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \)
-\eeq
-
-\beq
-	E = \sum_j \epsilon_1(u_{4,j}) + \sum_{a=1}^\infty \int_{-\infty}^\infty \frac{du}{2\pi i} \frac{\pd \epsilon_a^*}{\pd u} \log \(1 + Y_{a,0}^* (u) \)
-\eeq
-
-\subsubsection{The Y-system}
-
-
-
-The Y-system
 \beq
 	\frac{Y_{a,s}^{+} Y_{a,s}^{-}}{Y_{a+1,s} Y_{a-1,s}} = \frac{\(1+Y_{a,s+1}\)\(1+Y_{a,s-1}\)}{\(1+Y_{a+1,s}\)\(1+Y_{a-1,s}\)}
 \eeq
@@ -202,15 +221,80 @@ Here we denote by $\tilde\bP_a$ and $\tilde\mu_{ab}$ the analytic continuation o
 \eeq
 which, actually, means that $\mu_{ab}(u)$ would be an $i$-periodic function if defined with long cuts instead of the short cuts.
 
-% \FIGURE[ht]
-% {
-% \label{fig:cuts}
+\begin{figure}[t]
+\begin{tikzpicture}[scale=0.5]
+	
+	%\draw[help lines] (0,0) grid (30,15);
+	
+	\tikzset{pole/.style={draw,circle,inner sep=0pt,minimum size=3pt,fill=black}}
+	
+	% P cuts
+	
+	\begin{scope}[shift={(6,6)}]
+	
+		\draw (5,5) -- (5,4) -- (6,4); \node[above right] at (5,4) {$u$};
+	
+		\draw[thick] (-5,0) -- (5,0); 
+		\draw[thick] (0,-5) -- (0,5);
+		
+		\def\cutx{3}
+		
+		\foreach \y in {1,2,3} {
+			\draw[dashed,black] (-\cutx,-\y) -- (\cutx,-\y);  
+			\node[pole] at (-\cutx,-\y) {}; %\node[below left] at (-\cutx,-\y) {$-2g-\y i$};
+			\node[pole] at (\cutx,-\y) {}; %\node[below right] at (\cutx,-\y) {$2g-\y i$};
+			
+			
+			\draw[dashed,black] (-\cutx,\y) -- (\cutx,\y);  
+			\node[pole] at (-\cutx,\y) {}; %\node[above left] at (-\cutx,\y) {$-2g+\y i$};
+			\node[pole] at (\cutx,\y) {}; %\node[above right] at (\cutx,\y) {$2g+\y i$};
+		}
+		
+		\draw[black,very thick] (-\cutx,0) -- (\cutx,0);  \node[pole] at (-\cutx,0) {}; \node[pole] at (\cutx,0) {};
 
-    % \begin{tabular}{cc}
-    % \includegraphics[scale=0.3]{cuts.pdf}\\
-    % \end{tabular}
-% \caption{\textbf{Cuts in the $u$ plane.} We show the location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\mu_{ab}(u)$ (right). The infinitely many cuts of $\tilde\bP_a$ are shown on the left picture by dotted lines.}
-% }
+		\node[above left] at (-\cutx,0) {$-2g$}; \node[above right] at (\cutx,0) {$2g$};	
+		\node[left] at (-\cutx,-2) {$-2g-2 i$}; \node[right] at (\cutx,-2) {$2g-2 i$};		
+		\node[left] at (-\cutx,2) {$-2g+2 i$}; \node[right] at (\cutx,2) {$2g+2 i$};	
+	
+	\end{scope}
+	
+	% \mu cuts
+	
+	\begin{scope}[shift={(21,6)}]
+	
+		\draw (5,5) -- (5,4) -- (6,4); \node[above right] at (5,4) {$u$};
+		
+		\draw[thick] (-5,0) -- (5,0); 
+		\draw[thick] (0,-5) -- (0,5);
+		
+		\def\cutx{3}
+		
+		\foreach \y in {1,2,3} {
+			\draw[black,very thick] (-\cutx,-\y) -- (\cutx,-\y);  
+			\node[pole] at (-\cutx,-\y) {};
+			\node[pole] at (\cutx,-\y) {};
+			
+			
+			\draw[black,very thick] (-\cutx,\y) -- (\cutx,\y);  
+			\node[pole] at (-\cutx,\y) {}; 
+			\node[pole] at (\cutx,\y) {};
+		}
+		
+		\draw[black,very thick] (-\cutx,0) -- (\cutx,0);  \node[pole] at (-\cutx,0) {}; \node[pole] at (\cutx,0) {};
+
+		\node[above left] at (-\cutx,0) {$-2g$}; \node[above right] at (\cutx,0) {$2g$};	
+		\node[left] at (-\cutx,-2) {$-2g-2 i$}; \node[right] at (\cutx,-2) {$2g-2 i$};		
+		\node[left] at (-\cutx,2) {$-2g+2 i$}; \node[right] at (\cutx,2) {$2g+2 i$};
+
+	
+	\end{scope}
+	
+\end{tikzpicture}
+\label{fig:yt_hooks}
+\caption{\textbf{Cuts in the $u$ plane.} We show the location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\mu_{ab}(u)$ (right). The infinitely many cuts of $\tilde{\bP}_a$ are shown on the left picture with dashed lines.}
+\end{figure}
+
+
 The functions $\mu_{ab}$ are also constrained by the relations
 \beqa
 \label{constraint}
@@ -330,12 +414,31 @@ Mention Frolov numerics. Volin's 8(9) ? loops with $\pmu$.
 
 
 The observable which we will be considering is the same as in \cite{Gromov:2012eu},\cite{Correa:2012hh} and \cite{Drukker:2012de}: it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ SYM (see figure \ref{fig:WL}). To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parameterized by a six-dimensional unit vector $\vec n(t)$ at each point of the line ($t$ being a parameter on the line). In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. Due to the R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
-% \begin{figure}[t]
-	% \centering
-		% \includegraphics[width=0.7\textwidth]{WLcusp.pdf}
-	% \caption{The cusped Wilson line with an operator insertion.}
-	% \label{fig:WL}
-% \end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+	
+	%\draw[help lines] (0,0) grid (15,5);
+	
+	\draw[->,dotted,very thick] (1,1) -- (2,1);
+	\draw[->,very thick] (2,1) -- (7,1) -- (12,4);
+	\draw[dotted,very thick] (12,4) -- (12.5,4.3);
+	\draw[dashed,very thick] (7,1) -- (13,1);
+	
+	\node[draw,circle,fill=white] at (7,1) {$Z^L$};
+	
+	\draw[] (8.5,1) to [out=90,in=-30] (8.1,1.66);
+
+	\node at (4,1.5) {\Large $\vec{n}$};
+	\node at (10,3.5) {\Large $\vec{n_\theta}$};
+	\node at (9,1.6) {\Large $\phi$};
+	
+\end{tikzpicture}
+\label{fig:wilson_line}
+\caption{The cusped Wilson line with an operator insertion.}
+\end{figure}
+
  Explicitly the observable is defined as
 \beq
 \label{WilsL}
