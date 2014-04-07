@@ -272,14 +272,91 @@ Short example of a two loop Hamiltonian, perturbative corrections for the states
 \subsection{Asymptotic solution}
 
 \beq
-	\frac{J}{i} \log \( \frac{x_k^+}{x_k^-} \) - \sum_{j \neq k}^S \frac{1}{i} \log \( \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j) \) = 2 \pi n_k, \;\;\; k = 1, \dots S,
+	\label{eq:sl2_aba}
+	\( \frac{x_k^+}{x_k^-} \)^J = \prod_{j \neq k}^S \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j), \;\;\; k = 1, \dots S
 \eeq
 where 
-Generalize su(2) BAE to all loops, maybe give a simple example. 
+\beq
+	\Delta = J + S + \gamma(g), \;\;\; \gamma(g) = \frac{i \sqrt{\lambda}}{2\pi} \sum_{j=1}^S \( \frac{1}{x_j^+} - \frac{1}{x_j^-} \)
+\eeq
+with
+\beq
+\label{eq:u_of_x}
+u(x) = g \(x + \frac{1}{x}\)
+\eeq
 
 \subsubsection{A glimpse ahead: the slope function}
 
-Derive slope from ABA.
+The asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact result we encountered so far, even if only valid in the asymptotic limit. In this short paragraph we will demonstrate how it can be used to find the exact \emph{slope function} $\gamma^{(1)}(g)$, which is defined as the linear term in the small $S$ expansion of the anomalous dimension, namely
+\beq
+	\gamma(g) = \gamma^{(1)}(g) \; S + \gamma^{(2)}(g) \; S^2 + \ord{S^3}.
+\eeq
+The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section ??, where we also address the question of what it actually means to send an integer quantity $S$ to zero. 
+
+The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \eq{eq:sl2_aba}, given by
+\beq
+	\label{eq:log_sl2_aba}
+	\frac{J}{i} \log \( \frac{x_k^+}{x_k^-} \) - \sum_{j \neq k}^S \frac{1}{i} \log \( \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j) \) = 2 \pi n_k,
+\eeq
+where $n_k$ is the mode number of the $k$'th Bethe root. In the small $S$ limit the number of Bethe roots also tends to zero and in this regime they stop interacting \cite{Basso:2011rs}, thus we will consider the case when $n_k = n$ and the general result will simply be a linear combination of terms with different values of $n_k$. The key idea of the derivation is assuming that the result only depends on the combination $\Lambda \equiv n \sqrt{\lambda}$ and taking the small $n$ limit. Obviously this limit is also the strong coupling limit, as $\lambda \sim 1/n^2 \rightarrow \infty$. This considerably simplifies the derivation, for starters we only need the strong coupling expansion of the dressing phase, which is given by [??]
+\beq
+	\log \, \sigma(u_k, u_j) \simeq -\log \( \frac{1-1/(x_k^+ x_j^-)}{1-1/(x_k^- x_j^+)} \) + i\,(u_j - u_k) \log \( \frac{x_j^- x_k^- - 1}{x_j^- x_k^+ - 1} \frac{x_j^+ x_k^+ - 1}{x_j^+ x_k^- - 1} \).
+\eeq
+Also, since $u_k \sim 1/n$ we can simplify the shifts in the spectral parameter, namely
+\beq
+	x_k^\pm = x\(u_k \pm \frac{i}{2}\) = x\( \frac{1}{g} \(x_k + \frac{1}{x_k}\) \pm \frac{i}{2} \) = x_k \pm \frac{i}{2g}\frac{x_k^2}{x_k^2 - 1} + \ord{\frac{1}{g^2}}.
+\eeq
+Plugging in the leading order dressing phase expansion and getting rid of the shifts in the spectral parameter reduces the asymptotic Bethe ansatz equations \eq{eq:log_sl2_aba} to
+\beq
+	\sum_{j \neq k} \frac{2}{x_k - x_j} + \frac{1}{x_k} \( J + \gamma + \frac{2}{1-x_k^2} \) = \frac{\Lambda (x_k^2 - 1)}{2x_k^2}
+\eeq
+
+\beq
+	\gamma = G(1) - G(-1)
+\eeq
+
+\beq
+	G^2(x) + G'(x) + \( \frac{J + \gamma + 2}{x} - \frac{2x}{x^2-1} + \frac{\Lambda}{2} \frac{1-x^2}{x^2} \) G(x) = F(x)
+\eeq
+
+\beq
+	F(x) = \frac{\Lambda}{2}\frac{G(0)+G'(0)x}{x^2} + \( J + \gamma + 2 \)\frac{G(0)}{x} - \frac{G(1)}{x-1} - \frac{G(-1)}{x+1}
+\eeq
+
+\beq
+	\Lambda G'(0) = 2G(1) + 2G(-1) - 2G(0)(J + \gamma + 2) - \Lambda S
+\eeq
+
+\beq
+	F(x) = \frac{\Lambda}{2}\( \frac{G(0)}{x^2} - \frac{S}{x} \) + \frac{G(-1)}{x(x+1)} - \frac{G(1)}{x(x-1)}
+\eeq
+
+\beq
+	G(x) = \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_{x_0}^x dy \; F(y) \frac{y^{J+2}}{y^2-1} e^{-\Lambda \frac{y^2+1}{2y}}
+\eeq
+
+\begin{subequations}
+  \begin{align}
+	\Lambda(G(0)-S) - G(+1)(2J+1)+G(-1) &= 0 \\
+	\Lambda(G(0)+S) + G(-1)(2J+1)-G(+1) &= 0
+  \end{align}
+\end{subequations}
+
+\beq
+G(x) = -\frac{\Lambda}{2}\frac{S}{J}-\frac{\gamma}{2x}-\frac{\Lambda}{4J} \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_0^x dy \( \gamma J y^{J-1} + \Lambda S y^J \) e^{-\Lambda \frac{y^2+1}{2y}}
+\eeq
+
+\beq
+	I_\nu(\Lambda) = \frac{(-1)^{-\nu}}{2\pi i} \oint dy \; y^{\nu-1} e^{\Lambda \frac{y^2+1}{2y}}
+\eeq
+
+\beq
+	\gamma J (-1)^J I_J(\Lambda) + \Lambda S (-1)^{J+1} I_{J+1}(\Lambda) = 0
+\eeq
+
+\beq
+	\gamma^{(1)}(\Lambda) = \frac{\Lambda}{J} \frac{I_{J+1}(\Lambda)}{I_J(\Lambda)}
+\eeq
 
 \subsection{Strong coupling and the algebraic curve}
 
