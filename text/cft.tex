@@ -10,34 +10,34 @@ This formulation will later prove to be increadibly useful when discussing integ
 \subsection{Action}
 
 
-$\N=4$ Super Yang-Mills theory is a quantum field theory much like the Standard Model of particle physics with a certain field content and interaction pattern. 
-What is special about it is the amount of symmetry available -- not only is it a supersymmetric gauge theory, it is also conformally invariant both at the classical and quantum levels, i.e. it is a conformal field theory. 
-In four dimensions a field theory with 16 supercharges is uniquely determined by specifying the gauge group, the fields then live in the vector multiplet of the supersymmetry algebra and in the adjoint of the gauge group, which is usually chose to be $SU(N)$. 
-The action is given by
+$\N=4$ super Yang-Mills theory is a quantum field theory much like the Standard Model of particle physics with a certain field content and interaction pattern.
+It was first discovered by considering $\N=1$ super Yang-Mills theory in $9+1$ spacetime dimensions \cite{Brink:1977}, its action is given by
+\begin{equation}
+	S = \int d^{10} x \, \mathrm{Tr} \, \left( -\frac{1}{4}  F_{MN} F^{MN}  + \frac{1}{2} \bar{\Psi} \Gamma^M \mathcal{D}_M \Psi \right), \; \quad \; M = 1 \dots 10,
+\end{equation}
+where $\Psi$ is a Majorana-Weyl spinor in $9+1$ dimensions with $16$ real components and $\Gamma^M$ are the appropriate gamma matrices. 
+The covariant derivative $\mathcal{D}_M$ is defined as
+\begin{equation}
+	\mathcal{D}_M = \partial_M - ig_{YM} \; [A_M, \, ],
+\end{equation}
+where $g_{YM}$ is the Yang-Mills coupling constant. 
+The gauge group is in principle arbitrary, but we choose $SU(N)$ in anticipation of the AdS/CFT correspondence. 
+By dimensionally reducing this theory on a flat torus $T^6$ one recovers the maximally supersymmetric $\N=4$ Yang-Mills gauge theory in $3+1$ spacetime dimensions.
+The reduced action reads
 \begin{equation}
 \begin{split}
 S = & \int d^4 x \, \tr \, \left( -\frac{1}{2} \mathcal{D}_\mu \Phi_I \mathcal{D}^\mu \Phi^I  + \frac{g_{YM}^2}{4} [\Phi_I, \Phi_J] [\Phi^I, \Phi^J] - \frac{1}{4}  F_{\mu\nu} F^{\mu\nu}  \right. \\
-	 &\left. - \bar{\psi}^a \sigma^\mu \mathcal{D}_\mu \psi_a  + \frac{ig_{YM}}{2} \sigma^{ab}_I \psi_a [\Phi^I, \psi_b] + \frac{ig_{YM}}{2} \sigma_{ab}^I \bar{\psi}^a [\Phi_I, \bar{\psi}^b] \right)
+	 &\left. - \bar{\psi}^a \sigma^\mu \mathcal{D}_\mu \psi_a  + \frac{ig_{YM}}{2} \sigma^{ab}_I \psi_a [\Phi^I, \psi_b] + \frac{ig_{YM}}{2} \sigma_{ab}^I \bar{\psi}^a [\Phi_I, \bar{\psi}^b] \right).
 \end{split}
 \label{eq:n4_action}
 \end{equation}
-where $\mu= 1, ..., 4$ as usual, $I, J = 1, ..., 6$, $a, b = 1, ..., 4$, $\sigma_\mu$ and $\sigma_I$ are chiral projections of gamma matrices in four and six dimensions respectively and $g_{YM}$ is the Yang-Mills coupling constant. 
-The covariant derivative $\mathcal{D}_\mu$ is defined as
-\begin{equation}
-	\mathcal{D}_\mu = \partial_\mu - ig_{YM} \; [A_\mu, \, ]
-\end{equation}
-Alternatively the action can be formulated as a $N=1$ supersymmetric gauge theory in 10 dimensions with the action given by
-\begin{equation}
-	S = \int d^{10} x \, \mathrm{Tr} \, \left( -\frac{1}{4}  F_{MN} F^{MN}  + \frac{1}{2} \Psi \Gamma^M \mathcal{D}_M \Psi \right)
-\end{equation}
-where $\Psi$ is now a Majorana-Weyl spinor in $9+1$ dimensions with $16$ real components and $\Gamma^M$ are the gamma matrices in $10$ dimensions. 
-The action (\ref{eq:n4_action}) can be recovered by dimensional reduction to four dimensions. 
-The gauge field $A_M$ decomposes to the four dimensional gauge field $A_\mu$ and to six real scalar fields $\Phi_I$ whereas the Majorana-Weyl spinor $\Psi_A$ breaks up into four copies of the left and right Weyl spinors in four dimensions 
+After dimensional reduction the gauge field $A_M$ decomposes to the four dimensional gauge field $A_\mu$ and to six real scalar fields $\Phi_I$ whereas the Majorana-Weyl spinor $\Psi_A$ breaks up into four copies of the left and right Weyl spinors in four dimensions 
 \begin{equation}
 	\Psi_A \, \, (A = 1, ..., 16) \, \, \, \rightarrow \, \, \,  \bar{\psi}^a_{\dot{\alpha}}, \; \psi_{a\alpha} \, \, (\alpha, \dot{\alpha} = 1, 2, \; \; a = 1, ..., 4).
 \end{equation}
-This theory has an additional $SU(4) \simeq SO(6)$ symmetry called \emph{R-symmetry} that permutes the scalars, which live in the fundamental representation of $SO(6)$ and the spinors, which live in the fundamental of $SU(4)$, namely the lower index $a$ in $\psi_{a\alpha}$ transforms in ${\bf 4}$, while $\bar{\psi}_{\dot{\alpha}a}$ transforms in ${\bf \bar{4}}$. 
-From this it follows that we can combine the six real scalars $\Phi^I$ into three complex scalars $\phi^{ab}$, which then transform under the second rank antisymmetric representation of $SU(4)$. 
+It also gives rise to the $SO(6) \simeq SU(4)$ symmetry called \emph{R-symmetry}, which originally was part of the ten dimensional Poincare group, but now acts as an internal symmetry of the supercharges.
+It permutes the scalars, which live in the fundamental ${\bf 6}$ of $SO(6)$ and the spinors, which live in the fundamental of $SU(4)$, namely the lower index $a$ in $\psi_{a\alpha}$ transforms in ${\bf 4}$, while $\bar{\psi}_{\dot{\alpha}}^a$ transforms in ${\bf \bar{4}}$. 
+From this it follows that we can combine the six real scalars $\Phi^I$ into three complex scalars $\Phi^{ab}$, which then transform under the second rank antisymmetric ${\bf 6}$ of $SU(4)$. 
 The gauge field is a singlet under R-symmetry.
 
 It is now a straightforward but rather tedious task to calculate the beta function for this theory. 
@@ -53,7 +53,7 @@ After discussing the full symmetry algebra of the theory and its representations
 
 \subsection{Observables}
 
-The theory has 16 on-shell degrees of freedom which make up the vector multiplet of $\N=4$ supersymmetry, namely $(\Phi^I, \lambda_{a\alpha}, \bar{\lambda}_{\dot{\alpha}}^a, A_\mu)$. 
+The theory has 16 on-shell degrees of freedom which make up the gauge multiplet of $\N=4$ supersymmetry, namely $(\Phi^I, \psi_a, A_\mu)$. 
 Gauge invariant operators are then formed by taking traces over the gauge group. 
 An important class of operators are the \emph{local operators}, which are traces of fields all evaluated at the same spacetime point. 
 They have the general form
@@ -76,9 +76,8 @@ We will be mostly working in these two classes of operators, however in principl
 
 \subsection{Symmetry}
 
-Conformal symmetry, supersymmetry and R-symmetry are a part of a bigger group $PSU(2,2|4)$, which is known as the \emph{$\N=4$ superconformal group}. 
-It is the full symmetry group of $\N=4$ SYM and is unbroken by quantum corrections. 
-Hence studying it and its representations further can provide more insights into the theory itself. 
+Conformal symmetry, supersymmetry and R-symmetry are a part of a bigger group $PSU(2,2|4)$, which is also known as the \emph{$\N=4$ superconformal group}. 
+It is the full symmetry group of $\N=4$ super Yang-Mills and is unbroken by quantum corrections. 
 It is an example of a \emph{supergroup}, i.e. a graded group containing bosonic and fermionic generators. 
 The theory of supergroups is highly developed (see \cite{Beisert:2010kp}) and much of the techniques from studying simple groups carry over to supergroups with some additional complications, i.e. Dynkin diagrams, root spaces, weights etc. 
 
@@ -106,7 +105,7 @@ Commutators between supercharges and the conformal generators are also non trivi
 	\label{eq:dq_commutators}
 \end{eqnarray}
 where $\tilde{S}_{\dot{\alpha} a}$ and $S_\alpha^a$ are the \emph{special conformal supercharges}. 
-They have reversed Weyl and \text{R-symmetry} representation combinations compared to the usual supercharges. 
+They have opposite \text{R-symmetry} representations compared to the usual supercharges. 
 The special supercharges bring the total of supercharges to 32. 
 The commutation and anti-commutation relations for the special conformal supercharges are very much like the ones for normal supercharges,
 \begin{eqnarray}
@@ -122,17 +121,18 @@ Finally the anti-commutation relations between the special conformal and usual s
 	\label{eq:qs_anticommutators}
 \end{eqnarray}
 where $R_{IJ}$ are the generators of R-symmetry with $I,J = 1, ..., 6$. 
-All supercharges transform under the two spinor representations of the R-symmetry group and all other generators commute with it. In summary we have 15 generators organized as follows
+All supercharges transform under the two spinor representations of the R-symmetry group and all other generators commute with it. 
+All of the generators can be organized as follows
 \beq
 \(
 	\begin{array}{c|c}
-	K^\mu, P^\mu, M^{\mu\nu}, D & Q_{a\alpha}, \bar{Q}_{\dot{\alpha}}^a \\ \hline 
-	S_{\alpha}^a, \bar{S}_{a\dot{\alpha}}  & R_{IJ}
+	K^\mu, P^\mu, M^{\mu\nu}, D & Q_{a\alpha}, \bar{S}_{a\dot{\alpha}} \\ \hline 
+	S_{\alpha}^a, \bar{Q}_{\dot{\alpha}}^a  & R_{IJ}
 	\end{array} 
 \)
 \eeq
 where the generators in the diagonal blocks are bosonic and the ones in the anti-diagonal blocks are fermionic.
-The generators have a definite dimensions, which are not modified by the radiative corrections
+They have a definite dimensions, which are not modified by the radiative corrections
 \beq
 	[D]=[L]=[\bar L]=[R]=0\;, \quad [P]=1\;, \ [K]=-1\;, \quad [Q]=1/2\;,\  [S]=-1/2\;.
 \eeq
@@ -140,41 +140,68 @@ In contrast, the classical dimensions of fields
 \beq
 	[\Phi^I] = [A_\mu] = 1\;, \quad [\psi_a] = \frac{3}{2},
 \eeq
-do receive radiative corrections and acquire \emph{anomalous dimensions}, finding which will be the major goal of this thesis.
+do receive radiative corrections and acquire \emph{anomalous dimensions}, which together with the bare dimension make up the conformal dimension
+\beq
+	\Delta = \Delta_0 + \gamma(g_{YM}).
+\eeq
+The name is justified by the fact that in conformal field theories all two point functions are determined by the scaling dimensions of the fields. 
+More than that, together with the knowledge of all three point functions they are enough to determine any $n$-point function. 
+This is why finding conformal dimensions of all operators, i.e. the spectrum of the theory is a very important step in solving it.
 
-\subsubsection{Representations}
+\subsubsection{Superconformal multiplets}
 
-Looking at the commutation relations of the conformal subgroup (\ref{eq:conformal_group}), we see that the operators $P_\mu$ and $K_\mu$ act as raising and lowering operators for the dilatation operator $D$ -- this gives a hint as to how we could construct representations of the group. The dilatation operator $D$ is the generator of scalings, i.e. upon a rescaling $x \rightarrow \lambda x$ a local operator in a field theory scales as 
+Fields of the theory can be organized in unitary representations of the superconformal symmetry group, which are labeled by quantum numbers of the bosonic subgroup
+\beqa
+	&SO(1,3) \times SO(1,1) \times SU(4) \nonumber \\
+	&\quad \; (s_+, s_-) \quad \quad \Delta \quad \quad  [r_1, r_2, r_3]
+\eeqa 
+where $(s_+, s_-)$ are the usual positive half-integer spin labels of the Lorentz group, $\Delta$ is the positive conformal dimension that can depend on the coupling and $[r_1, r_2, r_3]$ are Dynkin labels of the $R$-symmetry.
+All unitary representations of the superconformal group have been classified into four families \cite{Dobrev:1985ab,Dobrev:1985cd}, here we give a short description of the classification.
+  
+Looking at the commutation relations of the conformal subgroup (\ref{eq:conformal_group}), we see that the operators $P_\mu$ and $K_\mu$ act as raising and lowering operators for the dilatation operator $D$ -- this gives a hint as to how we could construct representations of the group. 
+The dilatation operator $D$ is the generator of scalings, i.e. upon a rescaling $x \rightarrow \lambda x$ a local operator in a field theory scales as 
 \begin{equation}
-	\mathcal{O}(x) \rightarrow \lambda^{-\Delta} \mathcal{O}(\lambda x) = \lambda^{-iD} \mathcal{O}(x) \lambda^{iD}
+	\mathcal{O}(x) \rightarrow \lambda^{-\Delta} \mathcal{O}(\lambda x)
 \end{equation}
-where $\Delta$ is the \emph{conformal dimension} of the operator $\mathcal{O}(x)$. Classically it is simply the energy dimension of the operator, but as we will see later it can (and often does) get quantum corrections. Restricting to the point $x = 0$, which is a fixed point of scalings, we see that the conformal dimension is the eigenvalue of the dilatation operator,
+where $\Delta$ is the conformal dimension of the operator $\mathcal{O}(x)$. 
+Restricting to the point $x = 0$, which is a fixed point of scalings, we see that the conformal dimension is the eigenvalue of the dilatation operator,
 \begin{equation}
 	[D,\mathcal{O}(0)] = -i \Delta \mathcal{O}(0).
 \end{equation}
-It is now clear that acting on a field with $K_\mu$ should lower the dimension by one and acting with $P_\mu$ -- raise it by one. We can show this explicitly using the Jacobi identity. Since operators in a unitary quantum field theory should have positive dimensions (aside from the identity operator), we should not be able to keep lowering the dimension indefinitely, i.e. there should always be an operator that satisfies
+It is now clear that acting on a field with $K_\mu$ should lower the dimension by one and acting with $P_\mu$ -- raise it by one. 
+We can show this explicitly using the Jacobi identity as
+\beq
+	[D, [K_\mu, \mathcal{O}(0)]] = [[D, K_\mu], \mathcal{O}(0)] + [K_\mu, [D, \mathcal{O}(0)]] = -i (\Delta - 1) \; [K_\mu, \mathcal{O}(0)].
+\eeq
+Since operators in a unitary quantum field theory should have positive dimensions (aside from the identity operator), we should not be able to keep lowering the dimension indefinitely, i.e. there should always be an operator that satisfies
 \begin{equation}
 	[K_\mu, \tilde{\mathcal{O}}(0)] = 0.
 \end{equation} 
-We call such operators \emph{primary operators}. Acting on these with $P_\mu$ keeps producing operators with a dimension one higher -- we call these the \emph{descendants} of $\tilde{\mathcal{O}}(0)$. We can also act with the supercharges and looking at the commutators in (\ref{eq:dq_commutators}) we see that they raise the dimension by $1/2$, while the special conformal supercharges lower it by $1/2$. A primary operator along with its descendants makes up an irreducible representation of $PSU(2,2|4)$, which is infinite dimensional. However we can get smaller representations by requiring that operators commute with some of the supercharges, i.e.
-\begin{equation}
-	[Q_{\alpha a}, \tilde{\mathcal{O}}(0)] = 0
-\end{equation}
-for some $\alpha, a$. Using the algebra one can show that there is a class of operators that satisfy the condition $J = \Delta$, where $J$ is the charge for any of the 3 \text{R-symmetry} generators in the Cartan algebra of $SO(6)$. It can also be shown that they commute with half of the supercharges. Such operators are called \emph{chiral primary} or half BPS operators.
+We call such operators \emph{conformal primary operators}. 
+Acting on these with $P_\mu$ keeps producing operators with a dimension one higher -- we call these the \emph{descendants} of $\tilde{\mathcal{O}}(0)$. 
+We can also act with the supercharges and looking at the commutators in (\ref{eq:dq_commutators}) we see that they raise the dimension by $1/2$, while the special conformal supercharges lower it by $1/2$. 
+These multiplets constitute the three families of discrete representations in the classification.
+They are further distinguished by the number of supercharges the chiral primary commutes with.
+One example is a class of operators that satisfy the condition 
+\beq
+	\label{eq:halfBPS}
+	\Delta = r_1 + r_2 + r_3,
+\eeq 
+a canonical representative would be a single-trace symmetrized scalar field operator such as 
+\beq
+	\mathcal{O}^{i j \dots k}(x) = \tr \( \Phi(x)^{\{i} \Phi(x)^j \dots \Phi(x)^{k\}} \).
+\eeq
+These operators commute with half of the supercharges, thus they are referred to as \emph{half-BPS}.
+The other two discrete series are the quarter-BPS and eight-BPS representations.
 
-As stated before, an operator's conformal dimension may get renormalized through quantum corrections, i.e. it acquires an \emph{anomalous dimension}, which depends on the gauge coupling of the theory. An important fact is that operators in the same $PSU(2,2|4)$ representation must have the same anomalous dimension, because the generators of the group can only change it by half integer steps and there's only a finite number of generators. What is more, chiral primary operators are protected from quantum corrections, because at any coupling the total dimension is related to some charge of $SO(6)$ by $\Delta = J$, but charges of compact groups are quantized, meaning that the dimension can't continuously depend on the coupling and hence the anomalous dimension must vanish. As an example of a chiral primary operator we can take the trace of $L$ complex scalar fields, e.g. $Z = \frac{1}{\sqrt{2}}(\phi^1 + i \phi^2)$,
-\begin{equation}
-	\Psi = \tr [Z^L], \; \; \; \; L \geq 2.
-\end{equation}
-This is a chiral primary, since the classical dimension of $\Psi$ is $L$ and it has the R-charges $[L, 0, 0]$, hence it satisfies the chiral primary condition. We will have more to say about these single trace local operators when we discuss integrability. In a similar fashion it can be shown that the operators $\tr \mathcal{F}_+ \mathcal{F}_+$ and $\tr \mathcal{F}_- \mathcal{F}_- $, where $\mathcal{F}_+$ and $\mathcal{F}_-$ are the self-dual and anti self-dual field strengths, are also chiral primaries \cite{minahan_spinchains}, meaning that the $\tr F_{\mu\nu} F^{\mu\nu}$ term in the Lagrangian of $\N=4$ SYM is protected from anomalous dimensions and hence so is the coupling constant $g$. This argument is valid to all orders in perturbation theory, which means that $\N=4$ SYM is conformally invariant to all orders in perturbation theory.
+An important fact is that operators in the same representation must have the same anomalous dimension, because the generators of the group can only change it by half integer steps and there's only a finite number of generators. 
+What is more, operators in the discrete BPS representations are protected from quantum corrections, because at any coupling the total dimension is always algebraically related to the Dynking labels of the R-symmetry, e.g. as in \eq{eq:halfBPS}. 
+Since charges of compact groups are quantized it must meant that the dimension can't continuously depend on the coupling and hence the anomalous dimension must vanish. 
+This is however not true for the fourth continuous non-BPS family of representations, hence operators from these multiplets do acquire anomalous dimensions.
 
-Talk about conformal symmetry, write down the algebra ? Oscillator representation ? Discuss subgroups of psu(2,2|4), closed sectors. 
-
-Since it's a CFT we want to find 2pt and 3pt function. The spectral problem.
-
-%\subsection{Weak coupling}
-
-%Take a simple operator, e.g. Konishi and calculate the anomalous dimension using perturbation theory ?
+Let us conclude the section with an elegant argument for why the beta function of $\N=4$ super Yang-Mills is zero.
+One can use the algebra and shown that the operators $\tr \, \mathcal{F}_+ \mathcal{F}_+$ and $\tr \, \mathcal{F}_- \mathcal{F}_- $, where $\mathcal{F}_+$ and $\mathcal{F}_-$ are the self-dual and anti self-dual field strengths, are chiral primaries \cite{Minahan:2010js}, meaning that the $\tr \, F_{\mu\nu} F^{\mu\nu}$ term in the Lagrangian is protected from quantum corrections and hence so is the coupling constant $g_{YM}$. 
+This argument is valid to all orders in perturbation theory, which means that $\N=4$ super Yang-Mills is conformally invariant to all orders in perturbation theory.
 
 \subsection{String description at strong coupling}
 
