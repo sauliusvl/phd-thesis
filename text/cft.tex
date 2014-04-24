@@ -225,17 +225,40 @@ The takeaway here is that one can formulate strongly coupled planar $\N=4$ super
 
 \subsubsection{Sigma model formulation}
 
-Type IIB string theory on any curved background is defined by the Green-Schwarz action \cite{green}, which has the bosonic part of
+A very useful formulation of string theory on $AdS_5 \times S^5$ is the coset space sigma model \cite{Metsaev:1998it} with the target superspace of
 \begin{equation}
-	S_B = \frac{1}{4\pi\alpha'} \int d^2 \sigma \sqrt{-h} h^{ab} G_{\mu\nu}(X) \partial_a X^\mu \partial_b X^\nu,
-	\label{eq:gs_action}
+	\frac{PSU(2,2|4)}{SO(1,4) \times SO(5)}.
 \end{equation}
-where $X^\mu(\sigma, \tau)$ is the string embedding map into the target space, which has the metric $G_{\mu\nu}$ and $h^{ab}$ is the string worldsheet metric. In the low energy limit this action reduces to the type IIB supergravity action given in (\ref{eq:IIb_action}). Strings on $AdS_5 \times S^5$ are described by a coset space sigma model \cite{tseytlin_nlsm} with the target superspace of
-\begin{equation}
-	\frac{PSU(2,2|4)}{SO(4,1) \times SO(5)},
-\end{equation}
-\vspace{1pt}
-which has the bosonic part of $AdS_5 \times S^5$. The action can also be reformulated in terms of the algebra current 
+\vspace{2pt}
+The bosonic part of the supercoset where the string moves is given by
+\beq
+	\frac{SO(2,4) \times SO(6)}{SO(1,4) \times SO(5)} = \adsfive,
+\eeq
+which is constructed as the coset between the isometry and isotropy groups of $\adsfive$. Before writing down the action it is beneficial to explore the algebra of $PSU(2,2|4)$.
+
+The superalgebra $\alg{psu}{2,2|4}$ has no realization in terms of matrices, instead it is the quotient of $\alg{su}{2,2|4}$ by matrices proportional to the identity. 
+On the other hand $\alg{su}{2,2|4}$ is a matrix superalgebra spanned by $8\times8$ supertraceless matrices
+\beq
+M = \left( {\begin{array}{c|c}
+ A & B  \\
+ \hline
+ C & D  \\
+ \end{array} } \right),
+\eeq
+where the supertrace is defined as 
+\beq
+\str M = \tr A - \tr D.
+\eeq
+$A$ and $D$ are elements of $\alg{su}{2,2}$ and $\alg{su}{4}$ respectively, whereas the fermionic components are related by
+\beq
+	C = \left( {\begin{array}{c|c}
+ +\mathbbm{1}_{2\times2} & 0  \\
+ \hline
+ 0 & -\mathbbm{1}_{2\times2}  \\
+ \end{array} } \right) B^\dagger.
+\eeq
+
+The action can also be reformulated in terms of the algebra current 
 \begin{equation}
 	J = -g^{-1} \mathrm{d} g \in \mathfrak{psu(2,2|4)},
 	\label{eq:j_current}
@@ -268,25 +291,25 @@ where $\Lambda$ is a Lagrange multiplier, which ensures that $J^{(2)}$ is supert
 \end{equation}
 Here the supergroup element $M$ is written as a matrix with the $\mathbb{Z}_2$ grading made manifest, $A$ and $D$ are the bosonic parts.
 
-Once the action is in place, all that's left to do is to derive the equations of motion and solve them. Unfortunately that is easier said that done, in fact, currently there is no way to solve the full quantum string theory on a curved background, which makes the action highly non-linear. However since the background is highly symmetric there are various limits one can take and hope that the problem simplifies tremendously \cite{algebraic_curve}. A popular approach is to look for classical string solutions in $AdS_5 \times S^5$, which can be shown to very well approximate quantum solutions under certain limits. The machinery of finding classical solutions is very involved (see \cite{tseytlin_classical}) and the solutions involve complicated elliptic and hyperelliptic functions. Some examples of solutions are conceptually shown in fig. \ref{fig:string_solutions}, these include rotating circular strings, rotating folded strings and many more. 
+% Once the action is in place, all that's left to do is to derive the equations of motion and solve them. Unfortunately that is easier said that done, in fact, currently there is no way to solve the full quantum string theory on a curved background, which makes the action highly non-linear. However since the background is highly symmetric there are various limits one can take and hope that the problem simplifies tremendously \cite{algebraic_curve}. A popular approach is to look for classical string solutions in $AdS_5 \times S^5$, which can be shown to very well approximate quantum solutions under certain limits. The machinery of finding classical solutions is very involved (see \cite{tseytlin_classical}) and the solutions involve complicated elliptic and hyperelliptic functions. Some examples of solutions are conceptually shown in fig. \ref{fig:string_solutions}, these include rotating circular strings, rotating folded strings and many more. 
 
-One of the simplest examples of a string solution is the so called BMN ground state of the string \cite{dorey}. It is a solution restricted to the $S^3 \times \mathbb{R}$ submanifold of the target space, where the $\mathbb{R}$ factor corresponds to the global time direction of $AdS_5$. Since a string is restricted to a $S^3$ spacelike manifold, it carries two charges under the isometry group of this space, these correspond to two of the three charges of $S^5$, which we denoted as \text{[$J_1$, $J_2$, $J_3$]}, we can choose the two charges to be $J_1$ and $J_3$. The charge under $\mathbb{R}$ is obviously the string energy $E$. Thus we see that such a string is labeled by the same charges as a spin chain state in the $SU(2)$ sector of $\N=4$ SYM, where states are characterized by the number of $W$ and $X$ fields in the trace, which correspond to $J_1$ and $J_3$, and by the anomalous dimension $\Gamma$, which corresponds to the energy for the string. The action for such a string is given by
-\begin{equation}
-	S = \frac{\sqrt{\lambda}}{4 \pi} \int d^2 \sigma \, \partial_a \vec{X} \cdot \partial^a \vec{X} + \Lambda\left(  |\vec{X}|^2 - 1 \right),
-\end{equation}
-which is simply the Nambu-Goto action for a string on a 3-sphere, hence the Lagrange multiplier. Here $\vec{X}(\sigma, \tau)$ is the embedding map from the worldsheet to the 4 dimensional target space, which satisfies $|\vec{X}|^2 = 1$. We can now introduce complex coordinates
-\begin{equation}
-Z_1 = X_1 + iX_2, \,\,\,\,\,\, Z_2 = X_3 + iX_4.
-\end{equation}
-The BMN ground state solution is then simply
-\begin{equation}
-	Z_1 = e^{i \kappa \tau}, \,\,\,\, Z_2 = 0,
-\end{equation}
-which has charges $E = J_1 = \sqrt{\lambda} \, \kappa$ and $J_3 = 0$. We immediately identify this solution with the chiral primary operator $\tr [Z^L]$ in $\N=4$ SYM or the ferromagnetic ground state in the spin chain picture. In the string picture this solution corresponds to a point-like massless string moving at the speed of light around the equator of $S^3$ \cite{dorey}. 
+% One of the simplest examples of a string solution is the so called BMN ground state of the string \cite{dorey}. It is a solution restricted to the $S^3 \times \mathbb{R}$ submanifold of the target space, where the $\mathbb{R}$ factor corresponds to the global time direction of $AdS_5$. Since a string is restricted to a $S^3$ spacelike manifold, it carries two charges under the isometry group of this space, these correspond to two of the three charges of $S^5$, which we denoted as \text{[$J_1$, $J_2$, $J_3$]}, we can choose the two charges to be $J_1$ and $J_3$. The charge under $\mathbb{R}$ is obviously the string energy $E$. Thus we see that such a string is labeled by the same charges as a spin chain state in the $SU(2)$ sector of $\N=4$ SYM, where states are characterized by the number of $W$ and $X$ fields in the trace, which correspond to $J_1$ and $J_3$, and by the anomalous dimension $\Gamma$, which corresponds to the energy for the string. The action for such a string is given by
+% \begin{equation}
+	% S = \frac{\sqrt{\lambda}}{4 \pi} \int d^2 \sigma \, \partial_a \vec{X} \cdot \partial^a \vec{X} + \Lambda\left(  |\vec{X}|^2 - 1 \right),
+% \end{equation}
+% which is simply the Nambu-Goto action for a string on a 3-sphere, hence the Lagrange multiplier. Here $\vec{X}(\sigma, \tau)$ is the embedding map from the worldsheet to the 4 dimensional target space, which satisfies $|\vec{X}|^2 = 1$. We can now introduce complex coordinates
+% \begin{equation}
+% Z_1 = X_1 + iX_2, \,\,\,\,\,\, Z_2 = X_3 + iX_4.
+% \end{equation}
+% The BMN ground state solution is then simply
+% \begin{equation}
+	% Z_1 = e^{i \kappa \tau}, \,\,\,\, Z_2 = 0,
+% \end{equation}
+% which has charges $E = J_1 = \sqrt{\lambda} \, \kappa$ and $J_3 = 0$. We immediately identify this solution with the chiral primary operator $\tr [Z^L]$ in $\N=4$ SYM or the ferromagnetic ground state in the spin chain picture. In the string picture this solution corresponds to a point-like massless string moving at the speed of light around the equator of $S^3$ \cite{dorey}. 
 
-One could go further and find classical solutions corresponding to magnon states in the spin chain picture, which indeed can be done -- magnons turn out to be described by the so called \emph{giant magnon} solutions in string \text{theory \cite{giant_magnons}}. These are closely related to sine-Gordon models, which are known to be integrable, hence once again confirming the expectation that string theory on $AdS_5 \times S^5$ should be integrable (at least on the classical level). However since we are trying to solve the spectral problem, i.e. find the energy levels of the string solutions, we should remind ourselves that in the spin chain picture we were able to do it without actually finding explicit solutions of the spin chain states. This is a hint that there should be a way of doing the same in string theory, i.e. finding the energy levels of strings without actually solving the equations of motion. 
+% One could go further and find classical solutions corresponding to magnon states in the spin chain picture, which indeed can be done -- magnons turn out to be described by the so called \emph{giant magnon} solutions in string \text{theory \cite{giant_magnons}}. These are closely related to sine-Gordon models, which are known to be integrable, hence once again confirming the expectation that string theory on $AdS_5 \times S^5$ should be integrable (at least on the classical level). However since we are trying to solve the spectral problem, i.e. find the energy levels of the string solutions, we should remind ourselves that in the spin chain picture we were able to do it without actually finding explicit solutions of the spin chain states. This is a hint that there should be a way of doing the same in string theory, i.e. finding the energy levels of strings without actually solving the equations of motion. 
 
-Metsaev-Tseytlin
+% Metsaev-Tseytlin
 
 \subsection{Useful limits}
 
