@@ -48,12 +48,12 @@ For any $SU(N)$ gauge theory at one loop level it is given by \cite{Gross:1973}
 where the first sum is over the real scalars and the second one over the fermions. 
 $C_s$ and $\tilde{C}_f$ are the quadratic casimirs, which in our case are equal to $N$ since all fields are in the adjoint representation of the group. 
 It is then easy to see that at least at one loop level the theory is conformally invariant. 
-In fact the $\beta$ function was shown to be identically zero to all orders in perturbation theory \cite{Mandelstam:1983, Brink:1983}, hence the theory is fully conformally invariant even after quantization. 
+In fact the $\beta$ function was shown to be identically zero to all orders in perturbation theory \cite{Mandelstam:1983, Brink:1983}, hence $\N=4$ super Yang-Mills is fully conformally invariant even after quantization. 
 After discussing the full symmetry algebra of the theory and its representations we will give an elegant argument why this is true.
 
 \subsection{Observables}
 
-The theory has 16 on-shell degrees of freedom which make up the gauge multiplet of $\N=4$ supersymmetry, namely $(\Phi^I, \psi_a, A_\mu)$. 
+The theory has 16 on-shell degrees of freedom which make up the gauge multiplet of $\N=4$ supersymmetry, namely $(\Phi_I, \psi_a, A_\mu)$. 
 Gauge invariant operators are then formed by taking traces over the gauge group. 
 An important class of operators are the \emph{local operators}, which are traces of fields all evaluated at the same spacetime point. 
 They have the general form
@@ -62,7 +62,7 @@ They have the general form
 	& \dots \times \tr \left[ \Phi_{j_1}(x) \mathcal{D}_\nu \psi_\beta(x) \dots \Phi_{j_n}(x) \right]. 
 \end{eqnarray} 
 In this thesis we will be exclusively focusing on the planar limit, which is the limit when the number of colors $N$ is sent to infinity. 
-Diagrams involving multi-trace operators are non-planar, hence suppressed in the planar limit, therefore we will only be considering single trace operators.
+Diagrams involving multi-trace operators are non-planar, hence suppressed in the large $N$ limit and therefore we will only be considering single trace operators.
 An example of a non-local operator is the Wilson loop, given by
 \beq
 	W_L= \tr \, \( {\mathcal P}\exp\!\oint_C \! dt\(i  A\cdot\dot{x}+\vec\Phi\cdot\vec n\,|\dot x|\) \),
@@ -72,36 +72,36 @@ It also depends on the coupling to the scalar fields, which is encoded in the si
 The scalar field term can also be understood by recalling that the scalar fields are a result of dimensional reduction from $9+1$ dimensions, thus the coupling vector $\vec{n}(t)$ together with the curve $x^\mu(t)$ make up a path $x^M(t)$ in $9+1$ dimensional spacetime. 
 In later sections of the text we will be considering cusped Wilson lines with other operators inserted at the cusp.
 
-We will be mostly working in these two classes of operators, however in principle one could go on and define higher dimensional operators.
+We will be mostly working in these two classes of operators, however in principle one could go on and define surface operators, etc.
 
 \subsection{Symmetry}
 
 Conformal symmetry, supersymmetry and R-symmetry are a part of a bigger group $PSU(2,2|4)$, which is also known as the \emph{$\N=4$ superconformal group}. 
 It is the full symmetry group of $\N=4$ super Yang-Mills and is unbroken by quantum corrections. 
 It is an example of a \emph{supergroup}, i.e. a graded group containing bosonic and fermionic generators. 
-The theory of supergroups is highly developed (see \cite{Beisert:2010kp}) and much of the techniques from studying simple groups carry over to supergroups with some additional complications, i.e. Dynkin diagrams, root spaces, weights etc. 
+The theory of supergroups is highly developed (see \cite{Beisert:2010kp}) and much of the techniques from studying bosonic groups carry over to supergroups with some additional complications, i.e. Dynkin diagrams, root spaces, weights etc. 
 
 $PSU(2,2|4)$ has the bosonic subgroup of $SU(2,2) \times SU(4)$, where $SU(2,2) \simeq SO(2,4)$ is the conformal group in four dimensions and $SU(4) \simeq SO(6)$ is the R-symmetry. 
 The conformal group has the Poincar\'{e} group as a subgroup, which has a total of 10 generators including four translations $P_\mu$ and six Lorentz transformations $M_{\mu\nu}$, in addition there is the generator for dilatations $D$ and four special conformal generators $K_\mu$. 
 Their commutation relations read
 \begin{eqnarray}
- &[D, M_{\mu\nu}] = 0 \; \; \; [D, P_\mu] = -i P_\mu \; \; \; [D, K_\mu] = +i K_\mu  \nonumber\\
- &[M_{\mu\nu}, P_\lambda] = -i(\eta_{\mu\nu} P_\nu - \eta_{\lambda\nu} P_\mu) \; \; \; [M_{\mu\nu}, K_\lambda] = -i(\eta_{\mu\lambda} K_\nu - \eta_{\lambda\nu} K_\mu)  \nonumber\\
+ &[D, M_{\mu\nu}] = 0 \; \; \; [D, P_\mu] = -i P_\mu \; \; \; [D, K_\mu] = +i K_\mu,  \nonumber\\
+ &[M_{\mu\nu}, P_\lambda] = -i(\eta_{\mu\nu} P_\nu - \eta_{\lambda\nu} P_\mu) \; \; \; [M_{\mu\nu}, K_\lambda] = -i(\eta_{\mu\lambda} K_\nu - \eta_{\lambda\nu} K_\mu),  \nonumber\\
  &[P_\mu, K_\nu] = 2i(M_{\mu\nu} - \eta_{\mu\nu} D).
  \label{eq:conformal_group}
 \end{eqnarray}
 $\N=4$ supersymmetry has 16 supercharges $Q_{a\alpha}$ and $\tilde{Q}^a_{\dot{\alpha}}$ where $\alpha, \dot{\alpha} = 1, 2$ are the Weyl spinor indices and $a = 1,...,4$ are the R-symmetry indices. 
 These generators have the usual commutation and anti-commutation relations with the Poincar\'{e} generators given by
 \begin{eqnarray}
-	& \{Q_{\alpha a}, \tilde{Q}^b_{\dot{\alpha}}\} = \gamma^\mu_{\alpha\dot{\alpha}} \delta_a^b P_\mu \; \; \; \{Q_{\alpha a}, Q_{\alpha b}\} = \{ \tilde{Q}^a_{\dot{\alpha}}, \tilde{Q}^b_{\dot{\alpha}} \} = 0 \nonumber\\
-	& [M^{\mu\nu}, Q_{\alpha a}] = i \gamma^{\mu\nu}_{\alpha\beta} \epsilon^{\beta\gamma} Q_{\gamma a} \; \; \; [M^{\mu\nu}, \tilde{Q}^a_{\dot{\alpha}}] = i \gamma^{\mu\nu}_{\dot{\alpha}\dot{\beta}} \epsilon^{\dot{\beta}\dot{\gamma}} \tilde{Q}_{\dot{\gamma}}^a \nonumber \\
-	& [P_\mu, Q_{\alpha a}] = [P_\mu, \tilde{Q}^b_{\dot{\alpha}}] = 0 
+	& \{Q_{\alpha a}, \tilde{Q}^b_{\dot{\alpha}}\} = \gamma^\mu_{\alpha\dot{\alpha}} \delta_a^b P_\mu \; \; \; \{Q_{\alpha a}, Q_{\alpha b}\} = \{ \tilde{Q}^a_{\dot{\alpha}}, \tilde{Q}^b_{\dot{\alpha}} \} = 0, \nonumber\\
+	& [M^{\mu\nu}, Q_{\alpha a}] = i \gamma^{\mu\nu}_{\alpha\beta} \epsilon^{\beta\gamma} Q_{\gamma a} \; \; \; [M^{\mu\nu}, \tilde{Q}^a_{\dot{\alpha}}] = i \gamma^{\mu\nu}_{\dot{\alpha}\dot{\beta}} \epsilon^{\dot{\beta}\dot{\gamma}} \tilde{Q}_{\dot{\gamma}}^a, \nonumber \\
+	& [P_\mu, Q_{\alpha a}] = [P_\mu, \tilde{Q}^b_{\dot{\alpha}}] = 0,
 \end{eqnarray} 
 where $\gamma_{\alpha\beta}^{\mu\nu} = \gamma^{[\mu}_{\alpha\dot{\alpha}} \gamma^{\nu]}_{\beta\dot{\beta}} \epsilon^{\dot{\alpha}\dot{\beta}}$. 
 Commutators between supercharges and the conformal generators are also non trivial and introduce new supercharges,
 \begin{eqnarray}
-	& [D, Q_{\alpha a}] = -\frac{i}{2} Q_{\alpha a} \; \; \; [D, \tilde{Q}_{\dot{\alpha}}^a] = -\frac{i}{2} \tilde{Q}_{\dot{\alpha}}^a \nonumber \\
-	& [K^\mu,  Q_{\alpha a}] = \gamma^\mu_{\alpha\dot{\alpha}} \epsilon^{\dot{\alpha} \dot{\beta}} \tilde{S}_{\dot{\beta} a} \; \; \; [K^\mu, \tilde{Q}_{\dot{\alpha}}^a] = \gamma^\mu_{\alpha\dot{\alpha}} \epsilon^{\alpha\beta} S_\beta^a
+	& [D, Q_{\alpha a}] = -\frac{i}{2} Q_{\alpha a} \; \; \; [D, \tilde{Q}_{\dot{\alpha}}^a] = -\frac{i}{2} \tilde{Q}_{\dot{\alpha}}^a, \nonumber \\
+	& [K^\mu,  Q_{\alpha a}] = \gamma^\mu_{\alpha\dot{\alpha}} \epsilon^{\dot{\alpha} \dot{\beta}} \tilde{S}_{\dot{\beta} a} \; \; \; [K^\mu, \tilde{Q}_{\dot{\alpha}}^a] = \gamma^\mu_{\alpha\dot{\alpha}} \epsilon^{\alpha\beta} S_\beta^a,
 	\label{eq:dq_commutators}
 \end{eqnarray}
 where $\tilde{S}_{\dot{\alpha} a}$ and $S_\alpha^a$ are the \emph{special conformal supercharges}. 
@@ -109,8 +109,8 @@ They have opposite \text{R-symmetry} representations compared to the usual super
 The special supercharges bring the total of supercharges to 32. 
 The commutation and anti-commutation relations for the special conformal supercharges are very much like the ones for normal supercharges,
 \begin{eqnarray}
-	& \{S_{\alpha}^a, \tilde{S}_{\dot{\alpha} b}\} = \gamma^\mu_{\alpha\dot{\alpha}} \delta_b^a K_\mu \; \; \; \{S_{\alpha}^a, S_{\alpha}^b\} = \{ \tilde{S}_{\dot{\alpha} a}, \tilde{S}_{\dot{\alpha} b} \} = 0 \nonumber\\
-	& [M^{\mu\nu}, S_{\alpha}^a] = i \gamma^{\mu\nu}_{\alpha\beta} \epsilon^{\beta\gamma} S_{\gamma}^a \; \; \; [M^{\mu\nu}, \tilde{S}_{\dot{\alpha} a}] = i \gamma^{\mu\nu}_{\dot{\alpha}\dot{\beta}} \epsilon^{\dot{\beta}\dot{\gamma}} \tilde{S}_{\dot{\gamma} a} \nonumber \\
+	& \{S_{\alpha}^a, \tilde{S}_{\dot{\alpha} b}\} = \gamma^\mu_{\alpha\dot{\alpha}} \delta_b^a K_\mu \; \; \; \{S_{\alpha}^a, S_{\alpha}^b\} = \{ \tilde{S}_{\dot{\alpha} a}, \tilde{S}_{\dot{\alpha} b} \} = 0, \nonumber\\
+	& [M^{\mu\nu}, S_{\alpha}^a] = i \gamma^{\mu\nu}_{\alpha\beta} \epsilon^{\beta\gamma} S_{\gamma}^a \; \; \; [M^{\mu\nu}, \tilde{S}_{\dot{\alpha} a}] = i \gamma^{\mu\nu}_{\dot{\alpha}\dot{\beta}} \epsilon^{\dot{\beta}\dot{\gamma}} \tilde{S}_{\dot{\gamma} a}, \nonumber \\
 	& [K_\mu, S_{\alpha}^a] = [K_\mu, \tilde{S}_{\dot{\alpha} a}] = 0.
 \end{eqnarray} 
 Finally the anti-commutation relations between the special conformal and usual supercharges close the algebra,
@@ -180,8 +180,10 @@ Since operators in a unitary quantum field theory should have positive dimension
 We call such operators \emph{conformal primary operators}. 
 Acting on these with $P_\mu$ keeps producing operators with a dimension one higher -- we call these the \emph{descendants} of $\tilde{\mathcal{O}}(0)$. 
 We can also act with the supercharges and looking at the commutators in (\ref{eq:dq_commutators}) we see that they raise the dimension by $1/2$, while the special conformal supercharges lower it by $1/2$. 
-These multiplets constitute the three families of discrete representations in the classification.
-They are further distinguished by the number of supercharges the chiral primary commutes with.
+Operators anihilated by special conformal supercharges are called \emph{superconformal primaries}, which is a stronger condition that being a conformal primary.
+
+(Super-)conformal primaries and their descendants make up multiplets that constitute the three families of discrete representations in the classification.
+They are further distinguished by the number of supercharges the primary commutes with.
 One example is a class of operators that satisfy the condition 
 \beq
 	\label{eq:halfBPS}
@@ -189,18 +191,16 @@ One example is a class of operators that satisfy the condition
 \eeq 
 a canonical representative would be a single-trace symmetrized scalar field operator such as 
 \beq
-	\mathcal{O}^{i j \dots k}(x) = \tr \( \Phi(x)^{\{i} \Phi(x)^j \dots \Phi(x)^{k\}} \).
+	\mathcal{O}^{i j \dots k}(x) = \tr \( \Phi(x)^{(i} \Phi(x)^j \dots \Phi(x)^{k)} \).
 \eeq
-These operators commute with half of the supercharges, thus they are referred to as \emph{half-BPS}.
-The other two discrete series are the quarter-BPS and eight-BPS representations.
-
-An important fact is that operators in the same representation must have the same anomalous dimension, because the generators of the group can only change it by half integer steps and there's only a finite number of generators. 
+These operators commute with half of the supercharges, thus they are referred to as \text{half-BPS}. 
+A key fact is that operators in the same representation must have the same anomalous dimension, because the generators of the group can only change it by half integer steps and there's only a finite number of generators. 
 What is more, operators in the discrete BPS representations are protected from quantum corrections, because at any coupling the total dimension is always algebraically related to the Dynking labels of the R-symmetry, e.g. as in \eq{eq:halfBPS}. 
 Since charges of compact groups are quantized it must meant that the dimension can't continuously depend on the coupling and hence the anomalous dimension must vanish. 
 This is however not true for the fourth continuous non-BPS family of representations, hence operators from these multiplets do acquire anomalous dimensions.
 
 Let us conclude the section with an elegant argument for why the beta function of $\N=4$ super Yang-Mills is zero.
-One can use the algebra and shown that the operators $\tr \, \mathcal{F}_+ \mathcal{F}_+$ and $\tr \, \mathcal{F}_- \mathcal{F}_- $, where $\mathcal{F}_+$ and $\mathcal{F}_-$ are the self-dual and anti self-dual field strengths, are chiral primaries \cite{Minahan:2010js}, meaning that the $\tr \, F_{\mu\nu} F^{\mu\nu}$ term in the Lagrangian is protected from quantum corrections and hence so is the coupling constant $g_{YM}$. 
+One can use the algebra and shown that the operators $\tr \, F_+ F_+$ and $\tr \, F_- F_- $, where $F_\pm$ are the (anti-)self-dual field strengths, belong to the same multiplet as a superconformal primary \cite{Minahan:2010js}, meaning that the $\tr \, F_{\mu\nu} F^{\mu\nu}$ term in the Lagrangian is protected from quantum corrections, hence so is the coupling constant $g_{YM}$. 
 This argument is valid to all orders in perturbation theory, which means that $\N=4$ super Yang-Mills is conformally invariant to all orders in perturbation theory.
 
 \subsection{String description at strong coupling}
