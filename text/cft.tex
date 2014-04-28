@@ -234,16 +234,17 @@ The bosonic part of the supercoset where the string moves is given by
 \beq
 	\frac{SO(2,4) \times SO(6)}{SO(1,4) \times SO(5)} = \adsfive,
 \eeq
-which is constructed as the coset between the isometry and isotropy groups of $\adsfive$. Before writing down the action it is beneficial to explore the algebra of $PSU(2,2|4)$.
+which is constructed as the coset between the isometry and isotropy groups of $\adsfive$. 
+The action is then written in terms of the algebra of $PSU(2,2|4)$.
 
 The superalgebra $\alg{psu}{2,2|4}$ has no realization in terms of matrices, instead it is the quotient of $\alg{su}{2,2|4}$ by matrices proportional to the identity. 
 On the other hand $\alg{su}{2,2|4}$ is a matrix superalgebra spanned by $8\times8$ supertraceless matrices
 \beq
-M = \left( {\begin{array}{c|c}
+M = \( {\begin{array}{c|c}
  A & B  \\
  \hline
  C & D  \\
- \end{array} } \right),
+ \end{array} } \),
 \eeq
 where the supertrace is defined as 
 \beq
@@ -251,45 +252,80 @@ where the supertrace is defined as
 \eeq
 $A$ and $D$ are elements of $\alg{su}{2,2}$ and $\alg{su}{4}$ respectively, whereas the fermionic components are related by
 \beq
-	C = \left( {\begin{array}{c|c}
+	C = \( {\begin{array}{c|c}
  +\mathbbm{1}_{2\times2} & 0  \\
  \hline
  0 & -\mathbbm{1}_{2\times2}  \\
- \end{array} } \right) B^\dagger.
+ \end{array} } \) B^\dagger.
+\eeq
+An important feature of this algebra is the following automorphism
+\beq
+\Omega \circ M = \( {\begin{array}{c|c}
+ E A^T E & -E C^T E  \\
+ \hline
+ E B^T E & E D^T E \\
+ \end{array} } \),
+ \; \quad  \;
+E = \( {\begin{array}{cccc}
+ 0 & -1 & 0 & 0  \\
+ 1 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & -1  \\
+ 0 & 0 & 1 & 0 \\
+ \end{array} } \),
+\eeq
+which endows the algebra with a $\mathbb{Z}_4$ grading, since one can easily check that $\Omega^4 = 1$.
+This in turn means that any element of the algebra can be decomposend under this grading as
+\beq
+	M = \sum_{i=0}^3 M^{(i)},
+\eeq
+where
+\beqa
+	\label{eq:M_components}
+	M^{(0,2)} &= \frac{1}{2} \( {\begin{array}{c|c}
+ A \;\, \pm E A^T E & 0  \\
+ \hline
+ 0 & D \pm E D^T E  \\
+ \end{array} } \) \\
+ M^{(1,3)} &= \frac{1}{2} \( {\begin{array}{c|c}
+ 0 & B \pm i E C^T E  \\
+ \hline
+ C \mp i E B^T E & 0  \\
+ \end{array} } \)
+\eeqa 
+and the morphism then acts on the elements of the decomposition as
+\beq
+	\Omega \circ M^{(n)} = i^n M^{(n)}.
 \eeq
 
-The action can also be reformulated in terms of the algebra current 
+The Metsaev-Tseytlin action for the Green-Schwarz superstring is then given by
+\begin{equation}
+	\label{eq:mt_action}
+	S = \frac{\sqrt{\lambda}}{4 \pi} \int \str \left( J^{(2)} \wedge * J^{(2)} - J^{(1)} \wedge J^{(3)} + \Lambda \wedge J^{(2)} \right),
+\end{equation}
+which is written down in terms of the algebra current
 \begin{equation}
 	J = -g^{-1} \mathrm{d} g \in \mathfrak{psu(2,2|4)},
 	\label{eq:j_current}
 \end{equation}
-where $g(\sigma, \tau) \in PSU(2,2|4)$ is the map from the string worldsheet to the supergroup $PSU(2,2|4)$. Since the target space is the coset of $PSU(2,2|4)$ by $SO(4,1) \times SO(5)$, the map $g$ has an extra gauge symmetry
+where $g(\sigma, \tau) \in PSU(2,2|4)$ is a map from the string worldsheet to the supergroup $PSU(2,2|4)$. 
+The last term contains a Lagrange multiplier $\Lambda$, which ensures that $J^{(2)}$ is supertraceless, whereas all other components are manifestly traceless as seen from \eq{eq:M_components}. 
+Since the target space is the coset of $PSU(2,2|4)$ by $SO(1,4) \times SO(5)$, the map $g$ has an extra gauge symmetry
 \begin{equation}
-	g \rightarrow gH, \,\,\,\,\, H \in SO(4,1) \times SO(5)
+	g \rightarrow gH, \,\,\,\,\, H \in SO(1,4) \times SO(5)
 \end{equation}
-and the supercurrent transforms as
-\begin{equation}
-	J \rightarrow H^{-1} J H \pm H^{-1} \mathrm{d} H
-	\label{eq:j_gauge}
-\end{equation}
-It can also be decomposed as 
-\begin{equation}
-	J = J^{(0)} + J^{(1)} + J^{(2)} + J^{(3)}
-\end{equation}
-under the $\mathbb{Z}_2$ grading of $PSU(2,2|4)$. The Green-Schwarz action (\ref{eq:gs_action}) for the string in $AdS_5 \times S^5$ can now be written as \cite{current_action}
-\begin{equation}
-	S = \frac{\sqrt{\lambda}}{4 \pi} \int \str \left( J^{(2)} \wedge * J^{(2)} - J^{(1)} \wedge J^{(3)} + \Lambda \wedge J^{(2)} \right),
-\end{equation}
-where $\Lambda$ is a Lagrange multiplier, which ensures that $J^{(2)}$ is supertraceless. A supertrace $\str M$ for an element of a supergroup is defined as
-\begin{equation}
-\str M = \str
-\left( {\begin{array}{c|c}
- A & B  \\
- \hline
- C & D  \\
- \end{array} } \right) = \tr A - \tr D.
-\end{equation}
-Here the supergroup element $M$ is written as a matrix with the $\mathbb{Z}_2$ grading made manifest, $A$ and $D$ are the bosonic parts.
+under which the components of the supercurrent transform as
+\beqa
+	& J^{(0)} \rightarrow H^{-1} J^{(0)} H - H^{-1} \mathrm{d} H \\
+	& J^{(i)} \rightarrow H^{-1} J^{(i)} H, \quad \quad i=1,2,3
+\eeqa
+The equations of motion are then equivalent to the conservation of the Noether current associated to the global left multiplication symmetry
+\beq
+	d * k = 0,
+\eeq
+where $k = gKg^{-1}$ and
+\beq
+	K = J^{(2)} + \frac{1}{2} * J^{(1)} - \frac{1}{2} * J^{(3)} - \frac{1}{2} * \Lambda.
+\eeq
 
 % Once the action is in place, all that's left to do is to derive the equations of motion and solve them. Unfortunately that is easier said that done, in fact, currently there is no way to solve the full quantum string theory on a curved background, which makes the action highly non-linear. However since the background is highly symmetric there are various limits one can take and hope that the problem simplifies tremendously \cite{algebraic_curve}. A popular approach is to look for classical string solutions in $AdS_5 \times S^5$, which can be shown to very well approximate quantum solutions under certain limits. The machinery of finding classical solutions is very involved (see \cite{tseytlin_classical}) and the solutions involve complicated elliptic and hyperelliptic functions. Some examples of solutions are conceptually shown in fig. \ref{fig:string_solutions}, these include rotating circular strings, rotating folded strings and many more. 
 
