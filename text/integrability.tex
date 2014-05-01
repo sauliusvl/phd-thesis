@@ -48,12 +48,59 @@ In order to find the anomalous dimension of the chiral primary operator $\Psi$ w
 	\label{eq:delta_contractions}
 \end{subequations}
 These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in fig. \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
-% \begin{figure}[b]
-	% \centering
-		% \includegraphics[width=0.9\textwidth]{images/planar_nonplanar}
-	% \caption{Possible types of contractions between fields in traces of operators, which are represented by horizontal lines. Vertical lines represent the contractions. (a) and (b) are two examples of planar contractions while (c) is an example of a non-planar contraction.}
-	% \label{fig:planar_nonplanar}
-% \end{figure}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=0.5]
+	
+	%\draw[help lines] (0,0) grid (29,5);
+
+	\def\height{4}
+	\def\width{7}
+	\def\gap{2}
+	
+	\begin{scope}[shift={(\gap,0)}]
+	
+		\draw[line width=0.6mm] (0,0) -- (\width,0);
+		\draw[line width=0.6mm] (0,\height) -- (\width,\height);
+		
+		\foreach \x in {1,2,3,4,5,6} {
+			\draw (\x,0) -- (\x,\height);
+		}
+
+	\end{scope}
+	
+	\begin{scope}[shift={(\width+2*\gap,0)}]
+	
+		\draw[line width=0.6mm] (0,0) -- (\width,0);
+		\draw[line width=0.6mm] (0,\height) -- (\width,\height);
+		
+		\foreach \x in {1,2,3,4,5} {
+			\draw (\x,0) -- (\x+1,\height);
+		}
+		
+		\draw (0.5, \height / 2) -- (1,\height);
+		\draw (6,0) -- (6.5,\height / 2);
+
+	\end{scope}
+	
+	\begin{scope}[shift={(2*\width+3*\gap,0)}]
+	
+		\draw[line width=0.6mm] (0,0) -- (\width,0);
+		\draw[line width=0.6mm] (0,\height) -- (\width,\height);
+		
+		\foreach \x in {1,2,5,6} {
+			\draw (\x,0) -- (\x,\height);
+		}
+		
+		\draw (3,0) -- (3.4, 0.4 * \height); \draw (3.6, 0.6 * \height) -- (4, \height);
+		\draw (4,0) -- (3,\height);
+
+	\end{scope}
+	
+\end{tikzpicture}
+\label{fig:planar_nonplanar}
+\caption{Possible types of contractions between fields in traces of operators, which are represented by horizontal lines. Vertical lines represent the contractions. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
+\end{figure}
 All that's left then are cyclic permutations of lines by shifting all of them as seen in fig. \ref{fig:planar_nonplanar} while going from (a) to (b). There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. Thus finally for the chiral primary correlator at tree level we find
 \begin{equation}
 	\left< \Psi(x) \, \tilde{\Psi}(y) \right>_{\mathrm{tree}} \approx \frac{L N^L}{|x-y|^{2L}},
@@ -116,7 +163,6 @@ but by definition a chiral primary has an anomalous dimension of zero, which the
 \end{equation}
 A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. In fact, this is hardly surprising, since from the very beginning we were talking about fields as points in some closed line, which indeed resembles a spin chain. Furthermore the correlators that we were calculating are nothing more that propagators from one state of the chain to another, hence no wonder that the operator describing this evolution looks like a Hamiltonian for a spin chain. This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ exactly. This is indeed what was first done in the seminal paper \cite{minahan_original}, which launched the integrability program in AdS/CFT. However saying that the spectral problem can be solved exactly in this particular case is too strong, since we are only at one-loop level. Nevertheless it turns out that one can apply the same techniques going beyond one-loop level. What happens is that long range interactions start appearing in the Hamiltonian as one goes higher in loops. What is more unexpected is that under certain limits one can actually guess how the solution should look like at all loops. Further techniques like the thermodynamic Bethe ansatz can then be applied to solve the spectral problem exactly without assuming any limits. The coming sections will explore these techniques in more detail.
 
-Roughly rederive the Minahan/Zarembo result.
 
 \subsubsection{The $\mathfrak{sl}(2)$ sector}
 
