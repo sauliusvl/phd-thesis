@@ -58,6 +58,16 @@
 \newcommand{\eq}[1]{(\ref{#1})}
 \newcommand{\alg}[2]{\mathfrak{#1}(#2)}
 
+\makeatletter
+
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \hfill\itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
 \hypersetup{pdfborder = {0 0 0}}
 
 \numberwithin{equation}{section}
