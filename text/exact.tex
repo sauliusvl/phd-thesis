@@ -348,13 +348,13 @@ Lastly, the spin $S$ of the operator is related \cite{PmuPRL} to the leading coe
 
 %\subsection{Symmetries}
 %\label{sec:Symmetries}
-The $\bP\mu$-system enjoys a symmetry preserving all of its essential features. It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eqref{eq:Pmu}-\eqref{Pmulast} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the system \eqref{eq:Pmu}, $\mu$ should
+The $\bP\mu$-system enjoys a symmetry preserving all of its essential features. It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eq{eq:Pmu}-\eq{eq:Pmulast} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the system \eq{eq:Pmu}, $\mu$ should
 at the same time be transformed as
 \beq
 \mu'=-R \mu \chi R^{-1}\chi.
 \label{gammaP}
 \eeq
-Such a transformation also preserves the form of \eqref{eq:mudisc} if
+Such a transformation also preserves the form of \eq{eq:mudisc} if
 \beq
 R^T\chi R\chi=-1\;,
 \label{eq:sxsx}
@@ -373,7 +373,7 @@ R=\left(
 \end{array}
 \right).
 \eeq
-The general form of $R$ which satisfies \eqref{eq:sxsx} and does not spoil the asymptotics generates a 6-parametric transformation, which we will call a $\gamma$-transformation. The simplest \text{$\gamma$-transformation} is the following rescaling:
+The general form of $R$ which satisfies \eq{eq:sxsx} and does not spoil the asymptotics generates a 6-parametric transformation, which we will call a $\gamma$-transformation. The simplest \text{$\gamma$-transformation} is the following rescaling:
 \beq
 \bP_1 \to \alpha \bP_1\;\;,\;\;
 \bP_2 \to \beta \bP_2\;\;,\;\;
@@ -391,7 +391,7 @@ The general form of $R$ which satisfies \eqref{eq:sxsx} and does not spoil the a
 with $\alpha,\beta$ being constants.
 
 
- In all the solutions we consider in this paper all functions $\bP_a$ turn out to be functions of definite parity, so it makes sense to consider $\gamma$-transformations which preserve parity. $\bP_1$ and $\bP_2$  always have opposite parity (as one can see from from \eqref{eq:asymptotics}) and thus should not mix under such transformations; the same is true about $\bP_3$ and $\bP_4$. Thus, depending on parity of $J$ the parity-preserving $\gamma$-transformations are either
+ In all the solutions we consider in this paper all functions $\bP_a$ turn out to be functions of definite parity, so it makes sense to consider $\gamma$-transformations which preserve parity. $\bP_1$ and $\bP_2$  always have opposite parity (as one can see from from \eq{eq:asymptotics}) and thus should not mix under such transformations; the same is true about $\bP_3$ and $\bP_4$. Thus, depending on parity of $J$ the parity-preserving $\gamma$-transformations are either
 
 \beqa
 \label{gammatransform2}
@@ -473,7 +473,7 @@ Bremstahlung result from $\pmu$.
 
 
 
-Taking the classical limit $L \rightarrow \infty$ keeping $L/\sqrt{\lambda}$ fixed becomes considerably easier once we realize that the cusp anomalous dimension \eqref{eq:mainresultIntro} can be expressed in terms of an expectation value of some operator in a matrix model. In this section we will show how to use this approach to find the large $N$ expansion of the determinant of ${\cal M}_N$ defined in \eqref{eq:M}.
+Taking the classical limit $L \rightarrow \infty$ keeping $L/\sqrt{\lambda}$ fixed becomes considerably easier once we realize that the cusp anomalous dimension \eq{eq:mainresultIntro} can be expressed in terms of an expectation value of some operator in a matrix model. In this section we will show how to use this approach to find the large $N$ expansion of the determinant of ${\cal M}_N$ defined in \eq{eq:M}.
 
 One can check that the quantities $I^\theta_n$ defined in the previous section can be rewritten in the following integral representation
 \begin{equation}
@@ -505,17 +505,17 @@ Thus finally we get the following expression
   \det \M_{N} = \frac{1}{(2 \pi i)^{N+1}} \oint \prod_{i=1}^{N+1} \frac{d x_i}{x_i^{N+2}} \, \frac{\Delta^2(x_i)}{(N+1)!}  \, \sinh(2\pi g \, (x_i + 1/x_i)) \, e^{2 g \theta (x_i - 1/x_i)},
   \label{eq:Mintegral}
 \end{equation}
-which indeed has the structure of a partition function of some matrix model\footnote{Namely, it is equal to the partition function of a two-matrix model. We thank I.Kostov for discussions related to this question.}. It now becomes a matter of simple algebra to convince oneself that the cusp anomalous dimension \eqref{eq:mainresultIntro} can be written in terms of expectation values in this matrix model, namely
+which indeed has the structure of a partition function of some matrix model\footnote{Namely, it is equal to the partition function of a two-matrix model. We thank I.Kostov for discussions related to this question.}. It now becomes a matter of simple algebra to convince oneself that the cusp anomalous dimension \eq{eq:mainresultIntro} can be written in terms of expectation values in this matrix model, namely
 \beq
 	\Gamma_L(g) = g \, \frac{\phi-\theta}{2} \left[ \,\, \left< \sum_{i=1}^{2L+1} \( x_i - \frac{1}{x_i}\)  \right>_{2L+1} - \,\,\, \left<  \sum_{i=1}^{2L-1} \(x_i - \frac{1}{x_i}\) \right>_{2L-1} \right],
 \eeq
 where $\left< \dots \right>_{N}$ denotes the normalized expectation value in the matrix model of size $N$ with the partition function defined in (\ref{eq:Mintegral}). Note that this formula is exact and we have not yet taken any limits.
 
 
-In this section we will explore the classical $L\sim\sqrt \lambda\rightarrow \infty$ limit of the matrix model \eqref{eq:Mintegral}.  As usual in matrix models, when the size of matrices becomes large, the partition function is dominated by the solution of the saddle point equations. In the leading order it is just equal to the value of the integrand at the saddle point. Here we work in this approximation, leaving the corrections (beyond the first one calculated in section \ref{sec:The1loop}) for future work.
+In this section we will explore the classical $L\sim\sqrt \lambda\rightarrow \infty$ limit of the matrix model \eq{eq:Mintegral}.  As usual in matrix models, when the size of matrices becomes large, the partition function is dominated by the solution of the saddle point equations. In the leading order it is just equal to the value of the integrand at the saddle point. Here we work in this approximation, leaving the corrections (beyond the first one calculated in section \ref{sec:The1loop}) for future work.
 
 
-The partition function \eqref{eq:Mintegral}  can be recast in the form \footnote{we take $N=2L$.}
+The partition function \eq{eq:Mintegral}  can be recast in the form \footnote{we take $N=2L$.}
 \beq
 	\det \M_{2L} = \frac{1}{(2 \pi i)^{2L+1}} \frac{1}{(2L+1)!} \, \oint \prod_{i=1}^{2L+1} d x_i \, e^{-S(x_1, x_2, \dots, x_{2L+1})},
 \eeq
@@ -576,19 +576,19 @@ The motivation for introducing $p(x)$ is that  the saddle point equations (\ref{
 In the classical limit the poles in the quasimomentum condense and form two cuts. The shifts $\pm i\epsilon$ in the equation above refer to taking the argument of the quasimomentum to one or the other side of the cut.
 
 
-The quasimomentum \eqref{eq:quantum_quasimomentum} introduced in the previous section is a convenient object to consider when taking the classical limit $L\sim \sqrt \lambda\rightarrow\infty$, because in this limit it is related to the algebraic curve of the corresponding classical solution. In this section we will construct this curve explicitly.
+The quasimomentum \eq{eq:quantum_quasimomentum} introduced in the previous section is a convenient object to consider when taking the classical limit $L\sim \sqrt \lambda\rightarrow\infty$, because in this limit it is related to the algebraic curve of the corresponding classical solution. In this section we will construct this curve explicitly.
 
 In the classical limit the poles of $p(x)$, which we denote as $x_i$, are governed by the saddle-point equation and condense on two cuts in the complex plane, as shown in figure \ref{fig:roots}.
-The saddle-point equation \eqref{eq:saddlepoint} has a symmetry $x\rightarrow -1/x$, so does the set of poles $x_i$. For the quasimomentum (\ref{eq:quantum_quasimomentum}) this symmetry manifests as the identity $p(x) = -p(-1/x)$. Thus we conclude that the two cuts are related by an $x\rightarrow -1/x$ transformation. This and the invariance of the saddle-point equation under complex conjugation implies that the four branch points can be parameterized as $\{r\,e^{i\psi},r \, e^{-i\psi},-1/r \, e^{i\psi},-1/r \, e^{-i\psi}\}$. Note that in the case $\theta=0$ the symmetry is enhanced to $p(x)=-p(-x)$ and $p(1/x) = p(x)$, which is not true for arbitrary $\theta$.
+The saddle-point equation \eq{eq:saddlepoint} has a symmetry $x\rightarrow -1/x$, so does the set of poles $x_i$. For the quasimomentum (\ref{eq:quantum_quasimomentum}) this symmetry manifests as the identity $p(x) = -p(-1/x)$. Thus we conclude that the two cuts are related by an $x\rightarrow -1/x$ transformation. This and the invariance of the saddle-point equation under complex conjugation implies that the four branch points can be parameterized as $\{r\,e^{i\psi},r \, e^{-i\psi},-1/r \, e^{i\psi},-1/r \, e^{-i\psi}\}$. Note that in the case $\theta=0$ the symmetry is enhanced to $p(x)=-p(-x)$ and $p(1/x) = p(x)$, which is not true for arbitrary $\theta$.
 
-The crucial point to notice is that while $p(x)$ satisfies the equation \eqref{eq:pepsilon} which has different constants on the right hand side for the two different cuts, the corresponding equation for $p'(x)$ has a zero on the right hand side for both cuts, thus we expect $p'(x)$ to have a simpler form than $p(x)$. Our strategy is to write down an ansatz for the derivative $p'(x)$ using the symmetries and analytical properties of $p(x)$ and then integrate it. The form of the expression we get is analogous to the curve constructed in \cite{Kazakov:2004qf}, which also helps us to construct the ansatz.
+The crucial point to notice is that while $p(x)$ satisfies the equation \eq{eq:pepsilon} which has different constants on the right hand side for the two different cuts, the corresponding equation for $p'(x)$ has a zero on the right hand side for both cuts, thus we expect $p'(x)$ to have a simpler form than $p(x)$. Our strategy is to write down an ansatz for the derivative $p'(x)$ using the symmetries and analytical properties of $p(x)$ and then integrate it. The form of the expression we get is analogous to the curve constructed in \cite{Kazakov:2004qf}, which also helps us to construct the ansatz.
 
-First, $p(x)$ has four branch points and according to \eqref{eq:pepsilon} its derivative changes sign on each cut, hence all the cuts are of square-root type. One can write $p'(x)\propto 1/y(x)$, where
+First, $p(x)$ has four branch points and according to \eq{eq:pepsilon} its derivative changes sign on each cut, hence all the cuts are of square-root type. One can write $p'(x)\propto 1/y(x)$, where
  \beq
  	y(x) = \sqrt{x-r e^{i \psi}}\sqrt{x-r e^{-i \psi}}\sqrt{x + \frac{1}{r} e^{i \psi}}\sqrt{x + \frac{1}{r} e^{-i \psi}}.
  \label{eq:y}
  \eeq
-  Second, since the algebraic curve is obtained from \eqref{eq:quantum_quasimomentum} in the classical limit, $p(x)$ should have simple poles at $x=\pm 1$. Finally, from \eqref{eq:quantum_quasimomentum}  we can get the behaviour at infinity:
+  Second, since the algebraic curve is obtained from \eq{eq:quantum_quasimomentum} in the classical limit, $p(x)$ should have simple poles at $x=\pm 1$. Finally, from \eq{eq:quantum_quasimomentum}  we can get the behaviour at infinity:
 \beq
 	p'(x) \approx \frac{L}{g} \frac{1}{x^2} + \mathcal{O}\(\frac{1}{x^3}\).
 \eeq
@@ -603,7 +603,7 @@ The polynomial in the numerator is of order four in order to maintain the correc
 	A_2 =- \frac{(2A_1 + A_3) \, r \, (r^2 - 1) \cos \psi}{r^4 - 2 \, r^2 \, \cos 2\psi + 1}.
 \eeq
 We fix the two remaining unknowns $A_1$ and $A_3$ after integrating the $p'(x)$. We don't write the intermediate results of the integration as the expressions are enormous without any apparent structure.
-Looking back at \eqref{eq:pepsilon} we see that at the branchpoints
+Looking back at \eq{eq:pepsilon} we see that at the branchpoints
 \beq
 	p(x_{bp}) =\pm \pi.
 \eeq
@@ -634,7 +634,7 @@ where
 \begin{equation}
 	\mathbb{F}_2(x) = \mathbb{E}\left( \left. \sin^{-1} \sqrt{ \left( \frac{x -r e^{-i\psi}}{x+ \frac{1}{r} e^{i\psi}} \right) \left( \frac{ e^{ i \psi}}{ia\,r\sin\psi} \right) } \; \right| a^2 \sin^2(\psi) \right).
 \end{equation}
-We verified this result numerically by comparing it to the extrapolation of the discrete quasimomentum \eqref{eq:quantum_quasimomentum} at large $L$ and got an agreement up to thirty digits. We also compared this expression at $\theta = 0$ with the quasimomentum obtained in \cite{Gromov:2012eu} and the expressions agree perfectly.
+We verified this result numerically by comparing it to the extrapolation of the discrete quasimomentum \eq{eq:quantum_quasimomentum} at large $L$ and got an agreement up to thirty digits. We also compared this expression at $\theta = 0$ with the quasimomentum obtained in \cite{Gromov:2012eu} and the expressions agree perfectly.
 
 The resulting quasimomentum is parameterized in terms of the branchpoints, i.e. the parameters are the radius $r$ and angle $\psi$. They are determined in terms of $L/g$ and $\theta$, which are parameters of the matrix model. We already mentioned that $L/g$ is simply the constant $A_1$, which we found to be
 
@@ -642,7 +642,7 @@ The resulting quasimomentum is parameterized in terms of the branchpoints, i.e. 
 	\frac{L}{g} = 4\,\frac{K_1-E_1}{a} ,
 	\label{eq:Lgfixed}
 \eeq
-and looking back at \eqref{eq:quantum_quasimomentum} we see that $\theta = p(0) = -p(\infty)$, hence
+and looking back at \eq{eq:quantum_quasimomentum} we see that $\theta = p(0) = -p(\infty)$, hence
 \beqa
 	\theta &=& -\pi + \frac{2a}{r}\,e^{i\psi}K_1 \nonumber \\
 	       &-& \left. 4 \, i \, K_1\,\mathbb{E}\left(\sin ^{-1}\sqrt{\frac{  e^{i\psi}}{ia\,r\sin\psi}} \,\right|\, a^2 \sin ^2(\psi )\right)\nonumber \\
@@ -690,18 +690,18 @@ k^4&=\gamma^4-2 \gamma^2+ 4\, \gamma^2 l^2+1.
 \nonumber
 \end{align}
 
-One can see that the variables $\theta,l_{\theta},\gamma$ and $L$ are responsible for the $S^3$ part of the solution, while  $\phi,l_{\phi},\kappa$ and $E$ are their analogues for $AdS_3$. The two parts of the solution are connected only by the Virasoro condition which leads to \eqref{eq:ff}.
-We are interested in the limit when $\theta\approx\phi$. In this limit the two groups of variables responsible for $S^3$ and $AdS_3$ parts of the solution become close to each other, namely $l_{\theta}\approx l_{\phi}$ and $E\approx L$. The cusp anomalous dimension should be compared with the difference $E-L$, because $L$ is the classical part of the dimension of the observable $W_L$. To find $E-L$ we linearize the system \eqref{eq:f},\eqref{eq:h},\eqref{eq:g} around $\phi\approx\theta$, which yields
+One can see that the variables $\theta,l_{\theta},\gamma$ and $L$ are responsible for the $S^3$ part of the solution, while  $\phi,l_{\phi},\kappa$ and $E$ are their analogues for $AdS_3$. The two parts of the solution are connected only by the Virasoro condition which leads to \eq{eq:ff}.
+We are interested in the limit when $\theta\approx\phi$. In this limit the two groups of variables responsible for $S^3$ and $AdS_3$ parts of the solution become close to each other, namely $l_{\theta}\approx l_{\phi}$ and $E\approx L$. The cusp anomalous dimension should be compared with the difference $E-L$, because $L$ is the classical part of the dimension of the observable $W_L$. To find $E-L$ we linearize the system \eq{eq:f},\eq{eq:h},\eq{eq:g} around $\phi\approx\theta$, which yields
 \begin{align}
 E-L=(\phi-\theta)\left|\frac{\partial{(g,f)}}{\partial{(l,\kappa)}}\right|/\left|\frac{\partial{(h,f)}}{\partial{(l,\kappa)}}\right|.
 \label{eq:ELbig}
 \end{align}
-Plugging in here the explicit form of $g,f$ and $h$ one gets as a result an extremely complicated expression with a lot of elliptic functions. However, there exists a parametrization in which the result looks surprisingly simple: this parametrization comes from comparison of the string conserved charges with the corresponding quantities of the algebraic curve. One can notice that the equations for $\theta$ and $L/g$ in the end of the last section have the same structure as the equations \eqref{eq:hh} and \eqref{eq:gg}. Indeed, it is possible to match them precisely if one chooses the correct identification of parameters of the string solution $l_\theta,\gamma$ with the parameters of the algebraic curve $r,\psi$. We used the elliptic identities presented in the appendix \ref{sec:Elliptic} to bring the equations to identical form after the following identifications
+Plugging in here the explicit form of $g,f$ and $h$ one gets as a result an extremely complicated expression with a lot of elliptic functions. However, there exists a parametrization in which the result looks surprisingly simple: this parametrization comes from comparison of the string conserved charges with the corresponding quantities of the algebraic curve. One can notice that the equations for $\theta$ and $L/g$ in the end of the last section have the same structure as the equations \eq{eq:hh} and \eq{eq:gg}. Indeed, it is possible to match them precisely if one chooses the correct identification of parameters of the string solution $l_\theta,\gamma$ with the parameters of the algebraic curve $r,\psi$. We used the elliptic identities presented in the appendix \ref{sec:Elliptic} to bring the equations to identical form after the following identifications
 \beq
 \gamma=\frac{2r}{\sqrt{r^4-2r^2\cos2\psi+1}},\; l_{\theta}=\frac{(r^2-1)\cos\psi}{\sqrt{r^4-2r^2\cos2\psi+1}}.
 \label{eq:identification}
 \eeq
-As another confirmation of correctness of this identification, after plugging it into \eqref{eq:ELbig} the complicated expression reduces to the following simple formula for the classical energy
+As another confirmation of correctness of this identification, after plugging it into \eq{eq:ELbig} the complicated expression reduces to the following simple formula for the classical energy
 \begin{align}
 E-L=g(\phi-\theta)(r-1/r)\cos\psi.
 \label{eq:E1}
@@ -713,28 +713,28 @@ Notice that this can be rewritten as a sum over the branch points of the algebra
 where $a_i=\{r \, e^{i\psi}, r \, e^{-i\psi},-1/r \, e^{i\psi},-1/r \, e^{-i\psi}\}$.
 
 
-In this section we will find the classical limit of the cusp anomalous dimension from the algebraic curve. At large $L$ the formula \eqref{eq:mainresultIntro} can be rewritten as
+In this section we will find the classical limit of the cusp anomalous dimension from the algebraic curve. At large $L$ the formula \eq{eq:mainresultIntro} can be rewritten as
 \beq
 \Gamma_L(g)=\frac{\phi-\theta}{4}\partial_\theta\partial_L\det{\cal M}_{2L}.
 \eeq
-Use the integral representation \eqref{eq:Mintegral} for $\det{\cal M}_L$ we can notice that
+Use the integral representation \eq{eq:Mintegral} for $\det{\cal M}_L$ we can notice that
 \beq
 \partial_\theta \log \det {\cal M}_L=\left\langle 2g\sum\limits_{i=1}^{2L}(x_i-1/x_i)\right\rangle,
 \eeq
-where by the angular brackets we denoted an expectation value in the matrix model with the partition function \eqref{eq:Mintegral}.
-In the quasiclassical approximation the expectation value is determined by the saddle-point, i.e. the previous expression is equal to  $2g\sum\limits_{i=1}^{2L}(x_i-1/x_i)$, where the roots $x_i$ are the solutions of the saddle-point equation \eqref{eq:saddlepoint}.
+where by the angular brackets we denoted an expectation value in the matrix model with the partition function \eq{eq:Mintegral}.
+In the quasiclassical approximation the expectation value is determined by the saddle-point, i.e. the previous expression is equal to  $2g\sum\limits_{i=1}^{2L}(x_i-1/x_i)$, where the roots $x_i$ are the solutions of the saddle-point equation \eq{eq:saddlepoint}.
 Since the set of the roots has a $x\rightarrow-1/x$ symmetry, the two terms in the sum give the same contribution. Thus
 \beq
 \partial_\theta \log \det {\cal M}_L=-4g \sum\limits_{i=1}^{2L}\frac{1}{x_i}=8 \, g \, L \, G(0),
 \eeq
-where we used the resolvent \eqref{eq:resolvent}.
+where we used the resolvent \eq{eq:resolvent}.
 
-Using the relation \eqref{eq:quantum_quasimomentum} between the resolvent and the quasimomentum  we find $G(0)=\frac{g}{L}\left(p''(0)/4-\theta\right)$, so the final expression for the cusp anomalous dimension in terms of the quasimomentum is
+Using the relation \eq{eq:quantum_quasimomentum} between the resolvent and the quasimomentum  we find $G(0)=\frac{g}{L}\left(p''(0)/4-\theta\right)$, so the final expression for the cusp anomalous dimension in terms of the quasimomentum is
 \begin{align}
 \Gamma_L(g)=-\frac{g^2}{2}\partial_Lp_L''(0).
 \label{eq:E2}
 \end{align}
-The formula for $p(x)$ presented in the previous section is given in terms of the parameters of the branch points $r$ and $\psi$. They are implicitly defined through $L/g$ and $\theta$ by the equations \eqref{eq:Lgfixed} and \eqref{eq:thetafixed}. In order to get $\Gamma_L$ we express $\partial_L$ though $\partial_r$ and $\partial_\psi$ and then apply \eqref{eq:E2} to \eqref{eq:pmainresult}. Finally we obtain a very simple result in terms of $r$ and $\psi$
+The formula for $p(x)$ presented in the previous section is given in terms of the parameters of the branch points $r$ and $\psi$. They are implicitly defined through $L/g$ and $\theta$ by the equations \eq{eq:Lgfixed} and \eq{eq:thetafixed}. In order to get $\Gamma_L$ we express $\partial_L$ though $\partial_r$ and $\partial_\psi$ and then apply \eq{eq:E2} to \eq{eq:pmainresult}. Finally we obtain a very simple result in terms of $r$ and $\psi$
 \beq
 \Gamma_{L}(g)=g(\phi-\theta)\(r-1/r\)\cos\psi
 \label{eq:GammaL}
@@ -742,11 +742,11 @@ The formula for $p(x)$ presented in the previous section is given in terms of th
 which exactly coincides with the calculation from the string solution!
 
 
-Here we will check our formula \eqref{eq:GammaL} in the limit $\phi=0$ and $\theta\rightarrow 0$ considered in section E.2 of \cite{Gromov:2012eu}. As the angles go to zero, the branch points approach the unit circle: $r\rightarrow 1$, thus the formula \eqref{eq:GammaL} gives
+Here we will check our formula \eq{eq:GammaL} in the limit $\phi=0$ and $\theta\rightarrow 0$ considered in section E.2 of \cite{Gromov:2012eu}. As the angles go to zero, the branch points approach the unit circle: $r\rightarrow 1$, thus the formula \eq{eq:GammaL} gives
 \beq
 	\Gamma_L(g)=2\,g\,\theta (r-1)\cos\psi.
 \eeq
-In this limit $r-1\propto\theta$, and the coefficient of proportionality can be found by expanding\footnote{The equation \eqref{eq:thetafixed} is written in the approximation $\phi\approx\theta$ and now on the top of it we want to take a limit $\theta\rightarrow 0$. Since before we have neglected the terms ${\cal O}(\theta-\phi)^2$, the result, which is now of the order ${\cal O}(\theta)^2$ will not generally be reproduced. However, we found that here and in several other formulas correct small angle limit is reproduced if before taking $\theta,\phi$ to zero we replace $\theta$ and $\phi$ by the middle angle $\phi_0=\frac{\phi+\theta}{2}$, which is in our case equal to $\theta/2$.} the equation \eqref{eq:thetafixed} for $\theta$ around $r=1$:
+In this limit $r-1\propto\theta$, and the coefficient of proportionality can be found by expanding\footnote{The equation \eq{eq:thetafixed} is written in the approximation $\phi\approx\theta$ and now on the top of it we want to take a limit $\theta\rightarrow 0$. Since before we have neglected the terms ${\cal O}(\theta-\phi)^2$, the result, which is now of the order ${\cal O}(\theta)^2$ will not generally be reproduced. However, we found that here and in several other formulas correct small angle limit is reproduced if before taking $\theta,\phi$ to zero we replace $\theta$ and $\phi$ by the middle angle $\phi_0=\frac{\phi+\theta}{2}$, which is in our case equal to $\theta/2$.} the equation \eq{eq:thetafixed} for $\theta$ around $r=1$:
 \beq
 	2 (1-r)\frac{\mathbb{E}\left(\sin^2\psi\right)}{\cos\psi}=\theta/2.
 \eeq
@@ -764,7 +764,7 @@ the perturbative expansion around the classical value can be written as
 \Gamma_L(g)=\sum\limits_{n=0}^\infty g^{1-n}b_n(L/g)+\text{non-perturbative terms}.
 \label{eq:Gammaexp}
 \eeq
-The classical energy is $g \, b_0(L/g)$ and other corrections are suppressed by powers of $g$. A symmetry of the formula for $\Gamma_L(g)$ found in \cite{Beccaria:2013lca} allows one to express the even terms in the expansion \eqref{eq:Gammaexp} through the odd ones and the other way round. In particular, $b_1$ can be obtained from $b_0$ by differentiating with respect to $L/g$.
+The classical energy is $g \, b_0(L/g)$ and other corrections are suppressed by powers of $g$. A symmetry of the formula for $\Gamma_L(g)$ found in \cite{Beccaria:2013lca} allows one to express the even terms in the expansion \eq{eq:Gammaexp} through the odd ones and the other way round. In particular, $b_1$ can be obtained from $b_0$ by differentiating with respect to $L/g$.
 Since the classical energy is
 \beq
 \Gamma^{cl}_L(g)=g\(\phi-\theta\)\(r-1/r\)\cos\psi
@@ -778,14 +778,14 @@ where
 \begin{align}
 f(r,\psi)=\frac{r+1/r}{4}\frac{\left|r^2e^{2i\psi}+1\right|^2K_1-r^2 \left|r+\frac{1}{r}+e^{i\psi}-e^{-i\psi}\right|^2E_1 }{\left|\(r+\frac{1}{r}\)\(r^2e^{2i\psi}-1\)E_1-\(r-\frac{1}{r}\)\(r^2e^{2i\psi}+1\)K_1\right|^2},
 \end{align}
-and $E_1,K_1$ are defined in \eqref{eq:E1K1}. We have checked this formula and the classical energy \eqref{eq:E1} against a numerical extrapolation of the exact expression \eqref{eq:mainresultIntro} and found an agreement up to more than thirty digits.
+and $E_1,K_1$ are defined in \eq{eq:E1K1}. We have checked this formula and the classical energy \eq{eq:E1} against a numerical extrapolation of the exact expression \eq{eq:mainresultIntro} and found an agreement up to more than thirty digits.
 
 
 Find the curve, matrix models.
 
 \subsection{Revisiting the slope function}
 
-In this section we will find the solution of the $\bP\mu$-system \eqref{eq:Pmu}-\eq{Pmulast} corresponding to the $sl(2)$ sector operators at leading order in small $S$. Based on this solution we will compute the slope function $\gamma^{(1)}(g)$ for any value of the coupling.
+In this section we will find the solution of the $\bP\mu$-system \eq{eq:Pmu}-\eq{Pmulast} corresponding to the $sl(2)$ sector operators at leading order in small $S$. Based on this solution we will compute the slope function $\gamma^{(1)}(g)$ for any value of the coupling.
 
 The solution of the $\pmu$-system is a little simpler for even $J$, because for odd $J$ extra branch points at infinity will appear in $\bP_a$ due to the asymptotics \eq{eq:asymptotics}. Let us first consider the even $J$ case.
 
@@ -828,8 +828,8 @@ where we pick the solution with a short cut, i.e.
 \beq
 x(u)=\frac{1}{2}\left(\frac{u}{g}+\sqrt{\frac{u}{g}-2}\;\sqrt{\frac{u}{g}+2}\;\right)\;\;.\;\;
 \eeq
-Solving the equations \eqref{eq:P2L2} and \eqref{eq:P3L2} with the asymptotics \eqref{eq:asymptotics} we uniquely fix $\bP_1=\epsilon x^{-J/2}$ and $\bP_3=\epsilon\(x^{-J/2}-x^{+J/2}\)$, where $\epsilon$ is a constant yet to be fixed; we expect it to be proportional to $\sqrt{S}$.
-Thus the equations \eqref{eq:P2L2} and \eqref{eq:P4L2} become
+Solving the equations \eq{eq:P2L2} and \eq{eq:P3L2} with the asymptotics \eq{eq:asymptotics} we uniquely fix $\bP_1=\epsilon x^{-J/2}$ and $\bP_3=\epsilon\(x^{-J/2}-x^{+J/2}\)$, where $\epsilon$ is a constant yet to be fixed; we expect it to be proportional to $\sqrt{S}$.
+Thus the equations \eq{eq:P2L2} and \eq{eq:P4L2} become
 \beqa
 \label{eq:P2eq}
 \tilde \bP_2+\bP_2&=& -\bP_4 -\epsilon x^{-J/2}\sinh(2\pi u)\;, \\
@@ -856,11 +856,11 @@ We now take the following ansatz for $\bP_4$
 \beq
 \bP_4=\epsilon(x^{J/2}-x^{-J/2})\sinh_-+Q_{J/2-1}(u),
 \eeq
-where $Q_{J/2-1}$ is a polynomial of degree $J/2-1$ in $u$. It is easy to see that this ansatz solves \eqref{eq:P4eq} and has correct asymptotics. The polynomial $Q_{J/2-1}$ can be fixed from the equation \eqref{eq:P2eq} for $\bP_2$. Indeed, from the asymptotics of $\bP_2$ we see that the lhs of \eqref{eq:P2eq} does not have powers of $x$ from $-J/2+1$ to $J/2-1$. This fixes
+where $Q_{J/2-1}$ is a polynomial of degree $J/2-1$ in $u$. It is easy to see that this ansatz solves \eq{eq:P4eq} and has correct asymptotics. The polynomial $Q_{J/2-1}$ can be fixed from the equation \eq{eq:P2eq} for $\bP_2$. Indeed, from the asymptotics of $\bP_2$ we see that the lhs of \eq{eq:P2eq} does not have powers of $x$ from $-J/2+1$ to $J/2-1$. This fixes
 \beq
 Q_{J/2-1}(x)=-\epsilon\sum\limits_{k=1}^{J/2}I_{2k-1}\(x^{\frac{J}{2}-2k+1}+x^{-\frac{J}{2}+2k-1}\).
 \eeq
-Once $Q_{J/2-1}$ is found, we set $\bP_2$ to be the part of the right hand side of \eqref{eq:P2eq} with powers of $x$ less than $-J/2$, which gives
+Once $Q_{J/2-1}$ is found, we set $\bP_2$ to be the part of the right hand side of \eq{eq:P2eq} with powers of $x$ less than $-J/2$, which gives
 \beq
 \bP_2=-\epsilon x^{+J/2} \sum_{n=\frac{J}{2}+1}^\infty I_{2n-1}x^{1-2n}.
 \eeq
@@ -899,9 +899,9 @@ Note that now $\bP_a$ include half-integer powers of $x$.
 \paragraph{Fixing the global charges of the solution.}
 \label{sec:LOresultevenL}
 Finally, to fix our solution completely we
-have to find the value of $\epsilon$ and find the energy in terms of the spin using \eqref{AA1} and \eq{AA2}.
- For this we first extract the coefficients $A_a$ of the leading terms for all $\bP_a$ (see the asymptotics \eqref{eq:asymptotics}).
-From \eqref{eq:P1solLOevenL}-\eqref{eq:P4solLOevenL} or \eq{P1oddL}-\eq{P4oddL}
+have to find the value of $\epsilon$ and find the energy in terms of the spin using \eq{eq:AA1} and \eq{AA2}.
+ For this we first extract the coefficients $A_a$ of the leading terms for all $\bP_a$ (see the asymptotics \eq{eq:asymptotics}).
+From \eq{eq:P1solLOevenL}-\eq{eq:P4solLOevenL} or \eq{P1oddL}-\eq{P4oddL}
 we get
 \beqa
 \label{Aexp1}
@@ -950,7 +950,7 @@ In this section we use the $\bP\mu$-system to compute the $S^2$ correction to th
 \subsubsection{Iterative procedure for the small $S$ expansion of the $\bP\mu$-system}
 \label{sec:SolvingPmuL2}
 
-For convenience let us repeat the leading order solution of the $\bP\mu$-system for $J=2$ (see \eqref{eq:musolLOevenL}-\eqref{eq:P4solLOevenL})
+For convenience let us repeat the leading order solution of the $\bP\mu$-system for $J=2$ (see \eq{eq:musolLOevenL}-\eq{eq:P4solLOevenL})
 \beqa
 {\bf P}^{(0)}_1=\epsilon\frac{1}{x}\;\;&,&\;\;{\bf P}^{(0)}_2=+\epsilon I_1-\epsilon x[\sinh(2\pi u)]_-\;\;,\\
 {\bf P}^{(0)}_3=\epsilon\(\frac{1}{x}-x\)\;\;&,&\;\;
@@ -968,11 +968,11 @@ The key observation is that the $\bP\mu$-system can be solved iteratively order 
 \beq
 	\mu_{ab}=\mu_{ab}^{(0)}+\epsilon^2\mu_{ab}^{(1)}+\epsilon^4\mu_{ab}^{(2)}+\dots \;.
 \eeq
-This structure of the expansion is dictated by the equations \eq{eq:Pmu}, \eq{eq:mudisc} of the $\bP\mu$-system (as we will soon see explicitly). Since the leading order $\bP_a$ are of order $\epsilon$, equation \eqref{eq:mudisc} implies that the discontinuity of $\mu_{ab}$ on the cut is of order $\epsilon^2$. Thus to find $\mu_{ab}$ in the next to leading order (NLO) we only need the functions $\bP_a$ at leading order. After this, we can find the NLO correction to $\P_a$ from equations \eqref{eq:mudisc}. This will be done below, and having thus the full solution of the $\bP\mu$-system at NLO we will find the energy at order $S^2$.
+This structure of the expansion is dictated by the equations \eq{eq:Pmu}, \eq{eq:mudisc} of the $\bP\mu$-system (as we will soon see explicitly). Since the leading order $\bP_a$ are of order $\epsilon$, equation \eq{eq:mudisc} implies that the discontinuity of $\mu_{ab}$ on the cut is of order $\epsilon^2$. Thus to find $\mu_{ab}$ in the next to leading order (NLO) we only need the functions $\bP_a$ at leading order. After this, we can find the NLO correction to $\bP_a$ from equations \eq{eq:mudisc}. This will be done below, and having thus the full solution of the $\bP\mu$-system at NLO we will find the energy at order $S^2$.
 
 \subsubsection{Correcting $\mu_{ab}$\dots}
 \label{sec:muNLOL2}
-In this subsection we find the NLO corrections $\mu^{(1)}_{ab}$ to $\mu_{ab}$. As follows from \eqref{eq:mudisc} and \eq{muper},
+In this subsection we find the NLO corrections $\mu^{(1)}_{ab}$ to $\mu_{ab}$. As follows from \eq{eq:mudisc} and \eq{muper},
 they should satisfy the equation
 \beq
  \mu_{ab}^{(1)}(u+i)-\mu_{ab}^{(1)}(u)=\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)},
@@ -985,10 +985,10 @@ f(u+i)-f(u)=h(u).
 \eeq
 More precisely, we consider functions $f(u)$ and $h(u)$ with one cut in $u$ between $-2g$ and $2g$, and no poles. Such functions can be represented as infinite Laurent series in the Zhukovsky variable $x(u)$, and we additionally restrict ourselves to the case where for $h(u)$ this expansion does not have a constant term\footnote{The r.h.s. of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.}.
 
-One can see that the general solution of \eqref{eqperiod} has a form of a particular solution plus an arbitrary $i$-periodic function, which we also call a zero mode. % The class of $i$-periodic function we consider here is restricted to $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants (for discussion of higher modes $\sinh(2\pi n u), \cosh(2\pi n u)$ see appendix \ref{sec:appHigher}).
- First we will describe the construction of the particular solution and later deal with zero modes. The linear operator which gives the particular solution of \eqref{eqperiod} described below will be denoted as $\Sigma$.
+One can see that the general solution of \eq{eq:eqperiod} has a form of a particular solution plus an arbitrary $i$-periodic function, which we also call a zero mode. % The class of $i$-periodic function we consider here is restricted to $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants (for discussion of higher modes $\sinh(2\pi n u), \cosh(2\pi n u)$ see appendix \ref{sec:appHigher}).
+ First we will describe the construction of the particular solution and later deal with zero modes. The linear operator which gives the particular solution of \eq{eq:eqperiod} described below will be denoted as $\Sigma$.
 
-Notice that given the explicit form \eqref{P10P40} of $\bP^{(0)}_a$, the right hand side of \eqref{eq:mudiscNLO} can be represented in a form
+Notice that given the explicit form \eq{eq:P10P40} of $\bP^{(0)}_a$, the right hand side of \eq{eq:mudiscNLO} can be represented in a form
 \beq
 \alpha(x)\sinh(2\pi u)+\beta(x),
 \label{alphabetasinh}
@@ -1021,7 +1021,7 @@ p_a'(u+i)-p_a'(u)=\frac{1}{2}\(x^a+1/x^a\)
 and satisfies the following additional properties: $p_a'(0)=0$ for odd $a$  and $p_a'(i/2)=0$ for even $a$. One can check that this definition is consistent and defines of $p'_a(u)$ uniquely. Explicit form of the first few $p_a'(u)$, which we call periodized  Chebyshev polynomials, can be found in appendix \ref{sec:appPeriodized}.
 %where $T_a(u)$ are Chebyshev polynomials of the first kind.
 
-From this definition of $\Sigma$ one can see that the result of its action on expressions of the form \eqref{alphabetasinh}
+From this definition of $\Sigma$ one can see that the result of its action on expressions of the form \eq{eq:alphabetasinh}
 can again be represented in this form - what is important for us is that no exponential functions other than $\sinh(2\pi u)$ appear in the result.
 
 A good illustration of how the definitions above work would be the following two simple examples. Suppose one wants to calculate $\Sigma\cdot\(x-\frac{1}{x}\)$, then it is convenient to split the argument of $\Sigma$ in the following way:
@@ -1047,7 +1047,7 @@ Notice that since $\sinh_-$ decays at infinity,
 \Sigma\cdot\frac{\sinh_--\sinh_+}{2}=\Gamma'\cdot(\sinh_-)-\frac{1}{2}\sinh(2\pi u)p_0'(u).
 \eeq
 
-As an example we present the particular solution for two components of $\mu_{ab}$ (below we will argue that $\pi_{12}$ and $\pi_{13}$ can be chosen to be zero, see  \eqref{eq:periodicpart})
+As an example we present the particular solution for two components of $\mu_{ab}$ (below we will argue that $\pi_{12}$ and $\pi_{13}$ can be chosen to be zero, see  \eq{eq:periodicpart})
 \beqa
 \label{muexpl1}
 &&\mu_{13}^{(1)}-\pi_{13}=\Sigma\cdot\({\bf P}_1 \tilde{\bf P}_3-{\bf P}_3 \tilde{\bf P}_1\)=\epsilon^2\Sigma\cdot\(x^2-\frac{1}{x^2}\)=
@@ -1064,21 +1064,21 @@ Now let us apply $\Sigma$ defined above to \eq{eq:mudiscNLO}, writing that its g
 \mu^{(1)}_{ab}=\Sigma\cdot(\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)})+\pi_{ab},
 \label{eq:sol13}
 \eeq
- where the zero mode $\pi_{ab}$ is an arbitrary $i$-periodic entire function, which can be written similarly to the leading order as $c_{1,ab}\cosh{2\pi u}+c_{2,ab}\sinh{2\pi u}+c_{3,ab}$. Again, many of the coefficients $c_{i,ab}$ can be set to zero. First, the prescription from section \ref{sec:ancont} implies that non-vanishing at infinity part of coefficients of $\sinh(2\pi u)$ and $\cosh(2\pi u)$ in $\mu_{12}$ is zero. As one can see from the explicit form \eqref{muexpl2} of the particular solution which we choose for $\mu_{12}$, it does not contain $\cosh(2\pi u)$ and the coefficient of $\sinh(2\pi u)$ is decaying at infinity. So in order to satisfy the prescription, we have to set $c_{2,12}$ and $c_{2,12}$ to zero. Second, since the coefficients $c_{n,ab}$ are of order $S$, we can remove some of them by making an infinitesimal  $\gamma$-transformation, i.e. with $R=1+{\cal O}(S)$ (see section \ref{sec:Symmetries} and Eq. \eqref{gammaP}).
- Further, the Pfaffian constraint \eqref{constraint} imposes 5 equations on the remaining coefficients, which leaves the following 2-parametric family of zero modes
+ where the zero mode $\pi_{ab}$ is an arbitrary $i$-periodic entire function, which can be written similarly to the leading order as $c_{1,ab}\cosh{2\pi u}+c_{2,ab}\sinh{2\pi u}+c_{3,ab}$. Again, many of the coefficients $c_{i,ab}$ can be set to zero. First, the prescription from section \ref{sec:ancont} implies that non-vanishing at infinity part of coefficients of $\sinh(2\pi u)$ and $\cosh(2\pi u)$ in $\mu_{12}$ is zero. As one can see from the explicit form \eq{eq:muexpl2} of the particular solution which we choose for $\mu_{12}$, it does not contain $\cosh(2\pi u)$ and the coefficient of $\sinh(2\pi u)$ is decaying at infinity. So in order to satisfy the prescription, we have to set $c_{2,12}$ and $c_{2,12}$ to zero. Second, since the coefficients $c_{n,ab}$ are of order $S$, we can remove some of them by making an infinitesimal  $\gamma$-transformation, i.e. with $R=1+{\cal O}(S)$ (see section \ref{sec:Symmetries} and Eq. \eq{eq:gammaP}).
+ Further, the Pfaffian constraint \eq{eq:constraint} imposes 5 equations on the remaining coefficients, which leaves the following 2-parametric family of zero modes
  \beqa
 && \pi_{12}=0,\ \pi_{13}=0,\ \pi_{14}=\frac{1}{2}c_{1,34}\cosh{2\pi u},\\
  && \pi_{24}= c_{1,24}\cosh{2\pi u},\ \pi_{34}= c_{1,34}\cosh{2\pi u}.
  \eeqa
 
-Let us now look closer at the exponential part of $\mu_{14}$ and $\mu_{24}$. Combining the leading order \eqref{eq:musolLOevenL} and the perturbation \eqref{eq:sol13} and taking into account the fact that operator $\Sigma$ does not produce terms proportional to $\cosh{2 \pi u}$, we obtain
+Let us now look closer at the exponential part of $\mu_{14}$ and $\mu_{24}$. Combining the leading order \eq{eq:musolLOevenL} and the perturbation \eq{eq:sol13} and taking into account the fact that operator $\Sigma$ does not produce terms proportional to $\cosh{2 \pi u}$, we obtain
 \beqa
 &&\mu_{14}=\frac{1}{2}c_{1,34}\cosh{2\pi u}+{\cal O}(\epsilon) \sinh{2\pi u}+\mathcal{O}(\epsilon^2)+\dots, \\
 &&\mu_{24}=\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}+\mathcal{O}(\epsilon^2)+\dots,
 \eeqa
 where dots stand for powers-like terms or exponential terms suppressed by powers of $u$.
 
-As we remember from section \ref{sec:ancont}, only the 2nd solution of the 5th order Baxter equation \eqref{5bax} can contribute to the exponential part of $\mu_{14}$ and $\mu_{24}$, which means that $\mu_{14}$ and $\mu_{24}$ are proportional to the same linear combination of $\sinh{2\pi u}$ and $\cosh{2\pi u}$. From the second equation one can see that this linear combination can be normalized to be $\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}$. Then $\mu_{14}=C\(\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}\)$, where $C$ is some constant, which is of order ${\cal O}(\epsilon)$, because the coefficient of $\sinh{2\pi u}$ in the first equation is ${\cal O}(\epsilon)$. Taking into account that $c_{1,24}$ is ${\cal O}(\epsilon)$ itself, we find that $c_{1,34}=\mathcal{O}(\epsilon^2)$, i.e. it does not contribute at the order which we are considering. So the final form of the zero mode in \eqref{eq:sol13} is
+As we remember from section \ref{sec:ancont}, only the 2nd solution of the 5th order Baxter equation \eq{eq:5bax} can contribute to the exponential part of $\mu_{14}$ and $\mu_{24}$, which means that $\mu_{14}$ and $\mu_{24}$ are proportional to the same linear combination of $\sinh{2\pi u}$ and $\cosh{2\pi u}$. From the second equation one can see that this linear combination can be normalized to be $\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}$. Then $\mu_{14}=C\(\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}\)$, where $C$ is some constant, which is of order ${\cal O}(\epsilon)$, because the coefficient of $\sinh{2\pi u}$ in the first equation is ${\cal O}(\epsilon)$. Taking into account that $c_{1,24}$ is ${\cal O}(\epsilon)$ itself, we find that $c_{1,34}=\mathcal{O}(\epsilon^2)$, i.e. it does not contribute at the order which we are considering. So the final form of the zero mode in \eq{eq:sol13} is
 \beqa
 && \pi_{12}=0,\ \pi_{13}=0,\ \pi_{14}=0,\\
  && \pi_{24}=c_{1,24}\cosh{2\pi u},\ \pi_{34}=0.
@@ -1096,14 +1096,14 @@ As we remember from section \ref{sec:ancont}, only the 2nd solution of the 5th o
 
 
 
-In this way, using the particular solution given by $\Sigma$ and the form of zero modes \eqref{eq:periodicpart} we have computed all the functions $\mu_{ab}^{(1)}$. The details and the results of the calculation can be found in appendix \ref{sec:appmu2}.
+In this way, using the particular solution given by $\Sigma$ and the form of zero modes \eq{eq:periodicpart} we have computed all the functions $\mu_{ab}^{(1)}$. The details and the results of the calculation can be found in appendix \ref{sec:appmu2}.
 
 %In appendix \ref{sec:appmu2} we give more details on the calculation and results for all $\mu_{ab}^{(1)}$.
 
 \subsubsection{Correcting $\bP_{a}$\dots}
 \label{sec:CalculationofPa}
 In the previous section we found the NLO part of $\mu_{ab}$. Now, according to the iterative procedure described in section \ref{sec:SolvingPmuL2}, we can use it to write a closed system of equations for $\bP_a^{(1)}$.
-Indeed, expanding the system \eqref{eq:pmuexpanded} to NLO we get
+Indeed, expanding the system \eq{eq:pmuexpanded} to NLO we get
 \beqa
 \label{eq:P1eqNLOL2}
 &&\tilde \bP^{(1)}_1
@@ -1148,34 +1148,34 @@ Notice first that if we solve them in the order \eq{eq:P3eqNLOL2}, \eq{eq:P1eqNL
 
 \beq
  \tilde f+f=h\;\; \text{or}\;\; \tilde f-f=h\;\;,
- \label{eqs}
+ \label{eq:eqs}
 \eeq
-  where $h$ is known, $f$ is unknown and both the right hand side and the left hand side are power series in $x$. It is obvious that equations \eqref{eqs} have solutions only for $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively.
+  where $h$ is known, $f$ is unknown and both the right hand side and the left hand side are power series in $x$. It is obvious that equations \eq{eq:eqs} have solutions only for $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively.
    On the class of such $h$ a particular solution for $f$ can be written as
   \beq
   f= [h]_-+[h]_0/2\equiv H\cdot h\;\; \Rightarrow\;\; \tilde f+f=h
-    \label{solfh1}
+    \label{eq:solfh1}
   \eeq
   and
     \beq
     f= [h]_-\equiv K\cdot h\;\; \Rightarrow\;\; \tilde f-f=h,
-  \label{solfh2}
+  \label{eq:solfh2}
   \eeq
   where $[h]_0$ is the constant part of Laurent expansion of $h$ (it does not appear in the second equation, because $h$ such that $h=-\tilde h$ does not have a constant part).
   The operators $K$ and $H$ introduced here can be also defined by their integral kernels
 \beqa
-H(u,v)&=&-\frac{1}{4\pi i}\frac{\sqrt{u-2g}\sqrt{u+2g}}{\sqrt{v-2g}\sqrt{v+2g}}\frac{1}{u-v}dv, \\
-K(u,v)&=&+\frac{1}{4\pi i}\frac{1}{u-v}dv.
+H(u,v)&=&-\frac{1}{4\pi i}\frac{\sqrt{u-2g}\sqrt{u+2g}}{\sqrt{v-2g}\sqrt{v+2g}}\frac{1}{u-v}, \\
+K(u,v)&=&+\frac{1}{4\pi i}\frac{1}{u-v},
 \label{eq:HK}
 \eeqa
-which are equivalent to \eqref{solfh1},\eqref{solfh2} of the classes of $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively\footnote{We denote e.g. $K\cdot h=\oint_{-2g}^{2g}K(u,v)h(v)dv$ where the integral is around the branch cut between $-2g$ and $2g$.}. The particular solution $f=K\cdot h$ of the equation $\tilde f+ f=h$ is unique in the class of functions $f$ decaying at infinity, and the solution $f=H \cdot h$ of $\tilde f- f=h$ is unique for non-growing $f$. In all other cases the general solution will include zero modes, which, in our case are fixed by asymptotics of $\bP_a$.
+which are equivalent to \eq{eq:solfh1},\eq{eq:solfh2} of the classes of $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively\footnote{We denote e.g. $K\cdot h=\oint_{-2g}^{2g}K(u,v)h(v)dv$ where the integral is around the branch cut between $-2g$ and $2g$.}. The particular solution $f=K\cdot h$ of the equation $\tilde f+ f=h$ is unique in the class of functions $f$ decaying at infinity, and the solution $f=H \cdot h$ of $\tilde f- f=h$ is unique for non-growing $f$. In all other cases the general solution will include zero modes, which, in our case are fixed by asymptotics of $\bP_a$.
 
 
 Now it is easy to write the explicit solution of the equations
 \eq{eq:P1eqNLOL2}-\eq{eq:P4eqNLOL2}:
 \beqa
 \bP_3^{(1)}&=&H\cdot r_3,\\
-\bP_1^{(1)}&=&\frac{1}{2}\P^{(1)}_3+K\cdot \(r_1-\frac{1}{2} r_3\),\\
+\bP_1^{(1)}&=&\frac{1}{2}\bP^{(1)}_3+K\cdot \(r_1-\frac{1}{2} r_3\),\\
 \bP_4^{(1)}&=&K\cdot\(-\frac{1}{2}\(\tilde\bP_3^{(1)}-\bP_3^{(1)}\) \sinh(2\pi u)+
 \frac{2r_4+r_3 \sinh(2\pi u)}{2}\)-2\delta,\\
 \bP_2^{(1)}&=&H\cdot\(-\frac{1}{2}
@@ -1186,7 +1186,7 @@ Now it is easy to write the explicit solution of the equations
 +\frac{r_4+\sinh(2\pi u) r_1+2r_2}{2}\)+\delta,
 \label{eq:P4solNLOL2}
 \eeqa
-where $\delta$ is a constant fixed uniquely by requiring $\mathcal{O}(1/u^2)$ asymptotics for $\bP_2$. This asymptotic also sets the last coefficient $c_{1,24}$ left in $\pi_{12}$ to zero. Thus in the class of functions with asymptotics \eqref{eq:asymptotics} the solution for $\mu_{ab}$ and $\bP_a$ is unique up to a $\gamma$-transformation.
+where $\delta$ is a constant fixed uniquely by requiring $\mathcal{O}(1/u^2)$ asymptotics for $\bP_2$. This asymptotic also sets the last coefficient $c_{1,24}$ left in $\pi_{12}$ to zero. Thus in the class of functions with asymptotics \eq{eq:asymptotics} the solution for $\mu_{ab}$ and $\bP_a$ is unique up to a $\gamma$-transformation.
 
 
 
@@ -1241,7 +1241,7 @@ As in the previous section, the starting point is the LO solution of the $\bP\mu
 \beq
 	\mu_{12}=1,\ \mu_{13}=0,\ \mu_{14}=0,\  \mu_{24}=\cosh(2\pi u),\ \mu_{34}=1\;.
 \eeq
-The first step is to construct $\mu^{(1)}_{ab}$ from its discontinuity given by the equation \eqref{eq:mudiscNLO}. The full solution consists of a particular solution and a general solution of the corresponding homogeneous equation, i.e. zero mode $\pi_{ab}$. In our case the zero mode can be an $i$-periodic function, i.e. a linear combination of $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants. As in the case of $J=2$, we use a combination of the Pfaffian constraint, prescription from section \ref{sec:ancont} and a $\gamma$-transformation to reduce all the parameters of the zero mode to just one, sitting in $\mu_{24}$:
+The first step is to construct $\mu^{(1)}_{ab}$ from its discontinuity given by the equation \eq{eq:mudiscNLO}. The full solution consists of a particular solution and a general solution of the corresponding homogeneous equation, i.e. zero mode $\pi_{ab}$. In our case the zero mode can be an $i$-periodic function, i.e. a linear combination of $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants. As in the case of $J=2$, we use a combination of the Pfaffian constraint, prescription from section \ref{sec:ancont} and a $\gamma$-transformation to reduce all the parameters of the zero mode to just one, sitting in $\mu_{24}$:
  \beq
 \pi_{12}=0,\;\pi_{13}=0,\;\pi_{14}=0,\;\pi_{24}=c_{24,2} \sinh\(2\pi u\),\;\pi_{34}=0.
 \label{eq:periodicpartL3}
@@ -1249,32 +1249,32 @@ The first step is to construct $\mu^{(1)}_{ab}$ from its discontinuity given by 
 
 As in the previous section, the next step is to find $\bP_a^{(1)}$ from the $P\mu$ system expanded to the first order, namely from
 \beqa
-\label{P1L3}
+\label{eq:P1L3}
 &&\tilde \bP_1^{(1)}+\bP_3^{(1)}=r_1,\\
 &&\tilde \bP_2^{(1)}+\bP_4^{(1)}+\bP_1^{(1)} \cosh(2\pi u)=r_2,\\
 &&\tilde \bP_3^{(1)}+\bP_1^{(1)}=r_3,\\
 &&\tilde \bP_4^{(1)}+\bP_2^{(1)}-\bP_3^{(1)}\cosh(2\pi u)=r_4,
-\label{P4L3}
+\label{eq:P4L3}
 \eeqa
-where $r_a$ are defined by \eqref{eq:ra} and for $J=3$ are given explicitly in appendix \ref{sec:appnlo3}.
-In attempt to solve this system, however, we encounter another technical complication. As one can see from \eqref{P1P3LOsolL3}-\eqref{P4LOsolL3}, the LO solution contains half-integer powers of $J$, meaning that the $\bP_a$ now have an extra branch point at infinity.
+where $r_a$ are defined by \eq{eq:ra} and for $J=3$ are given explicitly in appendix \ref{sec:appnlo3}.
+In attempt to solve this system, however, we encounter another technical complication. As one can see from \eq{eq:P1P3LOsolL3}-\eq{eq:P4LOsolL3}, the LO solution contains half-integer powers of $J$, meaning that the $\bP_a$ now have an extra branch point at infinity.
 However, the operations $H$ and $K$ defined by \eq{eq:HK} work only for functions which have Laurent expansion in integer powers of $x$. In order to solve equations of the type \eq{eq:mudiscNLO} on the class of functions which allow Laurent-like expansion in $x$ with only half-integer powers $x$, we introduce operations $H^*,K^*$:
 \beqa
 &&H^*\cdot f\equiv\frac{x+1}{\sqrt{x}}H\cdot\frac{\sqrt{x}}{x+1} f, \\
 &&K^*\cdot f\equiv\frac{x+1}{\sqrt{x}}K\cdot\frac{\sqrt{x}}{x+1} f.
 \eeqa
-In terms of these operations the solution of the system \eqref{P1L3}-\eqref{P4L3} is
+In terms of these operations the solution of the system \eq{eq:P1L3}-\eq{eq:P4L3} is
 \beqa
-\label{P1J3}
+\label{eq:P1J3}
 \bP_{1}^{(1)}&=&\frac{1}{2}\(H^*(r_1+r_3)+ K^*(r_1-r_3)\)+\bP_1^{\text{zm}},\\
 \bP_{3}^{(1)}&=&\frac{1}{2}\(H^*(r_1+r_3)- K^*(r_1-r_3)\)+\bP_2^{\text{zm}},\\
 \bP_{2}^{(1)}&=&\frac{1}{2}\(H^*(r_2+r_4)+ K^*(r_2-r_4)-\right.\nonumber\\
 &-&\left.H^*\(\cosh(2\pi u)K^*(r_1-r_3)\)- K^*\(\cosh(2\pi u)H^*(r_1+r_3)\)\right)+\bP_3^{\text{zm}},\\
-\label{P4J3}
+\label{eq:P4J3}
 \bP_{4}^{(1)}&=&\frac{1}{2}\(H^*(r_2+r_4)- K^*(r_2-r_4)-\right.\nonumber\\
 &-&\left.H^*\(\cosh(2\pi u)K^*(r_1-r_3)\)+ K^*\(\cosh(2\pi u)H^*(r_1+r_3)\)\right)+\bP_4^{\text{zm}},
 \eeqa
-where $\bP_a^{\text{zm}}$ is a solution of the system \eq{P1L3}-\eq{P4L3} with right hand side set to zero, whose explicit form $\bP_a^{\text{zm}}$ is given in Appendix \ref{sec:appnlo3} (see \eqref{P1J3zm}-\eqref{P4J3zm}) and which is parametrized by four constants $L_1,L_2,L_3,L_4$, e.g.
+where $\bP_a^{\text{zm}}$ is a solution of the system \eq{eq:P1L3}-\eq{eq:P4L3} with right hand side set to zero, whose explicit form $\bP_a^{\text{zm}}$ is given in Appendix \ref{sec:appnlo3} (see \eq{eq:P1J3zm}-\eq{eq:P4J3zm}) and which is parametrized by four constants $L_1,L_2,L_3,L_4$, e.g.
 \beqa
 \bP_1^{\text{zm}}=L_1 x^{-1/2}+L_3x^{1/2}.
 \eeqa
@@ -1475,7 +1475,7 @@ For $J=4$ we were not able to get a stable fit for the $1/g^2$ and $1/g^3$ coeff
 
 \subsection{Update on short strings}
 
-Here we will find an analytic expression for the strong coupling expansion of the curvature function which generalizes the formulas \eqref{eq:ssj2} and \eqref{eq:ssj3} to any $J$. To this end it will be beneficial to consider the structure of classical expansions of the scaling dimension. A good entry point is considering the inverse relation $S(\Delta)$, frequently encountered in the context of BFKL. It satisfies a few basic properties, namely the curve $S(\Delta)$ goes through the points $(\pm J, 0)$ at any coupling, because at $S=0$ the operator is BPS. At the same time for non-BPS states
+Here we will find an analytic expression for the strong coupling expansion of the curvature function which generalizes the formulas \eq{eq:ssj2} and \eq{eq:ssj3} to any $J$. To this end it will be beneficial to consider the structure of classical expansions of the scaling dimension. A good entry point is considering the inverse relation $S(\Delta)$, frequently encountered in the context of BFKL. It satisfies a few basic properties, namely the curve $S(\Delta)$ goes through the points $(\pm J, 0)$ at any coupling, because at $S=0$ the operator is BPS. At the same time for non-BPS states
 one should have $\Delta(\lambda)\propto \lambda^{1/4}\to\infty$ \cite{Gubser:1998bc} which indicates that if $\Delta$ is fixed, $S$ should go to zero, thus combining this with the knowledge of fixed points $(\pm J, 0)$ we conclude that at infinite coupling $S(\Delta)$ is simply the line $S = 0$. As the coupling becomes finite $S(\Delta)$ starts bending from the $S=0$ line and starts looking like a parabola going through the points $\pm J$, see fig. \ref{pic:bfkl}. Based on this qualitative picture and the scaling $\Delta(\lambda)\propto \lambda^{1/4}$ at $\lambda\rightarrow\infty$ and fixed $J$ and $S$, one can write down the following ansatz,
 \beqa
 \label{eq:sofdelta}
