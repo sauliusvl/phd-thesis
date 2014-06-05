@@ -206,12 +206,23 @@ Nevertheless one can apply the same techniques going beyond one-loop level, as w
 
 \subsubsection{The $\mathfrak{su}(2)$ sector}
 
+In the previous section we considered single trace operators potentially containing all six scalar fields, we also mentioned that at higher loops the remaining fields of the theory start mixing in, i.e. the scalar sector is only closed at one-loop level.
+However it is easy to see that there exist sectors that are closed at all loops.
+From the algebra of the theory we know that dilatations commute with Lorentz and R-symmetries at any value of the coupling, hence it must follow that all the coefficients in
+\beq
+	D = \sum_n \lambda^n D^{(2n)},
+\eeq
+where in particular $D^{(2)} \equiv \Gamma$, commute with  Lorentz and R-symmetry generators. 
+Thus we conclude that only operators with the same bare dimensions, Lorentz charges and R-charges can mix when acting with the anomalous dimension matrix.
 
-Let us now focus on the $SU(2)$ sector of $\N=4$ SYM. The anomalous dimension operator is then given by
+Arguably the simplest possible closed sector is the so-called $\mathfrak{su}(2)$ sector, containing only two scalar fields $X$ and $Z$. 
+An operator with $M$ and $L-M$ scalars $X$ and $Z$ has the charges $(0, 0; L; M, L-M, 0)$, the only other operators with these charges are permutations of this operator, hence the sector is closed. 
+The anomalous dimension operator in this sector is given by
 \begin{equation}
 	\Gamma = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(1 - \; \mathcal{P}_{l,l+1} \right).
 \end{equation}
-Up to a constant factor this is the same as the Hamiltonian for the Heisenberg spin chain (also called the XXX spin chain), which is a quantum description of a one dimensional magnet. The Hamiltonian is given by
+Up to a constant factor this is the same as the Hamiltonian for the Heisenberg spin chain (also called the XXX spin chain), which is a quantum description of a one dimensional magnet. 
+The Hamiltonian is given by
 \begin{equation}
 	\mathbf{H} = \sum_{l=1}^L \left(1 - \mathcal{P}_{l,l+1} \right),
 \end{equation}
@@ -224,25 +235,37 @@ Hence solving the spectral problem in $\N=4$ SYM translates into solving the Sch
 	\mathbf{H} \, \ket{\psi} = E \, \ket{\psi},
 	\label{eq:Schrodinger}
 \end{equation}
-where we now seek to find the energy eigenvalues for the Hamiltonian of the spin chain. If the chain is short, this is a trivial diagonalization problem that can be easily solved by a present day computer. However this problem was first solved analytically by Hans Bethe in a time when computers were still in their infancy. The original solution (English translation available in \cite{bethe_original}) now goes by the name of \emph{coordinate Bethe ansatz} and it is by far one of the most important and beautiful solutions in physics in the past century, which is still very widely used even to this day. The idea is to make an educated guess for the wave function $\ket{\psi}$, plug it in to the Schr\"{o}dinger equation and determine when does it actually hold. This produces a set of algebraic Bethe ansatz equations for a set of variables unimaginatively called the Bethe roots. All observables can then be expressed in terms of these numbers as simple algebraic functions, thus transforming a diagonalization problem to an algebraic problem. This has an enormous advantage, since in the asymptotic limit, when the spin chain is very large, instead of diagonalizing an infinite matrix, the set of algebraic equations actually simplify and produce integral equations, which can be solved.
+where we now seek to find the energy eigenvalues for the Hamiltonian of the spin chain. 
+If the chain is short, this is a trivial diagonalization problem that can be easily solved by a present day computer. 
+However this problem was first solved analytically by Hans Bethe in a time when computers were still in their infancy. 
+The original solution now goes by the name of \emph{coordinate Bethe ansatz} and it is by far one of the most important and beautiful solutions in physics in the past century, which is still very widely used even to this day. 
+The idea is to make an educated guess for the wave function $\ket{\psi}$, plug it in to the Schr\"{o}dinger equation and determine when does it actually hold. 
+This produces a set of algebraic Bethe ansatz equations for a set of variables unimaginatively called the Bethe roots. 
+All observables can then be expressed in terms of these numbers as simple algebraic functions, thus transforming a diagonalization problem to an algebraic problem. 
+This has an enormous advantage, since in the asymptotic limit, when the spin chain is very large, instead of diagonalizing an infinite matrix, the set of algebraic equations actually simplify and produce integral equations, which can be solved.
 
-We already discussed that the anomalous dimension $\Gamma$ must be a matrix due to operator mixing in $\N=4$ SYM. In the $SU(2)$ sector we have mixing only between two scalar fields, e.g. $W$ and $Z$. In the spin chain picture these fields can be treated as up and down spin states, i.e.
+In the spin chain language the scalar fields can be treated as up and down spin states, i.e.
 \begin{equation}
-	\ket{\uparrow\,} = Z = \left( \begin{matrix} 1 \\ 0 \end{matrix} \right), \,\,\,\, \ket{\downarrow\,} = W = \left( \begin{matrix} 0 \\ 1 \end{matrix} \right),
+	\ket{\uparrow\,} = Z = \left( \begin{matrix} 1 \\ 0 \end{matrix} \right), \,\,\,\, \ket{\downarrow\,} = X = \left( \begin{matrix} 0 \\ 1 \end{matrix} \right),
 \end{equation}
 thus local single trace operators can be treated as states of a spin chain, e.g.
 \begin{equation}
-	\tr \left( WWZWWZW \right) = \ket{\downarrow \, \downarrow \, \uparrow \, \downarrow \, \downarrow \, \uparrow \, \downarrow \,}
+	\tr \left( XXZXXZX \right) = \ket{\downarrow \, \downarrow \, \uparrow \, \downarrow \, \downarrow \, \uparrow \, \downarrow \,}.
 \end{equation}
-Due to the cyclicity of the trace all rotations of the chain are equivalent. We should also specify the periodicity boundary condition
+Due to the cyclicity of the trace all rotations of the chain are equivalent. 
+We should also specify the periodicity boundary condition
 \begin{equation}
 	\vec{S}_{L+1} = \vec{S}_1.
 \end{equation}
-The operators $\vec{S}_l$ act as Pauli matrices on the $l$'th spin site and trivially on all the others. Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $\mathbb{C}^{\otimes_L 2}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize. Working directly with Pauli matrices one can find some simple results directly, e.g. it is trivial to show that the chiral primary operator
+The operators $\vec{S}_l$ act as Pauli matrices on the $l$'th spin site and trivially on all the others. 
+Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $\mathbb{C}^{\otimes_L 2}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize. 
+Working directly with Pauli matrices one can find some simple results directly, e.g. it is trivial to show that the chiral primary operator
 \begin{equation}
-	\ket{\Psi} = \tr \left[ Z^L \right] = \ket{\uparrow \, \uparrow \, \dots \, \uparrow \,}
+	\ket{\Psi} = \tr \; Z^L = \ket{\uparrow \, \uparrow \, \dots \, \uparrow \,}
 \end{equation}
-is an eigenstate of the Hamiltonian with zero energy, i.e. it is the ferromagnetic ground state of the spin chain, which we will denote as $\ket{0}$ from now on. This is expected, since we know that chiral primaries have zero anomalous dimensions. Another eigenstate of the Hamiltonian is the \emph{single magnon} state, defined as
+is an eigenstate of the Hamiltonian with zero energy, i.e. it is the ferromagnetic ground state of the spin chain, which we will denote as $\ket{0}$ from now on. 
+This is expected, since we know that chiral primaries have zero anomalous dimensions. 
+Another eigenstate of the Hamiltonian is the \emph{single magnon} state, defined as
 \begin{equation}
 	\ket{p} = \sum_{n=1}^L e^{ipn} \ket{n},
 \end{equation} 
@@ -250,11 +273,13 @@ where $\ket{n}$ is the ground state with the $n$'th spin flipped,
 \begin{equation}
 	\ket{n} = S^-_n \, \ket{0} = \ket{\uparrow \, \uparrow \, \uparrow \, \dots \, \downarrow \, \dots \, \uparrow \, \uparrow \, \uparrow \,},
 \end{equation}
-here $p$ is formally just a parameter, but it can be interpreted as the momentum of the excitation travelling in the spin chain. Due to the cyclicity of the chain the momentum is quantized,
+here $p$ is formally just a parameter, but it can be interpreted as the momentum of the excitation travelling in the spin chain. 
+Due to the cyclicity of the chain the momentum is quantized,
 \begin{equation}
 	p = \frac{2\pi}{L} n, \,\,\,\,\, n \in \mathbb{Z},
 \end{equation}
-where $n$ is the mode number. The energy of the excitation is given by the dispersion relation
+where $n$ is the mode number. 
+The energy of the excitation is given by the dispersion relation
 \begin{equation}
 	E(p) = 4 \, \mathrm{sin}^2 \, \frac{p}{2}.
 	\label{eq:magnon_energy}
@@ -274,7 +299,8 @@ when $m > n+1$ and
 \begin{equation}
 	E \, \psi(n, n+1) = 2 \, \psi(n, n+1) - \psi(n-1, n+1) - \psi(n, n+2)
 \end{equation}
-when $m = n+1$, i.e. when the two magnons scatter. The solution is now a superposition of single magnon states
+when $m = n+1$, i.e. when the two magnons scatter. 
+The solution is now a superposition of single magnon states
 \begin{equation}
 	\psi(n,m) = e^{ikn + ipm} + S(k,p) e^{ipn + ikm},
 \end{equation}
@@ -282,15 +308,18 @@ where
 \begin{equation}
 	S(p,k) = \frac{\frac{1}{2} \mathrm{cot} \frac{k}{2} - \frac{1}{2} \mathrm{cot} \frac{p}{2} - i}{\frac{1}{2} \mathrm{cot} \frac{k}{2} - \frac{1}{2} \mathrm{cot} \frac{p}{2} + i}
 \end{equation}
-is the scattering matrix. As required, such a state is an eigenstate and the energy is given by
+is the scattering matrix. 
+As required, such a state is an eigenstate and the energy is given by
 \begin{equation}
 	E = E(p) + E(k),
 \end{equation}
-i.e. it is simply the sum of the single magnon energies. Finally the spin chain periodicity condition imposes the following equations
+i.e. it is simply the sum of the single magnon energies. 
+Finally the spin chain periodicity condition imposes the following equations
 \begin{equation}
 	e^{ikL} \, S(p,k) = e^{ipL} \, S(k, p) = 1.
 \end{equation}
-It is now straightforward to generalize this procedure, which is exactly what Bethe did in his seminal paper \cite{bethe_original}. The wave function for $M$ spins down can be written as
+It is now straightforward to generalize this procedure, which is exactly what Bethe did. 
+The wave function for $M$ spins down can be written as
 \begin{equation}
 	\ket{\psi} = \sum_{1 \leq l_1 < l_2 < \dots < l_M \leq L} \psi(l_1, l_2, \dots, l_M) \, S^-_{l_1} \, S^-_{l_2} \, \dots \, S^-_{l_M} \, \ket{0}.
 \end{equation}
@@ -298,7 +327,11 @@ The sum is chosen in a way so as not to over count states. The Bethe ansatz is t
 \begin{equation}
 	\psi(l_1, l_2, \dots, l_M) = \sum_{\sigma \, \in \; perm(1,2,\dots\,M)} A(p) \, e^{ip_{\sigma_1} l_1 + ip_{\sigma_2} l_2 + \dots + ip_{\sigma_M} l_M}, 
 \end{equation}
-where the sum runs over all permutations of the down spin labels $1, 2, \dots, M$. $p_i$ are the momenta of the down spins, which can be treated as excitations moving in the vacuum state of the spin chain. The ansatz then looks like a superposition of plane waves. As in the two magnon case, one should now plug in the ansatz and find the conditions that make it work. The result is a set of algebraic equations, called the \emph{Bethe equations} \cite{staudacher}
+where the sum runs over all permutations of the down spin labels $1, 2, \dots, M$. 
+$p_i$ are the momenta of the down spins, which can be treated as excitations moving in the vacuum state of the spin chain. 
+The ansatz then looks like a superposition of plane waves. 
+As in the two magnon case, one should now plug in the ansatz and find the conditions that make it work. 
+The result is a set of algebraic equations, called the \emph{Bethe equations}
 \begin{equation}
 	e^{ip_k L} = - \prod_{\substack{j=1 \\ j \neq k}}^M \frac{e^{ip_j} - e^{ip_k} + 1}{e^{ip_k} - e^{ip_j} + 1} \,\,\,\, \mathrm{for} \,\, k = 1,2, \dots, M
 	\label{eq:bethe_coordinate}
@@ -312,7 +345,8 @@ These equations can be interpreted physically once rewritten as
 	e^{ip_k L} \prod_{\substack{j=1 \\ j \neq k}}^M S(p_j, p_k) = 1, \,\,\,\, \mathrm{where} \,\, S(p_j, p_k) = -\frac{e^{ip_k} - e^{ip_j} + 1}{e^{ip_j} - e^{ip_k} + 1}.
 	\label{eq:CBA}
 \end{equation}
-This is simply saying that if we take a magnon, carry it around the spin chain, the total phase change which is a result of free propagation ($e^{ip_k L}$) and scattering with other magnons ($S(p_j,p_k)$) must be trivial.  Changing variables to
+This is simply saying that if we take a magnon, carry it around the spin chain, the total phase change which is a result of free propagation (represented by $e^{ip_k L}$) and scattering with other magnons (due to $S(p_j,p_k)$) must be trivial.  
+Changing variables to
 \begin{equation}
 	e^{ip_k} = \frac{u_k + i/2}{u_k - i/2}, \;\;\;\; u_k = \frac{1}{2} \, \mathrm{cot} \, \frac{p_k}{2},
 \end{equation}
@@ -320,23 +354,25 @@ brings the Bethe equations (\ref{eq:bethe_coordinate}) to a more familiar form
 \begin{equation}
 	\left( \frac{u_k + i/2}{u_k - i/2} \right)^L = \prod_{\substack{j=1 \\ j \neq k}}^M \frac{u_k - u_j + i}{u_k - u_j - i},
 \end{equation}
-where now one solves for the Bethe roots $u_k$, also known as magnon rapidities. It is now straightforward to see that this general solution reproduces the two magnon scenario we discussed earlier. The energy of the $M$ magnon state is given by
+where now one solves for the Bethe roots $u_k$, also known as magnon rapidities. 
+It is now straightforward to see that this general solution reproduces the two magnon scenario we discussed earlier. 
+The energy of the $M$ magnon state is given by
 \begin{equation}
 	E = \sum_{k=1}^M \frac{1}{u_k^2 + 1/4},
 \end{equation}
  which also agrees with the single and two magnon examples. 
  
-They key thing worth noting in (\ref{eq:CBA}) is that the spin chain can be fully described in terms of the scattering matrix for just two particles, i.e. the full $M$ particle scattering matrix factorizes. This is the defining property of integrability \cite{dorey}, since factorized scattering means that individual momenta are conserved in each two particle scattering producing a tower of conserved quantities -- just the thing one would want in an integrable system. 
+They key thing worth noting in (\ref{eq:CBA}) is that the spin chain can be fully described in terms of the scattering matrix for just two particles, i.e. the full $M$ particle scattering matrix factorizes.
+This is the defining property of integrability, since factorized scattering means that individual momenta are conserved in each two particle scattering producing a tower of conserved quantities -- just the thing one would want in an integrable system. 
  
- 
-Give the sl(2) Hamiltonian, example states and energies.
-
 \subsubsection{$\mathfrak{sl}(2)$ and other sectors}
+
+sl2
 
 \subsection{Higher loops}
 
 
-The next step in solving the spectral problem is increasing the loop level. For the $SU(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. The resulting dilatation operator is given by \cite{su2_loops}
+The next step in solving the spectral problem is increasing the loop level. For the $\mathfrak{su}(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. The resulting dilatation operator is given by \cite{su2_loops}
 \begin{equation}
 	\Gamma_{2-loop} = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(-4 + 6 \, \mathcal{P}_{l,l+1} - \left( \mathcal{P}_{l,l+1} \, \mathcal{P}_{l+1,l+2} + \mathcal{P}_{l+1,l+2} \, \mathcal{P}_{l,l+1} \right) \right).
 \end{equation}
