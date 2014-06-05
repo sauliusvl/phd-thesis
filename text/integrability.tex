@@ -2,33 +2,34 @@
 
 \section{Perturbative Integrability}
 
-In this section we dive into the magical world of integrability.
-Give picture summarizing all techniques and their ranges of applicability.
+In this section we start attacking the problem of finding the spectrum and as expected we begin with perturbation theory.
+Starting at weak coupling we quickly stumble upon an amazing feature of the theory, so-called integrability, which allows one to apply numerous techniques that greatly simplify the problem.
+We demonstrate integrability from the string theoretic perspective at strong coupling as well, which suggests a unified picture of the integrable structure embedded in the theory persisting to all loops.
+After discussing results achievable via perturbative integrability we finish off with our first exact result, the slope function, which in turn allows one to extract novel information about the spectrum.
 
 \subsection{One loop at weak coupling}
 
-
-
-Integrability in $\N=4$ SYM was first discovered while trying to find the spectrum of the theory, i.e. the conformal dimensions of various operators. We already saw that in any conformal field theory the two-point correlation functions are very restricted at tree level. For operators that are eigenvalues of dilatations, the correlators have the same form at all loop levels,
+We begin with two point correlation functions of local operators.
+In any conformal field theory they are constrained by symmetry, namely for operators that are eigenvalues of dilatations they have the following form at all loop levels
 \begin{equation}
-	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta(g)}},
+	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta}},
 \end{equation}
-where $\Delta(g)$ is the dimension of the operator. Classically $\Delta = \Delta_0$ is simply the mass dimension, but at the quantum level it receives radiative corrections and acquires an \emph{anomalous dimension} $\gamma$, such that $\Delta(g) = \Delta_0 + \gamma(g)$, where the anomalous dimension depends on the coupling. Usually the corrections are small and the correlator can be expanded as
+where $\Delta$ is the scaling dimension of the operator and we ignore unphysical normalization factors. 
+Classically $\Delta = \Delta_0$ is simply the mass dimension, but at the quantum level it receives radiative corrections and acquires an anomalous dimension $\gamma$, such that $\Delta(g_{YM}) = \Delta_0 + \gamma(g_{YM})$, where the anomalous dimension depends on the coupling. 
+Usually the corrections are small and the correlator can be expanded perturbatively.
+Of course one has to be careful here, as expanding in $\gamma$ would result in expressions like $\log|x-y|$, which do not make sense. 
+To that end we introduce a scale $\mu$ and expand the following quantity instead 
 \begin{equation}
-	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta_0}} \left(1 - \gamma \ln \Lambda^2|x-y|^2 \right).
+	\mu^{-2\gamma} \left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta_0}} \left(1 - \gamma \log \mu^2 |x-y|^2 \right),
 	\label{eq:anomdim_expansion}
 \end{equation}
-Obviously we want to calculate the spectrum for operators that are gauge invariant and since all fields are in the adjoint representation of the gauge group, all gauge invariant operators will consist of traces over the color indices. In general such an operator has the form of
-\begin{eqnarray}
-	\mathcal{O}_{i_1 \mu i_2 \alpha \dots i_n \dots j_1 \nu \beta \dots j_n}(x) & = \tr \left[ \Phi_{i_1}(x) \mathcal{D}_\mu \Phi_{i_2}(x) \psi_\alpha(x) \dots \Phi_{i_n}(x) \right] \times \dots \nonumber \\
-	& \dots \times \tr \left[ \Phi_{j_1}(x) \mathcal{D}_\nu \psi_\beta(x) \dots \Phi_{j_n}(x) \right]. 
-\end{eqnarray} 
-We assume that all the fields are evaluated at the same spacetime point $x$ making the operators local. In the planar limit we can restrict ourselves to single trace operators, since states with multiple traces always involve non-planar Feynman diagrams, which are suppressed in the planar limit. To see how non-planar diagrams emerge and get suppressed consider the chiral primary operator
+however we will formally assume that the factor $\mu^{-\gamma}$ is absorbed into the field definition and thus we will ignore it from now on. We can now take some explicit local operator $\mathcal{O}(x)$, calculate the correlator using perturbation theory and read off the anomalous dimension $\gamma$.
+Let us start with a very simple chiral primary operator 
 \begin{equation}
-	\Psi = \tr [ Z^L ] = {Z^a}_b {Z^b}_c \dots {Z^l}_a,
+	\Psi = \tr \, Z^L  = {Z^a}_b {Z^b}_c \dots {Z^l}_a,
 	\label{eq:primary_op}
 \end{equation}
-where the scalar field $Z$ and its conjugate $\tilde{Z}$ have the standard tree level correlator
+where the complex scalar field $Z$ and its conjugate $\tilde{Z}$ have the standard tree level correlators
 \begin{equation}
 	\left< {Z^a}_b(x) {{\tilde{Z^{b'}}}}_{a'}(y) \right>_{\mathrm{tree}} \approx \frac{{\delta^a}_{a'} {\delta_b}^{b'}}{|x-y|^{2}}.
 	\label{eq:z_correlator}
@@ -47,10 +48,10 @@ In order to find the anomalous dimension of the chiral primary operator $\Psi$ w
 	\end{equation}
 	\label{eq:delta_contractions}
 \end{subequations}
-These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in fig. \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
+These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle due to the trace. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in fig. \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[scale=0.5,every node/.style={draw,shape=circle,fill=black,scale=0.4}]
 	
 	%\draw[help lines] (0,0) grid (29,5);
 
@@ -60,10 +61,11 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 	
 	\begin{scope}[shift={(\gap,0)}]
 	
-		\draw[line width=0.6mm] (0,0) -- (\width,0);
-		\draw[line width=0.6mm] (0,\height) -- (\width,\height);
+		\draw[line width=0.5mm] (0,0) -- (\width,0);
+		\draw[line width=0.5mm] (0,\height) -- (\width,\height);
 		
 		\foreach \x in {1,2,3,4,5,6} {
+			\node at (\x, 0) {}; \node at (\x, \height) {};
 			\draw (\x,0) -- (\x,\height);
 		}
 
@@ -71,12 +73,15 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 	
 	\begin{scope}[shift={(\width+2*\gap,0)}]
 	
-		\draw[line width=0.6mm] (0,0) -- (\width,0);
-		\draw[line width=0.6mm] (0,\height) -- (\width,\height);
+		\draw[line width=0.5mm] (0,0) -- (\width,0);
+		\draw[line width=0.5mm] (0,\height) -- (\width,\height);
 		
 		\foreach \x in {1,2,3,4,5} {
+			\node at (\x, 0) {}; \node at (\x, \height) {};
 			\draw (\x,0) -- (\x+1,\height);
 		}
+		
+		\node at (6, 0) {}; ;
 		
 		\draw (0.5, \height / 2) -- (1,\height);
 		\draw (6,0) -- (6.5,\height / 2);
@@ -85,46 +90,64 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 	
 	\begin{scope}[shift={(2*\width+3*\gap,0)}]
 	
-		\draw[line width=0.6mm] (0,0) -- (\width,0);
-		\draw[line width=0.6mm] (0,\height) -- (\width,\height);
+		\draw[line width=0.5mm] (0,0) -- (\width,0);
+		\draw[line width=0.5mm] (0,\height) -- (\width,\height);
 		
 		\foreach \x in {1,2,5,6} {
+			\node at (\x, 0) {}; \node at (\x, \height) {};
 			\draw (\x,0) -- (\x,\height);
 		}
 		
 		\draw (3,0) -- (3.4, 0.4 * \height); \draw (3.6, 0.6 * \height) -- (4, \height);
 		\draw (4,0) -- (3,\height);
+		
+		\node at (3, 0) {}; \node at (3, \height) {};
+		\node at (4, 0) {}; \node at (4, \height) {};
 
 	\end{scope}
 	
 \end{tikzpicture}
+\caption{Possible types of Wick contractions (vertical lines) between single trace operators. The constituent scalar fields are represented by dots in the horizontal lines, which represent the successive index contractions due to the trace. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
 \label{fig:planar_nonplanar}
-\caption{Possible types of contractions between fields in traces of operators, which are represented by horizontal lines. Vertical lines represent the contractions. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
 \end{figure}
-All that's left then are cyclic permutations of lines by shifting all of them as seen in fig. \ref{fig:planar_nonplanar} while going from (a) to (b). There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. Thus finally for the chiral primary correlator at tree level we find
+All that's left then are cyclic permutations of lines by shifting all of them as seen in fig. \ref{fig:planar_nonplanar} while going from (a) to (b). 
+There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. 
+Thus finally for the chiral primary correlator at tree level we find
 \begin{equation}
 	\left< \Psi(x) \, \tilde{\Psi}(y) \right>_{\mathrm{tree}} \approx \frac{L N^L}{|x-y|^{2L}},
 \end{equation}
-where $N^L$ comes from the contractions and $L$ from all the possible planar ways we can contract. This can easily be generalized for correlators of operators with arbitrary scalar fields $\Phi_{I_1 I_2 \dots I_L}(x) = \tr \left[ \Phi_{I_1}(x) \Phi_{I_2}(x) \dots \Phi_{I_L}(x) \right]$ to
+where $N^L$ comes from the contractions and $L$ from all the possible planar ways we can contract. 
+This can easily be generalized for correlators of operators with arbitrary scalar fields $\Phi_{I_1 I_2 \dots I_L}(x) = \tr \left[ \Phi_{I_1}(x) \Phi_{I_2}(x) \dots \Phi_{I_L}(x) \right]$ to
 \begin{equation}
 	\left< \Phi_{I_1 I_2 \dots I_L}(x) \, \tilde{\Phi}^{J_1 J_2 \dots J_L}(y)  \right>_{\mathrm{tree}} \approx \frac{1}{|x-y|^{2L}} \left( \delta_{I_1}^{J_1} \delta_{I_2}^{J_2} \dots \delta_{I_L}^{J_L} + \mathrm{cycles} \right),
 	\label{eq:tree_correlator}
 \end{equation}
-where ``cycles'' refers to terms with the $J$ indices pushed. $I$ and $J$ are flavor indices, the color indices are suppressed.
+where ``cycles'' refers to terms with the $J$ indices pushed. 
+$I$ and $J$ are flavor indices, the color indices are suppressed.
  
-So far so good, but in order to calculate anomalous dimensions we have to go beyond tree level. This may seen like a highly nontrivial thing to do, since we expect not only scalar interactions, but also gluon exchanges and fermion loops appearing. Luckily the symmetry of the theory allows one to calculate all gluon and fermion effects in one go. First let's concentrate on the bosonic sector of the theory ignoring gluons. The action (\ref{eq:n4_action}) contains a single scalar-only interaction term
-%\symbolfootnote[2]{A careful reader might notice that we raise and lower the $I$ and $J$ indices at will, but that's not a problem, because they are $SO(6)$ indices and there is no distinction between upper and lower.}
+So far so good, but in order to calculate anomalous dimensions we have to go beyond tree level. 
+This may seen like a highly non-trivial thing to do, since we expect not only scalar interactions, but also gluon exchanges and fermion loops appearing. 
+Luckily the symmetry of the theory allows one to calculate all gluon and fermion effects in one go. 
+First let's concentrate on the bosonic sector of the theory ignoring gluons. 
+The action (\ref{eq:n4_action}) contains a single scalar-only interaction term
 \begin{eqnarray}
-S_{\Phi} & = & - \frac{g^2}{4} \sum_{I,J} \int d^4 x \, \tr \, [\Phi_I, \Phi_J] [\Phi_I, \Phi_J] \nonumber \\
-& = & - \frac{g^2}{4} \sum_{I,J} \int d^4 x \, \left( \tr \, [\Phi_I\Phi_I\Phi_J\Phi_J] - \tr \, [\Phi_I\Phi_J\Phi_I\Phi_J]  \right).
+S_{\Phi} & = &  \frac{g_{YM}^2}{4} \sum_{I,J} \int d^4 x \, \tr \, [\Phi_I, \Phi_J] [\Phi_I, \Phi_J] \nonumber \\
+& = & - \frac{g_{YM}^2}{4} \sum_{I,J} \int d^4 x \, \left( \tr \, [\Phi_I\Phi_I\Phi_J\Phi_J] - \tr \, [\Phi_I\Phi_J\Phi_I\Phi_J]  \right).
 \end{eqnarray} 
-In order to calculate the correlator (\ref{eq:tree_correlator}) at one-loop level, one should insert this term and Wick contract. Just like in tree level, we only have to keep planar diagrams. For the interaction terms this means that only neighboring fields can interact. This drastically reduces the number of terms we get after Wick contracting. Because of that it is enough to consider a length two operator $\Phi_{I_k I_{k+1}}$ and with a bit of work one can show that at one-loop level we get \cite{minahan_spinchains}
+In order to calculate the correlator (\ref{eq:tree_correlator}) at one-loop level, one should insert this term and Wick contract. 
+Just like in tree level, we only have to keep planar diagrams. 
+For the interaction terms this means that only neighbouring fields can interact. 
+This drastically reduces the number of terms we get after Wick contracting. 
+Because of that it is enough to consider a length two operator $\Phi_{I_k I_{k+1}}$ and with a bit of work one can show that at one-loop level we get
 \begin{eqnarray}
-	& \left< \Phi_{I_k I_{k+1}}(x) \, \tilde{\Phi}^{J_k J_{k+1}} \right>_{\mathrm{one-loop}}  = \frac{\lambda}{16\pi^2} \frac{\ln (\Lambda^2|x-y|^2)}{|x-y|^{2L}} \times \nonumber \\ 
+	 & \left< \Phi_{I_k I_{k+1}}(x) \, \tilde{\Phi}^{J_k J_{k+1}} \right>_{\mathrm{one-loop}}  = \frac{\lambda}{16\pi^2} \frac{\log (\mu^2|x-y|^2)}{|x-y|^{2L}} \times \nonumber \\ 
 	& \times  \left( 2 {\delta_{I_k}}^{J_{k+1}} {\delta_{I_{k+1}}}^{J_{k}} - \delta_{I_k I_{k+1}} \delta^{J_k J_{k+1}} - {\delta_{I_k}}^{J_{k}} {\delta_{I_{k+1}}}^{J_{k+1}} \right),
 	\label{eq:loop_correlator}
 \end{eqnarray}
-where $\lambda = g^2 N$ is the t'Hooft coupling. Comparing this to (\ref{eq:tree_correlator}) we see that effectively the interactions permute and contract the delta function indices. We can introduce exchange and trace operators to make this explicit. The permutation operator, also called the exchange operator, $\mathcal{P}_{l,l+1}$ is defined by it's action on a set of delta functions as
+where $\lambda = g_{YM}^2 N$ is the t'Hooft coupling. 
+Comparing this to (\ref{eq:tree_correlator}) we see that effectively the interactions permute and contract the delta function indices. 
+We can introduce exchange and trace operators to make this explicit. 
+The permutation operator, also called the exchange operator, $\mathcal{P}_{l,l+1}$ is defined by it's action on a set of delta functions as
 \begin{equation}
 	\mathcal{P}_{l,l+1} \; {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l}} {\delta_{I_{l+1}}}^{J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}} = {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l+1}} {\delta_{I_{l+1}}}^{J_{l}} \dots {\delta_{I_{L}}}^{J_{L}}
 \end{equation}
@@ -135,36 +158,53 @@ and the trace operator $\mathcal{K}_{l,l+1}$ is defined as
 Using these operators we can rewrite the correlator in (\ref{eq:loop_correlator}) in a more compact notation
 \begin{eqnarray}
 	  \left< \Phi_{I_k I_{k+1}}(x) \, \tilde{\Phi}^{J_k J_{k+1}} \right>_{\mathrm{one-loop}} = &  \nonumber \\
-	  = \frac{\lambda}{16\pi^2} \frac{\ln (\Lambda^2|x-y|^2)}{|x-y|^{2L}} 
+	  = \frac{\lambda}{16\pi^2} \frac{\log (\mu^2|x-y|^2)}{|x-y|^{2L}} 
 	 & \left( 2 \; \mathcal{P}_{k,k+1} - \mathcal{K}_{k,k+1} - 1 \right) \delta_{I_k}^{J_{k}} \delta_{I_{k+1}}^{J_{k+1}}.
 \end{eqnarray}
-This result includes four scalar interactions only, however as mentioned before at one-loop level we can also have gluon interactions and fermion loops in scalar propagators. The nice thing about these is that such interactions don't alter the flavor index structure, i.e. there are no permutations or traces. Basically this happens because the gluon transforms trivially under R-symmetry and hence can't change the flavor index (which transforms under R-symmetry). Fermions on the other hand do transform under R-symmetry and it is a miracle that happens only at one-loop level that they don't alter the flavor structure. Thus all of these interactions contribute a constant term $C$, which we can determine later. We can generalize our one-loop result with all interactions included for operators of arbitrary length,
+This result includes four scalar interactions only, however as mentioned before at one-loop level we can also have gluon interactions and fermion loops in scalar propagators. 
+The nice thing about these is that such interactions don't alter the flavor index structure, i.e. there are no permutations or traces. 
+Basically this happens because the gluon transforms trivially under R-symmetry and hence can't change the flavor index (which transforms under R-symmetry). 
+Similarly, fermions can only appear in loops altering scalar self-energies, hence they also leave the flavor structure intact.
+Thus all of these interactions contribute a constant term $C$, which we can determine later. We can generalize our one-loop result with all interactions included for operators of arbitrary length,
 \begin{equation}
 \begin{split}
 	 & \left< \Phi_{I_1 I_2 \dots I_L}(x) \, \tilde{\Phi}^{J_1 J_2 \dots J_L}(y)  \right>_{\mathrm{one-loop}}
-	  = \frac{\lambda}{16\pi^2} \frac{\ln (\Lambda^2|x-y|^2)}{|x-y|^{2L}} \times \nonumber \\
+	  = \frac{\lambda}{16\pi^2} \frac{\log (\mu^2|x-y|^2)}{|x-y|^{2L}} \times \nonumber \\
 	 & \times \sum_{l=1}^L \left( 2 \; \mathcal{P}_{l,l+1} - \mathcal{K}_{l,l+1} - 1 + C\right)
 	  \left( \delta_{I_1}^{J_1} \delta_{I_2}^{J_2} \dots \delta_{I_L}^{J_L} + \mathrm{cycles} \right).
 \end{split}
 \end{equation}
-Combining this with the tree level result (\ref{eq:tree_correlator}) and comparing to the general expression of a two-point function at one-loop level (\ref{eq:anomdim_expansion}) we can deduce the anomalous dimension $\gamma$, which now becomes an operator $\Gamma$ because of the flavor mixing. It is given by
+Combining this with the tree level result (\ref{eq:tree_correlator}) and comparing to the general expression of a two-point function at one-loop level (\ref{eq:anomdim_expansion}) we can deduce the anomalous dimension $\gamma$, which now becomes an operator $\Gamma$ because of the flavor mixing. 
+It is given by
 \begin{equation}
 	\Gamma = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left( - 2 \; \mathcal{P}_{l,l+1} + \mathcal{K}_{l,l+1} + 1 - C\right).
 \end{equation}
-At first sight it may seem strange that what was supposed to be a number, i.e. a correction to the mass dimension of an operator has turned out to be an operator acting on the flavor space, i.e. a matrix. But this is very natural and in fact expected, since interactions can change the flavor of fields and we can't be sure that an operator at the quantum level has the same flavor indices as it does at the classical level. This line of thinking may lead to a natural question, why do we have mixing between the scalars only and not between all the fields in the theory including fermions, which miraculously do not appear. It turns out that this is a one-loop feature only and mixing becomes a problem at higher loop levels. In fact, the next subsection about closed sectors is devoted to the question of operator mixing. 
+At first sight it may seem strange that what was supposed to be a number, i.e. a correction to the mass dimension of an operator has turned out to be an operator acting on the flavor space, i.e. a matrix. 
+But this is very natural and in fact expected, since interactions can change the flavor of fields and we can't be sure that an operator at the quantum level has the same flavor indices as it does at the classical level. 
+This line of thinking may lead to a natural question, why do we have mixing between the scalars only and not between all the fields in the theory including fermions, which miraculously do not appear. 
+It turns out that this is a one-loop feature only and mixing becomes a problem at higher loop levels \cite{Minahan:2002ve}. 
 
-Now that we have acknowledged that the anomalous dimension is a matrix and found an expression for it, the next logical step would be diagonalizing it and finding the flavor eigenstates. One example of such an eigenstate is the chiral primary operator $\Psi$. Since it contains scalar fields of only one type, the permutation and trace operators act trivially on it. Thus we see that
+Now that we have acknowledged that the anomalous dimension is a matrix and found an expression for it, the next logical step would be diagonalizing it and finding the flavor eigenstates. 
+One example of such an eigenstate is the chiral primary operator $\Psi$. 
+Since it contains scalar fields of only one type, the permutation and trace operators act trivially on it. Thus we see that
 \begin{equation}
 	\Gamma \, \Psi = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left( -2 + 1 - C \right) \Psi,
 \end{equation}
-but by definition a chiral primary has an anomalous dimension of zero, which then fixes the constant $C$ to $-1$. And finally we get
+but we already saw that a chiral primary has an anomalous dimension of zero, which then fixes the constant $C$ to $-1$. 
+And finally we get
 \begin{equation}
 	\Gamma = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left(2 - 2 \; \mathcal{P}_{l,l+1} + \mathcal{K}_{l,l+1} \right).
 \end{equation}
-A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. In fact, this is hardly surprising, since from the very beginning we were talking about fields as points in some closed line, which indeed resembles a spin chain. Furthermore the correlators that we were calculating are nothing more that propagators from one state of the chain to another, hence no wonder that the operator describing this evolution looks like a Hamiltonian for a spin chain. This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ exactly. This is indeed what was first done in the seminal paper \cite{minahan_original}, which launched the integrability program in AdS/CFT. However saying that the spectral problem can be solved exactly in this particular case is too strong, since we are only at one-loop level. Nevertheless it turns out that one can apply the same techniques going beyond one-loop level. What happens is that long range interactions start appearing in the Hamiltonian as one goes higher in loops. What is more unexpected is that under certain limits one can actually guess how the solution should look like at all loops. Further techniques like the thermodynamic Bethe ansatz can then be applied to solve the spectral problem exactly without assuming any limits. The coming sections will explore these techniques in more detail.
+A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. 
+In fact, this is hardly surprising, since from the very beginning we were talking about fields as points in some closed line, which indeed resembles a spin chain. 
+Furthermore the correlators that we were calculating are nothing more that propagators from one state of the chain to another, hence no wonder that the operator describing this evolution looks like a Hamiltonian for a spin chain. 
+This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ exactly. 
+The first steps towards this goal were outlined in the seminal paper \cite{Minahan:2002ve}, which launched the integrability program in AdS/CFT. 
+However saying that the spectral problem can be solved exactly in this particular case is too strong, since we are only at one-loop level. 
+Nevertheless one can apply the same techniques going beyond one-loop level, as we shall soon see in the coming sections. 
 
 
-\subsubsection{The $\mathfrak{sl}(2)$ sector}
+\subsubsection{The $\mathfrak{su}(2)$ sector}
 
 
 Let us now focus on the $SU(2)$ sector of $\N=4$ SYM. The anomalous dimension operator is then given by
@@ -290,6 +330,8 @@ They key thing worth noting in (\ref{eq:CBA}) is that the spin chain can be full
  
  
 Give the sl(2) Hamiltonian, example states and energies.
+
+\subsubsection{$\mathfrak{sl}(2)$ and other sectors}
 
 \subsection{Higher loops}
 
