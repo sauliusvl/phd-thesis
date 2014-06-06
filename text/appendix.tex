@@ -1,0 +1,1010 @@
+% main.tex
+
+\section{Summary of notation and definitions}
+In this appendix we summarize some notation used throughout the paper.
+\paragraph{Laurent expansions in $x$}
+$\\$
+$\\$
+We often represent functions of the spectral parameter $u$ as a series in $x$
+\beq
+f(u)=\sum\limits_{n=-\infty}^{\infty}f_n x^n
+\eeq
+with
+\beq
+	u=g(x+1/x).
+\eeq
+We denote by $[f]_+$ and $[f]_-$ part of the series with positive and negative powers of $x$:
+\beqa
+&&[f]_+=\sum\limits_{n=1}^{\infty}f_n x^n, \\
+&&[f]_-=\sum\limits_{n=1}^{\infty}f_{-n} x^{-n}.
+\eeqa
+
+As a function of $u$, $x(u)$ has a cut from $-2g$ to $2g$. For any function $f(u)$ with such a cut we denote another branch of $f(u)$ obtained by analytic continuation (from $\Im \;u>0$) around the branch point $u=2g$ by $\tilde f(u)$. In particular, $\tilde x=1/x$.
+
+\paragraph{Functions $\sinh_\pm$ and $\cosh_\pm$}
+\par
+
+$\\$
+
+
+
+We define $I_k=I_k(4 \pi g)$, where $I_k(u)$ is the modified Bessel function of the first kind.
+Then
+ \beqa
+&& \sinh_+=[\sinh(2\pi u)]_+=\sum\limits_{k=1}^\infty I_{2k-1}x^{2k-1}, \\
+&& \sinh_-=[\sinh(2\pi  u)]_-=\sum\limits_{k=1}^\infty I_{2k-1}x^{-2k+1},\\
+&& \cosh_+=[\cosh(2\pi u)]_+=\sum\limits_{k=1}^\infty I_{2k}x^{2k}, \\
+&& \cosh_-=[\cosh(2\pi u)]_-=\sum\limits_{k=1}^\infty I_{2k}x^{-2k}.
+ \eeqa
+ In some cases we denote for brevity
+\beq
+	\sh_-^x=\sinh_-(x),\ \ \ \ch_-^x=\cosh_-(x).
+\eeq
+
+\paragraph{Integral kernels}
+$\\$
+$\\$
+In order to solve for $\bP_a^{(1)}$ in section \ref{sec:CalculationofPa} we introduce integral operators $H$ and $K$ with kernels
+\beqa
+H(u,v)&=&-\frac{1}{4\pi i}\frac{\sqrt{u-2g}\sqrt{u+2g}}{\sqrt{v-2g}\sqrt{v+2g}}\frac{1}{u-v}dv, \\
+K(u,v)&=&+\frac{1}{4\pi i}\frac{1}{u-v}dv,
+\eeqa
+which satisfy
+\beq
+\tilde f+f=h\;\;,\;\;f=H\cdot h\;\;\;\;{\rm and}\;\;\;\;
+\tilde f-f=h\;\;,\;\;f=K\cdot h.
+\label{lab123}
+\eeq
+
+Since the purpose of $H$ and $K$ is to solve equations of the type \ref{lab123}, $H$ usually acts on functions $h$ such that $\tilde h=h$, whereas $K$ acts on $h$ such that $\tilde h=-h$. On the corresponding  classes of functions $H$ and $K$ can be represented by kernels which are equal up to a sign?
+
+\beqa
+H(u,v)&=&-\left.\frac{1}{2\pi i}\frac{1}{x_u-x_v}dx_v\right|_{\tilde h=h},\;\;\\
+K(u,v)&=&\left.\frac{1}{2\pi i}\frac{1}{x_u-x_v}dx_v\right|_{\tilde h=-h}.
+\eeqa
+In order to be able to deal with series in half-integer powers of $x$ in section \ref{sec:SolvingPmuL3} we introduce modified kernels:
+\beqa
+&&H^*\cdot f\equiv\frac{x+1}{\sqrt{x}}H\cdot\frac{\sqrt{x}}{x+1} f, \\
+&&K^*\cdot f\equiv\frac{x+1}{\sqrt{x}}K\cdot\frac{\sqrt{x}}{x+1} f.
+\eeqa
+Finally, to write the solution to equations of the type \eqref{eq:mudiscNLO}, we introduce the operator $\Gamma'$ and its more symmetric version $\Gamma$
+
+\beq
+\(\Gamma'\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\d_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)]}h(v),
+\eeq
+
+\beq
+\(\Gamma\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\d_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)+1]}h(v).
+\eeq
+\paragraph{Periodized Chebyshev polynomials}
+\label{sec:appPeriodized}
+$\\$
+$\\$
+Periodized Chebyshev polynomials appearing in $\mu_{ab}^{(1)}$ are defined as
+\beqa
+&&p_a'(u)=\Sigma\cdot\left[x^a+1/x^a\right]=2 \Sigma\cdot\left[T_a\(\frac{u}{2g}\)\right],\\
+&&p_a(u)=p_a'(u)+\frac{1}{2}\(x^a(u)+x^{-a}(u)\),
+\eeqa
+where $T_a(u)$ are Chebyshev polynomials of the first kind. Here is the explicit form for the first five of them:	
+\beqa
+&&p_0'=-i(u-i/2),\\
+&&p_1'=-i\frac{u(u-i)}{4g},\\
+&&p_2'=-i\frac{(u-i/2)(-6g^2+u^2-iu)}{6g^2},\\
+&&p_3'=-i\frac{ u (u-i) \left(-6 g^2+u (u-i)\right)}{8 g^3},\\
+&&p_4'=-i\frac{ \left(u-\frac{i}{2}\right) \left(30 g^4-20 g^2 u^2+20 i g^2 u+3 u^4-6 i u^3-2 u^2-i u\right)}{30 g^4}.
+\eeqa
+
+
+
+
+
+\section{The slope function for odd $J$}
+\label{sec:oddL}
+
+Here we give details on solving the $\bP\mu$-system for odd $J$ at leading order in the spin. First, the parity of the $\mu_{ab}$ functions is different from the even $J$ case, which can be seen from the asymptotics \eq{eq:muasymptotics}. Following arguments similar to the discussion for even $J$ in section \ref{sec:evenLsol}, we obtain
+\beq
+	\mu_{12}=1,\ \mu_{13}=0,\ \mu_{14}=0,\  \mu_{24}=\cosh(2\pi u),\ \mu_{34}=1.
+\eeq
+Plugging these $\mu_{ab}$ into \eqref{eq:pmuexpanded} we get a system of equations for $\bP_a$
+\beqa
+&&\tilde \bP_1= -\bP_3,  \\
+&&\tilde \bP_2= -\bP_4 -\bP_1 \cosh(2\pi u), \\
+&&\tilde \bP_3= -\bP_1,\\
+&&\tilde \bP_4= -\bP_2+\bP_3 \cosh(2\pi u).
+\eeqa
+This system can be solved in a similar way to the even $J$ case. The only important difference is that due to asymptotics \eq{eq:asymptotics} the $\bP_a$ acquire an extra branch point at $u=\infty$.
+
+Let us first rewrite the equations for $\bP_1,\bP_3$ as
+\beqa
+\tilde\bP_1+\tilde\bP_3&=&-\(\bP_1+\bP_3\)\\
+\tilde\bP_1-\tilde\bP_3&=&\bP_1-\bP_3.
+\eeqa
+This, together with the asymptotics \eqref{eq:asymptotics} implies $\bP_1=\epsilon  x^{-J/2},\;\bP_3=-\epsilon  x^{J/2}$ where $\epsilon$ is a constant. Let us note that these $\bP_1, \bP_3$ contain half-integer powers of $x$, and the analytic continuation around the branch points at $\pm 2g$ replaces $\sqrt{x}\to1/\sqrt{x}$. Now, taking the sum and difference of the equations for $\bP_2,\;\bP_4$ we get
+\beqa
+&&\tilde\bP_2+\tilde\bP_4+\bP_2+\bP_4=-a_1\(x^{J/2}+x^{-J/2}\)\cosh{2\pi u}\\
+&&\tilde\bP_2-\tilde\bP_4-\(\bP_2-\bP_4\)=a_1\(x^{J/2}-x^{-J/2}\)\cosh{2\pi u}
+\eeqa
+We can split the expansion
+\beq
+	\cosh{2\pi u}=\sum\limits_{k=-\infty}^{\infty}I_{2k}x^{2k}
+\eeq	
+into the positive and negative parts according to
+\beq
+\cosh{2\pi u}=\cosh_-+\cosh_++I_0
+\eeq
+where
+\beq
+\cosh_+=\sum\limits_{k=1}^{\infty}I_{2k}x^{2k},\;\ \ \ \ \cosh_-=\sum\limits_{k=1}^{\infty}I_{2k}x^{-2k}.
+\eeq
+Then we can write
+\beqa
+&&\bP_2+\bP_4=-a_1(x^{J/2}+x^{-J/2})\cosh_--a_1 I_0 x^{-J/2}+Q, \\
+&&\bP_2-\bP_4=-a_1(x^{J/2}-x^{-J/2})\cosh_-+a_1 I_0 x^{-J/2}+P,
+\eeqa
+where $Q$ and $P$ are some polynomials in $\sqrt{x},1/\sqrt{x}$ satisfying
+\beq\label{QP}
+	\tilde Q=-Q,\; \tilde P=P.
+\eeq
+We get
+\beqa
+\label{eq:P2tmp}
+&&\bP_2=-a_1 x^{J/2}\cosh_- +\frac{Q+P}{2},\\
+\label{eq:P4tmp}
+&&\bP_4=a_1 x^{-J/2}\cosh_- -a_1 I_0 x^{-J/2}+\frac{Q-P}{2}.
+\eeqa
+Now imposing the correct asymptotics of $\bP_2$ we find
+\beq
+\frac{P+Q}{2}=a_1 x^{J/2}\sum\limits_{k=1}^{\frac{J-1}{2}}I_{2k}x^{-2k}
+\eeq
+Due to \eq{QP} this relation fixes $Q$ and $P$ completely,
+and we obtain the solution given in section 2.1,
+\beqa
+\label{eq:musolLOoddL}
+&&	\mu_{12}=1,\ \mu_{13}=0,\ \mu_{14}=0, \ \mu_{24}=\cosh(2\pi u),\ \mu_{34}=1, \\
+&&   \bP_1=a_1 x^{-J/2}, \\
+&&   \bP_2=-a_1 x^{J/2}\sum\limits_{k=-\infty}^{-\frac{J+1}{2}}I_{2k}x^{2k},\\
+&&   \bP_3=-a_1 x^{J/2}, \\
+\label{eq:P4solLOoddL}
+&&    \bP_4=a_1 x^{-J/2}\cosh_--a_1 x^{-J/2}\sum\limits_{k=1}^{\frac{J-1}{2}}I_{2k}x^{2k}-a_1 I_0 x^{-J/2}.
+\eeqa
+Notice that the branch point at infinity is absent from the product of any two $\bP$'s, as it should be \cite{PmuPRL}, \cite{PmuLong}. One can check that this solution gives again the correct result \eqref{eq:resultLO} for the slope function.
+
+\section{NLO solution of $P\mu$ system: details}
+\label{sec:NLOapp}
+In this appendix we will provide more details on the solution of the $\bP\mu$-system and calculation of curvature function for $J=2,3,4$ which was presented in the main text in sections \ref{sec:SolvingPmuL2}, \ref{sec:SolvingPmuL3}, \ref{sec:SolvingPmuL4}.
+
+\subsection{NLO corrections to $\mu_{ab}$ for $J=2$}
+\label{sec:appmu2}
+Here we present some details of calculation of NLO corrections to $\mu_{ab}$ for $J=2$ omitted in the main text. As described in section \ref{sec:muNLOL2}, $\mu^{(1)}_{ab}$ are found as solutions of \eqref{eq:mudiscNLO} with appropriate asymptotics. The general solution of this equation consists of a general solution of the corresponding homogeneous equation (which can be reduced to one-parametric form \eqref{eq:periodicpart}) and a particular solution of the inhomogeneous one. The latter can be taken to be
+\beq
+\mu_{ab}^{disc}=\Sigma\cdot\(\bP_a^{(1)} \tilde\bP_b^{(1)}- \bP_b^{(1)} \tilde\bP_a^{(1)}\).
+\eeq
+One can get rid of the operation $\Sigma$, expressing $\mu_{ab}^{disc}$ in terms of $\Gamma'$ and $p_a'$. This procedure is based on two facts: the definition \eqref{paprime} of $p'_a$ and the statement that on functions decaying at infinity $\Sigma$ coincides with $\Gamma'$ defined by \eqref{Gammaprime}. After a straightforward but long calculation we find
+\beqa
+&&\mu_{31}^{disc}=\epsilon^2\Sigma\(\frac{1}{x^2}-x^2\)=
+-\epsilon^2\;\;\(\Gamma\cdot x^2+p_2\),\\
+&&\mu_{41}^{disc}=
+   \epsilon^2\[-2I_1p_1-4I_1\Gamma\cdot x+\sinh(2\pi u)\(\Gamma\cdot x^2+p_0\)+
+   \Gamma\cdot\sinh_-\(x-\frac{1}{x}\)^2\],\\
+&&\mu_{43}^{disc}=
+   -2{\epsilon^2}\[-2I_1p_1-4 I_1\Gamma\cdot x+\sinh(2\pi u)(p_2-p_0)+\Gamma\cdot\sinh_-\(x-\frac{1}{x}\)^2
+   \],\\
+&&\mu_{21}^{disc}=
+   \epsilon^2\[2 I_1\Gamma\cdot x-\sinh(2\pi u)\;\Gamma\cdot x^2-\Gamma\cdot\sinh_-\(x^2+\frac{1}{x^2}\)
+   \],\\
+&&\mu_{24}^{disc}=
+   \epsilon^2\[2I_1 \Gamma\cdot \sinh_- \(x+\frac{1}{x}\)+I_1^2p_0+ \right.\\
+ && \left. +\sinh(2\pi u)\Gamma\cdot\sinh_-\(x^2-\frac{1}{x^2}\)-\Gamma\cdot \sinh_-^2\(x^2-\frac{1}{x^2}\)
+   \].
+\eeqa
+Here we write $\Gamma$ and $p_a$ instead of $\Gamma'$ and $p'_a$ taking into account the discussion between equations \eqref{eq:ra} - \eqref{pa}.
+
+
+
+
+
+\subsection{NLO solution of the $\bP\mu$-system at $J=3$}
+\label{sec:appnlo3}
+In this appendix we present some intermediate formulas for the calculation of curvature function for $J=3$ in section \ref{sec:SolvingPmuL3} omitted in the main text.
+\begin{itemize}
+\item
+The particular solution of the inhomogeneous equation \eqref{eq:mudiscNLO} which we construct as $\mu_{31}^{disc}=\Sigma\cdot\(\bP_{a}^{(1)}\tilde\bP_{b}^{(1)}-\bP_{b}^{(1)}\tilde\bP_{a}^{(1)}\)$ can be written using the operation $\Gamma$  and $p_a$ defined by \eqref{pa} and \eqref{Gamma}\footnote{Alternatively one can use $p_a'$ and $\Gamma'$ instead of $p_a$ and $\Gamma$- see the discussion between the equations \eqref{eq:ra} - \eqref{pa}}
+\beqa
+&&\mu_{31}^{disc}=\Sigma\cdot({\bf P}_3 \tilde{\bf P}_1-{\bf P}_1 \tilde{\bf P}_3)=-2\epsilon^2\[\Gamma x^3+p_3\],\\
+&&\mu_{41}^{disc}=
+   -\epsilon^2\[2p_2I_2+2I_2\Gamma x^2+2\Gamma\cdot\cosh_-+(I_0-\cosh(2\pi u))p_0\],\\
+&&\mu_{34}^{disc}=
+   {\epsilon^2}\[2I_2\Gamma x +I_0\Gamma x^3-\Gamma\cdot(x^3+x^{-3})\cosh_-+\cosh(2\pi u)(2p_3+\Gamma x^3)\],\\
+&&\mu_{21}^{disc}=
+   \epsilon^2\[2I_2\Gamma x+(I_0-\cosh(2\pi u))\Gamma x^3-\Gamma\((x^3+x^{-3})\cosh(2\pi u)\)\],\\
+&&\mu_{24}^{disc}=
+   -2\epsilon^2\[-\frac{1}{2}\Gamma\cdot\cosh_-^2\(x^3-x^{-3}\)+\(\frac{\cosh(2\pi u)}{2}-I_0\)\Gamma\cdot\frac{\cosh_-}{x^3}\right.\\
+   &&-I_2\Gamma\cdot\(x+\frac{1}{x}\)\cosh_--\frac{1}{2}\cosh(2\pi u)\Gamma\cdot x^3\cosh_-+\\&&\left.+\frac{I_0}{2}\(I_0-\cosh(2\pi u)\)\Gamma\cdot x^3+\frac{I_1 I_2}{2\pi g}\Gamma x-I_2^2 p_1 \].
+\eeqa
+
+\item
+The zero mode of the system \eqref{P1L3}-\eqref{P4L3}, which we added to the solution in Eqs. \eq{P1J3}-\eq{P4J3} to ensure correct asymptotics, is
+\beqa
+\label{P1J3zm}
+\bP_1^{\text{zm}}&=&L_1 x^{-1/2}+L_3x^{1/2},\\
+\nn \bP_2^{\text{zm}}&=&-L_1 x^{1/2}\ch_-+L_2 x^{-1/2}-L_3x^{-1/2}\(\ch_-+\ofrac{2}I_0\)+L_4\(x^{1/2}-x^{-1/2}\),\\ \nn
+\bP_3^{\text{zm}}&=&-L_1 x^{1/2}-L_3x^{1/2},\\ \nn
+\bP_4^{\text{zm}}&=&-L_1\(I_0 x^{-1/2}+x^{-1/2}\cosh_-\)-L_2x^{1/2}+L_4(x^{1/2}-x^{-1/2})
+\\ \nn
+&-&L_3x^{1/2}\(\ch_-+\ofrac{2}I_0\).
+\label{P4J3zm}
+\eeqa
+\end{itemize}
+
+
+\subsection{NLO solution of the $\bP\mu$-system at $J=4$}
+\label{sec:appL4}
+Solution of the $\bP\mu$ system at NLO for $J=4$ is completely analogous to the case of $J=2$. The starting point is the LO solution \eqref{eq:P1solLOevenL}-\eqref{eq:P4solLOevenL}. As described in section \ref{sec:appmu2}, from LO $\bP_a$ we can find $\mu_{ab}$ at NLO. Its discontinuous part is
+\label{sec:appnlo4}
+\beqa
+&&\mu_{31}^{disc}=
+-\epsilon^2\;\;\(\Gamma\cdot x^4+p_4\),\\
+&&\mu_{41}^{disc}=
+\frac{1}{2} \epsilon ^2 \left(\sinh (2 \pi   u) \left(p_0+\Gamma \cdot x^4\right)+2 \left(I_1 p_1+I_3 p_3\right)+
+\right.\\ &&\left.
++\Gamma \cdot
+  \sinh_- \left(x^2-\frac{1}{x^2}\right)^2-2 \left(I_1+I_3\right) \left(\Gamma \cdot x^3+\Gamma \cdot x\right)\right),\\
+&&\mu_{43}^{disc}=\epsilon ^2 \left(\left(p_4-p_0\right) \sinh (2 \pi  u)+2 \left(I_1 p_1+I_3 p_3\right)-   \right.\\ &&\left.-\Gamma \cdot\sinh_-
+   \left(x^2-\frac{1}{x^2}\right)^2
+   +2 \left(I_1+I_3\right) \left(\Gamma \cdot x^3+\Gamma \cdot x\right)\right.\Bigg)
+   ,\\
+&&\mu_{21}^{disc}=\epsilon ^2 \left(-\frac{1}{2} \sinh (2 \pi  u) \Gamma \cdot x^4+I_1 p_3+I_3 p_1-
+\right.\\ &&\left.
+-\frac{1}{2} \Gamma \cdot \sinh_-
+   \left(x^4+\frac{1}{x^4}\right)+I_1 \Gamma \cdot x^3+I_3 \Gamma \cdot x\right)
+   ,\\
+&&\mu_{24}^{disc}=\epsilon ^2 \left(\frac{1}{2} \sinh (2 \pi u) \Gamma \cdot\sinh_- \left(x^4-\frac{1}{x^4}\right)+I_3^2 p_2+I_1 I_3
+   p_0-
+      \right.\\ &&\left.
+   -\frac{1}{2} \Gamma \cdot \sinh_-^2 \left(x^4-\frac{1}{x^4}\right)
+   +I_1 \Gamma \cdot \sinh_-
+   \left(x^3+\frac{1}{x^3}\right)+   \right.\\ &&\left.+I_3 \Gamma \cdot\sinh_- \left(x+\frac{1}{x}\right)+\left(I_3^2-I_1^2\right)
+   \Gamma \cdot x^2\right)
+   ,
+\eeqa
+and as discussed for $J=2$ the zero mode can be brought to the form
+\beqa
+&& \pi_{12}=0,\ \pi_{13}=0,\ \pi_{14}=0,\\
+ && \pi_{24}=c_{1,24}\cosh{2\pi u},\ \pi_{34}=0.
+ \label{eq:periodicpartL4}
+ \eeqa
+After that, we calculate $r_a$ by formula \eqref{eq:ra} and solve the expanded to NLO $\bP\mu$ system for $\bP_a^{(1)}$ as
+\beqa
+&&\bP^{(1)}_3=H \cdot r_3, \\
+&&\bP^{(1)}_1=\frac{1}{2}\bP^{(1)}_3+K\cdot \(r_1-\frac{1}{2}r_3\),\\
+&&\bP^{(1)}_4=K\cdot\[(H\cdot r_3)\sinh(2\pi u)+r_4-\frac{1}{2}r_3\sinh(2\pi u) \]-C(x+1/x),\\
+&&\bP^{(1)}_2=H\cdot\[-\bP^{(1)}_4-\bP^{(1)}_1\sinh(2\pi u)+r_2\]+C/x,
+\eeqa
+where $C$ is a constant which is fixed by requiring correct asymptotics of $\bP_2$.
+Finally we find leading coefficients $A_a$ of $\P^{(1)}_a$ and use expanded up to ${\cal O}(S^2)$ formulas \eqref{AA1}, \eqref{AA2} in the same way as in section \ref{sec:resultL2} to obtain the result \eqref{gamma2L4}.
+
+ \subsection{Result for $J=4$}
+ \label{sec:SolvingPmuL4}
+The final result for the curvature function at $J=4$ reads
+\beqa
+\label{gamma2L4}
+&&\gamma^{(2)}_{J=4}=\oint \frac{du_x}{2\pi i}\oint \frac{du_y}{2\pi i}
+\frac{1}{i g^2(I_3-I_5)^3} \left.\Bigg[ \right.\\ && \left.\nn
+\frac{2 \(\sh_-^x\)^2 y^4 \left(I_3 \left(x^{10}+1\right)-I_5 x^2 \left(x^6+1\right)\right)}{x^4 \left(x^2-1\right)}-\frac{2 \(\sh_-^y\)^2 x^4 \left(y^8-1\right) \left(I_3 x^2-I_5\right)}{\left(x^2-1\right) y^4}+ \right.\\
+&&+\frac{4 \sh_-^x \sh_-^y \left(x^4 y^4-1\right) \left(I_3+I_3 x^6 y^4-I_5 x^2 \left(x^2 y^4+1\right)\right)}{x^4 \left(x^2-1\right) y^4}\nn\\
+&&+\left.\sh_-^y\(
+\left(y^4+y^{-4}\right) x^{-1}\left(\left(I_1 I_5-I_3^2\right) \left(3 x^4+1\right)-2 I_1 I_3 x^6\right)+
+\right.\right.\nn\\&&\left.\left.
++\frac{2 I_3 x^2
+   \left(I_5 \left(x^2+1\right) x^2+I_1 \left(1-x^2\right)\right)-I_1 I_5 \left(x^2-1\right)^2+I_3^2 \left(-2 x^6+x^4+1\right)}{x(x^2-1)}+
+   \right.\right.\nn\\&&\left.\left.
+   +2
+   \left(y^3+y^{-3}\right) \frac{I_1 I_3 x^6-I_1 I_5 x^4-I_3^2 \left(x^2-1\right)}{x^2-1}-
+   \right.\right.\nn\\&&\left.\left.
+   -2 I_3 \left(y+y^{-1}\right)
+   \frac{ I_1\left(x^2-1\right)-I_3 \left(x^6-x^2+1\right)+I_5 \left(x^4-x^2+1\right)}{x^2-1}
+   \)+
+       \right.\nn\\&&\left.
+   +\frac{4 x^6 y^2 I_3 \left(I_3^2-I_1^2\right)}{x^2-1}+\frac{4 x y I_1 \left(I_3 y^2+I_1\right) \left(I_3+I_5\right)}{x^2-1}+
+   \right.\nn\\&&\left.
+  \frac{2 y^4 \left(I_1+I_3\right) \left(I_1 I_5-I_3^2\right)}{x^2-1}
+-\frac{2 y \left(y^2+1\right) \left(I_1+I_3\right) \left(I_1 I_5-I_3^2\right)}{x \left(x^2-1\right)}-
+    \right.\nn\\&&\left.
+-\frac{2 x^3 y \left(I_1+I_3\right) \left(I_1 \left(2 I_3+\left(3 \
+y^2+1\right) I_5\right)-I_3 \left(2 I_5 y^2+\left(y^2+3\right) I_3\right)\right)}{x^2-1}
+    \right.\nn\\&&\left.+
+\frac{2 x^2 y^4 \left(-I_3^3-I_1 \left(3 I_3+I_5\right) I_3+I_1^2 I_5\right)}{x^2-1}+
+\frac{2 x^4 y \left(I_1^2 \left(2 y I_5-2 y^3 I_3\right)-2 y \left(y^2+1\right) I_3^2 I_5\right)}{x^2-1}+
+    \right.\nn\\&&\left.
+ +\frac{4 x^5 y I_3 \left(2 I_1^2 y^2+I_3 \left(I_5-I_3\right) y^2+I_1 \left(I_3+I_5\right)\right)}{x^2-1}
+  \right] \frac{1}{4\pi i}\d_u \log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (1-i u_x+i u_y)}\nn
+\eeqa
+where, similarly to $J=2,3$, the integrals go around the branch between $-2g$ and $2g$.
+
+
+
+
+
+
+
+\newpage
+\section{Weak coupling expansion -- details}
+\label{sec:weakS3}
+First, we give the expansion of our results for the slope-to slope functions $\gamma_J^{(2)}$ to 10 loops. We start with $J=2$:
+\beqa
+\label{weak22long}
+	\gamma_{J=2}^{(2)}&=&-8 g^2 \zeta_3+g^4 \left(140 \zeta_5-\frac{32 \pi ^2 \zeta_3}{3}\right)+g^6
+   \left(200 \pi ^2 \zeta_5-2016 \zeta_7\right)
+	\\ \nn
+	&+&g^8 \left(-\frac{16 \pi ^6 \zeta_3}{45}-\frac{88 \pi ^4 \zeta_5}{9}-\frac{9296 \pi ^2 \zeta_7}{3}+27720 \zeta_9\right)
+	\\ \nn
+	&+&g^{10} \left(\frac{208 \pi ^8 \zeta_3}{405}+\frac{160 \pi ^6 \zeta_5}{27}+144 \pi ^4 \zeta_7+45440 \pi ^2 \zeta_9-377520 \zeta_{11}\right)
+	\\ \nn
+	&+&g^{12}
+   \left(-\frac{7904 \pi ^{10} \zeta_3}{14175}-\frac{17296 \pi ^8 \zeta_5}{4725}-\frac{128 \pi ^6 \zeta_7}{15}-\frac{6312 \pi ^4 \zeta_9}{5}
+	\right.
+	\\ \nn
+	&&\Bigl.\ \ \ \ \ \ \
+	-653400 \pi
+   ^2 \zeta_{11}+5153148 \zeta_{13}\Bigr)
+	\\ \nn
+	&+&g^{14} \Bigl(\frac{1504 \pi ^{12} \zeta_3}{2835}+\frac{106576 \pi ^{10} \zeta_5}{42525}-\frac{18992 \pi ^8 \zeta_7}{405}
+-\frac{16976 \pi ^6 \zeta_9}{15}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+\frac{25696 \pi ^4 \zeta_{11}}{9}+\frac{28003976 \pi ^2 \zeta_{13}}{3}-70790720 \zeta_{15}\Bigr)
+	\\ \nn
+	&+&g^{16}
+   \Bigl(-\frac{178112 \pi ^{14} \zeta_3}{382725}-\frac{239488 \pi ^{12} \zeta_5}{127575}+\frac{2604416 \pi ^{10} \zeta_7}{42525}+\frac{8871152 \pi ^8 \zeta_9}{4725}
+		\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+\frac{30157072 \pi ^6 \zeta_{11}}{945}+\frac{8224216 \pi ^4 \zeta_{13}}{45}-133253120 \pi ^2 \zeta_{15}
+			\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+979945824 \zeta_{17}\Bigr)
+	\\ \nn
+	&+&g^{18}
+   \Bigl(\frac{147712 \pi ^{16} \zeta_3}{382725}+\frac{940672 \pi ^{14} \zeta_5}{637875}-\frac{490528 \pi ^{12} \zeta_7}{8505}-\frac{358016 \pi ^{10} \zeta_9}{189}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	-\frac{37441312 \pi ^8 \zeta_{11}}{945}-\frac{9616256 \pi ^6 \zeta_{13}}{15}-\frac{16988608 \pi ^4 \zeta_{15}}{3}
+		\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+1905790848 \pi ^2 \zeta_{17}-13671272160 \zeta_{19}\Bigr)
+	\\ \nn
+	&+&g^{20} \Bigl(-\frac{135748672 \pi ^{18} \zeta_3}{442047375}-\frac{103683872 \pi ^{16} \zeta_5}{88409475}+\frac{1408423616 \pi
+   ^{14} \zeta_7}{29469825}
+			\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+\frac{2288692288 \pi ^{12} \zeta_9}{1403325}+\frac{34713664 \pi ^{10} \zeta_{11}}{945}+\frac{73329568 \pi ^8 \zeta_{13}}{105}
+				\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+\frac{305679296 \pi ^6 \zeta_{15}}{27}+121666688 \pi ^4 \zeta_{17}-27342544320 \pi ^2 \zeta_{19}
+					\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+	+192157325360 \zeta_{21}\Bigr)
+\eeqa
+
+\newpage
+Next, for $J=3$,
+\beqa
+\label{weak23long}
+\gamma_{J=3}^{(2)}&=&-2 g^2 \zeta_3+g^4 \left(12 \zeta_5-\frac{4 \pi ^2 \zeta_3}{3}\right)+g^6
+   \left(\frac{2 \pi ^4 \zeta_3}{45}+8 \pi ^2 \zeta_5-28 \zeta_7\right)
+	\\ \nn
+	&+&g^8\;
+   \left(-\frac{4 \pi ^6 \zeta_3}{45}-\frac{4 \pi ^4 \zeta_5}{15}-528 \zeta_9\right)
+	\\ \nn
+	&+&g^{10} \left(\frac{934 \pi ^8 \zeta_3}{14175}+\frac{8 \pi ^6 \zeta_5}{9}-\frac{82 \pi ^4 \zeta_7}{9}-900 \pi ^2 \zeta_9+12870 \zeta_{11}\right)
+	\\ \nn
+	&+&g^{12} \left(-\frac{572 \pi ^{10} \zeta_3}{14175}-\frac{104 \pi ^8
+   \zeta_5}{175}-\frac{256 \pi ^6 \zeta_7}{45}+\frac{2476 \pi ^4 \zeta_9}{9}
+	\right. \\ \nn
+	&&\ \ \ \ \ \ \ \left.+\frac{57860 \pi ^2 \zeta_{11}}{3}-208208 \zeta_{13}\right)
+	\\ \nn
+	&+&g^{14}
+   \left(\frac{2878 \pi ^{12} \zeta_3}{127575}+\frac{404 \pi ^{10} \zeta_5}{1215}+\frac{326 \pi ^8 \zeta_7}{75}+\frac{3352 \pi ^6 \zeta_9}{135}
+	\right. \\ \nn
+	&&\ \ \ \ \ \ \ -\left.\frac{80806 \pi ^4 \zeta_{11}}{15}
+	-316316 \pi ^2 \zeta_{13}+2994992 \zeta_{15}\right)
+	\\ \nn
+	&+&g^{16} \left(-\frac{159604 \pi ^{14} \zeta_3}{13395375}-\frac{257204
+   \pi ^{12} \zeta_5}{1488375}-\frac{14836 \pi ^{10} \zeta_7}{6075}-\frac{71552 \pi
+   ^8 \zeta_9}{2025}
+	\right.
+	\\ \nn
+	&&\ \ \ \ \ \ \  \left.+\frac{4948 \pi ^6 \zeta_{11}}{189}+\frac{4163068 \pi ^4 \zeta_{13}}{45}+\frac{14129024 \pi ^2 \zeta_{15}}{3}-41116608 \zeta_{17}\right)
+		\\ \nn
+	&+&g^{18}
+   \left(\frac{494954 \pi ^{16} \zeta_3}{81860625}+\frac{156368 \pi ^{14} \zeta_5}{1819125}+\frac{6796474 \pi ^{12} \zeta_7}{5457375}+\frac{332 \pi ^{10} \zeta_9}{15}
+		\right.
+	\\ \nn
+	&&\ \ \ \ \ \ \ \left.+\frac{1745318 \pi ^8 \zeta_{11}}{4725} -\frac{868088 \pi ^6 \zeta_{13}}{315}-\frac{22594208 \pi ^4 \zeta_{15}}{15}
+	\right. \\ \nn
+	&&\ \ \ \ \ \ \ \Bigl.-67084992 \pi ^2 \zeta_{17}+553361016
+   \zeta_{19}\Biggr)
+	\\ \nn
+	&+&g^{20} \left(-\frac{940132 \pi ^{18} \zeta_3}{315748125}-\frac{244456 \pi ^{16} \zeta_5}{5893965}-\frac{29637008 \pi ^{14}
+   \zeta_7}{49116375}-\frac{11808196 \pi ^{12} \zeta_9}{1002375}
+	\right.
+	\\ \nn
+		&&\ \ \ \ \ \ \ -\left.\frac{2265364 \pi
+   ^{10} \zeta_{11}}{8505}-\frac{68767984 \pi ^8 \zeta_{13}}{14175}+\frac{480208 \pi ^6
+   \zeta_{15}}{9}
+	\right.
+	\\ \nn
+		&&\ \ \ \ \ \ \ +\left.
+	\frac{71785288 \pi ^4 \zeta_{17}}{3}+934787840 \pi ^2 \zeta_{19}-7390666360 \zeta_{21}\right)
+\eeqa
+
+\newpage
+
+Finally, for $J=4$,
+\beqa
+\label{weak24long}
+	\gamma_{J=4}^{(2)}&=&
+	g^2 \left(-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi ^4}\right)
+	\\ \nn
+	&+&g^4
+   \left(-\frac{22 \pi ^2 \zeta_3}{25}+\frac{474 \zeta_5}{5}-\frac{8568 \zeta_7}{5 \pi ^2}+\frac{8316
+   \zeta_9}{\pi ^4}\right)
+\\ \nn
+&+&g^6 \left(\frac{32 \pi ^4 \zeta_3}{875}+\frac{3656 \pi ^2 \zeta_5}{175}-\frac{56568 \zeta_7}{25}+\frac{196128 \zeta_9}{5 \pi ^2}-\frac{185328 \zeta_{11}}{\pi
+   ^4}\right)
+\\ \nn
+&+&g^8 \Bigl(-\frac{4 \pi ^6 \zeta_3}{175}-\frac{68 \pi ^4 \zeta_5}{75}-\frac{55312 \pi ^2
+   \zeta_7}{125}+\frac{1113396 \zeta_9}{25}-\frac{3763188 \zeta_{11}}{5 \pi ^2}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{3513510 \zeta_{13}}{\pi ^4}\Bigr)
+\\ \nn
+&+&g^{10} \Bigl(\frac{176 \pi ^8 \zeta_3}{16875}+\frac{2488 \pi ^6 \zeta_5}{7875}+\frac{2448 \pi ^4 \zeta_7}{125}+\frac{209532 \pi ^2 \zeta_9}{25}-\frac{3969878 \zeta_{11}}{5}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{13213200 \zeta_{13}}{\pi ^2}-\frac{61261200 \zeta_{15}}{\pi ^4}\Bigr)
+\\ \nn
+&+&g^{12}
+   \Bigl(-\frac{88072 \pi ^{10} \zeta_3}{20671875}-\frac{449816 \pi ^8 \zeta_5}{4134375}-\frac{327212 \pi
+   ^6 \zeta_7}{65625}-\frac{338536 \pi ^4 \zeta_9}{875}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+-\frac{129520798 \pi ^2 \zeta_{11}}{875}+\frac{66969474 \zeta_{13}}{5}-\frac{220540320 \zeta_{15}}{\pi ^2}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{1017636048 \zeta_{17}}{\pi ^4}\Bigr)
+\\ \nn
+&+&g^{14} \Bigl(\frac{795136 \pi ^{12} \zeta_3}{487265625}+\frac{522784 \pi ^{10} \zeta_5}{13921875}+\frac{4021288 \pi ^8 \zeta_7}{2953125}+\frac{1869152 \pi ^6 \zeta_9}{21875}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{18573952 \pi ^4 \zeta_{11}}{2625}+\frac{62633272 \pi ^2 \zeta_{13}}{25}-\frac{1092799344
+   \zeta_{15}}{5}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{17844607872 \zeta_{17}}{5 \pi ^2}-\frac{16405526592 \zeta_{19}}{\pi ^4}\Bigr)
+\\ \nn
+&+&g^{16}
+   \Bigl(-\frac{30581888 \pi ^{14} \zeta_3}{51162890625}-\frac{43988768 \pi ^{12} \zeta_5}{3410859375}-\frac{446380184 \pi ^{10} \zeta_7}{1136953125}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+-\frac{20108936 \pi ^8 \zeta_9}{984375}
+-\frac{31755036 \pi ^6 \zeta_{11}}{21875}-\frac{321449336 \pi ^4 \zeta_{13}}{2625}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+-\frac{1031925232 \pi ^2 \zeta_{15}}{25}
+	+\frac{87296960712 \zeta_{17}}{25}-\frac{283092985656
+   \zeta_{19}}{5 \pi ^2}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{259412389236 \zeta_{21}}{\pi ^4}\Bigr)
+\\ \nn
+&+&g^{18} \Bigl(\frac{6706432 \pi ^{16}
+   \zeta_3}{31672265625}+\frac{816838192 \pi ^{14} \zeta_5}{186232921875}+\frac{2004636572 \pi ^{12} \zeta_7}{17054296875}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{1950592976 \pi ^{10} \zeta_9}{378984375}
++\frac{2220222512 \pi ^8 \zeta_{11}}{6890625}+\frac{20963856 \pi ^6 \zeta_{13}}{875}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{254959316 \pi ^4 \zeta_{15}}{125}
++\frac{584553371616 \pi ^2 \zeta_{17}}{875}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+-\frac{1375388084412 \zeta_{19}}{25}+\frac{4432313039616 \zeta_{21}}{5 \pi ^2}
+-\frac{4049650420200 \zeta_{23}}{\pi ^4}\Bigr)
+\eeqa
+\beqa
+\nn
+&+&g^{20}
+   \Bigl(-\frac{15308976272 \pi ^{18} \zeta_3}{209512037109375}-\frac{1764947984 \pi ^{16} \zeta_5}{1197211640625}-\frac{18667123736 \pi ^{14} \zeta_7}{517313671875}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+-\frac{538293689008 \pi ^{12} \zeta_9}{399070546875}-\frac{657466372 \pi ^{10} \zeta_{11}}{8859375}-\frac{119709052 \pi ^8 \zeta_{13}}{23625}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
+-\frac{9095498848 \pi ^6 \zeta_{15}}{23625}-\frac{260407748416 \pi ^4 \zeta_{17}}{7875}-\frac{1869110789976 \pi ^2 \zeta_{19}}{175}
+	\Bigr.
+	\\ \nn
+	&& \Bigl. \ \ \ \ \ \ \
++\frac{4293062840352 \zeta_{21}}{5}-\frac{13755955395600 \zeta_{23}}{\pi ^2}+\frac{62673161265000 \zeta_{25}}{\pi
+   ^4}\Bigr)
+\eeqa
+
+For future reference we have also computed\footnote{As described in the main text (see section 5), in the calculations we used several Mathematica packages for dealing with harmonic sums.} the weak coupling expansion of the anomalous dimensions at order $S^3$, using the known predictions from ABA which are available for any spin at $J=2$ and $J=3$. For $J=2$ we have computed the expansion to three loops\footnote{We remind that in our notation the anomalous dimension is written as $\gamma=\gamma^{(1)}S+\gamma^{(2)}S^2+\gamma^{(3)}S^3+\dots$}:
+\beqa
+	\gamma_{J=2}^{(3)}&=&g^2\frac{4}{45}\pi^4+g^4 \left(40 \zeta_3^2-\frac{28 \pi ^6}{405}\right)\\ \nn
+	&+&g^6 \left(\frac{192}{5} \zeta_{5,3}-\frac{6992 \zeta_3
+   \zeta_5}{5}+\frac{280 \pi ^2 \zeta_3^2}{3}+\frac{6962 \pi ^8}{212625}\right)+\mathcal{O}(g^8)
+\eeqa
+Compared to the $S^2$ part, a new feature is the appearance of multiple zeta values -- here we have $\zeta_{5,3}$, which is defined by
+\begin{equation}
+	\zeta_{a_1,a_2,\ldots,a_k}=\sum_{0< n_1<n_2<\ldots<n_k<\infty}
+	\frac 1{n_{1}^{a_1}n_{2}^{a_2}\ldots n_k^{a_k}}\,
+\end{equation}
+and cannot be reduced to simple zeta values $\zeta_n$.
+
+For $J=3$ we have obtained the expansion to four loops:
+\beqa
+\nn
+	\gamma_{J=3}^{(3)}&=&\frac{1}{90}\pi^4g^2+g^4\(4 \zeta_3^2+\frac{\pi ^6}{1890}\)
+	+g^6\(4\zeta_{5,3}+4 \pi ^2 \zeta_3^2-72 \zeta_3 \zeta_5-\frac{2
+   \pi ^8}{675}\)\\ \nn
+   &+&g^8\left(-112 \zeta_{2,8}+\frac{20}{3} \pi ^2 \zeta_{5,3}+728 \zeta_3
+   \zeta_7+448 \zeta_5^2-\frac{224}{3} \pi ^2 \zeta_3
+   \zeta_5\right.\\
+	&& \left.+\frac{4 \pi ^4 \zeta_3^2}{5}-\frac{41 \pi
+   ^{10}}{133650}\right)
+   +\mathcal{O}(g^{10})
+\eeqa
+
+
+\section{Higher mode numbers}
+\label{sec:appHigher}
+\subsection{Slope function for generic filling fractions and mode numbers}
+\label{sec:Sanyn}
+Let us extend the discussion of section \ref{sec:evenLsol} by considering the state corresponding to a solution of the asymptotic Bethe equations with arbitrary mode numbers and filling fractions\footnote{For simplicity we also consider even $J$ here.}.
+We expect that in the $\P\mu$ system this should correspond to\footnote{We no longer expect $\mu_{24}$ to be either even or odd, since in the Bethe ansatz description of the state with generic mode numbers and filling fractions the Bethe roots are not distributed symmetrically.}
+\beq
+	\mu_{24} = \sum_{n=-\infty}^\infty C_n e^{2\pi n u}.
+\eeq
+As an example, for the ground state twist operator we have $\mu_{24}=\sinh(2\pi u)$, which is reproduced by choosing $C_{-1} = -1/2, C_1 = 1/2$ and all other $C$'s set to $0$.
+
+	
+	
+	
+	
+
+It is straightforward to solve the $\P\mu$ system in the same way as in section \ref{sec:evenLsol}, and we find the energy
+\beq
+	\gamma = \frac{\sqrt{\lambda}}{J} \frac{\sum_n C_n I_{J+1}(n \sqrt{\lambda}) }{\sum_n C_n I_{J}(n \sqrt{\lambda})/n} \, S,
+\eeq
+which can also be written in a more familiar form as
+\beq
+	\gamma = \sum_n \alpha_n \frac{n\sqrt{\lambda}}{J} \frac{I_{J+1}(n \sqrt{\lambda})}{I_{J}(n \sqrt{\lambda})} \, S,
+\eeq
+where
+\beq
+	\alpha_n = \frac{C_n I_{J}(n \sqrt{\lambda}) / n}{\sum_m C_m I_{J}(m \sqrt{\lambda}) / m}
+\eeq
+are the filling fractions.
+
+The coefficients $C_n$ are additionally constrained by
+\beq
+	\sum_n C_n I_J(n\sqrt{\lambda}) = 0,
+\eeq
+which ensures that the $\bP_a$ functions have correct asymptotics. This constraint implies a relation between the filling fractions,
+\beq
+	\sum_n n \, \alpha_n = 0,
+\eeq
+which is also familiar from the asymptotic Bethe ansatz.
+
+
+\subsection{Curvature function and higher mode numbers}
+\label{sec:appN}
+
+In the main text we discussed the NLO solutions to the $\bP\mu$ system which are based on the leading order solutions \eqref{eq:P1solLOevenL}-\eqref{eq:P4solLOevenL} or \eqref{P1oddL}-\eqref{P4oddL}. One of the assumptions for constructing the leading order solution was to allow $\mu_{ab}$ to have only $e^{\pm 2\pi u}$ in asymptotics at infinity (we recall that this led to all $\mu$'s being constatnt except $\mu_{24}$ which is equal to $\sinh\({2\pi u}\)$ or $\cosh\({2\pi u}\)$), while in principle requiring $\mu_{ab}$ to be periodic one could also allow  to have $e^{2n\pi u}$ with any integer $n$.
+Thus a natural generalization of the leading order solution is to consider $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=
+\cosh\({2\pi n u}\)$, where $n$ is an arbitrary integer. As discussed above (see the end of section \ref{sec:LOresultevenL} and appendix \ref{sec:Sanyn}), we believe that at the leading order in $S$ such solutions correspond to states with mode numbers equal to $n$, and they reproduce the slope function for this case.
+
+Proceeding to order $S^2$, the calculation of the curvature function $\gamma^{(2)}(g)$ with $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=
+\cosh\({2\pi n u}\)$ can be done following the same steps as for $n=1$.
+The final results for $J=2,3$ and $4$ are given by exactly the same formulas as for $n=1$ (\eqref{gamma2L2}, \eqref{gamma2L3} and \eqref{gamma2L4} respectively) -- the only difference is that now one should set in those expressions
+\beqa
+\label{nrep1}
+&&I_k=I_k(4\pi n g ),\\
+&&\sh_-^x=\[\sinh\({2 \pi n u_x}\)\]_-, \\
+&&\sh_-^y=\[\sinh\({2 \pi n u_y}\)\]_-, \\
+&&\ch_-^x=\[\cosh\({2 \pi n u_x}\)\]_-, \\
+\label{nreplast}
+&&\ch_-^y=\[\cosh\({2 \pi n u_y}\)\]_-.
+\eeqa
+It would be natural to assume that this solution of the $\bP\mu$ system describes anomalous dimensions for states with mode number $n$ at order $S^2$. However we found some peculiarities in the strong coupling expansion of the result. The strong coupling data available for comparison in the literature for states with $n>1$ also relies on some conjectures (see \cite{Basso:2011rs}, \cite{Gromov:2011bz}), so the interpretation of this solution is not fully clear to us.
+
+
+
+
+
+
+
+
+The weak coupling expansion for this case turns out to be related in a simple way to the $n=1$ case. One should just replace $\pi\to n\pi$ in the expansions for $n=1$ which were given in \eq{weak22long}, \eq{weak23long}, \eq{weak24long}. For example,
+\beqa
+\nn
+	\gamma_{J=2}^{(2)}&=&-8 g^2 \zeta_3+g^4 \left(140 \zeta_5-\frac{32 n^2\pi ^2 \zeta_3}{3}\right)+g^6
+   \left(200 n^2\pi ^2 \zeta_5-2016 \zeta_7\right)
+	+\dots
+	\\
+\eeqa
+It would be interesting to compare these weak coupling predictions to results obtained from the asymptotic Bethe ansatz (or by other means) as it was done for $n=1$ in section \ref{sec:weak}.
+
+Let us now discuss the strong coupling expansion. According to Basso's conjecture \cite{Basso:2011rs} (see also \cite{Gromov:2011bz}), the structure of the expansion may be obtained from
+\beq
+\label{basso1app}
+\Delta^2=J^2+S
+\(
+A_1\sqrt{\mu}+A_2+\dots
+\)
++S^2
+\(
+B_1+\frac{B_2}{\sqrt\mu}
++\dots
+\)
++S^3
+\(
+\frac{C_1}{\mu^{1/2}}
++\frac{C_2}{\mu^{3/2}}
++\dots
+\)
++{\cal O}({ S}^4)\;,
+\eeq
+where $\mu=n^2\lambda$. This gives
+\beqa
+\label{basso2app}
+\Delta&=&J+\frac{S}{2J}
+\(
+A_1n\sqrt{\lambda}+A_2+\frac{A_3}{n\sqrt{\lambda}}+\dots
+\)\\
+\nn&+&S^2
+\(
+- \frac{A_1^2}{8J^3} \, n^2\lambda
+-  \frac{A_1A_2}{4J^3} \, n\sqrt{\lambda}
++\[\frac{B_1}{2J}-\frac{A_2^2+2A_1 A_3}{8J^3}\]
++
+\[
+\frac{B_2}{2J}
+-\frac{A_2A_3+A_1A_4}{4J^3}
+\]  \frac{1}{n\sqrt\lambda}
++\dots
+\)
++{\cal O}(S^3)\;.
+\eeqa
+where $A_i$ are known from Basso's slope function. Substituting them, we find
+\beq
+\label{gamma2basso}
+	\gamma^{(2)}_{J}(g)=-\frac{8 \pi ^2g^2 n^2}{J^3}+\frac{2 \pi  g n}{J^3}+\frac{B_1-1}{2 J}+\frac{8 B_2 J^2-4 J^2+1}{64 \pi  g J^3 n}+\dots
+\eeq
+However, already in \cite{Gromov:2011bz} some inconsistencies were found if one assumes this structure for $n>1$. Let us extend that analysis by comparing the prediction \eq{gamma2basso} to our results from the $\bP\mu$-system. To compute the expansion of our results, similarly to the $n=1$ case, we evaluated $\gamma_{J}^{(2)}(g)$ numerically for many values of $g$, and then fitted the result by powers of $g$. As for $n=1$ we found with high precision (about $\pm10^{-16}$) that the first several coefficients involve only rational numbers and powers of $\pi$. Our results for $n=2,3$ and $J=2,3,4$ are summarized below:
+\beq
+\label{gamma2L22}
+	\gamma^{(2)}_{J=2,n=2}(g)=-4\pi^2g^2+\frac{\pi g}{2}+\frac{17}{8}-\frac{0.29584877037648771(2)}{g}
+	+\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=3,n=2}(g)=-\frac{32}{27} \pi ^2 g^2+\frac{4 \pi  g}{27}+\frac{17}{12}
+	-\frac{0.2928304112866493(9)}{g}
+	+\dots
+\eeq
+\beq
+\gamma^{(2)}_{J=4,n=2}(g)=-\frac{1}{2} \pi ^2 g^2+\frac{\pi  g}{16}+\frac{17}{16}-\frac{0.319909936615448(9)}{g}
++\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=2,n=3}(g)=-9 \pi ^2 g^2+\frac{3 \pi  g}{4}+\frac{23}{4}-\frac{0.8137483(9)}{g}+\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=3,n=3}(g)=-\frac{8}{3} \pi ^2 g^2+\frac{2 \pi  g}{9}+\frac{23}{6}-\frac{0.892016609(2)}{g}
+	+\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=4,n=3}(g)=-\frac{9}{8} \pi ^2 g^2+\frac{3 \pi  g}{32}+\frac{23}{8}-\frac{1.035945580(6)}{g}+\dots
+\eeq
+Here in the coefficient of $\ofrac{g}$ the digit in brackets is the last known one within our precision\footnote{We did not seek to achieve high precision in this coefficient for $n=3$.}.
+
+Comparing to \eq{gamma2basso} we find full agreement in the first two terms (of order $g^2$ and of order $g$). The next term in \eq{gamma2basso} (of order $g^0$) is determined by $B_1$, which in \cite{Gromov:2011bz} was found to be
+\beq
+	B_1=\frac{3}{2}
+\eeq
+for all $n,J$, based on consistency with the classical energy. However, comparing our results with \eq{gamma2basso} we find a different value:
+\beqa
+	B_1&=&\frac{19}{2} \ \  \text{for }\ n=2\;,\\ \nn
+	B_1&=&23 \ \ \, \text{for }\ n=3\;.
+\eeqa
+For both $n=2$ and $n=3$ this prediction for $B_1$ is independent of $J$.
+
+The next term is of order $\ofrac{g}$ and is determined by $B_2$, which in \cite{Gromov:2011bz} was fixed to
+\beq
+B_2=
+\left\{
+\bea{ll}
+-3\,\zeta_3+\frac{3}{8}&\;\;,\;\;n=1\\
+-24\,\zeta_3-\frac{13}{8}&\;\;,\;\;n=2\\
+-81\,\zeta_3-\frac{24}{8}&\;\;,\;\;n=3
+\eea
+\right.\;.
+\eeq
+However, this does not agree with our numerical predictions for $n=2$ and $3$. Furthermore, for $n=2$ we extracted the coefficient of $\ofrac{g}$ with high precision (about $10^{-17}$, see \eq{gamma2L22}) but were unable to fit it as a combination of simple zeta values using the EZ-Face calculator \cite{ezface}.
+
+Thus our results appear to disagree with the values of $B_1$ and $B_2$ obtained in \cite{Gromov:2011bz}, but how to interpret this is not clear to us. Although our solution of the $\bP\mu$-system for $n>1$ looks fine at order $S$, it may be that to capture anomalous dimensions at order $S^2$ some other solution should be used.
+Another option is that the ansatz for the structure of anomalous dimensions at strong coupling may need to be modified when $n>1$ (as already suspected in \cite{Gromov:2011bz}), and our results may help provide some guidance in this case.
+
+
+\section{Exact formulae for one-loop correction}\label{appA}
+\subsection{Main formula for one-loop correction and notations}
+In \cite{Gromov:2011de} a general formula was derived describing the one loop correction
+to the energy of the generic $(S,J,n)$ folded string solution.
+There are three contributions to one loop energy shift that are different by their nature.
+They can be separated into an ``anomaly" contribution, a contribution from the dressing phase
+and a wrapping contribution, which is missing in the ABA approach, but present in the
+Y-system
+\beq
+\Delta_{\rm1-loop}=\delta \Delta_{\rm anomaly} +\delta \Delta_{\rm dressing} + \delta \Delta_{\rm wrapping}\;,
+\eeq
+where each of these contributions is simply an integral of some closed form expression,
+\beqa
+\label{eq:delta_E_3}
+  \delta \Delta_{\rm anomaly} &=& -\frac{4}{ab-1}\int_a^b \frac{dx} {2\pi i}
+  \frac{y(x)}{x^2-1} \partial_x \log \sin p_{\hat 2}\;,\\
+  \label{eq:delta_E_1}
+  \delta \Delta_{\rm dressing} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
+    i} \left( \Omega^{ij}(z) \, \partial_z \frac{i (p_i -p_j)}{2} \right)\;,\\
+  \label{eq:delta_E_2}
+  \delta \Delta_{\rm wrapping} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
+    i} \left( \Omega^{ij}(z) \, \partial_z \log (1- e^{-i(p_i -p_j)}) \right)\;.
+\eeqa
+in this sum $i$ takes values $\hat 1,\hat 2,\tilde 1,\tilde 2$ whereas $j$ runs over
+$\hat 3,\hat 4,\tilde 3,\tilde 4$.
+
+Let us explain the notations. The quasi-momenta:
+\beqa
+  \label{eq:p_a}\nn
+  p_{\hat 2} &=& \pi n - 2\pi n{\cal J} \left( \frac{a}{a^2-1} -
+    \frac{x}{x^2-1} \right) \sqrt{\frac{(a^2-1)
+      (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi n a b {\cal S} F_1(x)}{(b-a)(ab+1)} +
+  \frac{2\pi n {\cal J} (a-b) F_2(x)}{\sqrt{(a^2-1)(b^2-1)}},\\
+  \label{eq:p_s}
+  p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1}.
+\eeqa
+The integer $n$ (the mode number) is related to the number of spikes.
+All the other quasi-momenta can be
+found from
+\beqa
+  \label{eq:quasimomenta_symmetry_A}
+  p_{\hat{2}} (x) &=& -p_{\hat{3}}(x) = -p_{\hat{1}}(1/x) = p_{\hat{4}}
+  (1/x)\;,\\
+  \label{eq:quasimomenta_symmetry_S}
+  p_{\tilde{2}} (x) &=& -p_{\tilde{3}} (x) = p_{\tilde{1}} (x) =
+  -p_{\tilde{4}}(x)\;.
+\eeqa
+The functions $F_1(x)$ and $F_2(x)$ can be expressed
+in terms of the elliptic integrals:
+\begin{eqnarray}
+ \label{eq:not}
+ F_1(x) &=& i F \left( i \sinh^{-1}
+ \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2} \nonumber
+ \right)\;, \\
+\nn
+ F_2(x) &=& i E \left( i \sinh^{-1}
+ \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2}
+ \right)\;.
+ \end{eqnarray}
+Finally the off-shell fluctuation energies are
+\begin{eqnarray}\nn
+  \label{eq:frequencies}
+  \Omega^{\hat{1}\hat{4}} (x) &=& -\Omega^{\hat{2}\hat{3}}(1/x) -2\;,\;\;\\
+  \Omega^{\hat{1}\hat{3}} (x) &=& \Omega^{\hat{2} \hat{4}} (x) = \frac12
+  \Omega^{\hat{1}\hat{4}}(x) + \frac12 \Omega^{\hat{2}\hat{3}}(x)\;,\nn\\
+  \Omega^{\hat{1}
+    \tilde{3}}(x)
+&=&
+  \Omega^{\hat{1}\tilde{4}}(x)
+    =  \Omega^{\hat{4}\tilde{1}}(x)
+    =  \Omega^{\hat{4}\tilde{2}}(x)
+     =
+  \frac12\, \Omega^{\tilde{2}\tilde{3}} (x) + \frac12\,\Omega^{\hat{1}\hat{4}}(x),\\
+  \Omega^{\hat{2}\tilde{3}}(x)
+&=&
+  \Omega^{\hat{2}\tilde{4}}(x)
+=
+  \Omega^{\tilde{1}\hat{3}}(x)
+=
+  \Omega^{\tilde{2}\hat{3}}(x)
+= \frac12\, \Omega^{\tilde{2}\tilde{3}}(x) + \frac12\, \Omega^{\hat{2}\hat{3}}(x),\nn\\
+  \Omega^{\tilde{2}\tilde{3}}(x)
+&=&
+  \Omega^{\tilde{2}\tilde{4}}(x)
+=
+  \Omega^{\tilde{1}\tilde{3}}(x)
+=
+  \Omega^{\tilde{1}\tilde{4}}(x)\;,\nn
+\end{eqnarray}
+where
+\beqa
+\label{oma}
+\Omega^{\tilde 2\tilde 3}(x)&=&\frac{2}{a
+  b-1}\frac{\sqrt{a^2-1}\sqrt{b^2-1}}{x^2-1}\;,\\
+\label{oms}
+\Omega^{\hat 2\hat 3}(x)&=&\frac{2}{a b-1}\(1-\frac{y(x)}{x^2-1}\)\;.
+\eeqa
+and $y(x)=\sqrt{x-a} \sqrt{a+x} \sqrt{x-b} \sqrt{b+x}$.
+
+In the small $\cal{S}$ limit these expressions can be expanded,
+\beqa\label{anomaly_dressing}
+	&&\delta\Delta_{anomaly} = \frac{-1}{2( \mathcal{J}^3 + \mathcal{J})} \, \mathcal{S}
+	+ \left[ \frac{2 \, \mathcal{J}^4 + 15 \, \mathcal{J}^2 + 4}{16 \, \mathcal{J}^3(\mathcal{J}^2 + 1)^{5/2}} - \frac{\pi^2 n^2}{12 \, \mathcal{J}^3 \, \sqrt{\mathcal{J}^2 + 1}} \right] \mathcal{S}^2   \\
+	&&+ \left[ \frac{3 \, \mathcal{J}^8 -32 \, \mathcal{J}^6 - 146 \, \mathcal{J}^4 - 68 \, \mathcal{J}^2 - 16}{64 \, \mathcal{J}^5 (1+ \, \mathcal{J}^2)^4} + \frac{\pi^2 n^2 (\, \mathcal{J}^4 + 4 \, \mathcal{J}^2 + 2)}{24 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^2} + \frac{\pi^4 n^4}{180 \, \mathcal{J}^5} \right] \mathcal{S}^3 \nonumber
+	+ \mathcal{O}(\mathcal{S}^4)  \\
+	&&\delta\Delta_{dressing} = \left[ \frac{n \, (\mathcal{J}^2 + 2) \, \mathrm{coth}^{-1} (\sqrt{\, \mathcal{J}^2 + 1} + \, \mathcal{J})}{\, \mathcal{J}^3(\, \mathcal{J}^2 + 1)^{3/2}} -\frac{n}{2 \, \mathcal{J}^3 (\, \mathcal{J}^2 + 1)}  \right] \mathcal{S}^2 \nonumber \\
+	&&+ \left[ -\frac{n(3 \, \mathcal{J}^6 + 13 \, \mathcal{J}^4 + 22 \, \mathcal{J}^2 + 8)\, \mathrm{coth}^{-1} (\sqrt{\, \mathcal{J}^2 + 1} + \, \mathcal{J})}{2 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^3} + \frac{n(9 \, \mathcal{J}^4 + 31 \, \mathcal{J}^2 + 10)}{12 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^{5/2}} \right] \mathcal{S}^3 \nonumber
+	+ \mathcal{O}(\mathcal{S}^4)
+\eeqa
+the expansion of the third integral $\delta\Delta_{wrapping}$ is more complicated, and we advice the reader to use
+the equation \eq{delta_oneloop} instead which includes all contributions. What we can, however, say is that
+	$\delta\Delta_{wrapping} = {\cal O}(e^{-2\pi{\cal J}})$
+and thus this term is irrelevant for the large ${\cal J}$ expansion.
+This makes the expressions \eq{anomaly_dressing} particularly convenient for
+small ${\cal S}$ followed by large ${\cal J}$ expansions,
+where as the exact ${\cal J}$ expression in \eq{delta_oneloop} is not
+very convenient since the sum of the expansion does not converge.
+
+
+\newpage
+\subsection{One Loop $(S,J)$ Folded String {\it Mathematica} {Code}}
+In order to fix all our conventions as well as for the convenience of the
+reader we include a simplified  {\it Mathematica} {code}
+we used to check our results numerically\\
+{\footnotesize
+\verb" "\\
+\verb"GS=((2*(a*b+1))*(b*EllipticE[1-a^2/b^2]-a*EllipticK[1-a^2/b^2]))/(4*Pi*a*b);"\\
+\verb"GJ=((4*Sqrt[(a^2-1)*(b^2-1)])*EllipticK[1-a^2/b^2])/(4*Pi*b);"\\
+\verb"y=Sqrt[x-a]*Sqrt[x+a]*Sqrt[x-b]*Sqrt[x+b];"\\
+\verb"F1[x_] =I*EllipticF[I*ArcSinh[Sqrt[-(((a-b)*(a-x))/((a+b)*(a+x)))]], (a+b)^2/(a-b)^2];"\\
+\verb"F2[x_] =I*EllipticE[I*ArcSinh[Sqrt[-(((a-b)*(a-x))/((a+b)*(a+x)))]], (a+b)^2/(a-b)^2];"\\
+\verb"pA[x_] =n*Pi-2*Pi*n*j*(a/(a^2-1)-x/(x^2-1))*Sqrt[((a^2-1)*(b^2-x^2))/((b^2-1)*(a^2-x^2))] +"\\
+\verb"       (8*a*b*s*Pi*n*F1[x])/((b-a)*(a*b+1))+(2*Pi*n*j*(a-b)*F2[x])/Sqrt[(a^2-1)*(b^2-1)];"\\
+\verb"pS[x_]=(2*Pi*n*j*x)/(x^2-1);"\\
+\verb"X[z_]=z+Sqrt[z^2-1];"\\
+\verb"OA[x_]=(2*(1-y/(x^2-1)))/(a*b-1);"\\
+\verb"OS[x_]=(2*(-(y /. x->1)))/((a*b-1)*(x^2-1));"\\
+\verb"ab[j_, s_] :=ab[j, s]=Chop[FindRoot[{s==GS, j==GJ}, {{b, Sqrt[j^2+1]+j+Sqrt[s]/10}"\\
+\verb"                                                    ,{a, Sqrt[j^2+1]+j-Sqrt[s]/10}}]];"\\
+\verb"OneLoop[jj_, ss_, nn_] := Block[{sb0=Join[ab[jj, ss], {j->jj, s->ss, n->nn}]},"\\
+\verb"tn0=(2*Im[pA[X[z]]-pS[X[z]]]*Im[D[OA[X[z]]-OS[X[z]], z]])/Pi /. sb0;"\\
+\verb"Edressing=NIntegrate[tn0, {z, 0, 1}];"\\
+\verb"tn1=(2*D[OS[X[z]], z]*Log[((1-Exp[(-I)*pS[X[z]]-I*pA[X[z]]])*(1-Exp[(-I)*pS[X[z]]+I*pA[1/X[z]]]))/"\\
+\verb"                                                              (1-Exp[-2*I*pS[X[z]]])^2])/Pi /. sb0;"\\
+\verb"tn2=-((2*D[OA[X[z]], z]*Log[((1-Exp[-2*I*pA[X[z]]])*(1-Exp[(-I)*pA[X[z]]+I*pA[1/X[z]]]))/"\\
+\verb"                                                  (1-Exp[(-I)*pS[X[z]]-I*pA[X[z]]])^2])/Pi) /. sb0;"\\
+\verb"Ewrapping=NIntegrate[Im[tn1+tn2], {z, 0, 1}];"\\
+\verb"tn=-((4*y*D[Log[Sin[pA[x]]], x])/((a*b-1)*(2*Pi*I)*(x^2-1))) /. sb0;"\\
+\verb"Eanomaly=Re[NIntegrate[tn, {x, a /. sb0, ((a+b)*(1+I))/(2*10) /. sb0, b /. sb0}]];"\\
+\verb"Edressing+Ewrapping+Eanomaly];"
+\verb" "\\
+}\\
+To compute $\Delta_{\rm 1-loop}$ simply run \verb"OneLoop["${\cal J},{\cal S}, n$\verb"]" in {\it Mathematica}.
+
+\section{$S^3$ and $S^4$ order}\label{AppS4}
+The $\mathcal{S}^3$ order term in the expression of \eq{delta_oneloop} is given by
+\beqa
+\label{delta_oneloop_3}
+\delta\Delta_{1-loop}^{(3)} &=&-\frac{6 \, \mathcal{J}^8 + 48 \, \mathcal{J}^6+ 138 \, \mathcal{J}^4 + 352 \, \mathcal{J}^2 + 117 }{64 \, \mathcal{J}^5 (\, \mathcal{J}^2 + 1)^4 }  \\
+ &+& \sum_{m>0,m\neq n}
+\nn \frac{P_3(n,m,{\cal J}) }{2 \, \mathcal{J}^5 (\, \mathcal{J}^2 + 1)^{3/2} (m^2 - n^2)^4  (\mathcal{J}^2 n^2 + m^2)^{5/2}}
+\eeqa
+and the $\mathcal{S}^4$ order term is given by
+\beqa
+\label{delta_oneloop_4}
+\delta\Delta_{1-loop}^{(4)} &=&
+\frac{45 {\cal J}^{12}+717 {\cal J}^{10}+3429 {\cal J}^8+11205
+   {\cal J}^6+27601 {\cal J}^4+15789 {\cal J}^2+3305}{1024 {\cal J}^7
+   \left({\cal J}^2+1\right)^{11/2}} \\
+   &-& \sum_{m>0,m\neq n}\frac{P_4(n,m,\cal J)}{16 {\cal J}^7 \left({\cal J}^2+1\right)^3 (m^2-n^2)^6 \left(m^2+n^2
+   {\cal J}^2\right)^{7/2}} \nonumber
+\eeqa
+where
+\beqa
+P_3(n,m,{\cal J})=&+&
+m^{10} n^3 \left(4 {\cal J}^4+11 {\cal J}^2+6\right)+2 m^8 n^5 \left(3
+   {\cal J}^6+5 {\cal J}^4-6 {\cal J}^2-6\right)\\
+\nn&+&2 m^6 n^7 \left({\cal J}^8-4 {\cal J}^6-11 {\cal J}^4+6 {\cal J}^2+9\right)+2 m^4
+   n^9 \left(-2 {\cal J}^8+9 {\cal J}^6+29 {\cal J}^4+14
+   {\cal J}^2-2\right)\\&+&m^2 n^{11} {\cal J}^2 \left(10 {\cal J}^6+16
+\nn   {\cal J}^4-2 {\cal J}^2-7\right)\;,
+\\P_4(n,m,{\cal J})=
+&+&4 m^{16} n^3 \left(8 {\cal J}^8+42 {\cal J}^6+85 {\cal J}^4+68
+   {\cal J}^2+20\right)
+\\&+&m^{14} n^5 \left(80 {\cal J}^{10}+302 {\cal J}^8+199
+   {\cal J}^6-703 {\cal J}^4-936 {\cal J}^2-340\right)
+\nn\\&+&m^{12} n^7 \left(64
+   {\cal J}^{12}-12 {\cal J}^{10}-893 {\cal J}^8-1765 {\cal J}^6+151
+   {\cal J}^4+1587 {\cal J}^2+740\right)
+\nn\\&+&m^{10} n^9 \left(16 {\cal J}^{14}-222
+   {\cal J}^{12}-587 {\cal J}^{10}+1209 {\cal J}^8+5444 {\cal J}^6+4374
+   {\cal J}^4+388 {\cal J}^2-520\right)
+\nn\\&+&2 m^8 n^{11} \left(-38 {\cal J}^{14}+200
+   {\cal J}^{12}+1446 {\cal J}^{10}+2505 {\cal J}^8+769 {\cal J}^6-511
+   {\cal J}^4+17 {\cal J}^2+210\right)
+\nn\\&+&m^6 n^{13} \left(200 {\cal J}^{14}+572
+   {\cal J}^{12}+206 {\cal J}^{10}-176 {\cal J}^8+2199 {\cal J}^6+3085
+   {\cal J}^4+1068 {\cal J}^2-60\right)
+\nn\\&+&m^4 n^{15} {\cal J}^2 \left(-76
+   {\cal J}^{12}+464 {\cal J}^{10}+2920 {\cal J}^8+5315 {\cal J}^6+3667
+   {\cal J}^4+643 {\cal J}^2-173\right)
+\nn\\&+&m^2 n^{17} {\cal J}^4 \left(256
+   {\cal J}^{10}+962 {\cal J}^8+1221 {\cal J}^6+401 {\cal J}^4-250
+   {\cal J}^2-148\right)\;.\nn
+\eeqa
+The expansion \eq{delta_oneloop_sj} can also be written in higher orders of $\mathcal{S}$ and $\mathcal{J}$, for $n=1$ we get
+{\small
+\beqa
+	&&\Delta_{1-loop} = \( \frac{-1}{2\, \mathcal{J}} + \frac{\mathcal{J}}{2} \) \, \mathcal{S} + \( \frac{1}{2 \, \mathcal{J}^3} - \[ \frac{3 \, \zeta_3}{2} + \frac{1}{16} \] \frac{1}{ \mathcal{J}} + \[\frac{3 \, \zeta_3}{2} + \frac{15 \, \zeta_5}{8} - \frac{21}{32} \] \, \mathcal{J}  \) \, \mathcal{S}^2  \\
+	&+& \( \frac{-3}{4 \, \mathcal{J}^5} + \[ \frac{3 \, \zeta_3}{2} + \frac{3}{16} \] \frac{1}{ \mathcal{J}^3} + \[ \frac{9 \, \zeta_3}{8} - \frac{1}{32} \] \frac{1}{\mathcal{J}} + \[ \frac{5}{4} - \frac{17 \, \zeta_3}{4} - \frac{65 \, \zeta_5}{16} - \frac{35 \, \zeta_7}{16} \] \, \mathcal{J}  \) \, \mathcal{S}^3\nonumber
+\\  &+&\(
+\frac{5}{4 {\cal J}^7}-
+\[\frac{7}{32}+\frac{9 \zeta_3}{4}\]\frac{1}{{\cal J}^5}
+-\[{\frac{3 \zeta_3}{4}-\frac{15 \zeta_5}{16}+\frac{5}{32}}\]\frac{1}{{\cal J}^3}-
+\[{\frac{145 \zeta_3}{64}+\frac{45 \zeta_5}{32}+\frac{175 \zeta_7}{128}+\frac{27}{1024}}\]\frac{1}{{\cal J}}
+   \){\cal S}^4 + \mathcal{O}(\mathcal{S}^5)\;,\nn
+\eeqa}
+for $n=2$,
+{\small
+\beqa
+	&&\Delta_{1-loop} = \( \frac{-1}{2\, \mathcal{J}} + \frac{\mathcal{J}}{2} \) \, \mathcal{S} + \( \frac{1}{2 \, \mathcal{J}^3} - \[ 12 \, \zeta_3 + \frac{17}{16} \] \frac{1}{ \mathcal{J}} + \[12 \, \zeta_3 + 60 \, \zeta_5 + \frac{27}{32} \] \, \mathcal{J}  \) \, \mathcal{S}^2   \\
+	&+& \( \frac{21}{4 \, \mathcal{J}^5} + \[ 12 \, \zeta_3 + \frac{19}{16} \] \frac{1}{ \mathcal{J}^3} + \[ 9 \, \zeta_3 + \frac{47}{32} \] \frac{1}{\mathcal{J}} - \[ \frac{19}{4} + 34 \, \zeta_3 + 130 \, \zeta_5 + 280 \, \zeta_7 \] \, \mathcal{J}  \) \, \mathcal{S}^3 \nonumber\\
+  &+&\(
+-\frac{175}{4 {\cal J}^7}-
+\[\frac{727}{32}+18 \zeta_3\]\frac{1}{{\cal J}^5}
+-\[{{6 \zeta_3}{}-30 \zeta_5-\frac{155}{32}}\]\frac{1}{{\cal J}^3}-
+\[{\frac{145 \zeta_3}{8}+{45 \zeta_5}+{175 \zeta_7}+\frac{7419}{1024}}\]\frac{1}{{\cal J}}
+   \){\cal S}^4 + \mathcal{O}(\mathcal{S}^5)\;,\nn
+\eeqa}
+and finally for $n=3$,
+\beqa
+	&&\Delta_{1-loop} = \( \frac{-1}{2\, \mathcal{J}} + \frac{\mathcal{J}}{2} \) \, \mathcal{S} + \( \frac{-5}{8 \, \mathcal{J}^3} - \[ \frac{81 \, \zeta_3}{2} + \frac{7}{4} \] \frac{1}{ \mathcal{J}} + \[\frac{81 \, \zeta_3}{2} + \frac{3645 \, \zeta_5}{8} - \frac{147}{64} \] \, \mathcal{J}  \) \, \mathcal{S}^2  \\
+	&+& \( \frac{1245}{32 \, \mathcal{J}^5} + \[ \frac{81 \, \zeta_3}{2} + \frac{39}{16} \] \frac{1}{ \mathcal{J}^3} + \[ \frac{243 \, \zeta_3}{8} + \frac{89}{32} \] \frac{1}{\mathcal{J}} - \[ \frac{89}{8} + \frac{459 \, \zeta_3}{4} + \frac{15795 \, \zeta_5}{16} + \frac{76545 \, \zeta_7}{16} \] \, \mathcal{J}  \) \, \mathcal{S}^3 \nonumber \\
+	&-& \( \frac{258785}{512 \, \mathcal{J} ^7} + \[ \frac{243 \, \zeta_3}{4} + \frac{251423}{1024} \] \frac{1}{\mathcal{J}^5} - \[ \frac{3645 \, \zeta_5}{16} - \frac{81 \, \zeta_3}{4} + \frac{256229}{4096} \] \frac{1}{\mathcal{J} ^3} \right.  \nonumber \\
+	&+& \left. \frac{27 \, (907200 \, \zeta_7 + 103680 \, \zeta_5 + 18560 \, \zeta_3 + 13457)}{8192 \, \mathcal{J} } \) \, \mathcal{S}^4 + \mathcal{O}(\mathcal{S}^5). \nonumber
+\eeqa
+% These one-loop expressions can now be compared to \eq{As}, which is determined based on the exact slope conjecture of \cite{Basso:2011rs}. For $n=1$ the conjectured expression matches the exact result expanded up to 3 orders in $\mathcal{S}$, which hints that the conjecture is true. However for $n=2$ and $n=3$ we found the following inconsistencies:
+% \begin{itemize}
+	% \item when $n=2$, the coefficient of $\mathcal{S}^3/\mathcal{J}^5$ is predicted to be $-3/4$, but is actually $21/4$,
+	% \item when $n=2$, the coefficient of $\mathcal{S}^4/\mathcal{J}^7$ is predicted to be $\frac{5}{4}$, but is actually $-\frac{175}{4}$,
+	% \item when $n=2$, the coefficient of $\mathcal{S}^4/\mathcal{J}^5$ is predicted to be $-\frac{55 + 576 \, \zeta_3}{32}$, but is actually $-\frac{727 + 576 \, \zeta_3}{32}$,
+	% \item when $n=3$, the coefficient of $\mathcal{S}^2/\mathcal{J}^3$ is predicted to be $1/2$, but is actually $-5/8$,
+	% \item when $n=3$, the coefficient of $\mathcal{S}^3/\mathcal{J}^5$ is predicted to be $-3/4$, but is actually $1245/32$,
+	% \item when $n=3$, the coefficient of $\mathcal{S}^3/\mathcal{J}^3$ is predicted to be $\frac{3(5 + 108 \, \zeta_3)}{8}$, but is actually $\frac{3(13 + 216 \, \zeta_3)}{16}$,
+	% \item when $n=3$, the coefficient of $\mathcal{S}^4/\mathcal{J}^7$ is predicted to be $\frac{5}{4}$, but is actually $-\frac{258785}{512}$,
+	% \item when $n=3$, the coefficient of $\mathcal{S}^4/\mathcal{J}^5$ is predicted to be $-\frac{11 + 243 \, \zeta_3}{4}$, but is actually $-\frac{251423 + 62208	\, \zeta_3}{1024}$.
+	
+% \end{itemize}
+% As stated before, this signals that the conjecture has to be modified for cases when $n>1$.

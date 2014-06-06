@@ -2,20 +2,27 @@
 
 \section{ABJM}
 
-\subsection{Definitions}
-
-\subsection{Weak coupling}
-
-\subsection{Algebraic curve}
+\subsection{Algebraic curve quantization in $\adscp$}
 
 
-This section describes a newly performed semiclassical analysis in $AdS_4/CFT_3$ by the author which culminated in the publications \cite{Beccaria:2012qd} and \cite{Beccaria:2012vb}. All of the analysis has been largely carried out by the author individualy, however the publications were co-authored with three other researchers in order not to compete and effectively duplicate the results, instead focusing on cross checking and speeding up the calculations. This work largely follows the analysis in $AdS_5/CFT_4$, however it turns out to be more technically involved, posing some very interesting questions in the process. 
-
-We will write all equations in terms of the $\sigma$-model coupling $g$. For large $g$, it is  related to the 't Hooft coupling by $\lambda = N/k = 8\,g^{2}$, but, contrary to the $\adsfive$ case, this relation will get corrections at finite $g$.  The classical algebraic curve for $\adscp$ is a 10-sheeted Riemann surface. The spectral parameter moves on it and  we shall consider 10 symmetric quasi momenta $q_{i}(x)$ 
-\begin{equation}
+We give in this section a compact self-contained summary of the results of \cite{Gromov:2008bz} using the 
+language of off-shell fluctuation energies \cite{Gromov:2008ec}. We shall work in the algebraic curve 
+regularization and write all equations in terms of the $\sigma$-model coupling $g$. For large $g$, it is 
+related to the 't Hooft coupling by 
+\beq
+\lambda = N/k = 8\,g^{2},
+\eeq
+but, contrary to the \ads\ case, this relation will get corrections at finite $g$.
+The classical algebraic curve for $\adscp$ is a 10-sheeted Riemann surface. The spectral parameter moves on it and 
+we shall consider 10 symmetric quasi momenta $q_{i}(x)$ 
+\beq
 (q_{1}, q_{2}, q_{3}, q_{4}, q_{5}) = (-q_{10}, -q_{9}, -q_{8}, -q_{7}, -q_{6}).
-\end{equation}
-They can have branch cuts connecting the sheets with $q_{i}^{+}-q_{j}^{-} = 2\,\pi\,n_{ij}$. In the terminology of \cite{Gromov:2008bz}, the physical polarizations $(ij)$ can be split into {\em heavy} and {\em light} ones and are summarized in the following table:
+\eeq
+They can have branch cuts connecting the sheets with 
+\beq
+q_{i}^{+}-q_{j}^{-} = 2\,\pi\,n_{ij}.
+\eeq
+In the terminology of \cite{Gromov:2008bz}, the physical polarizations $(ij)$ can be split into {\em heavy} and {\em light} ones and are summarized in the following table:
  $$
  \begin{array}{c|ccc}
   & \mbox{AdS${}_{4}$} & \mbox{Fermions} & \mathbb{CP}^{3} \\
@@ -24,111 +31,661 @@ They can have branch cuts connecting the sheets with $q_{i}^{+}-q_{j}^{-} = 2\,\
   \mbox{light} & & (1,5) (1,6) (2,5) (2,6) & \quad (3,5) (3,6) (4,5) (4,6)\quad
   \end{array}
  $$
-Inversion symmetry imposes these other constraints on the quasi momenta
-\begin{equation}
+ Virasoro constraints require that the poles of the quasi-momenta $q_{i}(x)$ at $x=\pm 1$ are synchronized according to
+\beq
+(q_{1},  q_{2}, q_{3}, q_{4}, q_{5}) = \frac{\alpha_{+}}{x-1}\,(1,1,1,1,0)+\cdots = 
+\frac{\alpha_{-}}{x+1}\,(1,1,1,1,0)+\cdots.
+\eeq
+Inversion symmetry reads
+\beq
 q_{1}(x) = -q_{2}(1/x), \qquad
 q_{3}(x) = 2\,\pi\,m-q_{4}(1/x), \qquad
 q_{5}(x) = q_{5}(1/x),
-\end{equation}
-where $m\in\mathbb Z$ is a winding number. Thus, only 3 out of 10 quasi momenta are independent.
+\eeq
+where $m\in\mathbb Z$ is a winding number. The asymptotic values of the quasi-momenta for a length $L$ state with energy and spin $E$, $S$ are
+\beq
+\label{eq:asym}
+\left(\begin{array}{c} q_{1}(x) \\ q_{2}(x) \\ q_{3}(x) \\ q_{4}(x) \\ q_{5}(x) \end{array}\right) = 
+\frac{1}{2\,g\,x}\,\left(\begin{array}{l} 
+L+E+S \\
+L+E-S \\
+L-M_{r}+M_{s} \\
+L+M_{r}-M_{u}-M_{v} \\
+M_{v}-M_{u}
+\end{array}\right)+\cdots ,
+\eeq
+where $M_{r,u,v}$ are related to the  $SU(4)$ representation of the state 
+\beq
+[d_{1}, d_{2}, d_{3}] = [L-2M_{u}+M_{r}, M_{u}+M_{v}-2M_{r}+M_{s}, L-2M_{v}+M_{r}].
+\eeq
+
+
+\subsection{Semiclassical quantization}
 
 Semiclassical quantization is achieved by perturbing quasi-momenta introducing extra poles that shift the quasi-momenta
-$q_{i}\to q_{i}+\delta q_{i}$.
-The asymptotic expression of $\delta q_{i}$ are related to the number $N_{ij}$ of extra fluctuations and to the energy correction $\delta E$.
-The off-shell frequencies $\Omega^{ij}(x)$ are defined in order to have %$\delta E = \sum_{n, ij} N^{ij}_{n}\,\Omega^{ij}(x^{ij}_{n})$,
-\begin{equation}
+$q_{i}\to q_{i}+\delta q_{i}$. Virasoro constraints and inversion properties of the variations $\delta q_{i}$ follow from those of the $q_{i}$'s. In order to find the asymptotic expression of $\delta q_{i}$ in terms of the number $N_{ij}$ of extra fluctuations we can look at the details of polarized states and obtain 
+\beq
+\label{eq:asym2}
+\left(\begin{array}{c} \delta q_{1}(x) \\ \delta q_{2}(x) \\ \delta q_{3}(x) \\ \delta q_{4}(x) \\ \delta q_{5}(x) \end{array}\right) = 
+\frac{1}{2\,g\,x}\,\left(\begin{array}{ccc} 
+\delta E+N_{19}+2\,N_{1, 10} & +N_{15}+N_{16}+N_{17}+N_{18} & \\
+\delta E+2\,N_{29}+N_{19} & +N_{25}+N_{26}+N_{27}+N_{28} & \\
+& -N_{18}-N_{28} & -N_{35}-N_{36}-N_{37} \\
+& -N_{17}-N_{27} & -N_{45}-N_{46}-N_{37} 	\\
+& +N_{15}-N_{16}+N_{25}-N_{26} & +N_{35}-N_{36}+N_{45}-N_{46}
+\end{array}\right).
+\eeq
+The off-shell frequencies $\Omega^{ij}(x)$ are defined in order to have 
+\beq
 \delta E = \sum_{n, ij} N^{ij}_{n}\,\Omega^{ij}(x^{ij}_{n}),
-\end{equation}
-where the sum is over all pairs $(ij)\equiv (ji)$ of physical polarizations and integer values of $n$ with $q_{i}(x^{ij}_{n})-q_{j}(x^{ij}_{n}) = 2\,\pi\,n$.
-By linear combination of frequencies and inversion (as in the ${\rm AdS}_{5}/{\rm CFT}_{4}$ case), we can derive all  the off-shell frequencies in terms of two fundamental ones $\Omega_{A}(x) = \Omega^{15}(x)$, $\Omega_{B}(x) = \Omega^{45}(x)$.
-Their explicit expressions turn out to be 
-\begin{eqnarray}
-&& \Omega^{29} =  2\,\left[-\Omega_{A}(1/x)+\Omega_{A}(0)\right], \nonumber \qquad \quad\ \ 
-\Omega^{1, 10} =  2\,\Omega_{A}(x),\nonumber \\
-&& \Omega^{19} =  \Omega_{A}(x)-\Omega_{A}(1/x)+\Omega_{A}(0), \nonumber \qquad \,
-\Omega^{37} =\Omega_{B}(x)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
-&& \Omega^{35}  = \Omega^{36} = -\Omega_{B}(1/x)+\Omega_{B}(0),\nonumber \qquad \ 
-\Omega^{45} = \Omega^{46} = \Omega_{B}(x), \nonumber \\
-&&\Omega^{17} = \Omega_{A}(x)+\Omega_{B}(x), \nonumber \qquad \qquad \qquad \ 
-\Omega^{18} = \Omega_{A}(x)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
-&& \Omega^{27} = \Omega_{B}(x)-\Omega_{A}(1/x)+\Omega_{A}(0), \nonumber \qquad
-\Omega^{28} = -\Omega_{A}(1/x)+\Omega_{A}(0)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
-&& \Omega^{15} = \Omega^{16} = \Omega_{A}(x), \nonumber \qquad \qquad \qquad \quad \ 
-\Omega^{25} = \Omega^{26} = -\Omega_{A}(1/x)+\Omega_{A}(0).
-\end{eqnarray}
-In terms of the semiclassical variables $\mathcal S = \frac{S}{4\,\pi\,g}$ and $\mathcal J = \frac{J}{4\,\pi\,g}$, the energy of the folded string can be expanded according to 
-\begin{equation}
-E = 4\,\pi\,g\,\,\mathcal E_{0}(\mathcal J, \mathcal S)+\delta E(\mathcal J, \mathcal S)+\mathcal O\left(\frac{1}{g}\right),
-\end{equation}
-where the small $\mathcal S$ expansion of the classical contribution $\mathcal E_{0}$ reads
-\begin{equation}
+\eeq
+where the sum is over all pairs $(ij)\equiv (ji)$ of physical polarizations and integer values of $n$ with 
+\beq
+\label{eq:pole}
+q_{i}(x^{ij}_{n})-q_{j}(x^{ij}_{n}) = 2\,\pi\,n.
+\eeq
+Also, the residues at the extra poles are
+\beq
+\delta q_{i}(x) = k_{ij}\,N_{n}^{ij}\,\frac{\alpha(x^{ij}_{n})}{x-x_{n}^{ij}},\quad\mbox{with}\quad
+\alpha(x) = \frac{1}{2\,g}\,\frac{x^{2}}{x^{2}-1},
+\eeq
+and $k_{ij}=0, \pm 1, \pm 2$ are the coefficients of $N_{ij}$ in (\ref{eq:asym2}).
+%
+%\subsection{Off shell frequencies}
+%
+By linear combination of frequencies and inversion (as in the \maldafive case), we can derive all  the off-shell frequencies in terms of two fundamental ones
+\beq
+\Omega_{A}(x) = \Omega^{15}(x), \qquad \Omega_{B}(x) = \Omega^{45}(x).
+\eeq
+Their explicit expressions turns out to be 
+\ba
+\Omega^{29} &=&  2\,\left[-\Omega_{A}(1/x)+\Omega_{A}(0)\right], \nonumber \\
+\Omega^{1, 10} &=&  2\,\Omega_{A}(x),\nonumber \\
+\Omega^{19} &=&  \Omega_{A}(x)-\Omega_{A}(1/x)+\Omega_{A}(0), \nonumber \\
+\Omega^{37} &=&\Omega_{B}(x)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
+\Omega^{35}  = \Omega^{36} &=& -\Omega_{B}(1/x)+\Omega_{B}(0),\nonumber \\
+\Omega^{45} = \Omega^{46} &=& \Omega_{B}(x), \nonumber \\
+\Omega^{17} &=& \Omega_{A}(x)+\Omega_{B}(x), \nonumber \\
+\Omega^{18} &=& \Omega_{A}(x)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
+\Omega^{27} &=& \Omega_{B}(x)-\Omega_{A}(1/x)+\Omega_{A}(0), \nonumber \\
+\Omega^{28} &=& -\Omega_{A}(1/x)+\Omega_{A}(0)-\Omega_{B}(1/x)+\Omega_{B}(0), \nonumber \\
+\Omega^{15} = \Omega^{16} &=& \Omega_{A}(x), \nonumber \\
+\Omega^{25} = \Omega^{26} &=& -\Omega_{A}(1/x)+\Omega_{A}(0).
+\ea
+
+
+
+\subsection{The folded string in $\adscp$}
+
+
+We present the algebraic curve for the folded string in $\adscp$ closely following  the notation of  \cite{Gromov:2008fy}. In terms of the semiclassical variables
+\beq
+\mathcal S = \frac{S}{4\,\pi\,g}, \qquad
+\mathcal J = \frac{J}{4\,\pi\,g},
+\eeq
+the energy of the folded string can be expanded according to 
+\beq
+E = 4\,\pi\,g\,\,\mc E_{0}(\mc J, \mc S)+E_{1}(\mc J, \mc S)+\mc O\left(\frac{1}{g}\right),
+\eeq
+where the small $\mc S$ expansion of the classical contribution $\mc E_{0}$ reads
+\beq
 \label{eq:classical}
  \mathcal E_{0}= \mathcal J+\frac{\sqrt{\mathcal J^{2}+1}}{\mathcal J}\,\mathcal S-\frac{\mathcal J^{2}+2}{4\,\mathcal J^{3}(\mathcal J^{2}+1)}\,\mathcal S^{2}+ 
  \frac{3\,\mathcal J^{6}+13\,\mathcal J^{4}+20\,\mathcal J^{2}+8}{16\,\mathcal J^{5}\,(\mathcal J^{2}+1)^{5/2}}\,\mathcal S^{3}+\cdots.
-\end{equation}
-The quasi momenta are cloosely related to those of the $AdS_5 \times S^5$ folded string since motion is still in $AdS_{3}\times S^{1}$
-and the $\mathbb{CP}^{3}$ part of the background plays almost no role. The only non-trivial case is 
-\begin{eqnarray}
-q_{1}(x) &=& \pi\,f(x)\,\left\{-\frac{J}{4\,\pi\,g}\,\left(\frac{1}{f(1)\,(1-x)}-\frac{1}{f(-1)(1+x)}\right) 
--\frac{4}{\pi\,(a+b)(a-x)(a+x)}\ \times \right. \nonumber \\
-&& \left.\qquad \ \ \ \ \  \times \left[
-(x-a)\,\mathbb K\left(\frac{(b-a)^{2}}{(b+a)^{2}}\right)
-+ 2\,a\,\Pi\left(\left.
+\eeq
+%In the following, we shall be interested in the small $\mc J$ expansion of each term
+%\ba
+%\label{eq:classical}
+% \mathcal E_{0} &=&  \mc J+\left(
+% \frac{1}{\mathcal{J}}+\frac{\mathcal{J}}{2}-\frac{\mathcal{J}^3}{8}+\frac{\mathcal{J}^5}{16}+\cdots
+% \right)\,\mc S + \nonumber \\
+% && +\left(
+% -\frac{1}{2 \mathcal{J}^3}+\frac{1}{4
+%   \mathcal{J}}-\frac{\mathcal{J}}{4}+\frac{\mathcal{J}^3}{4}-\frac{\mathcal{J}^5}{4}+\cdots
+%   \right)\,\mc S^{2} + \nonumber \\
+%&& +\left(
+%\frac{1}{2 \mathcal{J}^5}-\frac{1}{8 \mathcal{J}}+\frac{11 \mathcal{J}}{32}-\frac{155 \mathcal{J}^3}{256}+\frac{231
+%   \mathcal{J}^5}{256}+\cdots
+%    \right)\,\mc S^{3} +\cdots
+% \ea
+
+\subsection{Quasi-momenta}
+
+The quasi momenta are closely related to those of the \ads folded string since motion is still in $AdS_{3}\times S^{1}$
+and the $\mathbb{CP}^{3}$ part of the background plays almost no role. The only non trivial case is 
+\ba
+q_{1}(x) &=& \pi\,f(x)\,\left\{-\frac{J}{4\,\pi\,g}\,\left(\frac{1}{f(1)\,(1-x)}-\frac{1}{f(-1)(1+x)}\right)+ \right. \\
+&& \left. -\frac{4}{\pi\,(a+b)(a-x)(a+x)}\left[
+(x-a)\,\mathbb K\left(\frac{(b-a)^{2}}{(b+a)^{2}}\right)+ \right.\right. \nonumber \\
+&& \left.\left. + 2\,a\,\Pi\left(\left.
 \frac{(b-a)(a+x)}{(a+b)(x-a)} \right| \frac{(b-a)^{2}}{(b+a)^{2}}
 \right)
 \right]
-\right\}-\pi,
-\end{eqnarray}
-where $1<a<b$, $f(x) = \sqrt{x-a}\,\sqrt{x+a}\,\sqrt{x-b}\,\sqrt{x+b}$ and
-\begin{eqnarray}
-&& S = 2\,g\,\frac{ab+1}{ab}\,\left[b\,\mathbb E\left(1-\frac{a^{2}}{b^{2}}\right)
--a\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right)\right], 
-\quad \nonumber 
-J = \frac{4\,g}{b}\,\sqrt{(a^{2}-1)(b^{2}-1)}\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right), \\
-&&\phantom{MBnmnpfdmdqctpdm} E = 2\,g\,\frac{ab-1}{ab}\,\left[b\,\mathbb E\left(1-\frac{a^{2}}{b^{2}}\right)
-+a\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right)\right].
-\end{eqnarray}
-The other independent quasi-momenta are $q_{3}(x) = \frac{J}{2\,g}\,\frac{x}{x^{2}-1}$, $q_{5}(x) = 0$. The above expressions are valid for a folded string with minimal winding. Adding winding is trivial at the classical level, but requires non-trivial changes at the one-loop level \cite{Gromov:2011bz}. The independent off-shell frequencies can be determined by the methods of \cite{Gromov:2008ec} and read
-\begin{eqnarray}
-&& \Omega_{A}(x) =  \frac{1}{ab-1}\left(1-\frac{f(x)}{x^{2}-1}\right),   \qquad \Omega_{B}(x) = \frac{\sqrt{a^{2}-1}\,\sqrt{b^{2}-1}}{ab-1}\,\frac{1}{x^{2}-1}.
-\end{eqnarray}
-Finally the one-loop shift of the energy is given in full generality by the following sum of zero point energies
-\begin{equation}
-\label{eq:one-loop-correction}
-\delta E = \frac{1}{2}\,\sum_{n=-\infty}^{\infty}\,\sum_{ij}(-1)^{F_{ij}}\,\omega^{ij}_{n},\qquad
-\omega_{n}^{ij} = \Omega^{ij}(x^{ij}_{n}),
-\end{equation}
-where the sum over $(ij)$ is over the $8_{B}+8_{F}$ physical polarizations and $x^{ij}_{n}$ is the unique solution to the equation $q_{i}(x^{ij}_{n})-q_{j}(x^{ij}_{n}) = 2\,\pi\,n$ under the condition $|x_{n}^{ij}|>1$. The explicit sum over the infinite number of on-shell frequencies requires some care and a definite prescription  since the sums are not absolutely convergent due to cancellations between bosonic and fermionic contributions (see \cite{Beccaria:2012qd} for an exhaustive discussion about this point).
+\right\}-\pi.\nonumber
+\ea
+where the branch points obey $1<a<b$ and 
+\beq
+f(x) = \sqrt{x-a}\,\sqrt{x+a}\,\sqrt{x-b}\,\sqrt{x+b},
+\eeq
+\ba
+S &=& 2\,g\,\frac{ab+1}{ab}\,\left[b\,\mathbb E\left(1-\frac{a^{2}}{b^{2}}\right)
+-a\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right)\right], \nonumber \\
+J &=& \frac{4\,g}{b}\,\sqrt{(a^{2}-1)(b^{2}-1)}\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right). \\
+E &=& 2\,g\,\frac{ab-1}{ab}\,\left[b\,\mathbb E\left(1-\frac{a^{2}}{b^{2}}\right)
++a\,\mathbb K\left(1-\frac{a^{2}}{b^{2}}\right)\right].\nonumber
+\ea
+The other quasi-momenta are
+\ba
+&& q_{2}(x) = -q_{1}(1/x), \\
+&& q_{3}(x) = q_{4}(x)  = \frac{J}{2\,g}\,\frac{x}{x^{2}-1}.  \\
+&& q_{5}(x) = 0.
+\ea
+The above expressions are valid for a folded string with minimal winding. Adding winding is trivial at the classical level, but requires non trivial changes at the one-loop level (see for instance \cite{Gromov:2011bz}
+for a detailed analysis of the \ads\ case).
 
-The short string limit is generically $\mathcal S\to 0$. After a straightforward computation, our main result is 
-\begin{eqnarray}
+The independent off-shell frequencies can be determined by the methods of \cite{Gromov:2008ec}. The result is rather simple and reads~\footnote{Notice the important relation
+$\Omega_{B}(x) = -\Omega_{B}(1/x)+\Omega_{B}(0)$.
+}
+\ba
+&& \Omega_{A}(x) =  \frac{1}{ab-1}\left(1-\frac{f(x)}{x^{2}-1}\right),   \\
+&& \Omega_{B}(x) = \frac{\sqrt{a^{2}-1}\,\sqrt{b^{2}-1}}{ab-1}\,\frac{1}{x^{2}-1}.
+\ea
+
+
+
+\subsection{Integral representation for the one-loop correction to the energy}
+
+
+The one-loop shift of the energy is given in full generality by the following sum of zero point energies
+\beq
+\label{eq:one-loop-correction}
+E_{1} = \frac{1}{2}\,\sum_{n=-\infty}^{\infty}\,\sum_{ij}(-1)^{F_{ij}}\,\omega^{ij}_{n},\qquad
+\omega_{n}^{ij} = \Omega^{ij}(x^{ij}_{n}),
+\eeq
+where the sum over $ij$ is over the $8_{B}+8_{F}$ physical polarizations and $x^{ij}_{n}$ is the unique solution 
+to the equation (\ref{eq:pole})  under the condition $|x_{n}^{ij}|>1$~\footnote{ If it happens that for some $ij$ and $n$ the above equation has no solution, then we shall say that the polarization $(ij)$ has the { missing mode} $n$. Missing modes can be treated according to the procedure
+discussed in \cite{Gromov:2008ec}.
+}.
+
+In the same spirit as \cite{Gromov:2011de,Gromov:2011bz}, the infinite sum over on-shell frequencies can be 
+evaluated by contour integration in the complex plane. The result is quite similar to the \ads\ one and 
+reads
+\beq
+E_{1} = E_{1}^{\rm anomaly, 1}+E_{1}^{\rm anomaly, 2}+E_{1}^{\rm dressing}+E_{1}^{\rm wrapping},
+\eeq
+with~\footnote{Here, $x(z) = z+\sqrt{z^{2}-1}$. Also the anomaly contributions are computed integrating on the upper half complex plane.}
+\ba
+E_{1}^{\rm anomaly, 1} &=& 2\,\int_{a}^{b}\,\frac{dx}{2\,\pi\,i}\left[\Omega^{1,10}(x)-\Omega^{1,10}(a)\right]\,
+\partial_{x}\,\log\sin q_{1}(x), \\
+E_{1}^{\rm anomaly, 2} &=& -2\times 2\,\int_{a}^{b}\,\frac{dx}{2\,\pi\,i}\left[\Omega^{1,5}(x)-\Omega^{1,5}(a)\right]\,\partial_{x}\,\log\sin \frac{q_{1}(x)}{2}, \\
+E_{1}^{\rm dressing} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,i}
+\,\Omega^{ij}(z)\,\partial_{z}\frac{i\,\left[q_{i}(z)-q_{j}(z)\right]}{2},\\
+E_{1}^{\rm wrapping} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,i}
+\,\Omega^{ij}(z)\,\partial_{z}\log(1-e^{-i\,(q_{i}(z)-q_{j}(z))}),
+\ea 
+As in \ads, the labeling of the various contributions reminds their physical origin. In particular, dressing and wrapping contributions have been separated in order to split the asymptotic contribution from finite size effects. As in \ads, the anomaly terms are special 
+contributions arising from the deformation of contours and ultimately due to the presence of the algebraic curve cuts.
+The representation (\ref{eq:one-loop-correction}) is a compact formula for $E_{1}$ and can be evaluated numerically with minor effort. In order to understand it better, we shall now analyze the short and long string limit. In the former case, 
+we shall evaluate the explicit sum over frequencies clarifying the relation with the contour integrals. In the latter, we shall extract the analytical expansion at large spin directly from (\ref{eq:one-loop-correction}).
+
+\subsection{Short string limit}
+
+The short string limit is generically $\mc S\to 0$. Regarding $\mc J$, we shall consider two cases. The first amounts to 
+keeping $\mc J$ fixed, expanding in the end each coefficient of powers of $\mc S$ at small $\mc J$. This is 
+precisely the procedure worked out in \cite{Gromov:2011bz} in \ads. In the second case, we shall keep the ratio
+$\rho = \mc J/\sqrt\mc S$ fixed as in \cite{Beccaria:2012tu}. The two expansions are related, but not equivalent and provide useful different information.
+
+\subsection{Fixed $\mc J$ expansion}
+
+After a straightforward computation, our main result is 
+\ba
 \label{eq:GV}
-\delta E &=& 
+E_{1} &=& 
 \bigg(
 -\frac{1}{2 \mathcal{J}^2}+\frac{\log (2)-\frac{1}{2}}{\mathcal{J}}+\frac{1}{4}+\mathcal{J} \left(-\frac{3 \,\zeta (3)}{8}+\frac{1}{2}-\frac{\log (2)}{2}\right)-\frac{3
    \mathcal{J}^2}{16}+\\
    &&+\mathcal{J}^3 \left(\frac{3 \,\zeta (3)}{16}+\frac{45 \,\zeta (5)}{128}-\frac{1}{2}+\frac{3 \log (2)}{8}\right)+
    \cdots
-\bigg)\,\mathcal S+ \nonumber \\
+\bigg)\,\mc S+ \nonumber \\
 && +\bigg(
 \frac{3}{4 \mathcal{J}^4}+\frac{\frac{1}{2}-\log (2)}{\mathcal{J}^3}-\frac{1}{8 \mathcal{J}^2}+\frac{\frac{1}{16}-\frac{3 \,\zeta (3)}{4}}{\mathcal{J}}-\frac{1}{8}+\mathcal{J} \left(\frac{69 \,\zeta
    (3)}{64}+\frac{165 \,\zeta (5)}{128}-\frac{27}{32}+\frac{\log (2)}{2}\right)+\nonumber \\
    && +\frac{3 \mathcal{J}^2}{8}+\mathcal{J}^3 \left(-\frac{163 \,\zeta (3)}{128}-\frac{405 \,\zeta (5)}{256}-\frac{875 \,\zeta
    (7)}{512}+\frac{235}{128}-\log (2)\right)+\cdots
-\bigg)\,\mathcal S^{2}+ \dots
-% && + 
-% \bigg(
-% -\frac{5}{4 \mathcal{J}^6}+\frac{\frac{3 \log (2)}{2}-\frac{3}{4}}{\mathcal{J}^5}+\frac{\frac{9 \,\zeta (3)}{16}+\frac{1}{16}}{\mathcal{J}^3}+\frac{1}{16 \mathcal{J}^2}+\frac{\frac{45 \,\zeta
-   % (3)}{64}+\frac{75 \,\zeta (5)}{256}-\frac{7}{32}+\frac{\log (2)}{8}}{\mathcal{J}}+\frac{11}{64}+\nonumber \\
-   % &&  +\mathcal{J} \left(-\frac{89 \,\zeta (3)}{32}-\frac{745 \,\zeta (5)}{256}-\frac{3815 \,\zeta
-   % (7)}{2048}+2-\frac{33 \log (2)}{32}\right)-\frac{465 \mathcal{J}^2}{512}+\nonumber \\
-   % && + \mathcal{J}^3 \left(\frac{5833 \,\zeta (3)}{1024}+\frac{1585 \,\zeta (5)}{256}+\frac{98035 \,\zeta (7)}{16384}+\frac{259455
-   % \,\zeta (9)}{65536}-\frac{405}{64}+\frac{775 \log (2)}{256}\right)+\cdots
-%\bigg)\,\mathcal S^{3}+ \cdots\nonumber
-\end{eqnarray}
-This is the $AdS_4/CFT_3$ equivalent of the result \ref{delta_oneloop} in $AdS_5/CFT_4$. Unfortunately, since there is no analogue for Basso's conjecture, we were not able to do the same trick here.
+\bigg)\,\mc S^{2}+ \nonumber \\
+&& + 
+\bigg(
+-\frac{5}{4 \mathcal{J}^6}+\frac{\frac{3 \log (2)}{2}-\frac{3}{4}}{\mathcal{J}^5}+\frac{\frac{9 \,\zeta (3)}{16}+\frac{1}{16}}{\mathcal{J}^3}+\frac{1}{16 \mathcal{J}^2}+\frac{\frac{45 \,\zeta
+   (3)}{64}+\frac{75 \,\zeta (5)}{256}-\frac{7}{32}+\frac{\log (2)}{8}}{\mathcal{J}}+\frac{11}{64}+\nonumber \\
+   &&  +\mathcal{J} \left(-\frac{89 \,\zeta (3)}{32}-\frac{745 \,\zeta (5)}{256}-\frac{3815 \,\zeta
+   (7)}{2048}+2-\frac{33 \log (2)}{32}\right)-\frac{465 \mathcal{J}^2}{512}+\nonumber \\
+   && + \mathcal{J}^3 \left(\frac{5833 \,\zeta (3)}{1024}+\frac{1585 \,\zeta (5)}{256}+\frac{98035 \,\zeta (7)}{16384}+\frac{259455
+   \,\zeta (9)}{65536}-\frac{405}{64}+\frac{775 \log (2)}{256}\right)+\cdots
+\bigg)\,\mc S^{3}+ \cdots\nonumber
+\ea
+This expansion is rather similar to the one derived in \cite{Gromov:2011bz} for \ads, but there are two remarkable differences:
+\begin{enumerate}
+\item The leading terms at small $\mc J$ are $\mc O(\mc S^{n}/\mc J^{2n})$. Instead, they were $\mc O(\mc S^{n}/\mc J^{2n-1})$ in \ads. Also, there are terms with all parities in $\mc J$ while in \ads, there appear only terms odd under $\mc J\to -\mc J$. The additional terms are important and we shall discuss them in more details later. Remarkably, they 
+imply that if one scales $\mc J\sim \sqrt\mc S$ they give a constant contribution in the short string limit. This is different 
+from \ads\ where the energy correction vanishes like $\sqrt\mc S$ in this regime.
 
 
-\subsection{The $\pmu$-system}
 
-\subsubsection{Applications}
+\item There are terms proportional to $\log(2)$. As we  discuss in App.~(\ref{app:log2}), 
+these terms can be removed by expressing the energy correction in terms of the coupling in the 
+world-sheet scheme. The scheme dependence is universal and agrees with that found in 
+\cite{McLoughlin:2008he} for a circular string solution and in \cite{Abbott:2010yb}
+for the giant magnon.
+
+\end{enumerate}
+
+
+\subsection{Fixed $\rho = \mc J / \sqrt\mc S$ expansion}
+
+The result in this limit is 
+\ba
+\label{eq:our-expansion}
+&& E_{1} = -\frac{1}{2}\,\mc C(\rho, \mc S)+a_{01}(\rho)\,\sqrt\mathcal S+ a_{1,1}(\rho)\,\mathcal S^{3/2}+\mc O(\mc S^{5/2}),
+\ea
+where
+\ba
+a_{1,0}(\rho) &=& \frac{2\,\log (2)-1}{2\,\sqrt{\rho^{2}+2}}, \\
+a_{1,1}(\rho) &=& -\frac{\log (2)\left(2 \rho ^4+6 \rho ^2+3\right)}{4 \left(\rho ^2+2\right)^{3/2}}+\frac{8 \rho ^4+25 \rho ^2+16}{16 \left(\rho ^2+2\right)^{3/2}}-\frac{3 \left(\rho
+   ^2+3\right) \zeta (3)}{8 \sqrt{\rho ^2+2}},
+\ea
+and $\mc C$ is related to the branch cut endpoints by the formula
+\beq
+\label{eq:theC}
+\mc C = \frac{\sqrt{(a^{2}-1)\,(b^{2}-1)}}{1-a\,b}+1.
+\eeq
+Its expansion at small $\mc S$ with fixed $\rho=\mc J/\sqrt\mc S$ is 
+\beq
+\mc C = 1-\frac{\rho}{\sqrt{\rho^{2}+2}}-\frac{2\,\rho^{3}+5\,\rho}{4\,(\rho^{2}+2)^{3/2}}\,\mc S + 
+\frac{\rho\,(12\,\rho^{6}+68\,\rho^{4}+126\,\rho^{2}+73)}{32\,(\rho^{2}+2)^{5/2}}\,\mc S^{2}+\cdots
+\eeq
+Expanding $E_{1}$ at large $\rho$ we  partially resum the calculation at fixed $\mathcal J$. Just to give an 
+example, from the expansion 
+\beq
+-\frac{1}{2}\left(1-\frac{\rho}{\sqrt{\rho^{2}+2}}\right) = -\frac{1}{2 \rho ^2}+\frac{3}{4 \rho ^4}-\frac{5}{4 \rho ^6}+\frac{35}{16 \rho
+   ^8}-\frac{63}{16 \rho ^{10}}+\cdots,
+\eeq
+we read the coefficients of {\bf all } terms $\sim \mc S^{n}/\mc J^{2n}$. The first ones are of course in agreement
+with (\ref{eq:GV}). As another non trivial example, the large $\rho$ expansion of $a_{11}(\rho)$ is 
+\ba
+a_{11}(\rho) &=& \rho  \left(-\frac{3 \zeta
+   (3)}{8}+\frac{1}{2}-\frac{\log
+   (2)}{2}\right)+\frac{\frac{1}{16}-\frac{3 \zeta
+   (3)}{4}}{\rho }+\frac{\frac{9 \zeta
+   (3)}{16}+\frac{1}{16}}{\rho ^3}+\\
+   &&+\frac{-\frac{3
+   \zeta (3)}{4}-\frac{1}{32}-\frac{\log
+   (2)}{4}}{\rho ^5}+\frac{\frac{75 \zeta
+   (3)}{64}-\frac{5}{32}+\frac{15 \log (2)}{16}}{\rho
+   ^7}+\cdots, \nonumber
+\ea
+and allows to read the coefficients of all terms $\sim \mc S^{n} / \mc J^{2n-3}$.
+
+\subsection{Summation issues}
+
+The explicit sum over the infinite number of on-shell frequencies requires some care and a definite prescription 
+since the sums are not absolutely convergent due to physically sensible cancellations between bosonic and fermionic contributions.
+As discussed in \cite{Gromov:2008fy}, the following summation prescription is natural from the point of view
+of the algebraic curve (see \cite{Bandres:2009kw} for a different prescription)~\footnote{Notice that we
+exploit the $x\to -x$ symmetry of the classical algebraic curve as well as triviality of zero mode corrections.}
+\beq
+E_{1} = \sum_{n=1}^{\infty} K_{n}, 
+\eeq
+where $K_{n}$ is a particular grouping of heavy and light modes
+\beq
+\label{eq:Kdef}
+K_{n} = \left\{\begin{array}{cc}
+\omega^{\rm heavy}_{n}+\omega^{\rm light}_{n/2} & \quad n\in 2\,\mathbb Z\\ \\
+\omega^{\rm heavy}_{n} & \quad n\not\in 2\,\mathbb Z,
+\end{array}\right.
+\eeq
+with
+\ba
+\omega_{n}^{\rm heavy} &=& \omega^{(AdS, 1)}_{n}+\omega^{(AdS, 2)}_{n}+\omega^{(AdS, 3)}_{n}+
+\omega^{(\mathbb{CP}, 1)}_{n}-2\,\omega^{(F, 1)}_{n}-2\,\omega^{(F, 2)}_{n}, \\
+\omega_{n}^{\rm light} &=& 4\,\omega^{(\mathbb{CP}, 2)}_{n}-2\,\omega^{(F, 3)}_{n}-2\,\omega^{(F, 4)}_{n}.
+\ea
+The short string expansion of $K_{n}$ takes the form
+\ba
+K_{p} &=& (-1)^{p}\,\mc C+\widehat K_{p}
+%K_{2p-1} &=& +\mc C + \widehat K_{2p-1}, \\
+%K_{2p} &=& -\mc C + \widehat K_{2p},
+\ea
+where $\mc C$, given in (\ref{eq:theC}),  is independent on $p$ and the sum of $\widehat K_{p}$ (which start 
+at $\mc O(\mc S)$) is convergent.
+The alternating constant $\mc C$ poses some problems because we have to give a meaning to 
+\beq
+-\mc C+\mc C-\mc C+\mc C+\cdots.
+\eeq
+An analysis of the integral representation shows that it automatically selects the choice
+\beq
+\label{eq:alternating}
+-\mc C+\mc C-\mc C+\mc C+\cdots \equiv -\frac{1}{2}\,\mc C
+\eeq
+Later, we shall provide various consistency checks of this prescription. In particular, we shall see that  
+it is necessary in order to match the
+asymptotic Bethe Ansatz equations when wrapping effects are subtracted.
+Notice also that the expansion of $\mc C$ at fixed $\mc J$ is 
+\beq
+\mc C = \frac{\mathcal{S}}{\mathcal{J}^2 \sqrt{\mathcal{J}^2+1}}-\frac{\left(3 \mathcal{J}^4+11 \mathcal{J}^2+6\right) \mathcal{S}^2}{4 \mathcal{J}^4
+   \left(\mathcal{J}^2+1\right)^2}+\frac{12\,\mc J^{8}+75\,\mc J^{6}+173\,\mc J^{4}+140\,\mc J^{2}+40}{16\,\mc J^{6}\,(\mc J^{2}+1)^{7/2}}\,\mc S^{3}+\cdots,
+ \eeq
+ so, upon expanding at small $\mc J$, it provides precisely 
+ the terms with even/odd $\mc J$ exponents in the coefficients of the odd/even powers of $\mc S$ in (\ref{eq:GV}).
+
+Apart from the $\mc C$ term, the integral representation implements the Gromov-Mikhailov (GM) prescription. The reason is that the singularities at $|x|=1$ are avoided by implicitly encircling them by a small circumference. This cut-off on $|x-1|$ translates in a bound on the highest mode $n$ that correlates heavy/light polarizations according to GM. In other words the highest mode for light polarizations is asymptotically half the highest mode for heavy polarizations. 
+
+As a numerical check of the agreement between the integral representation and the series expansion, 
+we fix $\rho=1$ in table (\ref{tab:check1})  and show
+the value of $E_{1}$ from our analytical resummation and result from the integral. The agreement is very good already 
+at moderately small $\mc S$.
+
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{c|ll}
+$\mc S$ & $E_{1}$ from (\ref{eq:our-expansion}) & $E_{1}$ \\
+\hline
+1/10 & -0.18790 & -0.17987  \\
+1/50 & -0.19461 & -0.19443 \\
+1/100 & -0.19934 & -0.19930 \\
+1/300 & -0.20449 & -0.20448 \\
+1/500 & -0.206075 & -0.206075
+\end{tabular}
+\caption{Comparison between resummation at fixed ratio
+$\rho=1$ and integral representation. The asymptotic value for $\mc S\to 0$ is $(\sqrt 3-3)/6\simeq -0.211$, but already at $\mc S = 1/500$ we have 6 digits agreement.
+}
+\label{tab:check1}
+\end{center}
+\end{table}
+
+\noindent
+A similar check at fixed $\mc J$ is shown in Fig.~(\ref{fig:check}) where we plot the asymptotic expansion (\ref{eq:GV}) and the exact numerical $E_{1}$ as functions of $\mc S$ at $\mc J=1/5$.
+
+% \begin{figure}[htb]
+% \begin{center}
+% \includegraphics[width=10cm]{check.pdf}
+% \caption{Asymptotic expansion (\ref{eq:GV}) [solid line] 
+% and  exact numerical $E_{1}$ [dashed line] as functions of $\mc S$ at $\mc J=1/5$.}
+% \label{fig:check}
+% \end{center}
+% \end{figure}
+
+\subsection{The slope function}
+\label{sec:slope}
+
+The one-loop correction $E_{1}$ tends to zero linearly with $\mc S$ when $\mc S\to 0$ at fixed $\mc J$.
+The slope ratio
+\beq
+\sigma(\mc J) = \lim_{\mc S\to 0}\frac{E_{1}(\mc S, \mc J)}{\mc S},
+\eeq
+is an important quantity  related to the conjectures in \cite{Basso:2011rs}~\footnote{The exact slope mentioned in 
+\cite{Basso:2011rs} is the coefficient of $S$ in the expansion of $E^{2}$. This line of analysis is suggested by the simplicity of the marginality condition in \ads (see \cite{Tseytlin:2003ac} for a general discussion). Here, it is simpler to discuss the quantity $\sigma(\mc J)$.} . It is known that it does not receive dressing corrections both in \ads\ and in $\adscp$ since such contributions start at 
+order $\mc S^{2}$ \cite{Basso:2011rs}. It also 
+does not receive wrapping corrections in $AdS_{5}$.  Instead, in the case of $AdS_{4}$ the slope has a non vanishing wrapping contribution. For instance, a rough evaluation at $\mc J=1$ gives  a definitely non zero value around $-0.042$.
+
+\bigskip
+Indeed, an analytical calculation shows that  the wrapping contribution to the slope in $\adscp$ is exactly
+\beq
+\sigma^{\rm wrap}(\mc J) = \sum_{n=-\infty}^{\infty}\sigma_{n} = -\frac{1}{2\,\mc J}\,\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}}{
+\sqrt{\mc J^{4}+(n^{2}+1)\,\mc J^{2}+n^{2}}}.
+\eeq
+This formula is in perfect agreement with numerics since for instance
+\beq
+\sigma^{\rm wrap}(\mc J=1) = -0.041777654879558824814\dots.
+\eeq
+The large $\mc J$ limit of this expression is exponentially suppressed as it should
+\beq
+\sigma^{\rm wrap}(\mc J)  = -\frac{\sqrt 2}{\mc J^{5/2}}\,e^{-\pi\,\mc J}+\cdots
+\eeq
+To analyze the small $\mc J$ limit it is convenient to split this contribution into the $n=0$ term plus the rest. The result is very intriguing. For the $n=0$ term, 
+we find 
+\ba
+\sigma^{\rm wrap}_{n=0} = -\frac{1}{2\,\mc J^{2}\,\sqrt{\mc J^{2}+1}} = 
+-\frac{1}{2 \mathcal{J}^2}+\frac{1}{4}-\frac{3 \mathcal{J}^2}{16}+\frac{5 \mathcal{J}^4}{32}-\frac{35 \mathcal{J}^6}{256}+\frac{63 \mathcal{J}^8}{512}+\cdots\,.
+\ea
+This is precisely the set of terms even under $\mc J\to -\mc J$ in the full slope which is the first term of  (\ref{eq:GV}).
+Similarly, we can consider the rest of $\sigma^{\rm wrap}$ and expand at small $\mc J$. We find 
+\ba
+\sum_{n\neq 0}\sigma^{\rm wrap}_n &=& \frac{\log (2)}{\mathcal{J}}+\mathcal{J} \left(-\frac{3 \zeta(3)}{8}-\frac{\log (2)}{2}\right)+\mathcal{J}^3 \left(\frac{3 \zeta(3)}{16}+\frac{45 \zeta(5)}{128}+\frac{3 \log (2)}{8}\right)+\nonumber \\
+&&+\mathcal{J}^5
+   \left(-\frac{9 \zeta(3)}{64}-\frac{45 \zeta(5)}{256}-\frac{315 \zeta(7)}{1024}-\frac{5 \log (2)}{16}\right)+O\left(\mathcal{J}^6\right).
+\ea
+Comparing again with (\ref{eq:GV}), we see that we are reproducing all the irrational terms of the slope, involving zeta functions or $\log(2)$. The remaining terms 
+are the same as in \ads~\footnote{
+This is due to the fact that the BAE are essentially the same as for $\mathfrak{sl}(2)$ sector in \ads. 
+This is however a nontrivial test that all is done correctly.
+},
+\beq
+\sigma(\mc J) -\sigma^{\rm wrap}(\mc J) = -\frac{1}{2\,\mc J}+\frac{\mc J}{2}-\frac{\mc J^{3}}{2}+\cdots.
+\eeq
+Thus, we are led to the following expression for the one-loop full slope 
+\beq
+\sigma(\mc J) = -\frac{1}{2\,\mc J}\left[\frac{1}{\mc J^{2}+1}+\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}}{
+\sqrt{\mc J^{4}+(n^{2}+1)\,\mc J^{2}+n^{2}}}
+\right].
+\eeq
+
+The above analysis of the slope is a confirmation  that the various terms in (\ref{eq:GV}) are organized in the expected way. The asymptotic contribution is precisely the same as in \ads, while wrapping is different and is exponentially
+suppressed for large operators. This is a property of the integral representation and a confirm that the 
+prescription (\ref{eq:alternating}) is correct.
+
+\subsection{Weak coupling}
+
+It is interesting to evaluate the slope at weak coupling.
+ In principle, this  requires the knowledge of the anomalous dimensions of 
+short $\mathfrak{sl}(2)$ operators in closed form as a function of the spin at a certain length ({\em i.e.} twist, in the gauge theory
+dictionary). This information is 
+available for the asymptotic contribution, but not for the wrapping, which is only known as a series expansion 
+at large spin and low twist \cite{Beccaria:2009ny,Beccaria:2010kd}.
+ Nevertheless, if we are interested in the correction to the slope only (so, just the first term at small spin), then the L\"uscher form of the wrapping correction
+presented in \cite{Beccaria:2009ny} is enough~\footnote{We kindly thank B. Basso for this important remark.}. 
+At twist-1, and following the notation of \cite{Beccaria:2009ny}, the wrapping correction enters at four loops
+and is expressed by the following function of the integer spin $N$ of the gauge theory operator
+\beq
+\gamma_{4}^{\rm wrapping}(N) = \gamma_{2}(N)\,\mc W(N),
+\qquad \gamma_{2}(N) = 4\,[S_{1}(N)-S_{-1}(N)].
+\eeq
+Here, $S_{a}(N)$ are generalized harmonic sums while $\mc W(N)$ is a complicated expression depending on the 
+Baxter polynomial $Q_{N}(u)$ associated with the Bethe roots. The first factor $\gamma_{2}(N)$ 
+is nothing but the two-loop
+anomalous dimension of the twist-1 operators. In the small $N$ limit, it starts at $\mc O(N)$. Thus, the 
+factor $\mc W(N)$ can be evaluated at $N=0$ where the Baxter polynomial trivializes $Q_{0}(u)=1$.
+After a straightforward calculation, one finds that (on the even $N$ branch),
+\beq
+\gamma_{4}^{\rm wrapping}(N) = -\frac{\pi^{4}}{3}\,N+\mc O(N^{2}).
+\eeq
+So, even at weak coupling, we find a correction to the slope coming from the wrapping 
+terms~\footnote{Notice that 
+the reason why such a contribution is absent in \ads\ is simply that the factor analogous to $\gamma_{2}(N)$
+is squared in the wrapping contribution. This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.}.
+
+
+\subsection{Long string limit}
+
+The large $S$ behaviour of the one-loop energy $E_{1}$ can be computed starting from the integral representation.
+Let us first summarize the result valid for \ads\ from \cite{Gromov:2011de}. We scale $\mc J$ with $\mc S$ for $\mc S\gg 1$ according to 
+\beq
+\mc J = \frac{\ell}{\pi}\,\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right),
+\eeq
+where we assume $\ell>0$~\footnote{This means that the case $\ell=0$, or $\mc J=0$ has to be treated
+separately as discussed in \cite{Gromov:2011de}.}. Then, the one-loop energy correction can be written
+\beq
+E_{1}^{AdS_{5}} = f_{10}^{AdS_{5}} (\ell)\,\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right)+f_{11}^{AdS_{5}} (\ell)+\frac{c^{AdS_{5}}}{\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right)}+\cdots ,
+\eeq
+with
+\ba
+f_{10}^{AdS_{5}}(\ell) &=& \frac{\sqrt{\ell^2+1}+2 \left(\ell^2+1\right) \log
+   \left(\frac{1}{\ell^2}+1\right)-\left(\ell^2+2\right)
+   \log
+   \left(\frac{\sqrt{\ell^2+2}}{\sqrt{\ell^2+1}-1}\right)-1
+   }{\pi  \sqrt{\ell^2+1}}, \\
+f_{11}^{AdS_{5}}(\ell) &=& \frac{2 \left(\log
+   \left(1-\frac{1}{\left(\ell^2+1\right)^2}\right)+2
+   \sqrt{\ell^2+1} \cot ^{-1}\left(\sqrt{\ell^2+1}\right)+2
+   \coth ^{-1}\left(\sqrt{\ell^2+1}\right)-2 \ell \cot
+   ^{-1}(\ell)\right)}{\pi  \sqrt{\ell^2+1}}.\nonumber, \\
+c^{AdS_{5}}(\ell) &=& -\frac{\pi}{12\,(\ell^{2}+1)}.\nonumber
+\ea
+%The accuracy of this expansion is shown in the following table derived by a best fit in the interval  $\mc S\in [10^{4}, 10^{8}]$
+%\begin{table}[htb]
+%\begin{center}
+%\begin{tabular}{c|ll|ll}
+%$\ell$ & $f_{10}$ & fit & $f_{11}$ & fit \\
+%\hline
+%1 & -0.248766 & -0.248 &   0.740559 & 0.741 \\
+%5 & -0.016550 & -0.0165 & 0.049551 & 0.0496 \\
+%10 &  -0.00421782 & -0.00420 & 0.0126461 & 0.0127
+%\end{tabular}
+%\caption{Numerical estimate of the large spin expansion in \ads .}
+%\end{center}
+%\end{table}
+
+The expansion in $\adscp$ can be derived in the same way as in \cite{Gromov:2011de} and the result is simply
+\beq
+\label{eq:AdS4-largeS}
+E_{1}^{AdS_{4}} =f_{10}^{AdS_{4}} (\ell)\,\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right)+f_{11}^{AdS_{4}} (\ell)+\frac{c^{\rm AdS_{4}}}{\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right)}+\cdots ,
+\eeq
+with 
+\ba
+f_{10}^{AdS_{4}}(\ell) &=& \frac{1}{2}\,f_{10}^{AdS_{5}}(\ell), \nonumber \\
+f_{11}^{AdS_{4}}(\ell) &=& \frac{1}{2}\,f_{11}^{AdS_{5}}(\ell), \\
+c^{AdS_{4}}(\ell) &=& 2\,c^{AdS_{5}}(\ell) = -\frac{\pi}{6\,(\ell^{2}+1)}.\nonumber
+\ea
+This formula can be easily checked numerically from the explicit evaluation of the integral representation.
+Notice that the simple $\frac{1}{2}$ rule for the leading two terms is in agreement with the result of \cite{Beccaria:2009wb}. The correction $\sim 1/\log \mc S$ comes from the anomaly terms. It is twice bigger than in SYM. 
+
+The explanation of this fact is as follows~\footnote{We thank B. Basso for clarifying this point as well as the $\ell\to 0$ limit.}.
+The low energy effective theory of the Gubser-Klebanov-Polyakov (GKP) 
+string in $\adscp$  has two massless modes at finite chemical potential $\ell$. Namely, 
+one massless Dirac Fermion and one massless boson that gives a central charge 2 (in \ads\ 
+one has only one massless boson giving central charge 1). Also, concerning the $\ell\to 0$ limit, 
+the other low-energy modes acquire a mass proportional to $\ell$ at small $\ell$ and their
+ contribution is exponentially suppressed with the effective length $\log \mc S$ at fixed $\ell$. When $\ell\to 0$
+  they become massless and contribute at leading order to 5 units of central charge 
+  (there are actually 4 bosons with mass $\ell$ and one with mass $\ell/2$ while there were only four with mass $\ell$ in \ads\ ). In other words it should be true that in the small $\ell$ limit the $1/\log\mc S$  gets corrected by 
+  5 extra units of central charge giving a total $-(2+5)\frac{\pi}{12\,\log\mc S}$
+for the energy of the vacuum state (i.e. the twist 1 state of the theory). Indeed,  $2+5=7$ is the correct central charge of the low-energy effective theory on the GKP background \cite{Alday:2008ut,Alday:2009zz}. Instead, 
+in \ads\  the final result for $\ell\to 0$ (i.e. for twist 2) was coming with $1+4 = 5$ 
+units of central charge, which is the correct central charge of the  $O(6)$ model. 
+
+
+\subsection{Relation with marginality condition}
+
+Let us define $\Lambda\equiv\lambda$ in \ads, and $\Lambda = 16\,\pi^{2}\,g^{2}$ in $\adscp$. The role of $\Lambda$
+is to  emphasize the close analogy between the expressions in the two cases.
+For the folded string in \ads, the energy admits the following expansion 
+\ba
+\label{eq:marginality} 
+E^{2} &=& J^{2}+\left(A_{1}\,\sqrt\Lambda+A_{2}+\frac{A_{3}}{\sqrt\Lambda}
++\cdots\right)\,S + \left(B_{1}+\frac{B_{2}}{\sqrt\Lambda}+ \frac{B_{3}}{\Lambda}+\cdots\right)\,S^{2}+ \\
+&&+
+\left(\frac{C_{1}}{\sqrt\Lambda}+\frac{C_{2}}{\Lambda}+\frac{C_{3}}{\Lambda^{3/2}}
++\cdots\right)\,S^{3}+\cdots , \nonumber
+\ea
+where the following exact formula  for the constants $A_{i}$ has been conjectured in \cite{Basso:2011rs}:
+\beq
+A_{1}\,\sqrt\Lambda+A_{2}+\frac{A_{3}}{\sqrt\Lambda}+\cdots = 2\,\sqrt\Lambda\,Y_{J}(\sqrt\Lambda), \qquad
+Y_{J}(x) = \frac{d}{dx}\,\log I_{J}(x).
+\eeq
+Expanding at large $\lambda$, we find the first values
+\beq
+\begin{array}{ccl}
+A_{1} &=& 2, \\
+A_{2} &=& -1, \\
+A_{3} &=& J^{2}-\frac{1}{4}, \\
+A_{4} &=& J^{2}-\frac{1}{4}, 
+\end{array}\qquad
+\begin{array}{ccl}
+A_{5} &=& -\frac{1}{4}\,J^{4}+\frac{13}{8}\,J^{2}-\frac{25}{64}, \\
+A_{6} &=& -J^{4}+\frac{7}{2}\,J^{2}-\frac{13}{16}, \\
+A_{7} &=& \frac{J^6}{8}-\frac{115 J^4}{32}+\frac{1187 J^2}{128}-\frac{1073}{512}.
+\end{array}
+\eeq
+Also, it is  know that $B_{1} = \frac{3}{2}$ and $B_{2} = \frac{3}{8}-3\,\zeta(3)$  \cite{Gromov:2011bz} .
+
+\bigskip
+The expansion (\ref{eq:marginality}) is very convenient since all powers of $S$ have a coefficient with an expansion 
+at large $\Lambda$ starting with a more and more suppressed term. The simplicity of (\ref{eq:marginality}) is a special
+feature of the folded string with two cusps. If winding is allowed, it is known that such structure is lost
+as discussed in \cite{Gromov:2011bz} (see also the results of \cite{Beccaria:2012tu}).
+
+\bigskip
+For the folded string in $\adscp$, the expansion with fixed $\mc J$~\footnote{Actually when we speak about fixed $\mc J$ we mean small $\mc S$ followed by small $\mc J$.} has the general form (see the Appendices of \cite{Gromov:2011bz})
+\beq
+E = \sqrt\Lambda \,\,\,\mc E_{0} + \sum_{\ell=0}^{\infty}\frac{1}{(\sqrt\Lambda)^{\ell}}\,
+\sum_{p=1}^{\infty}\sum_{q=-2p}^{\infty} v_{pq}^{(\ell)}\,\mc J^{q}\,\mc S^{p},
+\eeq
+where the classical energy is~\footnote{Note that there is a typo in the $\mc S^{3}$ term in the introduction 
+to \cite{Beccaria:2012tu}}
+ \ba
+&& \mathcal E_{0}= \mathcal J+\frac{\sqrt{\mathcal J^{2}+1}}{\mathcal J}\,\mathcal S-\frac{\mathcal J^{2}+2}{4\,\mathcal J^{3}(\mathcal J^{2}+1)}\,\mathcal S^{2}+ 
+ \frac{3\,\mathcal J^{6}+13\,\mathcal J^{4}+20\,\mathcal J^{2}+8}{16\,\mathcal J^{5}\,(\mathcal J^{2}+1)^{5/2}}\,\mathcal S^{3}+\cdots.
+\ea
+and the semiclassical computation provides $v^{(0)}_{pq}$ according to the results in (\ref{eq:GV}).
+
+\bigskip
+Expanding $E^{2}$, we find that  (\ref{eq:marginality}) takes  the following form 
+\ba
+\lefteqn{E^{2} - J^{2} = } && \nonumber \\
+&&+\bigg[
+\left(2-\frac{1}{J}\right) \sqrt{\Lambda }+\left(\frac{2 v^{\text{(1)}}_{1,-2}}{J}-1+2 \log
+   (2)\right)+\sqrt{\frac{1}{\Lambda }} \left(
+   \frac{2 v^{(2)}_{1,-2}}{J}+
+   2 v^{\text{(1)}}_{1,-1}+J^2+\frac{J}{2}\right)+
+   \cdots
+\bigg]\,S+\nonumber \\
+&& + \bigg[
+\left(\frac{1}{4 J^4}+\frac{1}{2 J^3}\right) \Lambda +\sqrt{\Lambda }
+   \left(-\frac{v^{\text{(1)}}_{1,-2}}{J^4}+\frac{2 v^{\text{(1)}}_{1,-2}}{J^3}+\frac{2
+   v^{\text{(1)}}_{2,-4}}{J^3}+\frac{1}{2 J^3}-\frac{\log
+   (2)}{J^3}\right)+\cdots
+\bigg]\,S^{2}+\nonumber \\
+&& + \bigg[
+\left(-\frac{3}{4 J^6}-\frac{1}{2 J^5}\right) \Lambda ^{3/2}+\cdots
+\bigg]\,S^{3}+\cdots . 
+\ea
+This structure is different from (\ref{eq:marginality}) since higher powers of $S$ are not associated with terms that are 
+more and more suppressed at large $\Lambda$. This is possible since the new terms not present in (\ref{eq:marginality})
+are associated with suitable inverse powers of $J$. The same phenomenon  is discussed in  \cite{Gromov:2011bz}
+for the folded string in \ads\ with non-trivial  winding. As we discussed in Sec.~(\ref{sec:slope}), wrapping corrections are responsible for these terms.
+
+\subsection{Prediction for short states}
+
+We can provide a prediction for the strong coupling expansion of the energy of short states that in principle
+could be tested by TBA calculations. To this aim, we 
+can start from  our results at fixed $\rho = \mc J/\sqrt\mc S$, and 
+re-expand at large $\Lambda$ the sum of the (scaled) classical energy 
+\ba
+\label{eq:classical-rho}
+\mathcal E_{0} &=&\sqrt{(\rho^{2}+2)\,\mathcal S}\,\bigg[
+1+\frac{2\,\rho^{2}+3}{4\,(\rho^{2}+2)}\,\mathcal S-
+\frac{4\,\rho^{6}+20\,\rho^{4}+34\,\rho^{2}+21}{32\,(\rho^{2}+2)^{2}}\,\mathcal S^{2}+\cdots
+\bigg]
+\ea
+and the one-loop contribution (\ref{eq:our-expansion}). The result is 
+\beq
+\label{eq:short}
+E = (4\,\pi\,g)^{1/2}\,\sqrt{2\,S}-\frac{1}{2}+\frac{\sqrt{2\,S}}{(4\,\pi\,g)^{1/2}}\,\left(
+\frac{J\,(J+1)}{4\,S}+\frac{3\,S}{8}-\frac{1}{4}+\frac{1}{2}\,\log(2)\right)+\cdots.
+\eeq
+The same expansion 
+where we remark that one of the effect of the $\mc C$ term 
+is the constant $\mc O(\widetilde \Lambda^{0})$ contribution.
+
+The same expansion can be written in terms of the coupling $g_{\rm WS}$ in the world-sheet regularization
+whose relation with $g$ is \cite{McLoughlin:2008he,Abbott:2010yb}
+\beq
+g = g_{\rm WS}-\frac{\log(2)}{4\pi}+\cdots.
+\eeq
+After this replacement, eq.(\ref{eq:short}) reads  
+\beq
+\label{eq:short}
+E = (4\,\pi\,g_{\rm WS})^{1/2}\,\sqrt{2\,S}-\frac{1}{2}+\frac{\sqrt{2\,S}}{(4\,\pi\,g_{\rm WS})^{1/2}}\,\left(
+\frac{J\,(J+1)}{4\,S}+\frac{3\,S}{8}-\frac{1}{4}\right)+\cdots,
+\eeq
+without $\log(2)$ term. This is correct since in world-sheet regularization all modes are treated with uniform cutoff.
+

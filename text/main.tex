@@ -58,6 +58,49 @@
 \newcommand{\eq}[1]{(\ref{#1})}
 \newcommand{\alg}[2]{\mathfrak{#1}(#2)}
 
+
+
+%_____ Matteo's commands _________________________________________________
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{eqnarray}}
+\newcommand{\ea}{\end{eqnarray}}
+
+\newcommand{\pint}{\makebox[0pt][l]{\hspace{2.4pt}$-$}\int}
+\newcommand{\refeq}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\refsec}[1]{Section~\ref{sec:#1}}
+\newcommand{\reffig}[1]{Fig.~(\ref{fig:#1})}
+
+%\newcommand{\la}{\longrightarrow}
+\newcommand{\blt}{\ \ $\bullet$\ \ }
+
+
+\newcommand{\ads}{$AdS_5\times S^5$\ }
+
+\newcommand{\desl}{\slashed{\partial}}
+\newcommand{\JJJ}{\left(\frac{1}{J^2}\right)}
+\newcommand{\Mellin}[1]{{\cal M}\left[#1\right]}
+\newcommand{\ddb}{{\overline{\mathscr D}}}
+\newcommand{\sym}{$\mathcal{N}=4$ SYM }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\SSS}{\mathcal{S}}
+
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+
+\newcommand{\maldafive}{${\rm AdS}_{5}/{\rm CFT}_{4}$\ }
+\newcommand{\maldafour}{${\rm AdS}_{4}/{\rm CFT}_{3}$\ }
+
+%_____ Matteo's commands _________________________________________________
+
+\def\d{\partial}
+\newcommand{\ofrac}[1]{\frac{1}{#1}}
+
+%_____ Paper's commands _________________________________________________
+
 \makeatletter
 
 \newenvironment{chapquote}[2][2em]
@@ -174,6 +217,11 @@ September 2014
 \input{conclusions.tex}
 
 \newpage
+
+\appendix
+
+\input{appendix.tex}
+
 
 \bibliography{bibliography}
 

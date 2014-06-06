@@ -618,27 +618,137 @@ Describe the quantization procedure. Derive next coefficient for Konishi.
 \subsection{Short strings}
 
 
-This section describes the work performed by the author which culminated in the publication \cite{Gromov:2011bz}, which itself is largely based on the semiclassical analysis performed in \cite{Gromov:2011de}. 
 
-Here we are interested in the so called $SL(2)$ sector of the theory, which is composed of operators of the form $\mathrm{Tr}( D^S Z^J ) + \mathrm{permutations}$, where $D$ is the covariant derivative, $S$ is the spin and $J$ is the angular momentum of the operator. This sector is convenient, since equations suitable for numerical studies were formulated for it and thus one can cross check everything against numerics. On the string theory side operators from this sector correspond to the so-called spinning folded strings. At the classical level, it is convenient to describe them in terms of the scaled charges $\mc S = S/\sqrt\lambda$, $\mc J = J/\sqrt\lambda$. They have a simple and clear dynamical meaning: the spin $\mc S$ is associated with rotation around the center of  $AdS_{5}$ while $\mc J$ is an angular momentum on the sphere. At small $\mc S$, the string is short and admits a near-flat space description. At large $\mc S$, the string stretches and reaches the boundary of $AdS$ with the characteristic scaling $E \sim \log \mc S$ of its energy. Short strings are especially interesting, since their strong coupling limit looks very difficult to address both within the gauge theory and perturbative string theory approaches, on the other hand, quantum corrections in the semiclassical approximation are fully under control and can be studied by algebraic curve tools.
+%\section{Folded string}
+The folded string is the strong coupling counterpart of the Wilson operators $\tr(D^S Z^J)$.
+This class of operators in particular contains the Konishi operator that has been receiving a lot of attention recently.
+%\subsection{Tree level}
+The classical energy of the folded string is a function of the Lorentz spin $S$,
+twist $J$ and the mode number $n$. This function can be written in a parametric form
+in terms of the branch points $a$ and $b$ \cite{Gromov:2011de,Beisert:2003ea,Kazakov:2004qf,Kazakov:2004nh}:
+\beqa
+\nn{2\pi {\cal S}}&=&\frac{ab+1}{ab}\[b E\(1-\tfrac{a^2}{b^2}\)-aK\(1-\frac{a^2}{b^2}\)\]\;,\\
+{2\pi {\cal J}}&=&\frac{2\sqrt{(a^2-1)(b^2-1)}}{b}K\(1-\frac{a^2}{b^2}\)\;,\\
+\nn{2\pi {\cal D}_{\rm tree}}&=&\frac{ab-1}{ab}\[b E\(1-\tfrac{a^2}{b^2}\)+aK\(1-\frac{a^2}{b^2}\)\]\;.
+\eeqa
+where ${\cal S},{\cal J},{\cal D}=\frac{S}{n\sqrt\lambda},\frac{J}{n\sqrt\lambda},\frac{\Delta}{n\sqrt\lambda}$.
+In this paper we will concentrate on a special limit when $S$ is sent to zero.
+In this limit one can write a more explicit expression for the square of the scaling dimension:
+%\beqa
+% {\cal D}_{\rm tree}&=&{\cal J}
+%+\frac{\sqrt{{\cal J}^2+1} }{{\cal J}}{\cal S}
+%-\frac{{\cal J}^2+2}{4 \left({\cal J}^5+{\cal J}^3\right)}{\cal S}^2
+%+\frac{3 {\cal J}^6+13 {\cal J}^4+20 {\cal J}^2+8}{16 {\cal J}^5 \left({\cal J}^2+1\right)^{5/2}}{\cal S}^3\\
+%&-&\frac{21 {\cal J}^{10}+138 {\cal J}^8+385 {\cal J}^6+540 {\cal J}^4+336
+%   {\cal J}^2+80 }{128 {\cal J}^7 \left({\cal J}^2+1\right)^4}{\cal S}^4
+%\nn+{\cal O}({\cal S}^5)
+%\eeqa
+\beqa
+ {\cal D}_{\rm tree}^2&=&{\cal J}^2+2 \, {\cal S} \, \sqrt{{\cal J}^2+1}+{\cal S}^2 \, \frac{2 {\cal J}^2+3}{2
+   {\cal J}^2+2}-{\cal S}^3 \, \frac{{\cal J}^2+3}{8
+   \left({\cal J}^2+1\right)^{5/2}}
+   %+{\cal S}^4\frac{3 {\cal J}^4+18 {\cal J}^2+31}{64 \left({\cal J}^2+1\right)^4}
+   +{\cal O}\left({\cal S}^4\right)\;.
+\eeqa
+One can easily see that the coefficients in the expansion of ${\cal D}_{\rm tree}^2$
+are considerably simpler than the same coefficients in the expansion of ${\cal D}_{\rm tree}$.
 
-The algebraic curve method is one of the most advanced ways of computing the semi-classical corrections AdS/CFT. The method is heavily based on integrability and is naturally free from any perturbation theory ambiguities. The only input needed to proceed with the quantization is a set of quasi-momenta $\hat p_i,\, \tilde p_i,\;i=1,2,3,4$ which were mentioned in the previous section on integrability. In particular, the folded string solution corresponds to the curve with two symmetric cuts with real branch-points $\pm b, \pm a$ such that $1<a<b$. The explicit form of the quasi-momenta depends on the twist $J$ and the Lorentz spin $S$ and can be constructed using the methods of \cite{Beisert:2003ea}, \cite{Kazakov:2004qf}, \cite{Kazakov:2004nh}. 
-  
-A more detailed description of the procedure will be given in the following section on $AdS_4/CFT_3$, since the author has performed the analysis in that case and published the result in \cite{Beccaria:2012qd} \cite{Beccaria:2012vb}. At this stage the take away point is that the semiclassical quantization procedure produces the following result for the energy of a folded string up to one loop level
- \beq \Delta^{\rm classical}+\delta E=\lambda^{1/4}\sqrt{2S}
- +\frac{1}{\lambda^{1/4}}\frac{2J^2+S(3S-2)}{4\sqrt{2S}}\;.  \eeq
+One can further notice \cite{Basso:2011rs} that the re-expansion of the function $\Delta^2$ in the large $\mu\equiv \lambda n^2$ limit with $S$ and $J$ fixed has a particularly nice structure
+\beq
+\Delta_{\rm tree}^2\!\!\!=\!J^2+S
+\(
+2\, \sqrt{\mu}+\frac{J^2}{\sqrt{\mu}}+\dots%-\frac{J^4}{4\mu^{3/2}}
+\)
++S^2
+\(
+\frac{3}{2}-\frac{J^2}{2\mu}
++\dots%+\frac{J^4}{2\mu^2}
+\)
+-S^3
+\(
+\frac{3}{8\sqrt{\mu}}
+-\frac{13 J^2}{16\sqrt[3]{\mu}}
++\dots
+\)
+%+S^4\(\frac{31}{64\mu}+\dots\)
++{\cal O}({ S}^4)
+\label{dsquare_tree}
+\eeq
+where each next term in $S$
+gets more and more suppressed for large $\lambda$.
+This structure indicates that the expansion in large $\lambda$
+and small $S$ should be easily computable, which is very important in the study of short operators. 
+The structure in \eq{dsquare_tree} is a purely classical result. In the next section we discuss whether it is preserved when quantum corrections are taken into account.
 
-The authors contribution to the $AdS_5/CFT_4$ case is the publication \cite{Gromov:2011bz}, which builds on top of the aforementioned semiclassical analysis in the following way. Consider the limit $\cal{S} \rightarrow \mathrm{0}$ where the semiclassical correction to the string energy can be written as
+
+%\subsection{One loop}
+Using the algebraic curve technique \cite{Gromov:2009zza,Gromov:2007aq,Gromov:2007ky,Gromov:2008ec,SchaferNameki:2010jy}
+the result \eq{dsquare_tree} at one loop can be shown to be just a little bit more involved than the classical energy.
+The derivation is described in \cite{Gromov:2011de} so we only quote the result here (see appendix \ref{appA} for more details).
+
+Again, in the limit when ${\cal S}$ is sent to zero the result simplifies significantly.
+Up to two orders in $\mathcal{S}$ we found the following expansion
 \beqa
 \label{delta_oneloop}
-\delta E &\simeq&
+\Delta_{\rm 1-loop}&\simeq&
 \frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
    }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
+%   -\frac{\left(6 {\cal J}^8+48 {\cal J}^6
+%   +138
+%   {\cal J}^4+
+%   352 {\cal J}^2+117\right) {\cal S}^3}{64 {\cal J}^5 \left({\cal J}^2+1\right)^4}
 \!-\!\sum_{m>0,m\neq n}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
-   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]\;.
+   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]
+   \;.
 \eeqa
-If the parameters $\cal{S}$ and $\cal{J}$ are fixed to some values then the sums can be evaluated. Note that this expression mixes various orders of the coupling. Now consider the conjecture in \cite{Basso:2011rs}. It says that making expansions of the scaling dimension squared first in ${\cal S}\to 0$ and then in $\lambda\to \infty$ should reveal the following structure
+The next term in this expansion can be found in \eq{delta_oneloop_3}, \eq{delta_oneloop_4}. The sum is nothing but a sum over the fluctuation energies,
+whereas the remaining terms originate from the ``zero"-modes
+$m=n$, which have to be treated separately.
+The sum can be very easily expanded for small ${\cal J}$.
+It is easy to see that the expansion coefficients will be certain combinations
+of zeta-functions. It is also easy to see that
+the dependence on the mode number $n$ is rather nontrivial.
+
+The expansion of the one loop energy first in small ${\cal S}$
+up to a second order and then in small ${\cal J}$ reads
+%\beq
+%\Delta_{\rm1-loop}=
+%-\frac{{\cal S}}{2 {\cal J}^3+2{\cal J}}
+%+{\cal S}^2\(
+%\frac{1}{2{\cal J}^3}-
+%\frac{3\zeta_3-\frac{1}{8}}{2\cal J}+\dots
+%\)+{\cal O}({\cal S}^3)\;.
+%\eeq
 \beq
+\label{delta_oneloop_sj}
+\Delta_{\rm1-loop}\simeq
+\left\{
+\begin{array}{ll}
+ -\frac{\mathcal{S}}{2 \mathcal{J}}+
+ \mathcal{S}^2 \left(+\frac{1}{2\mathcal{J}^3}-\frac{3 \zeta_3}{2 \mathcal{J}}-\frac{1}{16 \mathcal{J}}\right) & \;\;,\;\;n=1 \\
+ -\frac{\mathcal{S}}{2 \mathcal{J}}+
+ \mathcal{S}^2 \left(+\frac{1}{2
+   \mathcal{J}^3}-\frac{12 \zeta_3}{\mathcal{J}}-\frac{17}{16 \mathcal{J}}\right) & \;\;,\;\;n=2 \\
+ -\frac{\mathcal{S}}{2 \mathcal{J}}+
+ \mathcal{S}^2 \left(-\frac{5}{8
+   \mathcal{J}^3}-\frac{81 \zeta_3}{2 \mathcal{J}}-\frac{7}{4 \mathcal{J}}\right) & \;\;,\;\;n=3 %\\
+% -\frac{\mathcal{S}}{2 \mathcal{J}}+
+% \mathcal{S}^2 \left(-\frac{55}{18
+%   \mathcal{J}^3}-\frac{96 \zeta_3}{\mathcal{J}}-\frac{281}{144 \mathcal{J}}\right) & \;\;,\;\;n=4
+\end{array}
+\right.
+\eeq
+Expansions up to four orders in $\mathcal{S}$ and then in $\mathcal{J}$ are given in appendix \ref{AppS4}. We note that the contributions ${\cal S}^2/{\cal J}^3$
+are universal for $n=1$ and $n=2$,
+however starting from $n=3$ we get some nasty coefficient.
+As we will discuss in the next section this could imply that
+the naive generalization of the conjecture in \cite{Basso:2011rs} is not fully correct
+for $n>2$. Also for $n=2$ we found  a similar anomaly at the order $S^3$.
+%\section{Discussion of the exact slope and its generalizations}
+Let us take a close look at the conjecture in \cite{Basso:2011rs}. It says that
+making expansions of the scaling dimension squared first in ${\cal S}\to 0$
+and then in $\mu\to \infty$ should reveal the following structure
+\beq\label{Delta}
 \Delta^2=J^2+S
 \(
 A_1\sqrt{\mu}+A_2+\dots
@@ -648,10 +758,18 @@ A_1\sqrt{\mu}+A_2+\dots
 B_1+\frac{B_2}{\sqrt\mu}
 +\dots%+\frac{J^4}{2\mu^2}
 \)
+%+S^3
+%\(
+%\frac{C_1}{\mu^{1/2}}
+%+\frac{C_2}{\mu^{3/2}}
+%+\dots
+%\)
+%+S^4\(\frac{31}{64\mu}+\dots\)
 +{\cal O}({ S}^3)\;,
 \eeq
-where the coefficients $A_i,\;B_i,\;C_i$ are some functions of $J$ and $\sqrt{\mu} = n \sqrt{\lambda}$ with $n$ being the mode number. This is, as can be easily seen, a nontrivial constraint on $\Delta$ itself as
-\beqa
+where the coefficients $A_i,\;B_i,\;C_i$ are some functions of $J$.
+This is, as can be easily seen, a nontrivial constraint on $\Delta$ itself as
+\beqa\label{cons}
 \Delta&=&J+\frac{S}{2J}
 \(
 A_1\sqrt{\mu}+A_2+\frac{A_3}{\sqrt{\mu}}+\dots
@@ -670,15 +788,23 @@ A_1\sqrt{\mu}+A_2+\frac{A_3}{\sqrt{\mu}}+\dots
 \)
 +{\cal O}(S^3)\;.
 \eeqa
-One of the results of \cite{Basso:2011rs} is the exact formula for all the coefficients $A_i$. They can be found easily by expanding a simple combination of Bessel functions, called the ``slope", around infinity and it produces~\cite{Basso:2011rs}:
+One of the results of \cite{Basso:2011rs}
+is the exact formula for all the coefficients $A_i$. They can be found easily by expanding
+a simple combination of Bessel functions, called the ``slope", around infinity and it produces~\cite{Basso:2011rs}:
 \beq
 A_1=2\;\;,\;\;
 A_2=-1\;\;,\;\;
 A_3=J^2-\frac{1}{4}\;\;,\;\;
 A_4=J^2-\frac{1}{4}\dots\;.
+\label{As}
 \eeq
-Comparing with our one-loop result \ref{delta_oneloop} we can also find the $B_i$'s,
-\beq
+Comparing with our one-loop result we get\footnote{$B_2=-b$ in the notations of \cite{Basso:2011rs}.
+The $-3\zeta_3$ term also arises in the formalism of \cite{Vallilo:2011fj} when formally extended to two loops.
+A very similar $\zeta_3$ term can be also extracted from \cite{Roiban:2011fe}.
+This gives extra support to our results.
+We would like to thank L.Mazzucato and A.Tseytlin for pointing this out.
+}
+\beq\label{BB}
 B_1=\frac{3}{2}\;\;,\;\;
 B_2=
 \left\{
@@ -689,18 +815,186 @@ B_2=
 \eea
 \right.\;.
 \eeq
-The equation \ref{Delta} allows one to make a very nontrivial prediction for the strong coupling expansion of operators with fixed length $J$ and the number of derivatives $S$. For that end we simply fix $S$ and $J$ in \ref{Delta} and expand for large $\lambda$ or, equivalently, $\mu$. This procedure gives:
+We should, however, notice that for $n>1$ we were not able to fully satisfy \eq{cons}.
+One example is the coefficient in front of $S^2/J^3$, which for $n=3$ is $-5/8$, whereas \eq{cons} predicts $1/2$. We observe that only for $S^2$, $S^3$ and higher order terms do we find such disagreements and it is interesting to note that the coefficients for $S$ order terms seem to be correct for any $n$\footnote{We indeed verified numerically that the naive replacement $\lambda\to n^2\lambda$ works at weak coupling at least to two loops.}.
+These observations imply that the generalization of the original slope function,
+which is done by a naive replacement $\lambda\to n^2\lambda$, is not correct for the cases when $n>1$ and thus either the coefficients in \eq{As} or the conjecture itself should be modified to accommodate this.
+We discuss this in details in the next section \ref{inconsistencies}.
+
+%\subsection{Inconsistencies in the next orders}\label{inconsistencies}
+
+The analysis in the previous sections was done only up to second order in the small $S$ expansion. The appendix \ref{AppS4} contains our result for the
+one-loop quantization of the $n$-times folded string up to the order $S^4$. For $n=1$ our result is in perfect agreement with the conjectured structure \eq{Delta}, yet for cases with $n>1$ there are inconsistencies.
+For $n=2$ the first inconsistency appears in the $\frac{S^3\mu}{J^4}$ term and for $n=3$ there are already inconsistencies at order $S^2$. We found that for $n>1$ one has to modify the structure in \eq{Delta} by
+including negative coefficients in order for it to be consistent with our one-loop results. E.g. for $n=2$ the structure has to be modified starting with the $S^3$ term, which now becomes
+\beq
+\(
+C_{-2}\;\mu+\frac{C_1}{\sqrt\mu}+\frac{C_2}{\mu}+\dots
+\) S^3
+\eeq
+with $C_{-2}=\frac{12}{J^4}$. To the next order in $S$ we find
+\beq
+\(
+D_{-4}\;\mu^{3/2} +D_{-2}\;\sqrt{\mu}+ \frac{D_{0}}{\sqrt\mu}+\frac{D_1}{\mu}+\dots
+\) S^4
+\eeq
+where $D_{-4}=-\frac{78}{J^6},\;D_{-2}=-\frac{36}{J^4},\;D_0=\frac{21}{2J^2}$.
+
+For $n=3$ the first modification already occurs at order $S^2$ and it can be resolved if the term $-\frac{9 S^2\sqrt\mu}{4 J^2}$ is added to \eq{Delta}.
+Thus effectively the conjectured structure \eq{Delta} has to be modified as in the $n=2$ case by including negative coefficients, which now depend on $n$ in a nontrivial way.
+It is also worth noticing that since inconsistencies start appearing at orders of $\frac{S^2}{J^2}$ and $\frac{S^3}{J^4}$ for $n=3$ and $n=2$ respectively, one might guess that
+there should be an inconsistency at order $\frac{S^4}{J^6}$ for $n=1$, however we found no such thing.
+
+This study of inconsistencies reveals that the proposed modifications to the structure of \eq{Delta} have growing powers of $\mu$,
+thus one should resum them together with similar singular terms which may arise in higher loop levels before being able to make justified predictions
+for short operators ($S\sim J\sim 1$) at strong coupling when $n>1$.
+
+
+%\section{Two loop prediction}
+The equation \eq{Delta} allows one to
+make a very nontrivial prediction for the strong coupling
+expansion of operators with fixed length $J$ and
+the number of derivatives $S$. For that end we simply fix $S$ and $J$ in \eq{Delta}
+and expand for large $\lambda$ or, equivalently, $\mu$. This procedure gives:
 \beq
 \Delta_{S,J,n}\simeq\sqrt{2S}\mu^{1/4}
 +\frac{2J^2+3S^2-2S}{4\,(2 S)^{1/2}\,\mu^{1/4}}
 +\frac{-21S^4+(32B_2+12)S^3+(20J^2-12)S^2+8J^2 S-4J^4}{32\,(2S)^{3/2}\,\mu^{3/4}}\;
 \eeq
-where $B_2$ is given in \ref{BB}. Note that according to our observations there are some inconsistencies in the conjecture that this derivation relies on when $n>1$ and thus this result should be treated with great care.
+where $B_2$ is given in \eq{BB}.
+Note that according to our observations there are some inconsistencies in the conjecture that this derivation relies on when $n>1$ and thus this result should be treated with great care.\footnote{We assume that the results of \cite{Basso:2011rs} for the slope function
+can be lifted by generalizing with the simple replacement $\lambda\to n^2\lambda$ when $n>1$. 
+We indeed verified this numerically with high precision at weak coupling up to two loops and this is also in agreement
+with our one loop strong coupling results. I.e. the slope function and hence the coefficients $A_i$ in \eq{As} are still correct after the replacement, but as argued before, the structure of the expansion \eq{Delta} may need to be modified.}
+%These cases, however, were not analyzed as thoroughly
+%as the $n=1$ case in \cite{Basso:2011rs} where some additional tests at weak coupling were made.
 
-The end result is that we were able to boost the one loop result \ref{eq:loopres} to two loops simply by utilizing Basso's conjecture. We checked the prediction against exact TBA results and the agreement was very convincing.
+Let us write the result more explicitly for a particular important case of two magnons
+\beq
+\Delta_{2,J,1}=2 \, \lambda^{1/4}+
+\frac{\frac{J^2}{4}+1}{\lambda^{1/4}}+\frac{-\frac{J^4}{64}+\frac{3 J^2}{8}-3\, \zeta
+   (3)-\frac{3}{4}}{\lambda^{3/4}}\;.
+\eeq
+In the next section we compare our prediction with the available TBA data.
 
 
-Combine with slope, derive next coeffient for Konishi.
+In order to extract strong coupling asymptotics from available TBA data, we performed numerical fits of Pad\'{e} type. First we changed variables from $\lambda$ to 
+\begin{equation}
+	y(\lambda) = \sqrt{\lambda} \frac{\partial}{\partial\sqrt{\lambda}} \log I_2(\sqrt{\lambda}) - 2,
+\end{equation}
+which seems arbitrary, but nevertheless is convenient because scaling dimension dependence on $y$ looks nearly linear and automatically captures some important analytical features. We then represent the scaling dimension as the square root of a rational function of two polynomials in $y$ with some of the unknown coefficients chosen so as to fix the leading order weak and strong coupling behaviours. So for example, for the Konishi operator we chose
+\begin{equation*}
+	\Delta_{2,2,1} = \sqrt{18 + 4y + \frac{-2 + \sum_{i=1}^{P} a_i y^i}{1 + \sum_{i=1}^{P+1} b_i y^i}},
+\end{equation*}
+because one can easily verify that the weak coupling expansion of this function is given by
+\begin{equation*}
+	\Delta_{2,2,1} = 4 + \mathcal{O}(g^2),
+\end{equation*}
+and the strong coupling expansion is given by
+\begin{equation*}
+	\Delta_{2,2,1} = 2 \lambda^{1/4} + \frac{2}{\lambda^{1/4}} + \mathcal{O}(\lambda^{-3/4}).
+\end{equation*}
+This way the leading order behaviour is fixed and next to leading order coefficients are combinations of the unknowns $a_i$ and $b_i$, which we then find by the method of least squares. The number of fit coefficients $P$ is chosen so that their values after fitting would be of order one, which would imply that the fit is reasonable. Though the procedure seems ad hoc, it produces incredibly good fits, which agree very well with both weak and strong coupling expansions. Fits to available TBA numerical data are shown in Fig. \ref{fig:frolov_compare}, where dots represent numerical values and the solid lines are our fits\footnote{For some of the fits we took the first 50 points from the corresponding data set, since we suspected the precission to be lower for higher values of $\lambda$. Also, these points were enough to get stable fits.}. Expanding our fits in powers of $\lambda$ at strong coupling we were able to compare the $\lambda^{-3/4}$ coefficients in the expansions to our predictions. These are summarized in Table \ref{tab:coefficients} for various operators. We see that our predictions agree with numerical data very well. The table also lists the weak coupling expansion coefficients of $g^2$ (tree level is fixed by hand), which agree with remarkable precision to Bethe ansatz predictions, once again indicating that the fits work well in both ends of the coupling range.
+
+\begin{table}[t]
+\begin{tabular}{|l||rl|l|l||l|l|l|}
+  \hline
+  $(S,J,n)$ & \multicolumn{2}{|l|}{$(n^2 \lambda)^{-3/4}$ prediction} & $(n^2 \lambda)^{-3/4}$ fit & error & $g^2$ analytical & $g^2$ fit & fit order\\
+  \hline
+  $(2,2,1)$ & $1/2 - \zeta_3 $&$= -3.1062$ & $-3.0739$ & $1.0\%$ & $12$ & $12.0108$ & 6\\
+  $(2,3,1)$ & $87/64 - 3\,\zeta_3 $&$= -2.2468$ & $-2.2296$ & $0.8\%$ & $8$ & $8.0039$ & 5 \\
+  $(2,4,2)$ & $-3/4 -24 \, \zeta_3 $&$= -29.5994$ & $-30.0547$ & $1.5\%$ & $14.4721$ & $14.4428$ & 5\\
+  \hline
+\end{tabular}
+\caption{Comparisons of strong coupling expansion coefficients for $\lambda^{-3/4}$ obtained from fits to TBA data versus our predictions for various operators. The weak coupling expansion coefficients for $g^2$ show how well the fit approximates the data. The fit order is the order of polynomials used for the rational fit function.}
+\label{tab:coefficients}
+\end{table}
+
+We also tried comparing our predictions to numerical data for the operator $S=2,J=4,n=2$ (see Fig. \ref{fig:frolov_compare} and Table \ref{tab:coefficients}). As argued before, since this operator has $n>1$, we cannot fully trust our result in this case, nevertheless the result agrees well with the numerical fits we get and the error is only slightly bigger than for the $n=1$ states. It is hard to draw conclusions about this, as there is not a lot of numerical data available for such operators. 
+
+
+
+
+% This section describes the work performed by the author which culminated in the publication \cite{Gromov:2011bz}, which itself is largely based on the semiclassical analysis performed in \cite{Gromov:2011de}. 
+
+% Here we are interested in the so called $SL(2)$ sector of the theory, which is composed of operators of the form $\mathrm{Tr}( D^S Z^J ) + \mathrm{permutations}$, where $D$ is the covariant derivative, $S$ is the spin and $J$ is the angular momentum of the operator. This sector is convenient, since equations suitable for numerical studies were formulated for it and thus one can cross check everything against numerics. On the string theory side operators from this sector correspond to the so-called spinning folded strings. At the classical level, it is convenient to describe them in terms of the scaled charges $\mc S = S/\sqrt\lambda$, $\mc J = J/\sqrt\lambda$. They have a simple and clear dynamical meaning: the spin $\mc S$ is associated with rotation around the center of  $AdS_{5}$ while $\mc J$ is an angular momentum on the sphere. At small $\mc S$, the string is short and admits a near-flat space description. At large $\mc S$, the string stretches and reaches the boundary of $AdS$ with the characteristic scaling $E \sim \log \mc S$ of its energy. Short strings are especially interesting, since their strong coupling limit looks very difficult to address both within the gauge theory and perturbative string theory approaches, on the other hand, quantum corrections in the semiclassical approximation are fully under control and can be studied by algebraic curve tools.
+
+% The algebraic curve method is one of the most advanced ways of computing the semi-classical corrections AdS/CFT. The method is heavily based on integrability and is naturally free from any perturbation theory ambiguities. The only input needed to proceed with the quantization is a set of quasi-momenta $\hat p_i,\, \tilde p_i,\;i=1,2,3,4$ which were mentioned in the previous section on integrability. In particular, the folded string solution corresponds to the curve with two symmetric cuts with real branch-points $\pm b, \pm a$ such that $1<a<b$. The explicit form of the quasi-momenta depends on the twist $J$ and the Lorentz spin $S$ and can be constructed using the methods of \cite{Beisert:2003ea}, \cite{Kazakov:2004qf}, \cite{Kazakov:2004nh}. 
+  
+% A more detailed description of the procedure will be given in the following section on $AdS_4/CFT_3$, since the author has performed the analysis in that case and published the result in \cite{Beccaria:2012qd} \cite{Beccaria:2012vb}. At this stage the take away point is that the semiclassical quantization procedure produces the following result for the energy of a folded string up to one loop level
+ % \beq \Delta^{\rm classical}+\delta E=\lambda^{1/4}\sqrt{2S}
+ % +\frac{1}{\lambda^{1/4}}\frac{2J^2+S(3S-2)}{4\sqrt{2S}}\;.  \eeq
+
+% The authors contribution to the $AdS_5/CFT_4$ case is the publication \cite{Gromov:2011bz}, which builds on top of the aforementioned semiclassical analysis in the following way. Consider the limit $\cal{S} \rightarrow \mathrm{0}$ where the semiclassical correction to the string energy can be written as
+% \beqa
+% \label{delta_oneloop}
+% \delta E &\simeq&
+% \frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
+   % }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
+% \!-\!\sum_{m>0,m\neq n}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
+   % \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]\;.
+% \eeqa
+% If the parameters $\cal{S}$ and $\cal{J}$ are fixed to some values then the sums can be evaluated. Note that this expression mixes various orders of the coupling. Now consider the conjecture in \cite{Basso:2011rs}. It says that making expansions of the scaling dimension squared first in ${\cal S}\to 0$ and then in $\lambda\to \infty$ should reveal the following structure
+% \beq
+% \Delta^2=J^2+S
+% \(
+% A_1\sqrt{\mu}+A_2+\dots
+% \)
+% +S^2
+% \(
+% B_1+\frac{B_2}{\sqrt\mu}
+% +\dots%+\frac{J^4}{2\mu^2}
+% \)
+% +{\cal O}({ S}^3)\;,
+% \eeq
+% where the coefficients $A_i,\;B_i,\;C_i$ are some functions of $J$ and $\sqrt{\mu} = n \sqrt{\lambda}$ with $n$ being the mode number. This is, as can be easily seen, a nontrivial constraint on $\Delta$ itself as
+% \beqa
+% \Delta&=&J+\frac{S}{2J}
+% \(
+% A_1\sqrt{\mu}+A_2+\frac{A_3}{\sqrt{\mu}}+\dots
+% \)\\
+% \nn&+&S^2
+% \(
+% - \frac{A_1^2}{8J^3} \, \mu
+% -  \frac{A_1A_2}{4J^3} \, \sqrt{\mu}
+% +\[\frac{B_1}{2J}-\frac{A_2^2+2A_1 A_3}{8J^3}\]
+% +
+% \[
+% \frac{B_2}{2J}
+% -\frac{A_2A_3+A_1A_4}{4J^3}
+% \]  \frac{1}{\sqrt\mu}
+% +\dots
+% \)
+% +{\cal O}(S^3)\;.
+% \eeqa
+% One of the results of \cite{Basso:2011rs} is the exact formula for all the coefficients $A_i$. They can be found easily by expanding a simple combination of Bessel functions, called the ``slope", around infinity and it produces~\cite{Basso:2011rs}:
+% \beq
+% A_1=2\;\;,\;\;
+% A_2=-1\;\;,\;\;
+% A_3=J^2-\frac{1}{4}\;\;,\;\;
+% A_4=J^2-\frac{1}{4}\dots\;.
+% \eeq
+% Comparing with our one-loop result \ref{delta_oneloop} we can also find the $B_i$'s,
+% \beq
+% B_1=\frac{3}{2}\;\;,\;\;
+% B_2=
+% \left\{
+% \bea{ll}
+% -3\,\zeta_3+\frac{3}{8}&\;\;,\;\;n=1\\
+% -24\,\zeta_3-\frac{13}{8}&\;\;,\;\;n=2\\
+% -81\,\zeta_3-\frac{24}{8}&\;\;,\;\;n=3
+% \eea
+% \right.\;.
+% \eeq
+% The equation \ref{Delta} allows one to make a very nontrivial prediction for the strong coupling expansion of operators with fixed length $J$ and the number of derivatives $S$. For that end we simply fix $S$ and $J$ in \ref{Delta} and expand for large $\lambda$ or, equivalently, $\mu$. This procedure gives:
+% \beq
+% \Delta_{S,J,n}\simeq\sqrt{2S}\mu^{1/4}
+% +\frac{2J^2+3S^2-2S}{4\,(2 S)^{1/2}\,\mu^{1/4}}
+% +\frac{-21S^4+(32B_2+12)S^3+(20J^2-12)S^2+8J^2 S-4J^4}{32\,(2S)^{3/2}\,\mu^{3/4}}\;
+% \eeq
+% where $B_2$ is given in \ref{BB}. Note that according to our observations there are some inconsistencies in the conjecture that this derivation relies on when $n>1$ and thus this result should be treated with great care.
+
+% The end result is that we were able to boost the one loop result \ref{eq:loopres} to two loops simply by utilizing Basso's conjecture. We checked the prediction against exact TBA results and the agreement was very convincing.
 
 \subsection{Towards the full solution}
 
