@@ -34,7 +34,7 @@ where the complex scalar field $Z$ and its conjugate $\tilde{Z}$ have the standa
 	\left< {Z^a}_b(x) {{\tilde{Z^{b'}}}}_{a'}(y) \right>_{\mathrm{tree}} \approx \frac{{\delta^a}_{a'} {\delta_b}^{b'}}{|x-y|^{2}}.
 	\label{eq:z_correlator}
 \end{equation}  
-In order to find the anomalous dimension of the chiral primary operator $\Psi$ we must calculate $<\Psi(x) \tilde{\Psi}(x)>$. We do this by using Wick's theorem and plugging in the two-point correlator (\ref{eq:z_correlator}), which produces a lot of terms with delta function contractions between the adjoint indices. Some examples are
+In order to find the anomalous dimension of the operator $\Psi$ we must calculate $<\Psi(x) \tilde{\Psi}(x)>$. We do this by using Wick's theorem and plugging in the two-point correlator (\ref{eq:z_correlator}), which produces a lot of terms with delta function contractions between the adjoint indices. Some examples are
 \begin{subequations}
 	\begin{equation} 
 	\dots {\delta^{a'}}_{a} \; {\delta^{a}}_{a'} \; {\delta^{b'}}_{b} \; {\delta^{b}}_{b'} \; {\delta^{c'}}_{c} \;  {\delta^{c}}_{c'} \; \dots 
@@ -197,7 +197,7 @@ And finally we get
 	\Gamma = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left(2 - 2 \; \mathcal{P}_{l,l+1} + \mathcal{K}_{l,l+1} \right).
 \end{equation}
 A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. 
-In fact, this is hardly surprising, since from the very beginning we were talking about fields as points in some closed line, which indeed resembles a spin chain. 
+In fact, this is hardly surprising, since from the very beginning we were talking about fields as objects in some closed line, which indeed resembles a spin chain. 
 Furthermore the correlators that we were calculating are nothing more that propagators from one state of the chain to another, hence no wonder that the operator describing this evolution looks like a Hamiltonian for a spin chain. 
 This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ exactly. 
 The first steps towards this goal were outlined in the seminal paper \cite{Minahan:2002ve}, which launched the integrability program in AdS/CFT. 
@@ -209,15 +209,16 @@ Nevertheless one can apply the same techniques going beyond one-loop level, as w
 
 In the previous section we considered single trace operators potentially containing all six scalar fields, we also mentioned that at higher loops the remaining fields of the theory start mixing in, i.e. the scalar sector is only closed at one-loop level.
 However it is easy to see that there exist sectors that are closed at all loops.
-From the algebra of the theory we know that dilatations commute with Lorentz and R-symmetries at any value of the coupling, hence it must follow that all the coefficients in
+The anomalous dimension matrix is simply the dilatation operator minus the bare dimension and from the algebra of the theory we know that dilatations commute with Lorentz and R-symmetries at any value of the coupling.
+We can thus conclude that only operators with the same bare dimensions, Lorentz charges and R-charges can mix when acting with the anomalous dimension matrix.
+Furthermore, since this is true at any value of the coupling it must follow that all the coefficients in
 \beq
 	D = \sum_n \lambda^n D^{(2n)},
 \eeq
-where in particular $D^{(2)} \equiv \Gamma$, commute with  Lorentz and R-symmetry generators. 
-Thus we conclude that only operators with the same bare dimensions, Lorentz charges and R-charges can mix when acting with the anomalous dimension matrix.
+commute with  Lorentz and R-symmetry generators, here $D^{(2)} \equiv \Gamma$ is the one-loop dilatation operator found in the last section. 
 
 Arguably the simplest possible closed sector is the so-called $\mathfrak{su}(2)$ sector, containing only two scalar fields $X$ and $Z$. 
-An operator with $M$ and $L-M$ scalars $X$ and $Z$ has the charges $(0, 0; L; M, L-M, 0)$, the only other operators with these charges are permutations of this operator, hence the sector is closed. 
+An operator with $M$ and $L-M$ scalars $X$ and $Z$ has the charges $(0, 0, L; M, L-M, 0)$, the only other operators with these charges are permutations of this operator, hence the sector is closed. 
 The anomalous dimension operator in this sector is given by
 \begin{equation}
 	\Gamma = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(1 - \; \mathcal{P}_{l,l+1} \right),
@@ -253,7 +254,7 @@ In the spin chain language the scalar fields can be treated as up and down spin 
 \end{equation}
 thus local single trace operators can be treated as states of a spin chain, e.g.
 \begin{equation}
-	\tr \left( XXZXXZX \right) = \ket{\downarrow \, \downarrow \, \uparrow \, \downarrow \, \downarrow \, \uparrow \, \downarrow \,}.
+	\tr \left( XXZXXZX \right) \equiv \ket{\downarrow \, \downarrow \, \uparrow \, \downarrow \, \downarrow \, \uparrow \, \downarrow \,}.
 \end{equation}
 Due to the cyclicity of the trace all rotations of the chain are equivalent. 
 We should also specify the periodicity boundary condition
@@ -261,7 +262,7 @@ We should also specify the periodicity boundary condition
 	\vec{S}_{L+1} = \vec{S}_1.
 \end{equation}
 The operators $\vec{S}_l$ act as Pauli matrices on the $l$'th spin site and trivially on all the others. 
-Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $\mathbb{C}^{\otimes_L 2}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize. 
+Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $(\mathbb{C}^2)^{\otimes_L}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize \footnote{Of course, technically the state space is smaller due to the cyclicity of the chain, however as is common in physics we stick with the redundant description for simplicity.}.
 Working directly with Pauli matrices one can find some simple results directly, e.g. it is trivial to show that the chiral primary operator
 \begin{equation}
 	\ket{\Psi} = \tr \; Z^L = \ket{\uparrow \, \uparrow \, \dots \, \uparrow \,}
@@ -355,6 +356,7 @@ Changing variables to
 \end{equation}
 brings the Bethe equations (\ref{eq:bethe_coordinate}) to a more familiar form
 \begin{equation}
+	\label{eq:su2_bae}
 	\left( \frac{u_k + i/2}{u_k - i/2} \right)^L = \prod_{\substack{j=1 \\ j \neq k}}^M \frac{u_k - u_j + i}{u_k - u_j - i},
 \end{equation}
 where now one solves for the Bethe roots $u_k$, also known as magnon rapidities. 
@@ -368,12 +370,91 @@ The energy of the $M$ magnon state is given by
 They key thing worth noting in (\ref{eq:CBA}) is that the spin chain can be fully described in terms of the scattering matrix for just two particles, i.e. the full $M$ particle scattering matrix factorizes.
 This is the defining property of integrability, since factorized scattering means that individual momenta are conserved in each two particle scattering producing a tower of conserved quantities -- just the thing one would want in an integrable system. 
  
-\subsubsection{$\mathfrak{sl}(2)$ and other sectors}
+\subsubsection{The $\mathfrak{sl}(2)$ sector}
 
-sl2
+The $\mathfrak{su}(2)$ sector has a finite dimensional state space for a given length $L$ of the spin chain since we are dealing with finite dimensional representations of a compact group.
+The simplest non-compact closed sector is the $\mathfrak{sl}(2)$ sector, which consists of operators of the form \cite{Beisert:2003yb}
+\beq
+	\mathcal{O} = \tr \( Z^{J-1} \, \mathcal{D}_+^S \, Z \) + \mathrm{permutations},
+\eeq
+where $\mathcal{D_+} = \mathcal{D}_1 + i \mathcal{D}_2$ is the lightcone covariant derivative with global charges $(\frac{1}{2},\frac{1}{2}, 1; 0,0,0)$. Mixing simply redistributes the $S$ covariant derivative applications among the $J$ scalars. In this case we are dealing with infinite dimensional representations of $\mathfrak{sl}(2)$, namely the number of covariant derivatives is in principle unlimited.
 
-\subsection{Higher loops}
+It is convenient to introduce a creation-annihilation operator algebra by defining 
+\beq
+	{(\mathbf{a}^\dagger)}^n \, \ket{0} \equiv \frac{1}{n!}(\mathcal{D}_+)^n \, Z,  
+\eeq
+where $\ket{0}$ is the state annihilated by $\mathbf{a}$. The canonical commutator is defined as usual with $[\mathbf{a}, \mathbf{a}^\dagger] = 1$. The sector is then invariant under the $\mathfrak{sl}(2)$ subalgebra of the supercoformal algebra $\mathfrak{psu}(2,2|4)$ given by 
+\beq
+	J'_{-} = \mathbf{a}, \;\;\; J'_3 = \frac{1}{2} + \mathbf{a}^\dagger \mathbf{a}, \;\;\; J'_{+} = \mathbf{a} + \mathbf{a}^\dagger \mathbf{a}^\dagger \mathbf{a}.
+\eeq
+with the defining commutation relations among them
+\beq
+	[J'_+, J'_-] = -2 \, J'_3, \;\;\; [J'_3, J'_\pm] = \pm J'_\pm.
+\eeq
+Taking a trace of $J$ operators with covariant derivatives is then equivalent to an $\mathfrak{sl}(2)$ spin chain with $s=-1/2$ representations at each site. 
+The Hamiltonian density is given by
+\beq
+	\mathbf{H}_{ij} \; {(\mathbf{a}^\dagger_i)}^{k} {(\mathbf{a}^\dagger_j)}^{m} \ket{00}  = \sum_{k'=0}^{m+k}  \( \delta_{k=k'} \( h(k) + h(m) \) - \frac{\delta_{k \neq k'}}{|k-k'|} \) {(\mathbf{a}^\dagger_i)}^{k'} {(\mathbf{a}_j^\dagger)}^{m+k-k'} \ket{00},
+\eeq
+where $h(k)$ is the $k$th harmonic number given by $\sum_{i=1}^k 1/i$. 
+The Hamiltonian is a sum of nearest neighbour interactions
+\beq
+	\label{eq:sl2_hamiltonian}
+	\mathbf{H} = \sum_{i=1}^J \mathbf{H}_{i,i+1}.
+\eeq
+The spin chain also admits a set of Bethe ansatz equations for the spectrum given by
+\begin{equation}
+	\label{eq:sl2_bae}
+	\left( \frac{u_k + i/2}{u_k - i/2} \right)^J = \prod_{\substack{j=1 \\ j \neq k}}^S \frac{u_k - u_j - i}{u_k - u_j + i},
+\end{equation}
+which are remarkably similar to the $\mathfrak{su}(2)$ equations \eq{eq:su2_bae}. Once the Bethe roots are found the energy of the state is given by
+\begin{equation}
+	\label{eq:sl2_E}
+	E = \sum_{k=1}^S \frac{1}{u_k^2 + 1/4}.
+\end{equation}
 
+The most famous $\mathfrak{sl}(2)$ operator is the so called Konishi operator
+\beq
+	\mathcal{O}_{K} \equiv \tr \( \mathcal{D}_+ Z \, \mathcal{D}_+ Z \) - \tr \( Z \, \mathcal{D}_+^2 Z  \).
+\eeq
+It has the classical dimension $\Delta_0 = 4$, which is obvious from dimensionality. 
+A simple calculation shows that it is an eigenstate of the Hamiltonian \eq{eq:sl2_hamiltonian} with eigenvalue $12$. 
+The same result can also be found from the Bethe ansatz equations \eq{eq:sl2_bae}, \eq{eq:sl2_E}.
+It turns out that the Konishi operator is an eigenstate of the dilatation operator at all loops, thus it is a very convenient object to study.
+So far we can summarize our knowledge of its anomalous dimension as a weak coupling expansion
+\beq
+	\Delta = 4 + 12 g^2 + \ord{g^4}.
+\eeq
+Later sections of this thesis will be mostly concerned with the strong coupling expansion of this anomalous dimension.
+
+\subsubsection{Arbitrary sectors}
+
+The Bethe ansatz equations for the $\mathfrak{su}(2)$ sector \eq{eq:su2_bae} and for the $\mathfrak{sl}(2)$ sector \eq{eq:sl2_bae} look remarkably similar, suggesting that there might be a generalization for arbitrary algebras and representations.
+And indeed such equations exist, they are given by 
+\begin{equation}
+	\left( \frac{u_{i,k} + \frac{i}{2} V_{k}}{u_{i,k} - \frac{i}{2} V_{k}} \right)^L = \prod_{l=1}^r \prod_{\substack{j=1 \\ j \neq i}}^{J_l} \frac{u_{i,k} - u_{j,l} + \frac{i}{2} M_{kl}}{u_{i,k} - u_{j,l} - \frac{i}{2} M_{kl}},
+	\label{eq:general_bae}
+\end{equation}
+where $M_{kl}$ is the Cartan matrix of the symmetry algebra and $V_{k}$ is the vector of highest weights for the representation that the spin sites live in. This is a set of equations for the Bethe roots $u_{k,i}$, where $k=1,\dots,\mathrm{rank}(G)$ and $i = 1,\dots,J_{k}$ with $J_k$ being the number of excitations of type $k$ (each type corresponds to a different node of the Dynkin diagram, hence $k$ has $\mathrm{rank}(G)$ possible values). The total number of excitations is then $J = \sum J_k$. All of the conserved charges of the system can now be given in terms of the Bethe roots as
+\begin{equation}
+	Q_r = \frac{i}{r-1} \sum_{l=1}^{r} \sum_{j=1}^{J_r} \left( \frac{1}{\left(u_{j,l} + \frac{i}{2} V_{l}\right)^{r-1}} - \frac{1}{\left(u_{j,l} - \frac{i}{2} V_{l}\right)^{r-1}} \right).
+\end{equation} 
+In particular the energy is simply the second conserved charge, i.e.
+\begin{equation}
+	E = Q_2 = \frac{i}{r-1} \sum_{l=1}^{r} \sum_{j=1}^{J_r} \left( \frac{1}{u_{j,l} + \frac{i}{2} V_{l}} - \frac{1}{u_{j,l} - \frac{i}{2} V_{l}} \right).
+\end{equation}
+It is now trivial to check that these equations reproduce all of the Bethe equations discussed so far. 
+It is also easy to derive them for other closed sectors, such as  $\mathfrak{su}(2|3)$ or even the full superconformal algebra $\mathfrak{psu}(2,2|4)$.
+
+% A Hamiltonian for arbitrary sectors can also be written down by starting with the general form of 
+% \beq
+	% \mathbf{H} = \sum_{i=1}^L 2 h(J_{i,i+1}),
+% \eeq
+% where $h(i)$ is the $i$th harmonic number and $J_{k,l}$ measures the total spin $j$ of the two fields. For more details see \cite{Beisert:2003yb}.
+
+\subsection{Higher loops and asymptotic length}
+
+\subsubsection{Long range spin chains}
 
 The next step in solving the spectral problem is increasing the loop level. For the $\mathfrak{su}(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. The resulting dilatation operator is given by \cite{su2_loops}
 \begin{equation}
@@ -396,7 +477,7 @@ which in the low coupling limit $\lambda \rightarrow 0$ agrees with the one-loop
 
 Short example of a two loop Hamiltonian, perturbative corrections for the states found above with contact terms.
 
-\subsection{Asymptotic solution}
+\subsubsection{Asymptotic solution}
 
 \beq
 	\label{eq:sl2_aba}
@@ -435,55 +516,81 @@ Also, since $u_k \sim 1/n$ we can simplify the shifts in the rapidities $u_k$, n
 \eeq
 Plugging in the leading order dressing phase expansion and getting rid of the shifts in the rapidities reduces the asymptotic Bethe ansatz equations \eq{eq:log_sl2_aba} to
 \beq
-	\sum_{j \neq k} \frac{2}{x_k - x_j} + \frac{1}{x_k} \( J + \gamma + \frac{2}{1-x_k^2} \) = \frac{\Lambda (x_k^2 - 1)}{2x_k^2}
+	\label{eq:bae_largen}
+	\sum_{j \neq k} \frac{2}{x_k - x_j} + \frac{1}{x_k} \( J + \gamma + \frac{2}{1-x_k^2} \) = \frac{\Lambda (x_k^2 - 1)}{2x_k^2},
 \eeq
-
+which are now starting to resemble equations found in matrix models.
+In anticipation of this we introduce the resolvent
 \beq
-	\gamma = G(1) - G(-1)
+	\label{eq:resolvent}
+	G(x) = \sum_{j=1}^S \frac{1}{x-x_j},
 \eeq
-
+the anomalous dimension is then given by
 \beq
-	G^2(x) + G'(x) + \( \frac{J + \gamma + 2}{x} - \frac{2x}{x^2-1} + \frac{\Lambda}{2} \frac{1-x^2}{x^2} \) G(x) = F(x)
+	\label{eq:gamma_resolvent}
+	\gamma = G(1) - G(-1).
 \eeq
-
+We now multiply \eq{eq:bae_largen} by $(x-x_k)^{-1}$ and sum over $k$, which yields
+\beq
+	\label{eq:Geq}
+	G^2(x) + G'(x) + \( \frac{J + \gamma + 2}{x} - \frac{2x}{x^2-1} + \frac{\Lambda}{2} \frac{1-x^2}{x^2} \) G(x) = F(x),
+\eeq
+where
 \beq
 	F(x) = \frac{\Lambda}{2}\frac{G(0)+G'(0)x}{x^2} + \( J + \gamma + 2 \)\frac{G(0)}{x} - \frac{G(1)}{x-1} - \frac{G(-1)}{x+1}
 \eeq
-
+and we used the following well known identity from matrix model literature
 \beq
-	\Lambda G'(0) = 2G(1) + 2G(-1) - 2G(0)(J + \gamma + 2) - \Lambda S
+	\sum_{j\neq k} \frac{2}{(x-x_k)(x_k-x_j)} = G^2(x) + G'(x).
 \eeq
-
+Next we expand \eq{eq:Geq} at large $x$, obviously is still has to be satisfied order by order.
+In this limit $G(x) \sim S/x$ and at second to leading order we find an equation for $G'(0)$,
 \beq
-	F(x) = \frac{\Lambda}{2}\( \frac{G(0)}{x^2} - \frac{S}{x} \) + \frac{G(-1)}{x(x+1)} - \frac{G(1)}{x(x-1)}
+	\Lambda G'(0) = 2G(1) + 2G(-1) - 2G(0)(J + \gamma + 2) - \Lambda S,
 \eeq
-
+which we then stick back into $F(x)$ to produce
 \beq
-	G(x) = \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_{x_0}^x dy \; F(y) \frac{y^{J+2}}{y^2-1} e^{-\Lambda \frac{y^2+1}{2y}}
+	F(x) = \frac{\Lambda}{2}\( \frac{G(0)}{x^2} - \frac{S}{x} \) + \frac{G(-1)}{x(x+1)} - \frac{G(1)}{x(x-1)},
 \eeq
-
+thus introducing the parameter $S$, which in principle could now be non-integer.
+Finally we take the small $S$ limit by noting that $G(x) \sim S$, keeping only the leading $S$ term $\gamma^{(1)} \sim S$ in the anomalous dimension and dropping all sub-leading $S$ terms. 
+What remains is a first order linear differential equation, which after integrating gives
+\beq
+	G(x) = \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_{x_0}^x dy \; F(y) \frac{y^{J+2}}{y^2-1} e^{-\Lambda \frac{y^2+1}{2y}},
+\eeq
+where $x_0$ is the integration constant.
+We can immediately set it to zero by requiring the resolvent to be finite at the origin.
+Furthermore we can fix the remaining unknown constants $G(0)$ and $G(\pm 1)$ by requiring analyticity of the resolvent, which is manifest in the definition \eq{eq:resolvent}.
+The integrand has poles at $\pm 1$, which may lead to logarithmic singularities after integrating, unless the residues are zero.
+This provides the following constraints
 \begin{subequations}
   \begin{align}
 	\Lambda(G(0)-S) - G(+1)(2J+1)+G(-1) &= 0 \\
 	\Lambda(G(0)+S) + G(-1)(2J+1)-G(+1) &= 0
   \end{align}
 \end{subequations}
-
+Together with \eq{eq:gamma_resolvent} we can solve this system of equations for the unknowns $G(0)$ and $G(\pm 1)$ in terms of $S$, $J$, $\Lambda$ and $\gamma^{(1)}$.
+Plugging everything in and integrating by parts we get
 \beq
-G(x) = -\frac{\Lambda}{2}\frac{S}{J}-\frac{\gamma}{2x}-\frac{\Lambda}{4J} \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_0^x dy \( \gamma J y^{J-1} + \Lambda S y^J \) e^{-\Lambda \frac{y^2+1}{2y}}
+\label{eq:Gfinal}
+G(x) = -\frac{\Lambda}{2}\frac{S}{J}-\frac{\gamma^{(1)}}{2x}-\frac{\Lambda}{4J} \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_0^x dy \( \gamma^{(1)} J y^{J-1} + \Lambda S y^J \) e^{-\Lambda \frac{y^2+1}{2y}}.
 \eeq
-
+We fix the final unknown $\gamma^{(1)}$ by requiring analyticity at the origin, since in general it can be a branch point. To that end we recall the integral representation of the modified Bessel function
 \beq
-	I_\nu(\Lambda) = \frac{(-1)^{-\nu}}{2\pi i} \oint dy \; y^{\nu-1} e^{\Lambda \frac{y^2+1}{2y}}
+	I_\nu(\Lambda) = \frac{(-1)^{-\nu}}{2\pi i} \oint dy \; y^{\nu-1} e^{\Lambda \frac{y^2+1}{2y}},
 \eeq
-
+where the integration contour starts at the origin, goes around counter-clockwise and returns to the origin. 
+Since this integral has no branchpoints at the origin, we see that if we tune the integrand of \eq{eq:Gfinal} in the following way
 \beq
-	\gamma J (-1)^J I_J(\Lambda) + \Lambda S (-1)^{J+1} I_{J+1}(\Lambda) = 0
+	\gamma^{(1)} J (-1)^J I_J(\Lambda) + \Lambda S (-1)^{J+1} I_{J+1}(\Lambda) = 0,
 \eeq
-
+then $G(x)$ is also regular at the origin. 
+This condition fixes the leading small $S$ coefficient of the anomalous dimension, i.e. the slope function $\gamma^{(1)}$ to be
 \beq
-	\gamma^{(1)}(\Lambda) = \frac{\Lambda}{J} \frac{I_{J+1}(\Lambda)}{I_J(\Lambda)}
+	\gamma^{(1)}(\Lambda) = \frac{\Lambda}{J} \frac{I_{J+1}(\Lambda)}{I_J(\Lambda)}.
 \eeq
+This result is exact in the sense that it is valid at any value of the coupling.
+We will be making use of it later in the text to extract non-trivial information about the Konishi anomalous dimension.
 
 \subsection{Strong coupling and the algebraic curve}
 
