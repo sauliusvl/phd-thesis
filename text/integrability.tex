@@ -2,7 +2,11 @@
 
 \section{Perturbative Integrability}
 
-In this section we start attacking the problem of finding the spectrum and as expected we begin with perturbation theory.
+\begin{chapquote}{Old Chinese Proverb}
+It is better to take many small steps in the right direction than to make a great leap forward only to stumble backward.
+\end{chapquote}
+
+\noindent In this section we start attacking the problem of finding the spectrum and as expected we begin with perturbation theory.
 Starting at weak coupling we quickly stumble upon an amazing feature of the theory, so-called integrability, which allows one to apply numerous techniques that greatly simplify the problem.
 We demonstrate integrability from the string theoretic perspective at strong coupling as well, which suggests a unified picture of the integrable structure embedded in the theory persisting to all loops.
 After discussing results achievable via perturbative integrability we finish off with our first exact result, the slope function, which in turn allows one to extract novel information about the spectrum.
@@ -454,31 +458,57 @@ It is also easy to derive them for other closed sectors, such as  $\mathfrak{su}
 
 \subsection{Higher loops and asymptotic length}
 
-\subsubsection{Long range spin chains}
-
-The next step in solving the spectral problem is increasing the loop level. For the $\mathfrak{su}(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. The resulting dilatation operator is given by \cite{su2_loops}
+The next step in solving the spectral problem is increasing the loop level. 
+For the $\mathfrak{su}(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. 
+The resulting dilatation operator is given by \cite{su2_loops}
 \begin{equation}
 	\Gamma_{2-loop} = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(-4 + 6 \, \mathcal{P}_{l,l+1} - \left( \mathcal{P}_{l,l+1} \, \mathcal{P}_{l+1,l+2} + \mathcal{P}_{l+1,l+2} \, \mathcal{P}_{l,l+1} \right) \right).
 \end{equation}
-In the spin chain picture this corresponds to a Hamiltonian for a long range spin chain with two nearest neighbour interactions. This spin chain has been shown to be integrable \cite{su2_loops}. This result has been extended to three, four and five loops \cite{beisert_all_loops}. The explicit expressions for the dilatation operator at higher loops get more and more lengthy and complicated, but a pattern emerges that at loop level $l$ the dilatation operator can be identified with a Hamiltonian of a long range spin chain where at most $l$ nearest neighbours in the chain interact. What is even more remarkable is that these spin chains also turn out to be integrable \cite{three_loops}, which hints that integrability may be an all loop phenomenon. This was in part verified by solving the spectral problem in the asymptotic limit, i.e. when the spin chain length $L$ becomes infinite, but the number of excitations $M$ is kept finite. The solution is given by conjecturing a set of \emph{asymptotic Bethe ansatz equations}, which since their original inception have been extensively verified \cite{aba_tests,aba_tests2}. The equations have the same form as in the one-loop case (\ref{eq:CBA}), but the scattering function for two magnons gets modified to \cite{dorey}
+In the spin chain picture this corresponds to a Hamiltonian for a long range spin chain with two nearest neighbour interactions. 
+This is hardly surprising, in fact one can expect the range of the spin chain to increase together with the loop level, as can be easily seen from diagrammatic arguments.
+This long range spin chain is known to be integrable.
+In fact one can reverse the problem and ask what is the most general form of a long range spin chain Hamiltonian that is still integrable, given its nearest neighbour truncation. 
+The result, up to unknown constant factors, has been worked out \cite{Bargheer:2009xy} and the structure of the Hamiltonian matches loop calculations that are currently available up to five loops. 
+It is now widely believed that the dilatation operator is integrable to all loops.
+
+The method of long range spin chain deformations also predicts how the Bethe ansatz equations get modified at higher loops. 
+Surprisingly the only changes that have to be introduced are the rapidity map
+\beq
+	u_k + \frac{i}{2} V_k \rightarrow x\(u_k + \frac{i}{2} V_k\), \;\;\; u(x) = x + \sum_{k=3}^\infty \frac{\alpha_k}{x^{k-2}},
+\eeq
+and the dressing phase for the scattering matrix
+\beq
+	S(u_k - u_j) \rightarrow S(u_k - u_j) \exp\( 2i\theta(u_k, u_j) \),
+\eeq
+with
+\beq
+	\theta(u_k, u_j) = \sum_{s>r=2}^\infty \beta_{r,s} \( q_r(u_k)q_s(u_j) - q_s(u_k)q_r(u_j) \),
+\eeq
+where $q_r(u_k)$ is the eigenvalue of the conserved charge $\mathbf{Q}_r$ on the single magnon state $\ket{u_k}$.
+The constants $\alpha_k$ and $\beta_{r,s}$ contain dynamical information about the theory and should be determined by other means, such as loop calculations.
+
+Going higher up in loops poses an additional complication, namely the fact that interactions get long ranged and can start wrapping around short operators, this is the so-called \emph{wrapping problem}.
+For starters it is easiest to avoid it by considering asymptotically long operators. 
+The rapidity map for $\N=4$ SYM has been conjectured to be defined by
 \begin{equation}
-	S(p_i, p_j) = \frac{u(p_i) - u(p_j) + i}{u(p_i) - u(p_j) - i} \times S_D(p_i, p_j),
+	x + \frac{1}{x} = \frac{4 \pi}{\sqrt{\lambda}} u, \,\,\,\,\,\,\,\,\, x^{\pm} + \frac{1}{x^{\pm}} = \frac{4 \pi}{\sqrt{\lambda}} \left( u \pm \frac{i}{2} \right),
 \end{equation}
-where $S_D(p_i, p_j)$ is the so called dressing factor (an explicit expression for it can be found in \cite{dressing}) and the rapidities are now defined as
-\begin{equation}
-	u(p) = \frac{1}{2} \, \mathrm{cot} \, \frac{p}{2} \, \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}}.
-\end{equation}
-The outcome is that all one-loop results get slightly modified, e.g. the magnon dispersion relation (\ref{eq:magnon_energy}) becomes
+whereas the dressing phase only appears at four loops \cite{dressing}. 
+The most general form of the Bethe ansatz equations \ref{eq:general_bae} modified by the rapidity map and the dressing phase are referred to as the \emph{asymptotic Bethe ansatz} equations.
+They have been extensively verified \cite{aba_tests,aba_tests2} since their original proposal.
+
+In the physical picture of propagating magnons one can understand the rapidity map as a modification of the magnon dispersion relation.
+For the $\mathfrak{su}(2)$ sector the one-loop dispersion relation (\ref{eq:magnon_energy}) gets modified to
 \begin{equation}
 	E(p) = \frac{8\pi^2}{\lambda} \left( \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}} - 1 \right),
 	\label{eq:ABA_e}
 \end{equation}  
-which in the low coupling limit $\lambda \rightarrow 0$ agrees with the one-loop result as it should. For many magnon states the energy is still given by the sum of individual magnon energies. It is truly remarkable that such a simple solution exists even though the Hamiltonian of the all-loop spin chain is not known. But even though such an easy generalization to an all-loop solution looks promising, it is only the first step towards the full solution of the spectral problem in $\N=4$ SYM. 
+which in the low coupling limit $\lambda \rightarrow 0$ agrees with the one-loop result as it should. 
+For many magnon states the energy is still given by the sum of individual magnon energies. 
 
-Short example of a two loop Hamiltonian, perturbative corrections for the states found above with contact terms.
+\subsubsection{A glimpse ahead: the slope function}
 
-\subsubsection{Asymptotic solution}
-
+It is now a simple excercise to write down the asymptotic Bethe ansatz equations for the $\mathfrak{sl}(2)$ sector, which are [??]
 \beq
 	\label{eq:sl2_aba}
 	\( \frac{x_k^+}{x_k^-} \)^J = \prod_{j \neq k}^S \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j), \;\;\; k = 1, \dots S
@@ -487,15 +517,12 @@ where
 \beq
 	\Delta = J + S + \gamma(g), \;\;\; \gamma(g) = \frac{i \sqrt{\lambda}}{2\pi} \sum_{j=1}^S \( \frac{1}{x_j^+} - \frac{1}{x_j^-} \)
 \eeq
-with
-\beq
-\label{eq:u_of_x}
-u(x) = g \(x + \frac{1}{x}\)
-\eeq
-
-\subsubsection{A glimpse ahead: the slope function}
-
-The asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact result we encountered so far, even if only valid in the asymptotic limit. In this short paragraph we will demonstrate how it can be used to find the exact \emph{slope function} $\gamma^{(1)}(g)$, which is defined as the linear term in the small $S$ expansion of the anomalous dimension, namely
+% with
+% \beq
+% \label{eq:u_of_x}
+% u(x) = g \(x + \frac{1}{x}\)
+% \eeq
+This asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact result we encountered so far, even if only valid in the asymptotic limit. In this short paragraph we will demonstrate how it can be used to find the exact \emph{slope function} $\gamma^{(1)}(g)$, which is defined as the linear term in the small $S$ expansion of the anomalous dimension, namely
 \beq
 	\gamma(g) = \gamma^{(1)}(g) \; S + \gamma^{(2)}(g) \; S^2 + \ord{S^3}.
 \eeq
@@ -721,7 +748,7 @@ Describe flat connections, monodromies, sheets etc.
 
 Give solution.
 
-\subsection{String quantization and semi-classics}
+\subsubsection{String quantization and semi-classics}
 
 Describe the quantization procedure. Derive next coefficient for Konishi.
 
