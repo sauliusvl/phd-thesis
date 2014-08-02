@@ -110,7 +110,7 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 \caption{Possible types of Wick contractions (vertical lines) between single trace operators. The constituent scalar fields are represented by dots in the horizontal lines, which represent the successive index contractions due to the trace. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
 \label{fig:planar_nonplanar}
 \end{figure}
-All that's left then are cyclic permutations of lines by shifting all of them as seen in fig. \ref{fig:planar_nonplanar} while going from (a) to (b). 
+All that's left then are cyclic permutations of lines by shifting all of them as seen in \mbox{fig. \ref{fig:planar_nonplanar}} while going from (a) to (b). 
 There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. 
 Thus finally for the chiral primary correlator at tree level we find
 \begin{equation}
@@ -132,7 +132,7 @@ First let's concentrate on the bosonic sector of the theory ignoring gluons.
 The action (\ref{eq:n4_action}) contains a single scalar-only interaction term
 \begin{eqnarray}
 S_{\Phi} & = &  \frac{g_{YM}^2}{4} \sum_{I,J} \int d^4 x \, \tr \, [\Phi_I, \Phi_J] [\Phi_I, \Phi_J] \nonumber \\
-& = & - \frac{g_{YM}^2}{4} \sum_{I,J} \int d^4 x \, \left( \tr \, [\Phi_I\Phi_I\Phi_J\Phi_J] - \tr \, [\Phi_I\Phi_J\Phi_I\Phi_J]  \right).
+& = & - \frac{g_{YM}^2}{2} \sum_{I,J} \int d^4 x \, \left( \tr \, \Phi_I\Phi_I\Phi_J\Phi_J - \tr \, \Phi_I\Phi_J\Phi_I\Phi_J \right).
 \end{eqnarray} 
 In order to calculate the correlator (\ref{eq:tree_correlator}) at one-loop level, one should insert this term and Wick contract. 
 Just like in tree level, we only have to keep planar diagrams. 
@@ -161,7 +161,7 @@ Using these operators we can rewrite the correlator in (\ref{eq:loop_correlator}
 	  = \frac{\lambda}{16\pi^2} \frac{\log (\mu^2|x-y|^2)}{|x-y|^{2L}} 
 	 & \left( 2 \; \mathcal{P}_{k,k+1} - \mathcal{K}_{k,k+1} - 1 \right) \delta_{I_k}^{J_{k}} \delta_{I_{k+1}}^{J_{k+1}}.
 \end{eqnarray}
-This result includes four scalar interactions only, however as mentioned before at one-loop level we can also have gluon interactions and fermion loops in scalar propagators. 
+This result includes only interactions with four scalars, however as mentioned before at one-loop level we can also have gluon interactions and fermion loops in scalar propagators. 
 The nice thing about these is that such interactions don't alter the flavor index structure, i.e. there are no permutations or traces. 
 Basically this happens because the gluon transforms trivially under R-symmetry and hence can't change the flavor index (which transforms under R-symmetry). 
 Similarly, fermions can only appear in loops altering scalar self-energies, hence they also leave the flavor structure intact.
@@ -193,6 +193,7 @@ Since it contains scalar fields of only one type, the permutation and trace oper
 but we already saw that a chiral primary has an anomalous dimension of zero, which then fixes the constant $C$ to $-1$. 
 And finally we get
 \begin{equation}
+	\label{eq:so6_dimension}
 	\Gamma = \frac{\lambda}{16\pi^2}\sum_{l=1}^L \left(2 - 2 \; \mathcal{P}_{l,l+1} + \mathcal{K}_{l,l+1} \right).
 \end{equation}
 A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. 
@@ -219,8 +220,10 @@ Arguably the simplest possible closed sector is the so-called $\mathfrak{su}(2)$
 An operator with $M$ and $L-M$ scalars $X$ and $Z$ has the charges $(0, 0; L; M, L-M, 0)$, the only other operators with these charges are permutations of this operator, hence the sector is closed. 
 The anomalous dimension operator in this sector is given by
 \begin{equation}
-	\Gamma = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(1 - \; \mathcal{P}_{l,l+1} \right).
+	\Gamma = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(1 - \; \mathcal{P}_{l,l+1} \right),
 \end{equation}
+which lacks the contraction operator term compared to \eq{eq:so6_dimension}. 
+We neglect it since operators in this sector do not contain both scalars and their conjugates, thus no contractions are possible.
 Up to a constant factor this is the same as the Hamiltonian for the Heisenberg spin chain (also called the XXX spin chain), which is a quantum description of a one dimensional magnet. 
 The Hamiltonian is given by
 \begin{equation}
