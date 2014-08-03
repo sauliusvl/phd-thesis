@@ -439,13 +439,13 @@ And indeed such equations exist, they are given by
 	\left( \frac{u_{i,k} + \frac{i}{2} V_{k}}{u_{i,k} - \frac{i}{2} V_{k}} \right)^L = \prod_{l=1}^r \prod_{\substack{j=1 \\ j \neq i}}^{J_l} \frac{u_{i,k} - u_{j,l} + \frac{i}{2} M_{kl}}{u_{i,k} - u_{j,l} - \frac{i}{2} M_{kl}},
 	\label{eq:general_bae}
 \end{equation}
-where $M_{kl}$ is the Cartan matrix of the symmetry algebra and $V_{k}$ is the vector of highest weights for the representation that the spin sites live in. This is a set of equations for the Bethe roots $u_{k,i}$, where $k=1,\dots,\mathrm{rank}(G)$ and $i = 1,\dots,J_{k}$ with $J_k$ being the number of excitations of type $k$ (each type corresponds to a different node of the Dynkin diagram, hence $k$ has $\mathrm{rank}(G)$ possible values). The total number of excitations is then $J = \sum J_k$. All of the conserved charges of the system can now be given in terms of the Bethe roots as
+where $M_{kl}$ is the Cartan matrix of the symmetry algebra and $V_{k}$ is the vector of highest weights for the representation that the spin sites live in. This is a set of equations for the Bethe roots $u_{k,i}$, where $k=1,\dots,\mathrm{rank}(G)$ and $i = 1,\dots,J_{k}$ with $J_k$ being the number of excitations of type $k$ (each type corresponds to a different node of the Dynkin diagram, hence $k$ has $\mathrm{rank}(G)$ possible values). The total number of excitations is then $J = \sum J_k$. All of the conserved charges of the system can now be given in terms of the Bethe roots as [?? check ??]
 \begin{equation}
 	Q_r = \frac{i}{r-1} \sum_{l=1}^{r} \sum_{j=1}^{J_r} \left( \frac{1}{\left(u_{j,l} + \frac{i}{2} V_{l}\right)^{r-1}} - \frac{1}{\left(u_{j,l} - \frac{i}{2} V_{l}\right)^{r-1}} \right).
 \end{equation} 
 In particular the energy is simply the second conserved charge, i.e.
 \begin{equation}
-	E = Q_2 = \frac{i}{r-1} \sum_{l=1}^{r} \sum_{j=1}^{J_r} \left( \frac{1}{u_{j,l} + \frac{i}{2} V_{l}} - \frac{1}{u_{j,l} - \frac{i}{2} V_{l}} \right).
+	E = Q_2 = i \sum_{l=1}^{2} \sum_{j=1}^{J_2} \left( \frac{1}{u_{j,l} + \frac{i}{2} V_{l}} - \frac{1}{u_{j,l} - \frac{i}{2} V_{l}} \right).
 \end{equation}
 It is now trivial to check that these equations reproduce all of the Bethe equations discussed so far. 
 It is also easy to derive them for other closed sectors, such as  $\mathfrak{su}(2|3)$ or even the full superconformal algebra $\mathfrak{psu}(2,2|4)$.
@@ -494,21 +494,25 @@ The rapidity map for $\N=4$ SYM has been conjectured to be defined by
 	x + \frac{1}{x} = \frac{4 \pi}{\sqrt{\lambda}} u, \,\,\,\,\,\,\,\,\, x^{\pm} + \frac{1}{x^{\pm}} = \frac{4 \pi}{\sqrt{\lambda}} \left( u \pm \frac{i}{2} \right),
 \end{equation}
 whereas the dressing phase only appears at four loops \cite{dressing}. 
-The most general form of the Bethe ansatz equations \ref{eq:general_bae} modified by the rapidity map and the dressing phase are referred to as the \emph{asymptotic Bethe ansatz} equations.
+The most general form of the Bethe ansatz equations \eq{eq:general_bae} modified by the rapidity map and the dressing phase are referred to as the \emph{asymptotic Bethe ansatz} equations.
 They have been extensively verified \cite{aba_tests,aba_tests2} since their original proposal.
 
-In the physical picture of propagating magnons one can understand the rapidity map as a modification of the magnon dispersion relation.
-For the $\mathfrak{su}(2)$ sector the one-loop dispersion relation (\ref{eq:magnon_energy}) gets modified to
-\begin{equation}
-	E(p) = \frac{8\pi^2}{\lambda} \left( \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}} - 1 \right),
-	\label{eq:ABA_e}
-\end{equation}  
-which in the low coupling limit $\lambda \rightarrow 0$ agrees with the one-loop result as it should. 
-For many magnon states the energy is still given by the sum of individual magnon energies. 
+% In the physical picture of propagating magnons one can understand the rapidity map as a modification of the magnon dispersion relation.
+% For the $\mathfrak{su}(2)$ sector rapidities are defined as 
+% \begin{equation}
+	% u(p) = \frac{1}{2} \, \mathrm{cot} \, \frac{p}{2} \, \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}}
+% \end{equation}
+% and the one-loop dispersion relation (\ref{eq:magnon_energy}) gets modified to
+% \begin{equation}
+	% E(p) = \frac{8\pi^2}{\lambda} \left( \sqrt{1 + \frac{\lambda}{\pi^2} \, \mathrm{sin}^2 \, \frac{p}{2}} - 1 \right),
+	% \label{eq:ABA_e}
+% \end{equation}  
+% which in the low coupling limit $\lambda \rightarrow 0$ agrees with the one-loop result as it should. 
+% For many magnon states the energy is still given by the sum of individual magnon energies. 
 
 \subsubsection{A glimpse ahead: the slope function}
 
-It is now a simple excercise to write down the asymptotic Bethe ansatz equations for the $\mathfrak{sl}(2)$ sector, which are [??]
+It is now a simple exercise to write down the asymptotic Bethe ansatz equations for the $\mathfrak{sl}(2)$ sector, which are [??]
 \beq
 	\label{eq:sl2_aba}
 	\( \frac{x_k^+}{x_k^-} \)^J = \prod_{j \neq k}^S \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j), \;\;\; k = 1, \dots S
@@ -528,7 +532,7 @@ This asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact resu
 \eeq
 The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section ??, where we also address the question of what it actually means to send an integer quantity $S$ to zero. 
 
-The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \eq{eq:sl2_aba}, given by
+The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \ref{eq:sl2_aba}, given by
 \beq
 	\label{eq:log_sl2_aba}
 	\frac{J}{i} \log \( \frac{x_k^+}{x_k^-} \) - \sum_{j \neq k}^S \frac{1}{i} \log \( \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j) \) = 2 \pi n_k,
@@ -619,53 +623,49 @@ This condition fixes the leading small $S$ coefficient of the anomalous dimensio
 This result is exact in the sense that it is valid at any value of the coupling.
 We will be making use of it later in the text to extract non-trivial information about the Konishi anomalous dimension.
 
-\subsection{Strong coupling and the algebraic curve}
+\subsection{Strong coupling}
 
+Since integrability seems to be an all loop phenomenon as exemplified by the asymptotic Bethe ansatz, one would expect to find it at strong coupling as well, where $N=4$ super Yang-Mills admits a string theory formulation as discussed in section \ref{sec:n4_strong}. 
+In this section we showcase integrability of the classical $\adsfive$ string using the elegant language of algebraic curves. 
 
+\subsubsection{The algebraic curve construction}
 
-In the previous section we defined strings on $AdS_5 \times S^5$ in terms of the algebra current $J$, given in (\ref{eq:j_current}). This current has the property of being flat,
+Recall that classical string theory on $\adsfive$ can be formulated as a super-coset sigma model, which is defined in terms of the algebra current $J = -g^{-1} \mathrm{d} g$. 
+This current has the property of being flat,
 \begin{equation}
 	dJ - J \wedge J = 0,
 \end{equation}
-and what is more, one can even define a one parameter family of connections from it by \cite{sakura}
+what is more, one can find a one parameter family of connections \cite{sakura}
 \begin{equation}
 \begin{split}
 	L(x) = J^{(0)} & + \,\,\, \frac{x^2 + 1}{x^2 - 1} \; J^{(2)}  - \,\,\,\, \frac{2x}{x^2 - 1} \; \left( * J^{(0)} - \Lambda \right) \\ 
 	 & + \sqrt{\frac{x+1}{x-1}} \; J^{(1)} + \sqrt{\frac{x-1}{x+1}} \; J^{(3)},
 \end{split}
 \end{equation} 
-which are flat for all $x$,
+which are flat for any $x$,
 \begin{equation}
 	dL(x) - L(x) \wedge L(x) = 0.
 \end{equation}
-Here $L(x)$ is the \emph{Lax connection} and $x$ is the spectral parameter. The existence of such a set of connections signals that the theory is at least classically integrable. This can be shown by constructing the monodromy matrix
+Here $L(x)$ is the \emph{Lax connection} and $x$ is the spectral parameter. 
+The existence of such a set of connections signals that the theory is at least classically integrable. 
+This can be shown by constructing the monodromy matrix
 \begin{equation}
 	\Omega(x) = \mathcal{P} \; \mathrm{exp} \oint_\gamma L(x),
 \end{equation}
-where $\gamma$ is any path wrapping the worldsheet cylinder. Since the connection is flat, by definition it is path independent and we can evaluate the integral along any $\tau = const$ loop. Furthermore, shifting the $\tau$ value corresponds to doing a similarity transformation on the monodromy matrix \cite{gromov_quasiclassical}, meaning that the eigenvalues must be time independent. Thus we have an infinite tower of conserved charges, hinting that the theory may be integrable. Denote the eigenvalues of the monodromy matrix as
+where $\gamma$ is any path wrapping the worldsheet cylinder. 
+Since the connection is flat, by definition it is path independent and we can evaluate the integral along any constant $\tau$ loop. 
+Furthermore, shifting the $\tau$ value corresponds to doing a similarity transformation on the monodromy matrix, meaning that the eigenvalues must be time independent. 
+Thus we have an infinite tower of conserved charges, hinting that the theory is integrable. 
+In order to find the eigenvalues of the monodromy matrix one has to solve the characteristic equation, which in this case is a polynomial of order eight.
+This equation in turn defines an eight-sheeted Riemann surface called the \emph{algebraic curve} where the sheets can be connected with branch cuts of the square root type. 
+Denote the eigenvalues of the monodromy matrix as
 \begin{equation}
-	\{ e^{i\hat{p}_1(x)}, \; e^{i\hat{p}_2(x)}, \; e^{i\hat{p}_3(x)}, \; e^{i\hat{p}_4(x)} \; | \; e^{i\tilde{p}_1(x)}, \; e^{i\tilde{p}_2(x)}, \; e^{i\tilde{p}_3(x)}, \; e^{i\tilde{p}_4(x)} \}.
+	\{ e^{i\hat{p}_1(x)}, \; e^{i\hat{p}_2(x)}, \; e^{i\hat{p}_3(x)}, \; e^{i\hat{p}_4(x)} \; | \; e^{i\tilde{p}_1(x)}, \; e^{i\tilde{p}_2(x)}, \; e^{i\tilde{p}_3(x)}, \; e^{i\tilde{p}_4(x)} \},
 \end{equation} 
-Here the quantities $p(x)$ are called \emph{quasi-momenta}. The bar as always denotes the $\mathbb{Z}_2$ grading and we use the convention that hatted quantities correspond to $AdS_5$ variables and quantities with tildes correspond to $S^5$. From elementary algebraic geometry we know that the zeroes of any polynomial define an algebraic curve and since the eigenvalues $e^{ip(x)}$ are the zeroes of the characteristic polynomial of the monodromy matrix, they must also define an algebraic curve. A key idea in the development of integrability was the realization that this algebraic curve also known as the \emph{spectral curve} can be used to define classical string solutions \cite{action_variables2}. It is highly nontrivial to reconstruct a classical string solution given a set of quasi-momenta, yet they provide a very convenient way of describing solutions and they are very useful for solving the spectral problem. In that sense the spectral curve is the string analogue of the Bethe equations, which can also be used to find explicit solutions, but the their true power lies in their ability to efficiently solve the spectral problem. 
-
-The characteristic equation for the monodromy matrix is of order eight, meaning that the algebraic curves it defines can be thought of as cuts connecting eight sheets of a Riemann surface. A cut connecting sheets $i$ and $j$ is denoted as $\mathcal{C}^{ij}$ and the quasi-momenta on these sheets have discontinuities
-\begin{equation}
-	p_i(x + i\epsilon) - p_j(x - i\epsilon) = 2 \pi n_{ij},
-	\label{eq:cut_condition}
-\end{equation}  
-where $n_{ij}$ is an integer. Four of the eight sheets correspond to the $AdS_5$ part of the string target space and the other four to the $S^5$ part, hence the indices $i$ and $j$ take on values
-\begin{equation}
-	i \in \{ \, \tilde{1}, \, \tilde{2}, \, \hat{1}, \, \hat{2} \, \}, \;\;\;\; j \in \{ \, \tilde{3}, \, \tilde{4}, \, \hat{3}, \, \hat{4} \, \}
-\end{equation}
-and we define $p$ to have either a hat or a tilde based on the index, i.e. 
-\begin{equation}
-	p_{\hat{i}} (x) \equiv \hat{p}_i (x) \;\;\;\; \mathrm{and} \;\;\;\; p_{\tilde{i}} (x) \equiv \tilde{p}_i (x).
-\end{equation}
-We determine the polarization of a solution by the type of sheets the corresponding cut connects, e.g. if it connects two hatted sheets, the string is polarized in the $AdS_5$ part of the background and if it connects mixed sheets it is a fermionic excitation. Solutions in closed sectors, e.g. strings moving in the $\mathbb{R} \times S^3$ submanifold of the target space will be limited to cuts between a subset of the eight sheets. Some examples of cuts are shown in fig. \ref{fig:cuts}. For each cut we associate the so called \emph{filling fraction} defined by
-\begin{equation}
-	S_{ij} = \pm \frac{\lambda}{8 \pi^2 i} \oint_{\mathcal{C}^{ij}} \left( 1 - \frac{1}{x^2} \right) p_i(x) dx,
-\end{equation}
-where a plus sign is used for indices with a hat and a minus for indices with a tilde. These are the action angle variables for the theory, which is another concept from classical integrability \cite{action_variables}. Roughly they measure the length of the cut, it is also known that they correspond to the excitation numbers of strings or the number of Bethe roots in the spin chain picture \cite{action_variables2}, hence they are integers. 
+where the quantities $p(x)$ are called \emph{quasi-momenta} and we use the convention where hatted quantities correspond to $AdS_5$ variables and quantities with tildes correspond to $S^5$. 
+The quasi-momenta $p(x)$ being logarithms of the eigenvalues live on the sheets of this Riemann surface.
+The key idea here is that the quasi-momenta provide an alternative representation of classical string solutions which lends itself better to generalization. 
+Namely, this description of classical solutions is more natural in light of integrability, furthermore it is better suited for quantization.
 
 \begin{figure}[t]
 	\centering
@@ -674,17 +674,46 @@ where a plus sign is used for indices with a hat and a minus for indices with a 
 	\label{fig:cuts}
 \end{figure}
 
-Since the Lax connection has poles at $x = \pm 1$, so do the quasi-momenta. Due to the Virasoro constraint, which comes about from the diffeomorphism invariance of the worldsheet, the residues of the quasi-momenta are constrained to
+The physical picture is that each cut between two sheets represents an excitation whose polarization is determined by the sheets it connects, an example is shown in figure \ref{fig:cuts}. 
+Four of the eight sheets correspond to the $AdS_5$ part of the string target space and the other four to the $S^5$ part. 
+$\adsfive$ has 16 types of excitations, in the algebraic curve language this is implemented as the requirement that only sheets from the following sets can be connected
+\begin{equation}
+	i \in \{ \, \tilde{1}, \, \tilde{2}, \, \hat{1}, \, \hat{2} \, \}, \;\;\;\; j \in \{ \, \tilde{3}, \, \tilde{4}, \, \hat{3}, \, \hat{4} \, \},
+\end{equation}
+furthermore bosonic excitations correspond to cuts between sheets of the same type (hat or tilde), whereas fermionic excitations connect sheets of different types. 
+Obviously fermions do not exist at the classical level, thus cuts can only represent the 8 types of bosonic excitations.
+Fermionic excitations start appearing as microscopic cuts, i.e. poles during quantization. 
+Solutions in closed sectors, e.g. strings moving in the $\mathbb{R} \times S^3$ submanifold of the target space will be limited to cuts between a subset of the eight sheets.
+
+Denote the branch cut between sheets $i$ and $j$ as $\mathcal{C}^{ij}$, the quasi-momenta on these sheets have discontinuities when going through the cut given by
+\begin{equation}
+	p_i(x + i\epsilon) - p_j(x - i\epsilon) = 2 \pi n_{ij},
+	\label{eq:cut_condition}
+\end{equation}  
+where $n_{ij}$ is an integer mode number.
+For each cut we associate the so called \emph{filling fraction} defined by
+\begin{equation}
+	S_{ij} = \pm \frac{\lambda}{8 \pi^2 i} \oint_{\mathcal{C}^{ij}} \left( 1 - \frac{1}{x^2} \right) p_i(x) dx.
+\end{equation}
+These are the action angle variables for the theory, roughly they measure the length of the cut and in the physical picture they correspond to the amplitude of the excitation. 
+The integration measure is fixed from the requirement that the filling fractions be integers. 
+Thus we see that the algebraic curve construction acts like a Fourier decomposition -- string solutions are described as collections of excitations each having definite polarizations, mode numbers and amplitudes.
+
+Let us now review some of the analyticity properties of the quasi-momenta. 
+Since the Lax connection has poles at $x = \pm 1$, so do the quasi-momenta (as shown in figure \ref{fig:cuts}). 
+Due to the Virasoro constraint, which comes about from the diffeomorphism invariance of the worldsheet, the residues of the quasi-momenta are constrained to
 \begin{equation}
 	\{ \hat{p}_1, \; \hat{p}_2, \; \hat{p}_3, \; \hat{p}_4 \; | \; \tilde{p}_1, \; \tilde{p}_2, \; \tilde{p}_3, \; \tilde{p}_4 \} = \frac{\{ \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm}, \, | \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm} \}}{x \pm 1}.
 \end{equation}
-An additional constraint on the quasi-momenta comes from the fact that the algebra $\mathfrak{psu(2,2|4)}$ has an automorphism, which is the cause for an additional $\mathbb{Z}_4$ grading. The constraints are given by \cite{sakura}
+An additional constraint on the quasi-momenta comes from the fact that the algebra $\mathfrak{psu(2,2|4)}$ has an automorphism, which is the cause for an additional $\mathbb{Z}_4$ grading. 
+The constraints are given by \cite{sakura}
 \begin{eqnarray}
 	\tilde{p}_{1,2}(x) & = & -\tilde{p}_{2,1}(1/x) - 2 \pi m \nonumber \\
-	\tilde{p}_{3,4}(x) & = & -\tilde{p}_{4,3}(1/x) - 2 \pi m \nonumber \\
+	\tilde{p}_{3,4}(x) & = & -\tilde{p}_{4,3}(1/x) + 2 \pi m \nonumber \\
 	\hat{p}_{1,2,3,4}(x) & = & -\hat{p}_{2,1,4,3}(1/x).
 \end{eqnarray}
-These relations define an inversion symmetry. Finally one can look at the asymptotics of the quasi-momenta as the spectral parameter becomes infinite. In this limit the Lax connection becomes related to the Noether currents of the theory and hence one can relate the quasi-momenta to the charges of the global symmetry algebra by \cite{algebraic_curve}
+These relations define an inversion symmetry. 
+Finally one can look at the asymptotics of the quasi-momenta as the spectral parameter becomes infinite. In this limit the Lax connection becomes related to the Noether currents of the theory and hence one can relate the quasi-momenta to the charges of the global symmetry algebra by \cite{algebraic_curve}
 \begin{equation}
 \left(
 \begin{array}{c}
@@ -714,43 +743,142 @@ These relations define an inversion symmetry. Finally one can look at the asympt
 \right),
 \label{eq:asymptotics}
 \end{equation}
-where the charges are rescaled by $\mathcal{Q} = Q / \sqrt{\lambda}$. Thus we see that we can characterize the quasi-momenta by describing their behaviour at poles and under symmetries, by their asymptotics and their filling fractions. 
-
-Let us now revisit the simplest string solution we know, the BMN string and describe it using the spectral curve. Not surprisingly it is the simplest algebraic curve possible, containing no poles or cuts except the trivial ones at $x = \pm 1$. The quasi-momenta are given by \cite{bmn_from_curve}
-\begin{equation}
-	\tilde{p}_{1,2} = -\tilde{p}_{3,4} = \hat{p}_{1,2} = -\hat{p}_{3,4} = \frac{2 \pi \mathcal{J} x}{x^2 - 1}.
-\end{equation}
-From the asymptotic behaviour as $x \rightarrow \infty$ we can determine the charges of this solution by comparing to (\ref{eq:asymptotics}) and we find
-\begin{equation}
-	\mathcal{J}_1 = \mathcal{J}, \;\;\;\;\; \mathcal{E} = \kappa = \mathcal{J},
-\end{equation}
-all other charges being zero. Many other solutions can be characterized this way, e.g. the giant magnon corresponds to a two cut solution \cite{gromov_quasiclassical}.
-
-As already mentioned, the key advantage of describing solutions using algebraic curves is the ability to solve the spectral problem without actually solving the equations of motion. We already saw this at the classical level, where finding the energy of a solution amounts to looking at the asymptotic behaviour of the quasi-momenta. Quasi-classical analysis of the spectral curve enables one to go beyond the classical theory and find quantum corrections to the energy levels of classical solutions. The idea of quasi-classical analysis and the spectral curve for that matter traces back to the early days of quantum mechanics. Consider a particle in a smooth one dimensional potential described by the wave function $\psi(x)$. Define the quasi-momentum by
-\begin{equation}
-	p(x) \equiv \frac{\hbar}{i} \frac{\psi'(x)}{\psi(x)},
-\end{equation}
-the Schr\"{o}dinger equation then looks like
-\begin{equation}
-	p^2(x) - i \hbar \, p'(x) = 2m (E - V),
-\end{equation}
-which would be the classic energy momentum relation if it were not for the $\hbar$ term. The quasi-momentum has a pole for each zero of the wave function, so for a highly excited state this will be some big number $N \rightarrow \infty$ and we would recover the classical solution. What is more, the poles get closer and closer to each other and in the classical limit they condense to form a cut connecting two sheets in a Riemann surface. Thus in the classical limit we recover the spectral curve of this system. We also know that the number of poles is given by
-\begin{equation}
-	\frac{1}{2 \pi \hbar} \oint_\mathcal{C} p(x) \, dx = N,
-\end{equation}
-which is also the Bohr-Sommerfield quantization condition. This integral effectively measures the size of the cut when the poles condense to a cut, thus this is the filling fraction. This simplified discussion illustrates how one could go from a classical system to a quantum one. The idea of quasi-classical analysis is to start with a classical solution and perturb it by adding microscopic cuts to the Riemann surface, which effectively describe some quantum excitations. This is exactly what has been done for various string solutions in $AdS_5 \times S^5$ \cite{gromov_quasiclassical}. One can then proceed with comparing the spectra of string solutions beyond the classical level with spectra of spin chain states at higher loop levels and the results so far have been encouraging \cite{gromov_psu}.
+where the charges are rescaled by $\mathcal{Q} = Q / \sqrt{\lambda}$. 
+Thus we see that we can characterize the quasi-momenta by describing their behaviour at poles and under symmetries, by their asymptotics and their filling fractions. 
 
 
 
-Describe flat connections, monodromies, sheets etc.
+\subsubsection{Quantization and semi-classics}
+
+\beq
+	p_i(x) \rightarrow p_i(x) + \delta^{ij} p_i(x)
+\eeq
+
+\beq
+	p_i(x_n^{ij}) - p_j(x_n^{ij}) = 2 \pi n_{ij}
+\eeq
+
+\beq
+	\mathcal{E} = \frac{1}{2} \sum_{ij} (-1)^{F_{ij}} \oint \frac{dx}{2\pi i} \( \Omega^{ij}(x) \d_x \log \sin \frac{p_i - p_j}{2} \)
+\eeq
+
+\begin{equation}
+\left(
+\begin{array}{c}
+  \delta \hat{p}_1 \\
+  \delta \hat{p}_2 \\
+  \delta \hat{p}_3 \\
+  \delta \hat{p}_4 \\
+  \hline
+  \delta \tilde{p}_1 \\
+  \delta \tilde{p}_2 \\
+  \delta \tilde{p}_3 \\
+  \delta \tilde{p}_4 \\
+\end{array}
+\right) = \frac{4 \pi}{x \sqrt{\lambda}}
+\left(
+\begin{array}{rl}
+  + \delta \Delta/2 &+ N_{\hat{1}\hat{4}} + N_{\hat{1}\hat{3}} + N_{\hat{1}\tilde{3}} + N_{\hat{1}\tilde{4}} \\
+  + \delta \Delta/2 &+ N_{\hat{2}\hat{3}} + N_{\hat{2}\hat{4}} + N_{\hat{2}\tilde{4}} + N_{\hat{2}\tilde{3}} \\
+  - \delta \Delta/2 &- N_{\hat{2}\hat{3}} - N_{\hat{1}\hat{3}} - N_{\tilde{1}\hat{3}} - N_{\tilde{2}\hat{3}} \\
+  - \delta \Delta/2 &- N_{\hat{1}\hat{4}} - N_{\hat{2}\hat{4}} - N_{\tilde{2}\hat{4}} - N_{\tilde{1}\hat{4}} \\
+  \hline
+   &- N_{\tilde{1}\tilde{4}} - N_{\tilde{1}\tilde{3}} - N_{\tilde{1}\hat{3}} - N_{\tilde{1}\hat{4}} \\
+   &- N_{\tilde{2}\tilde{3}} - N_{\tilde{2}\tilde{4}} - N_{\tilde{2}\hat{4}} - N_{\tilde{2}\hat{3}} \\
+   &+ N_{\tilde{2}\tilde{3}} + N_{\tilde{1}\tilde{3}} + N_{\hat{1}\tilde{3}} + N_{\hat{2}\tilde{3}} \\
+   &+ N_{\tilde{1}\tilde{4}} + N_{\tilde{2}\tilde{4}} + N_{\hat{2}\tilde{4}} + N_{\hat{1}\tilde{4}} \\
+\end{array}
+\right) + \ord{\frac{1}{x^2}},
+\label{eq:asymptotics}
+\end{equation}
+
+\beq
+	\Omega_n^{ij} = -2 \delta_{i,\hat{1}} + \frac{\lambda}{2\pi} \lim_{x\rightarrow \infty} x \, \delta_n^{ij} p_{\hat{1}}(x)
+\eeq
+
+\beq
+	\delta \Delta = \sum_{ij,n} N_{ij}^n \Omega_n^{ij}
+\eeq
+
+\beq
+	\delta^{ij}_n = \delta^{ij} p_k(x;y) \vert_{y=x_n^{ij}}
+\eeq
+
+\beq
+	\Omega_n^{ij} = \Omega^{ij}(y)\vert_{y=x_n^{ij}}
+\eeq
+
+\beq
+	\Omega^{ij}(y) = \Omega_n^{ij}\vert_{n\rightarrow \frac{p_i(y) - p_j(y)}{2\pi}}
+\eeq
+
+\beq
+	\delta \Delta^{1-loop} = \frac{1}{2} \sum_{ij,n} (-1)^{F_{ij}} \Omega_n^{ij}
+\eeq
+
+\beq
+\begin{aligned}
+\Omega^{\tilde1\tilde4} (y) &= -  \Omega^{\tilde2 \tilde3}(1/y) +\Omega^{\tilde2\tilde3}(0)\cr 
+\Omega^{\tilde2 \tilde4} (y) =
+\Omega^{\tilde1\tilde3}(y)  &= {1\over 2} \left( \Omega^{\tilde2 \tilde3}(y) + \Omega^{\tilde1\tilde4} (y) \right)
+                               = {1\over 2} \left( \Omega^{\tilde2 \tilde3}(y) - \Omega^{\tilde2\tilde3} (1/y)+\Omega^{\tilde2\tilde3}(0) \right)
+                                 \cr
+ \Omega^{\hat1\hat4} (y) & = - \Omega^{\hat2 \hat3}(1/y) -2 \cr
+\Omega^{\hat2 \hat4} (y) =
+\Omega^{\hat1 \hat3} (y) &= {1\over 2}  \left( \Omega^{\hat2 \hat3}(y) + \Omega^{\hat1\hat4} (y) \right)
+				    = {1\over 2}  \left( \Omega^{\hat2 \hat3}(y) - \Omega^{\hat2\hat3} (1/y) \right) -1 \cr
+\Omega^{\hat2\tilde4}(y) =
+\Omega^{\tilde1 \hat3} (y) &= {1\over 2} \left(\Omega^{\hat2 \hat3}(y)+ \Omega^{\tilde1\tilde4} (y)  \right)
+				   = {1\over 2} \left( \Omega^{\hat2 \hat3}(y)- \Omega^{\tilde2 \tilde3}(1/y)+\Omega^{\tilde2\tilde3}(0) \right)  \cr				
+\Omega^{\tilde2\hat4}(y)=
+\Omega^{\hat1 \tilde3} (y) &= {1\over 2} \left( \Omega^{\tilde2\tilde3} (y) + \Omega^{\hat1 \hat4}(y)\right)
+				 = {1\over 2}  \left( \Omega^{\tilde2\tilde3} (y) - \Omega^{\hat2 \hat3}(1/y)\right)   -1 \cr
+\Omega^{\tilde1 \hat4} (y) =
+\Omega^{\hat1 \tilde4} (y) &= {1\over 2} \left( \Omega^{\tilde1 \tilde4}(y) + \Omega^{\hat1\hat4} (y) \right)
+				   = {1\over 2} \left(- \Omega^{\tilde2\tilde3}(1/y) - \Omega^{\hat2\hat3}(1/y)+\Omega^{\tilde2\tilde3}(0) \right)
+				   -1  \cr	
+\Omega^{\hat2\hat3}(y)=
+\Omega^{\tilde2 \hat3} (y) &= {1\over 2} \left( \Omega^{\tilde2 \tilde3}(y) + \Omega^{\hat2\hat3} (y) \right)	 \,.
+\end{aligned}
+\eeq
+
 
 \subsubsection{Folded string}
 
-Give solution.
+The solution
+\beqa
+  \label{eq:p_a}\nn
+  p_{\hat 2} &=& \pi n - 2\pi n{\cal J} \left( \frac{a}{a^2-1} -
+    \frac{x}{x^2-1} \right) \sqrt{\frac{(a^2-1)
+      (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi n a b {\cal S} F_1(x)}{(b-a)(ab+1)} +
+  \frac{2\pi n {\cal J} (a-b) F_2(x)}{\sqrt{(a^2-1)(b^2-1)}},\\
+  \label{eq:p_s}
+  p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1}.
+\eeqa
+The integer $n$ (the mode number) is related to the number of spikes.
+All the other quasi-momenta can be
+found from
+\beqa
+  \label{eq:quasimomenta_symmetry_A}
+  p_{\hat{2}} (x) &=& -p_{\hat{3}}(x) = -p_{\hat{1}}(1/x) = p_{\hat{4}}
+  (1/x)\;,\\
+  \label{eq:quasimomenta_symmetry_S}
+  p_{\tilde{2}} (x) &=& -p_{\tilde{3}} (x) = p_{\tilde{1}} (x) =
+  -p_{\tilde{4}}(x)\;.
+\eeqa
+The functions $F_1(x)$ and $F_2(x)$ can be expressed
+in terms of the elliptic integrals:
+\begin{eqnarray}
+ \label{eq:not}
+ F_1(x) &=& i F \left( i \sinh^{-1}
+ \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2} \nonumber
+ \right)\;, \\
+\nn
+ F_2(x) &=& i E \left( i \sinh^{-1}
+ \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2}
+ \right)\;.
+ \end{eqnarray}
 
-\subsubsection{String quantization and semi-classics}
-
-Describe the quantization procedure. Derive next coefficient for Konishi.
 
 \subsection{Short strings}
 
