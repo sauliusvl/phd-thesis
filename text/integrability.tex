@@ -379,6 +379,7 @@ This is the defining property of integrability, since factorized scattering mean
 The $\mathfrak{su}(2)$ sector has a finite dimensional state space for a given length $L$ of the spin chain since we are dealing with finite dimensional representations of a compact group.
 The simplest non-compact closed sector is the $\mathfrak{sl}(2)$ sector, which consists of operators of the form \cite{Beisert:2003yb}
 \beq
+	\label{eq:sl2_operators}
 	\mathcal{O} = \tr \( Z^{J-1} \, \mathcal{D}_+^S \, Z \) + \mathrm{permutations},
 \eeq
 where $\mathcal{D_+} = \mathcal{D}_1 + i \mathcal{D}_2$ is the lightcone covariant derivative with global charges $(\frac{1}{2},\frac{1}{2}, 1; 0,0,0)$. Mixing simply redistributes the $S$ covariant derivative applications among the $J$ scalars. In this case we are dealing with infinite dimensional representations of $\mathfrak{sl}(2)$, namely the number of covariant derivatives is in principle unlimited.
@@ -650,6 +651,7 @@ Here $L(x)$ is the \emph{Lax connection} and $x$ is the spectral parameter.
 The existence of such a set of connections signals that the theory is at least classically integrable. 
 This can be shown by constructing the monodromy matrix
 \begin{equation}
+	\label{eq:monodromy}
 	\Omega(x) = \mathcal{P} \; \mathrm{exp} \oint_\gamma L(x),
 \end{equation}
 where $\gamma$ is any path wrapping the worldsheet cylinder. 
@@ -827,6 +829,7 @@ Similarly the asymptotics of the quasi-momenta encode the global charges as seen
 \end{equation}
 where $\delta\Delta$ is the shift of the classical energy $\mathcal{E}$. From here one can read off the individual fluctuation frequencies
 \beq
+	\label{eq:quasi_energy}
 	\Omega_n^{ij} = -2 \delta_{i,\hat{1}} + \frac{\lambda}{2\pi} \lim_{x\rightarrow \infty} x \, \delta_n^{ij} p_{\hat{1}}(x)
 \eeq
 and the energy shift is then a sum over all frequencies
@@ -860,6 +863,7 @@ Similarly we introduce off-shell fluctuation energies
 \eeq
 which can easily be found if the on-shell frequencies are known by
 \beq
+	\label{eq:off_shell_freq}
 	\Omega^{ij}(y) = \Omega_n^{ij}\vert_{n\rightarrow \frac{p_i(y) - p_j(y)}{2\pi}}.
 \eeq
 The main advantage of introducing the off-shell frequencies is that due to the $\mathbb{Z}_4$ grading of the $\alg{psu}{2,2|4}$ algebra the quasi-momenta enjoy an inversion symmetry under $x \rightarrow 1/x$ as seen in \eq{eq:quasi_inversion}.
@@ -873,6 +877,7 @@ All of the off-shell frequencies can then be expressed in terms of two, namely $
 The rest of the fluctuations are given by
 \beq
 \begin{aligned}
+\label{eq:freq_relations}
 \Omega^{\tilde1\tilde4} (y) &= -  \Omega^{\tilde2 \tilde3}(1/y) +\Omega^{\tilde2\tilde3}(0)\cr 
 \Omega^{\tilde2 \tilde4} (y) =
 \Omega^{\tilde1\tilde3}(y)  &= {1\over 2} \left( \Omega^{\tilde2 \tilde3}(y) + \Omega^{\tilde1\tilde4} (y) \right)
@@ -898,6 +903,7 @@ The rest of the fluctuations are given by
 \eeq
 Knowing the off-shell frequencies and the quasi-momenta one can express the one-loop shift as a contour integral
 \beq
+	\label{eq:one_loop_integral}
 	E_0 = \frac{1}{2} \sum_{ij} (-1)^{F_{ij}} \oint \frac{dx}{2\pi i} \( \Omega^{ij}(x) \d_x \log \sin \frac{p_i - p_j}{2} \),
 \eeq
 where the integrand is chosen carefully such that it contains poles at each fluctuation insertion point $x_n^{ij}$ with residues $\Omega^{ij}(x_n^{ij})$, so that the result is equivalent to \eq{eq:one_loop_shift}.
@@ -924,7 +930,15 @@ As always $i$ takes values $\hat 1,\hat 2,\tilde 1,\tilde 2$ whereas $j$ runs ov
 
 \subsubsection{Folded string}
 
-The solution
+Operators \eq{eq:sl2_operators} from the $\alg{sl}{2}$ sector are known to be dual to folded rotating string solutions in $\adsfive$, these are closed strings rotating around their center of mass in an $AdS_3$ subspace of $AdS_5$ with spin $S$ \cite{Frolov:2002av}.
+Additionally they orbit the big circle of $S^5$ with angular momentum $J$, also referred to as twist.
+These parameters as expected correspond to the number of scalars $J$ and number of derivatives $S$ in the gauge theory operators. 
+In the classical regime these are assumed to scale as $\sqrt{\lambda}$, thus we use $\mathcal{S} = S/ n \sqrt{\lambda}$ and $\mathcal{J} = J / n \sqrt{\lambda}$ when describing the classical solution, which corresponds to long operators in gauge theory. 
+The number of spikes $n$ corresponds to the mode number $n$ in the language of Bethe states.
+
+Given the explicit string solution (see \cite{Tseytlin:2010jv} for details) one could follow the steps outlined in the algebraic curve construction, namely calculate the monodromy matrix \eq{eq:monodromy}, diagonalize it and extract the quasi-momenta. 
+While it is indeed possible to do, we will present an alternative method based on analyticity properties of the quasi-momenta when we discuss cusped Wilson lines in section [??].
+Here we present the result [??], which consists of two ``basis'' quasi-momenta
 \beqa
   \label{eq:p_a}\nn
   p_{\hat 2} &=& \pi n - 2\pi n{\cal J} \left( \frac{a}{a^2-1} -
@@ -932,11 +946,9 @@ The solution
       (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi n a b {\cal S} F_1(x)}{(b-a)(ab+1)} +
   \frac{2\pi n {\cal J} (a-b) F_2(x)}{\sqrt{(a^2-1)(b^2-1)}},\\
   \label{eq:p_s}
-  p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1}.
+  p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1},
 \eeqa
-The integer $n$ (the mode number) is related to the number of spikes.
-All the other quasi-momenta can be
-found from
+while the remaining functions can be determined by utilizing the $x \rightarrow 1/x$ inversion symmetry as shown in \eq{eq:quasi_inversion}, resulting in
 \beqa
   \label{eq:quasi-momenta_symmetry_A}
   p_{\hat{2}} (x) &=& -p_{\hat{3}}(x) = -p_{\hat{1}}(1/x) = p_{\hat{4}}
@@ -957,38 +969,21 @@ in terms of the elliptic integrals:
  \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2}
  \right)\;.
  \end{eqnarray}
- 
-Finally the off-shell fluctuation energies are
-\begin{eqnarray}\nn
-  \label{eq:frequencies}
-  \Omega^{\hat{1}\hat{4}} (x) &=& -\Omega^{\hat{2}\hat{3}}(1/x) -2\;,\;\;\\
-  \Omega^{\hat{1}\hat{3}} (x) &=& \Omega^{\hat{2} \hat{4}} (x) = \frac12
-  \Omega^{\hat{1}\hat{4}}(x) + \frac12 \Omega^{\hat{2}\hat{3}}(x)\;,\nn\\
-  \Omega^{\hat{1}
-    \tilde{3}}(x)
-&=&
-  \Omega^{\hat{1}\tilde{4}}(x)
-    =  \Omega^{\hat{4}\tilde{1}}(x)
-    =  \Omega^{\hat{4}\tilde{2}}(x)
-     =
-  \frac12\, \Omega^{\tilde{2}\tilde{3}} (x) + \frac12\,\Omega^{\hat{1}\hat{4}}(x),\\
-  \Omega^{\hat{2}\tilde{3}}(x)
-&=&
-  \Omega^{\hat{2}\tilde{4}}(x)
-=
-  \Omega^{\tilde{1}\hat{3}}(x)
-=
-  \Omega^{\tilde{2}\hat{3}}(x)
-= \frac12\, \Omega^{\tilde{2}\tilde{3}}(x) + \frac12\, \Omega^{\hat{2}\hat{3}}(x),\nn\\
-  \Omega^{\tilde{2}\tilde{3}}(x)
-&=&
-  \Omega^{\tilde{2}\tilde{4}}(x)
-=
-  \Omega^{\tilde{1}\tilde{3}}(x)
-=
-  \Omega^{\tilde{1}\tilde{4}}(x)\;,\nn
-\end{eqnarray}
-where
+This is a two-cut solution with symmetric cuts on the real axis given by the branch points $a < b$ (and $-b < -a$).
+ The classical energy $\Delta$ of the folded string is a function of the Lorentz spin $\mathcal{S}$,
+twist $\mathcal{J}$ and the mode number $n$. This function can be written in a parametric form
+in terms of the branch points $a$ and $b$ \cite{Gromov:2011de,Beisert:2003ea,Kazakov:2004qf,Kazakov:2004nh}:
+\beqa
+\nn{2\pi {\cal S}}&=&\frac{ab+1}{ab}\[b E\(1-\tfrac{a^2}{b^2}\)-aK\(1-\frac{a^2}{b^2}\)\]\;,\\
+{2\pi {\cal J}}&=&\frac{2\sqrt{(a^2-1)(b^2-1)}}{b}K\(1-\frac{a^2}{b^2}\)\;,\\
+\nn{2\pi {\cal D}}&=&\frac{ab-1}{ab}\[b E\(1-\tfrac{a^2}{b^2}\)+aK\(1-\frac{a^2}{b^2}\)\]\;.
+\eeqa
+where ${\cal D}=\Delta / n\sqrt\lambda$ and $E$, $K$ are elliptic integrals of the first kind.
+
+Next we proceed to the semi-classical quantization of the folded string solution, more precisely we are after the one-loop shift.
+Instead of calculating the 16 fluctuation frequencies $\Omega_n^{ij}$ we adopt the off-shell frequency formalism outlined above.
+Once again, the exact formulae for the off-shell frequencies can be found solely from analyticity constraints by first determining the off-shell shifts in quasi-momenta and then using the definitions \eq{eq:quasi_energy} and \eq{eq:off_shell_freq}.
+The answer turns out to be surprisingly simple and is given by the two basis frequencies
 \beqa
 \label{oma}
 \Omega^{\tilde 2\tilde 3}(x)&=&\frac{2}{a
@@ -996,46 +991,76 @@ where
 \label{oms}
 \Omega^{\hat 2\hat 3}(x)&=&\frac{2}{a b-1}\(1-\frac{y(x)}{x^2-1}\)\;.
 \eeqa
-and $y(x)=\sqrt{x-a} \sqrt{a+x} \sqrt{x-b} \sqrt{b+x}$.
+where $y(x)=\sqrt{x-a} \sqrt{a+x} \sqrt{x-b} \sqrt{b+x}$.
+The remaining frequencies can be read off from the relations \eq{eq:freq_relations}.
+What remains in order to find the one-loop shift is performing the sum \eq{eq:one_loop_shift} or alternatively evaluating the integral \eq{eq:one_loop_integral} numerically.
+The answer involves an infinite sum over all mode numbers hence it is not very illuminating at this point.
 
-
-\subsection{Short strings}
-
-
-
-%\section{Folded string}
-The folded string is the strong coupling counterpart of the Wilson operators $\tr(D^S Z^J)$.
-This class of operators in particular contains the Konishi operator that has been receiving a lot of attention recently.
-%\subsection{Tree level}
-The classical energy of the folded string is a function of the Lorentz spin $S$,
-twist $J$ and the mode number $n$. This function can be written in a parametric form
-in terms of the branch points $a$ and $b$ \cite{Gromov:2011de,Beisert:2003ea,Kazakov:2004qf,Kazakov:2004nh}:
+Let us now consider the $\mathcal{S} \rightarrow 0$ limit.
+The square of the classical energy has a very nice expansion in this limit
 \beqa
-\nn{2\pi {\cal S}}&=&\frac{ab+1}{ab}\[b E\(1-\tfrac{a^2}{b^2}\)-aK\(1-\frac{a^2}{b^2}\)\]\;,\\
-{2\pi {\cal J}}&=&\frac{2\sqrt{(a^2-1)(b^2-1)}}{b}K\(1-\frac{a^2}{b^2}\)\;,\\
-\nn{2\pi {\cal D}_{\rm tree}}&=&\frac{ab-1}{ab}\[b E\(1-\tfrac{a^2}{b^2}\)+aK\(1-\frac{a^2}{b^2}\)\]\;.
-\eeqa
-where ${\cal S},{\cal J},{\cal D}=\frac{S}{n\sqrt\lambda},\frac{J}{n\sqrt\lambda},\frac{\Delta}{n\sqrt\lambda}$.
-In this paper we will concentrate on a special limit when $S$ is sent to zero.
-In this limit one can write a more explicit expression for the square of the scaling dimension:
-%\beqa
-% {\cal D}_{\rm tree}&=&{\cal J}
-%+\frac{\sqrt{{\cal J}^2+1} }{{\cal J}}{\cal S}
-%-\frac{{\cal J}^2+2}{4 \left({\cal J}^5+{\cal J}^3\right)}{\cal S}^2
-%+\frac{3 {\cal J}^6+13 {\cal J}^4+20 {\cal J}^2+8}{16 {\cal J}^5 \left({\cal J}^2+1\right)^{5/2}}{\cal S}^3\\
-%&-&\frac{21 {\cal J}^{10}+138 {\cal J}^8+385 {\cal J}^6+540 {\cal J}^4+336
-%   {\cal J}^2+80 }{128 {\cal J}^7 \left({\cal J}^2+1\right)^4}{\cal S}^4
-%\nn+{\cal O}({\cal S}^5)
-%\eeqa
-\beqa
+	\label{eq:classical_energy}
  {\cal D}_{\rm tree}^2&=&{\cal J}^2+2 \, {\cal S} \, \sqrt{{\cal J}^2+1}+{\cal S}^2 \, \frac{2 {\cal J}^2+3}{2
    {\cal J}^2+2}-{\cal S}^3 \, \frac{{\cal J}^2+3}{8
    \left({\cal J}^2+1\right)^{5/2}}
    %+{\cal S}^4\frac{3 {\cal J}^4+18 {\cal J}^2+31}{64 \left({\cal J}^2+1\right)^4}
    +{\cal O}\left({\cal S}^4\right)\;.
 \eeqa
-One can easily see that the coefficients in the expansion of ${\cal D}_{\rm tree}^2$
-are considerably simpler than the same coefficients in the expansion of ${\cal D}_{\rm tree}$.
+The one-loop shift expanded up to two orders in $\mathcal{S}$ reads
+\beqa
+\label{delta_oneloop}
+\Delta&\simeq&
+\frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
+   }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
+\!-\!\sum_{\substack{m>0 \\ m \neq n}}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
+   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\] \;\;\;\;\;\;\;\;
+   \;.
+\eeqa
+The next term in this expansion can be found in \eq{delta_oneloop_3}, \eq{delta_oneloop_4}. The sum is nothing but a sum over the fluctuation energies,
+whereas the remaining terms originate from the ``zero"-modes
+$m=n$, which have to be treated separately.
+The sum can be very easily expanded for small ${\cal J}$.
+It is easy to see that the expansion coefficients will be certain combinations
+of zeta-functions. It is also easy to see that
+the dependence on the mode number $n$ is rather nontrivial.
+The expansion of the one loop energy first in small ${\cal S}$
+up to a second order and then in small ${\cal J}$ reads
+\beq
+\label{delta_oneloop_sj}
+\Delta_{\rm1-loop}\simeq
+\left\{
+\begin{array}{ll}
+ -\frac{\mathcal{S}}{2 \mathcal{J}}+
+ \mathcal{S}^2 \left(+\frac{1}{2\mathcal{J}^3}-\frac{3 \zeta_3}{2 \mathcal{J}}-\frac{1}{16 \mathcal{J}}\right) & \;\;,\;\;n=1 \\
+ -\frac{\mathcal{S}}{2 \mathcal{J}}+
+ \mathcal{S}^2 \left(+\frac{1}{2
+   \mathcal{J}^3}-\frac{12 \zeta_3}{\mathcal{J}}-\frac{17}{16 \mathcal{J}}\right) & \;\;,\;\;n=2 \\
+ -\frac{\mathcal{S}}{2 \mathcal{J}}+
+ \mathcal{S}^2 \left(-\frac{5}{8
+   \mathcal{J}^3}-\frac{81 \zeta_3}{2 \mathcal{J}}-\frac{7}{4 \mathcal{J}}\right) & \;\;,\;\;n=3 %\\
+% -\frac{\mathcal{S}}{2 \mathcal{J}}+
+% \mathcal{S}^2 \left(-\frac{55}{18
+%   \mathcal{J}^3}-\frac{96 \zeta_3}{\mathcal{J}}-\frac{281}{144 \mathcal{J}}\right) & \;\;,\;\;n=4
+\end{array}
+\right.
+\eeq
+Expansions up to four orders in $\mathcal{S}$ and then in $\mathcal{J}$ are given in appendix \ref{AppS4}. 
+We note that the contributions ${\cal S}^2/{\cal J}^3$ are universal for $n=1$ and $n=2$, however starting from $n=3$ we get some nasty coefficient.
+%As we will discuss in the next section this could imply that the naive generalization of the conjecture in \cite{Basso:2011rs} is not fully correct for $n>2$. Also for $n=2$ we found  a similar anomaly at the order $S^3$.
+
+Even though the semi-classical results are technically only valid for the charges scaling as $\sqrt{\lambda}$, there is evidence that re-expanding the classical energy plus the one-loop shift yields a reasonable result in terms of the unscaled charges $J$ and $S$ [??].
+Namely summing up \eq{eq:classical_energy} and \eq{delta_oneloop_sj}, introducing the unscaled charges $S = \sqrt{\mu} \mathcal{S}$ and $J = \sqrt{\mu} \mathcal{J}$ and re-expanding in terms of $\mu = n^2 \lambda$ yields the following one-loop energy for the folded string solution
+\beq
+\Delta_{S,J,n}\simeq\sqrt{2S}\mu^{1/4}
++\frac{2J^2+3S^2-2S}{4\,(2 S)^{1/2}\,\mu^{1/4}}.
+\eeq
+For the Konishi operator we set $J=2$, $S=2$ and $n=1$ and get 
+\beq
+\Delta_{2,2,1}=2 \, \lambda^{1/4} + \frac{2}{\lambda^{1/4}}+ \ord{\lambda^{-3/4}},
+\eeq
+where the first coefficient of the expansion was first proposed in [??] and the second one was obtained using rigorous semi-classical quantization of the string sigma-model [??], both in perfect agreement.
+
+\subsection{More on short strings}
 
 One can further notice \cite{Basso:2011rs} that the re-expansion of the function $\Delta^2$ in the large $\mu\equiv \lambda n^2$ limit with $S$ and $J$ fixed has a particularly nice structure
 \beq
@@ -1045,7 +1070,7 @@ One can further notice \cite{Basso:2011rs} that the re-expansion of the function
 \)
 +S^2
 \(
-\frac{3}{2}-\frac{J^2}{2\mu}
+\frac{3}{2}-\frac{J^2}{2\sqrt{\mu}}
 +\dots%+\frac{J^4}{2\mu^2}
 \)
 -S^3
@@ -1066,68 +1091,7 @@ The structure in \eq{dsquare_tree} is a purely classical result. In the next sec
 
 
 %\subsection{One loop}
-Using the algebraic curve technique \cite{Gromov:2009zza,Gromov:2007aq,Gromov:2007ky,Gromov:2008ec,SchaferNameki:2010jy}
-the result \eq{dsquare_tree} at one loop can be shown to be just a little bit more involved than the classical energy.
-The derivation is described in \cite{Gromov:2011de} so we only quote the result here (see appendix \ref{appA} for more details).
 
-Again, in the limit when ${\cal S}$ is sent to zero the result simplifies significantly.
-Up to two orders in $\mathcal{S}$ we found the following expansion
-\beqa
-\label{delta_oneloop}
-\Delta_{\rm 1-loop}&\simeq&
-\frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
-   }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
-%   -\frac{\left(6 {\cal J}^8+48 {\cal J}^6
-%   +138
-%   {\cal J}^4+
-%   352 {\cal J}^2+117\right) {\cal S}^3}{64 {\cal J}^5 \left({\cal J}^2+1\right)^4}
-\!-\!\sum_{m>0,m\neq n}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
-   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]
-   \;.
-\eeqa
-The next term in this expansion can be found in \eq{delta_oneloop_3}, \eq{delta_oneloop_4}. The sum is nothing but a sum over the fluctuation energies,
-whereas the remaining terms originate from the ``zero"-modes
-$m=n$, which have to be treated separately.
-The sum can be very easily expanded for small ${\cal J}$.
-It is easy to see that the expansion coefficients will be certain combinations
-of zeta-functions. It is also easy to see that
-the dependence on the mode number $n$ is rather nontrivial.
-
-The expansion of the one loop energy first in small ${\cal S}$
-up to a second order and then in small ${\cal J}$ reads
-%\beq
-%\Delta_{\rm1-loop}=
-%-\frac{{\cal S}}{2 {\cal J}^3+2{\cal J}}
-%+{\cal S}^2\(
-%\frac{1}{2{\cal J}^3}-
-%\frac{3\zeta_3-\frac{1}{8}}{2\cal J}+\dots
-%\)+{\cal O}({\cal S}^3)\;.
-%\eeq
-\beq
-\label{delta_oneloop_sj}
-\Delta_{\rm1-loop}\simeq
-\left\{
-\begin{array}{ll}
- -\frac{\mathcal{S}}{2 \mathcal{J}}+
- \mathcal{S}^2 \left(+\frac{1}{2\mathcal{J}^3}-\frac{3 \zeta_3}{2 \mathcal{J}}-\frac{1}{16 \mathcal{J}}\right) & \;\;,\;\;n=1 \\
- -\frac{\mathcal{S}}{2 \mathcal{J}}+
- \mathcal{S}^2 \left(+\frac{1}{2
-   \mathcal{J}^3}-\frac{12 \zeta_3}{\mathcal{J}}-\frac{17}{16 \mathcal{J}}\right) & \;\;,\;\;n=2 \\
- -\frac{\mathcal{S}}{2 \mathcal{J}}+
- \mathcal{S}^2 \left(-\frac{5}{8
-   \mathcal{J}^3}-\frac{81 \zeta_3}{2 \mathcal{J}}-\frac{7}{4 \mathcal{J}}\right) & \;\;,\;\;n=3 %\\
-% -\frac{\mathcal{S}}{2 \mathcal{J}}+
-% \mathcal{S}^2 \left(-\frac{55}{18
-%   \mathcal{J}^3}-\frac{96 \zeta_3}{\mathcal{J}}-\frac{281}{144 \mathcal{J}}\right) & \;\;,\;\;n=4
-\end{array}
-\right.
-\eeq
-Expansions up to four orders in $\mathcal{S}$ and then in $\mathcal{J}$ are given in appendix \ref{AppS4}. We note that the contributions ${\cal S}^2/{\cal J}^3$
-are universal for $n=1$ and $n=2$,
-however starting from $n=3$ we get some nasty coefficient.
-As we will discuss in the next section this could imply that
-the naive generalization of the conjecture in \cite{Basso:2011rs} is not fully correct
-for $n>2$. Also for $n=2$ we found  a similar anomaly at the order $S^3$.
 %\section{Discussion of the exact slope and its generalizations}
 Let us take a close look at the conjecture in \cite{Basso:2011rs}. It says that
 making expansions of the scaling dimension squared first in ${\cal S}\to 0$
@@ -1259,42 +1223,42 @@ Let us write the result more explicitly for a particular important case of two m
 \frac{\frac{J^2}{4}+1}{\lambda^{1/4}}+\frac{-\frac{J^4}{64}+\frac{3 J^2}{8}-3\, \zeta
    (3)-\frac{3}{4}}{\lambda^{3/4}}\;.
 \eeq
-In the next section we compare our prediction with the available TBA data.
+% In the next section we compare our prediction with the available TBA data.
 
 
-In order to extract strong coupling asymptotics from available TBA data, we performed numerical fits of Pad\'{e} type. First we changed variables from $\lambda$ to 
-\begin{equation}
-	y(\lambda) = \sqrt{\lambda} \frac{\partial}{\partial\sqrt{\lambda}} \log I_2(\sqrt{\lambda}) - 2,
-\end{equation}
-which seems arbitrary, but nevertheless is convenient because scaling dimension dependence on $y$ looks nearly linear and automatically captures some important analytical features. We then represent the scaling dimension as the square root of a rational function of two polynomials in $y$ with some of the unknown coefficients chosen so as to fix the leading order weak and strong coupling behaviours. So for example, for the Konishi operator we chose
-\begin{equation*}
-	\Delta_{2,2,1} = \sqrt{18 + 4y + \frac{-2 + \sum_{i=1}^{P} a_i y^i}{1 + \sum_{i=1}^{P+1} b_i y^i}},
-\end{equation*}
-because one can easily verify that the weak coupling expansion of this function is given by
-\begin{equation*}
-	\Delta_{2,2,1} = 4 + \mathcal{O}(g^2),
-\end{equation*}
-and the strong coupling expansion is given by
-\begin{equation*}
-	\Delta_{2,2,1} = 2 \lambda^{1/4} + \frac{2}{\lambda^{1/4}} + \mathcal{O}(\lambda^{-3/4}).
-\end{equation*}
-This way the leading order behaviour is fixed and next to leading order coefficients are combinations of the unknowns $a_i$ and $b_i$, which we then find by the method of least squares. The number of fit coefficients $P$ is chosen so that their values after fitting would be of order one, which would imply that the fit is reasonable. Though the procedure seems ad hoc, it produces incredibly good fits, which agree very well with both weak and strong coupling expansions. Fits to available TBA numerical data are shown in Fig. \ref{fig:frolov_compare}, where dots represent numerical values and the solid lines are our fits\footnote{For some of the fits we took the first 50 points from the corresponding data set, since we suspected the precission to be lower for higher values of $\lambda$. Also, these points were enough to get stable fits.}. Expanding our fits in powers of $\lambda$ at strong coupling we were able to compare the $\lambda^{-3/4}$ coefficients in the expansions to our predictions. These are summarized in Table \ref{tab:coefficients} for various operators. We see that our predictions agree with numerical data very well. The table also lists the weak coupling expansion coefficients of $g^2$ (tree level is fixed by hand), which agree with remarkable precision to Bethe ansatz predictions, once again indicating that the fits work well in both ends of the coupling range.
+% In order to extract strong coupling asymptotics from available TBA data, we performed numerical fits of Pad\'{e} type. First we changed variables from $\lambda$ to 
+% \begin{equation}
+	% y(\lambda) = \sqrt{\lambda} \frac{\partial}{\partial\sqrt{\lambda}} \log I_2(\sqrt{\lambda}) - 2,
+% \end{equation}
+% which seems arbitrary, but nevertheless is convenient because scaling dimension dependence on $y$ looks nearly linear and automatically captures some important analytical features. We then represent the scaling dimension as the square root of a rational function of two polynomials in $y$ with some of the unknown coefficients chosen so as to fix the leading order weak and strong coupling behaviours. So for example, for the Konishi operator we chose
+% \begin{equation*}
+	% \Delta_{2,2,1} = \sqrt{18 + 4y + \frac{-2 + \sum_{i=1}^{P} a_i y^i}{1 + \sum_{i=1}^{P+1} b_i y^i}},
+% \end{equation*}
+% because one can easily verify that the weak coupling expansion of this function is given by
+% \begin{equation*}
+	% \Delta_{2,2,1} = 4 + \mathcal{O}(g^2),
+% \end{equation*}
+% and the strong coupling expansion is given by
+% \begin{equation*}
+	% \Delta_{2,2,1} = 2 \lambda^{1/4} + \frac{2}{\lambda^{1/4}} + \mathcal{O}(\lambda^{-3/4}).
+% \end{equation*}
+% This way the leading order behaviour is fixed and next to leading order coefficients are combinations of the unknowns $a_i$ and $b_i$, which we then find by the method of least squares. The number of fit coefficients $P$ is chosen so that their values after fitting would be of order one, which would imply that the fit is reasonable. Though the procedure seems ad hoc, it produces incredibly good fits, which agree very well with both weak and strong coupling expansions. Fits to available TBA numerical data are shown in Fig. \ref{fig:frolov_compare}, where dots represent numerical values and the solid lines are our fits\footnote{For some of the fits we took the first 50 points from the corresponding data set, since we suspected the precission to be lower for higher values of $\lambda$. Also, these points were enough to get stable fits.}. Expanding our fits in powers of $\lambda$ at strong coupling we were able to compare the $\lambda^{-3/4}$ coefficients in the expansions to our predictions. These are summarized in Table \ref{tab:coefficients} for various operators. We see that our predictions agree with numerical data very well. The table also lists the weak coupling expansion coefficients of $g^2$ (tree level is fixed by hand), which agree with remarkable precision to Bethe ansatz predictions, once again indicating that the fits work well in both ends of the coupling range.
 
-\begin{table}[t]
-\begin{tabular}{|l||rl|l|l||l|l|l|}
-  \hline
-  $(S,J,n)$ & \multicolumn{2}{|l|}{$(n^2 \lambda)^{-3/4}$ prediction} & $(n^2 \lambda)^{-3/4}$ fit & error & $g^2$ analytical & $g^2$ fit & fit order\\
-  \hline
-  $(2,2,1)$ & $1/2 - \zeta_3 $&$= -3.1062$ & $-3.0739$ & $1.0\%$ & $12$ & $12.0108$ & 6\\
-  $(2,3,1)$ & $87/64 - 3\,\zeta_3 $&$= -2.2468$ & $-2.2296$ & $0.8\%$ & $8$ & $8.0039$ & 5 \\
-  $(2,4,2)$ & $-3/4 -24 \, \zeta_3 $&$= -29.5994$ & $-30.0547$ & $1.5\%$ & $14.4721$ & $14.4428$ & 5\\
-  \hline
-\end{tabular}
-\caption{Comparisons of strong coupling expansion coefficients for $\lambda^{-3/4}$ obtained from fits to TBA data versus our predictions for various operators. The weak coupling expansion coefficients for $g^2$ show how well the fit approximates the data. The fit order is the order of polynomials used for the rational fit function.}
-\label{tab:coefficients}
-\end{table}
+% \begin{table}[t]
+% \begin{tabular}{|l||rl|l|l||l|l|l|}
+  % \hline
+  % $(S,J,n)$ & \multicolumn{2}{|l|}{$(n^2 \lambda)^{-3/4}$ prediction} & $(n^2 \lambda)^{-3/4}$ fit & error & $g^2$ analytical & $g^2$ fit & fit order\\
+  % \hline
+  % $(2,2,1)$ & $1/2 - \zeta_3 $&$= -3.1062$ & $-3.0739$ & $1.0\%$ & $12$ & $12.0108$ & 6\\
+  % $(2,3,1)$ & $87/64 - 3\,\zeta_3 $&$= -2.2468$ & $-2.2296$ & $0.8\%$ & $8$ & $8.0039$ & 5 \\
+  % $(2,4,2)$ & $-3/4 -24 \, \zeta_3 $&$= -29.5994$ & $-30.0547$ & $1.5\%$ & $14.4721$ & $14.4428$ & 5\\
+  % \hline
+% \end{tabular}
+% \caption{Comparisons of strong coupling expansion coefficients for $\lambda^{-3/4}$ obtained from fits to TBA data versus our predictions for various operators. The weak coupling expansion coefficients for $g^2$ show how well the fit approximates the data. The fit order is the order of polynomials used for the rational fit function.}
+% \label{tab:coefficients}
+% \end{table}
 
-We also tried comparing our predictions to numerical data for the operator $S=2,J=4,n=2$ (see Fig. \ref{fig:frolov_compare} and Table \ref{tab:coefficients}). As argued before, since this operator has $n>1$, we cannot fully trust our result in this case, nevertheless the result agrees well with the numerical fits we get and the error is only slightly bigger than for the $n=1$ states. It is hard to draw conclusions about this, as there is not a lot of numerical data available for such operators. 
+% We also tried comparing our predictions to numerical data for the operator $S=2,J=4,n=2$ (see Fig. \ref{fig:frolov_compare} and Table \ref{tab:coefficients}). As argued before, since this operator has $n>1$, we cannot fully trust our result in this case, nevertheless the result agrees well with the numerical fits we get and the error is only slightly bigger than for the $n=1$ states. It is hard to draw conclusions about this, as there is not a lot of numerical data available for such operators. 
 
 
 
