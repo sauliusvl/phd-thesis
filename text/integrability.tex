@@ -678,6 +678,7 @@ The physical picture is that each cut between two sheets represents an excitatio
 Four of the eight sheets correspond to the $AdS_5$ part of the string target space and the other four to the $S^5$ part. 
 $\adsfive$ has 16 types of excitations, in the algebraic curve language this is implemented as the requirement that only sheets from the following sets can be connected
 \begin{equation}
+	\label{eq:polarizations}
 	i \in \{ \, \tilde{1}, \, \tilde{2}, \, \hat{1}, \, \hat{2} \, \}, \;\;\;\; j \in \{ \, \tilde{3}, \, \tilde{4}, \, \hat{3}, \, \hat{4} \, \},
 \end{equation}
 furthermore bosonic excitations correspond to cuts between sheets of the same type (hat or tilde), whereas fermionic excitations connect sheets of different types. 
@@ -693,9 +694,10 @@ Denote the branch cut between sheets $i$ and $j$ as $\mathcal{C}^{ij}$, the quas
 where $n_{ij}$ is an integer mode number.
 For each cut we associate the so called \emph{filling fraction} defined by
 \begin{equation}
+	\label{eq:filling}
 	S_{ij} = \pm \frac{\lambda}{8 \pi^2 i} \oint_{\mathcal{C}^{ij}} \left( 1 - \frac{1}{x^2} \right) p_i(x) dx.
 \end{equation}
-These are the action angle variables for the theory, roughly they measure the length of the cut and in the physical picture they correspond to the amplitude of the excitation. 
+These are the action variables for the theory, roughly they measure the length of the cut and in the physical picture they correspond to the amplitude of the excitation. 
 The integration measure is fixed from the requirement that the filling fractions be integers. 
 Thus we see that the algebraic curve construction acts like a Fourier decomposition -- string solutions are described as collections of excitations each having definite polarizations, mode numbers and amplitudes.
 
@@ -703,11 +705,13 @@ Let us now review some of the analyticity properties of the quasi-momenta.
 Since the Lax connection has poles at $x = \pm 1$, so do the quasi-momenta (as shown in figure \ref{fig:cuts}). 
 Due to the Virasoro constraint, which comes about from the diffeomorphism invariance of the worldsheet, the residues of the quasi-momenta are constrained to
 \begin{equation}
+	\label{eq:residue_sync}
 	\{ \hat{p}_1, \; \hat{p}_2, \; \hat{p}_3, \; \hat{p}_4 \; | \; \tilde{p}_1, \; \tilde{p}_2, \; \tilde{p}_3, \; \tilde{p}_4 \} = \frac{\{ \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm}, \, | \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm} \}}{x \pm 1}.
 \end{equation}
 An additional constraint on the quasi-momenta comes from the fact that the algebra $\mathfrak{psu(2,2|4)}$ has an automorphism, which is the cause for an additional $\mathbb{Z}_4$ grading. 
 The constraints are given by \cite{sakura}
 \begin{eqnarray}
+	\label{eq:quasi_inversion}
 	\tilde{p}_{1,2}(x) & = & -\tilde{p}_{2,1}(1/x) - 2 \pi m \nonumber \\
 	\tilde{p}_{3,4}(x) & = & -\tilde{p}_{4,3}(1/x) + 2 \pi m \nonumber \\
 	\hat{p}_{1,2,3,4}(x) & = & -\hat{p}_{2,1,4,3}(1/x).
@@ -741,27 +745,57 @@ Finally one can look at the asymptotics of the quasi-momenta as the spectral par
   - \mathcal{J}_1 - \mathcal{J}_2 - \mathcal{J}_3 \\
 \end{array}
 \right),
-\label{eq:asymptotics}
+\label{eq:quasi_asymptotics}
 \end{equation}
 where the charges are rescaled by $\mathcal{Q} = Q / \sqrt{\lambda}$. 
 Thus we see that we can characterize the quasi-momenta by describing their behaviour at poles and under symmetries, by their asymptotics and their filling fractions. 
 
 
-
 \subsubsection{Quantization and semi-classics}
 
+Consider a classical string solution characterized by some conserved charges, expanding the superstring action around this solution produces a quadratic lagrangian whose quantization yields the semiclassical spectrum
 \beq
-	p_i(x) \rightarrow p_i(x) + \delta^{ij} p_i(x)
+	\label{eq:quant_energy_full}
+	E(\{N_{ij,n}\}) = E_{cl} + E_0 + \sum_{ij,n} N_{ij,n} \mathcal{E}_{ij,n},
 \eeq
-
+where $N_{ij,n}$ is the number of excited quanta with energy $\mathcal{E}_{ij,n}$. Here $ij$ label the different polarizations and $n$ the mode numbers of the excitations. The classical energy is $E_{cl}$ whereas $E_0$ is the ground state energy coming from quantization, the last two terms in \eq{eq:quant_energy_full} are analogues of $\frac{1}{2} \omega$ and $N \omega$ for the harmonic oscillator. Just like in the case of the harmonic oscillator we can infer the ground state energy given the level spacings, it is simply
 \beq
-	p_i(x_n^{ij}) - p_j(x_n^{ij}) = 2 \pi n_{ij}
+	E_0 = \frac{1}{2} \sum_{ij,n}(-1)^{F_{ij}} \mathcal{E}_{ij,n},
 \eeq
+where $(-1)^{F_{ij}} = \pm 1$ for bosonic/fermionic excitations. In this section we will review the quantization procedure in the algebraic curve formalism, which is equivalent to the semi-classical computation of quadratic fluctuations in the sigma-model, yet is significantly more efficient.
 
+Roughly the idea is that given a classical string solution represented by some cuts between sheets, as seen for example in figure \ref{fig:cuts}, we perturb it by adding microscopic cuts, which can be treated as a finite number of poles.
+Just like before the indices $ij$ denoting the connected sheets represent the polarization of the excitation, they can take on values given in \eq{eq:polarizations}, however unlike in the classical setting the excitations can be fermionic as well.
+The introduction of these fluctuations backreacts on the classical quasi-momenta $p_k(x)$ shifting them slightly to
 \beq
-	\mathcal{E} = \frac{1}{2} \sum_{ij} (-1)^{F_{ij}} \oint \frac{dx}{2\pi i} \( \Omega^{ij}(x) \d_x \log \sin \frac{p_i - p_j}{2} \)
+	p_k(x) \rightarrow p_k(x) + \delta^{ij}_n p_k(x).
 \eeq
-
+The shifted quasi-momenta still have to satisfy \eq{eq:cut_condition}, which determines the positions $x_n^{ij}$ of the poles
+\beq
+	p_i(x_n^{ij}) - p_j(x_n^{ij}) = 2 \pi \, n_{ij}.
+\eeq
+The fluctuation will add a pole to the quasi-momentum at this position
+\beq
+	\delta^{ij}_n p_i = \epsilon_i \frac{\alpha(x^{ij}_n)}{x-x_n^{ij}},
+\eeq
+where the signs are
+\beq
+	\epsilon_{\hat{1}} = \epsilon_{\hat{2}} = -\epsilon_{\hat{3}} = -\epsilon_{\hat{4}} = -\epsilon_{\tilde{1}} = -\epsilon_{\tilde{2}} = \epsilon_{\tilde{3}} = \epsilon_{\tilde{4}} = 1
+\eeq
+and the residue is chosen such that the filling fraction \eq{eq:filling} increases by one, namely
+\beq
+	\alpha(x) = \frac{4\pi}{\sqrt{\lambda}} \frac{x^2}{x^2 - 1}.
+\eeq
+The total shifted quasi-momentum is obtained by summing over all fluctuations
+\beq
+	\delta p_i \sim \sum_{ij} \epsilon_i N_n^{ij} \frac{\alpha(x_n^{ij})}{x-x_n^{ij}}.
+\eeq
+It still has to satisfy all the analyticity properties outlined the the previous section, this in turn imposes a lot of constraints of the shifts themselves.
+The Virasoro constraint implies the synchronization of residues \eq{eq:residue_sync}, which for the shifts translates to
+\begin{equation}
+	\{ \delta\hat{p}_1, \, \delta\hat{p}_2, \, \delta\hat{p}_3, \, \delta\hat{p}_4 \, | \, \delta\tilde{p}_1, \, \delta\tilde{p}_2, \, \delta\tilde{p}_3, \, \delta\tilde{p}_4 \} = \frac{\{ \, \delta\alpha_{\pm}, \, \delta\alpha_{\pm}, \, \delta\beta_{\pm}, \, \delta\beta_{\pm}, \, | \, \delta\alpha_{\pm}, \, \delta\alpha_{\pm}, \, \delta\beta_{\pm}, \, \delta\beta_{\pm} \}}{x \pm 1}.
+\end{equation}
+Similarly the asymptotics of the quasi-momenta encode the global charges as seen in \eq{eq:quasi_asymptotics}, for the shifts this translates to
 \begin{equation}
 \left(
 \begin{array}{c}
@@ -791,31 +825,52 @@ Thus we see that we can characterize the quasi-momenta by describing their behav
 \right) + \ord{\frac{1}{x^2}},
 \label{eq:asymptotics}
 \end{equation}
-
+where $\delta\Delta$ is the shift of the classical energy $\mathcal{E}$. From here one can read off the individual fluctuation frequencies
 \beq
 	\Omega_n^{ij} = -2 \delta_{i,\hat{1}} + \frac{\lambda}{2\pi} \lim_{x\rightarrow \infty} x \, \delta_n^{ij} p_{\hat{1}}(x)
 \eeq
-
+and the energy shift is then a sum over all frequencies
 \beq
-	\delta \Delta = \sum_{ij,n} N_{ij}^n \Omega_n^{ij}
+	\delta \Delta = \sum_{ij,n} N_{ij}^n \Omega_n^{ij}.
 \eeq
 
+The description outlined above is fully sufficient to calculate the semi-classical spectrum around a classical solution, one has to find the locations of poles, find shifts to the quasi-momenta by utilizing their analyticity properties and finally calculate the 16 fluctuation frequencies and sum them up. 
+This produces the energy shift
 \beq
-	\delta^{ij}_n = \delta^{ij} p_k(x;y) \vert_{y=x_n^{ij}}
+\delta \Delta = E(\{N_{ij,n}\}) - E(\{\}) = \sum_{ij,n} N_{ij}^n \Omega_n^{ij},
 \eeq
-
+Another quantity of interest is the one-loop shift
 \beq
-	\Omega_n^{ij} = \Omega^{ij}(y)\vert_{y=x_n^{ij}}
+	\label{eq:one_loop_shift}
+	E_0 = \frac{1}{2} \sum_{ij,n}(-1)^{F_{ij}} \Omega_n^{ij}
 \eeq
-
+appearing in the loop expansion of the energy of a string state as
 \beq
-	\Omega^{ij}(y) = \Omega_n^{ij}\vert_{n\rightarrow \frac{p_i(y) - p_j(y)}{2\pi}}
+	E(\{\}) = E_{cl} + E_0 + \ord{1/\sqrt{\lambda}},
 \eeq
-
+where the classical energy $E_{cl}$ is of order $\sqrt{\lambda}$ and $E_0$ is of order $1$.
+One can of course proceed with semi-classical quantization, find all the fluctuation frequencies and sum them up by hand to find the one-loop shift, however it would be nicer to find the result in one go.
+To that end we introduce the off-shell fluctuations $\delta^{ij} p_k(x;y)$ which are defined by the same asymptotics as the on-shell fluctuations $\delta^{ij} p_k(x)$ but the position of the pole is left unspecified, namely
 \beq
-	\delta \Delta^{1-loop} = \frac{1}{2} \sum_{ij,n} (-1)^{F_{ij}} \Omega_n^{ij}
+	\delta^{ij}_n p_k(x) = \delta^{ij} p_k(x;y) \vert_{y=x_n^{ij}}.
 \eeq
-
+Similarly we introduce off-shell fluctuation energies
+\beq
+	\Omega_n^{ij} = \Omega^{ij}(y)\vert_{y=x_n^{ij}},
+\eeq
+which can easily be found if the on-shell frequencies are known by
+\beq
+	\Omega^{ij}(y) = \Omega_n^{ij}\vert_{n\rightarrow \frac{p_i(y) - p_j(y)}{2\pi}}.
+\eeq
+The main advantage of introducing the off-shell frequencies is that due to the $\mathbb{Z}_4$ grading of the $\alg{psu}{2,2|4}$ algebra the quasi-momenta enjoy an inversion symmetry under $x \rightarrow 1/x$ as seen in \eq{eq:quasi_inversion}.
+This constrains the off-shell frequencies as well.
+Consider symmetric classical configurations that have pairwise symmetric quasi-momenta
+\beq
+	p_{\hat{1},\hat{2},\tilde{1},\tilde{2}} = -p_{\hat{4},\hat{3},\tilde{4},\tilde{3}},
+\eeq
+it is known to be the case for all rank one solutions, which in particular are dual to states in the $\alg{su}{2}$ and $\alg{sl}{2}$ sectors of $\N=4$ super Yang-Mills. 
+All of the off-shell frequencies can then be expressed in terms of two, namely $\Omega^{\tilde2 \tilde3}$ and $\Omega^{\hat2 \hat3}$, which we denote as the basis of frequencies.
+The rest of the fluctuations are given by
 \beq
 \begin{aligned}
 \Omega^{\tilde1\tilde4} (y) &= -  \Omega^{\tilde2 \tilde3}(1/y) +\Omega^{\tilde2\tilde3}(0)\cr 
@@ -841,7 +896,31 @@ Thus we see that we can characterize the quasi-momenta by describing their behav
 \Omega^{\tilde2 \hat3} (y) &= {1\over 2} \left( \Omega^{\tilde2 \tilde3}(y) + \Omega^{\hat2\hat3} (y) \right)	 \,.
 \end{aligned}
 \eeq
-
+Knowing the off-shell frequencies and the quasi-momenta one can express the one-loop shift as a contour integral
+\beq
+	E_0 = \frac{1}{2} \sum_{ij} (-1)^{F_{ij}} \oint \frac{dx}{2\pi i} \( \Omega^{ij}(x) \d_x \log \sin \frac{p_i - p_j}{2} \),
+\eeq
+where the integrand is chosen carefully such that it contains poles at each fluctuation insertion point $x_n^{ij}$ with residues $\Omega^{ij}(x_n^{ij})$, so that the result is equivalent to \eq{eq:one_loop_shift}.
+There are three contributions to one loop energy shift that are different by their nature.
+They can be separated into an ``anomaly" contribution, a contribution from the dressing phase
+and a wrapping contribution, which is missing in the asymptotic Bethe ansatz.
+\beq
+E_0=\delta \Delta_{\rm anomaly} +\delta \Delta_{\rm dressing} + \delta \Delta_{\rm wrapping}\;,
+\eeq
+where each of these contributions is simply an integral of some closed form expression,
+\vspace{5pt}
+\beqa
+\label{eq:delta_E_3}
+  \delta \Delta_{\rm anomaly} &=& -\frac{4}{ab-1}\int_a^b \frac{dx} {2\pi i}
+  \frac{y(x)}{x^2-1} \partial_x \log \sin p_{\hat 2}\;,\\
+  \label{eq:delta_E_1}
+  \delta \Delta_{\rm dressing} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
+    i} \left( \Omega^{ij}(z) \, \partial_z \frac{i (p_i -p_j)}{2} \right)\;,\\
+  \label{eq:delta_E_2}
+  \delta \Delta_{\rm wrapping} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
+    i} \left( \Omega^{ij}(z) \, \partial_z \log (1- e^{-i(p_i -p_j)}) \right)\;.
+\eeqa
+As always $i$ takes values $\hat 1,\hat 2,\tilde 1,\tilde 2$ whereas $j$ runs over $\hat 3,\hat 4,\tilde 3,\tilde 4$.
 
 \subsubsection{Folded string}
 
@@ -859,10 +938,10 @@ The integer $n$ (the mode number) is related to the number of spikes.
 All the other quasi-momenta can be
 found from
 \beqa
-  \label{eq:quasimomenta_symmetry_A}
+  \label{eq:quasi-momenta_symmetry_A}
   p_{\hat{2}} (x) &=& -p_{\hat{3}}(x) = -p_{\hat{1}}(1/x) = p_{\hat{4}}
   (1/x)\;,\\
-  \label{eq:quasimomenta_symmetry_S}
+  \label{eq:quasi-momenta_symmetry_S}
   p_{\tilde{2}} (x) &=& -p_{\tilde{3}} (x) = p_{\tilde{1}} (x) =
   -p_{\tilde{4}}(x)\;.
 \eeqa
@@ -878,6 +957,46 @@ in terms of the elliptic integrals:
  \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2}
  \right)\;.
  \end{eqnarray}
+ 
+Finally the off-shell fluctuation energies are
+\begin{eqnarray}\nn
+  \label{eq:frequencies}
+  \Omega^{\hat{1}\hat{4}} (x) &=& -\Omega^{\hat{2}\hat{3}}(1/x) -2\;,\;\;\\
+  \Omega^{\hat{1}\hat{3}} (x) &=& \Omega^{\hat{2} \hat{4}} (x) = \frac12
+  \Omega^{\hat{1}\hat{4}}(x) + \frac12 \Omega^{\hat{2}\hat{3}}(x)\;,\nn\\
+  \Omega^{\hat{1}
+    \tilde{3}}(x)
+&=&
+  \Omega^{\hat{1}\tilde{4}}(x)
+    =  \Omega^{\hat{4}\tilde{1}}(x)
+    =  \Omega^{\hat{4}\tilde{2}}(x)
+     =
+  \frac12\, \Omega^{\tilde{2}\tilde{3}} (x) + \frac12\,\Omega^{\hat{1}\hat{4}}(x),\\
+  \Omega^{\hat{2}\tilde{3}}(x)
+&=&
+  \Omega^{\hat{2}\tilde{4}}(x)
+=
+  \Omega^{\tilde{1}\hat{3}}(x)
+=
+  \Omega^{\tilde{2}\hat{3}}(x)
+= \frac12\, \Omega^{\tilde{2}\tilde{3}}(x) + \frac12\, \Omega^{\hat{2}\hat{3}}(x),\nn\\
+  \Omega^{\tilde{2}\tilde{3}}(x)
+&=&
+  \Omega^{\tilde{2}\tilde{4}}(x)
+=
+  \Omega^{\tilde{1}\tilde{3}}(x)
+=
+  \Omega^{\tilde{1}\tilde{4}}(x)\;,\nn
+\end{eqnarray}
+where
+\beqa
+\label{oma}
+\Omega^{\tilde 2\tilde 3}(x)&=&\frac{2}{a
+  b-1}\frac{\sqrt{a^2-1}\sqrt{b^2-1}}{x^2-1}\;,\\
+\label{oms}
+\Omega^{\hat 2\hat 3}(x)&=&\frac{2}{a b-1}\(1-\frac{y(x)}{x^2-1}\)\;.
+\eeqa
+and $y(x)=\sqrt{x-a} \sqrt{a+x} \sqrt{x-b} \sqrt{b+x}$.
 
 
 \subsection{Short strings}

@@ -759,159 +759,159 @@ Thus our results appear to disagree with the values of $B_1$ and $B_2$ obtained 
 Another option is that the ansatz for the structure of anomalous dimensions at strong coupling may need to be modified when $n>1$ (as already suspected in \cite{Gromov:2011bz}), and our results may help provide some guidance in this case.
 
 
-\section{Exact formulae for one-loop correction}\label{appA}
-\subsection{Main formula for one-loop correction and notations}
-In \cite{Gromov:2011de} a general formula was derived describing the one loop correction
-to the energy of the generic $(S,J,n)$ folded string solution.
-There are three contributions to one loop energy shift that are different by their nature.
-They can be separated into an ``anomaly" contribution, a contribution from the dressing phase
-and a wrapping contribution, which is missing in the ABA approach, but present in the
-Y-system
-\beq
-\Delta_{\rm1-loop}=\delta \Delta_{\rm anomaly} +\delta \Delta_{\rm dressing} + \delta \Delta_{\rm wrapping}\;,
-\eeq
-where each of these contributions is simply an integral of some closed form expression,
-\beqa
-\label{eq:delta_E_3}
-  \delta \Delta_{\rm anomaly} &=& -\frac{4}{ab-1}\int_a^b \frac{dx} {2\pi i}
-  \frac{y(x)}{x^2-1} \partial_x \log \sin p_{\hat 2}\;,\\
-  \label{eq:delta_E_1}
-  \delta \Delta_{\rm dressing} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
-    i} \left( \Omega^{ij}(z) \, \partial_z \frac{i (p_i -p_j)}{2} \right)\;,\\
-  \label{eq:delta_E_2}
-  \delta \Delta_{\rm wrapping} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
-    i} \left( \Omega^{ij}(z) \, \partial_z \log (1- e^{-i(p_i -p_j)}) \right)\;.
-\eeqa
-in this sum $i$ takes values $\hat 1,\hat 2,\tilde 1,\tilde 2$ whereas $j$ runs over
-$\hat 3,\hat 4,\tilde 3,\tilde 4$.
+% \section{Exact formulae for one-loop correction}\label{appA}
+% \subsection{Main formula for one-loop correction and notations}
+% In \cite{Gromov:2011de} a general formula was derived describing the one loop correction
+% to the energy of the generic $(S,J,n)$ folded string solution.
+% There are three contributions to one loop energy shift that are different by their nature.
+% They can be separated into an ``anomaly" contribution, a contribution from the dressing phase
+% and a wrapping contribution, which is missing in the ABA approach, but present in the
+% Y-system
+% \beq
+% \Delta_{\rm1-loop}=\delta \Delta_{\rm anomaly} +\delta \Delta_{\rm dressing} + \delta \Delta_{\rm wrapping}\;,
+% \eeq
+% where each of these contributions is simply an integral of some closed form expression,
+% \beqa
+% \label{eq:delta_E_3}
+  % \delta \Delta_{\rm anomaly} &=& -\frac{4}{ab-1}\int_a^b \frac{dx} {2\pi i}
+  % \frac{y(x)}{x^2-1} \partial_x \log \sin p_{\hat 2}\;,\\
+  % \label{eq:delta_E_1}
+  % \delta \Delta_{\rm dressing} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
+    % i} \left( \Omega^{ij}(z) \, \partial_z \frac{i (p_i -p_j)}{2} \right)\;,\\
+  % \label{eq:delta_E_2}
+  % \delta \Delta_{\rm wrapping} &=& \sum_{ij} (-1)^{F_{ij}} \int\limits_{-1}^{1} \frac{dz} {2\pi
+    % i} \left( \Omega^{ij}(z) \, \partial_z \log (1- e^{-i(p_i -p_j)}) \right)\;.
+% \eeqa
+% in this sum $i$ takes values $\hat 1,\hat 2,\tilde 1,\tilde 2$ whereas $j$ runs over
+% $\hat 3,\hat 4,\tilde 3,\tilde 4$.
 
-Let us explain the notations. The quasi-momenta:
-\beqa
-  \label{eq:p_a}\nn
-  p_{\hat 2} &=& \pi n - 2\pi n{\cal J} \left( \frac{a}{a^2-1} -
-    \frac{x}{x^2-1} \right) \sqrt{\frac{(a^2-1)
-      (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi n a b {\cal S} F_1(x)}{(b-a)(ab+1)} +
-  \frac{2\pi n {\cal J} (a-b) F_2(x)}{\sqrt{(a^2-1)(b^2-1)}},\\
-  \label{eq:p_s}
-  p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1}.
-\eeqa
-The integer $n$ (the mode number) is related to the number of spikes.
-All the other quasi-momenta can be
-found from
-\beqa
-  \label{eq:quasimomenta_symmetry_A}
-  p_{\hat{2}} (x) &=& -p_{\hat{3}}(x) = -p_{\hat{1}}(1/x) = p_{\hat{4}}
-  (1/x)\;,\\
-  \label{eq:quasimomenta_symmetry_S}
-  p_{\tilde{2}} (x) &=& -p_{\tilde{3}} (x) = p_{\tilde{1}} (x) =
-  -p_{\tilde{4}}(x)\;.
-\eeqa
-The functions $F_1(x)$ and $F_2(x)$ can be expressed
-in terms of the elliptic integrals:
-\begin{eqnarray}
- \label{eq:not}
- F_1(x) &=& i F \left( i \sinh^{-1}
- \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2} \nonumber
- \right)\;, \\
-\nn
- F_2(x) &=& i E \left( i \sinh^{-1}
- \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2}
- \right)\;.
- \end{eqnarray}
-Finally the off-shell fluctuation energies are
-\begin{eqnarray}\nn
-  \label{eq:frequencies}
-  \Omega^{\hat{1}\hat{4}} (x) &=& -\Omega^{\hat{2}\hat{3}}(1/x) -2\;,\;\;\\
-  \Omega^{\hat{1}\hat{3}} (x) &=& \Omega^{\hat{2} \hat{4}} (x) = \frac12
-  \Omega^{\hat{1}\hat{4}}(x) + \frac12 \Omega^{\hat{2}\hat{3}}(x)\;,\nn\\
-  \Omega^{\hat{1}
-    \tilde{3}}(x)
-&=&
-  \Omega^{\hat{1}\tilde{4}}(x)
-    =  \Omega^{\hat{4}\tilde{1}}(x)
-    =  \Omega^{\hat{4}\tilde{2}}(x)
-     =
-  \frac12\, \Omega^{\tilde{2}\tilde{3}} (x) + \frac12\,\Omega^{\hat{1}\hat{4}}(x),\\
-  \Omega^{\hat{2}\tilde{3}}(x)
-&=&
-  \Omega^{\hat{2}\tilde{4}}(x)
-=
-  \Omega^{\tilde{1}\hat{3}}(x)
-=
-  \Omega^{\tilde{2}\hat{3}}(x)
-= \frac12\, \Omega^{\tilde{2}\tilde{3}}(x) + \frac12\, \Omega^{\hat{2}\hat{3}}(x),\nn\\
-  \Omega^{\tilde{2}\tilde{3}}(x)
-&=&
-  \Omega^{\tilde{2}\tilde{4}}(x)
-=
-  \Omega^{\tilde{1}\tilde{3}}(x)
-=
-  \Omega^{\tilde{1}\tilde{4}}(x)\;,\nn
-\end{eqnarray}
-where
-\beqa
-\label{oma}
-\Omega^{\tilde 2\tilde 3}(x)&=&\frac{2}{a
-  b-1}\frac{\sqrt{a^2-1}\sqrt{b^2-1}}{x^2-1}\;,\\
-\label{oms}
-\Omega^{\hat 2\hat 3}(x)&=&\frac{2}{a b-1}\(1-\frac{y(x)}{x^2-1}\)\;.
-\eeqa
-and $y(x)=\sqrt{x-a} \sqrt{a+x} \sqrt{x-b} \sqrt{b+x}$.
+% Let us explain the notations. The quasi-momenta:
+% \beqa
+  % \label{eq:p_a}\nn
+  % p_{\hat 2} &=& \pi n - 2\pi n{\cal J} \left( \frac{a}{a^2-1} -
+    % \frac{x}{x^2-1} \right) \sqrt{\frac{(a^2-1)
+      % (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi n a b {\cal S} F_1(x)}{(b-a)(ab+1)} +
+  % \frac{2\pi n {\cal J} (a-b) F_2(x)}{\sqrt{(a^2-1)(b^2-1)}},\\
+  % \label{eq:p_s}
+  % p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1}.
+% \eeqa
+% The integer $n$ (the mode number) is related to the number of spikes.
+% All the other quasi-momenta can be
+% found from
+% \beqa
+  % \label{eq:quasimomenta_symmetry_A}
+  % p_{\hat{2}} (x) &=& -p_{\hat{3}}(x) = -p_{\hat{1}}(1/x) = p_{\hat{4}}
+  % (1/x)\;,\\
+  % \label{eq:quasimomenta_symmetry_S}
+  % p_{\tilde{2}} (x) &=& -p_{\tilde{3}} (x) = p_{\tilde{1}} (x) =
+  % -p_{\tilde{4}}(x)\;.
+% \eeqa
+% The functions $F_1(x)$ and $F_2(x)$ can be expressed
+% in terms of the elliptic integrals:
+% \begin{eqnarray}
+ % \label{eq:not}
+ % F_1(x) &=& i F \left( i \sinh^{-1}
+ % \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2} \nonumber
+ % \right)\;, \\
+% \nn
+ % F_2(x) &=& i E \left( i \sinh^{-1}
+ % \sqrt{\frac{(b-a)(a-x)}{(b+a)(a+x)}} | \frac{(a+b)^2}{(a-b)^2}
+ % \right)\;.
+ % \end{eqnarray}
+% Finally the off-shell fluctuation energies are
+% \begin{eqnarray}\nn
+  % \label{eq:frequencies}
+  % \Omega^{\hat{1}\hat{4}} (x) &=& -\Omega^{\hat{2}\hat{3}}(1/x) -2\;,\;\;\\
+  % \Omega^{\hat{1}\hat{3}} (x) &=& \Omega^{\hat{2} \hat{4}} (x) = \frac12
+  % \Omega^{\hat{1}\hat{4}}(x) + \frac12 \Omega^{\hat{2}\hat{3}}(x)\;,\nn\\
+  % \Omega^{\hat{1}
+    % \tilde{3}}(x)
+% &=&
+  % \Omega^{\hat{1}\tilde{4}}(x)
+    % =  \Omega^{\hat{4}\tilde{1}}(x)
+    % =  \Omega^{\hat{4}\tilde{2}}(x)
+     % =
+  % \frac12\, \Omega^{\tilde{2}\tilde{3}} (x) + \frac12\,\Omega^{\hat{1}\hat{4}}(x),\\
+  % \Omega^{\hat{2}\tilde{3}}(x)
+% &=&
+  % \Omega^{\hat{2}\tilde{4}}(x)
+% =
+  % \Omega^{\tilde{1}\hat{3}}(x)
+% =
+  % \Omega^{\tilde{2}\hat{3}}(x)
+% = \frac12\, \Omega^{\tilde{2}\tilde{3}}(x) + \frac12\, \Omega^{\hat{2}\hat{3}}(x),\nn\\
+  % \Omega^{\tilde{2}\tilde{3}}(x)
+% &=&
+  % \Omega^{\tilde{2}\tilde{4}}(x)
+% =
+  % \Omega^{\tilde{1}\tilde{3}}(x)
+% =
+  % \Omega^{\tilde{1}\tilde{4}}(x)\;,\nn
+% \end{eqnarray}
+% where
+% \beqa
+% \label{oma}
+% \Omega^{\tilde 2\tilde 3}(x)&=&\frac{2}{a
+  % b-1}\frac{\sqrt{a^2-1}\sqrt{b^2-1}}{x^2-1}\;,\\
+% \label{oms}
+% \Omega^{\hat 2\hat 3}(x)&=&\frac{2}{a b-1}\(1-\frac{y(x)}{x^2-1}\)\;.
+% \eeqa
+% and $y(x)=\sqrt{x-a} \sqrt{a+x} \sqrt{x-b} \sqrt{b+x}$.
 
-In the small $\cal{S}$ limit these expressions can be expanded,
-\beqa\label{anomaly_dressing}
-	&&\delta\Delta_{anomaly} = \frac{-1}{2( \mathcal{J}^3 + \mathcal{J})} \, \mathcal{S}
-	+ \left[ \frac{2 \, \mathcal{J}^4 + 15 \, \mathcal{J}^2 + 4}{16 \, \mathcal{J}^3(\mathcal{J}^2 + 1)^{5/2}} - \frac{\pi^2 n^2}{12 \, \mathcal{J}^3 \, \sqrt{\mathcal{J}^2 + 1}} \right] \mathcal{S}^2   \\
-	&&+ \left[ \frac{3 \, \mathcal{J}^8 -32 \, \mathcal{J}^6 - 146 \, \mathcal{J}^4 - 68 \, \mathcal{J}^2 - 16}{64 \, \mathcal{J}^5 (1+ \, \mathcal{J}^2)^4} + \frac{\pi^2 n^2 (\, \mathcal{J}^4 + 4 \, \mathcal{J}^2 + 2)}{24 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^2} + \frac{\pi^4 n^4}{180 \, \mathcal{J}^5} \right] \mathcal{S}^3 \nonumber
-	+ \mathcal{O}(\mathcal{S}^4)  \\
-	&&\delta\Delta_{dressing} = \left[ \frac{n \, (\mathcal{J}^2 + 2) \, \mathrm{coth}^{-1} (\sqrt{\, \mathcal{J}^2 + 1} + \, \mathcal{J})}{\, \mathcal{J}^3(\, \mathcal{J}^2 + 1)^{3/2}} -\frac{n}{2 \, \mathcal{J}^3 (\, \mathcal{J}^2 + 1)}  \right] \mathcal{S}^2 \nonumber \\
-	&&+ \left[ -\frac{n(3 \, \mathcal{J}^6 + 13 \, \mathcal{J}^4 + 22 \, \mathcal{J}^2 + 8)\, \mathrm{coth}^{-1} (\sqrt{\, \mathcal{J}^2 + 1} + \, \mathcal{J})}{2 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^3} + \frac{n(9 \, \mathcal{J}^4 + 31 \, \mathcal{J}^2 + 10)}{12 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^{5/2}} \right] \mathcal{S}^3 \nonumber
-	+ \mathcal{O}(\mathcal{S}^4)
-\eeqa
-the expansion of the third integral $\delta\Delta_{wrapping}$ is more complicated, and we advice the reader to use
-the equation \eq{delta_oneloop} instead which includes all contributions. What we can, however, say is that
-	$\delta\Delta_{wrapping} = {\cal O}(e^{-2\pi{\cal J}})$
-and thus this term is irrelevant for the large ${\cal J}$ expansion.
-This makes the expressions \eq{anomaly_dressing} particularly convenient for
-small ${\cal S}$ followed by large ${\cal J}$ expansions,
-where as the exact ${\cal J}$ expression in \eq{delta_oneloop} is not
-very convenient since the sum of the expansion does not converge.
+% In the small $\cal{S}$ limit these expressions can be expanded,
+% \beqa\label{anomaly_dressing}
+	% &&\delta\Delta_{anomaly} = \frac{-1}{2( \mathcal{J}^3 + \mathcal{J})} \, \mathcal{S}
+	% + \left[ \frac{2 \, \mathcal{J}^4 + 15 \, \mathcal{J}^2 + 4}{16 \, \mathcal{J}^3(\mathcal{J}^2 + 1)^{5/2}} - \frac{\pi^2 n^2}{12 \, \mathcal{J}^3 \, \sqrt{\mathcal{J}^2 + 1}} \right] \mathcal{S}^2   \\
+	% &&+ \left[ \frac{3 \, \mathcal{J}^8 -32 \, \mathcal{J}^6 - 146 \, \mathcal{J}^4 - 68 \, \mathcal{J}^2 - 16}{64 \, \mathcal{J}^5 (1+ \, \mathcal{J}^2)^4} + \frac{\pi^2 n^2 (\, \mathcal{J}^4 + 4 \, \mathcal{J}^2 + 2)}{24 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^2} + \frac{\pi^4 n^4}{180 \, \mathcal{J}^5} \right] \mathcal{S}^3 \nonumber
+	% + \mathcal{O}(\mathcal{S}^4)  \\
+	% &&\delta\Delta_{dressing} = \left[ \frac{n \, (\mathcal{J}^2 + 2) \, \mathrm{coth}^{-1} (\sqrt{\, \mathcal{J}^2 + 1} + \, \mathcal{J})}{\, \mathcal{J}^3(\, \mathcal{J}^2 + 1)^{3/2}} -\frac{n}{2 \, \mathcal{J}^3 (\, \mathcal{J}^2 + 1)}  \right] \mathcal{S}^2 \nonumber \\
+	% &&+ \left[ -\frac{n(3 \, \mathcal{J}^6 + 13 \, \mathcal{J}^4 + 22 \, \mathcal{J}^2 + 8)\, \mathrm{coth}^{-1} (\sqrt{\, \mathcal{J}^2 + 1} + \, \mathcal{J})}{2 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^3} + \frac{n(9 \, \mathcal{J}^4 + 31 \, \mathcal{J}^2 + 10)}{12 \, \mathcal{J}^5 (1 + \, \mathcal{J}^2)^{5/2}} \right] \mathcal{S}^3 \nonumber
+	% + \mathcal{O}(\mathcal{S}^4)
+% \eeqa
+% the expansion of the third integral $\delta\Delta_{wrapping}$ is more complicated, and we advice the reader to use
+% the equation \eq{delta_oneloop} instead which includes all contributions. What we can, however, say is that
+	% $\delta\Delta_{wrapping} = {\cal O}(e^{-2\pi{\cal J}})$
+% and thus this term is irrelevant for the large ${\cal J}$ expansion.
+% This makes the expressions \eq{anomaly_dressing} particularly convenient for
+% small ${\cal S}$ followed by large ${\cal J}$ expansions,
+% where as the exact ${\cal J}$ expression in \eq{delta_oneloop} is not
+% very convenient since the sum of the expansion does not converge.
 
 
-\newpage
-\subsection{One Loop $(S,J)$ Folded String {\it Mathematica} {Code}}
-In order to fix all our conventions as well as for the convenience of the
-reader we include a simplified  {\it Mathematica} {code}
-we used to check our results numerically\\
-{\footnotesize
-\verb" "\\
-\verb"GS=((2*(a*b+1))*(b*EllipticE[1-a^2/b^2]-a*EllipticK[1-a^2/b^2]))/(4*Pi*a*b);"\\
-\verb"GJ=((4*Sqrt[(a^2-1)*(b^2-1)])*EllipticK[1-a^2/b^2])/(4*Pi*b);"\\
-\verb"y=Sqrt[x-a]*Sqrt[x+a]*Sqrt[x-b]*Sqrt[x+b];"\\
-\verb"F1[x_] =I*EllipticF[I*ArcSinh[Sqrt[-(((a-b)*(a-x))/((a+b)*(a+x)))]], (a+b)^2/(a-b)^2];"\\
-\verb"F2[x_] =I*EllipticE[I*ArcSinh[Sqrt[-(((a-b)*(a-x))/((a+b)*(a+x)))]], (a+b)^2/(a-b)^2];"\\
-\verb"pA[x_] =n*Pi-2*Pi*n*j*(a/(a^2-1)-x/(x^2-1))*Sqrt[((a^2-1)*(b^2-x^2))/((b^2-1)*(a^2-x^2))] +"\\
-\verb"       (8*a*b*s*Pi*n*F1[x])/((b-a)*(a*b+1))+(2*Pi*n*j*(a-b)*F2[x])/Sqrt[(a^2-1)*(b^2-1)];"\\
-\verb"pS[x_]=(2*Pi*n*j*x)/(x^2-1);"\\
-\verb"X[z_]=z+Sqrt[z^2-1];"\\
-\verb"OA[x_]=(2*(1-y/(x^2-1)))/(a*b-1);"\\
-\verb"OS[x_]=(2*(-(y /. x->1)))/((a*b-1)*(x^2-1));"\\
-\verb"ab[j_, s_] :=ab[j, s]=Chop[FindRoot[{s==GS, j==GJ}, {{b, Sqrt[j^2+1]+j+Sqrt[s]/10}"\\
-\verb"                                                    ,{a, Sqrt[j^2+1]+j-Sqrt[s]/10}}]];"\\
-\verb"OneLoop[jj_, ss_, nn_] := Block[{sb0=Join[ab[jj, ss], {j->jj, s->ss, n->nn}]},"\\
-\verb"tn0=(2*Im[pA[X[z]]-pS[X[z]]]*Im[D[OA[X[z]]-OS[X[z]], z]])/Pi /. sb0;"\\
-\verb"Edressing=NIntegrate[tn0, {z, 0, 1}];"\\
-\verb"tn1=(2*D[OS[X[z]], z]*Log[((1-Exp[(-I)*pS[X[z]]-I*pA[X[z]]])*(1-Exp[(-I)*pS[X[z]]+I*pA[1/X[z]]]))/"\\
-\verb"                                                              (1-Exp[-2*I*pS[X[z]]])^2])/Pi /. sb0;"\\
-\verb"tn2=-((2*D[OA[X[z]], z]*Log[((1-Exp[-2*I*pA[X[z]]])*(1-Exp[(-I)*pA[X[z]]+I*pA[1/X[z]]]))/"\\
-\verb"                                                  (1-Exp[(-I)*pS[X[z]]-I*pA[X[z]]])^2])/Pi) /. sb0;"\\
-\verb"Ewrapping=NIntegrate[Im[tn1+tn2], {z, 0, 1}];"\\
-\verb"tn=-((4*y*D[Log[Sin[pA[x]]], x])/((a*b-1)*(2*Pi*I)*(x^2-1))) /. sb0;"\\
-\verb"Eanomaly=Re[NIntegrate[tn, {x, a /. sb0, ((a+b)*(1+I))/(2*10) /. sb0, b /. sb0}]];"\\
-\verb"Edressing+Ewrapping+Eanomaly];"
-\verb" "\\
-}\\
-To compute $\Delta_{\rm 1-loop}$ simply run \verb"OneLoop["${\cal J},{\cal S}, n$\verb"]" in {\it Mathematica}.
+% \newpage
+% \subsection{One Loop $(S,J)$ Folded String {\it Mathematica} {Code}}
+% In order to fix all our conventions as well as for the convenience of the
+% reader we include a simplified  {\it Mathematica} {code}
+% we used to check our results numerically\\
+% {\footnotesize
+% \verb" "\\
+% \verb"GS=((2*(a*b+1))*(b*EllipticE[1-a^2/b^2]-a*EllipticK[1-a^2/b^2]))/(4*Pi*a*b);"\\
+% \verb"GJ=((4*Sqrt[(a^2-1)*(b^2-1)])*EllipticK[1-a^2/b^2])/(4*Pi*b);"\\
+% \verb"y=Sqrt[x-a]*Sqrt[x+a]*Sqrt[x-b]*Sqrt[x+b];"\\
+% \verb"F1[x_] =I*EllipticF[I*ArcSinh[Sqrt[-(((a-b)*(a-x))/((a+b)*(a+x)))]], (a+b)^2/(a-b)^2];"\\
+% \verb"F2[x_] =I*EllipticE[I*ArcSinh[Sqrt[-(((a-b)*(a-x))/((a+b)*(a+x)))]], (a+b)^2/(a-b)^2];"\\
+% \verb"pA[x_] =n*Pi-2*Pi*n*j*(a/(a^2-1)-x/(x^2-1))*Sqrt[((a^2-1)*(b^2-x^2))/((b^2-1)*(a^2-x^2))] +"\\
+% \verb"       (8*a*b*s*Pi*n*F1[x])/((b-a)*(a*b+1))+(2*Pi*n*j*(a-b)*F2[x])/Sqrt[(a^2-1)*(b^2-1)];"\\
+% \verb"pS[x_]=(2*Pi*n*j*x)/(x^2-1);"\\
+% \verb"X[z_]=z+Sqrt[z^2-1];"\\
+% \verb"OA[x_]=(2*(1-y/(x^2-1)))/(a*b-1);"\\
+% \verb"OS[x_]=(2*(-(y /. x->1)))/((a*b-1)*(x^2-1));"\\
+% \verb"ab[j_, s_] :=ab[j, s]=Chop[FindRoot[{s==GS, j==GJ}, {{b, Sqrt[j^2+1]+j+Sqrt[s]/10}"\\
+% \verb"                                                    ,{a, Sqrt[j^2+1]+j-Sqrt[s]/10}}]];"\\
+% \verb"OneLoop[jj_, ss_, nn_] := Block[{sb0=Join[ab[jj, ss], {j->jj, s->ss, n->nn}]},"\\
+% \verb"tn0=(2*Im[pA[X[z]]-pS[X[z]]]*Im[D[OA[X[z]]-OS[X[z]], z]])/Pi /. sb0;"\\
+% \verb"Edressing=NIntegrate[tn0, {z, 0, 1}];"\\
+% \verb"tn1=(2*D[OS[X[z]], z]*Log[((1-Exp[(-I)*pS[X[z]]-I*pA[X[z]]])*(1-Exp[(-I)*pS[X[z]]+I*pA[1/X[z]]]))/"\\
+% \verb"                                                              (1-Exp[-2*I*pS[X[z]]])^2])/Pi /. sb0;"\\
+% \verb"tn2=-((2*D[OA[X[z]], z]*Log[((1-Exp[-2*I*pA[X[z]]])*(1-Exp[(-I)*pA[X[z]]+I*pA[1/X[z]]]))/"\\
+% \verb"                                                  (1-Exp[(-I)*pS[X[z]]-I*pA[X[z]]])^2])/Pi) /. sb0;"\\
+% \verb"Ewrapping=NIntegrate[Im[tn1+tn2], {z, 0, 1}];"\\
+% \verb"tn=-((4*y*D[Log[Sin[pA[x]]], x])/((a*b-1)*(2*Pi*I)*(x^2-1))) /. sb0;"\\
+% \verb"Eanomaly=Re[NIntegrate[tn, {x, a /. sb0, ((a+b)*(1+I))/(2*10) /. sb0, b /. sb0}]];"\\
+% \verb"Edressing+Ewrapping+Eanomaly];"
+% \verb" "\\
+% }\\
+% To compute $\Delta_{\rm 1-loop}$ simply run \verb"OneLoop["${\cal J},{\cal S}, n$\verb"]" in {\it Mathematica}.
 
 \section{$S^3$ and $S^4$ order}\label{AppS4}
 The $\mathcal{S}^3$ order term in the expression of \eq{delta_oneloop} is given by
