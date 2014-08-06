@@ -388,20 +388,20 @@ It is convenient to introduce a creation-annihilation operator algebra by defini
 \beq
 	{(\mathbf{a}^\dagger)}^n \, \ket{0} \equiv \frac{1}{n!}(\mathcal{D}_+)^n \, Z,  
 \eeq
-where $\ket{0}$ is the state annihilated by $\mathbf{a}$. The canonical commutator is defined as usual with $[\mathbf{a}, \mathbf{a}^\dagger] = 1$. The sector is then invariant under the $\mathfrak{sl}(2)$ subalgebra of the supercoformal algebra $\mathfrak{psu}(2,2|4)$ given by 
+where $\ket{0}$ is the state annihilated by $\mathbf{a}$. The canonical commutator is defined as usual with $[\mathbf{a}, \mathbf{a}^\dagger] = 1$. The sector is then invariant under the $\mathfrak{sl}(2)$ subalgebra of the full supercoformal algebra given by 
 \beq
-	J'_{-} = \mathbf{a}, \;\;\; J'_3 = \frac{1}{2} + \mathbf{a}^\dagger \mathbf{a}, \;\;\; J'_{+} = \mathbf{a} + \mathbf{a}^\dagger \mathbf{a}^\dagger \mathbf{a}.
+	J'_{-} = \mathbf{a}, \;\;\; J'_3 = \frac{1}{2} + \mathbf{a}^\dagger \mathbf{a}, \;\;\; J'_{+} = \mathbf{a} + \mathbf{a}^\dagger \mathbf{a}^\dagger \mathbf{a},
 \eeq
 with the defining commutation relations among them
 \beq
 	[J'_+, J'_-] = -2 \, J'_3, \;\;\; [J'_3, J'_\pm] = \pm J'_\pm.
 \eeq
-Taking a trace of $J$ operators with covariant derivatives is then equivalent to an $\mathfrak{sl}(2)$ spin chain with $s=-1/2$ representations at each site. 
-The Hamiltonian density is given by
+Taking a trace of $J$ operators with $S$ covariant derivatives is then equivalent to an $\mathfrak{sl}(2)$ spin chain with $s=-1/2$ representations at each site. 
+The Hamiltonian density is given by \cite{Beisert:2003yb}
 \beq
 	\mathbf{H}_{ij} \; {(\mathbf{a}^\dagger_i)}^{k} {(\mathbf{a}^\dagger_j)}^{m} \ket{00}  = \sum_{k'=0}^{m+k}  \( \delta_{k=k'} \( h(k) + h(m) \) - \frac{\delta_{k \neq k'}}{|k-k'|} \) {(\mathbf{a}^\dagger_i)}^{k'} {(\mathbf{a}_j^\dagger)}^{m+k-k'} \ket{00},
 \eeq
-where $h(k)$ is the $k$th harmonic number given by $\sum_{i=1}^k 1/i$. 
+where $h(k)$ is the $k$'th harmonic number given by $\sum_{i=1}^k 1/i$. 
 The Hamiltonian is a sum of nearest neighbour interactions
 \beq
 	\label{eq:sl2_hamiltonian}
@@ -412,7 +412,7 @@ The spin chain also admits a set of Bethe ansatz equations for the spectrum give
 	\label{eq:sl2_bae}
 	\left( \frac{u_k + i/2}{u_k - i/2} \right)^J = \prod_{\substack{j=1 \\ j \neq k}}^S \frac{u_k - u_j - i}{u_k - u_j + i},
 \end{equation}
-which are remarkably similar to the $\mathfrak{su}(2)$ equations \eq{eq:su2_bae}. Once the Bethe roots are found the energy of the state is given by
+which are remarkably similar to the $\mathfrak{su}(2)$ equations \eq{eq:su2_bae}. Once the Bethe roots are found the energy of the state can be found as
 \begin{equation}
 	\label{eq:sl2_E}
 	E = \sum_{k=1}^S \frac{1}{u_k^2 + 1/4}.
@@ -425,7 +425,7 @@ The most famous $\mathfrak{sl}(2)$ operator is the so called Konishi operator
 It has the classical dimension $\Delta_0 = 4$, which is obvious from dimensionality. 
 A simple calculation shows that it is an eigenstate of the Hamiltonian \eq{eq:sl2_hamiltonian} with eigenvalue $12$. 
 The same result can also be found from the Bethe ansatz equations \eq{eq:sl2_bae}, \eq{eq:sl2_E}.
-It turns out that the Konishi operator is an eigenstate of the dilatation operator at all loops, thus it is a very convenient object to study.
+It turns out that the Konishi operator is an eigenstate of the dilatation operator at all loops \cite{Ryzhov:2003kk}, thus it is a very convenient object to study.
 So far we can summarize our knowledge of its anomalous dimension as a weak coupling expansion
 \beq
 	\Delta = 4 + 12 g^2 + \ord{g^4}.
@@ -435,21 +435,21 @@ Later sections of this thesis will be mostly concerned with the strong coupling 
 \subsubsection{Arbitrary sectors}
 
 The Bethe ansatz equations for the $\mathfrak{su}(2)$ sector \eq{eq:su2_bae} and for the $\mathfrak{sl}(2)$ sector \eq{eq:sl2_bae} look remarkably similar, suggesting that there might be a generalization for arbitrary algebras and representations.
-And indeed such equations exist, they are given by 
+And indeed such equations exist, they are given by \cite{Saleur:2000kk} 
 \begin{equation}
 	\left( \frac{u_{i,k} + \frac{i}{2} V_{k}}{u_{i,k} - \frac{i}{2} V_{k}} \right)^L = \prod_{l=1}^r \prod_{\substack{j=1 \\ j \neq i}}^{J_l} \frac{u_{i,k} - u_{j,l} + \frac{i}{2} M_{kl}}{u_{i,k} - u_{j,l} - \frac{i}{2} M_{kl}},
 	\label{eq:general_bae}
 \end{equation}
-where $M_{kl}$ is the Cartan matrix of the symmetry algebra and $V_{k}$ is the vector of highest weights for the representation that the spin sites live in. This is a set of equations for the Bethe roots $u_{k,i}$, where $k=1,\dots,\mathrm{rank}(G)$ and $i = 1,\dots,J_{k}$ with $J_k$ being the number of excitations of type $k$ (each type corresponds to a different node of the Dynkin diagram, hence $k$ has $\mathrm{rank}(G)$ possible values). The total number of excitations is then $J = \sum J_k$. All of the conserved charges of the system can now be given in terms of the Bethe roots as [?? check ??]
+where $M_{kl}$ is the Cartan matrix of the symmetry algebra and $V_{k}$ is the vector of highest weights for the representation that the spin sites live in. This is a set of equations for the Bethe roots $u_{k,i}$, where $k=1,\dots,\mathrm{rank}(G)$ and $i = 1,\dots,J_{k}$ with $J_k$ being the number of excitations of type $k$ (each type corresponds to a different node of the Dynkin diagram, hence $k$ has $\mathrm{rank}(G)$ possible values). The total number of excitations is then $J = \sum J_k$. All of the conserved charges of the system can now be given in terms of the Bethe roots as
 \begin{equation}
 	Q_r = \frac{i}{r-1} \sum_{l=1}^{r} \sum_{j=1}^{J_r} \left( \frac{1}{\left(u_{j,l} + \frac{i}{2} V_{l}\right)^{r-1}} - \frac{1}{\left(u_{j,l} - \frac{i}{2} V_{l}\right)^{r-1}} \right).
 \end{equation} 
-In particular the energy is simply the second conserved charge, i.e.
-\begin{equation}
-	E = Q_2 = i \sum_{l=1}^{2} \sum_{j=1}^{J_2} \left( \frac{1}{u_{j,l} + \frac{i}{2} V_{l}} - \frac{1}{u_{j,l} - \frac{i}{2} V_{l}} \right).
-\end{equation}
+In particular energy is simply the second conserved charge, $E=Q_2$.
+% \begin{equation}
+	% E = Q_2 = i \sum_{l=1}^{2} \sum_{j=1}^{J_2} \left( \frac{1}{u_{j,l} + \frac{i}{2} V_{l}} - \frac{1}{u_{j,l} - \frac{i}{2} V_{l}} \right).
+% \end{equation}
 It is now trivial to check that these equations reproduce all of the Bethe equations discussed so far. 
-It is also easy to derive them for other closed sectors, such as  $\mathfrak{su}(2|3)$ or even the full superconformal algebra $\mathfrak{psu}(2,2|4)$.
+It is also a matter of simple algebra to derive them for other closed sectors, such as  $\mathfrak{su}(2|3)$ or even the full superconformal algebra $\mathfrak{psu}(2,2|4)$.
 
 % A Hamiltonian for arbitrary sectors can also be written down by starting with the general form of 
 % \beq
@@ -460,8 +460,8 @@ It is also easy to derive them for other closed sectors, such as  $\mathfrak{su}
 \subsection{Higher loops and asymptotic length}
 
 The next step in solving the spectral problem is increasing the loop level. 
-For the $\mathfrak{su}(2)$ sector this has first been done for two-loops using mainly diagrammatic methods and by fixing the structure of the operator by symmetry. 
-The resulting dilatation operator is given by \cite{su2_loops}
+For the $\mathfrak{su}(2)$ sector this has first been done for two-loops by using symmetry constraints to fix the structure of the operator. 
+The resulting dilatation operator is given by \cite{Beisert:2003tq}
 \begin{equation}
 	\Gamma_{2-loop} = \frac{\lambda}{8\pi^2}\sum_{l=1}^L \left(-4 + 6 \, \mathcal{P}_{l,l+1} - \left( \mathcal{P}_{l,l+1} \, \mathcal{P}_{l+1,l+2} + \mathcal{P}_{l+1,l+2} \, \mathcal{P}_{l,l+1} \right) \right).
 \end{equation}
@@ -479,6 +479,7 @@ Surprisingly the only changes that have to be introduced are the rapidity map
 \eeq
 and the dressing phase for the scattering matrix
 \beq
+	\label{eq:deformed_dressing}
 	S(u_k - u_j) \rightarrow S(u_k - u_j) \exp\( 2i\theta(u_k, u_j) \),
 \eeq
 with
@@ -490,13 +491,13 @@ The constants $\alpha_k$ and $\beta_{r,s}$ contain dynamical information about t
 
 Going higher up in loops poses an additional complication, namely the fact that interactions get long ranged and can start wrapping around short operators, this is the so-called \emph{wrapping problem}.
 For starters it is easiest to avoid it by considering asymptotically long operators. 
-The rapidity map for $\N=4$ SYM has been conjectured to be defined by
+The rapidity map for $\N=4$ SYM has been conjectured to be \cite{Beisert:2004hm}
 \begin{equation}
 	x + \frac{1}{x} = \frac{4 \pi}{\sqrt{\lambda}} u, \,\,\,\,\,\,\,\,\, x^{\pm} + \frac{1}{x^{\pm}} = \frac{4 \pi}{\sqrt{\lambda}} \left( u \pm \frac{i}{2} \right),
 \end{equation}
-whereas the dressing phase only appears at four loops \cite{dressing}. 
+whereas the dressing phase only appears at four loops \cite{Beisert:2006ez}. 
 The most general form of the Bethe ansatz equations \eq{eq:general_bae} modified by the rapidity map and the dressing phase are referred to as the \emph{asymptotic Bethe ansatz} equations.
-They have been extensively verified \cite{aba_tests,aba_tests2} since their original proposal.
+They have been extensively verified \cite{Arutyunov:2003rg,Giombi:2010zi} since their original proposal.
 
 % In the physical picture of propagating magnons one can understand the rapidity map as a modification of the magnon dispersion relation.
 % For the $\mathfrak{su}(2)$ sector rapidities are defined as 
@@ -513,7 +514,7 @@ They have been extensively verified \cite{aba_tests,aba_tests2} since their orig
 
 \subsubsection{A glimpse ahead: the slope function}
 
-It is now a simple exercise to write down the asymptotic Bethe ansatz equations for the $\mathfrak{sl}(2)$ sector, which are [??]
+It is now a simple exercise to write down the asymptotic Bethe ansatz equations for the $\mathfrak{sl}(2)$ sector, which are \cite{Arutyunov:2004vx}
 \beq
 	\label{eq:sl2_aba}
 	\( \frac{x_k^+}{x_k^-} \)^J = \prod_{j \neq k}^S \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j), \;\;\; k = 1, \dots S
@@ -531,14 +532,14 @@ This asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact resu
 \beq
 	\gamma(g) = \gamma^{(1)}(g) \; S + \gamma^{(2)}(g) \; S^2 + \ord{S^3}.
 \eeq
-The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section ??, where we also address the question of what it actually means to send an integer quantity $S$ to zero. 
+The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section \ref{sec:curvature}, where we also address the question of what it actually means to send an integer quantity $S$ to zero. 
 
-The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \ref{eq:sl2_aba}, given by
+The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \eq{eq:sl2_aba}, given by
 \beq
 	\label{eq:log_sl2_aba}
 	\frac{J}{i} \log \( \frac{x_k^+}{x_k^-} \) - \sum_{j \neq k}^S \frac{1}{i} \log \( \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j) \) = 2 \pi n_k,
 \eeq
-where $n_k$ is the mode number of the $k$'th Bethe root. In the small $S$ limit the number of Bethe roots also tends to zero and in this regime they stop interacting \cite{Basso:2011rs}, thus we will consider the case when $n_k = n$ and the general result will simply be a linear combination of terms with different values of $n_k$. The key idea of the derivation is assuming that the result only depends on the combination $\Lambda \equiv n \sqrt{\lambda}$ and taking the small $n$ limit. Obviously this limit is also the strong coupling limit, as $\lambda \sim 1/n^2 \rightarrow \infty$. This considerably simplifies the derivation, for starters we only need the strong coupling expansion of the dressing phase, which is given by [??]
+where $n_k$ is the mode number of the $k$'th Bethe root. In the small $S$ limit the number of Bethe roots also tends to zero and in this regime they stop interacting \cite{Basso:2011rs}, thus we will consider the case when $n_k = n$ and the general result will simply be a linear combination of terms with different values of $n_k$. The key idea of the derivation is assuming that the result only depends on the combination $\Lambda \equiv n \sqrt{\lambda}$ and taking the small $n$ limit. Obviously this limit is also the strong coupling limit, as $\lambda \sim 1/n^2 \rightarrow \infty$. This considerably simplifies the derivation, for starters we only need the strong coupling expansion of the dressing phase, which is given by \cite{Arutyunov:2004vx}
 \beq
 	\log \, \sigma(u_k, u_j) \simeq -\log \( \frac{1-1/(x_k^+ x_j^-)}{1-1/(x_k^- x_j^+)} \) + i\,(u_j - u_k) \log \( \frac{x_j^- x_k^- - 1}{x_j^- x_k^+ - 1} \frac{x_j^+ x_k^+ - 1}{x_j^+ x_k^- - 1} \).
 \eeq
@@ -597,8 +598,8 @@ The integrand has poles at $\pm 1$, which may lead to logarithmic singularities 
 This provides the following constraints
 \begin{subequations}
   \begin{align}
-	\Lambda(G(0)-S) - G(+1)(2J+1)+G(-1) &= 0 \\
-	\Lambda(G(0)+S) + G(-1)(2J+1)-G(+1) &= 0
+	\Lambda(G(0)-S) - G(+1)(2J+1)+G(-1) &= 0, \\
+	\Lambda(G(0)+S) + G(-1)(2J+1)-G(+1) &= 0.
   \end{align}
 \end{subequations}
 Together with \eq{eq:gamma_resolvent} we can solve this system of equations for the unknowns $G(0)$ and $G(\pm 1)$ in terms of $S$, $J$, $\Lambda$ and $\gamma^{(1)}$.
@@ -626,8 +627,8 @@ We will be making use of it later in the text to extract non-trivial information
 
 \subsection{Strong coupling}
 
-Since integrability seems to be an all loop phenomenon as exemplified by the asymptotic Bethe ansatz, one would expect to find it at strong coupling as well, where $N=4$ super Yang-Mills admits a string theory formulation as discussed in section \ref{sec:n4_strong}. 
-In this section we showcase integrability of the classical $\adsfive$ string using the elegant language of algebraic curves. 
+Since integrability seems to be an all loop phenomenon as exemplified by the asymptotic Bethe ansatz, one would expect to find it at strong coupling as well where $N=4$ super Yang-Mills admits a dual string theory formulation as discussed in section \ref{sec:n4_strong}. 
+In this section we showcase integrability of the classical $\adsfive$ string using the elegant language of algebraic curves \cite{Kazakov:2004qf,Beisert:2005bm}. 
 
 \subsubsection{The algebraic curve construction}
 
@@ -636,7 +637,7 @@ This current has the property of being flat,
 \begin{equation}
 	dJ - J \wedge J = 0,
 \end{equation}
-what is more, one can find a one parameter family of connections \cite{sakura}
+what is more, one can find a one parameter family of connections \cite{Bena:2003wd}
 \begin{equation}
 \begin{split}
 	L(x) = J^{(0)} & + \,\,\, \frac{x^2 + 1}{x^2 - 1} \; J^{(2)}  - \,\,\,\, \frac{2x}{x^2 - 1} \; \left( * J^{(0)} - \Lambda \right) \\ 
@@ -658,6 +659,7 @@ where $\gamma$ is any path wrapping the worldsheet cylinder.
 Since the connection is flat, by definition it is path independent and we can evaluate the integral along any constant $\tau$ loop. 
 Furthermore, shifting the $\tau$ value corresponds to doing a similarity transformation on the monodromy matrix, meaning that the eigenvalues must be time independent. 
 Thus we have an infinite tower of conserved charges, hinting that the theory is integrable. 
+Technically to prove classical integrability one has to also show that the conserved charges are local and that they are in involution with each other \cite{Das:2004hy,Berkovits:2004jw}.
 In order to find the eigenvalues of the monodromy matrix one has to solve the characteristic equation, which in this case is a polynomial of order eight.
 This equation in turn defines an eight-sheeted Riemann surface called the \emph{algebraic curve} where the sheets can be connected with branch cuts of the square root type. 
 Denote the eigenvalues of the monodromy matrix as
@@ -678,7 +680,7 @@ Namely, this description of classical solutions is more natural in light of inte
 
 The physical picture is that each cut between two sheets represents an excitation whose polarization is determined by the sheets it connects, an example is shown in figure \ref{fig:cuts}. 
 Four of the eight sheets correspond to the $AdS_5$ part of the string target space and the other four to the $S^5$ part. 
-$\adsfive$ has 16 types of excitations, in the algebraic curve language this is implemented as the requirement that only sheets from the following sets can be connected
+$\adsfive$ has 16 types of excitations, in the algebraic curve language this is implemented as a requirement that only sheets from the following sets be connected
 \begin{equation}
 	\label{eq:polarizations}
 	i \in \{ \, \tilde{1}, \, \tilde{2}, \, \hat{1}, \, \hat{2} \, \}, \;\;\;\; j \in \{ \, \tilde{3}, \, \tilde{4}, \, \hat{3}, \, \hat{4} \, \},
@@ -693,14 +695,14 @@ Denote the branch cut between sheets $i$ and $j$ as $\mathcal{C}^{ij}$, the quas
 	p_i(x + i\epsilon) - p_j(x - i\epsilon) = 2 \pi n_{ij},
 	\label{eq:cut_condition}
 \end{equation}  
-where $n_{ij}$ is an integer mode number.
+where $n_{ij}$ is an integer mode number arising due to the logarithm.
 For each cut we associate the so called \emph{filling fraction} defined by
 \begin{equation}
 	\label{eq:filling}
-	S_{ij} = \pm \frac{\lambda}{8 \pi^2 i} \oint_{\mathcal{C}^{ij}} \left( 1 - \frac{1}{x^2} \right) p_i(x) dx.
+	S_{ij} = \pm \frac{\lambda}{8 \pi^2 i} \oint_{\mathcal{C}^{ij}} \left( 1 - \frac{1}{x^2} \right) p_i(x) dx,
 \end{equation}
-These are the action variables for the theory, roughly they measure the length of the cut and in the physical picture they correspond to the amplitude of the excitation. 
-The integration measure is fixed from the requirement that the filling fractions be integers. 
+where the sign is $+1$ for $i=\hat{1},\hat{2}$ and $-1$ for $i=\tilde{1},\tilde{2}$. These are the action variables of the theory \cite{Dorey:2006zj}, roughly they measure the length of the cut and in the physical picture they correspond to the amplitude of the excitation. 
+They can be shown to take on integer values, which is natural since we anticipate the classical cuts to be collections of large numbers of poles which condense in the classical limit.
 Thus we see that the algebraic curve construction acts like a Fourier decomposition -- string solutions are described as collections of excitations each having definite polarizations, mode numbers and amplitudes.
 
 Let us now review some of the analyticity properties of the quasi-momenta. 
@@ -710,16 +712,16 @@ Due to the Virasoro constraint, which comes about from the diffeomorphism invari
 	\label{eq:residue_sync}
 	\{ \hat{p}_1, \; \hat{p}_2, \; \hat{p}_3, \; \hat{p}_4 \; | \; \tilde{p}_1, \; \tilde{p}_2, \; \tilde{p}_3, \; \tilde{p}_4 \} = \frac{\{ \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm}, \, | \, \alpha_{\pm}, \, \alpha_{\pm}, \, \beta_{\pm}, \, \beta_{\pm} \}}{x \pm 1}.
 \end{equation}
-An additional constraint on the quasi-momenta comes from the fact that the algebra $\mathfrak{psu(2,2|4)}$ has an automorphism, which is the cause for an additional $\mathbb{Z}_4$ grading. 
-The constraints are given by \cite{sakura}
+An additional constraint on the quasi-momenta comes from the fact that the algebra $\mathfrak{psu(2,2|4)}$ has an automorphism, which is the cause for the $\mathbb{Z}_4$ grading. 
+The constraints are given by \cite{Gromov:2008ec}
 \begin{eqnarray}
 	\label{eq:quasi_inversion}
 	\tilde{p}_{1,2}(x) & = & -\tilde{p}_{2,1}(1/x) - 2 \pi m \nonumber \\
 	\tilde{p}_{3,4}(x) & = & -\tilde{p}_{4,3}(1/x) + 2 \pi m \nonumber \\
 	\hat{p}_{1,2,3,4}(x) & = & -\hat{p}_{2,1,4,3}(1/x).
 \end{eqnarray}
-These relations define an inversion symmetry. 
-Finally one can look at the asymptotics of the quasi-momenta as the spectral parameter becomes infinite. In this limit the Lax connection becomes related to the Noether currents of the theory and hence one can relate the quasi-momenta to the charges of the global symmetry algebra by \cite{algebraic_curve}
+These relations define an inversion symmetry $x \rightarrow 1/x$. 
+Finally one can look at the asymptotics of the quasi-momenta as the spectral parameter becomes infinite. In this limit the Lax connection becomes related to the Noether currents of the theory and hence one can relate the quasi-momenta to the charges of the global symmetry algebra by \cite{Arutyunov:2004yx,Beisert:2005bm}
 \begin{equation}
 \left(
 \begin{array}{c}
@@ -750,8 +752,23 @@ Finally one can look at the asymptotics of the quasi-momenta as the spectral par
 \label{eq:quasi_asymptotics}
 \end{equation}
 where the charges are rescaled by $\mathcal{Q} = Q / \sqrt{\lambda}$. 
-Thus we see that we can characterize the quasi-momenta by describing their behaviour at poles and under symmetries, by their asymptotics and their filling fractions. 
+Thus we see that we can characterize the quasi-momenta by describing their behaviour at poles, under symmetries, by their asymptotics and their filling fractions. 
 
+Finally one may ask how this picture of Riemann surfaces with cuts emerges from the gauge theory perspective where the spectrum is described by the Bethe ansatz. 
+In the scaling limit when lengths of operators become large the Bethe roots $u_i$ start condensing in the complex plane and start looking like cuts. 
+Naturally it is tempting to interpret the cuts of the algebraic curve as collections of very large numbers of poles.
+Ultimately a string Bethe ansatz was proposed describing the distribution of these poles \cite{Arutyunov:2004vx},
+\beq
+	\(\frac{x_j^+}{x_j^-}\)^L = \prod_{j\neq i}^M \frac{u_i - u_j + i}{u_i - u_j - i} \sigma^2_{AFS}(u_i, u_j),
+\eeq
+where $\sigma_{AFS}$ is the dressing phase.
+Compared to the asymptotic Bethe ansatz for the $\alg{su}{2}$ sector
+\beq
+	\(\frac{x_j^+}{x_j^-}\)^L = \prod_{j\neq i}^M \frac{u_i - u_j + i}{u_i - u_j - i},
+\eeq
+it is natural to assume that there should be an interpolating Bethe ansatz valid to all orders of the coupling constant.
+Indeed the all-loop asymptotic Bethe ansatz for the full superconformal algebra was formulated \cite{Beisert:2005fw} as we described briefly in the previous sections, which interpolated nicely between gauge theory and the algebraic curve. 
+In particular the dressing phase $\sigma_{AFS}$ is a limit of the full dressing phase \eq{eq:deformed_dressing} one finds when deforming to long range spin chains.
 
 \subsubsection{Quantization and semi-classics}
 
@@ -764,7 +781,7 @@ where $N_{ij,n}$ is the number of excited quanta with energy $\mathcal{E}_{ij,n}
 \beq
 	E_0 = \frac{1}{2} \sum_{ij,n}(-1)^{F_{ij}} \mathcal{E}_{ij,n},
 \eeq
-where $(-1)^{F_{ij}} = \pm 1$ for bosonic/fermionic excitations. In this section we will review the quantization procedure in the algebraic curve formalism, which is equivalent to the semi-classical computation of quadratic fluctuations in the sigma-model, yet is significantly more efficient.
+where $(-1)^{F_{ij}} = \pm 1$ for bosonic/fermionic excitations. In this section we will review the quantization procedure in the algebraic curve formalism \cite{Gromov:2008ec}, which is equivalent to the semi-classical computation of quadratic fluctuations in the sigma-model \cite{Frolov:2002av,Frolov:2003tu,Park:2005ji}, yet is significantly more efficient.
 
 Roughly the idea is that given a classical string solution represented by some cuts between sheets, as seen for example in figure \ref{fig:cuts}, we perturb it by adding microscopic cuts, which can be treated as a finite number of poles.
 Just like before the indices $ij$ denoting the connected sheets represent the polarization of the excitation, they can take on values given in \eq{eq:polarizations}, however unlike in the classical setting the excitations can be fermionic as well.
@@ -774,6 +791,7 @@ The introduction of these fluctuations backreacts on the classical quasi-momenta
 \eeq
 The shifted quasi-momenta still have to satisfy \eq{eq:cut_condition}, which determines the positions $x_n^{ij}$ of the poles
 \beq
+	\label{eq:pole_pos}
 	p_i(x_n^{ij}) - p_j(x_n^{ij}) = 2 \pi \, n_{ij}.
 \eeq
 The fluctuation will add a pole to the quasi-momentum at this position
@@ -836,8 +854,7 @@ and the energy shift is then a sum over all frequencies
 \beq
 	\delta \Delta = \sum_{ij,n} N_{ij}^n \Omega_n^{ij}.
 \eeq
-
-The description outlined above is fully sufficient to calculate the semi-classical spectrum around a classical solution, one has to find the locations of poles, find shifts to the quasi-momenta by utilizing their analyticity properties and finally calculate the 16 fluctuation frequencies and sum them up. 
+The description outlined above is fully sufficient to calculate the semi-classical spectrum around a classical solution -- one has to find the locations of poles, find shifts to the quasi-momenta by utilizing their analyticity properties and finally calculate the 16 fluctuation frequencies and sum them up. 
 This produces the energy shift
 \beq
 \delta \Delta = E(\{N_{ij,n}\}) - E(\{\}) = \sum_{ij,n} N_{ij}^n \Omega_n^{ij},
@@ -853,10 +870,11 @@ appearing in the loop expansion of the energy of a string state as
 \eeq
 where the classical energy $E_{cl}$ is of order $\sqrt{\lambda}$ and $E_0$ is of order $1$.
 One can of course proceed with semi-classical quantization, find all the fluctuation frequencies and sum them up by hand to find the one-loop shift, however it would be nicer to find the result in one go.
-To that end we introduce the off-shell fluctuations $\delta^{ij} p_k(x;y)$ which are defined by the same asymptotics as the on-shell fluctuations $\delta^{ij} p_k(x)$ but the position of the pole is left unspecified, namely
+To that end we introduce the off-shell fluctuations $\delta^{ij} p_k(x;y)$ which are defined by the same asymptotics as the on-shell fluctuations $\delta^{ij}_n p_k(x)$ but the position of the pole is left unspecified, namely
 \beq
 	\delta^{ij}_n p_k(x) = \delta^{ij} p_k(x;y) \vert_{y=x_n^{ij}}.
 \eeq
+Note that the off-shell quantity depends on the mode number $n$, which is a function of the pole position via \eq{eq:pole_pos}, which we simply left unspecified as $y$ in the off-shell quantity.
 Similarly we introduce off-shell fluctuation energies
 \beq
 	\Omega_n^{ij} = \Omega^{ij}(y)\vert_{y=x_n^{ij}},
@@ -872,7 +890,7 @@ Consider symmetric classical configurations that have pairwise symmetric quasi-m
 \beq
 	p_{\hat{1},\hat{2},\tilde{1},\tilde{2}} = -p_{\hat{4},\hat{3},\tilde{4},\tilde{3}},
 \eeq
-it is known to be the case for all rank one solutions, which in particular are dual to states in the $\alg{su}{2}$ and $\alg{sl}{2}$ sectors of $\N=4$ super Yang-Mills. 
+it is known to be the case for all rank one solutions \cite{Gromov:2008ec}, which in particular are dual to states in the $\alg{su}{2}$ and $\alg{sl}{2}$ sectors of $\N=4$ super Yang-Mills. 
 All of the off-shell frequencies can then be expressed in terms of two, namely $\Omega^{\tilde2 \tilde3}$ and $\Omega^{\hat2 \hat3}$, which we denote as the basis of frequencies.
 The rest of the fluctuations are given by
 \beq
