@@ -555,7 +555,7 @@ Plugging in the leading order dressing phase expansion and getting rid of the sh
 which are now starting to resemble equations found in matrix models.
 In anticipation of this we introduce the resolvent
 \beq
-	\label{eq:resolvent}
+	\label{eq:slope_resolvent}
 	G(x) = \sum_{j=1}^S \frac{1}{x-x_j},
 \eeq
 the anomalous dimension is then given by
@@ -593,7 +593,7 @@ What remains is a first order linear differential equation, which after integrat
 \eeq
 where $x_0$ is the integration constant.
 We can immediately set it to zero by requiring the resolvent to be finite at the origin.
-Furthermore we can fix the remaining unknown constants $G(0)$ and $G(\pm 1)$ by requiring analyticity of the resolvent, which is manifest in the definition \eq{eq:resolvent}.
+Furthermore we can fix the remaining unknown constants $G(0)$ and $G(\pm 1)$ by requiring analyticity of the resolvent, which is manifest in the definition \eq{eq:slope_resolvent}.
 The integrand has poles at $\pm 1$, which may lead to logarithmic singularities after integrating, unless the residues are zero.
 This provides the following constraints
 \begin{subequations}
@@ -843,7 +843,7 @@ Similarly the asymptotics of the quasi-momenta encode the global charges as seen
    &+ N_{\tilde{1}\tilde{4}} + N_{\tilde{2}\tilde{4}} + N_{\hat{2}\tilde{4}} + N_{\hat{1}\tilde{4}} \\
 \end{array}
 \right) + \ord{\frac{1}{x^2}},
-\label{eq:asymptotics}
+\label{eq:quasi_shift_asymptotics}
 \end{equation}
 where $\delta\Delta$ is the shift of the classical energy $\mathcal{E}$. From here one can read off the individual fluctuation frequencies
 \beq
@@ -1026,7 +1026,7 @@ The square of the classical energy has a very nice expansion in this limit
 \eeqa
 The one-loop shift expanded up to two orders in $\mathcal{S}$ reads
 \beqa
-\label{delta_oneloop}
+\label{eq:delta_oneloop_slope}
 \Delta&\simeq&
 \frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
    }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}

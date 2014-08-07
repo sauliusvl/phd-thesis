@@ -58,11 +58,11 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 \end{figure}
 
 
- The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{frolov}
+ The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{Arutyunov:2009ga}
 \begin{equation}
 	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsin} \, \frac{\sqrt{\tilde{p} \left( 16 \, \pi^2 + \tilde{p} \, \lambda \right)}}{8 \pi},
 \end{equation}
-the scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz \cite{tba}. One can use this fact, since the partition functions for these theories satisfy the obvious identity
+the scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz \cite{Bajnok:2010ke}. One can use this fact, since the partition functions for these theories satisfy the obvious identity
 \begin{equation}
 	Z(L,R) = \tilde{Z}(R,L),
 \end{equation}
@@ -74,13 +74,13 @@ This limit corresponds to the infinite length limit for the mirror model, which 
 \begin{equation}
 	\tilde{Z}(R,L) = \tr e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
 \end{equation}
-where $\tilde{H}$ is the Hamiltonian of the mirror theory. Now we simply identify the partition functions and solve for the ground state energy in the original theory at any length $L$. The result is then a simple integral given by \cite{tba}
+where $\tilde{H}$ is the Hamiltonian of the mirror theory. Now we simply identify the partition functions and solve for the ground state energy in the original theory at any length $L$. The result is then a simple integral given by \cite{Bajnok:2010ke}
 \begin{equation}
 	E_0(L) = - \frac{1}{2 \pi} \sum_r \int du \left( \partial_u \tilde{p} \right) \log \left( 1 + e^{-\epsilon_r(u)} \right), 
 \end{equation}
-where $\epsilon_r(u)$ is the so called pseudo energy, defined in terms of the density of solutions with some charge $r$ in the mirror theory and we sum over all charges that describe the solutions. Energies of excited states at finite length can then be found by analytic continuation \cite{excited_tba}.
+where $\epsilon_r(u)$ is the so called pseudo energy, defined in terms of the density of solutions with some charge $r$ in the mirror theory and we sum over all charges that describe the solutions. Energies of excited states at finite length can then be found by analytic continuation \cite{Dorey:1996re}.
 
-The argument for the finite size solution presented here is very sketchy and for the full $PSU(2,2|4)$ theory the story is obviously way more complicated, but everything that we discussed has indeed been done for the full theory. The solution is written in terms of a Y-system \cite{gromov_tba}, which is a set of algebraic equations frequently found in integrable systems \cite{gromov_hirota}. The \text{Y-system} equations have been verified on numerous occasions and have thus far passed every test \cite{gromov_tests}.
+The argument for the finite size solution presented here is very sketchy and for the full $PSU(2,2|4)$ theory the story is obviously way more complicated, but everything that we discussed has indeed been done for the full theory. The solution is written in terms of a Y-system \cite{Gromov:2009zb}, which is a set of algebraic equations frequently found in integrable systems \cite{Gromov:2010kf}. The \text{Y-system} equations have been verified on numerous occasions and have thus far passed every test \cite{Gromov:2008gj}.
 
 \beq
 	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \)
@@ -193,13 +193,13 @@ The Y-system
 
 
 In this section we review the formulation of the $\bP\mu$-system, and also discuss its symmetries which will be useful later.
-Below, we will restrict the discussion to states in the $sl(2)$ sector as presented in \cite{PmuPRL}.
-Remarkably, the general case is not much more complicated and will appear soon in \cite{PmuLong}.
+Below, we will restrict the discussion to states in the $sl(2)$ sector as presented in \cite{Gromov:2013pga}.
+Remarkably, the general case is not much more complicated and will appear soon in \cite{Gromov:2014caa}.
 
 %\subsection{Definitions and notation}
 
 The $\pmu$-system is a nonlinear system of functional equations for a four-vector $\bP_a(u)$ and a $4\times4$ antisymmetric matrix $\mu_{ab}(u)$ depending on the spectral parameter $u$.
-For full details about the origin of the construction we refer the reader to \cite{PmuLong}. As functions of $u$, both $\bP_a$ and $\mu_{ab}$ have prescribed analyticity properties which play a key role.
+For full details about the origin of the construction we refer the reader to \cite{Gromov:2014caa}. As functions of $u$, both $\bP_a$ and $\mu_{ab}$ have prescribed analyticity properties which play a key role.
 First, $\bP_a$ must have only a single branch cut in $u$ going between $-2g$ and $2g$, being analytic in the rest of the complex plane. We call this cut the \textit{short} cut, while the cut on the real
 line connecting the same two points through infinity is called the \textit{long} cut. The functions $\mu_{ab}$ have an infinite set of short branch cuts going between $-2g+in$ and $2g+in$ for all $n\in\mZ$ (see Fig. \ref{fig:cuts}). Most importantly, the analytic continuation of $\bP_a$ and $\mu_{ab}$ through these cuts is again expressed in terms of these functions, according to the following equations:
 \beq
@@ -294,7 +294,7 @@ which, actually, means that $\mu_{ab}(u)$ would be an $i$-periodic function if d
 	\end{scope}
 	
 \end{tikzpicture}
-\label{fig:yt_hooks}
+\label{fig:pmu_cuts}
 \caption{\textbf{Cuts in the $u$ plane.} We show the location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\mu_{ab}(u)$ (right). The infinitely many cuts of $\tilde{\bP}_a$ are shown on the left picture with dashed lines.}
 \end{figure}
 
@@ -321,7 +321,7 @@ $\tilde{\tilde{\bP}}_a=\bP_a$ and $\tilde{\tilde{\mu}}_{ab}=\mu_{ab}$.
 
 
 Finally, we require that $\bP_a$ and $\mu_{ab}$ do not have any singularities except these branch points\footnote{For odd values of $J$ the functions $\bP_a$ may have an additional branch point at infinity. However, it should cancel in any product of two $\bP_a$'s, and therefore it will not appear in
-any physically relevant quantity (see \cite{PmuPRL}, \cite{PmuLong}). We will discuss some explicit examples in the text.}.
+any physically relevant quantity (see \cite{Gromov:2013pga}, \cite{Gromov:2014caa}). We will discuss some explicit examples in the text.}.
 
 	
 
@@ -331,7 +331,7 @@ any physically relevant quantity (see \cite{PmuPRL}, \cite{PmuLong}). We will di
 
 
 %\subsection{Asymptotics and energy}
-The quantum numbers and the energy of the state are encoded in the asymptotics of the functions $\bP_a$ and $\mu_{ab}$ at large real $u$. The generic case is described in \cite{PmuLong}, while here we are interested in the states in the $sl(2)$ sector, for which the relations read \cite{PmuPRL}
+The quantum numbers and the energy of the state are encoded in the asymptotics of the functions $\bP_a$ and $\mu_{ab}$ at large real $u$. The generic case is described in \cite{Gromov:2014caa}, while here we are interested in the states in the $sl(2)$ sector, for which the relations read \cite{Gromov:2013pga}
 \beq
 \bP_a\sim(A_1u^{-J/2},A_2u^{-J/2-1},A_3u^{J/2},A_4u^{J/2-1})
 \label{eq:asymptotics}
@@ -343,7 +343,7 @@ The quantum numbers and the energy of the state are encoded in the asymptotics o
 \eeq
 where $J$ is the twist of the gauge theory operator, and $\Delta$ is its conformal dimension. With these asymptotics, the equations \eq{eq:Pmu}-\eq{Pmulast} form a closed system which fixes $\bP_a$ and $\mu_{ab}$.
 
-Lastly, the spin $S$ of the operator is related \cite{PmuPRL} to the leading coefficients $A_a$ of the $\bP_a$ functions (see \eq{eq:asymptotics}):
+Lastly, the spin $S$ of the operator is related \cite{Gromov:2013pga} to the leading coefficients $A_a$ of the $\bP_a$ functions (see \eq{eq:asymptotics}):
 \beqa
 &&A_1 A_4=\frac{\((J+S-2)^2-\Delta^2\)\((J-S)^2-\Delta^2\)}{16 i J(J-1)} \label{AA1} \\
 &&A_2 A_3=\frac{\((J-S+2)^2-\Delta^2\)\((J+S)^2-\Delta^2\)}{16 i J(J+1)} \label{AA2}\;.
@@ -554,12 +554,12 @@ x^{-L}& x^{1-L}& \cdots & x^{L-1} &x^{L}\\
 \label{eq:PLrepr}
 \eeq
 The numerator is the same as $\det \M_{2L}$ except in the last line $x_{2L+1}$ is replaced by $x$ which is not integrated over. In the classical limit all integrals are saturated by their saddle point values, i.e. one can remove the integrals by simply replacing $x_i \rightarrow x_i^{cl}$. If we replace $x$ with any saddle point value $x_i^{cl}$ the determinant will contain two identical rows and will automatically become zero, thus the zeros of $P_L(x)$ are the saddle point values. On the complex plane they are distributed on two arcs as shown in figure \ref{fig:roots}. As expected, for the case $\theta=0$ we recover two symmetric arcs on the unit circle \cite{Gromov:2012eu}.
-% \begin{figure}[t]
-	% \centering
-		% \includegraphics[width=0.95\textwidth]{roots_cuts.pdf}
-	% \caption{Distribution of roots on the complex plane for $\theta=0$ (gray) and $\theta=1$ (black) on the left and the condensation of the roots to corresponding smooth cuts on the right with the algebraic curve parameters $r$ and $\psi$ identified. The dashed circle is the unit circle.}
-	% \label{fig:roots}
-% \end{figure}
+\begin{figure}[t]
+	\centering
+		\includegraphics[width=0.95\textwidth]{../graphics/roots_cuts}
+	\caption{Distribution of roots on the complex plane for $\theta=0$ (gray) and $\theta=1$ (black) on the left and the condensation of the roots to corresponding smooth cuts on the right with the algebraic curve parameters $r$ and $\psi$ identified. The dashed circle is the unit circle.}
+	\label{fig:roots}
+\end{figure}
 
 
 Now, following \cite{Gromov:2007aq},\cite{Beisert:2005bm},\cite{Gromov:2012eu}, we introduce the quasimomentum $p(x)$ as

@@ -1,1 +1,1 @@
-gswin32 -q -dNOCACHE -dNOPAUSE -dBATCH -dSAFER -sDEVICE=epswrite -sOutputFile=bfkl.eps bfkl.pdf
+gswin64 -q -dNOCACHE -dNOPAUSE -dBATCH -dSAFER -sDEVICE=epswrite -sOutputFile=bfkl.eps bfkl.pdf
