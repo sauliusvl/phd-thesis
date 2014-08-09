@@ -25,7 +25,7 @@ Historically the first solution to the spectral problem that fully incorporated 
 Being a set of infinite integral equations it was obviously very hard to use in practice and was thus soon reformulated as an infinite set of functional relations, the so called Y-system.
 Both of these formulations can now be seen as intermediary steps towards the more elegant $\pmu$-system, which we cover in more depth in the next subsection.
 
-\subsubsection{TBA}
+\subsubsection{Thermodynamic Bethe ansatz}
 
 \begin{figure}[t]
 \centering
@@ -190,6 +190,10 @@ The Y-system
 
 
 \subsection{The $\pmu$-system}
+
+\subsubsection{Intuition}
+
+\subsubsection{Technicalities}
 
 
 In this section we review the formulation of the $\bP\mu$-system, and also discuss its symmetries which will be useful later.
@@ -410,15 +414,14 @@ for odd $J$ or
 \eeqa
 for even $J$.
 
-\subsection{Folded string}
+% \subsection{Folded string}
 
-Mention Frolov numerics. Volin's 8(9) ? loops with $\pmu$.
+% Mention Frolov numerics. Volin's 8(9) ? loops with $\pmu$.
 
 \subsection{Cusped Wilson line}
 
 
-The observable which we will be considering is the same as in \cite{Gromov:2012eu},\cite{Correa:2012hh} and \cite{Drukker:2012de}: it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ SYM (see figure \ref{fig:WL}). To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parameterized by a six-dimensional unit vector $\vec n(t)$ at each point of the line ($t$ being a parameter on the line). In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. Due to the R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
-
+The observable which we will be considering is the same as in \cite{Gromov:2012eu},\cite{Correa:2012hh} and \cite{Drukker:2012de}: it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ SYM (see figure \ref{fig:wilson_line}). To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parametrized by a six-dimensional unit vector $\vec n(t)$ at each point of the line ($t$ being a parameter on the line). In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. Due to the R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}
@@ -439,11 +442,10 @@ The observable which we will be considering is the same as in \cite{Gromov:2012e
 	\node at (9,1.6) {\Large $\phi$};
 	
 \end{tikzpicture}
-\label{fig:wilson_line}
 \caption{The cusped Wilson line with an operator insertion.}
+\label{fig:wilson_line}
 \end{figure}
-
- Explicitly the observable is defined as
+Explicitly the observable is defined as
 \beq
 \label{WilsL}
 	W_L={\rm P}\exp\!\int\limits_{-\infty}^0\! dt\(i  A\cdot\dot{x}_q+\vec\Phi\cdot\vec n\,|\dot x_q|\)\times Z^L\times {\rm P}\exp\!\int\limits_0^\infty\!dt\(i A\cdot\dot x_{\bar q}+\vec\Phi\cdot\vec n_\theta\,|\dot x_{\bar q}|\).
@@ -474,7 +476,7 @@ The AdS/CFT duality allows one to relate the observable in ${\cal N}=4$ SYM desc
 Bremstahlung result from $\pmu$.
 
 \subsubsection{Classical limit}
-
+\label{sec:wilson_classical}
 
 
 Taking the classical limit $L \rightarrow \infty$ keeping $L/\sqrt{\lambda}$ fixed becomes considerably easier once we realize that the cusp anomalous dimension \eq{eq:mainresultIntro} can be expressed in terms of an expectation value of some operator in a matrix model. In this section we will show how to use this approach to find the large $N$ expansion of the determinant of ${\cal M}_N$ defined in \eq{eq:M}.
