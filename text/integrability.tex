@@ -1,6 +1,7 @@
 % main.tex
 
 \section{Perturbative Integrability}
+\label{sec:integrability}
 
 \begin{chapquote}{Old Chinese Proverb}
 It is better to take many small steps in the right direction than to make a great leap forward only to stumble backward.
@@ -12,6 +13,7 @@ We demonstrate integrability from the string theoretic perspective at strong cou
 After discussing results achievable via perturbative integrability we finish off with our first exact result, the slope function, which in turn allows one to extract novel information about the spectrum.
 
 \subsection{One loop at weak coupling}
+\label{sec:integrability_weak}
 
 We begin with two point correlation functions of local operators.
 In any conformal field theory they are constrained by symmetry, namely for operators that are eigenvalues of dilatations they have the following form at all loop levels
@@ -375,6 +377,7 @@ They key thing worth noting in (\ref{eq:CBA}) is that the spin chain can be full
 This is the defining property of integrability, since factorized scattering means that individual momenta are conserved in each two particle scattering producing a tower of conserved quantities -- just the thing one would want in an integrable system. 
  
 \subsubsection{The $\mathfrak{sl}(2)$ sector}
+\label{sec:sl2_sector}
 
 The $\mathfrak{su}(2)$ sector has a finite dimensional state space for a given length $L$ of the spin chain since we are dealing with finite dimensional representations of a compact group.
 The simplest non-compact closed sector is the $\mathfrak{sl}(2)$ sector, which consists of operators of the form \cite{Beisert:2003yb}
@@ -513,6 +516,7 @@ They have been extensively verified \cite{Arutyunov:2003rg,Giombi:2010zi} since 
 % For many magnon states the energy is still given by the sum of individual magnon energies. 
 
 \subsubsection{A glimpse ahead: the slope function}
+\label{sec:slope_function_aba}
 
 It is now a simple exercise to write down the asymptotic Bethe ansatz equations for the $\mathfrak{sl}(2)$ sector, which are \cite{Arutyunov:2004vx}
 \beq
@@ -628,6 +632,7 @@ This result is exact in the sense that it is valid at any value of the coupling.
 We will be making use of it later in the text to extract non-trivial information about the Konishi anomalous dimension.
 
 \subsection{Strong coupling}
+\label{sec:integrability_strong}
 
 Since integrability seems to be an all loop phenomenon as exemplified by the asymptotic Bethe ansatz, one would expect to find it at strong coupling as well where $N=4$ super Yang-Mills admits a dual string theory formulation as discussed in section \ref{sec:n4_strong}. 
 In this section we showcase integrability of the classical $\adsfive$ string using the elegant language of algebraic curves \cite{Kazakov:2004qf,Beisert:2005bm}. 
@@ -949,6 +954,7 @@ where each of these contributions is simply an integral of some closed form expr
 As always $i$ takes values $\hat 1,\hat 2,\tilde 1,\tilde 2$ whereas $j$ runs over $\hat 3,\hat 4,\tilde 3,\tilde 4$.
 
 \subsubsection{Folded string}
+\label{sec:folded_string}
 
 Operators \eq{eq:sl2_operators} from the $\alg{sl}{2}$ sector are known to be dual to folded rotating string solutions in $\adsfive$, these are closed strings rotating around their center of mass in an $AdS_3$ subspace of $AdS_5$ with spin $S$ \cite{Frolov:2002av}.
 Additionally they orbit the big circle of $S^5$ with angular momentum $J$, also referred to as twist.
@@ -1069,7 +1075,7 @@ We note that the contributions ${\cal S}^2/{\cal J}^3$ are universal for $n=1$ a
 %As we will discuss in the next section this could imply that the naive generalization of the conjecture in \cite{Basso:2011rs} is not fully correct for $n>2$. Also for $n=2$ we found  a similar anomaly at the order $S^3$.
 
 \subsection{Short strings}
-
+\label{sec:short_strings}
 
 Even though semi-classical results are technically only valid for the charges scaling as $\sqrt{\lambda}$, there is evidence that re-expanding the classical energy plus the one-loop shift yields a reasonable result in terms of the unscaled charges $J$ and $S$ \cite{Roiban:2009aa}, thus providing one the possibility to probe so-called short string states, the Konishi operator being a prime example.
 Namely summing up \eq{eq:classical_energy} and \eq{delta_oneloop_sj}, introducing the unscaled charges $S = \sqrt{\mu}\, \mathcal{S}$, $J = \sqrt{\mu}\, \mathcal{J}$ and re-expanding in terms of $\mu \equiv n^2 \lambda$ yields the following one-loop energy for the folded string solution \cite{Gromov:2011de}
