@@ -418,14 +418,16 @@ for odd $J$ or
 \eeqa
 for even $J$.
 
-% \subsection{Folded string}
-
-% Mention Frolov numerics. Volin's 8(9) ? loops with $\pmu$.
-
 \subsection{Cusped Wilson line}
 \label{sec:wilson_line}
 
-The observable which we will be considering is the same as in \cite{Gromov:2012eu},\cite{Correa:2012hh} and \cite{Drukker:2012de}: it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ SYM (see figure \ref{fig:wilson_line}). To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parametrized by a six-dimensional unit vector $\vec n(t)$ at each point of the line ($t$ being a parameter on the line). In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. Due to the R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
+We now move on to actual examples of the quantum spectral curve construction in action.
+The very first observable the $\pmu$-system was applied to is the cusped Wilson line operator.
+%, which was already extensively studied before \cite{Correa:2012hh, Gromov:2012eu, Drukker:2012de}. 
+It consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ SYM (see figure \ref{fig:wilson_line}). 
+To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parametrized by a six-dimensional unit vector $\vec n(t)$ at each point of the line ($t$ being a parameter on the line). 
+In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. 
+Because of R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}
@@ -458,26 +460,50 @@ Due to the cusp the expectation value of such an observable diverges as
 \beq
 \left\langle W_L\right\rangle \sim \(\frac{\Lambda_{IR}}{\Lambda_{UV}}\)^{\Gamma_L(\lambda)},
 \eeq
-where $\Lambda_{IR}$ and $\Lambda_{UV}$ are the infra-red and ultraviolet cut-offs respectively \cite{Polyakov:1980ca},\cite{Correa:2012at}. The quantity $\Gamma_{L}$, which we will call the cusp anomalous dimension, will be the main object of our studies.
-When $\theta^2-\phi^2=0$ the observable $W_L$ becomes BPS and the cusp anomalous dimension vanishes \cite{Drukker:2006xg}. In \cite{Gromov:2012eu} the anomalous dimension in the near-BPS limit $\theta=0$, $\phi\rightarrow 0$ was calculated using the method of Y-system or Thermodynamical Bethe Ansatz \cite{Gromov:2009tv,Bombardelli:2009ns,Arutyunov:2009ur}. In \cite{Gromov:2013qga} the calculation was generalized to the case of arbitrary, but close to each other angles $\theta^2-\phi^2\rightarrow 0$. In this general case the cusp anomalous dimension was found to be
+where $\Lambda_{IR}$ and $\Lambda_{UV}$ are the infra-red and ultraviolet cut-offs respectively \cite{Polyakov:1980ca,Correa:2012at}. 
+The quantity $\Gamma_{L}$, which we will call the cusp anomalous dimension, will be the main object of our study in this section.
+The AdS/CFT duality allows one to relate the observable in ${\cal N}=4$ SYM described above to an open string in AdS which ends on a cusped line on the boundary of AdS. In particular, in the classical scaling limit when $L$ and $\lambda$ are both taken to infinity with $L/\sqrt{\lambda}$ fixed, we can match $\Gamma_{L}$ with the energy of the classical string \cite{Correa:2012hh, Gromov:2012eu}.
+
+%When $\theta^2-\phi^2=0$ the observable $W_L$ becomes BPS and the cusp anomalous dimension vanishes \cite{Drukker:2006xg}. 
+%In \cite{Gromov:2012eu} the anomalous dimension in the near-BPS limit $\theta=0$, $\phi\rightarrow 0$ was calculated using the method of Y-system or Thermodynamical Bethe Ansatz \cite{Gromov:2009tv,Bombardelli:2009ns,Arutyunov:2009ur}. 
+%In \cite{Gromov:2013qga} the calculation was generalized to the case of arbitrary, but close to each other angles $\theta^2-\phi^2\rightarrow 0$. 
+% In this general case the cusp anomalous dimension was found to be
+% \beq
+% \label{eq:mainresultIntro}
+% \Gamma_L(\lambda)=\frac{\phi-\theta}{4}\partial_\theta\log\frac{\det{\cal M}_{2L+1}}{\det{\cal M}_{2L-1}}+{\cal O}((\phi-\theta)^2),
+% \eeq
+% where ${\cal M}_N$ is an $(N+1)\times (N+1)$ sized matrix defined as
+% \begin{align}
+% \label{eq:M}
+% &\({\cal M}_N\)_{ij} =I^\theta_{i-j+1},\\
+% &I_n^\theta =i^{n+1}I_n\(\frac{\sqrt{\lambda}}{\sin\beta}\)\sin{n\beta}, \;\;\;\; \mathrm{with} \;\; \sin{\beta}=\frac{1}{\sqrt{1-\theta^2/\pi^2}},
+% \nonumber
+% \end{align}
+% and $I_n(x)$ are modified Bessel functions of the first kind. 
+%In \cite{Gromov:2013pga} the result for the case $L=0\ ,\theta=0$ was re-derived in a significantly shorter way by using the novel $P-\mu$ system.
+
+
+% However, since the result contains determinants of $(2L+1)\times (2L+1)$ sized matrices it is not obvious how to take the large  $L$ limit. In the subsequent sections we develop the apparatus for this, describe the classical string solution and finally compare the results for the energy.
+
+
 \beq
-\label{eq:mainresultIntro}
-\Gamma_L(\lambda)=\frac{\phi-\theta}{4}\partial_\theta\log\frac{\det{\cal M}_{2L+1}}{\det{\cal M}_{2L-1}}+{\cal O}((\phi-\theta)^2),
+	\bP_a \simeq \( A_1 u^{-L+1/2}, A_2 u^{-L-1/2}, A_3 u^{+L+3/2}, A_4 u^{+L+1/2} \)
 \eeq
-where ${\cal M}_N$ is an $(N+1)\times (N+1)$ sized matrix defined as
-\begin{align}
-\label{eq:M}
-&\({\cal M}_N\)_{ij} =I^\theta_{i-j+1},\\
-&I_n^\theta =i^{n+1}I_n\(\frac{\sqrt{\lambda}}{\sin\beta}\)\sin{n\beta}, \;\;\;\; \mathrm{with} \;\; \sin{\beta}=\frac{1}{\sqrt{1-\theta^2/\pi^2}},
-\nonumber
-\end{align}
- and $I_n(x)$ are modified Bessel functions of the first kind. In \cite{Gromov:2013pga} the result for the case $L=0\ ,\theta=0$ was re-derived in a significantly shorter way by using the novel $P-\mu$ system.
 
+\beqa
+	\tilde{\bP}_1 - \bP_1 &=& -C \sinh \( 2\pi u \) \bP_3, \\
+	\tilde{\bP}_2 + \bP_2 &=& -C \sinh \( 2\pi u \) \bP_4, \\
+	\tilde{\bP}_3 + \bP_3 &=& 0 \\ 
+	\tilde{\bP}_4 - \bP_4 &=& 0  
+\eeqa
 
-The AdS/CFT duality allows one to relate the observable in ${\cal N}=4$ SYM described above to an open string in AdS which ends on a cusped line on the boundary of AdS. In particular, in the classical scaling limit when $L$ and $\lambda$ are both taken to infinity with $L/\sqrt{\lambda}$ fixed, we can match $\Gamma_{L}$ with the energy of the classical string. However, since the result contains determinants of $(2L+1)\times (2L+1)$ sized matrices it is not obvious how to take the large  $L$ limit. In the subsequent sections we develop the apparatus for this, describe the classical string solution and finally compare the results for the energy.
+\beq
+	\frac{-\bP_2}{C A_4 \sqrt{u}} = \oint_{-2g}^{2g} \frac{\sqrt{u^2-4g^2}}{\sqrt{v^2-4g^2}} \frac{\sinh(2\pi v)}{4 \pi i (v-u)} = \sum_{n=1}^\infty \frac{I_{2n-1}(4\pi g)}{x^{2n-1}}
+\eeq
 
-
-Bremstahlung result from $\pmu$.
+\beq
+	\Delta = -\phi^2 g^2 \(1 - \frac{I_3(4\pi g)}{I_1(4\pi g)} \)
+\eeq
 
 \subsubsection{Classical limit}
 \label{sec:wilson_classical}
@@ -790,8 +816,6 @@ f(r,\psi)=\frac{r+1/r}{4}\frac{\left|r^2e^{2i\psi}+1\right|^2K_1-r^2 \left|r+\fr
 \end{align}
 and $E_1,K_1$ are defined in \eq{eq:E1K1}. We have checked this formula and the classical energy \eq{eq:E1} against a numerical extrapolation of the exact expression \eq{eq:mainresultIntro} and found an agreement up to more than thirty digits.
 
-
-Find the curve, matrix models.
 
 \subsection{Revisiting the slope function}
 \label{sec:slope_pmu}
