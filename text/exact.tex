@@ -13,8 +13,8 @@ In principle such results are the ultimate goal of the whole AdS/CFT programme a
 One can argue that the spectral problem has been worked out exactly, at least conceptually, as we will review shortly.
 However in practice one immediately runs into technical difficulties with finding solutions, thus at the moment only certain calculations have been carried out explicitly.
 In this section we will present a few examples of exact results, most notably the slope and curvature functions, which are the two leading coefficients in the small spin expansion of the anomalous dimension of the folded string.
-As mentioned before, they are indeed exact in the coupling constant, yet they are somewhat abstract, one might even say not physical and thus of little use.
-We will argue the opposite by demonstrating how one can use them in order to find new information about phyiscally relevant quantities such as the Konishi anomalous dimension.
+As mentioned before they are indeed exact in the coupling constant, yet they are somewhat abstract and one might say of little use.
+We will argue the opposite by demonstrating how one can use them in order to find new information about physically relevant quantities such as the Konishi anomalous dimension.
 
 We will start the section by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel $\pmu$ approach.
 We then devote the rest of the section to various exact results, mostly achieved using the $\pmu$-system.
@@ -25,7 +25,7 @@ We then devote the rest of the section to various exact results, mostly achieved
 
 Historically the first solution to the spectral problem that fully incorporated finite length corrections was the thermodynamic Bethe ansatz (TBA). 
 Being a set of infinite integral equations it was obviously very hard to use in practice and was thus soon reformulated as an infinite set of functional relations, the so called Y-system.
-Both of these formulations can now be seen as intermediary steps towards the more elegant $\pmu$-system, which we cover in more depth in the next subsection.
+Both of these formulations can now be seen as intermediary steps towards the more elegant $\pmu$-system, which we cover in more depth in the next section.
 
 \subsubsection{Thermodynamic Bethe ansatz}
 
@@ -34,23 +34,39 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 \centering
 \begin{tikzpicture}[scale=0.7]
 	
-	\draw[help lines] (-5,-5) grid (15,5);
+	%\draw[help lines] (-5,-5) grid (15,5);
 	
-	\begin{scope}[shift={(0,0)}]
-		\node[red] at (0,0) {x};
+	\begin{scope}[shift={(-1,0)}]
+
+		\node[draw,cylinder,black,rotate=90,minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
 		
-		\node[draw,cylinder,black,rotate=0, minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
+		\draw[->] (-2, -2) -- (-2, -1); \node at (-2.6, -1) {$t$};
+		\draw[->] (-2, -2) -- (-1, -2.3); \node at (-1, -2.8) {$x$};
 		
-		\draw[->] (-3,-2) -- (3,-2);
-		\draw[->] (-3,-2) -- (-3,2);
+		\node at (2.2, 0) {$R$};
+		\node at (0, 3) {$L$};
+		
+		\draw[->,dotted] (-1, -1.7) -- (-1, 0.2);
+		\node at (0.2, -0.8) {\small $e^{-H(L)}$};
+		
 		
 	\end{scope}
 	
-	\begin{scope}[shift={(8,0)}]
+	\draw[->,dashed] (3.4, 0) -- (6, 0);
+	\node at (4.7, -0.6) {mirror};
 	
-		\node[red] at (0,0) {x};
-	
-		\node[draw,cylinder,black,rotate=90,minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
+	\begin{scope}[shift={(10.5,0)}]
+		
+		\node[draw,cylinder,black,rotate=0, minimum height=3cm,minimum width=2cm,aspect=2] (c) at (0, 0) {};
+		
+		\draw[->] (-2, -2) -- (-2.3, -1); \node at (-1, -2.7) {$y$};
+		\draw[->] (-2, -2) -- (-1, -2); \node at (-2.9, -1) {$\tau$}; 
+		
+		\node at (3, 0) {$L$};
+		\node at (0.2, 2.2) {$R$};
+		
+		\draw[->,dotted] (-1, -1.3) -- (-1, 0.3);
+		\node at (0.2, -0.5) {\small $e^{-\tilde{H}(R)}$};
 		
 	\end{scope}
 	
@@ -195,9 +211,9 @@ The Y-system
 \subsection{The $\pmu$-system}
 \label{sec:pmu_system}
 
-\subsubsection{Intuition}
+bla
 
-\subsubsection{Technicalities}
+\subsubsection{Definitions}
 
 
 In this section we review the formulation of the $\bP\mu$-system, and also discuss its symmetries which will be useful later.
