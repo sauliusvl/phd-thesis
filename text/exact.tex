@@ -7,7 +7,7 @@
 The less effort, the faster and more powerful you will be.
 \end{chapquote}
 
-\noindent In this section we leave the perturbative regime (weak and strong coupling) behind and move on towards exact results in $\N=4$ super Yang-Mills, where by ``exact'' we mean available at any value of the coupling constant.
+\noindent In this section we leave the perturbative regime (weak and strong coupling) behind and move on towards exact results in planar $\N=4$ super Yang-Mills, where by ``exact'' we mean available at any value of the coupling constant.
 In principle such results are the ultimate goal of the whole AdS/CFT programme and being able to extract them is a remarkable achievement.
 
 One can argue that the spectral problem has been worked out exactly, at least conceptually, as we will review shortly.
@@ -72,48 +72,70 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 	
 	
 \end{tikzpicture}
-\label{fig:tba_cylinders}
 \caption{A high level illustration of the idea behind the TBA method: by double Wick rotating the theory one can exchange time with length and thus finite volume scattering with the ground state scattering at finite length.}
+\label{fig:tba_cylinders}
 \end{figure}
 
+The technical details of the thermodynamic Bethe ansatz (TBA) approach are overwhelmingly difficult, in fact the lack of elegance and simplicity in this approach led many to believe that it might be only an intermediary step towards a more satisfactory solution. 
+That is why we will only illustrate the basic ideas behind the TBA at a conceptual level, the full gory technical details can be found in numerous literature reviews (see \cite{Bajnok:2010ke} for an overview). 
 
- The idea here is to consider the mirror theory of the Euclidean version of the original theory, where by Euclidean we mean a theory that is defined by the analytical continuation in the $y = i t$ complex time variable. The mirror theory is then defined by exchanging time and size coordinates with $x=i\tau$ being the complex version of the mirror time coordinate $\tau$ and $y$ being the space coordinate. The mirror theory is obviously different from the original, e.g. for the asymptotic $SU(2)$ spin chain the original dispersion relation (\ref{eq:ABA_e}) gets mirror inverted to \cite{Arutyunov:2009ga}
+In the spin chain picture we identify operators with states of the chain and the dilatation operator with the Hamiltonian. 
+This mapping enables one to use the physical language of magnons with momenta propagating on a closed chain with the time evolution being determined by the Hamiltonian.
+The key idea of TBA is shown in figure \ref{fig:tba_cylinders}: consider this system with time and space interchanged, more precisely we analytically continue in time by introducing $y \equiv i t$ and consider a theory where $y$ plays the role of space and $\tau$ defined via $x \equiv i \tau$ is time. We call this double Wick rotated theory the \emph{mirror} of the original.
+Obviously it is a completely different theory, for example the dispersion gets inverted by switching from $(E,p) \to i (\tilde{p}, \tilde{E})$, thus if we start from the asymptotic dispersion $E(p)$ for the $\alg{sl}{2}$ sector we end up with 
 \begin{equation}
-	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsin} \, \frac{\sqrt{\tilde{p} \left( 16 \, \pi^2 + \tilde{p} \, \lambda \right)}}{8 \pi},
+	E(p) = \sqrt{1+4g^2 \sin^2 \frac{p}{2}}  \;\;\;\; \Longleftrightarrow \;\;\;\; 
+	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsinh} \( \frac{1}{2g} \sqrt{\tilde{p}^2 + 1} \).
 \end{equation}
-the scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz \cite{Bajnok:2010ke}. One can use this fact, since the partition functions for these theories satisfy the obvious identity
+The scattering matrix also has a different pole structure, meaning that the theory has different bound states from the original ones. 
+But the remarkable thing is that mirroring a theory preserves integrability, meaning that one can solve it with an asymptotic Bethe ansatz. 
+One can use this fact, since the partition functions for these theories satisfy the identity
 \begin{equation}
 	Z(L,R) = \tilde{Z}(R,L),
 \end{equation}
-where $L$ is the length scale of the original theory and $R$ is the time scale. At asymptotic time scales the partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
+where $L$ is the length scale of the original theory and $R$ is the time scale. 
+At asymptotic time scales the partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
 \begin{equation}
-	Z(L,R) = \tr e^{-R \, H(L)} \xrightarrow[\text{$R \rightarrow \infty$}]{} e^{-R \, E_0(L)}.
+	Z(L,R) = \tr \, e^{-R \, H(L)} \xrightarrow[\text{$R \rightarrow \infty$}]{} e^{-R \, E_0(L)}.
 \end{equation}
-This limit corresponds to the infinite length limit for the mirror model, which we can solve using the asymptotic Bethe ansatz, thus
+This limit corresponds to the infinite length limit for the mirror model where the spectrum is controlled by the asymptotic Bethe ansatz.
+Here we have
 \begin{equation}
-	\tilde{Z}(R,L) = \tr e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
+	\tilde{Z}(R,L) = \tr \, e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
 \end{equation}
-where $\tilde{H}$ is the Hamiltonian of the mirror theory. Now we simply identify the partition functions and solve for the ground state energy in the original theory at any length $L$. The result is then a simple integral given by \cite{Bajnok:2010ke}
-\begin{equation}
-	E_0(L) = - \frac{1}{2 \pi} \sum_r \int du \left( \partial_u \tilde{p} \right) \log \left( 1 + e^{-\epsilon_r(u)} \right), 
-\end{equation}
-where $\epsilon_r(u)$ is the so called pseudo energy, defined in terms of the density of solutions with some charge $r$ in the mirror theory and we sum over all charges that describe the solutions. Energies of excited states at finite length can then be found by analytic continuation \cite{Dorey:1996re}.
-
-The argument for the finite size solution presented here is very sketchy and for the full $PSU(2,2|4)$ theory the story is obviously way more complicated, but everything that we discussed has indeed been done for the full theory. The solution is written in terms of a Y-system \cite{Gromov:2009zb}, which is a set of algebraic equations frequently found in integrable systems \cite{Gromov:2010kf}. The \text{Y-system} equations have been verified on numerous occasions and have thus far passed every test \cite{Gromov:2008gj}.
-
+where $\tilde{H}$ is the Hamiltonian of the mirror theory. 
+In the large $R$ limit we introduce the density of particles in momentum space $\rho(\tilde{p})$ and the logarithm of the mirror asymptotic Bethe equations read
 \beq
-	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \)
+	\tilde{p}(u) + \int du' \( -i \log S(u, u') \) \rho(u') = \frac{2\, \pi n}{R},
 \eeq
-
+where we introduce a parametrization for the momentum $\tilde{p}(u)$, just as in \eq{eq:up_param}. 
+Particles with momentum $\tilde{p}$ that are not excited but nevertheless satisfy the Bethe equations are called holes and their density is denoted by $\tilde{\rho}$.
+The relation between the two densities is given by
 \beq
-	E = \sum_j \epsilon_1(u_{4,j}) + \sum_{a=1}^\infty \int_{-\infty}^\infty \frac{du}{2\pi i} \frac{\pd \epsilon_a^*}{\pd u} \log \(1 + Y_{a,0}^* (u) \)
+	\partial_u \tilde{p} - 2\pi \( \rho + \tilde \rho \) = - \int du' K(u, u') \rho(u') \equiv -K \star \rho,
 \eeq
-
-\subsubsection{The Y-system}
-
-
-
-The Y-system
+where we introduced the convolution kernel
+\beq
+	K(u, u') = -i \partial_u \log S(u, u').
+\eeq
+Finally the partition function can be written as
+\beq
+	Z(L,R) = \int \mathcal D \rho \, e^{-L \tilde{E}[\rho] + S[\rho, \tilde{\rho}] },
+\eeq
+where $S[\rho, \tilde{\rho}]$ is the entropy of a given particle density configuration arising due to the fact that the densities do not uniquely specify a particle configuration.
+This functional integral can be evaluated in the saddle point approximation. 
+The saddle point is found by solving the non-linear integral equation, which is called a thermodynamic Bethe ansatz equation,
+\beq
+	\label{eq:simple_tba}
+	\epsilon(u) - L \tilde E(u) = -\log (1 + e^{-\epsilon}) \star K
+\eeq
+in terms of the so-called pseudo-energy $\epsilon(u) = \log \tilde{\rho} / \rho$. 
+Once it is found the ground state energy is given by
+\beq
+	E_0(L) = - \int \frac{du}{2\pi} (\partial_u \tilde p) \log \(1 + e^{-\epsilon(u)}\).
+\eeq
+Excited states can also be reached in this way via analytic continuation in some parameter, for example the volume of the system \cite{Dorey:1996re}.
+Basically one can to introduce singularities in the integrand of \eq{eq:simple_tba} in such a way that the large $L$ limit of the new solution coincides with the asymptotic Bethe ansatz solution.
 
 \begin{figure}[t]
 \begin{tikzpicture}[scale=0.7]
@@ -183,35 +205,56 @@ The Y-system
 	\end{scope}
 	
 \end{tikzpicture}
-\label{fig:yt_hooks}
 \caption{The domains of the $Y_{a,s}$ and $T_{a,s}$ functions (left and right respectively). The $Y_{a,s}$ functions are defined on the nodes, where the type of node signifies the type of excitation. The $T_{a,s}$ functions are defined on the latttice points of the grid.}
+\label{fig:yt_hooks}
 \end{figure}
 
+The high level ideas outlined above have been successfully applied to the spectral problem in $\N=4$ super Yang-Mills.
+The TBA equations schematically read
 \beq
-	\frac{Y_{a,s}^{+} Y_{a,s}^{-}}{Y_{a+1,s} Y_{a-1,s}} = \frac{\(1+Y_{a,s+1}\)\(1+Y_{a,s-1}\)}{\(1+Y_{a+1,s}\)\(1+Y_{a-1,s}\)}
+	\label{eq:tba_final}
+	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \),
 \eeq
-
-
-
+where the Y-functions are related to the pseudo-energies as $Y(u) = \exp(-\epsilon(u))$.
+A key difference from the example above is that here we can have different types of excitations which are labelled by the indices $a,s$. 
+The hook diagram on the left of figure \ref{fig:yt_hooks} indicates the ranges of values they can take on,
+here the type of node also distinguishes the type of particle.
+Finally the energy of the state is given by
 \beq
-	T_{a,s}^+ T_{a,s}^- = T_{a+1,s} T_{a-1,s} + T_{a,s+1} T_{a,s-1} 
+	E = \sum_j \epsilon_1(u_{4,j}) + \sum_{a=1}^\infty \int_{-\infty}^\infty \frac{du}{2\pi i} \frac{\pd \epsilon_a^*}{\pd u} \log \(1 + Y_{a,0}^* (u) \),
 \eeq
+where the first term is basically the result of analytic continuation for excited states.
+It is highly non-trivial to actually find the correct analytic continuation that describes a specific excited state thus the applicability of this method is difficult and only a handful of operators can be studied, one particular example is the Konishi operator.
+Another obvious difficulty is the fact that the TBA equations \eq{eq:tba_final} are an infinite set of coupled non-linear integral equations, which in practice limits their applicability to numeric calculations only. 
 
+
+\subsubsection{The Y-system}
+
+The Y-functions introduced in \eq{eq:tba_final} are technically defined on an infinite sheeted Riemann surface and have a complicated analytic structure, this is done so that one could rewrite the TBA equations as
 \beq
-	Y_{a,s} = \frac{T_{a,s+1} T_{a,s-1}}{T_{a+1,s} T_{a-1,s}}
+	\frac{Y_{a,s}^{+} Y_{a,s}^{-}}{Y_{a+1,s} Y_{a-1,s}} = \frac{\(1+Y_{a,s+1}\)\(1+Y_{a,s-1}\)}{\(1+Y_{a+1,s}\)\(1+Y_{a-1,s}\)},
 \eeq
-
+which are called the Y-system equations, here $Y^\pm_{a,s}(u) \equiv Y_{a,s}(u \pm i/2)$.
+The advantage of this form is that instead of an infinite set of integral equations we have a still infinite set of functional equations.
+Another notable feature of this system is that its form is universal for any excited state, which is now encoded in the analyticity properties of the Y-functions. 
+It can also be cast into yet another form by introducing T-functions via
 \beq
-	T_{a,s} \rightarrow g_1^{[a+s]} g_2^{[a-s]} g_3^{[s-1]} g_4^{[-a-s]} \; T_{a,s}
+	Y_{a,s} = \frac{T_{a,s+1} T_{a,s-1}}{T_{a+1,s} T_{a-1,s}},
 \eeq
-
-
-
+thus reducing the Y-system to the T-system
+\beq
+	T_{a,s}^+ T_{a,s}^- = T_{a+1,s} T_{a-1,s} + T_{a,s+1} T_{a,s-1},
+\eeq
+also known as the Hirota discrete bilinear equation, a well studied object in the context of classical integrability.
+The T-functions are defined on the lattice points of the T-hook shown on the right of figure \ref{fig:yt_hooks}.
+The advantage of this reformulation is that solutions of the T-system can be parametrized in terms of Wronskians built from eight independent Q-functions, which have much simpler analytic properties that the Y-functions.
+In fact with a good choice of Q-functions it is then possible to reduce the problem to a finite set of non-linear integral equations (FiNLIE), which is better suited for numerical calculations.
+These gradually improving reformulations seem to be pointing to some ultimate simplification of the problem.
 
 \subsection{The $\pmu$-system}
 \label{sec:pmu_system}
 
-bla
+The $\pmu$-system described in the next section is believed to be the ultimate simplification of the solution to the spectral problem of $\N=4$ super Yang-Mills.
 
 \subsubsection{Definitions}
 
