@@ -232,6 +232,7 @@ Another obvious difficulty is the fact that the TBA equations \eq{eq:tba_final} 
 
 The Y-functions introduced in \eq{eq:tba_final} are technically defined on an infinite sheeted Riemann surface and have a complicated analytic structure, this is done so that one could rewrite the TBA equations as \cite{Gromov:2009bc, Cavaglia:2010nm}
 \beq
+	\label{eq:ysystem}
 	\frac{Y_{a,s}^{+} Y_{a,s}^{-}}{Y_{a+1,s} Y_{a-1,s}} = \frac{\(1+Y_{a,s+1}\)\(1+Y_{a,s-1}\)}{\(1+Y_{a+1,s}\)\(1+Y_{a-1,s}\)},
 \eeq
 which are called the Y-system equations, here $Y^\pm_{a,s}(u) \equiv Y_{a,s}(u \pm i/2)$.
@@ -247,50 +248,188 @@ thus reducing the Y-system to the T-system
 \eeq
 also known as the Hirota discrete bilinear equation, a well studied object in the context of classical integrability.
 The T-functions are defined on the lattice points of the T-hook shown on the right of figure \ref{fig:yt_hooks}.
-The advantage of this reformulation is that solutions of the T-system can be parametrized in terms of Wronskians built from eight independent Q-functions, which have much simpler analytic properties that the Y-functions.
-In fact with a good choice of Q-functions it is then possible to reduce the problem to a finite set of non-linear integral equations (FiNLIE) \cite{Gromov:2011cx}, which is better suited for numerical calculations.
-These gradually improving reformulations seem to be pointing to some ultimate simplification of the problem.
+The advantage of this reformulation is that solutions of the T-system can be parametrized in terms of Wronskians built from eight independent $\mathcal{Q}$-functions, which have much simpler analytic properties that the Y-functions \cite{Gromov:2010km}.
+One can then build up a total of $2^8$ $\mathcal{Q}$--functions denoted by $\mathcal{Q}_{A|J}(u)$ where $A,J \in \{1,2,3,4\}$ are two ordered subsets of indices.
+These functions are defined through the QQ-relations
+\begin{subequations}\label{definingQQ}
+    \begin{align}
+       \label{QQbb}
+       \mathcal{Q}_{A|I}\mathcal{Q}_{A ab|I} &=\mathcal{Q}_{A a|I}^{+} \mathcal{Q}_{A b|I}^{-}-
+       \mathcal{Q}_{A a|I}^{-}
+       \mathcal{Q}_{A b|I}^{+}\,,\\
+       \label{QQff}
+       \mathcal{Q}_{A|I}\mathcal{Q}_{A|I ij} &=\mathcal{Q}_{A|I i}^{+} \mathcal{Q}_{A|I j}^{-}-
+       \mathcal{Q}_{A|I i}^{-} \mathcal{Q}_{A|I j}^{+}\,,\\
+       \label{QQbf}
+       \mathcal{Q}_{A a|I}\mathcal{Q}_{A|I i} &= \mathcal{Q}_{A a|I i}^{+}\mathcal{Q}_{A|I}^{-}-
+       \mathcal{Q}_{A|I}^{+} \mathcal{Q}_{A a|I i}^{-}. \,
+     \end{align}
+\end{subequations} 
+In addition we impose the constraints $\mathcal{Q}_{\emptyset |\emptyset}=\mathcal{Q}_{1234|1234}=1$ coming from normalization and the unimodularity of the superconformal group.
+A dual QQ system can then be introduced by $\mathcal{Q}^{A|J}\equiv (-1)^{|A|\;|J|}\mathcal{Q}_{\bar A|\bar J}$ which satisfies the same QQ-relations.
+Here  the bar over a subset means the subset complementary w.r.t. the full~set $\{1,2,3,4\}$ and  $|X|$ denotes the number of indexes in $X$. 
+It was later shown that with a good choice of the eight basis $\mathcal{Q}$-functions it is possible to reduce the problem to a finite set of non-linear integral equations (FiNLIE) \cite{Gromov:2011cx}, which is better suited for numerical calculations.
 
 \subsection{Quantum spectral curve}
 \label{sec:pmu_system}
 
-The $\pmu$-system described in the next section is believed to be the ultimate simplification of the solution to the spectral problem of $\N=4$ super Yang-Mills.
+The above discussed gradually improving reformulations of the solution to the spectral problem seem to be pointing to some ultimate simplification.
+In this section we discuss the quantum spectral curve (QSC) approach which many believe finally unveils the long anticipated beauty of the whole problem.
+%Not only is the solution concise and elegant, it nicely interpolates between the weak coupling spin chain picture and the strong coupling classical spectral curve, hence the name of the solution.
 
-\subsubsection{Definitions}
+\subsubsection{Origins and intuition}
 
-
-In this section we review the formulation of the $\bP\mu$-system, and also discuss its symmetries which will be useful later.
-Below, we will restrict the discussion to states in the $sl(2)$ sector as presented in \cite{Gromov:2013pga}.
-Remarkably, the general case is not much more complicated and will appear soon in \cite{Gromov:2014caa}.
-
-%\subsection{Definitions and notation}
-
-The $\pmu$-system is a nonlinear system of functional equations for a four-vector $\bP_a(u)$ and a $4\times4$ antisymmetric matrix $\mu_{ab}(u)$ depending on the spectral parameter $u$.
-For full details about the origin of the construction we refer the reader to \cite{Gromov:2014caa}. As functions of $u$, both $\bP_a$ and $\mu_{ab}$ have prescribed analyticity properties which play a key role.
-First, $\bP_a$ must have only a single branch cut in $u$ going between $-2g$ and $2g$, being analytic in the rest of the complex plane. We call this cut the \textit{short} cut, while the cut on the real
-line connecting the same two points through infinity is called the \textit{long} cut. The functions $\mu_{ab}$ have an infinite set of short branch cuts going between $-2g+in$ and $2g+in$ for all $n\in\mZ$ (see Fig. \ref{fig:cuts}). Most importantly, the analytic continuation of $\bP_a$ and $\mu_{ab}$ through these cuts is again expressed in terms of these functions, according to the following equations:
+The $\mathcal{Q}$-functions defined in the previous section have a disadvantage of having a very complicated analytic structure, namely they are defined on infinite sheeted Riemann surfaces with square root type cuts parallel to the real axis between the branch points $\pm 2g + i n$ with $n \in \mathbb{Z}$ going either through infinity (long cuts) or through the imaginary axis (short cuts).
+In order to fully define the functions one has to specify their analytic continuations through all of these cuts.
+Let us now introduce the notation 
+\beqa
+	\bP_a &\equiv& \mathcal{Q}_{a|\emptyset}, \;\;\; \bP^a \;\; \equiv \;\; \mathcal{Q}^{a|\emptyset}, \\
+	\bQ_j &\equiv& \mathcal{Q}_{\emptyset|j}, \;\;\; \bQ^j \;\; \equiv \;\; \mathcal{Q}^{\emptyset|j},
+\eeqa
+where $a,j=1,2,3,4$. 
+The nice thing about these is that $\bP_i$ and $\bP^i$ have only a single short cut $u \in [-2g, 2g]$ on their main sheet of the Riemann surface whereas $\bQ_i$ and $\bQ^i$ only have long cuts $u \in (-\infty,-2g]\cup [2g, \infty)$.
+Using the QQ-relations one can always use either the eight $\bP$ or the eight $\bQ$ functions to find all of the remaining ones. 
+Take the $\bP$ functions, we define their analytic continuation through the short cuts as
 \beq
-\tilde \bP_a=-\mu_{ab}\chi^{bc}\bP_c,\; \ \ \ \text{with}\;\ \ \chi^{ab}=\left(
-            \begin{array}{cccc}
-              0 & 0 & 0 & -1 \\
-              0 & 0 & 1 & 0 \\
-              0 & -1 & 0 & 0 \\
-              1 & 0 & 0 & 0 \\
-            \end{array}
-          \right),
-\label{eq:Pmu}
+	\label{Pt}
+	\tilde \bP_a=\mu_{ab}(u)\,\bP^b\;\;,\;\;\tilde \bP^a=\mu^{ab}(u)\,\bP_b
 \eeq
-and
+where $\mu_{ab}(u)$ is an antisymmetric matrix with unit Pfaffian having infinitely many branch points at $u\in\pm2 g+i\mathbb{Z}$ and $\mu^{ab}=-\frac{1}{2}\epsilon^{abcd}\mu_{cd}$ is its inverse. 
+It can also be shown to be periodic
 \beq
-\tilde \mu_{ab}-\mu_{ab}=\bP_a \tilde\bP_b-  \bP_b \tilde\bP_a\;.
-\label{eq:mudisc}
+	\check\mu_{ab}(u+i)=\check\mu_{ab}(u),
 \eeq
-Here we denote by $\tilde\bP_a$ and $\tilde\mu_{ab}$ the analytic continuation of $\bP_a$ and $\mu_{ab}$ through the cut on the real axis. In addition, we have a pseudo-periodicity condition
+where we distinguish between the short/long cut version of the same function by adding a hat/check over the symbol.
+The magic of the whole quantum spectral curve construction is that the analytic continuations of the monodromies $\mu_{ab}$ through the cuts are again given by the same functions \cite{Gromov:2014caa}
 \beq
-\label{muper}
-	\tilde\mu_{ab}(u)=\mu_{ab}(u+i)
+	\label{muPPt-eq}
+	\tilde\mu_{ab}-\mu_{ab}=\bP_a\tilde \bP_b-\bP_b\tilde \bP_a\;
 \eeq
-which, actually, means that $\mu_{ab}(u)$ would be an $i$-periodic function if defined with long cuts instead of the short cuts.
+and the $\pmu$-system of eight $\bP$ and five $\mu$ functions closes!
+An analogous closure can be implemented for the $\bQ$ functions by denoting the analytic continuations
+\begin{equation}
+\label{omegaQ}
+\tilde \bQ_i=\omega_{ij} \bQ^j,
+\end{equation}
+where the monodromy $\omega$ is related to $\mu$ by
+\beq
+\label{muomega}
+\omega_{ij}= \tilde{Q}_{a|i}^- \tilde{Q}_{b|j}^-\, \mu^{ab} \,.
+\eeq
+and itself has the following analytic continuation 
+\begin{equation}\label{tQ=omegaQ}
+\tilde\omega_{ij}-\omega_{ij}=\bQ_i\tilde{\bQ}_j-\bQ_j\tilde{\bQ}_i
+\end{equation}
+thus closing the $\bQ\omega$-system.
+Apart from the branch cuts the $\mathcal{Q}$ functions do not have other singularities and are regular functions.
+Tracing back from the $\mathcal{Q}$-system to the Y-system one can find the following relation
+\beq
+	\label{eq:y_asymp}
+	Y_{11} Y_{22} = 1 + \frac{\bP_1 \tilde{\bP_2} - \bP_2 \tilde{\bP_1}}{\mu_{12}} = \frac{\mu_{12}(u+i)}{\mu_{12}(u)}
+\eeq
+and thus given a solution to the $\pmu$-system fully reconstruct all of the Y-functions using the Y-system equations \eq{eq:ysystem}.
+The Y-functions encode the global charges in their asymptotics, for example in the $\alg{sl}{2}$ sector one has \cite{Gromov:2011cx} 
+\beq
+	\log Y_{11} Y_{22} \; \simeq \; i \frac{\Delta - J}{u},
+\eeq
+implying through \eq{eq:y_asymp} that the asymptotics of the $\bP$ and $\mu$ functions also encode the global charges of the state/operator being described.
+
+The picture described so far strongly resembles the classical spectral curve construction outlined in section \ref{sec:spectral_curve}.
+Quite expectedly the classical spectral curve turns out to be the strong coupling limit of the quantum spectral curve as implied by the naming \cite{Gromov:2014caa}.
+More precisely one can think of the classical spectral curve as an WKB approximation to the quantum case, namely the quasi-momenta are related to the $\bP$ and $\bQ$ functions as
+\beq
+	\bP_i \simeq e^{i\int^u p_i(u) \, du}
+\eeq
+where the four $\bP_i$ functions correspond to the $S^5$ momenta and the four $\bQ_i$ functions to the $AdS_5$ part.
+The emergence of the cuts can be seen by recalling that the quasi-momenta are the eigenvalues of the monodromy matrix \eq{eq:lax_monodromy}, which develops the cuts after changing variables from $x$ to $u$ via the Zhukovsky map
+\beq
+	x + \frac{1}{x} = \frac{u}{g},
+\eeq
+which is the classical analogue of the rapidity map \eq{eq:xox_rapidity} from the asymptotic Bethe ansatz.
+Similarly how the classical quasi-momenta encoded the global charges in their asymptotics as shown in \eq{eq:quasi_asymptotics}, so do their quantum analogues $\bP$ \cite{Gromov:2014caa}
+\beq
+\label{eq:pmu_large_u}
+\left(
+\bea{c}
+\bP_1\\
+\bP_2\\
+\bP_3\\
+\bP_4
+\eea
+\right)\simeq
+\left(
+\bea{l}
+A_1\; u^\frac{-J_1-J_2+J_3-2}{2}\\
+A_2\; u^\frac{-J_1+J_2-J_3}{2}\\
+A_3\; u^\frac{+J_1-J_2-J_3-2}{2}\\
+A_4\; u^\frac{+J_1+J_2+J_3}{2}
+\eea
+\right)\;\;,\;\;
+\left(
+\bea{c}
+\bP^1\\
+\bP^2\\
+\bP^3\\
+\bP^4
+\eea
+\right)\simeq
+\left(
+\bea{l}
+A^1\; u^\frac{+J_1+J_2-J_3}{2}\\
+A^2\; u^\frac{+J_1-J_2+J_3-2}{2}\\
+A^3\; u^\frac{-J_1+J_2+J_3}{2}\\
+A^4\; u^\frac{-J_1-J_2-J_3-2}{2}
+\eea
+\right)\;
+\eeq
+and similarly for $\bQ$
+\beq
+\left(
+\bea{c}
+\bQ_1\\
+\bQ_2\\
+\bQ_3\\
+\bQ_4
+\eea
+\right)\simeq
+\left(
+\bea{l}
+B_1\; u^\frac{+\Delta-S_1-S_2}{2}\\
+B_2\; u^\frac{+\Delta+S_1+S_2-2}{2}\\
+B_3\; u^\frac{-\Delta-S_1+S_2}{2}\\
+B_4\; u^\frac{-\Delta+S_1-S_2-2}{2}
+\eea
+\right)\;\;,\;\;
+\left(
+\bea{c}
+\bQ^1\\
+\bQ^2\\
+\bQ^3\\
+\bQ^4
+\eea
+\right)\simeq
+\left(
+\bea{l}
+B^1\; u^\frac{-\Delta+S_1+S_2-2}{2}\\
+B^2\; u^\frac{-\Delta-S_1-S_2}{2}\\
+B^3\; u^\frac{+\Delta+S_1-S_2-2}{2}\\
+B^4\; u^\frac{+\Delta-S_1+S_2}{2}
+\eea
+\right)\;.
+\eeq
+Since the $\pmu$ and $\bQ\omega$-systems are coupled via the QQ-relations the above asymptotics have to be compatible thus producing algebraic relations between the coefficients $A$ and the global charges.
+
+Both the $\pmu$ and the $\bQ\omega$-systems are complete in the sense they describe all solutions in the theory. 
+Since they are related it is a matter of convenience to use one or the other and for the remainder of the thesis we will stick with the $\pmu$-system.
+
+% Finally in the weak coupling limit the $\pmu$-system can be related to the Baxter equation which in the $\alg{sl}{2}$ sector reads 
+% \beq
+	% T(u) Q(u) + (u-is)^2 Q(u-i) + (u+is)^2 Q(u+i) = 0.
+% \eeq
+% It can be though of as the analogue to the Schr\"{o}dinger equation for the spin chain with $Q(u)$ being the wave function and $T(u)$ the potential which depends on the state. 
+% The $Q$ function can be defined to be the polynomial
+
+\subsubsection{$\pmu$-system for left-right symmetric states}
 
 \begin{figure}[t]
 \begin{tikzpicture}[scale=0.5]
@@ -361,16 +500,43 @@ which, actually, means that $\mu_{ab}(u)$ would be an $i$-periodic function if d
 	\end{scope}
 	
 \end{tikzpicture}
+\caption{The location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\mu_{ab}(u)$ (right). The infinitely many cuts of $\tilde{\bP}_a$ are shown on the left picture with dashed lines.}
 \label{fig:pmu_cuts}
-\caption{\textbf{Cuts in the $u$ plane.} We show the location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\mu_{ab}(u)$ (right). The infinitely many cuts of $\tilde{\bP}_a$ are shown on the left picture with dashed lines.}
 \end{figure}
 
-
+All of the solutions we consider later are symmetric under the left-right exchange of the Y-functions $Y_{a,s}=Y_{a,-s}$, which implies the following relations for the $\bP$ and $\bQ$ functions
+\begin{eqnarray}
+&&\bP^a=\chi^{ac} \bP_c,\qquad  \bQ^i=\chi^{ij} \bQ_j
+\end{eqnarray}
+and thus the analytic continuation for the $\pmu$-system reads
+\beq
+\tilde \bP_a=-\mu_{ab}\chi^{bc}\bP_c,\; \ \ \ \text{with}\;\ \ \chi^{ab}=\left(
+            \begin{array}{cccc}
+              0 & 0 & 0 & -1 \\
+              0 & 0 & 1 & 0 \\
+              0 & -1 & 0 & 0 \\
+              1 & 0 & 0 & 0 \\
+            \end{array}
+          \right),
+\label{eq:Pmu}
+\eeq
+and
+\beq
+\tilde \mu_{ab}-\mu_{ab}=\bP_a \tilde\bP_b-  \bP_b \tilde\bP_a\;.
+\label{eq:mudisc}
+\eeq
+% Here we denote by $\tilde\bP_a$ and $\tilde\mu_{ab}$ the analytic continuation of $\bP_a$ and $\mu_{ab}$ through the cut on the real axis. In addition, we have a pseudo-periodicity condition
+% \beq
+% \label{muper}
+	% \tilde\mu_{ab}(u)=\mu_{ab}(u+i)
+% \eeq
+% which, actually, means that $\mu_{ab}(u)$ would be an $i$-periodic function if defined with long cuts instead of the short cuts.
+The cut structure of these functions is shown in figure \ref{fig:pmu_cuts}.
 The functions $\mu_{ab}$ are also constrained by the relations
 \beqa
 \label{constraint}
 \mu_{12}\mu_{34}-\mu_{13}\mu_{24}+\mu_{14}^2&=&1\;,\\
-\label{Pmulast}
+\label{eq:Pmulast}
 \mu_{14}=\mu_{23}\;,
 \eeqa
 the first of which states that the Pfaffian
@@ -385,20 +551,9 @@ the first of which states that the Pfaffian
 \eeqa
 The above equations ensure that the branch points of $\bP_a$ and $\mu_{ab}$ are of the square root type, i.e.
 $\tilde{\tilde{\bP}}_a=\bP_a$ and $\tilde{\tilde{\mu}}_{ab}=\mu_{ab}$.
-
-
 Finally, we require that $\bP_a$ and $\mu_{ab}$ do not have any singularities except these branch points\footnote{For odd values of $J$ the functions $\bP_a$ may have an additional branch point at infinity. However, it should cancel in any product of two $\bP_a$'s, and therefore it will not appear in
 any physically relevant quantity (see \cite{Gromov:2013pga}, \cite{Gromov:2014caa}). We will discuss some explicit examples in the text.}.
-
-	
-
-
-
-
-
-
-%\subsection{Asymptotics and energy}
-The quantum numbers and the energy of the state are encoded in the asymptotics of the functions $\bP_a$ and $\mu_{ab}$ at large real $u$. The generic case is described in \cite{Gromov:2014caa}, while here we are interested in the states in the $sl(2)$ sector, for which the relations read \cite{Gromov:2013pga}
+The large $u$ asymptotics \eq{eq:pmu_large_u} for the $\alg{sl}(2)$ sector read \cite{Gromov:2013pga}
 \beq
 \bP_a\sim(A_1u^{-J/2},A_2u^{-J/2-1},A_3u^{J/2},A_4u^{J/2-1})
 \label{eq:asymptotics}
@@ -408,18 +563,16 @@ The quantum numbers and the energy of the state are encoded in the asymptotics o
 	\(u^{\Delta-J},\ u^{\Delta+1},\ u^{\Delta},\ u^{\Delta-1},\ u^{\Delta+J}\)
 \label{eq:muasymptotics}
 \eeq
-where $J$ is the twist of the gauge theory operator, and $\Delta$ is its conformal dimension. With these asymptotics, the equations \eq{eq:Pmu}-\eq{Pmulast} form a closed system which fixes $\bP_a$ and $\mu_{ab}$.
-
-Lastly, the spin $S$ of the operator is related \cite{Gromov:2013pga} to the leading coefficients $A_a$ of the $\bP_a$ functions (see \eq{eq:asymptotics}):
+where $J$ is the twist of the gauge theory operator, and $\Delta$ is its conformal dimension. 
+With these asymptotics, the equations \eq{eq:Pmu}-\eq{eq:Pmulast} form a closed system which fixes $\bP_a$ and $\mu_{ab}$.
+Lastly, the spin $S$ of the operator is related \cite{Gromov:2013pga} to the leading coefficients $A_a$ of the $\bP_a$ functions
 \beqa
 &&A_1 A_4=\frac{\((J+S-2)^2-\Delta^2\)\((J-S)^2-\Delta^2\)}{16 i J(J-1)} \label{AA1} \\
 &&A_2 A_3=\frac{\((J-S+2)^2-\Delta^2\)\((J+S)^2-\Delta^2\)}{16 i J(J+1)} \label{AA2}\;.
 \eeqa
 
-
-%\subsection{Symmetries}
-%\label{sec:Symmetries}
-The $\bP\mu$-system enjoys a symmetry preserving all of its essential features. It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eq{eq:Pmu}-\eq{eq:Pmulast} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the system \eq{eq:Pmu}, $\mu$ should
+The $\bP\mu$-system enjoys a symmetry preserving all of its essential features. 
+It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eq{eq:Pmu}-\eq{eq:Pmulast} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the system \eq{eq:Pmu}, $\mu$ should
 at the same time be transformed as
 \beq
 \mu'=-R \mu \chi R^{-1}\chi.
@@ -460,10 +613,7 @@ The general form of $R$ which satisfies \eq{eq:sxsx} and does not spoil the asym
 \mu_{34} \to \frac{1}{\alpha\beta}\mu_{34}\;\;,\;\;
 \eeq
 with $\alpha,\beta$ being constants.
-
-
- In all the solutions we consider in this paper all functions $\bP_a$ turn out to be functions of definite parity, so it makes sense to consider $\gamma$-transformations which preserve parity. $\bP_1$ and $\bP_2$  always have opposite parity (as one can see from from \eq{eq:asymptotics}) and thus should not mix under such transformations; the same is true about $\bP_3$ and $\bP_4$. Thus, depending on parity of $J$ the parity-preserving $\gamma$-transformations are either
-
+In all the solutions we consider in this paper all functions $\bP_a$ turn out to be functions of definite parity, so it makes sense to consider $\gamma$-transformations which preserve parity. $\bP_1$ and $\bP_2$  always have opposite parity (as one can see from from \eq{eq:asymptotics}) and thus should not mix under such transformations; the same is true about $\bP_3$ and $\bP_4$. Thus, depending on parity of $J$ the parity-preserving $\gamma$-transformations are either
 \beqa
 \label{gammatransform2}
 &\bP_3\rightarrow\bP_3+\gamma_3\bP_2,\ \bP_4\rightarrow\bP_4+\gamma_2\bP_1,\\
