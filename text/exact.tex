@@ -16,8 +16,8 @@ In this section we will present a few examples of exact results, most notably th
 As mentioned before they are indeed exact in the coupling constant, yet they are somewhat abstract and one might say of little use.
 We will argue the opposite by demonstrating how one can use them in order to find new information about physically relevant quantities such as the Konishi anomalous dimension.
 
-We will start the section by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel $\pmu$ approach.
-We then devote the rest of the section to various exact results, mostly achieved using the $\pmu$-system.
+We will start the section by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel quantum spectral curve approach.
+We then devote the rest of the section to various exact results, mostly achieved using the quantum spectral curve construction.
 
 
 \subsection{Solution to the spectral problem}
@@ -25,7 +25,7 @@ We then devote the rest of the section to various exact results, mostly achieved
 
 Historically the first solution to the spectral problem that fully incorporated finite length corrections was the thermodynamic Bethe ansatz (TBA). 
 Being a set of infinite integral equations it was obviously very hard to use in practice and was thus soon reformulated as an infinite set of functional relations, the so called Y-system.
-Both of these formulations can now be seen as intermediary steps towards the more elegant $\pmu$-system, which we cover in more depth in the next section.
+Both of these formulations can now be seen as intermediary steps towards the more elegant quantum spectral curve construction, which we cover in more depth in the next section.
 
 \subsubsection{Thermodynamic Bethe ansatz}
 
@@ -104,7 +104,7 @@ Here we have
 	\tilde{Z}(R,L) = \tr \, e^{-L \, \tilde{H}(R)} \xrightarrow[\text{$L \rightarrow \infty$}]{}  \sum_n e^{-L \, \tilde{E}_n(R)},
 \end{equation}
 where $\tilde{H}$ is the Hamiltonian of the mirror theory. 
-In the large $R$ limit we introduce the density of particles in momentum space $\rho(\tilde{p})$ and the logarithm of the mirror asymptotic Bethe equations read
+In the large $R$ limit we introduce the density of particles in momentum space $\rho(\tilde{p}) = \Delta n / (R \Delta \tilde p)$ and the logarithm of the mirror asymptotic Bethe equations reads
 \beq
 	\tilde{p}(u) + \int du' \( -i \log S(u, u') \) \rho(u') = \frac{2\, \pi n}{R},
 \eeq
@@ -114,7 +114,7 @@ The relation between the two densities is given by
 \beq
 	\partial_u \tilde{p} - 2\pi \( \rho + \tilde \rho \) = - \int du' K(u, u') \rho(u') \equiv -K \star \rho,
 \eeq
-where we introduced the convolution kernel
+where the convolution kernel is
 \beq
 	K(u, u') = -i \partial_u \log S(u, u').
 \eeq
@@ -129,7 +129,7 @@ The saddle point is found by solving the non-linear integral equation, which is 
 	\label{eq:simple_tba}
 	\epsilon(u) - L \tilde E(u) = -\log (1 + e^{-\epsilon}) \star K
 \eeq
-in terms of the so-called pseudo-energy $\epsilon(u) = \log \tilde{\rho} / \rho$. 
+in terms of the so-called pseudo-energy $\epsilon \equiv \log \tilde{\rho} / \rho$. 
 Once it is found the ground state energy is given by
 \beq
 	E_0(L) = - \int \frac{du}{2\pi} (\partial_u \tilde p) \log \(1 + e^{-\epsilon(u)}\).
@@ -210,7 +210,7 @@ Basically one can to introduce singularities in the integrand of \eq{eq:simple_t
 \end{figure}
 
 The high level ideas outlined above have been successfully applied to the spectral problem in $\N=4$ super Yang-Mills.
-The TBA equations schematically read
+The TBA equations schematically read \cite{Gromov:2009bc, Arutyunov:2009ur}
 \beq
 	\label{eq:tba_final}
 	\log Y_{a,s}(u) = \delta^0_s\, i L\, p_a(u) + \int dv \, K_{a,s}^{a',s'}(u,v) \log \( 1+Y_{a',s'}(v) \),
@@ -224,34 +224,34 @@ Finally the energy of the state is given by
 	E = \sum_j \epsilon_1(u_{4,j}) + \sum_{a=1}^\infty \int_{-\infty}^\infty \frac{du}{2\pi i} \frac{\pd \epsilon_a^*}{\pd u} \log \(1 + Y_{a,0}^* (u) \),
 \eeq
 where the first term is basically the result of analytic continuation for excited states.
-It is highly non-trivial to actually find the correct analytic continuation that describes a specific excited state thus the applicability of this method is difficult and only a handful of operators can be studied, one particular example is the Konishi operator.
+It is highly non-trivial to actually find the correct analytic continuation that describes a specific excited state thus the applicability of this method is difficult and only a handful of operators can be studied, one particular example is the Konishi operator \cite{Gromov:2009zb}.
 Another obvious difficulty is the fact that the TBA equations \eq{eq:tba_final} are an infinite set of coupled non-linear integral equations, which in practice limits their applicability to numeric calculations only. 
 
 
-\subsubsection{The Y-system}
+\subsubsection{Further simplifications}
 
-The Y-functions introduced in \eq{eq:tba_final} are technically defined on an infinite sheeted Riemann surface and have a complicated analytic structure, this is done so that one could rewrite the TBA equations as
+The Y-functions introduced in \eq{eq:tba_final} are technically defined on an infinite sheeted Riemann surface and have a complicated analytic structure, this is done so that one could rewrite the TBA equations as \cite{Gromov:2009bc, Cavaglia:2010nm}
 \beq
 	\frac{Y_{a,s}^{+} Y_{a,s}^{-}}{Y_{a+1,s} Y_{a-1,s}} = \frac{\(1+Y_{a,s+1}\)\(1+Y_{a,s-1}\)}{\(1+Y_{a+1,s}\)\(1+Y_{a-1,s}\)},
 \eeq
 which are called the Y-system equations, here $Y^\pm_{a,s}(u) \equiv Y_{a,s}(u \pm i/2)$.
 The advantage of this form is that instead of an infinite set of integral equations we have a still infinite set of functional equations.
 Another notable feature of this system is that its form is universal for any excited state, which is now encoded in the analyticity properties of the Y-functions. 
-It can also be cast into yet another form by introducing T-functions via
+It can also be cast into yet another form by introducing T-functions as
 \beq
-	Y_{a,s} = \frac{T_{a,s+1} T_{a,s-1}}{T_{a+1,s} T_{a-1,s}},
+	Y_{a,s} = \frac{T_{a,s+1} \, T_{a,s-1}}{T_{a+1,s} \, T_{a-1,s}},
 \eeq
 thus reducing the Y-system to the T-system
 \beq
-	T_{a,s}^+ T_{a,s}^- = T_{a+1,s} T_{a-1,s} + T_{a,s+1} T_{a,s-1},
+	T_{a,s}^+ \, T_{a,s}^- = T_{a+1,s} \, T_{a-1,s} + T_{a,s+1} \,  T_{a,s-1},
 \eeq
 also known as the Hirota discrete bilinear equation, a well studied object in the context of classical integrability.
 The T-functions are defined on the lattice points of the T-hook shown on the right of figure \ref{fig:yt_hooks}.
 The advantage of this reformulation is that solutions of the T-system can be parametrized in terms of Wronskians built from eight independent Q-functions, which have much simpler analytic properties that the Y-functions.
-In fact with a good choice of Q-functions it is then possible to reduce the problem to a finite set of non-linear integral equations (FiNLIE), which is better suited for numerical calculations.
+In fact with a good choice of Q-functions it is then possible to reduce the problem to a finite set of non-linear integral equations (FiNLIE) \cite{Gromov:2011cx}, which is better suited for numerical calculations.
 These gradually improving reformulations seem to be pointing to some ultimate simplification of the problem.
 
-\subsection{The $\pmu$-system}
+\subsection{Quantum spectral curve}
 \label{sec:pmu_system}
 
 The $\pmu$-system described in the next section is believed to be the ultimate simplification of the solution to the spectral problem of $\N=4$ super Yang-Mills.
