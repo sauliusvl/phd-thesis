@@ -521,6 +521,7 @@ We used the asymptotic Bethe ansatz as the starting point of the derivation whic
 In this section we will derive the slope function \eq{eq:slope_function} using the $\pmu$-system, which is not only more concise but also generalizes to next orders as we shall demonstrate in the next section when we derive the next coefficient in the small spin expansion, the curvature function.
 
 \subsubsection{$\pmu$-system for the $\alg{sl}{2}$ sector}
+\label{sec:pmu_sl2}
 
 The first simplification we can employ is the fact that solutions in the $\alg{sl}{2}$ sector are symmetric under the left-right exchange of the Y-functions $Y_{a,s}=Y_{a,-s}$, which implies the following relations for the $\bP$ and $\bQ$ functions
 \begin{eqnarray}
@@ -900,12 +901,13 @@ In the next section we will show how the same prescription can be applied at the
 \subsection{The curvature function}
 \label{sec:curvature}
 
-In this section we use the $\bP\mu$-system to compute the $S^2$ correction to the anomalous dimension, which we call the curvature function $\gamma^{(2)}(g)$. First we will discuss the case $J=2$ in detail and then describe the modifications of the solution for the cases $J=3$ and $J=4$, more details on which can be found in appendix \ref{sec:NLOapp}.
+In this section we use the $\bP\mu$-system to compute the next coefficient in the small spin expansion of the folded string solution after the slope, which we call the curvature function $\gamma^{(2)}(g)$. 
+First we will discuss the case $J=2$ in detail and then describe the modifications of the solution for the cases $J=3$ and $J=4$, more details on which can be found in appendix \ref{sec:NLOapp}.
 
-\subsubsection{Iterative procedure for the small $S$ expansion of the $\bP\mu$-system}
-\label{sec:SolvingPmuL2}
+% \subsubsection{Iterative procedure for the small $S$ expansion of the $\bP\mu$-system}
+% \label{sec:SolvingPmuL2}
 
-For convenience let us repeat the leading order solution of the $\bP\mu$-system for $J=2$ (see \eq{eq:musolLOevenL}-\eq{eq:P4solLOevenL})
+For convenience let us repeat the leading order solution \eq{eq:musolLOevenL}-\eq{eq:P4solLOevenL} of the $\bP\mu$-system for the slope function in the case when $J=2$
 \beqa
 {\bf P}^{(0)}_1=\epsilon\frac{1}{x}\;\;&,&\;\;{\bf P}^{(0)}_2=+\epsilon I_1-\epsilon x[\sinh(2\pi u)]_-\;\;,\\
 {\bf P}^{(0)}_3=\epsilon\(\frac{1}{x}-x\)\;\;&,&\;\;
@@ -914,41 +916,49 @@ For convenience let us repeat the leading order solution of the $\bP\mu$-system 
 \epsilon \(\frac{1}{x}-x\)[\sinh(2\pi u)]_-.
 \label{P10P40}
 \eeqa
-Here $\epsilon$ is a small parameter, proportional to $\sqrt{S}$ (see \eq{epss}), and by $\bP_a^{^{(0)}}$ we denote the $\bP_a$ functions at leading order in $\epsilon$.
-
-The key observation is that the $\bP\mu$-system can be solved iteratively order by order in $\epsilon$. Let us write $\bP_a$ and $\mu_{ab}$ as an expansion in this small parameter:
+Here $\epsilon$ is a small parameter, proportional to $\sqrt{S}$ as seen in \eq{epss} and by $\bP_a^{^{(0)}}$ we denote the $\bP_a$ functions at leading order in $\epsilon$.
+The key observation is that the $\bP\mu$-system can be solved iteratively order by order in $\epsilon$. 
+Let us write $\bP_a$ and $\mu_{ab}$ as an expansion in this small parameter
 \beq
 	\bP_a=\epsilon\bP_a^{(0)}+\epsilon^3\bP_a^{(1)}+\epsilon^5\bP_a^{(2)}+\dots
 \eeq
 \beq
 	\mu_{ab}=\mu_{ab}^{(0)}+\epsilon^2\mu_{ab}^{(1)}+\epsilon^4\mu_{ab}^{(2)}+\dots \;.
 \eeq
-This structure of the expansion is dictated by the equations \eq{eq:Pmu}, \eq{eq:mudisc} of the $\bP\mu$-system (as we will soon see explicitly). Since the leading order $\bP_a$ are of order $\epsilon$, equation \eq{eq:mudisc} implies that the discontinuity of $\mu_{ab}$ on the cut is of order $\epsilon^2$. Thus to find $\mu_{ab}$ in the next to leading order (NLO) we only need the functions $\bP_a$ at leading order. After this, we can find the NLO correction to $\bP_a$ from equations \eq{eq:mudisc}. This will be done below, and having thus the full solution of the $\bP\mu$-system at NLO we will find the energy at order $S^2$.
+This structure of the expansion is dictated by the equations \eq{eq:Pmu} and \eq{eq:mudisc} of the $\bP\mu$-system as we will soon see explicitly. 
+Since the leading order $\bP_a$ are of order $\epsilon$, equation \eq{eq:mudisc} implies that the discontinuity of $\mu_{ab}$ on the cut is of order $\epsilon^2$. 
+Thus to find $\mu_{ab}$ in the next to leading order (NLO) we only need the functions $\bP_a$ at leading order. 
+After this, we can find the NLO correction to $\bP_a$ from equations \eq{eq:mudisc}. 
+This will be done below, and having thus the full solution of the $\bP\mu$-system at NLO we will find the energy at order $S^2$.
 
-\subsubsection{Correcting $\mu_{ab}$\dots}
+\subsubsection{Correcting $\mu_{ab}$}
 \label{sec:muNLOL2}
-In this subsection we find the NLO corrections $\mu^{(1)}_{ab}$ to $\mu_{ab}$. As follows from \eq{eq:mudisc} and \eq{muper},
-they should satisfy the equation
+In this subsection we find the NLO corrections $\mu^{(1)}_{ab}$ to $\mu_{ab}$. 
+As follows from \eq{eq:mudisc} and \eq{muper} they should satisfy the equation
 \beq
  \mu_{ab}^{(1)}(u+i)-\mu_{ab}^{(1)}(u)=\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)},
 \label{eq:mudiscNLO}
 \eeq
-in which the right hand is known explicitly. For that reason let us define an apparatus for solving equations of this type, i.e.
+in which the right hand is known explicitly. 
+For that reason let us define an apparatus for solving equations of this type, i.e.
 \beq
 f(u+i)-f(u)=h(u).
 \label{eqperiod}
 \eeq
-More precisely, we consider functions $f(u)$ and $h(u)$ with one cut in $u$ between $-2g$ and $2g$, and no poles. Such functions can be represented as infinite Laurent series in the Zhukovsky variable $x(u)$, and we additionally restrict ourselves to the case where for $h(u)$ this expansion does not have a constant term\footnote{The r.h.s. of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.}.
+More precisely, we consider functions $f(u)$ and $h(u)$ with one cut in $u$ between $-2g$ and $2g$, and no poles. 
+Such functions can be represented as infinite Laurent series in the Zhukovsky variable $x(u)$, and we additionally restrict ourselves to the case where for $h(u)$ this expansion does not have a constant term\footnote{The r.h.s. of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.}.
+One can see that the general solution of \eq{eqperiod} has a form of a particular solution plus an arbitrary $i$-periodic function, which we also call a zero mode. 
+% The class of $i$-periodic function we consider here is restricted to $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants (for discussion of higher modes $\sinh(2\pi n u), \cosh(2\pi n u)$ see appendix \ref{sec:appHigher}).
+First we will describe the construction of the particular solution and later deal with zero modes. 
 
-One can see that the general solution of \eq{eq:eqperiod} has a form of a particular solution plus an arbitrary $i$-periodic function, which we also call a zero mode. % The class of $i$-periodic function we consider here is restricted to $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants (for discussion of higher modes $\sinh(2\pi n u), \cosh(2\pi n u)$ see appendix \ref{sec:appHigher}).
- First we will describe the construction of the particular solution and later deal with zero modes. The linear operator which gives the particular solution of \eq{eq:eqperiod} described below will be denoted as $\Sigma$.
-
-Notice that given the explicit form \eq{eq:P10P40} of $\bP^{(0)}_a$, the right hand side of \eq{eq:mudiscNLO} can be represented in a form
+The linear operator which gives the particular solution of \eq{eqperiod} described below will be denoted as $\Sigma$.
+Notice that given the explicit form \eq{P10P40} of $\bP^{(0)}_a$, the right hand side of \eq{eq:mudiscNLO} can be represented in a form
 \beq
 \alpha(x)\sinh(2\pi u)+\beta(x),
 \label{alphabetasinh}
 \eeq
- where $\alpha(x),\beta(x)$ are power series in $x$  growing at infinity not faster than polynomially. Thus for such $\alpha$ and $\beta$ we define
+where $\alpha(x),\beta(x)$ are power series in $x$ growing at infinity not faster than polynomially. 
+Thus for such $\alpha$ and $\beta$ we define
 \beq
 \Sigma\cdot\[\alpha(x)\sinh(2\pi u)+\beta(x)\]\equiv \sinh(2\pi u) \Sigma\cdot \alpha(x)+\Sigma\cdot \beta(x).
 \eeq
@@ -957,14 +967,15 @@ We also define $\Sigma\cdot x^{-n}=\Gamma'\cdot x^{-n}$ for $n>0$, where the int
 \(\Gamma'\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\partial_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)]}h(v).
 \label{Gammaprime}
 \eeq
-This requirement is consistent because of the following relation \footnote{We remind that $f_+$ and $f_-$ stand for the part of the Laurent expansion with, respectively, positive and negative powers of $x$, while $\tilde f$ is the analytic continuation around the branch point at $u=2g$ (which amounts to replacing $x\to\frac{1}{x}$)}
+This requirement is consistent because of the following relation\footnote{We remind that $f_+$ and $f_-$ stand for the part of the Laurent expansion with, respectively, positive and negative powers of $x$, while $\tilde f$ is the analytic continuation around the branch point at $u=2g$ (which amounts to replacing $x\to\frac{1}{x}$)}
 \beq
 \(\Gamma'\cdot h\)(u+i)-\(\Gamma'\cdot h\)(u)
 =
 -\frac{1}{2\pi i}\oint_{-2g}^{2g}\frac{h(v)}{u-v}dv=h_-(u)-\widetilde{h_+}(u).
 \label{eq:Gammaproperty}
 \eeq
-What is left is to define $\Sigma$ on positive powers of $x$. We do it by requiring
+What is left is to define $\Sigma$ on positive powers of $x$. 
+We do it by requiring
 \beq
 \Sigma\cdot\left[x^a+1/x^a\right]\equiv p_a'(u) %=2 \Sigma\cdot\left[T_a\(\frac{u}{2g}\)\right],
 \label{paprime}
@@ -973,23 +984,28 @@ where $p_a'(u)$ is a polynomial in $u$ of degree $a+1$, which is a solution of
 \beq
 p_a'(u+i)-p_a'(u)=\frac{1}{2}\(x^a+1/x^a\)
 \eeq
-and satisfies the following additional properties: $p_a'(0)=0$ for odd $a$  and $p_a'(i/2)=0$ for even $a$. One can check that this definition is consistent and defines of $p'_a(u)$ uniquely. Explicit form of the first few $p_a'(u)$, which we call periodized  Chebyshev polynomials, can be found in appendix \ref{sec:appPeriodized}.
+and satisfies the following additional properties: $p_a'(0)=0$ for odd $a$  and $p_a'(i/2)=0$ for even $a$. 
+One can check that this definition is consistent and defines of $p'_a(u)$ uniquely. 
+Explicit form of the first few $p_a'(u)$, which we call periodized  Chebyshev polynomials, can be found in appendix \ref{sec:appPeriodized}.
 %where $T_a(u)$ are Chebyshev polynomials of the first kind.
+From this definition of $\Sigma$ one can see that the result of its action on expressions of the form \eq{alphabetasinh} can again be represented in this form - what is important for us is that no exponential functions other than $\sinh(2\pi u)$ appear in the result.
 
-From this definition of $\Sigma$ one can see that the result of its action on expressions of the form \eq{eq:alphabetasinh}
-can again be represented in this form - what is important for us is that no exponential functions other than $\sinh(2\pi u)$ appear in the result.
-
-A good illustration of how the definitions above work would be the following two simple examples. Suppose one wants to calculate $\Sigma\cdot\(x-\frac{1}{x}\)$, then it is convenient to split the argument of $\Sigma$ in the following way:
+A good illustration of how the definitions above work would be the following two simple examples.
+Suppose one wants to calculate $\Sigma\cdot\(x-\frac{1}{x}\)$, then it is convenient to split the argument of $\Sigma$ in the following way:
 \beq
-\Sigma\cdot\(x-\frac{1}{x}\)=\Sigma\cdot\(x+\frac{1}{x}\)-2\Sigma\cdot\frac{1}{x}.
+\Sigma\cdot\(x-\frac{1}{x}\)=\Sigma\cdot\(x+\frac{1}{x}\)-2\,\Sigma\cdot\frac{1}{x}.
 \eeq
-In the first term we recognize $p_1'(u)=\frac{i u(u-i)}{2g}$, whereas in the second the argument of $\Sigma$ is decaying at infinity, thus $\Sigma$ is equivalent to $\Gamma'$ in this context. Notice also that $\Gamma'\cdot \frac{1}{x}=-\Gamma'\cdot x$. All together, we get
+In the first term we recognize $p_1'(u)=\frac{i u(u-i)}{2g}$, whereas in the second the argument of $\Sigma$ is decaying at infinity, thus $\Sigma$ is equivalent to $\Gamma'$ in this context. 
+Notice also that $\Gamma'\cdot \frac{1}{x}=-\Gamma'\cdot x$. 
+All together we get
 \beq
-\Sigma\cdot\(x-\frac{1}{x}\)=\Sigma\cdot\(x+\frac{1}{x}\)-2\Sigma\cdot\frac{1}{x}=2p_1'(u)+ 2\Gamma'\cdot x
+\Sigma\cdot\(x-\frac{1}{x}\)=\Sigma\cdot\(x+\frac{1}{x}\)-2\,\Sigma\cdot\frac{1}{x}=2\,p_1'(u)+ 2 \,\Gamma'\cdot x.
 \eeq
-
-In a similar way, in order to calculate $\Sigma\cdot\frac{\sinh_--\sinh_+}{2}$, one can write $\frac{\sinh_--\sinh_+}{2}=\sinh_--\frac{1}{2}\sinh(2\pi u)$.
-Notice that since $\sinh_-$ decays at infinity,
+In a similar way, in order to calculate $\Sigma\cdot \(\sinh_--\sinh_+\) / 2$, one can write 
+\beq
+	\frac{\sinh_--\sinh_+}{2}=\sinh_- \, - \, \frac{1}{2}\sinh(2\pi u).
+\eeq
+Notice that since $\sinh_-$ decays at infinity, thus
 \beq
 \Sigma\cdot\sinh_-=\Gamma'\cdot\sinh_-.
 \eeq
@@ -997,67 +1013,71 @@ Notice that since $\sinh_-$ decays at infinity,
 \beq
 \Sigma\cdot\sinh(2\pi u)=\sinh(2\pi u)\Sigma\cdot 1=\sinh(2\pi u)p_0'(u)/2.
 \eeq
- Finally,
+Finally,
 \beq
 \Sigma\cdot\frac{\sinh_--\sinh_+}{2}=\Gamma'\cdot(\sinh_-)-\frac{1}{2}\sinh(2\pi u)p_0'(u).
 \eeq
-
-As an example we present the particular solution for two components of $\mu_{ab}$ (below we will argue that $\pi_{12}$ and $\pi_{13}$ can be chosen to be zero, see  \eq{eq:periodicpart})
+As an example we present the particular solution for two components of $\mu_{ab}$.
 \beqa
 \label{muexpl1}
-&&\mu_{13}^{(1)}-\pi_{13}=\Sigma\cdot\({\bf P}_1 \tilde{\bf P}_3-{\bf P}_3 \tilde{\bf P}_1\)=\epsilon^2\Sigma\cdot\(x^2-\frac{1}{x^2}\)=
-\epsilon^2\;\;\(\Gamma'\cdot x^2+p_2'(u)\),\\
+\mu_{13}^{(1)}-\pi_{13}&=&\Sigma\cdot\({\bf P}_1 \tilde{\bf P}_3-{\bf P}_3 \tilde{\bf P}_1\)=\epsilon^2\,\Sigma\cdot\(x^2-\frac{1}{x^2}\) =\epsilon^2\;\(\Gamma'\cdot x^2+p_2'(u)\),\\
 \nonumber
-&&\mu_{12}^{(1)}-\pi_{12}=\Sigma\cdot\({\bf P}_1
+\mu_{12}^{(1)}-\pi_{12}&=&\Sigma\cdot\({\bf P}_1
    \tilde{\bf P}_2-{\bf P}_2
-   \tilde{\bf P}_1\)= \\&& =
+   \tilde{\bf P}_1\)= \\ &=&
    -\epsilon^2\[2 I_1\Gamma'\cdot x-\sinh(2\pi u)\;\Gamma'\cdot x^2-\Gamma'\cdot\(\sinh_-\(x^2+\frac{1}{x^2}\)\)
-   \].\label{muexpl2}
+   \].\;\;\;\;\;\;\;\qquad\label{muexpl2}
 \eeqa
+Below we will argue that $\pi_{12}$ and $\pi_{13}$ can be chosen to be zero, as seen in \eq{eq:periodicpart}.
 Now let us apply $\Sigma$ defined above to \eq{eq:mudiscNLO}, writing that its general solution is
 \beq
 \mu^{(1)}_{ab}=\Sigma\cdot(\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)})+\pi_{ab},
 \label{eq:sol13}
 \eeq
- where the zero mode $\pi_{ab}$ is an arbitrary $i$-periodic entire function, which can be written similarly to the leading order as $c_{1,ab}\cosh{2\pi u}+c_{2,ab}\sinh{2\pi u}+c_{3,ab}$. Again, many of the coefficients $c_{i,ab}$ can be set to zero. First, the prescription from section \ref{sec:ancont} implies that non-vanishing at infinity part of coefficients of $\sinh(2\pi u)$ and $\cosh(2\pi u)$ in $\mu_{12}$ is zero. As one can see from the explicit form \eq{eq:muexpl2} of the particular solution which we choose for $\mu_{12}$, it does not contain $\cosh(2\pi u)$ and the coefficient of $\sinh(2\pi u)$ is decaying at infinity. So in order to satisfy the prescription, we have to set $c_{2,12}$ and $c_{2,12}$ to zero. Second, since the coefficients $c_{n,ab}$ are of order $S$, we can remove some of them by making an infinitesimal  $\gamma$-transformation, i.e. with $R=1+{\cal O}(S)$ (see section \ref{sec:Symmetries} and Eq. \eq{eq:gammaP}).
- Further, the Pfaffian constraint \eq{eq:constraint} imposes 5 equations on the remaining coefficients, which leaves the following 2-parametric family of zero modes
- \beqa
-&& \pi_{12}=0,\ \pi_{13}=0,\ \pi_{14}=\frac{1}{2}c_{1,34}\cosh{2\pi u},\\
- && \pi_{24}= c_{1,24}\cosh{2\pi u},\ \pi_{34}= c_{1,34}\cosh{2\pi u}.
- \eeqa
-
-Let us now look closer at the exponential part of $\mu_{14}$ and $\mu_{24}$. Combining the leading order \eq{eq:musolLOevenL} and the perturbation \eq{eq:sol13} and taking into account the fact that operator $\Sigma$ does not produce terms proportional to $\cosh{2 \pi u}$, we obtain
+where the zero mode $\pi_{ab}$ is an arbitrary $i$-periodic entire function, which can be written similarly to the leading order as $c_{1,ab}\cosh{2\pi u}+c_{2,ab}\sinh{2\pi u}+c_{3,ab}$. 
+Again, many of the coefficients $c_{i,ab}$ can be set to zero. 
+First, the prescription from section \ref{sec:ancont} implies that non-vanishing at infinity part of coefficients of $\sinh(2\pi u)$ and $\cosh(2\pi u)$ in $\mu_{12}$ is zero. 
+As one can see from the explicit form \eq{muexpl2} of the particular solution which we choose for $\mu_{12}$, it does not contain $\cosh(2\pi u)$ and the coefficient of $\sinh(2\pi u)$ is decaying at infinity. 
+So in order to satisfy the prescription, we have to set $c_{2,12}$ and $c_{2,12}$ to zero. 
+Second, since the coefficients $c_{n,ab}$ are of order $S$, we can remove some of them by making an infinitesimal  $\gamma$-transformation with $R=1 + {\cal O}(S)$ in \eq{gammaP}.
+Furthermore, the Pfaffian constraint \eq{constraint} imposes 5 equations on the remaining coefficients, which leaves the following 2-parametric family of zero modes
+\beqa
+\pi_{12}= \pi_{13} = 0,&&\ \pi_{14}=\frac{1}{2}c_{1,34}\cosh{2\pi u},\\
+\pi_{24}= c_{1,24}\cosh{2\pi u},&&\ \pi_{34}= c_{1,34}\cosh{2\pi u}.
+\eeqa
+Let us now look closer at the exponential part of $\mu_{14}$ and $\mu_{24}$. 
+Combining the leading order \eq{eq:musolLOevenL} and the perturbation \eq{eq:sol13} and taking into account the fact that operator $\Sigma$ does not produce terms proportional to $\cosh{2 \pi u}$, we obtain
 \beqa
 &&\mu_{14}=\frac{1}{2}c_{1,34}\cosh{2\pi u}+{\cal O}(\epsilon) \sinh{2\pi u}+\mathcal{O}(\epsilon^2)+\dots, \\
 &&\mu_{24}=\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}+\mathcal{O}(\epsilon^2)+\dots,
 \eeqa
 where dots stand for powers-like terms or exponential terms suppressed by powers of $u$.
-
-As we remember from section \ref{sec:ancont}, only the 2nd solution of the 5th order Baxter equation \eq{eq:5bax} can contribute to the exponential part of $\mu_{14}$ and $\mu_{24}$, which means that $\mu_{14}$ and $\mu_{24}$ are proportional to the same linear combination of $\sinh{2\pi u}$ and $\cosh{2\pi u}$. From the second equation one can see that this linear combination can be normalized to be $\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}$. Then $\mu_{14}=C\(\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}\)$, where $C$ is some constant, which is of order ${\cal O}(\epsilon)$, because the coefficient of $\sinh{2\pi u}$ in the first equation is ${\cal O}(\epsilon)$. Taking into account that $c_{1,24}$ is ${\cal O}(\epsilon)$ itself, we find that $c_{1,34}=\mathcal{O}(\epsilon^2)$, i.e. it does not contribute at the order which we are considering. So the final form of the zero mode in \eq{eq:sol13} is
-\beqa
-&& \pi_{12}=0,\ \pi_{13}=0,\ \pi_{14}=0,\\
- && \pi_{24}=c_{1,24}\cosh{2\pi u},\ \pi_{34}=0.
- \label{eq:periodicpart}
- \eeqa
-
-
+As we remember from section \ref{sec:ancont}, only the 2nd solution of the 5th order Baxter equation \eq{5bax} can contribute to the exponential part of $\mu_{14}$ and $\mu_{24}$, which means that $\mu_{14}$ and $\mu_{24}$ are proportional to the same linear combination of $\sinh{2\pi u}$ and $\cosh{2\pi u}$. 
+From the second equation one can see that this linear combination can be normalized to be $\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}$ and thus 
+\beq
+	\mu_{14}=C\(\frac{1}{2}c_{1,24}\cosh{2\pi u}+(1+{\cal O}(\epsilon)) \sinh{2\pi u}\),
+\eeq 
+where $C$ is some constant, which is of order ${\cal O}(\epsilon)$, because the coefficient of $\sinh{2\pi u}$ in the first equation is ${\cal O}(\epsilon)$.
+Taking into account that $c_{1,24}$ is ${\cal O}(\epsilon)$ itself, we find that $c_{1,34}=\mathcal{O}(\epsilon^2)$, i.e. it does not contribute at the order which we are considering. 
+So the final form of the zero mode in \eq{eq:sol13} is
+\beq
+	\pi_{12} = \pi_{13} = \pi_{14} = \pi_{34}=0, \;\;\; \pi_{24}=c_{1,24}\cosh{2\pi u}.
+	\label{eq:periodicpart}
+\eeq
 %The result of acting with $\Sigma$ on the combination $\bP_a^{(0)} \tilde\bP_b^{(0)}$ appearing in \eq{eq:sol13} can be %rewritten in terms of $\Gamma'$ and periodized versions of Chebyshev polynomials $p_a'(u)$ defined as
 %\beq
 %p_a'(u)=\Sigma\cdot\left[x^a+1/x^a\right]=2 \Sigma\cdot\left[T_a\(\frac{u}{2g}\)\right],
 %\label{paprime}
 %\eeq
 %where $T_a(u)$ are Chebyshev polynomials of the first kind.
+In this way, using the particular solution given by $\Sigma$ and the form of zero modes \eq{eq:periodicpart} we have computed all the functions $\mu_{ab}^{(1)}$. 
+The details and the results of the calculation can be found in appendix \ref{sec:appmu2}.
 
 
-
-
-In this way, using the particular solution given by $\Sigma$ and the form of zero modes \eq{eq:periodicpart} we have computed all the functions $\mu_{ab}^{(1)}$. The details and the results of the calculation can be found in appendix \ref{sec:appmu2}.
-
-%In appendix \ref{sec:appmu2} we give more details on the calculation and results for all $\mu_{ab}^{(1)}$.
-
-\subsubsection{Correcting $\bP_{a}$\dots}
+\subsubsection{Correcting $\bP_{a}$}
 \label{sec:CalculationofPa}
-In the previous section we found the NLO part of $\mu_{ab}$. Now, according to the iterative procedure described in section \ref{sec:SolvingPmuL2}, we can use it to write a closed system of equations for $\bP_a^{(1)}$.
+
+Now that we found the NLO part of $\mu_{ab}$ we can use the iterative procedure described at the beginning of the section to write a closed system of equations for $\bP_a^{(1)}$.
 Indeed, expanding the system \eq{eq:pmuexpanded} to NLO we get
 \beqa
 \label{eq:P1eqNLOL2}
@@ -1076,63 +1096,63 @@ where the free terms are given by
 r_a=-\mu_{ab}^{(1)}\chi^{bc}\bP_c^{(0)}.
 \label{eq:ra}
 \eeq
-Notice that $r_a$ does not change if we add a matrix proportional to $\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)}$ to $\mu^{(1)}_{ab}$, due to the relations
+Notice that $r_a$ does not change if we add a matrix proportional to $\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)}$ to $\mu^{(1)}_{ab}$ due to the relations
 \beq
 	\bP_a \chi^{ab}\bP_b=0,\;\bP_a\chi^{ab}\tilde\bP_b=0,
 \eeq	
-which follow from the $\bP\mu$-system equations. In particular we can use this property to replace $\mu_{ab}^{(1)}$ in \eq{eq:ra} by $\mu_{ab}^{(1)}+\frac{1}{2}\(\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)}\)$. This will be convenient for us, since in expressions for $\mu^{(1)}_{ab}$ in terms of $p_a$ and $\Gamma$ (see \eq{muexpl1}, \eq{muexpl2} and appendix \ref{sec:appmu2}) this change amounts to simply replacing $\Gamma'$ by a convolution with a more symmetric kernel:
+which follow from the $\bP\mu$-system equations. 
+In particular we can use this property to do the following replacement in \eq{eq:ra}
 \beq
- \Gamma' \rightarrow  \Gamma,
-\eeq
+	\mu_{ab}^{(1)} \to \mu_{ab}^{(1)}+\frac{1}{2}\(\bP_a^{(0)} \tilde\bP_b^{(0)}-  \bP_b^{(0)} \tilde\bP_a^{(0)}\).
+\eeq	
+This will be convenient for us, since in expressions for $\mu^{(1)}_{ab}$ in terms of $p_a$ and $\Gamma$  as seen in \eq{muexpl1}, \eq{muexpl2} and appendix \ref{sec:appmu2}, this change amounts to simply replacing $\Gamma'$ by a convolution with a more symmetric kernel $\Gamma' \rightarrow  \Gamma$ defined by
 \beq
 \(\Gamma\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\partial_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)+1]}h(v),
 \label{Gamma}
 \eeq
 while at the same time replacing
 \beq
-	 p_a'(u)\rightarrow  p_a(u),\ \
-\eeq
-\beq
-	p_a(u)=p_a'(u)+\frac{1}{2}\(x^a(u)+x^{-a}(u)\).
+	 p_a'(u)\rightarrow  p_a(u) = p_a'(u)+\frac{1}{2}\(x^a(u)+x^{-a}(u)\).
 \label{pa}
 \eeq
 
 
 Having made this comment, we will now develop tools for solving the equations \eq{eq:P1eqNLOL2} - \eq{eq:P4eqNLOL2}.
 Notice first that if we solve them in the order \eq{eq:P3eqNLOL2}, \eq{eq:P1eqNLOL2}, \eq{eq:P4eqNLOL2}, \eq{eq:P2eqNLOL2}, substituting into each subsequent equation the solution of all the previous, then at each step the problem we have to solve has a form
-
 \beq
  \tilde f+f=h\;\; \text{or}\;\; \tilde f-f=h\;\;,
  \label{eq:eqs}
 \eeq
-  where $h$ is known, $f$ is unknown and both the right hand side and the left hand side are power series in $x$. It is obvious that equations \eq{eq:eqs} have solutions only for $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively.
-   On the class of such $h$ a particular solution for $f$ can be written as
-  \beq
-  f= [h]_-+[h]_0/2\equiv H\cdot h\;\; \Rightarrow\;\; \tilde f+f=h
-    \label{eq:solfh1}
-  \eeq
-  and
-    \beq
-    f= [h]_-\equiv K\cdot h\;\; \Rightarrow\;\; \tilde f-f=h,
-  \label{eq:solfh2}
-  \eeq
-  where $[h]_0$ is the constant part of Laurent expansion of $h$ (it does not appear in the second equation, because $h$ such that $h=-\tilde h$ does not have a constant part).
-  The operators $K$ and $H$ introduced here can be also defined by their integral kernels
+where $h$ is known, $f$ is unknown and both the right hand side and the left hand side are power series in $x$. 
+It is obvious that equations \eq{eq:eqs} have solutions only for $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively.
+On the class of such $h$ a particular solution for $f$ can be written as
+\beq
+f= [h]_-+[h]_0/2\equiv H\cdot h\;\; \Rightarrow\;\; \tilde f+f=h
+\label{eq:solfh1}
+\eeq
+and
+\beq
+f= [h]_-\equiv K\cdot h\;\; \Rightarrow\;\; \tilde f-f=h,
+\label{eq:solfh2}
+\eeq
+where $[h]_0$ is the constant part of Laurent expansion of $h$ (it does not appear in the second equation, because $h$ such that $h=-\tilde h$ does not have a constant part).
+The operators $K$ and $H$ introduced here can be also defined by their integral kernels
 \beqa
 H(u,v)&=&-\frac{1}{4\pi i}\frac{\sqrt{u-2g}\sqrt{u+2g}}{\sqrt{v-2g}\sqrt{v+2g}}\frac{1}{u-v}, \\
 K(u,v)&=&+\frac{1}{4\pi i}\frac{1}{u-v},
 \label{eq:HK}
 \eeqa
-which are equivalent to \eq{eq:solfh1},\eq{eq:solfh2} of the classes of $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively\footnote{We denote e.g. $K\cdot h=\oint_{-2g}^{2g}K(u,v)h(v)dv$ where the integral is around the branch cut between $-2g$ and $2g$.}. The particular solution $f=K\cdot h$ of the equation $\tilde f+ f=h$ is unique in the class of functions $f$ decaying at infinity, and the solution $f=H \cdot h$ of $\tilde f- f=h$ is unique for non-growing $f$. In all other cases the general solution will include zero modes, which, in our case are fixed by asymptotics of $\bP_a$.
-
-
+which are equivalent to \eq{eq:solfh1}, \eq{eq:solfh2} of the classes of $h$ such that $h=\tilde h$ and $h=-\tilde h$ respectively.
+%\footnote{We denote e.g. $K\cdot h=\oint_{-2g}^{2g}K(u,v)h(v)dv$ where the integral is around the branch cut between $-2g$ and $2g$.}. 
+The particular solution $f=K\cdot h$ of the equation $\tilde f+ f=h$ is unique in the class of functions $f$ decaying at infinity, and the solution $f=H \cdot h$ of $\tilde f- f=h$ is unique for non-growing $f$. 
+In all other cases the general solution will include zero modes, which, in our case are fixed by asymptotics of $\bP_a$.
 Now it is easy to write the explicit solution of the equations
 \eq{eq:P1eqNLOL2}-\eq{eq:P4eqNLOL2}:
 \beqa
 \bP_3^{(1)}&=&H\cdot r_3,\\
-\bP_1^{(1)}&=&\frac{1}{2}\bP^{(1)}_3+K\cdot \(r_1-\frac{1}{2} r_3\),\\
+\bP_1^{(1)}&=&\frac{1}{2}\,\bP^{(1)}_3+K\cdot \(r_1-\frac{1}{2} r_3\),\\
 \bP_4^{(1)}&=&K\cdot\(-\frac{1}{2}\(\tilde\bP_3^{(1)}-\bP_3^{(1)}\) \sinh(2\pi u)+
-\frac{2r_4+r_3 \sinh(2\pi u)}{2}\)-2\delta,\\
+\frac{2r_4+r_3 \sinh(2\pi u)}{2}\)-2\,\delta,\;\;\qquad\\
 \bP_2^{(1)}&=&H\cdot\(-\frac{1}{2}
 \(
 {\bf P}^{(1)}_4+\sinh(2\pi u){\bf P}^{(1)}_1+\tilde{\bf P}^{(1)}_4+\sinh(2\pi u)\tilde{\bf P}^{(1)}_1
@@ -1141,15 +1161,16 @@ Now it is easy to write the explicit solution of the equations
 +\frac{r_4+\sinh(2\pi u) r_1+2r_2}{2}\)+\delta,
 \label{eq:P4solNLOL2}
 \eeqa
-where $\delta$ is a constant fixed uniquely by requiring $\mathcal{O}(1/u^2)$ asymptotics for $\bP_2$. This asymptotic also sets the last coefficient $c_{1,24}$ left in $\pi_{12}$ to zero. Thus in the class of functions with asymptotics \eq{eq:asymptotics} the solution for $\mu_{ab}$ and $\bP_a$ is unique up to a $\gamma$-transformation.
-
-
+where $\delta$ is a constant fixed uniquely by requiring $\mathcal{O}(1/u^2)$ asymptotics for $\bP_2$. 
+This asymptotic also sets the last coefficient $c_{1,24}$ left in $\pi_{12}$ to zero. 
+Thus in the class of functions with asymptotics \eq{eq:asymptotics} the solution for $\mu_{ab}$ and $\bP_a$ is unique up to a $\gamma$-transformation.
 
 
 \subsubsection{Result for $J=2$}
 \label{sec:resultL2}
 
-In order to obtain the result for the anomalous dimension, we again use the formulas \eq{AA1}, \eq{AA2} which connect the leading coefficients of $\bP_a$ with $\Delta,\ J\ $ and $S$. After plugging in $A_i$ which we find from our solution, we obtain the result for the $S^2$ correction to the anomalous dimension:
+In order to obtain the result for the anomalous dimension, we again use the formulas \eq{AA1}, \eq{AA2} which connect the leading coefficients of $\bP_a$ with $\Delta,\ J\ $ and $S$. 
+After plugging in $A_i$ which we find from our solution, we obtain the result for the $S^2$ correction to the anomalous dimension:
 \beqa
 \label{gamma2L2}
 \gamma^{(2)}_{J=2}&=&\frac{\pi}{g^2(I_1-I_3)^3}\oint \frac{du_x}{2\pi i}\oint \frac{du_y}{2\pi i}\[\frac{8  I_1^2(I_1+I_3) \left(x^3-\left(x^2+1\right) y\right) }{ \left(x^3-x\right) y^2}\right.\\ \nn
@@ -1167,13 +1188,13 @@ In order to obtain the result for the anomalous dimension, we again use the form
    y^2}{ \left(x^2-1\right)}\right]
 	\frac{1}{4\pi i}\partial_u \log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (1-i u_x+i u_y)}\;.
 \eeqa
-Here the integration contour goes around the branch cut at $(-2g,2g)$. We also denote
-$\sh_-^x=\sinh_-(x) ,\ \sh_-^y=\sinh_-(y) $ (recall that $\sinh_-$ was defined in \eq{defshm}). This is our final result for the curvature function at any coupling.
+Here the integration contour goes around the branch cut at $(-2g,2g)$. 
+We also denote
+$\sh_-^x=\sinh_-(x) ,\ \sh_-^y=\sinh_-(y)$, recall that $\sinh_-$ was defined in \eq{defshm}. 
+This is our final result for the curvature function at any coupling.
 
-
-It is interesting to note that our result contains the combination $\log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (1-i u_x+i u_y)}$ which plays an essential role in the construction of the BES dressing phase. We will use this identification in section \ref{sec:Konishidimension} to compute the integral in \eq{gamma2L2} numerically with high precision.
-
-In the next subsections we will describe generalizations of the $J=2$ result to operators with $J=3$ and $J=4$.
+It is interesting to note that our result contains the combination $\log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (1-i u_x+i u_y)}$ which plays an essential role in the construction of the BES dressing phase, namely they enter the $\beta_{r,s}$ terms in \eq{eq:bes_phase}. 
+We will use this identification in section \ref{sec:strong_curvature} to compute the integral in \eq{gamma2L2} numerically with high precision.
 
  \subsubsection{Results for higher $J$}
 \label{sec:SolvingPmuL3}
@@ -1196,12 +1217,14 @@ As in the previous section, the starting point is the LO solution of the $\bP\mu
 \beq
 	\mu_{12}=1,\ \mu_{13}=0,\ \mu_{14}=0,\  \mu_{24}=\cosh(2\pi u),\ \mu_{34}=1\;.
 \eeq
-The first step is to construct $\mu^{(1)}_{ab}$ from its discontinuity given by the equation \eq{eq:mudiscNLO}. The full solution consists of a particular solution and a general solution of the corresponding homogeneous equation, i.e. zero mode $\pi_{ab}$. In our case the zero mode can be an $i$-periodic function, i.e. a linear combination of $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants. As in the case of $J=2$, we use a combination of the Pfaffian constraint, prescription from section \ref{sec:ancont} and a $\gamma$-transformation to reduce all the parameters of the zero mode to just one, sitting in $\mu_{24}$:
+The first step is to construct $\mu^{(1)}_{ab}$ from its discontinuity given by the equation \eq{eq:mudiscNLO}. 
+The full solution consists of a particular solution and a general solution of the corresponding homogeneous equation, i.e. zero mode $\pi_{ab}$. 
+In our case the zero mode can be an $i$-periodic function, i.e. a linear combination of $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants. 
+As in the case of $J=2$, we use a combination of the Pfaffian constraint, prescription from section \ref{sec:ancont} and a $\gamma$-transformation to reduce all the parameters of the zero mode to just one, sitting in $\mu_{24}$:
  \beq
 \pi_{12}=0,\;\pi_{13}=0,\;\pi_{14}=0,\;\pi_{24}=c_{24,2} \sinh\(2\pi u\),\;\pi_{34}=0.
 \label{eq:periodicpartL3}
 \eeq
-
 As in the previous section, the next step is to find $\bP_a^{(1)}$ from the $P\mu$ system expanded to the first order, namely from
 \beqa
 \label{eq:P1L3}
@@ -1212,8 +1235,10 @@ As in the previous section, the next step is to find $\bP_a^{(1)}$ from the $P\m
 \label{eq:P4L3}
 \eeqa
 where $r_a$ are defined by \eq{eq:ra} and for $J=3$ are given explicitly in appendix \ref{sec:appnlo3}.
-In attempt to solve this system, however, we encounter another technical complication. As one can see from \eq{eq:P1P3LOsolL3}-\eq{eq:P4LOsolL3}, the LO solution contains half-integer powers of $J$, meaning that the $\bP_a$ now have an extra branch point at infinity.
-However, the operations $H$ and $K$ defined by \eq{eq:HK} work only for functions which have Laurent expansion in integer powers of $x$. In order to solve equations of the type \eq{eq:mudiscNLO} on the class of functions which allow Laurent-like expansion in $x$ with only half-integer powers $x$, we introduce operations $H^*,K^*$:
+In attempt to solve this system, however, we encounter another technical complication. 
+As one can see from \eq{P1P3LOsolL3}-\eq{P4LOsolL3}, the LO solution contains half-integer powers of $J$, meaning that the $\bP_a$ now have an extra branch point at infinity.
+However, the operations $H$ and $K$ defined by \eq{eq:HK} work only for functions which have Laurent expansion in integer powers of $x$. 
+In order to solve equations of the type \eq{eq:mudiscNLO} on the class of functions which allow Laurent-like expansion in $x$ with only half-integer powers $x$, we introduce operations $H^*,K^*$:
 \beqa
 &&H^*\cdot f\equiv\frac{x+1}{\sqrt{x}}H\cdot\frac{\sqrt{x}}{x+1} f, \\
 &&K^*\cdot f\equiv\frac{x+1}{\sqrt{x}}K\cdot\frac{\sqrt{x}}{x+1} f.
@@ -1223,23 +1248,23 @@ In terms of these operations the solution of the system \eq{eq:P1L3}-\eq{eq:P4L3
 \label{eq:P1J3}
 \bP_{1}^{(1)}&=&\frac{1}{2}\(H^*(r_1+r_3)+ K^*(r_1-r_3)\)+\bP_1^{\text{zm}},\\
 \bP_{3}^{(1)}&=&\frac{1}{2}\(H^*(r_1+r_3)- K^*(r_1-r_3)\)+\bP_2^{\text{zm}},\\
-\bP_{2}^{(1)}&=&\frac{1}{2}\(H^*(r_2+r_4)+ K^*(r_2-r_4)-\right.\nonumber\\
-&-&\left.H^*\(\cosh(2\pi u)K^*(r_1-r_3)\)- K^*\(\cosh(2\pi u)H^*(r_1+r_3)\)\right)+\bP_3^{\text{zm}},\\
+\bP_{2}^{(1)}&=&\frac{1}{2}\(H^*(r_2+r_4)+ K^*(r_2-r_4)\,-\right.\nonumber\\
+&-&\left.H^*\(\cosh(2\pi u)K^*(r_1-r_3)\)- K^*\(\cosh(2\pi u)H^*(r_1+r_3)\)\right)+\bP_3^{\text{zm}},\qquad\;\;\\
 \label{eq:P4J3}
-\bP_{4}^{(1)}&=&\frac{1}{2}\(H^*(r_2+r_4)- K^*(r_2-r_4)-\right.\nonumber\\
+\bP_{4}^{(1)}&=&\frac{1}{2}\(H^*(r_2+r_4)- K^*(r_2-r_4)\,-\right.\nonumber\\
 &-&\left.H^*\(\cosh(2\pi u)K^*(r_1-r_3)\)+ K^*\(\cosh(2\pi u)H^*(r_1+r_3)\)\right)+\bP_4^{\text{zm}},
 \eeqa
-where $\bP_a^{\text{zm}}$ is a solution of the system \eq{eq:P1L3}-\eq{eq:P4L3} with right hand side set to zero, whose explicit form $\bP_a^{\text{zm}}$ is given in Appendix \ref{sec:appnlo3} (see \eq{eq:P1J3zm}-\eq{eq:P4J3zm}) and which is parametrized by four constants $L_1,L_2,L_3,L_4$, e.g.
+where $\bP_a^{\text{zm}}$ is a solution of the system \eq{eq:P1L3} - \eq{eq:P4L3} with the right hand side set to zero, whose explicit form $\bP_a^{\text{zm}}$ is given in Appendix \ref{sec:appnlo3}, expressions \eq{P1J3zm} - \eq{P4J3zm} and which is parametrized by four constants $L_1,L_2,L_3,L_4$, e.g.
 \beqa
 \bP_1^{\text{zm}}=L_1 x^{-1/2}+L_3x^{1/2}.
 \eeqa
-These constants are fixed by requiring correct asymptotics of $\bP_a$, which also fixes the parameter $c_{24,2}$ in the zero mode \eq{eq:periodicpartL3} of $\mu_{ab}$ \footnote{Actually in this way $c_{24,2}$ is fixed to be zero.}. Indeed, a priori $\bP_2$ and $\bP_1$ have wrong asymptotics. Imposing a constraint that $\bP_2$ decays as $u^{-5/2}$ and $\bP_1$ decays as $u^{-3/2}$ produces five equations, which fix all the parameters uniquely.
+These constants are fixed by requiring correct asymptotics of $\bP_a$, which also fixes the parameter $c_{24,2}$ in the zero mode \eq{eq:periodicpartL3} of $\mu_{ab}$, which is actually fixed to be zero. 
+Indeed, a priori $\bP_2$ and $\bP_1$ have wrong asymptotics. 
+Imposing a constraint that $\bP_2$ decays as $u^{-5/2}$ and $\bP_1$ decays as $u^{-3/2}$ produces five equations, which fix all the parameters uniquely.
+Skipping the details of the intermediate calculations, we present the final result for the anomalous dimension,
 
-
-
-Skipping the details of the intermediate calculations, we present the final result for the anomalous dimension:
+\footnotesize
 \beqa
-\label{gamma2L3}
 &&\gamma^{(2)}_{J=3}=\oint \frac{du_x}{2\pi i}\oint \frac{du_y}{2\pi i}
 i \frac{1}{g^2(I_2-I_4)^3} \left[\frac{2 \left(x^6-1\right) y (\ch_-^y)^2 (I_2-I_4)}{x^3 \left(y^2-1\right)}-\right.\\ \nn
 &&-\frac{4 \ch_-^x
@@ -1252,11 +1277,13 @@ i \frac{1}{g^2(I_2-I_4)^3} \left[\frac{2 \left(x^6-1\right) y (\ch_-^y)^2 (I_2-I
    \\ \nn
 &&-\frac{4 I_2 \ch_-^y (x-y) (x y-1) \left(I_2
    \left(\(x^6+1\) \left(y^3+y\right)+\(x^5+x\) \left(y^4+y^2+1\right)-x^3 \left(y^4+1\right)\right)+I_4 x^3
-   y^2\right)}{x^3 \left(x^2-1\right) y^3}-\\ \nn
+   y^2\right)}{x^3 \left(x^2-1\right) y^3}\\ \nn
 && \left.-\frac{I_2^2 (y^2-1)  (x-y) (x y-1) \left(I_2 \left(\(x^6 +x^4 +x^2 +1\)y+2 x^3
    \left(y^2+1\right)\right)+I_4 \left(x^5+x\right) \left(y^2+1\right)\right)}{x^3 \left(x^2-1\right) y^3}\right]\\ \nn
 	&& \frac{1}{4\pi i}\partial_u \log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (1-i u_x+i u_y)}.
+\label{gamma2L3}
 \eeqa
+\normalsize
 We defined $\ch_-^x=\cosh_-(x)$ and $\ch_-^y=\cosh_-(y)$, where $\cosh_-(x)$ is the part of the Laurent expansion of $\cosh\(g(x+1/x)\)$ vanishing at infinity, i.e.
 \beq
 \cosh_-(x)=\sum_{k=1}^{\infty} I_{2k}x^{-2k}.
@@ -1266,9 +1293,8 @@ The result for $J=4$ is given in appendix \ref{sec:SolvingPmuL4}.
 
 \subsubsection{Weak coupling expansion}
 
-
-
-Our results for the curvature function $\gamma^{(2)}(g)$ at $J=2,3,4$ (Eqs. \eq{gamma2L2}, \eq{gamma2L3}, \eq{gamma2L4}) are straightforward to expand at weak coupling. We give expansions to 10 loops in \text{appendix \ref{sec:weakS3}}. Let us start with the $J=2$ case, for which we found
+Our results for the curvature function $\gamma^{(2)}(g)$ at $J=2,3,4$ given in \eq{gamma2L2}, \eq{gamma2L3} and \eq{gamma2L4} are straightforward to expand at weak coupling. 
+We give expansions to 10 loops in \text{appendix \ref{sec:weakS3}}. Let us start with the $J=2$ case, for which we found
 \beqa
 \label{weak22}
 \gamma_{J=2}^{(2)}&=&-8 g^2 \zeta_3+g^4 \left(140 \zeta_5-\frac{32 \pi ^2 \zeta_3}{3}\right)+g^6 \left(200 \pi ^2 \zeta_5-2016
@@ -1280,25 +1306,24 @@ Our results for the curvature function $\gamma^{(2)}(g)$ at $J=2,3,4$ (Eqs. \eq{
    \pi ^4 \zeta_7+45440 \pi ^2 \zeta_9-377520 \zeta_{11}\right)
 	+\dots
 \eeqa
-Remarkably, at each loop order all contributions have the same transcendentality, and only simple zeta values (i.e. $\zeta_n$) appear. This is also true for the $J=3$ and $J=4$ cases.
-
+Remarkably, at each loop order all contributions have the same transcendentality, and only simple zeta values (i.e. $\zeta_n$) appear. 
+This is also true for the $J=3$ and $J=4$ cases.
 We can check this expansion against known results, as the anomalous dimensions of twist two operators have been computed up to five loops for arbitrary spin \cite{Kotikov:2001sc,Kotikov:2003fb,Kotikov:2004er,Moch:2004pa,Staudacher:2004tk,Kotikov:2007cy,Bajnok:2008qj,Lukowski:2009ce} (see also \cite{Velizhanin:2013vla} and the review \cite{Freyhult:2010kc}).
-To three loops they can be found solely from the ABA equations, while at four and five loops wrapping corrections need to be taken into account which was done in \cite{Bajnok:2008qj,Lukowski:2009ce} by utilizing generalized Luscher formulas. All these results are given by linear combinations of harmonic sums
+To three loops they can be found solely from the ABA equations, while at four and five loops wrapping corrections need to be taken into account which was done in \cite{Bajnok:2008qj,Lukowski:2009ce} by utilizing generalized Luscher formulas. 
+All these results are given by linear combinations of harmonic sums
 \beq
 	S_a(N) = \sum_{n=1}^N\frac{(\mathrm{sign}(a))^n}{n^{|a|}}, \ \
 	S_{a_1,a_2,a_3,\dots}(N)=\sum_{n=1}^N\frac{(\mathrm{sign}(a_1))^n}{n^{|a_1|}}S_{a_2,a_3,\dots}(n)
 \eeq
-with argument equal to the spin $S$. To make a comparison with our results we expanded these predictions in the $S\to 0$ limit. For this lengthy computation, as well as to simplify the final expressions, we used the \verb"Mathematica" packages HPL \cite{HPL}, the package \cite{VolinPackage} provided with the paper \cite{Leurent:2013mr}, and the HarmonicSums package \cite{Ablinger}.
+with argument equal to the spin $S$. 
+To make a comparison with our results we expanded these predictions in the $S\to 0$ limit. 
+For this lengthy computation, as well as to simplify the final expressions, we used the \verb"Mathematica" packages HPL \cite{HPL}, the package \cite{VolinPackage} provided with the paper \cite{Leurent:2013mr}, and the HarmonicSums package \cite{Ablinger}.
+In this way we have confirmed the coefficients in \eq{weak22} to four loops. 
+Let us note that expansion of harmonic sums leads to multiple zeta values (MZVs), which however cancel in the final result leaving only $\zeta_n$.
+Importantly, the part of the four-loop coefficient which comes from the wrapping correction is essential for matching with our result. 
+This is a strong confirmation that our calculation based on the $\bP\mu$-system is valid beyond the ABA level. 
+Additional evidence that our result incorporates all finite-size effects is found at strong coupling, as we shall see in section \ref{sec:strong_curvature}.
 
-In this way we have confirmed the coefficients in \eq{weak22} to four loops. Let us note that expansion of harmonic sums leads to multiple zeta values (MZVs), which however cancel in the final result leaving only $\zeta_n$.
-
-Importantly, the part of the four-loop coefficient which comes from the wrapping correction is essential for matching with our result. This is a strong confirmation that our calculation based on the $\bP\mu$-system is valid beyond the ABA level. Additional evidence that our result incorporates all finite-size effects is found at strong coupling (see section \ref{sec:SlopeSlopeStrongCoupling}).
-
-
-
-
-	
-	
 For operators with $J=3$, our prediction at weak coupling is
 \beqa
 	\gamma_{J=3}^{(2)}&=&-2g^2\zeta_3+g^4\(12 \zeta_5-\frac{4 \pi ^2 \zeta_3}{3}\)
@@ -1308,25 +1333,22 @@ For operators with $J=3$, our prediction at weak coupling is
    g^8\(-\frac{4 \pi ^6 \zeta_3}{45}-\frac{4 \pi ^4 \zeta_5}{15}-528 \zeta_9\)
    +\dots
 \eeqa
-The known results for any spin in this case are available at up to six loops, including the wrapping correction which first appears at five loops \cite{Beccaria:2007cn,Beccaria:2009eq,Velizhanin:2010cm}. Expanding them at $S\to 0$ we have checked our calculation to four loops.\footnote{As a further check it would be interesting to expand to order $S^2$ the known results for twist 2 operators at five loops, and for twist 3 operators at five and six loops -- all of which are given by huge expressions.}
+The known results for any spin in this case are available at up to six loops, including the wrapping correction which first appears at five loops \cite{Beccaria:2007cn,Beccaria:2009eq,Velizhanin:2010cm}.
+Expanding them at $S\to 0$ we have checked our calculation to four loops.
+%\footnote{As a further check it would be interesting to expand to order $S^2$ the known results for twist 2 operators at five loops, and for twist 3 operators at five and six loops -- all of which are given by huge expressions.}
+For future reference, in appendix \ref{sec:weakS3} we present an expansion of known results for $J=2,3$ up to order $S^3$ at first several loop orders. 
+In particular, we found that multiple zeta values appear in this expansion, which did not happen at lower orders in $S$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.9]{../graphics/j4plot}
+\caption{The dashed line shows the result from the $\bP\mu$-system for the coefficient of $S^2$ in the 1-loop energy at $J=4$, i.e. $-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi
+   ^4}\approx-0.931$ (see \eq{gamma42weak}). The dots show the Bethe ansatz prediction \eq{gammaJ} expanded to orders $1/J^3,1/J^4,\dots,1/J^8$ (the order of expansion $n$ corresponds to the horizontal axis), and it appears to converge to the $\bP\mu$-system result.}
+\label{fig:j4plot}
+\end{figure}
 
 
-For future reference, in appendix \ref{sec:weakS3} we present an expansion of known results for $J=2,3$ up to order $S^3$ at first several loop orders. In particular, we found that multiple zeta values appear in this expansion, which did not happen at lower orders in $S$.
-
-% \FIGURE[ht]
-% {
-% \label{fig:j4plot}
-
-    % \begin{tabular}{cc}
-    % \includegraphics[scale=0.9]{j4plot}\\
-    % \end{tabular}
-% \caption{\textbf{One-loop energy at $J=4$ from the Bethe ansatz.} The dashed line shows the result from the $\bP\mu$-system for the coefficient of $S^2$ in the 1-loop energy at $J=4$, i.e. $-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi
-   % ^4}\approx-0.931$ (see \eq{gamma42weak}). The dots show the Bethe ansatz prediction \eq{gammaJ} expanded to orders $1/J^3,1/J^4,\dots,1/J^8$ (the order of expansion $n$ corresponds to the horizontal axis), and it appears to converge to the $\bP\mu$-system result.
-% }
-% }
-
-
-Let us now discuss the $J=4$ case. The expansion of our result reads:
+For $J=4$ the expansion reads
 \beqa
 \label{gamma42weak}
 	\gamma_{J=4}^{(2)}&=&g^2 \left(-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi
@@ -1338,56 +1360,56 @@ Let us now discuss the $J=4$ case. The expansion of our result reads:
 	\\ \nn
 	 && \ \ \ \ \ \  + \left.\frac{3513510 \zeta_{13}}{\pi ^4} \right)+\dots
 \eeqa
-Unlike for the $J=2$ and $J=3$ cases, we could not find a closed expression for the energy at any spin $S$ in literature even at one loop, however there is another way to check our result. One can expand the asymptotic Bethe ansatz equations at large $J$ for fixed values of $S=2,4,6,\dots$ and then extract the coefficients in the expansion which are polynomial in $S$. This was done in \cite{Beccaria:2012kp} (see appendix C there) where at one loop the expansion was found up to order $1/J^6$:
-\beqa
+Unlike for the $J=2$ and $J=3$ cases, we could not find a closed expression for the energy at any spin $S$ in literature even at one loop, however there is another way to check our result. 
+One can expand the asymptotic Bethe ansatz equations at large $J$ for fixed values of $S=2,4,6,\dots$ and then extract the coefficients in the expansion which are polynomial in $S$. 
+This was done in \cite{Beccaria:2012kp} (see appendix C there) where at one loop the expansion was found up to order $1/J^6$:
+\beq
 \label{gammaJ}
-\nn
-	\gamma(S,J) &=& g^2\(\frac{S}{2\,J^{2}}-\Big(\frac{S^{2}}{4}+\frac{S}{2}\Big)\,\frac{1}{ J^{3}}
+	\gamma(S,J) \simeq g^2\(\frac{S}{2\,J^{2}}-\Big(\frac{S^{2}}{4}+\frac{S}{2}\Big)\,\frac{1}{ J^{3}}
 +\Big[
 \frac{3 S^3}{16}+\Big(\frac{1}{8}-\frac{\pi ^2}{12}\Big) S^2+\frac{S}{2}
-\Big]\,\frac{1}{ J^{4}} +\dots\)+\mathcal{O}(g^4)
-\\
-\eeqa
-Now taking the part proportional to $S^2$ and substituting $J=4$ one may expect to get a numerical approximation to the 1-loop coefficient in our result \eq{gamma42weak}, i.e. $-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi
-   ^4}$. To increase the precision we extended the expansion in \eq{gammaJ} to order $1/J^8$. Remarkably, in this way we confirmed the 1-loop part of the $\bP\mu$ prediction \eq{gamma42weak} with about $1\%$ accuracy! In Fig. \ref{fig:j4plot} one can also see that the ABA result converges to our prediction when the order of expansion in $1/J$ is being increased.
-
-Also, in contrast to $J=2$ and $J=3$ cases we see that negative powers of $\pi$ appear in \eq{gamma42weak} (although still all the contributions at a given loop order have the same transcendentality). It would be interesting to understand why this happens  from the gauge theory perspective, especially since expansion of the leading $S$ term \eq{slopeIn} has the same structure for all $J$,
+\Big]\,\frac{1}{ J^{4}} +\dots\)
+\eeq
+Now taking the part proportional to $S^2$ and substituting $J=4$ one may expect to get a numerical approximation to the 1-loop coefficient in our result \eq{gamma42weak}, i.e. $-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi^4}$. 
+To increase the precision we extended the expansion in \eq{gammaJ} to order $1/J^8$. 
+Remarkably, in this way we confirmed the 1-loop part of the $\bP\mu$ prediction \eq{gamma42weak} with about $1\%$ accuracy! 
+In figure \ref{fig:j4plot} one can also see that the ABA result converges to our prediction when the order of expansion in $1/J$ is being increased.
+Also, in contrast to $J=2$ and $J=3$ cases we see that negative powers of $\pi$ appear in \eq{gamma42weak}, although still all the contributions at a given loop order have the same transcendentality. 
+It would be interesting to understand why this happens  from the gauge theory perspective, especially since expansion of the leading $S$ term \eq{eq:resultLO} has the same structure for all $J$,
 \beq
 	\gamma_{J}^{(1)}=\frac{8 \pi ^2 g^2}{J (J+1)}-\frac{32 \pi ^4 g^4}{J (J+1)^2
    (J+2)}+\frac{256 \pi ^6 g^6}{J (J+1)^3 (J+2) (J+3)}
 	+\dots
 \eeq
-The change of structure at $J=4$ might be related to the fact that for $J\geq 4$ the ground state anomalous dimension even at one loop is expected to be an irrational number for integer $S>0$ (see \cite{Beccaria:2008pp}, \cite{Belitsky:2008mg}), and thus cannot be written as a linear combination of harmonic sums with integer coefficients.
-
-
-
-In the next section we will discuss tests and applications of our results at strong coupling.
-
+The change of structure at $J=4$ might be related to the fact that for $J\geq 4$ the ground state anomalous dimension even at one loop is expected to be an irrational number for integer $S>0$ \cite{Beccaria:2008pp,Belitsky:2008mg}, and thus cannot be written as a linear combination of harmonic sums with integer coefficients.
 
 
 \subsubsection{Strong coupling expansion}
+\label{sec:strong_curvature}
 
-In this section we will present the strong coupling expansion of our results for the curvature function, and link these results to anomalous dimensions of short operators at strong coupling. We will also obtain new predictions for the BFKL pomeron intercept.
-
-%\subsection{Expansion of the curvature function for $J=2,3,4$}
-
-To obtain the strong coupling expansion of our exact results for the curvature function, we evaluated it numerically with high precision for a range of values of $g$ and then made a fit to find the expansion coefficients. It would also be interesting to carry out the expansion analytically, and we leave this for the future.
+To obtain the strong coupling expansion of our exact results for the curvature function, we evaluated it numerically with high precision for a range of values of $g$ and then made a fit to find the expansion coefficients. 
+We should note that the expansion has been carried out analytically in \cite{Beccaria:2014rca} using some clever tricks that are not obvious to justify.
 
 For numerical study it is convenient to write our exact expressions \eq{gamma2L2}, \eq{gamma2L3}, \eq{gamma2L4} for $\gamma^{(2)}(g)$, which have the form
 \beq
 \label{ints}
 	\gamma^{(2)}(g)=\oint {du_x}\oint {du_y} f(x,y) \partial_{u_x} \log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (1-i u_x+i u_y)}
 \eeq
-where the integration goes around the branch cut between $-2g$ and $2g$, in a slightly different way (we remind that we use notation $x+\frac{1}{x}=\frac{u_x}{g}$ and $y+\frac{1}{y}=\frac{u_y}{g}$). Namely, by changing the variables of integration to $x,y$ and integrating by parts one can write the result as
+where the integration goes around the branch cut between $-2g$ and $2g$, in a slightly different way (we remind that we use notation $x+\frac{1}{x}=\frac{u_x}{g}$ and $y+\frac{1}{y}=\frac{u_y}{g}$). 
+Namely, by changing the variables of integration to $x,y$ and integrating by parts one can write the result as
 \beq
 \label{ints2}
 	\gamma^{(2)}(g)=\oint {dx}\oint {dy} F(x,y) \log\frac{\Gamma (i u_x-i u_y+1)}{\Gamma (i u_y-i u_x+1)}
 \eeq
-where $F(x,y)$ is some polynomial in the following variables: $x,\;1/x,\;y,\;1/y,\;\sh_-^x$ and $\sh_-^y$ (for $J=3$ it includes $\ch_-^x,\;\ch_-^y$ instead of the $\sh_-$ functions). The integral in \eq{ints2} is over the unit circle. The advantage of this representation is that plugging in $\sh_-^x$, $\sh_-^y$ as series expansions (truncated to some large order), we see that it only remains to compute integrals of the kind
+where $F(x,y)$ is some polynomial in the following variables: $x,\;1/x,\;y,\;1/y,\;\sh_-^x$ and $\sh_-^y$ (for $J=3$ it includes $\ch_-^x,\;\ch_-^y$ instead of the $\sh_-$ functions). 
+The integral in \eq{ints2} is over the unit circle.
+The advantage of this representation is that plugging in $\sh_-^x$, $\sh_-^y$ as series expansions (truncated to some large order), we see that it only remains to compute integrals of the kind
 \beqa
 C_{r,s}&=&\frac{1}{i}\oint\frac{dx}{2\pi}\oint\frac{dy}{2\pi}x^r y^s\log\frac{\Gamma(i u_x-iu_y+1)}{\Gamma(i u_y-iu_x+1)}
 \eeqa
-These are nothing but the coefficients of the BES dressing phase \cite{Beisert:2006ez,Dorey:2007xn,Beisert:2006ib,Vieira:2010kb}. They can be conveniently computed using the strong coupling expansion \cite{Beisert:2006ez}
+These are nothing but the coefficients of the BES dressing phase \cite{Beisert:2006ib, Beisert:2006ez, Vieira:2010kb, Dorey:2007xn}. 
+They can be conveniently computed using the strong coupling expansion \cite{Beisert:2006ez}
+\small
 \beq
 C_{r,s}=\sum_{n=0}^\infty\[-\frac{2^{-n-1} (-\pi )^{-n} g^{1-n} \zeta_n
    \left(1-(-1)^{r+s+4}\right) \Gamma \left(\frac{1}{2}
@@ -1395,12 +1417,14 @@ C_{r,s}=\sum_{n=0}^\infty\[-\frac{2^{-n-1} (-\pi )^{-n} g^{1-n} \zeta_n
    (n+r+s+1)\right)}{\Gamma (n-1) \Gamma \left(\frac{1}{2}
    (-n-r+s+3)\right) \Gamma \left(\frac{1}{2} (-n+r+s+5)\right)}\]
 \eeq
-However this expansion is only asymptotic and does not converge. For fixed $g$ the terms will start growing with $n$ when $n$ is greater than some value $N$, and we only summed the terms up to $n=N$ which gives the value of $C_{r,s}$ with very good precision for large \text{enough $g$}.
-
-Using this approach we computed the curvature function for a range of values of $g$ (typically we took $7\leq g \leq 30$) and then fitted the result as an expansion in $1/g$. This gave us only numerical values of the expansion coefficients, but in fact we found that with very high precision the coefficients are as follows. For $J=2$
+\normalsize
+However this expansion is only asymptotic and does not converge. 
+For fixed $g$ the terms will start growing with $n$ when $n$ is greater than some value $N$, and we only summed the terms up to $n=N$ which gives the value of $C_{r,s}$ with very good precision for large \text{enough $g$}.
+Using this approach we computed the curvature function for a range of values of $g$ (typically we took $7\leq g \leq 30$) and then fitted the result as an expansion in $1/g$. This gave us only numerical values of the expansion coefficients, but in fact we found that with very high precision the coefficients are as follows. 
+For $J=2$
 \beqa
 \label{eq:ssj2}
-\gamma^{(2)}_{J=2}&=&-\pi ^2 g^2+\frac{\pi  g}{4}+\frac{1}{8}-\frac{1}{\pi g}\(\frac{3 \zeta_3}{16}+\frac{3}{512}\)-\frac{1}{\pi^2g^2}\(\frac{9 \zeta_3}{128}+\frac{21}{512}\)
+\gamma^{(2)}_{J=2}&=&-\pi ^2 g^2+\frac{\pi  g}{4}+\frac{1}{8}-\frac{1}{\pi g}\(\frac{3 \zeta_3}{16}+\frac{3}{512}\)-\frac{1}{\pi^2g^2}\(\frac{9 \zeta_3}{128}+\frac{21}{512}\)\quad\quad
 \\ \nn
 &+&
 \frac{1}{\pi^3g^3}\(\frac{3 \zeta_3}{2048}+\frac{15 \zeta_5}{512}-\frac{3957}{131072}\) + \dots\;,
@@ -1413,20 +1437,26 @@ then for $J=3$
 \frac{1}{216}
 +\frac{\zeta_3}{8}
 \)-
-\frac{1}{\pi^2g^2}\(\frac{3 \zeta_3}{64}+\frac{743}{13824}\)
+\frac{1}{\pi^2g^2}\(\frac{3 \zeta_3}{64}+\frac{743}{13824}\)\quad\quad
 \\ \nn
 &+&
 \frac{1}{\pi^3g^3}\(\frac{41 \zeta_3}{1024}+\frac{35 \zeta_5}{512}-\frac{5519}{147456}\) + \dots\;,
 \eeqa
 and finally for $J=4$
 \beqa
-\gamma^{(2)}_{J=4}&=&-\frac{\pi ^2 g^2}{8}+\frac{\pi  g}{32}+\frac{1}{16}-\frac{1}{\pi g}\(\frac{3 \zeta_3}{32}+\frac{15}{4096}\)-\frac{0.01114622551913}{g^2}
+\gamma^{(2)}_{J=4}&=&-\frac{\pi ^2 g^2}{8}+\frac{\pi  g}{32}+\frac{1}{16}-\frac{1}{\pi g}\(\frac{3 \zeta_3}{32}+\frac{15}{4096}\)-\frac{0.01114622551913}{g^2}\quad\quad
 \\ \nn
 &+&\frac{0.004697583899}{g^3}+ \dots\;.
 \eeqa
-To fix coefficients for the first four terms in the expansion we were guided by known analytic predictions which will be discussed below, and found that our numerical result matches these predictions with high precision. Then for $J=2$ and $J=3$ we extracted the numerical values obtained from the fit for the coefficients of $1/g^2$ and $1/g^3$, and plugging them into the online calculator EZFace \cite{ezface} we obtained a prediction for their exact values as combinations of $\zeta_3$ and $\zeta_5$. Fitting again our numerical results with these exact values fixed, we found that the precision of the fit at the previous orders in $1/g$ increased. This is a highly nontrivial test for the proposed exact values of $1/g^2$ and $1/g^3$ terms. For $J=2$ we confirmed the coefficients of these terms with absolute precision $10^{-17}$ and $10^{-15}$ at $1/g^2$ and $1/g^3$ respectively (at previous orders of the expansion the precision is even higher). For $J=3$ the precision was correspondingly $10^{-15}$ and $10^{-13}$.
-
-For $J=4$ we were not able to get a stable fit for the $1/g^2$ and $1/g^3$ coefficients from EZFace, so above we gave their numerical values (with uncertainty in the last digit). However below we will see that based on $J=2$ and $J=3$ results one can make a prediction for these coefficients, which we again confirmed by checking that precision of the fit at the previous orders in $1/g$ increases. The precision of the final fit at orders $1/g^2$ and $1/g^3$ is $10^{-16}$ and $10^{-14}$ respectively.
+To fix coefficients for the first four terms in the expansion we were guided by known analytic predictions which will be discussed below, and found that our numerical result matches these predictions with high precision. 
+Then for $J=2$ and $J=3$ we extracted the numerical values obtained from the fit for the coefficients of $1/g^2$ and $1/g^3$, and plugging them into the online calculator EZFace \cite{ezface} we obtained a prediction for their exact values as combinations of $\zeta_3$ and $\zeta_5$. 
+Fitting again our numerical results with these exact values fixed, we found that the precision of the fit at the previous orders in $1/g$ increased. 
+This is a highly non-trivial test for the proposed exact values of $1/g^2$ and $1/g^3$ terms. 
+For $J=2$ we confirmed the coefficients of these terms with absolute precision $10^{-17}$ and $10^{-15}$ at $1/g^2$ and $1/g^3$ respectively (at previous orders of the expansion the precision is even higher). 
+For $J=3$ the precision was correspondingly $10^{-15}$ and $10^{-13}$.
+For $J=4$ we were not able to get a stable fit for the $1/g^2$ and $1/g^3$ coefficients from EZFace, so above we gave their numerical values (with uncertainty in the last digit). 
+However below we will see that based on $J=2$ and $J=3$ results one can make a prediction for these coefficients, which we again confirmed by checking that precision of the fit at the previous orders in $1/g$ increases. 
+The precision of the final fit at orders $1/g^2$ and $1/g^3$ is $10^{-16}$ and $10^{-14}$ respectively.
 
 \subsection{Update on short strings}
 \label{sec:konishi_three_loops}
