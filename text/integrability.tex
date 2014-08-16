@@ -1172,6 +1172,7 @@ The reason for omitting odd powers of the scaling dimension from the ansatz will
 We can now invert the relation and express $\Delta$ in terms of $S$ at strong coupling, which exactly reproduces \eq{eq:delta_squared_basso}. There exists a one-to-one mapping between the coefficients $\alpha_i$, $\beta_i$, etc. and $A_i$, $B_i$ etc, which is rather complicated but easy to find.
 % We note that this structure of $\Delta^2$ coincides with Basso's conjecture in \cite{Basso:2011rs} for mode number $n=1$ \footnote{The generalization of \eq{eq:delta_squared_basso} for $n>1$ is not fully clear, as noted in \cite{Gromov:2011bz}, and this case will be discussed in appendix \ref{sec:appN}.}. 
 The pattern in \eq{eq:delta_squared_basso} continues to higher orders in $S$ with further coefficients $D_i$, $E_i$, etc. and powers of $\mu$ suppressed incrementally. This structure is a non-trivial constraint on $\Delta$ itself as one easily finds from \eq{eq:delta_squared_basso} that
+\small
 \beqa\label{eq:delta_small_s}
 \Delta&\simeq&J+\frac{S}{2J}
 \(
@@ -1191,6 +1192,7 @@ A_1\sqrt{\mu}+A_2+\frac{A_3}{\sqrt{\mu}}+\dots
 \).
 %+{\cal O}(S^3)\;.
 \eeqa
+\normalsize
 By definition the coefficients of $S$ and $S^2$ are the slope and curvature functions respectively as defined in \eq{eq:slope_definition}, so now we have their expansions at strong coupling in terms of $A_i,\;B_i,\;C_i$, etc. 
 Since the $S$ coefficient only contains the constants $A_i$, we can find all of their values by simply expanding the slope function \eq{eq:slope_function} that we found earlier at strong coupling. 
 We get
@@ -1207,7 +1209,6 @@ It is not hard to see that the sub-leading coefficient in the spin $S$ only cont
 Thus we conclude that the letters in $A_i$, $B_i$, $C_i$ etc. are directly linked to the generalizations of the slope function $\gamma^{(n)}$.
 
 \subsubsection{Two-loop prediction}
-
 
 We are interested in the coefficients of the strong coupling expansion of $\Delta$, namely
 \beq
@@ -1226,15 +1227,15 @@ Thus we reformulate the problem entirely in terms of the coefficients $A_i$, $B_
 Further coefficients become more and more complicated, however a very clear pattern can be noticed after looking at these expressions: we see that the term $\Delta^{(n)}$ only contains coefficients with indices up to $n+1$, e.g. the tree level term $\Delta^{(0)}$  only depends on $A_1$, the one-loop term depends on $A_1$, $A_2$, $B_1$, etc. Thus we can associate the index of these coefficients with the loop level. Conversely, from the last section we learned that the letter of $A_i$, $B_i$, etc. can be associated with the order in $S$, i.e. the slope function fixed all $A_i$ coefficients and the curvature function in principle fixes all $B_i$ coefficients.
 
 Looking at \eq{eq:delta_abc} we see that knowing $A_i$ and $B_i$ only takes us to one loop, in order to proceed we need to know some coefficients in the $C_i$ and $D_i$ series. This is where the knowledge of the classical energy \eq{eq:classical_energy} and its semi-classical correction \eq{eq:delta_oneloop_slope} come in handy. We add up the classical and the 1-loop contributions, take $S$ and $J$ fixed at strong coupling and compare the result to \eq{eq:delta_squared_basso}. By requiring consistency we are able to extract the following coefficients for $n=1$,
-\beq
+\beqa
  \label{eq:abcd2}
  \begin{array}{rcrlrlrcl}
   A_1 &=&  &2, &A_2&  &=& -&1  \\
   B_1 &=&  &3/2, &B_2&  &=& -&3\,\zeta_3+\frac{3}{8}  \\
   C_1 &=& -&3/8, &C_2& &=& &\frac{1}{16} \, (60 \, \zeta_3 + 60 \, \zeta_5 - 17) \\
-  D_1 &=&  &31/64, &D_2& &=& & \frac{1}{512} (-5520 \, \zeta_3 - 5120 \, \zeta_5 -3640 \, \zeta_7 +901).
+  D_1 &=&  &31/64, &D_2& &=& & \frac{1}{512} (-5520 \, \zeta_3 - 5120 \, \zeta_5 -3640 \, \zeta_7 +901). 
  \end{array}
-\eeq
+\eeqa
 As discussed in the previous section, we can in principle extract all coefficients with indices $1$ and $2$. In order to find e.g. $B_3$ we would need to extend the quantization of the classical solution to the next order. 
 % We can now take the small spin expansion of the scaling dimension \eq{eq:delta_small_s} and re-expand it at strong coupling.
 % Together with our knowledge of the coefficients $A_i$ coming from the slope function we find

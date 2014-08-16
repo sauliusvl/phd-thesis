@@ -1461,149 +1461,39 @@ The precision of the final fit at orders $1/g^2$ and $1/g^3$ is $10^{-16}$ and $
 \subsection{Update on short strings}
 \label{sec:konishi_three_loops}
 
-Here we will find an analytic expression for the strong coupling expansion of the curvature function which generalizes the formulas \eq{eq:ssj2} and \eq{eq:ssj3} to any $J$. To this end it will be beneficial to consider the structure of classical expansions of the scaling dimension. A good entry point is considering the inverse relation $S(\Delta)$, frequently encountered in the context of BFKL. It satisfies a few basic properties, namely the curve $S(\Delta)$ goes through the points $(\pm J, 0)$ at any coupling, because at $S=0$ the operator is BPS. At the same time for non-BPS states
-one should have $\Delta(\lambda)\propto \lambda^{1/4}\to\infty$ \cite{Gubser:1998bc} which indicates that if $\Delta$ is fixed, $S$ should go to zero, thus combining this with the knowledge of fixed points $(\pm J, 0)$ we conclude that at infinite coupling $S(\Delta)$ is simply the line $S = 0$. As the coupling becomes finite $S(\Delta)$ starts bending from the $S=0$ line and starts looking like a parabola going through the points $\pm J$, see fig. \ref{pic:bfkl}. Based on this qualitative picture and the scaling $\Delta(\lambda)\propto \lambda^{1/4}$ at $\lambda\rightarrow\infty$ and fixed $J$ and $S$, one can write down the following ansatz,
-\beqa
-\label{eq:sofdelta}
-	S(\Delta) &=& \left( \Delta^2 - J^2\right)\Bigl( \alpha_1 \frac{1}{\lambda^{1/2}} + \alpha_2 \frac{1}{\lambda} + (\alpha_3 + \beta_3 \Delta^2) \frac{1}{\lambda^{3/2}} + (\alpha_4 + \beta_4 \Delta^2) \frac{1}{\lambda^{2}}   \Bigr.\\
-	\nn
-	&+&
-	\Bigl.
-	(\alpha_5 + \beta_5 \Delta^2+\gamma_5\Delta^4) \frac{1}{\lambda^{5/2}}
-	+(\alpha_6 + \beta_6 \Delta^2+\gamma_6\Delta^4) \frac{1}{\lambda^{3}}
-	+\dots
-	\Bigr).
-\eeqa
-We omit odd powers of the scaling dimension from the ansatz, as only the square of $\Delta$ enters the $\bf{P}\mu$-system. We can now invert the relation and express $\Delta$ in terms of $S$ at strong coupling, which gives
-\beq
-\label{eq:delta_squared_basso}
-\Delta^2=J^2+S
-\(
-A_1\sqrt{\lambda}+A_2+\dots
-\)
-+S^2
-\(
-B_1+\frac{B_2}{\sqrt\lambda}
-+\dots
-\)
-+S^3
-\(
-\frac{C_1}{\lambda^{1/2}}
-+\frac{C_2}{\lambda}
-+\dots
-\)
-+{\cal O}({ S}^4)\;,
-\eeq
-where the coefficients $A_i,\;B_i,\;C_i$ are some functions of $J$. There exists a one-to-one mapping between the coefficients $\alpha_i$, $\beta_i$, etc. and $A_i$, $B_i$ etc, which is rather complicated but easy to find. We note that this structure of $\Delta^2$ coincides with Basso's conjecture in \cite{Basso:2011rs} for mode number $n=1$ \footnote{The generalization of \eq{eq:delta_squared_basso} for $n>1$ is not fully clear, as noted in \cite{Gromov:2011bz}, and this case will be discussed in appendix \ref{sec:appN}.}. The pattern in \eq{eq:delta_squared_basso} continues to higher orders in $S$ with further coefficients $D_i$, $E_i$, etc. and powers of $\lambda$ suppressed incrementally. This structure is a nontrivial constraint on $\Delta$ itself as one easily finds from \eq{eq:delta_squared_basso} that
-\beqa
-\Delta&=&J+\frac{S}{2J}
-\(
-A_1\sqrt{\lambda}+A_2+\frac{A_3}{\sqrt{\lambda}}+\dots
-\)\\
-\nn&+&S^2
-\(
-- \frac{A_1^2}{8J^3} \, \lambda
--  \frac{A_1A_2}{4J^3} \, \sqrt{\lambda}
-+\[\frac{B_1}{2J}-\frac{A_2^2+2A_1 A_3}{8J^3}\]
-+
-\[
-\frac{B_2}{2J}
--\frac{A_2A_3+A_1A_4}{4J^3}
-\]  \frac{1}{\sqrt\lambda}
-+\dots
-\).
-\eeqa
-By definition the coefficients of $S$ and $S^2$ are the slope and curvature functions respectively, so now we have their expansions at strong coupling in terms of $A_i,\;B_i,\;C_i$, etc. Since the $S$ coefficient only contains the constants $A_i$, we can find all of their values by simply expanding the slope function \eq{eq:resultLO} at strong coupling. We get
-\beq
-\label{eq:bassos_as}
-A_1=2\;\;,\;\;
-A_2=-1\;\;,\;\;
-A_3=J^2-\frac{1}{4}\;\;,\;\;
-A_4=J^2-\frac{1}{4}\dots\;.
-\eeq
-Note that in this series the power of $J$ increases by two at every other member, which is a direct consequence of omitting odd powers of $\Delta$ from \eq{eq:sofdelta}. We also expect the same pattern to hold for the coefficients $B_i$, $C_i$, etc.
+Having just found the curvature function we recall section \ref{sec:short_strings} where we were able to boost the folded string semi-classical energy one loop further by utilizing the knowledge of the slope function.
+We also argued that knowing the curvature function would enable us to repeat the procedure and boost the result by one more loop.
 
-The curvature function written in terms of $A_i$, $B_i$, etc. is given by
+The key idea was to utilize the structure of the small spin expansion \eq{eq:delta_squared_basso} of the folded string energy.
+Re-expanding it at fixed global charges $S$ and $J$ we found the energy in terms of the coefficients $A_i, B_i, C_i$, etc. as seen in \eq{eq:delta_abc}.
+We also found that in principle the curvature function should fix all of the $B_i$ coefficients, which we can indeed do by first expanding the curvature function at strong coupling in terms of $A$'s and $B$'s
+\small
 \beqa
 	\label{eq:ss_abc}
-	\gamma^{(2)}_{J}(g) &=& -\frac{2 \pi ^2 g^2 A_1^2 }{J^3} - \frac{\pi g A_1 A_2 }{J^3}-\frac{A_2^2+2 A_1 A_3-4 B_1 J^2}{8 J^3} - \frac{A_2 A_3+A_1 A_4-2 B_2 J^2}{16 \pi g J^3} \\
-	&-&  \frac{A_3^2+2 A_2 A_4+2 A_1 A_5-4 B_3 J^2}{128 \pi^2 g^2 J^3} - \frac{A_3 A_4 + A_2 A_5 + A_1 A_6 - 2 B_4 J^2}{256 \pi^3 g^3 J^3} + \mc{O}\left(\frac{1}{g^4}\right). \nonumber
+	\gamma^{(2)}_{J}(g) \!\!\!\!&=&\!\!\!\! -\frac{2 \pi ^2 g^2 A_1^2 }{J^3} - \frac{\pi g A_1 A_2 }{J^3}-\frac{A_2^2+2 A_1 A_3-4 B_1 J^2}{8 J^3} - \frac{A_2 A_3+A_1 A_4-2 B_2 J^2}{16 \pi g J^3} \\
+	&-&  \frac{A_3^2+2 A_2 A_4+2 A_1 A_5-4 B_3 J^2}{128 \pi^2 g^2 J^3} - \frac{A_3 A_4 + A_2 A_5 + A_1 A_6 - 2 B_4 J^2}{256 \pi^3 g^3 J^3} + \mc{O}\left(\frac{1}{g^4}\right) \nonumber
 \eeqa
-The remaining unknowns here (up to order $1/g^4$) are $B_1$, $B_2$, which we expect to be constant due to the power pattern noticed above and $B_3$, $B_4$, which we expect to have the form $a J^2 + b$ with $a$ and $b$ constant.
-These unknowns are immediately fixed by comparing the general curvature expansion \eq{eq:ss_abc} to the two explicit cases that we know for $J=2$ and $J=3$. We find
-\beq
-\label{eq:b1b2}
-B_1=3/2\;\;,\;\;B_2=-3\,\zeta_3+\frac{3}{8},
-\eeq
-and
+\normalsize
+and plugging in the $A_i$ coefficients \eq{eq:bassos_as} found from the slope function.
+A slight complication here is that we only have strong coupling expansions of the curvature function for $J=2,3$ and for $J=4$ we only have a numeric result. 
+By comparing the $J=2,3$ expansions \eq{eq:ssj2} and \eq{eq:ssj3} to the above general form we can extract the values of the $B$'s for those two cases only.
+However as discussed in section \ref{sec:short_strings} we expect all series of coefficients to have a certain power-like dependencies on $J$, namely we expect $B_1$, $B_2$ to be constant and $B_3$, $B_4$ to have the form $a J^2 + b$ with $a$ and $b$ constant.
+Having just found two data points for $J=2,3$ we immediately find $a$ and $b$ and thus deduce that
 \beqa
-\label{eq:b3b4}
-	B_{3} = -\frac{J^2}{2}-\frac{9 \, \zeta_3}{2}+\frac{5}{16} \;\;,\;\; B_{4} = \frac{3}{16} J^2 (16 \, \zeta_3+20 \, \zeta_5-9)-\frac{15 \, \zeta_5}{2}-\frac{93 \, \zeta_3}{8}-\frac{3}{16}.
+ \begin{array}{rcrlrlrcl}
+B_1 &=& &3/2, &B_2& &=& &-3\,\zeta_3+\frac{3}{8}, \nn \\
+B_3 &=& &-\frac{J^2}{2}-\frac{9 \, \zeta_3}{2}+\frac{5}{16}, &B_{4}& &=& &\frac{3}{16} J^2 (16 \, \zeta_3+20 \, \zeta_5-9)-\frac{15 \, \zeta_5}{2}-\frac{93 \, \zeta_3}{8}-\frac{3}{16}.
+\end{array}
 \eeqa
-Having fixed all the unknowns we can write the strong coupling expansion of the curvature function for arbitrary values of $J$ as
+Having fixed all the unknowns we can now write the strong coupling expansion of the curvature function for arbitrary values of $J$ as
+\small
 \beqa
  \gamma^{(2)}_{J}(g) &=& -\frac{8 \pi ^2 g^2}{J^3}+\frac{2 \pi  g}{J^3}+\frac{1}{4 J}+\frac{1-J^2 (24 \, \zeta_3 +1)}{64 \pi  g J^3} - \frac{8 J^4+J^2 (72 \, \zeta_3 +11)-4}{512 g^2 \left(\pi ^2 J^3\right)}  \nonumber \\
-  &+& \frac{3 \left(8 J^4 (16 \, \zeta_3 +20 \, \zeta_5-7)-16 J^2 (31 \, \zeta_3 +20 \, \zeta_5+7)+25\right)}{16384 \pi ^3 g^3 J^3} + \mc{O}\left(\frac{1}{g^4}\right).
+  &+& \frac{3 \left(8 J^4 (16 \, \zeta_3 +20 \, \zeta_5-7)-16 J^2 (31 \, \zeta_3 +20 \, \zeta_5+7)+25\right)}{16384 \pi ^3 g^3 J^3} + \mc{O}\left(\frac{1}{g^4}\right).\qquad\qquad
 \eeqa
+\normalsize
 Expanding $\gamma^{(2)}_{J=4}$ defined in \eq{gamma2L4} at strong coupling numerically we were able to confirm the above result with high precision.
 
-
-
-
-%\subsection{Anomalous dimension of short operators}
-%\label{sec:Konishidimension}
-
-In this section we will use the knowledge of slope functions $\gamma^{(n)}_J$ at strong coupling to find the strong coupling expansions of scaling dimensions of operators with finite $S$ and $J$, in particular we will find the three loop coefficient of the Konishi operator by utilizing the techniques of
-\cite{Basso:2011rs,Gromov:2011bz}. What follows is a quick recap of the main ideas in these papers. 
-
-We are interested in the coefficients of the strong coupling expansion of $\Delta$, namely
-\beq
-	\Delta = \Delta^{(0)} \lambda^\frac{1}{4} + \Delta^{(1)} \lambda^{-\frac{1}{4}}  + \Delta^{(2)} \lambda^{-\frac{3}{4}} + \Delta^{(3)} \lambda^{-\frac{5}{4}} + \dots
-\eeq
-First, we use Basso's conjecture \eq{eq:delta_squared_basso} and by fixing $S$ and $J$ we re-expand the square root of $\Delta^2$ at strong coupling to find
-\beq
-	\label{eq:delta_abc}
-	\Delta = \sqrt{A_1 S} \, \sqrt[4]{\lambda}  + \frac{\sqrt{A_1} \left( J^2 + A_2 S + B_1 S^2 \right)}{2 A_1 \sqrt{S}} \, \frac{1}{\sqrt[4]{\lambda}} + {\cal O}\(\frac{1}{\lambda^\frac{3}{4}}\).
-\eeq
-Thus we reformulate the problem entirely in terms of the coefficients $A_i$, $B_i$, $C_i$, etc. For example, the next coefficient in the series, namely the two-loop term is given by
-\beq
-	\label{eq:delta_2loops_abc}
-	\Delta^{(2)} = -\frac{\left(2 A_2 + 4 B_1+J^2\right)^2-16 A_1 (A_3+2 B_2+4 C_1)}{16 \sqrt{2} A_2^{3/2}}.
-\eeq
-Further coefficients become more and more complicated, however a very clear pattern can be noticed after looking at these expressions: we see that the term $\Delta^{(n)}$ only contains coefficients with indices up to $n+1$, e.g. the tree level term $\Delta^{(0)}$  only depends on $A_1$, the one-loop term depends on $A_1$, $A_2$, $B_1$, etc. Thus we can associate the index of these coefficients with the loop level. Conversely, from the last section we learned that the letter of $A_i$, $B_i$, etc. can be associated with the order in $S$, i.e. the slope function fixed all $A_i$ coefficients and the curvature function in principle fixes all $B_i$ coefficients.
-
-%\subsubsection{Matching with classical and semiclassical results}
-
-Looking at \eq{eq:delta_abc} we see that knowing $A_i$ and $B_i$ only takes us to one loop, in order to proceed we need to know some coefficients in the $C_i$ and $D_i$ series. This is where the next ingredient in this construction comes in, which is the knowledge of the classical energy and its semiclassical correction in the Frolov-Tseytlin limit, i.e. when $\mc S \equiv S/\sqrt\lambda$ and $\mc J \equiv J/\sqrt\lambda$ remain fixed, while $S$, $J$, $\lambda \rightarrow \infty$. Additionally we will also be taking the limit $\cal{S} \rightarrow \mathrm{0}$ in all of the expressions that follow. In particular, the square of the classical energy has a very nice form in these limits and is given by \cite{Gromov:2011de,Gromov:2011bz}
-\beqa
- \label{delta_tree}
- {\cal D}_{\rm classical}^2&=&{\cal J}^2+2 \, {\cal S} \, \sqrt{{\cal J}^2+1}+{\cal S}^2 \, \frac{2 {\cal J}^2+3}{2
-   {\cal J}^2+2}-{\cal S}^3 \, \frac{{\cal J}^2+3}{8
-   \left({\cal J}^2+1\right)^{5/2}}
-   +{\cal O}\left({\cal S}^4\right)\;,
-\eeqa
-where ${\cal D}_{\rm classical} \equiv \Delta_{classical} / \sqrt{\lambda}$. The 1-loop correction to the classical energy is given by
-\beqa
-\label{delta_oneloop}
-\Delta_{sc} \simeq
-\frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
-   }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
-\!-\!\sum_{\substack{m>0 \\ m\neq n}}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
-   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]
-\eeqa
-If the parameters $\cal{S}$ and $\cal{J}$ are fixed to some values then the sum can be evaluated explicitly in terms of zeta functions. We now add up the classical and the 1-loop contributions\footnote{Note that they mix various orders of the coupling.}, take $S$ and $J$ fixed at strong coupling and compare the result to \eq{eq:delta_squared_basso}. By requiring consistency we are able to extract the following coefficients,
-$$
- \label{eq:abcd2}
- \begin{array}{rcrlrlrcl}
-  A_1 &=&  &2, &A_2&  &=& -&1  \\
-  B_1 &=&  &3/2, &B_2&  &=& -&3\,\zeta_3+\frac{3}{8}  \\
-  C_1 &=& -&3/8, &C_2& &=& &\frac{1}{16} \, (60 \, \zeta_3 + 60 \, \zeta_5 - 17) \\
-  D_1 &=&  &31/64, &D_2& &=& & \frac{1}{512} (-5520 \, \zeta_3 - 5120 \, \zeta_5 -3640 \, \zeta_7 +901)
- \end{array}
-$$
-As discussed in the previous section, we can in principle extract all coefficients with indices $1$ and $2$. In order to find e.g. $B_3$ we would need to extend the quantization of the classical solution to the next order. Note that the coefficients $A_1$, $A_2$ and $B_1$, $B_2$ have the same exact values that we extracted from the slope and curvature functions.
-
-%\subsubsection{Result for the anomalous dimensions at strong coupling}
 
 \begin{table}[t]
 \begin{tabular}{|l||rl|l|l||l|l|l|}
@@ -1619,10 +1509,6 @@ As discussed in the previous section, we can in principle extract all coefficien
 \label{tab:coefficients}
 \end{table}
 
-The key observation in \cite{Gromov:2011bz} was that once written in terms of the coefficients $A_i$, $B_i$, $C_i$, the two-loop term $\Delta^{(2)}$ only depends on $A_{1,2,3}$, $B_{1,2}$, $C_{1}$ as can be seen in \eq{eq:delta_2loops_abc}. As discussed in the last section, the one-loop result fixes all of these constants except $A_3$, which in principle is a contribution from a true two-loop calculation. However we already fixed it from the slope function and thus we are able to find
-\beq
-	\Delta^{(2)} = \frac{-21\,S^4 +(24-96\,\zeta_3) S^3+4 \left(5 J^2-3\right) S^2+8 J^2 S -4 J^4}{64 \sqrt{2}\,S^{3/2}}.
-\eeq
 Now that we know the strong coupling expansion of the curvature function and thus all the coefficients $B_i$, we can do the same trick and find the three loop strong coupling scaling dimension coefficient $\Delta^{(3)}$, which now depends on $A_{1;2;3;4}$, $B_{1,2,3}$, $C_{1,2}$, $D_1$. We find it to be
 \beqa
 	\Delta^{(3)} &=& \frac{187\,S^6 + 2\,(624\,\zeta_3 + 480\,\zeta_5-193)\,S^5 +\left(-146\,J^2 - 4\,(336\,\zeta_3-41)\right)S^4 }{512 \sqrt{2}\,S^{5/2}} + \nonumber \\
@@ -1632,11 +1518,14 @@ for $S=2$ it simplifies to
 \beq
 	\Delta^{(3)}_{S=2} = \frac{1}{512} \left(J^6-20 J^4+48 J^2 (4 \zeta_3 - 1)+192 (12 \, \zeta_3+20 \, \zeta_5+1)\right)
 \eeq
-and finally for the Konishi operator, which has $S=2$ and $J=2$ we get\footnote{The $\zeta_3$ and $\zeta_5$ terms are coming from semi-classics and were already known before \cite{Beccaria:2012xm} and match our result.}
+and finally for the Konishi operator, which has $S=2$ and $J=2$ we get
+%\footnote{The $\zeta_3$ and $\zeta_5$ terms are coming from semi-classics and were already known before \cite{Beccaria:2012xm} and match our result.}
  \beq
   \Delta^{(3)}_{S=2,J=2} = \frac{15 \, \zeta_5}{2} + 6 \, \zeta_3-\frac{1}{2}.
  \eeq
-In order to compare our predictions with data available from TBA calculations \cite{Frolov:2010wt}, we employed Pad\'{e} type fits as explained in \cite{Gromov:2011bz}. The fit results are shown in table \ref{tab:coefficients}, we see that our predictions are within $5\%$ error bounds, which is a rather good agreement. However we must be honest that for the $J=3$ and especially $J=4$ states we did not have as many data points as for the $J=2$ state and the fit is somewhat shaky.
+In order to compare our predictions with numeric data available from explicit Y-system calculations \cite{Frolov:2010wt}, we employed Pad\'{e} type fits as explained in \cite{Gromov:2011bz}. 
+The fit results are shown in table \ref{tab:coefficients}, we see that our predictions are within $5\%$ error bounds, which is a rather good agreement. 
+However we must be honest that for the $J=3$ and especially $J=4$ states we did not have as many data points as for the $J=2$ state and the fit is somewhat shaky.
 
 
 \subsection{Cusped Wilson line}
