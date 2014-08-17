@@ -7,42 +7,97 @@
 Insanity: doing the same thing over and over again and expecting different results.
 \end{chapquote}
 
-\noindent bla
+\noindent
+In this last chapter of the thesis we leave $\N=4$ super Yang-Mills behind and switch to the so-called ABJM theory, originally proposed by (and thus named after) Aharony, Bergman, Jafferis and Maldacena in \cite{Aharony:2008ug} following \cite{Schwarz:2004yj,Schwarz:2004yj1,Schwarz:2004yj2,Bagger:2006sk,Gustavsson:2007vu}.
+This theory also has a string theory dual and exhibits integrability, as we shall review shortly.
+Many of these features are very similar to the ones we presented in the case of $\N=4$ super Yang-Mills.
+In order to distinguish the two models we will often refer to ABJM and its string dual as $AdS_4/CFT_3$ and to the $\N=4$ SYM and its dual as $AdS_5/CFT_4$. 
+We will keep this chapter short, going into more detail only when discussing the classical spectral curve.  
 
 
 \subsection{Short introduction}
 \label{sec:abjm_intro}
 
-The $CFT_3$ part in this duality is the so called ABJM theory, originally proposed by Aharony, Bergman, Jafferis and Maldacena in \cite{Aharony:2008ug} following \cite{Schwarz:2004yj} \cite{Schwarz:2004yj1} \cite{Schwarz:2004yj2}. It is a three-dimensional superconformal Chern-Simons gauge theory with $\mathcal{N}=6$ supersymmetry. The field content consists of four complex scalars $\phi^I$, four Dirac fermions $\psi_I$, their adjoints $\phi_I=\phi^{I\dagger}$, $\psi^I=\psi_I^\dagger$, and two gauge fields, $A_\mu$ and $\hat{A}_\mu$. The index $I$ is an $SU(4)$ R-symmetry index. The gauge group is $U(N) \times U(N)$, where $A_{\mu}$ and $\hat{A}_{\mu}$ are the associated gauge fields. The fields $\phi^I$ and $\psi_I$ transform in the $(\bar{N},N)$ representation of the gauge group and their adjoints transform in the $(N,\bar{N})$ representation. As before, we are interested in gauge invariant single trace operators.
+The ABJM theory is a three-dimensional superconformal Chern-Simons gauge theory with $\mathcal{N}=6$ supersymmetry. 
+The gauge group is $U(N) \times \hat{U}(N)$ at levels $\pm k$, where $A_{\mu}$ and $\hat{A}_{\mu}$ are the associated gauge fields.
+The field content consists of four complex scalars $\phi^I$, four Dirac fermions $\psi_I$, their adjoints $\phi_I=\phi^{I\dagger}$, $\psi^I=\psi_I^\dagger$, and two gauge fields, $A_\mu$ and $\hat{A}_\mu$. 
+The index $I$ is an $SU(4)$ R-symmetry index.  
+The fields $\phi^I$ and $\psi_I$ transform in the $(\bar{N},N)$ representation of the gauge group and their adjoints transform in the $(N,\bar{N})$ representation. 
+The global symmetry group is the orhthosymplectic supergroup $OSp(6|4)$ whose bosonic part is the direct product of the R-symmetry group $SO(6) \simeq SU(4)$ and the conformal group $SO(2,3)$.
+As before, we are interested in gauge invariant single trace operators.
+The Chern-Simons level $k$ acts like the coupling constant with large $k$ corresponding to weak coupling.
+The planar limit is defined by $k, N \to \infty$ keeping $\lambda \equiv N/k$ fixed.
 
-This theory was conjectured in  \cite{Aharony:2008ug} to be the effective theory for a stack of M2 branes at a $Z_k$ orbifold point. In the large $N$ limit, the gravitational dual becomes M-theory on  $AdS_4\times S^7/Z_k$. For large $k$ and $N$ with
+This theory was conjectured \cite{Aharony:2008ug} to be dual to M-theory on $AdS_4 \times S^7 / \mathbb{Z}_k$ with four-form flux $F^{(4)} \sim N$ through $AdS_4$. 
+Alternatively one can say that it is the effective theory for a stack of N M2 branes moving on a $\mathbb{C}^4 / Z_k$ orbifold point. 
+In the limit $k^5 \gg N$ M-theory is well approximated by weakly coupled type IIA string theory on $AdS_4 \times \mathbb{CP}^3$.
+Here one also has RR four-form flux $F^{(4)} \sim N $ through $AdS_4$ and RR two-form flux $F^{(2)} \sim k $ through $\mathbb{CP}^1 \subset \mathbb{CP}^3$. 
+On the gravity side of the correspondence the string coupling constant and effective tension are given by
 \beq
-\lambda=N/k \equiv 8 g^2
+	g_s \sim \( \frac{N}{k^5} \)^{1/4} = \frac{\lambda^{5/4}}{N}, \;\;\;\;\; \frac{R^2}{\alpha'} = 4\pi \sqrt{2\lambda},
 \eeq
-fixed, the dual theory becomes type IIA superstring theory in $AdS_4\times CP^3$, which is the $AdS_4$ part of the correspondence. Just as in $AdS_5/CFT_4$, for the string side we have a supercoset sigma model whose target space is
-\beq
-\frac{OSp(2,2|6)}{SO(3,1)\times SU(3)\times U(1)}
-\eeq
-which has $AdS_4\times CP^3$ as its bosonic part. In \cite{Stefanski:2008ik,Arutyunov:2008if} the superstring coset sigma model was constructed and shown to the classically integrable. We will discuss what that means in the next section on integrability.
+where $R$ is the radius of $\mathbb{CP}^3$ and twice the radius of $AdS_4$.
+From here we see that the planar limit corresponds to small $g_s$, i.e. free strings.
+Small t'Hooft coupling $\lambda$ corresponds to a highly curved string background where the string is subject to large quantum fluctuations whereas on the gauge theory side it translates to weak coupling. 
+On the opposite end of large t'Hooft coupling we have classical strings and strongly coupled gauge theory.
+
 
 \subsection{Integrability}
 \label{sec:abjm_integrability}
 
+The theories on both ends of the correspondence were shown to be integrable in the planar limit.
+At weak coupling in the ABJM theory spectrum of local operators was shown to be described by long-ranged $OSp(6|4)$ spin chains \cite{Minahan:2008hf}.
+The type IIA string theory was formulated as a supercoset sigma model with the target space
+\beq
+\frac{OSp(2,2|6)}{SO(3,1)\times SU(3)\times U(1)}
+\eeq
+which has $AdS_4\times CP^3$ as its bosonic part.
+The model was and shown to the classically integrable \cite{Stefanski:2008ik,Arutyunov:2008if}. 
+We will now review these developments putting off the discussion of exact results and the quantum spectral curve construction for the last section of the chapter. 
+
 \subsubsection{Weak coupling}
+
+Since the matter fields transform in bifundamental representations, local gauge invariant operators are formed by taking traces of fields that transform alternatingly in the representations $(N,\bar{N})$ and  $(\bar{N},N)$, for example
+\beq
+	\label{eq:abjm_bps}
+	\tr \( \phi^1 \phi_4^\dagger \phi^1 \phi_4^\dagger \dots \).
+\eeq
+These can then be mapped with spin chains of even length having alternating representations in each site.
+Hamiltonians for spin-chains have been worked out for different sectors to varying loop levels using a multitude of methods.
+The first calculation was performed at two-loop for the $SU(4)$ sector, the Hamiltonian reads \cite{Minahan:2008hf}
+\beq
+	H = \frac{\lambda^2}{2}\sum_{i=1}^{2L} \( 2-2P_{i,i+2} + P_{i,i+2} K_{i,i+1} + K_{i,i+1} P_{i,i+2} \),
+\eeq
+where $P_{i,j}$ and $K_{i,j}$ are permutation and contraction operators defined in \eq{eq:spin_perm}, \eq{eq:spin_contract}.
+The operator \eq{eq:abjm_bps} is the ground state of this Hamiltonian.
+From here on out the story is almost identical as in $\N=4$ super Yang-Mills, namely one can write down the Bethe ansatz equations, find the scattering matrix etc. (see \cite{Klose:2010ki} for a review).
+The only complication here is that the coupling constant of the theory $\lambda$ enters all of the integrability constructions (at weak and strong coupling) via the \emph{interpolating function} $h(\lambda)$ appearing in the dispersion relation
+\beq
+	E(p) = \sqrt{1 + 4h^2(\lambda) \sin^2 \frac{p}{2}}.
+\eeq
+It is not fixed by symmetry and its asymptotic expansions are given by
+\beq 
+\label{eqn:general-h-expansion}
+  h(\lambda) = \begin{cases} 
+    \lambda \Bigsbrk{ 1 + c_1 \lambda^2 + c_2 \lambda^4 + \ldots }         & \mbox{for $\lambda\ll 1$} \; , \\[2mm]
+    \sqrt{\frac{\lambda}{2}} + a_1 + \frac{a_2}{\sqrt{\lambda}} + \ldots   & \mbox{for $\lambda\gg 1$} \;.
+  \end{cases}
+\eeq
+In the last section we will briefly describe how this function was found using the quantum algebraic curve construction.
+The analogue of this construction in $\N=4$ super Yang-Mills was the trivial relation $g = \frac{\sqrt{\lambda}}{4\pi}$. 
 
 \subsubsection{Strong coupling}
 
-
-We give in this section a compact self-contained summary of the results of \cite{Gromov:2008bz} using the 
-language of off-shell fluctuation energies \cite{Gromov:2008ec}. We shall work in the algebraic curve 
-regularization and write all equations in terms of the $\sigma$-model coupling $g$. For large $g$, it is 
-related to the 't Hooft coupling by 
+The classical spectral curve was constructed for $AdS_4/CFT_3$ much in analogy with the earlier formulated $AdS_5/CFT_4$ curve \cite{Gromov:2008bz}. 
+Here we present a compact self-contained summary of the construction using the language of off-shell fluctuation energies \cite{Gromov:2008ec} analogous to the discussion in section \ref{sec:spectral_curve}.
+We shall work in the algebraic curve regularization and write all equations in terms of the $\sigma$-model coupling $g$. 
+For large $g$, it is  related to the 't Hooft coupling by 
 \beq
 \lambda = N/k = 8\,g^{2},
 \eeq
-but, contrary to the \ads\ case, this relation will get corrections at finite $g$.
-The classical algebraic curve for $\adscp$ is a 10-sheeted Riemann surface. The spectral parameter moves on it and 
-we shall consider 10 symmetric quasi momenta $q_{i}(x)$ 
+but, contrary to the \ads\ case, this relation will get corrections at finite $g$, as discussed in the previous subsection.
+The classical algebraic curve for $\adscp$ is a 10-sheeted Riemann surface. 
+The spectral parameter moves on it and  we shall consider 10 symmetric quasi momenta $q_{i}(x)$ 
 \beq
 (q_{1}, q_{2}, q_{3}, q_{4}, q_{5}) = (-q_{10}, -q_{9}, -q_{8}, -q_{7}, -q_{6}).
 \eeq
@@ -59,7 +114,7 @@ In the terminology of \cite{Gromov:2008bz}, the physical polarizations $(ij)$ ca
   \mbox{light} & & (1,5) (1,6) (2,5) (2,6) & \quad (3,5) (3,6) (4,5) (4,6)\quad
   \end{array}
  $$
- Virasoro constraints require that the poles of the quasi-momenta $q_{i}(x)$ at $x=\pm 1$ are synchronized according to
+Virasoro constraints require that the poles of the quasi-momenta $q_{i}(x)$ at $x=\pm 1$ are synchronized according to
 \beq
 (q_{1},  q_{2}, q_{3}, q_{4}, q_{5}) = \frac{\alpha_{+}}{x-1}\,(1,1,1,1,0)+\cdots = 
 \frac{\alpha_{-}}{x+1}\,(1,1,1,1,0)+\cdots.
@@ -70,7 +125,8 @@ q_{1}(x) = -q_{2}(1/x), \qquad
 q_{3}(x) = 2\,\pi\,m-q_{4}(1/x), \qquad
 q_{5}(x) = q_{5}(1/x),
 \eeq
-where $m\in\mathbb Z$ is a winding number. The asymptotic values of the quasi-momenta for a length $L$ state with energy and spin $E$, $S$ are
+where $m\in\mathbb Z$ is a winding number. 
+The asymptotic values of the quasi-momenta for a length $L$ state with energy and spin $E$, $S$ are
 \beq
 \label{eq:asym}
 \left(\begin{array}{c} q_{1}(x) \\ q_{2}(x) \\ q_{3}(x) \\ q_{4}(x) \\ q_{5}(x) \end{array}\right) = 
@@ -87,11 +143,10 @@ where $M_{r,u,v}$ are related to the  $SU(4)$ representation of the state
 [d_{1}, d_{2}, d_{3}] = [L-2M_{u}+M_{r}, M_{u}+M_{v}-2M_{r}+M_{s}, L-2M_{v}+M_{r}].
 \eeq
 
-
-%\subsection{Semiclassical quantization}
-
-Semiclassical quantization is achieved by perturbing quasi-momenta introducing extra poles that shift the quasi-momenta
-$q_{i}\to q_{i}+\delta q_{i}$. Virasoro constraints and inversion properties of the variations $\delta q_{i}$ follow from those of the $q_{i}$'s. In order to find the asymptotic expression of $\delta q_{i}$ in terms of the number $N_{ij}$ of extra fluctuations we can look at the details of polarized states and obtain 
+Semiclassical quantization is achieved by perturbing quasi-momenta introducing extra poles that shift the quasi-momenta $q_{i}\to q_{i}+\delta q_{i}$. 
+Virasoro constraints and inversion properties of the variations $\delta q_{i}$ follow from those of the $q_{i}$'s. 
+In order to find the asymptotic expression of $\delta q_{i}$ in terms of the number $N_{ij}$ of extra fluctuations we can look at the details of polarized states and obtain 
+\footnotesize
 \beq
 \label{eq:asym2}
 \left(\begin{array}{c} \delta q_{1}(x) \\ \delta q_{2}(x) \\ \delta q_{3}(x) \\ \delta q_{4}(x) \\ \delta q_{5}(x) \end{array}\right) = 
@@ -103,6 +158,7 @@ $q_{i}\to q_{i}+\delta q_{i}$. Virasoro constraints and inversion properties of 
 & +N_{15}-N_{16}+N_{25}-N_{26} & +N_{35}-N_{36}+N_{45}-N_{46}
 \end{array}\right).
 \eeq
+\normalsize
 The off-shell frequencies $\Omega^{ij}(x)$ are defined in order to have 
 \beq
 \delta E = \sum_{n, ij} N^{ij}_{n}\,\Omega^{ij}(x^{ij}_{n}),
@@ -147,7 +203,8 @@ Their explicit expressions turns out to be
 \label{sec:abjm_folded}
 
 
-We present the algebraic curve for the folded string in $\adscp$ closely following  the notation of  \cite{Gromov:2008fy}. In terms of the semiclassical variables
+We present the algebraic curve for the folded string in $\adscp$ closely following  the notation of  \cite{Gromov:2008fy}. 
+In terms of the semiclassical variables
 \beq
 \mathcal S = \frac{S}{4\,\pi\,g}, \qquad
 \mathcal J = \frac{J}{4\,\pi\,g},
@@ -177,11 +234,9 @@ where the small $\mc S$ expansion of the classical contribution $\mc E_{0}$ read
 %   \mathcal{J}^5}{256}+\cdots
 %    \right)\,\mc S^{3} +\cdots
 % \ea
-
-%\subsection{Quasi-momenta}
-
 The quasi momenta are closely related to those of the \ads folded string since motion is still in $AdS_{3}\times S^{1}$
-and the $\mathbb{CP}^{3}$ part of the background plays almost no role. The only non trivial case is 
+and the $\mathbb{CP}^{3}$ part of the background plays almost no role. 
+The only non trivial case is 
 \ba
 q_{1}(x) &=& \pi\,f(x)\,\left\{-\frac{J}{4\,\pi\,g}\,\left(\frac{1}{f(1)\,(1-x)}-\frac{1}{f(-1)(1+x)}\right)+ \right. \\
 && \left. -\frac{4}{\pi\,(a+b)(a-x)(a+x)}\left[
@@ -209,22 +264,17 @@ The other quasi-momenta are
 && q_{3}(x) = q_{4}(x)  = \frac{J}{2\,g}\,\frac{x}{x^{2}-1}.  \\
 && q_{5}(x) = 0.
 \ea
-The above expressions are valid for a folded string with minimal winding. Adding winding is trivial at the classical level, but requires non trivial changes at the one-loop level (see for instance \cite{Gromov:2011bz}
-for a detailed analysis of the \ads\ case).
+The above expressions are valid for a folded string with minimal winding. 
+Adding winding is trivial at the classical level, but requires non trivial changes at the one-loop level (see for instance \cite{Gromov:2011bz} for a detailed analysis of the \ads\ case).
 
-The independent off-shell frequencies can be determined by the methods of \cite{Gromov:2008ec}. The result is rather simple and reads~\footnote{Notice the important relation
+The independent off-shell frequencies can be determined by the methods of \cite{Gromov:2008ec}. 
+The result is rather simple and reads\footnote{Notice the important relation
 $\Omega_{B}(x) = -\Omega_{B}(1/x)+\Omega_{B}(0)$.
 }
 \ba
 && \Omega_{A}(x) =  \frac{1}{ab-1}\left(1-\frac{f(x)}{x^{2}-1}\right),   \\
 && \Omega_{B}(x) = \frac{\sqrt{a^{2}-1}\,\sqrt{b^{2}-1}}{ab-1}\,\frac{1}{x^{2}-1}.
 \ea
-
-
-
-%\subsection{Integral representation for the one-loop correction to the energy}
-
-
 The one-loop shift of the energy is given in full generality by the following sum of zero point energies
 \beq
 \label{eq:one-loop-correction}
@@ -232,17 +282,16 @@ E_{1} = \frac{1}{2}\,\sum_{n=-\infty}^{\infty}\,\sum_{ij}(-1)^{F_{ij}}\,\omega^{
 \omega_{n}^{ij} = \Omega^{ij}(x^{ij}_{n}),
 \eeq
 where the sum over $ij$ is over the $8_{B}+8_{F}$ physical polarizations and $x^{ij}_{n}$ is the unique solution 
-to the equation (\ref{eq:pole})  under the condition $|x_{n}^{ij}|>1$~\footnote{ If it happens that for some $ij$ and $n$ the above equation has no solution, then we shall say that the polarization $(ij)$ has the { missing mode} $n$. Missing modes can be treated according to the procedure
+to the equation (\ref{eq:pole})  under the condition $|x_{n}^{ij}|>1$\footnote{ If it happens that for some $ij$ and $n$ the above equation has no solution, then we shall say that the polarization $(ij)$ has the { missing mode} $n$. Missing modes can be treated according to the procedure
 discussed in \cite{Gromov:2008ec}.
 }.
-
 In the same spirit as \cite{Gromov:2011de,Gromov:2011bz}, the infinite sum over on-shell frequencies can be 
 evaluated by contour integration in the complex plane. The result is quite similar to the \ads\ one and 
 reads
 \beq
 E_{1} = E_{1}^{\rm anomaly, 1}+E_{1}^{\rm anomaly, 2}+E_{1}^{\rm dressing}+E_{1}^{\rm wrapping},
 \eeq
-with~\footnote{Here, $x(z) = z+\sqrt{z^{2}-1}$. Also the anomaly contributions are computed integrating on the upper half complex plane.}
+with\footnote{Here, $x(z) = z+\sqrt{z^{2}-1}$. Also the anomaly contributions are computed integrating on the upper half complex plane.}
 \ba
 E_{1}^{\rm anomaly, 1} &=& 2\,\int_{a}^{b}\,\frac{dx}{2\,\pi\,i}\left[\Omega^{1,10}(x)-\Omega^{1,10}(a)\right]\,
 \partial_{x}\,\log\sin q_{1}(x), \\
@@ -252,9 +301,9 @@ E_{1}^{\rm dressing} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,
 E_{1}^{\rm wrapping} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,i}
 \,\Omega^{ij}(z)\,\partial_{z}\log(1-e^{-i\,(q_{i}(z)-q_{j}(z))}),
 \ea 
-As in \ads, the labeling of the various contributions reminds their physical origin. In particular, dressing and wrapping contributions have been separated in order to split the asymptotic contribution from finite size effects. As in \ads, the anomaly terms are special 
+As in \ads, the labelling of the various contributions reminds their physical origin. In particular, dressing and wrapping contributions have been separated in order to split the asymptotic contribution from finite size effects. As in \ads, the anomaly terms are special 
 contributions arising from the deformation of contours and ultimately due to the presence of the algebraic curve cuts.
-The representation (\ref{eq:one-loop-correction}) is a compact formula for $E_{1}$ and can be evaluated numerically with minor effort. In order to understand it better, we shall now analyze the short and long string limit. In the former case, 
+The representation (\ref{eq:one-loop-correction}) is a compact formula for $E_{1}$ and can be evaluated numerically with minor effort. In order to understand it better, we shall now analyse the short and long string limit. In the former case, 
 we shall evaluate the explicit sum over frequencies clarifying the relation with the contour integrals. In the latter, we shall extract the analytical expansion at large spin directly from (\ref{eq:one-loop-correction}).
 
 \subsubsection{Short string limit}
@@ -263,13 +312,11 @@ The short string limit is generically $\mc S\to 0$. Regarding $\mc J$, we shall 
 keeping $\mc J$ fixed, expanding in the end each coefficient of powers of $\mc S$ at small $\mc J$. This is 
 precisely the procedure worked out in \cite{Gromov:2011bz} in \ads. In the second case, we shall keep the ratio
 $\rho = \mc J/\sqrt\mc S$ fixed as in \cite{Beccaria:2012tu}. The two expansions are related, but not equivalent and provide useful different information.
-
-%\subsection{Fixed $\mc J$ expansion}
-
-After a straightforward computation, our main result is 
+After a straightforward computation, our main result is
+\small 
 \ba
 \label{eq:GV}
-E_{1} &=& 
+&&E_{1} = 
 \bigg(
 -\frac{1}{2 \mathcal{J}^2}+\frac{\log (2)-\frac{1}{2}}{\mathcal{J}}+\frac{1}{4}+\mathcal{J} \left(-\frac{3 \,\zeta (3)}{8}+\frac{1}{2}-\frac{\log (2)}{2}\right)-\frac{3
    \mathcal{J}^2}{16}+\\
@@ -290,28 +337,22 @@ E_{1} &=&
    (7)}{2048}+2-\frac{33 \log (2)}{32}\right)-\frac{465 \mathcal{J}^2}{512}+\nonumber \\
    && + \mathcal{J}^3 \left(\frac{5833 \,\zeta (3)}{1024}+\frac{1585 \,\zeta (5)}{256}+\frac{98035 \,\zeta (7)}{16384}+\frac{259455
    \,\zeta (9)}{65536}-\frac{405}{64}+\frac{775 \log (2)}{256}\right)+\cdots
-\bigg)\,\mc S^{3}+ \cdots\nonumber
+\bigg)\,\mc S^{3}.\nonumber \qquad
 \ea
-This expansion is rather similar to the one derived in \cite{Gromov:2011bz} for \ads, but there are two remarkable differences:
-\begin{enumerate}
-\item The leading terms at small $\mc J$ are $\mc O(\mc S^{n}/\mc J^{2n})$. Instead, they were $\mc O(\mc S^{n}/\mc J^{2n-1})$ in \ads. Also, there are terms with all parities in $\mc J$ while in \ads, there appear only terms odd under $\mc J\to -\mc J$. The additional terms are important and we shall discuss them in more details later. Remarkably, they 
-imply that if one scales $\mc J\sim \sqrt\mc S$ they give a constant contribution in the short string limit. This is different 
-from \ads\ where the energy correction vanishes like $\sqrt\mc S$ in this regime.
-
-
-
-\item There are terms proportional to $\log(2)$. As we  discuss in App.~(\ref{app:log2}), 
+\normalsize
+This expansion is rather similar to the one derived in \cite{Gromov:2011bz} for \ads, but there are two remarkable differences.
+First, the leading terms at small $\mc J$ are $\mc O(\mc S^{n}/\mc J^{2n})$. 
+Instead, they were $\mc O(\mc S^{n}/\mc J^{2n-1})$ in \ads. 
+Also, there are terms with all parities in $\mc J$ while in \ads, there appear only terms odd under $\mc J\to -\mc J$. 
+The additional terms are important and we shall discuss them in more details later. Remarkably, they  imply that if one scales $\mc J\sim \sqrt\mc S$ they give a constant contribution in the short string limit. 
+This is different from \ads\ where the energy correction vanishes like $\sqrt\mc S$ in this regime.
+Second, there are terms proportional to $\log(2)$. As we  discuss in App.~(\ref{app:log2}), 
 these terms can be removed by expressing the energy correction in terms of the coupling in the 
 world-sheet scheme. The scheme dependence is universal and agrees with that found in 
 \cite{McLoughlin:2008he} for a circular string solution and in \cite{Abbott:2010yb}
 for the giant magnon.
 
-\end{enumerate}
-
-
-%\subsection{Fixed $\rho = \mc J / \sqrt\mc S$ expansion}
-
-The result in this limit is 
+The result in the fixed $\rho = \mc J / \sqrt\mc S$ limit is 
 \ba
 \label{eq:our-expansion}
 && E_{1} = -\frac{1}{2}\,\mc C(\rho, \mc S)+a_{01}(\rho)\,\sqrt\mathcal S+ a_{1,1}(\rho)\,\mathcal S^{3/2}+\mc O(\mc S^{5/2}),
@@ -338,8 +379,8 @@ example, from the expansion
 -\frac{1}{2}\left(1-\frac{\rho}{\sqrt{\rho^{2}+2}}\right) = -\frac{1}{2 \rho ^2}+\frac{3}{4 \rho ^4}-\frac{5}{4 \rho ^6}+\frac{35}{16 \rho
    ^8}-\frac{63}{16 \rho ^{10}}+\cdots,
 \eeq
-we read the coefficients of {\bf all } terms $\sim \mc S^{n}/\mc J^{2n}$. The first ones are of course in agreement
-with (\ref{eq:GV}). As another non trivial example, the large $\rho$ expansion of $a_{11}(\rho)$ is 
+we read the coefficients of all terms $\sim \mc S^{n}/\mc J^{2n}$. The first ones are of course in agreement with \eq{eq:GV}. 
+As another non trivial example, the large $\rho$ expansion of $a_{11}(\rho)$ is 
 \ba
 a_{11}(\rho) &=& \rho  \left(-\frac{3 \zeta
    (3)}{8}+\frac{1}{2}-\frac{\log
@@ -359,7 +400,7 @@ and allows to read the coefficients of all terms $\sim \mc S^{n} / \mc J^{2n-3}$
 The explicit sum over the infinite number of on-shell frequencies requires some care and a definite prescription 
 since the sums are not absolutely convergent due to physically sensible cancellations between bosonic and fermionic contributions.
 As discussed in \cite{Gromov:2008fy}, the following summation prescription is natural from the point of view
-of the algebraic curve (see \cite{Bandres:2009kw} for a different prescription)~\footnote{Notice that we
+of the algebraic curve (see \cite{Bandres:2009kw} for a different prescription)\footnote{Notice that we
 exploit the $x\to -x$ symmetry of the classical algebraic curve as well as triviality of zero mode corrections.}
 \beq
 E_{1} = \sum_{n=1}^{\infty} K_{n}, 
@@ -400,8 +441,8 @@ it is necessary in order to match the
 asymptotic Bethe Ansatz equations when wrapping effects are subtracted.
 Notice also that the expansion of $\mc C$ at fixed $\mc J$ is 
 \beq
-\mc C = \frac{\mathcal{S}}{\mathcal{J}^2 \sqrt{\mathcal{J}^2+1}}-\frac{\left(3 \mathcal{J}^4+11 \mathcal{J}^2+6\right) \mathcal{S}^2}{4 \mathcal{J}^4
-   \left(\mathcal{J}^2+1\right)^2}+\frac{12\,\mc J^{8}+75\,\mc J^{6}+173\,\mc J^{4}+140\,\mc J^{2}+40}{16\,\mc J^{6}\,(\mc J^{2}+1)^{7/2}}\,\mc S^{3}+\cdots,
+\mc C \simeq \frac{\mathcal{S}}{\mathcal{J}^2 \sqrt{\mathcal{J}^2+1}}-\frac{\left(3 \mathcal{J}^4+11 \mathcal{J}^2+6\right) \mathcal{S}^2}{4 \mathcal{J}^4
+   \left(\mathcal{J}^2+1\right)^2}+\frac{12\,\mc J^{8}+75\,\mc J^{6}+173\,\mc J^{4}+140\,\mc J^{2}+40}{16\,\mc J^{6}\,(\mc J^{2}+1)^{7/2}}\,\mc S^{3},
  \eeq
  so, upon expanding at small $\mc J$, it provides precisely 
  the terms with even/odd $\mc J$ exponents in the coefficients of the odd/even powers of $\mc S$ in (\ref{eq:GV}).
@@ -409,7 +450,7 @@ Notice also that the expansion of $\mc C$ at fixed $\mc J$ is
 Apart from the $\mc C$ term, the integral representation implements the Gromov-Mikhailov (GM) prescription. The reason is that the singularities at $|x|=1$ are avoided by implicitly encircling them by a small circumference. This cut-off on $|x-1|$ translates in a bound on the highest mode $n$ that correlates heavy/light polarizations according to GM. In other words the highest mode for light polarizations is asymptotically half the highest mode for heavy polarizations. 
 
 As a numerical check of the agreement between the integral representation and the series expansion, 
-we fix $\rho=1$ in table (\ref{tab:check1})  and show
+we fix $\rho=1$ in table \ref{tab:check1} and show
 the value of $E_{1}$ from our analytical resummation and result from the integral. The agreement is very good already 
 at moderately small $\mc S$.
 
@@ -425,14 +466,14 @@ $\mc S$ & $E_{1}$ from (\ref{eq:our-expansion}) & $E_{1}$ \\
 1/500 & -0.206075 & -0.206075
 \end{tabular}
 \caption{Comparison between resummation at fixed ratio
-$\rho=1$ and integral representation. The asymptotic value for $\mc S\to 0$ is $(\sqrt 3-3)/6\simeq -0.211$, but already at $\mc S = 1/500$ we have 6 digits agreement.
+$\rho=1$ and integral representation. The asymptotic value for $\mc S\to 0$ is $(\sqrt 3-3)/6\simeq -0.211$, but already at $\mc S = 1/500$ we have 6 digit agreement.
 }
 \label{tab:check1}
 \end{center}
 \end{table}
 
-\noindent
-A similar check at fixed $\mc J$ is shown in Fig.~(\ref{fig:check}) where we plot the asymptotic expansion (\ref{eq:GV}) and the exact numerical $E_{1}$ as functions of $\mc S$ at $\mc J=1/5$.
+%\noindent
+%A similar check at fixed $\mc J$ is shown in Fig.~(\ref{fig:check}) where we plot the asymptotic expansion (\ref{eq:GV}) and the exact numerical $E_{1}$ as functions of $\mc S$ at $\mc J=1/5$.
 
 % \begin{figure}[htb]
 % \begin{center}
@@ -451,12 +492,10 @@ The slope ratio
 \beq
 \sigma(\mc J) = \lim_{\mc S\to 0}\frac{E_{1}(\mc S, \mc J)}{\mc S},
 \eeq
-is an important quantity  related to the conjectures in \cite{Basso:2011rs}~\footnote{The exact slope mentioned in 
+is an important quantity  related to the conjectures in \cite{Basso:2011rs}\footnote{The exact slope mentioned in 
 \cite{Basso:2011rs} is the coefficient of $S$ in the expansion of $E^{2}$. This line of analysis is suggested by the simplicity of the marginality condition in \ads (see \cite{Tseytlin:2003ac} for a general discussion). Here, it is simpler to discuss the quantity $\sigma(\mc J)$.} . It is known that it does not receive dressing corrections both in \ads\ and in $\adscp$ since such contributions start at 
 order $\mc S^{2}$ \cite{Basso:2011rs}. It also 
 does not receive wrapping corrections in $AdS_{5}$.  Instead, in the case of $AdS_{4}$ the slope has a non vanishing wrapping contribution. For instance, a rough evaluation at $\mc J=1$ gives  a definitely non zero value around $-0.042$.
-
-\bigskip
 Indeed, an analytical calculation shows that  the wrapping contribution to the slope in $\adscp$ is exactly
 \beq
 \sigma^{\rm wrap}(\mc J) = \sum_{n=-\infty}^{\infty}\sigma_{n} = -\frac{1}{2\,\mc J}\,\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}}{
@@ -484,25 +523,23 @@ Similarly, we can consider the rest of $\sigma^{\rm wrap}$ and expand at small $
    \left(-\frac{9 \zeta(3)}{64}-\frac{45 \zeta(5)}{256}-\frac{315 \zeta(7)}{1024}-\frac{5 \log (2)}{16}\right)+O\left(\mathcal{J}^6\right).
 \ea
 Comparing again with (\ref{eq:GV}), we see that we are reproducing all the irrational terms of the slope, involving zeta functions or $\log(2)$. The remaining terms 
-are the same as in \ads~\footnote{
-This is due to the fact that the BAE are essentially the same as for $\mathfrak{sl}(2)$ sector in \ads. 
-This is however a nontrivial test that all is done correctly.
-},
+are the same as in \ads
 \beq
 \sigma(\mc J) -\sigma^{\rm wrap}(\mc J) = -\frac{1}{2\,\mc J}+\frac{\mc J}{2}-\frac{\mc J^{3}}{2}+\cdots.
 \eeq
+This is due to the fact that the BAE are essentially the same as for $\mathfrak{sl}(2)$ sector in \ads. 
+This is however a nontrivial test that all is done correctly.
 Thus, we are led to the following expression for the one-loop full slope 
 \beq
 \sigma(\mc J) = -\frac{1}{2\,\mc J}\left[\frac{1}{\mc J^{2}+1}+\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}}{
 \sqrt{\mc J^{4}+(n^{2}+1)\,\mc J^{2}+n^{2}}}
 \right].
 \eeq
-
 The above analysis of the slope is a confirmation  that the various terms in (\ref{eq:GV}) are organized in the expected way. The asymptotic contribution is precisely the same as in \ads, while wrapping is different and is exponentially
 suppressed for large operators. This is a property of the integral representation and a confirm that the 
 prescription (\ref{eq:alternating}) is correct.
 
-\subsubsection{Weak coupling}
+\subsubsection{Slope at weak coupling}
 
 It is interesting to evaluate the slope at weak coupling.
  In principle, this  requires the knowledge of the anomalous dimensions of 
@@ -511,7 +548,7 @@ dictionary). This information is
 available for the asymptotic contribution, but not for the wrapping, which is only known as a series expansion 
 at large spin and low twist \cite{Beccaria:2009ny,Beccaria:2010kd}.
  Nevertheless, if we are interested in the correction to the slope only (so, just the first term at small spin), then the L\"uscher form of the wrapping correction
-presented in \cite{Beccaria:2009ny} is enough~\footnote{We kindly thank B. Basso for this important remark.}. 
+presented in \cite{Beccaria:2009ny} is enough. 
 At twist-1, and following the notation of \cite{Beccaria:2009ny}, the wrapping correction enters at four loops
 and is expressed by the following function of the integer spin $N$ of the gauge theory operator
 \beq
@@ -528,9 +565,9 @@ After a straightforward calculation, one finds that (on the even $N$ branch),
 \gamma_{4}^{\rm wrapping}(N) = -\frac{\pi^{4}}{3}\,N+\mc O(N^{2}).
 \eeq
 So, even at weak coupling, we find a correction to the slope coming from the wrapping 
-terms~\footnote{Notice that 
-the reason why such a contribution is absent in \ads\ is simply that the factor analogous to $\gamma_{2}(N)$
-is squared in the wrapping contribution. This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.}.
+terms.
+Notice that  the reason why such a contribution is absent in \ads\ is simply that the factor analogous to $\gamma_{2}(N)$ is squared in the wrapping contribution. 
+This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.
 
 
 % \subsection{Long string limit}
@@ -540,7 +577,7 @@ is squared in the wrapping contribution. This leads immediately to a contributio
 % \beq
 % \mc J = \frac{\ell}{\pi}\,\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right),
 % \eeq
-% where we assume $\ell>0$~\footnote{This means that the case $\ell=0$, or $\mc J=0$ has to be treated
+% where we assume $\ell>0$\footnote{This means that the case $\ell=0$, or $\mc J=0$ has to be treated
 % separately as discussed in \cite{Gromov:2011de}.}. Then, the one-loop energy correction can be written
 % \beq
 % E_{1}^{AdS_{5}} = f_{10}^{AdS_{5}} (\ell)\,\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right)+f_{11}^{AdS_{5}} (\ell)+\frac{c^{AdS_{5}}}{\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right)}+\cdots ,
@@ -588,7 +625,7 @@ is squared in the wrapping contribution. This leads immediately to a contributio
 % This formula can be easily checked numerically from the explicit evaluation of the integral representation.
 % Notice that the simple $\frac{1}{2}$ rule for the leading two terms is in agreement with the result of \cite{Beccaria:2009wb}. The correction $\sim 1/\log \mc S$ comes from the anomaly terms. It is twice bigger than in SYM. 
 
-% The explanation of this fact is as follows~\footnote{We thank B. Basso for clarifying this point as well as the $\ell\to 0$ limit.}.
+% The explanation of this fact is as follows\footnote{We thank B. Basso for clarifying this point as well as the $\ell\to 0$ limit.}.
 % The low energy effective theory of the Gubser-Klebanov-Polyakov (GKP) 
 % string in $\adscp$  has two massless modes at finite chemical potential $\ell$. Namely, 
 % one massless Dirac Fermion and one massless boson that gives a central charge 2 (in \ads\ 
@@ -644,12 +681,12 @@ is squared in the wrapping contribution. This leads immediately to a contributio
 % as discussed in \cite{Gromov:2011bz} (see also the results of \cite{Beccaria:2012tu}).
 
 % \bigskip
-% For the folded string in $\adscp$, the expansion with fixed $\mc J$~\footnote{Actually when we speak about fixed $\mc J$ we mean small $\mc S$ followed by small $\mc J$.} has the general form (see the Appendices of \cite{Gromov:2011bz})
+% For the folded string in $\adscp$, the expansion with fixed $\mc J$\footnote{Actually when we speak about fixed $\mc J$ we mean small $\mc S$ followed by small $\mc J$.} has the general form (see the Appendices of \cite{Gromov:2011bz})
 % \beq
 % E = \sqrt\Lambda \,\,\,\mc E_{0} + \sum_{\ell=0}^{\infty}\frac{1}{(\sqrt\Lambda)^{\ell}}\,
 % \sum_{p=1}^{\infty}\sum_{q=-2p}^{\infty} v_{pq}^{(\ell)}\,\mc J^{q}\,\mc S^{p},
 % \eeq
-% where the classical energy is~\footnote{Note that there is a typo in the $\mc S^{3}$ term in the introduction 
+% where the classical energy is\footnote{Note that there is a typo in the $\mc S^{3}$ term in the introduction 
 % to \cite{Beccaria:2012tu}}
  % \ba
 % && \mathcal E_{0}= \mathcal J+\frac{\sqrt{\mathcal J^{2}+1}}{\mathcal J}\,\mathcal S-\frac{\mathcal J^{2}+2}{4\,\mathcal J^{3}(\mathcal J^{2}+1)}\,\mathcal S^{2}+ 
@@ -705,7 +742,6 @@ E = (4\,\pi\,g)^{1/2}\,\sqrt{2\,S}-\frac{1}{2}+\frac{\sqrt{2\,S}}{(4\,\pi\,g)^{1
 The same expansion 
 where we remark that one of the effect of the $\mc C$ term 
 is the constant $\mc O(\widetilde \Lambda^{0})$ contribution.
-
 The same expansion can be written in terms of the coupling $g_{\rm WS}$ in the world-sheet regularization
 whose relation with $g$ is \cite{McLoughlin:2008he,Abbott:2010yb}
 \beq
@@ -719,8 +755,71 @@ E = (4\,\pi\,g_{\rm WS})^{1/2}\,\sqrt{2\,S}-\frac{1}{2}+\frac{\sqrt{2\,S}}{(4\,\
 \eeq
 without $\log(2)$ term. This is correct since in world-sheet regularization all modes are treated with uniform cutoff.
 
-\subsection{The $\pmu$-system and exact results}
+\subsection{Exact results}
 \label{sec:abjm_exact}
 
-bla
+The spectral problem of $AdS_4/CFT_3$ was eventually solved exactly by formulating a set of TBA equations \cite{Gromov:2009tv} and equivalently a Y-system \cite{Bombardelli:2009xz,Gromov:2009at}.
+This eventually led to a formulation of the quantum spectral curve \cite{Cavaglia:2014exa}.
 
+\subsubsection{Quantum spectral curve}
+
+The main objects in the construction are $5$ functions ${\bf P}_A,\;A=1,\dots,5$ and $4$ function $\nu_a,\;a=1,\dots,4$ depending on the spectral parameter $u$.
+${\bf P}_A$ are restricted by a quadratic constraint 
+\beq
+	\bP_5=\sqrt{1-\bP_1\bP_4+\bP_2\bP_3}.
+\eeq
+Depending on the choice of the branch cuts $\nu_a$ could be made $i$-periodic.
+With the choice of branch cuts with infinitely many cuts going from $-2h+i n$ to $2h+i n$ for any integer $n$ the functions $\nu_a$ are quasi-periodic and satisfy
+\beq
+	\nu_a(u+i)=-{\bf P}_{ab}(u)\,\nu^b(u),
+\eeq
+where $\nu^1=-\nu_4,\;,\nu^2=\nu_3,\;\nu^3=-\nu_2,\;\nu^4=\nu_1$ and ${\bf P}_{ab}$ is a $4\times 4$ matrix built out of ${\bf P}_A$:
+\beq\label{Pab}
+{\bf P}_{ab}=
+\left( \begin{array}{cccc} 0 & - {\bf P}_1 & -{\bf P}_2 & -{\bf P}_5 \\ {\bf P}_1 & 0 & -{\bf P}_5  & -{\bf P}_3 \\ {\bf P}_2 & {\bf P}_5 & 0 & -{\bf P}_4 \\ {\bf P}_5 & {\bf P}_3 &  {\bf P}_4 & 0 \end{array} \right)_{ab}\;.
+\eeq
+Analytical continuation of $\nu_a$ under the cut $[-2h,2h]$ denoted as $\tilde \nu_a$ is related to $\nu_a$ itself simply by $\tilde \nu_a(u)=\nu_a(u+i)$.
+Finally the functions ${\bf P}_A$ have only one cut $[-2h,2h]$ and their analytical continuation $\tilde\bP_A$ under this cut is given by
+\beq
+\tilde \bP_{ab}=\bP_{ab}+\nu_a\tilde\nu_b-\nu_b\tilde\nu_a\;.
+\label{Pmonodromy}
+\eeq
+The full details of the construction can be found in \cite{Cavaglia:2014exa}.
+An interesting fact about it is that under the replacements
+\beqa
+	{\bP}_{ab} &\to& \mu_{ab}^{{\cal N}=4} \nn \\
+	\nu_a &\to& \bP_a^{{\cal N}=4},
+\eeqa
+algebraically we recover the $\N=4$ super Yang-Mills $\pmu$-system equations, however their analytical properties are interchanged.
+
+\subsubsection{Exact interpolating function}
+
+Finally let us very briefly remark on how an exact expression for the interpolating function $h(\lambda)$ was found using the algebraic curve construction \cite{Gromov:2014eha}.
+The result is found quite unexpectedly as a side effect of derivation of the exact slope function.
+Since the quantum algebraic curve is an integrability construct, it is formulated in terms of the interpolating function $h(\lambda)$. 
+The strategy is to compare an exact result obtained using integrability, which in this case is the slope, to an exact result computed in some other method.
+The authors of \cite{Gromov:2014eha} noticed that an exact result for the expectation value of a $1/6$ BPS Wilson loop \cite{Marino:2009jd} (which in $\N=4$ super Yang-Mills is known to be similar to the slope function) found using the localization technique contained expressions very similar to theirs.
+With a suitable change of variables they were able to match their expressions and extract a conjecture for the interpolating function
+\beq
+	\lambda = \frac{\sinh(2\pi h)}{2\pi} {}_3 F_2\( \frac{1}{2},\frac{1}{2},\frac{1}{2};1,\frac{3}{2};-\sinh^2 \( 2\pi h \) \).
+\eeq
+The weak and strong coupling expansions are given by
+\beq 
+  h(\lambda) = \begin{cases} 
+    \lambda-\frac{\pi^2
+   \lambda^3}{3}+\frac{5 \pi^4
+ \lambda^5}{12}-\frac{893 \pi^6 \lambda
+^7}{1260}+{\cal O}(\lambda^9)  \\[2mm]
+    \sqrt{\frac{1}{2}\left(\lambda-\frac{1}{24}\right)
+   }-\frac{\log 2}{2 \pi }+{\cal O}\left(
+   e^{-
+    \pi  \sqrt{8\lambda
+   }}\right)  \;,
+  \end{cases}
+\eeq
+which reproduced all known coefficients at weak and strong coupling at the time, a total of four non-trivial coefficients \cite{Minahan:2009aq,Leoni:2010tb,McLoughlin:2008he,Abbott:2010yb,LopezArcos:2012gb}.
+It was further checked with an explicit two-loop strong coupling calculation \cite{Bianchi:2014ada}.
+
+It is interesting to note that under the identification of the localization result and the exact slope function the eigenvalues of the Wilson loop matrix model were mapped to the spectral parameter $u$, which would suggest a unified structure being probed by localization and integrability.
+It is tempting to suggest a generalization of the quantum spectral curve construction for the non-planar regime by discretizing the Zhukovsky cuts on the $u$ plane to some eigenvalues.
+An explicit realization of this idea, if it is indeed possible, would be an important step to solving the $AdS/CFT$ dualities at a finite number of colours $N$. 

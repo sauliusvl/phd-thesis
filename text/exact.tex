@@ -138,7 +138,7 @@ Excited states can also be reached in this way via analytic continuation in some
 Basically one can to introduce singularities in the integrand of \eq{eq:simple_tba} in such a way that the large $L$ limit of the new solution coincides with the asymptotic Bethe ansatz solution.
 
 \begin{figure}[t]
-\begin{tikzpicture}[scale=0.7]
+\begin{tikzpicture}[scale=0.68]
 	
 	\tikzset{hooknode/.style={draw,circle,minimum size=1.5ex,fill=#1}}
 	\tikzset{hooknodecross/.style={draw,cross out,minimum size=1.5ex}}
@@ -336,13 +336,12 @@ For the short cut versions $\mu_{ab}(u) \equiv \hat{\mu}_{ab}(u)$ of the functio
 			\node[pole] at (-\cutx,-\y) {}; %\node[below left] at (-\cutx,-\y) {$-2g-\y i$};
 			\node[pole] at (\cutx,-\y) {}; %\node[below right] at (\cutx,-\y) {$2g-\y i$};
 			
-			
 			\draw[dashed,black] (-\cutx,\y) -- (\cutx,\y);  
 			\node[pole] at (-\cutx,\y) {}; %\node[above left] at (-\cutx,\y) {$-2g+\y i$};
 			\node[pole] at (\cutx,\y) {}; %\node[above right] at (\cutx,\y) {$2g+\y i$};
 		}
 		
-		\draw[black,very thick] (-\cutx,0) -- (\cutx,0);  \node[pole] at (-\cutx,0) {}; \node[pole] at (\cutx,0) {};
+		\draw[black,ultra thick] (-\cutx,0) -- (\cutx,0);  \node[pole] at (-\cutx,0) {}; \node[pole] at (\cutx,0) {};
 
 		\node[above left] at (-\cutx,0) {$-2g$}; \node[above right] at (\cutx,0) {$2g$};	
 		\node[left] at (-\cutx,-2) {$-2g-2 i$}; \node[right] at (\cutx,-2) {$2g-2 i$};		

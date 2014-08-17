@@ -155,10 +155,12 @@ Comparing this to (\ref{eq:tree_correlator}) we see that effectively the interac
 We can introduce exchange and trace operators to make this explicit. 
 The permutation operator, also called the exchange operator, $\mathcal{P}_{l,l+1}$ is defined by it's action on a set of delta functions as
 \begin{equation}
+	\label{eq:spin_perm}
 	\mathcal{P}_{l,l+1} \; {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l}} {\delta_{I_{l+1}}}^{J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}} = {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l+1}} {\delta_{I_{l+1}}}^{J_{l}} \dots {\delta_{I_{L}}}^{J_{L}}
 \end{equation}
 and the trace operator $\mathcal{K}_{l,l+1}$ is defined as
 \begin{equation}
+	\label{eq:spin_contract}
 	\mathcal{K}_{l,l+1} \; {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l}} {\delta_{I_{l+1}}}^{J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}} = {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_l I_{l+1}}} {\delta}^{J_{l} J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}}.
 \end{equation}
 Using these operators we can rewrite the correlator in (\ref{eq:loop_correlator}) in a more compact notation
@@ -386,7 +388,7 @@ The simplest non-compact closed sector is the $\mathfrak{sl}(2)$ sector, which c
 	\label{eq:sl2_operators}
 	\mathcal{O} = \tr \( Z^{J-1} \, \mathcal{D}_+^S \, Z \) + \mathrm{permutations},
 \eeq
-where $\mathcal{D_+} = \mathcal{D}_1 + i \mathcal{D}_2$ is the lightcone covariant derivative with global charges $(\frac{1}{2},\frac{1}{2}, 1; 0,0,0)$. Mixing simply redistributes the $S$ covariant derivative applications among the $J$ scalars. In this case we are dealing with infinite dimensional representations of $\mathfrak{sl}(2)$, namely the number of covariant derivatives is in principle unlimited.
+where $\mathcal{D_+} = \mathcal{D}_1 + i\, \mathcal{D}_2$ is the lightcone covariant derivative with global charges given by $(\frac{1}{2},\frac{1}{2}, 1; 0,0,0)$. Mixing simply redistributes the $S$ covariant derivative applications among the $J$ scalars. In this case we are dealing with infinite dimensional representations of $\mathfrak{sl}(2)$, namely the number of covariant derivatives is in principle unlimited.
 
 It is convenient to introduce a creation-annihilation operator algebra by defining 
 \beq
@@ -944,7 +946,6 @@ and a wrapping contribution, which is missing in the asymptotic Bethe ansatz.
 E_0=\delta \Delta_{\rm anomaly} +\delta \Delta_{\rm dressing} + \delta \Delta_{\rm wrapping}\;,
 \eeq
 where each of these contributions is simply an integral of some closed form expression,
-\vspace{5pt}
 \beqa
 \label{eq:delta_E_3}
   \delta \Delta_{\rm anomaly} &=& -\frac{4}{ab-1}\int_a^b \frac{dx} {2\pi i}
