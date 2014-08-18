@@ -1211,7 +1211,7 @@ We will use this identification in section \ref{sec:strong_curvature} to compute
 
 
 Solving the $\bP\mu$-system for $J=3$ is similar to the $J=2$ case described above, except for several technical complications, which we will describe here, leaving the details for the appendix \ref{sec:appnlo3}.
-As in the previous section, the starting point is the LO solution of the $\bP\mu$ system, which for $J=3$ reads
+As in the previous section, the starting point is the LO solution of the $\bP\mu$-system, which for $J=3$ reads
 \beq
 	\bP_1=\epsilon x^{-3/2},\ \bP_3=-\epsilon x^{3/2},
 \label{P1P3LOsolL3}
@@ -1246,14 +1246,14 @@ As in the previous section, the next step is to find $\bP_a^{(1)}$ from the $P\m
 \eeqa
 where $r_a$ are defined by \eq{eq:ra} and for $J=3$ are given explicitly in appendix \ref{sec:appnlo3}.
 In attempt to solve this system, however, we encounter another technical complication. 
-As one can see from \eq{P1P3LOsolL3}-\eq{P4LOsolL3}, the LO solution contains half-integer powers of $J$, meaning that the $\bP_a$ now have an extra branch point at infinity.
+As one can see from \eq{P1P3LOsolL3} - \eq{P4LOsolL3}, the LO solution contains half-integer powers of $J$, meaning that the $\bP_a$ now have an extra branch point at infinity.
 However, the operations $H$ and $K$ defined by \eq{eq:HK} work only for functions which have Laurent expansion in integer powers of $x$. 
 In order to solve equations of the type \eq{eq:mudiscNLO} on the class of functions which allow Laurent-like expansion in $x$ with only half-integer powers $x$, we introduce operations $H^*,K^*$:
 \beqa
 &&H^*\cdot f\equiv\frac{x+1}{\sqrt{x}}H\cdot\frac{\sqrt{x}}{x+1} f, \\
 &&K^*\cdot f\equiv\frac{x+1}{\sqrt{x}}K\cdot\frac{\sqrt{x}}{x+1} f.
 \eeqa
-In terms of these operations the solution of the system \eq{eq:P1L3}-\eq{eq:P4L3} is
+In terms of these operations the solution of the system \eq{eq:P1L3} - \eq{eq:P4L3} is
 \beqa
 \label{eq:P1J3}
 \bP_{1}^{(1)}&=&\frac{1}{2}\(H^*(r_1+r_3)+ K^*(r_1-r_3)\)+\bP_1^{\text{zm}},\\
@@ -1611,7 +1611,7 @@ However, comparing our results with \eq{gamma2basso} we find a different value:
 \eeqa
 For both $n=2$ and $n=3$ this prediction for $B_1$ is independent of $J$.
 The next term is of order $1/g$ and is determined by $B_2$, which we also fixed in \eq{BB}.
-Unfortunately they do not agree with our numerical predictions for $n=2$ and $3$. 
+Unfortunately it does not agree with our numerical predictions for $n=2$ and $3$. 
 Furthermore, for $n=2$ we extracted the coefficient of $1/g$ with high precision, but were unable to fit it as a combination of simple zeta values using the EZ-Face calculator \cite{ezface}.
 
 Presently we do not have a definite explanation for these inconsistencies.
@@ -1776,7 +1776,7 @@ x_{N+1}^{-N-2}&x_{N+1}^{-N-1}&\dots&x_{N+1}^{-3}&x_{N+1}^{-2}
 \right| = \frac{\prod_{i<j}^{N+1} (x_i - x_j)}{\prod_{i=1}^{N+1} x_i^{i+1}},
 \eeq
 and we recognize the numerator as the Vandermonde determinant $\Delta(x_i)$. 
-We can further simplify the final result by anti-symmetrizing the denominator, which we can do because everything else in the integrand is anti-symmetric and the integration measure is symmetric w.r.t $x_i$, thus under the integral we can replace $\det X$ by
+We can further simplify the final result by anti-symmetrizing the denominator, which we can do because everything else in the integrand is anti-symmetric and the integration measure is symmetric with respect to $x_i$, thus under the integral we can replace $\det X$ by
 \beq
 	\det X' = \frac{\Delta^2(x_i)}{(N+1)!} \, \prod_{i=1}^{N+1} \frac{1}{x_i^{N+2}}.
 \eeq
