@@ -851,9 +851,10 @@ Furthermore, there is a unique entire $Q$ function with the above asymptotics.
 For $S>-1/2$ we can reformulate the prescription by saying that the correct solution has power-like asymptotics, containing all possible solutions, plus a small solution reinforced with an exponent.
 In this form we can try to translate this result to our case. 
 We notice that for $g\to 0$ we have $\mu_{12,1}\sim u^{S}$ and $\mu_{12,2}\sim u^{-S-1}$, which tells us that at least the second solution must be allowed to have a non-constant periodic coefficient in the asymptotics. 
-We also assume that the coefficient in front of $\mu_{ab,3}$ tends to a constant\footnote{It could be hard or even impossible to separate $\mu_{ab,3}$ from $\mu_{ab,2}$ in a well defined way.
-In these cases $\mu_{ab,2}$ is defined modulo $\mu_{ab,3}$ and other subleading solutions. 
-Our prescription then means that the exponential part of the coefficient in front of $\mu_{ab,3}$ is proportional to that of in front of $\mu_{ab,2}$.}.
+We also assume that the coefficient in front of $\mu_{ab,3}$ tends to a constant.
+%\footnote{It could be hard or even impossible to separate $\mu_{ab,3}$ from $\mu_{ab,2}$ in a well defined way.
+%In these cases $\mu_{ab,2}$ is defined modulo $\mu_{ab,3}$ and other subleading solutions. 
+%Our prescription then means that the exponential part of the coefficient in front of $\mu_{ab,3}$ is proportional to that of in front of $\mu_{ab,2}$.}.
 This extra condition does not follow from the one loop analysis we deduced from our solution.
 We will show how this prescription produces the correct known result for the leading order in $S$.
 From our analysis it is hard to make a definite statement about the behaviour of the periodic coefficients in front of $\mu_{12,4}$ and  $\mu_{12,5}$, but due to the expected $\Delta \to-\Delta$ symmetry, which interchanges $\mu_{12,5}$ and $\mu_{12,1}$, one may expect that the coefficient of $\mu_{12,5}$ should also go to a constant. 
@@ -862,7 +863,8 @@ To summarize we should have
 \mu_{ab}(u)=\sum_{A=1}^5 c_{A}\mu_{ab,A}(u)
 +\sum_{A=2,4,5} p_{A}(u)\mu_{ab,A}(u)
 \eeq
-where $c_A$ are constants whereas $p_{A}(u)$ are some linear combinations of $e^{\pm 2\pi u}$\footnote{It could be that some of the coefficients of $p_{A}$ should be zero due to the constraint \eq{constraint}.}.
+where $c_A$ are constants whereas $p_{A}(u)$ are some linear combinations of $e^{\pm 2\pi u}$. 
+It could also be that some of the coefficients of $p_{A}$ should be zero due to the constraint \eq{constraint}.
 
 In the small $S$ limit, $\bP_a\to 0$ and the finite difference equation \eq{5bax} simply tells us that $\mu_{ab}(u+i)=\mu_{ab}(u)$ which implies that our $5$ independent solutions are just constants at the leading order in $S$.
 We begin by noticing that in this limit $\mu_{12}$ must be entirely coming from $\mu_{12,1}$ as all the other solutions could only produce negative powers and thus cannot contribute at the leading order. 
@@ -948,7 +950,8 @@ f(u+i)-f(u)=h(u).
 \label{eqperiod}
 \eeq
 More precisely, we consider functions $f(u)$ and $h(u)$ with one cut in $u$ between $-2g$ and $2g$, and no poles. 
-Such functions can be represented as infinite Laurent series in the Zhukovsky variable $x(u)$, and we additionally restrict ourselves to the case where for $h(u)$ this expansion does not have a constant term\footnote{The r.h.s. of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.}.
+Such functions can be represented as infinite Laurent series in the Zhukovsky variable $x(u)$, and we additionally restrict ourselves to the case where for $h(u)$ this expansion does not have a constant term. 
+Note that the right hand side of of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.
 One can see that the general solution of \eq{eqperiod} has a form of a particular solution plus an arbitrary $i$-periodic function, which we also call a zero mode. 
 % The class of $i$-periodic function we consider here is restricted to $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants (for discussion of higher modes $\sinh(2\pi n u), \cosh(2\pi n u)$ see appendix \ref{sec:appHigher}).
 First we will describe the construction of the particular solution and later deal with zero modes. 
@@ -969,15 +972,15 @@ We also define $\Sigma\cdot x^{-n}=\Gamma'\cdot x^{-n}$ for $n>0$, where the int
 \(\Gamma'\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\partial_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)]}h(v).
 \label{Gammaprime}
 \eeq
-This requirement is consistent because of the following relation\footnote{We remind that $f_+$ and $f_-$ stand for the part of the Laurent expansion with, respectively, positive and negative powers of $x$, while $\tilde f$ is the analytic continuation around the branch point at $u=2g$ (which amounts to replacing $x\to\frac{1}{x}$)}
+This requirement is consistent because of the following relation
 \beq
 \(\Gamma'\cdot h\)(u+i)-\(\Gamma'\cdot h\)(u)
 =
 -\frac{1}{2\pi i}\oint_{-2g}^{2g}\frac{h(v)}{u-v}dv=h_-(u)-\widetilde{h_+}(u).
 \label{eq:Gammaproperty}
 \eeq
-What is left is to define $\Sigma$ on positive powers of $x$. 
-We do it by requiring
+We remind that $f_+$ and $f_-$ stand for the part of the Laurent expansion with, respectively, positive and negative powers of $x$, while $\tilde f$ is the analytic continuation around the branch point at $u=2g$ (which amounts to replacing $x\to 1/x$).
+What is left is to define $\Sigma$ on positive powers of $x$, which we do by requiring
 \beq
 \Sigma\cdot\left[x^a+1/x^a\right]\equiv p_a'(u) %=2 \Sigma\cdot\left[T_a\(\frac{u}{2g}\)\right],
 \label{paprime}
@@ -1293,6 +1296,7 @@ We defined $\ch_-^x=\cosh_-(x)$ and $\ch_-^y=\cosh_-(y)$, where $\cosh_-(x)$ is 
 The result for $J=4$ is given in appendix \ref{sec:SolvingPmuL4}.
 
 \subsubsection{Weak coupling expansion}
+\label{sec:curvature_weak}
 
 Our results for the curvature function $\gamma^{(2)}(g)$ at $J=2,3,4$ given in \eq{gamma2L2}, \eq{gamma2L3} and \eq{gamma2L4} are straightforward to expand at weak coupling. 
 We give expansions to 10 loops in \text{appendix \ref{sec:weakS3}}. Let us start with the $J=2$ case, for which we found
@@ -1460,13 +1464,15 @@ However below we will see that based on $J=2$ and $J=3$ results one can make a p
 The precision of the final fit at orders $1/g^2$ and $1/g^3$ is $10^{-16}$ and $10^{-14}$ respectively.
 
 \subsubsection{Higher mode numbers}
+\label{sec:curvature_mode_numbers}
 
-In the main text we discussed the NLO solutions to the $\bP\mu$ system which are based on the leading order solutions \eqref{eq:P1solLOevenL}-\eqref{eq:P4solLOevenL} or \eqref{P1oddL}-\eqref{P4oddL}. One of the assumptions for constructing the leading order solution was to allow $\mu_{ab}$ to have only $e^{\pm 2\pi u}$ in asymptotics at infinity (we recall that this led to all $\mu$'s being constatnt except $\mu_{24}$ which is equal to $\sinh\({2\pi u}\)$ or $\cosh\({2\pi u}\)$), while in principle requiring $\mu_{ab}$ to be periodic one could also allow  to have $e^{2n\pi u}$ with any integer $n$.
-Thus a natural generalization of the leading order solution is to consider $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=
-\cosh\({2\pi n u}\)$, where $n$ is an arbitrary integer. As discussed above (see the end of section \ref{sec:LOresultevenL} and appendix \ref{sec:Sanyn}), we believe that at the leading order in $S$ such solutions correspond to states with mode numbers equal to $n$, and they reproduce the slope function for this case.
+The starting point for finding the curvature function was considering the leading order solution of the $\pmu$-system \eqref{eq:P1solLOevenL} - \eqref{eq:P4solLOevenL} or \eqref{P1oddL} - \eqref{P4oddL}, which resulted in the slope function. 
+One of the assumptions for constructing the leading order solution was to allow $\mu_{ab}$ to have only $e^{\pm 2\pi u}$ in asymptotics at infinity, which in turn led to all $\mu$'s being constant except $\mu_{24}$ which is equal to $\sinh\({2\pi u}\)$ or $\cosh\({2\pi u}\)$.
+In principle requiring $\mu_{ab}$ to be periodic one could also allow to have $e^{2n\pi u}$ with any integer $n$.
+Thus a natural generalization of the leading order solution is to consider $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}= \cosh\({2\pi n u}\)$, where $n$ is an arbitrary integer. 
+As discussed in section \ref{sec:LOresultevenL}, we believe that at the leading order in $S$ such solutions correspond to states with mode numbers equal to $n$, and they reproduce the slope function for this case.
 
-Proceeding to order $S^2$, the calculation of the curvature function $\gamma^{(2)}(g)$ with $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=
-\cosh\({2\pi n u}\)$ can be done following the same steps as for $n=1$.
+Proceeding to order $S^2$, the calculation of the curvature function $\gamma^{(2)}(g)$ with $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=\cosh\({2\pi n u}\)$ can be done following the same steps as for $n=1$.
 The final results for $J=2,3$ and $4$ are given by exactly the same formulas as for $n=1$ (\eqref{gamma2L2}, \eqref{gamma2L3} and \eqref{gamma2L4} respectively) -- the only difference is that now one should set in those expressions
 \beqa
 \label{nrep1}
@@ -1477,25 +1483,20 @@ The final results for $J=2,3$ and $4$ are given by exactly the same formulas as 
 \label{nreplast}
 &&\ch_-^y=\[\cosh\({2 \pi n u_y}\)\]_-.
 \eeqa
-It would be natural to assume that this solution of the $\bP\mu$ system describes anomalous dimensions for states with mode number $n$ at order $S^2$. However we found some peculiarities in the strong coupling expansion of the result. The strong coupling data available for comparison in the literature for states with $n>1$ also relies on some conjectures (see \cite{Basso:2011rs}, \cite{Gromov:2011bz}), so the interpretation of this solution is not fully clear to us.
+It would be natural to assume that this solution of the $\bP\mu$-system describes anomalous dimensions for states with mode number $n$ at order $S^2$. 
+However we found some peculiarities in the strong coupling expansion of the result. 
+The strong coupling data available for comparison in the literature for states with $n>1$ also relies on some conjectures (see \cite{Basso:2011rs,Gromov:2011bz}), so the interpretation of this solution is not fully clear to us.
 
-
-
-
-
-
-
-
-The weak coupling expansion for this case turns out to be related in a simple way to the $n=1$ case. One should just replace $\pi\to n\pi$ in the expansions for $n=1$ which were given in \eq{weak22long}, \eq{weak23long}, \eq{weak24long}. For example,
+The weak coupling expansion for this case turns out to be related in a simple way to the $n=1$ case. 
+One should just replace $\pi\to n\pi$ in the expansions for $n=1$ which are given in \eq{weak22long}, \eq{weak23long}, \eq{weak24long}. 
+For example,
 \beqa
 \nn
 	\gamma_{J=2}^{(2)}&=&-8 g^2 \zeta_3+g^4 \left(140 \zeta_5-\frac{32 n^2\pi ^2 \zeta_3}{3}\right)+g^6
    \left(200 n^2\pi ^2 \zeta_5-2016 \zeta_7\right)
 	+\dots
-	\\
 \eeqa
-It would be interesting to compare these weak coupling predictions to results obtained from the asymptotic Bethe ansatz (or by other means) as it was done for $n=1$ in section \ref{sec:weak}.
-
+It would be interesting to compare these weak coupling predictions to results obtained from the asymptotic Bethe ansatz (or by other means) as it was done for the $n=1$ case in section \ref{sec:curvature_weak}.
 
 
 \subsection{Update on short strings}
@@ -1520,9 +1521,11 @@ By comparing the $J=2,3$ expansions \eq{eq:ssj2} and \eq{eq:ssj3} to the above g
 However as discussed in section \ref{sec:short_strings} we expect all series of coefficients to have a certain power-like dependencies on $J$, namely we expect $B_1$, $B_2$ to be constant and $B_3$, $B_4$ to have the form $a J^2 + b$ with $a$ and $b$ constant.
 Having just found two data points for $J=2,3$ we immediately find $a$ and $b$ and thus deduce that
 \beqa
+\label{eq:curvature_bs}
+\arraycolsep=1.6pt
  \begin{array}{rcrlrlrcl}
-B_1 &=& &3/2, &B_2& &=& &-3\,\zeta_3+\frac{3}{8}, \nn \\
-B_3 &=& &-\frac{J^2}{2}-\frac{9 \, \zeta_3}{2}+\frac{5}{16}, &B_{4}& &=& &\frac{3}{16} J^2 (16 \, \zeta_3+20 \, \zeta_5-9)-\frac{15 \, \zeta_5}{2}-\frac{93 \, \zeta_3}{8}-\frac{3}{16}.
+B_1 &=& &3/2, &B_2& &=& &-3\,\zeta_3+\frac{3}{8},  \\
+B_3 &=& &-\frac{J^2}{2}-\frac{9 \, \zeta_3}{2}+\frac{5}{16},\;\; &B_{4}& &=& &\frac{3}{16} J^2 (16 \, \zeta_3+20 \, \zeta_5-9)-\frac{15 \, \zeta_5}{2}-\frac{93 \, \zeta_3}{8}-\frac{3}{16}. 
 \end{array}
 \eeqa
 Having fixed all the unknowns we can now write the strong coupling expansion of the curvature function for arbitrary values of $J$ as
@@ -1568,110 +1571,68 @@ The fit results are shown in table \ref{tab:coefficients}, we see that our predi
 However we must be honest that for the $J=3$ and especially $J=4$ states we did not have as many data points as for the $J=2$ state and the fit is somewhat shaky.
 
 \subsubsection{Issues with higher mode numbers}
+\label{sec:curvature_inconsistencies}
 
-Let us now discuss the strong coupling expansion. According to Basso's conjecture \cite{Basso:2011rs} (see also \cite{Gromov:2011bz}), the structure of the expansion may be obtained from
-\beq
-\label{basso1app}
-\Delta^2=J^2+S
-\(
-A_1\sqrt{\mu}+A_2+\dots
-\)
-+S^2
-\(
-B_1+\frac{B_2}{\sqrt\mu}
-+\dots
-\)
-+S^3
-\(
-\frac{C_1}{\mu^{1/2}}
-+\frac{C_2}{\mu^{3/2}}
-+\dots
-\)
-+{\cal O}({ S}^4)\;,
-\eeq
-where $\mu=n^2\lambda$. This gives
-\beqa
-\label{basso2app}
-\Delta&=&J+\frac{S}{2J}
-\(
-A_1n\sqrt{\lambda}+A_2+\frac{A_3}{n\sqrt{\lambda}}+\dots
-\)\\
-\nn&+&S^2
-\(
-- \frac{A_1^2}{8J^3} \, n^2\lambda
--  \frac{A_1A_2}{4J^3} \, n\sqrt{\lambda}
-+\[\frac{B_1}{2J}-\frac{A_2^2+2A_1 A_3}{8J^3}\]
-+
-\[
-\frac{B_2}{2J}
--\frac{A_2A_3+A_1A_4}{4J^3}
-\]  \frac{1}{n\sqrt\lambda}
-+\dots
-\)
-+{\cal O}(S^3)\;.
-\eeqa
-where $A_i$ are known from Basso's slope function. Substituting them, we find
+In section \ref{sec:small_spin_structure} we conjectured a particular structure \eq{eq:delta_squared_basso} for the small spin expansion of generalized Konishi anomalous dimension, which we successfully utilized up to now.
+In section \ref{sec:inconsistencies} however we saw first hints that the naive replacement $\lambda \to \mu \equiv n^2 \lambda$ we use for the conjecture might not actually be justified.
+Namely we were not able to match the structure of the semi-classical one-loop string energy \eq{delta_oneloop_sj} with the conjectured structure \eq{sec:small_spin_structure} for mode numbers $n>1$. 
+
+Let us now generalize the calculations in the previous subsection for the case when $n=2$.
+First we use find the strong coupling expansion of the curvature function in terms of the coefficients $A_i$ and $B_i$, generalizing \eq{eq:ss_abc} to
 \beq
 \label{gamma2basso}
 	\gamma^{(2)}_{J}(g)=-\frac{8 \pi ^2g^2 n^2}{J^3}+\frac{2 \pi  g n}{J^3}+\frac{B_1-1}{2 J}+\frac{8 B_2 J^2-4 J^2+1}{64 \pi  g J^3 n}+\dots
 \eeq
-However, already in \cite{Gromov:2011bz} some inconsistencies were found if one assumes this structure for $n>1$. Let us extend that analysis by comparing the prediction \eq{gamma2basso} to our results from the $\bP\mu$-system. To compute the expansion of our results, similarly to the $n=1$ case, we evaluated $\gamma_{J}^{(2)}(g)$ numerically for many values of $g$, and then fitted the result by powers of $g$. As for $n=1$ we found with high precision (about $\pm10^{-16}$) that the first several coefficients involve only rational numbers and powers of $\pi$. Our results for $n=2,3$ and $J=2,3,4$ are summarized below:
-\beq
+This expansion assumes the conjectured structure \eq{eq:delta_squared_basso} with the naive replacement $\lambda \to \mu$.
+Now we compare the expansion \eq{gamma2basso} to our results from the $\bP\mu$-system, which we generalized to arbitrary mode numbers in section \ref{sec:curvature_mode_numbers} by also doing some naive replacements.
+To compute the strong coupling expansions of our results, similarly to the $n=1$ case, we evaluated $\gamma_{J}^{(2)}(g)$ numerically for many values of $g$, and then fitted the result by powers of $g$. 
+As for $n=1$ we found with high precision (about $\pm10^{-16}$) that the first several coefficients involve only rational numbers and powers of $\pi$. 
+Our results for $n=2,3$ and $J=2,3,4$ are summarized below:
+\beqa
 \label{gamma2L22}
-	\gamma^{(2)}_{J=2,n=2}(g)=-4\pi^2g^2+\frac{\pi g}{2}+\frac{17}{8}-\frac{0.29584877037648771(2)}{g}
-	+\dots
-\eeq
-\beq
-	\gamma^{(2)}_{J=3,n=2}(g)=-\frac{32}{27} \pi ^2 g^2+\frac{4 \pi  g}{27}+\frac{17}{12}
-	-\frac{0.2928304112866493(9)}{g}
-	+\dots
-\eeq
-\beq
-\gamma^{(2)}_{J=4,n=2}(g)=-\frac{1}{2} \pi ^2 g^2+\frac{\pi  g}{16}+\frac{17}{16}-\frac{0.319909936615448(9)}{g}
-+\dots
-\eeq
-\beq
-	\gamma^{(2)}_{J=2,n=3}(g)=-9 \pi ^2 g^2+\frac{3 \pi  g}{4}+\frac{23}{4}-\frac{0.8137483(9)}{g}+\dots
-\eeq
-\beq
-	\gamma^{(2)}_{J=3,n=3}(g)=-\frac{8}{3} \pi ^2 g^2+\frac{2 \pi  g}{9}+\frac{23}{6}-\frac{0.892016609(2)}{g}
-	+\dots
-\eeq
-\beq
-	\gamma^{(2)}_{J=4,n=3}(g)=-\frac{9}{8} \pi ^2 g^2+\frac{3 \pi  g}{32}+\frac{23}{8}-\frac{1.035945580(6)}{g}+\dots
-\eeq
-Here in the coefficient of $\ofrac{g}$ the digit in brackets is the last known one within our precision\footnote{We did not seek to achieve high precision in this coefficient for $n=3$.}.
-
-Comparing to \eq{gamma2basso} we find full agreement in the first two terms (of order $g^2$ and of order $g$). The next term in \eq{gamma2basso} (of order $g^0$) is determined by $B_1$, which in \cite{Gromov:2011bz} was found to be
-\beq
-	B_1=\frac{3}{2}
-\eeq
-for all $n,J$, based on consistency with the classical energy. However, comparing our results with \eq{gamma2basso} we find a different value:
+\gamma^{(2)}_{J=2,n=2} &=& -4\pi^2g^2+\frac{\pi g}{2}+\frac{17}{8}-\frac{0.29584877037648771(2)}{g}+\dots \\
+\gamma^{(2)}_{J=3,n=2} &=& -\frac{32}{27} \pi ^2 g^2+\frac{4 \pi  g}{27}+\frac{17}{12}-\frac{0.2928304112866493(9)}{g}+\dots \\
+\gamma^{(2)}_{J=4,n=2} &=& -\frac{1}{2} \pi ^2 g^2+\frac{\pi  g}{16}+\frac{17}{16}-\frac{0.319909936615448(9)}{g}+\dots \\
+\gamma^{(2)}_{J=2,n=3} &=& -9 \pi ^2 g^2+\frac{3 \pi  g}{4}+\frac{23}{4}-\frac{0.8137483(9)}{g}+\dots \\
+\gamma^{(2)}_{J=3,n=3} &=& -\frac{8}{3} \pi ^2 g^2+\frac{2 \pi  g}{9}+\frac{23}{6}-\frac{0.892016609(2)}{g}+\dots \\
+\gamma^{(2)}_{J=4,n=3} &=& -\frac{9}{8} \pi ^2 g^2+\frac{3 \pi  g}{32}+\frac{23}{8}-\frac{1.035945580(6)}{g}+\dots
+\eeqa
+Here in the coefficient of $1/g$ the digit in brackets is the last known one within our precision.
+Comparing to \eq{gamma2basso} we find full agreement in the first two terms (of order $g^2$ and of order $g$). The next term in \eq{gamma2basso} (of order $g^0$) is determined by $B_1$, which we found to be $3/2$  for all $n,J$, based on consistency with the classical energy. 
+However, comparing our results with \eq{gamma2basso} we find a different value:
 \beqa
 	B_1&=&\frac{19}{2} \ \  \text{for }\ n=2\;,\\ \nn
 	B_1&=&23 \ \ \, \text{for }\ n=3\;.
 \eeqa
 For both $n=2$ and $n=3$ this prediction for $B_1$ is independent of $J$.
+The next term is of order $1/g$ and is determined by $B_2$, which we also fixed in \eq{BB}.
+Unfortunately they do not agree with our numerical predictions for $n=2$ and $3$. 
+Furthermore, for $n=2$ we extracted the coefficient of $1/g$ with high precision, but were unable to fit it as a combination of simple zeta values using the EZ-Face calculator \cite{ezface}.
 
-The next term is of order $\ofrac{g}$ and is determined by $B_2$, which in \cite{Gromov:2011bz} was fixed to
-\beq
-B_2=
-\left\{
-\bea{ll}
--3\,\zeta_3+\frac{3}{8}&\;\;,\;\;n=1\\
--24\,\zeta_3-\frac{13}{8}&\;\;,\;\;n=2\\
--81\,\zeta_3-\frac{24}{8}&\;\;,\;\;n=3
-\eea
-\right.\;.
-\eeq
-However, this does not agree with our numerical predictions for $n=2$ and $3$. Furthermore, for $n=2$ we extracted the coefficient of $\ofrac{g}$ with high precision (about $10^{-17}$, see \eq{gamma2L22}) but were unable to fit it as a combination of simple zeta values using the EZ-Face calculator \cite{ezface}.
-
-Thus our results appear to disagree with the values of $B_1$ and $B_2$ obtained in \cite{Gromov:2011bz}, but how to interpret this is not clear to us. Although our solution of the $\bP\mu$-system for $n>1$ looks fine at order $S$, it may be that to capture anomalous dimensions at order $S^2$ some other solution should be used.
-Another option is that the ansatz for the structure of anomalous dimensions at strong coupling may need to be modified when $n>1$ (as already suspected in \cite{Gromov:2011bz}), and our results may help provide some guidance in this case.
+Presently we do not have a definite explanation for these inconsistencies.
+Although our solution of the $\bP\mu$-system for $n>1$ looks fine at order $S$, it may be that to capture anomalous dimensions at order $S^2$ some other solution should be used.
+Another option is that the ansatz for the structure of anomalous dimensions at strong coupling may need to be modified when $n>1$, as we already suspected in section \ref{sec:inconsistencies}.
 
 
 \subsection{Cusped Wilson line}
 \label{sec:wilson_line}
+
+In this section we will consider an observable illustrated in figure \ref{fig:wilson_line}, it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ super Yang-Mills. 
+To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parametrized by a six-dimensional unit vector $\vec n(t)$ at each point of the line, where $t$ is a parameter on the line. 
+In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. 
+Because of R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
+Explicitly the observable is defined as
+\beq
+\label{WilsL}
+	W_L={\rm P}\exp\!\int\limits_{-\infty}^0\! dt\(i  A\cdot\dot{x}_q+\vec\Phi\cdot\vec n\,|\dot x_q|\)\times Z^L\times {\rm P}\exp\!\int\limits_0^\infty\!dt\(i A\cdot\dot x_{\bar q}+\vec\Phi\cdot\vec n_\theta\,|\dot x_{\bar q}|\).
+\eeq
+Due to the cusp the expectation value of such an observable diverges as
+\beq
+\left\langle W_L\right\rangle \sim \(\frac{\Lambda_{IR}}{\Lambda_{UV}}\)^{\Gamma_L(\lambda)},
+\eeq
+where $\Lambda_{IR}$ and $\Lambda_{UV}$ are the infra-red and ultraviolet cut-offs respectively \cite{Polyakov:1980ca,Correa:2012at}. 
+The quantity $\Gamma_{L}$, which we will call the cusp anomalous dimension, will be the main object of our study in this section.
+The AdS/CFT duality allows one to relate the observable in ${\cal N}=4$ SYM described above to an open string in $\adsfive$ which ends on a cusped line on the boundary of AdS. In particular, in the classical scaling limit when $L$ and $\lambda$ are both taken to infinity with $L/\sqrt{\lambda}$ fixed, we can match $\Gamma_{L}$ with the energy of the classical string \cite{Correa:2012hh, Gromov:2012eu}.
 
 \begin{figure}[t]
 \centering
@@ -1696,23 +1657,6 @@ Another option is that the ansatz for the structure of anomalous dimensions at s
 \caption{The cusped Wilson line with an operator insertion.}
 \label{fig:wilson_line}
 \end{figure}
-
-In this section we will consider an observable illustrated in figure \ref{fig:wilson_line}, it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ super Yang-Mills. 
-To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parametrized by a six-dimensional unit vector $\vec n(t)$ at each point of the line, where $t$ is a parameter on the line. 
-In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. 
-Because of R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
-Explicitly the observable is defined as
-\beq
-\label{WilsL}
-	W_L={\rm P}\exp\!\int\limits_{-\infty}^0\! dt\(i  A\cdot\dot{x}_q+\vec\Phi\cdot\vec n\,|\dot x_q|\)\times Z^L\times {\rm P}\exp\!\int\limits_0^\infty\!dt\(i A\cdot\dot x_{\bar q}+\vec\Phi\cdot\vec n_\theta\,|\dot x_{\bar q}|\).
-\eeq
-Due to the cusp the expectation value of such an observable diverges as
-\beq
-\left\langle W_L\right\rangle \sim \(\frac{\Lambda_{IR}}{\Lambda_{UV}}\)^{\Gamma_L(\lambda)},
-\eeq
-where $\Lambda_{IR}$ and $\Lambda_{UV}$ are the infra-red and ultraviolet cut-offs respectively \cite{Polyakov:1980ca,Correa:2012at}. 
-The quantity $\Gamma_{L}$, which we will call the cusp anomalous dimension, will be the main object of our study in this section.
-The AdS/CFT duality allows one to relate the observable in ${\cal N}=4$ SYM described above to an open string in $\adsfive$ which ends on a cusped line on the boundary of AdS. In particular, in the classical scaling limit when $L$ and $\lambda$ are both taken to infinity with $L/\sqrt{\lambda}$ fixed, we can match $\Gamma_{L}$ with the energy of the classical string \cite{Correa:2012hh, Gromov:2012eu}.
 
 Wilson lines are non-local observables in the sense that they are parametrized by a line in spacetime instead of just a point.
 Technically this renders the whole machinery of spin chains and spectral curves unsuitable for studying these observables as we assumed to be working with local operators. 

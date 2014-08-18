@@ -1048,7 +1048,8 @@ The one-loop shift expanded up to two orders in $\mathcal{S}$ reads
    \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\] \;\;\;\;\;\;\;\;
    \;.
 \eeqa
-The next terms in this expansion can be found in \eq{delta_oneloop_3}, \eq{delta_oneloop_4}. The sum is nothing but a sum over the fluctuation energies,
+%The next terms in this expansion can be found in \eq{delta_oneloop_3}, \eq{delta_oneloop_4}. 
+The sum is nothing but a sum over the fluctuation energies,
 whereas the remaining terms originate from the ``zero"-modes
 $m=n$, which have to be treated separately.
 The sum can be very easily expanded for small ${\cal J}$.
@@ -1076,7 +1077,7 @@ up to a second order and then in small ${\cal J}$ reads
 \end{array}
 \right.
 \eeq
-Expansions up to four orders in $\mathcal{S}$ and then in $\mathcal{J}$ are given in appendix \ref{AppS4}. 
+%Expansions up to four orders in $\mathcal{S}$ and then in $\mathcal{J}$ are given in appendix \ref{AppS4}. 
 We note that the contributions ${\cal S}^2/{\cal J}^3$ are universal for $n=1$ and $n=2$, however starting from $n=3$ we get some nasty coefficient.
 %As we will discuss in the next section this could imply that the naive generalization of the conjecture in \cite{Basso:2011rs} is not fully correct for $n>2$. Also for $n=2$ we found  a similar anomaly at the order $S^3$.
 
@@ -1100,8 +1101,10 @@ In this section we will show how combining the knowledge of the semi-classical o
 Later in the text when we find the next small spin coefficient after the slope, which we call the curvature function, we will revisit the techniques presented here in order to boost the obtain results one order further.
 
 \subsubsection{Structure of small spin expansions}
+\label{sec:small_spin_structure}
 
 Consider the classical string energy \eq{eq:classical_energy}, the re-expansion of $\Delta^2$ in the large $\mu \equiv \lambda n^2$ limit with $S$ and $J$ fixed has a particularly nice structure
+\small
 \beq
 \Delta^2=J^2+S
 \(
@@ -1122,8 +1125,10 @@ Consider the classical string energy \eq{eq:classical_energy}, the re-expansion 
 +{\cal O}({ S}^4)
 \label{dsquare_tree}
 \eeq
+\normalsize
 where each next term in $S$ gets more and more suppressed for large $\mu$. 
 It was conjectured \cite{Basso:2011rs} that a generalization of this result holds for any operator at all values of the coupling constant, more precisely the statement was that making expansions of the scaling dimension squared first in $S\to 0$ and then in $\mu\to \infty$ should reveal the following structure
+\small
 \beq\label{eq:delta_squared_basso}
 \Delta^2=J^2+S
 \(
@@ -1143,6 +1148,7 @@ B_1+\frac{B_2}{\sqrt\mu}
 %+S^4\(\frac{31}{64\mu}+\dots\)
 +{\cal O}({ S}^4)\;,
 \eeq
+\normalsize
 where the coefficients $A_i,\;B_i,\;C_i$, etc. are some functions of $J$.
 
 \begin{figure}[t]
@@ -1154,7 +1160,7 @@ where the coefficients $A_i,\;B_i,\;C_i$, etc. are some functions of $J$.
 \end{figure}
 
 Indeed it is not hard to understand this constraint.
-A good entry point is considering the inverse relation $S(\Delta)$, frequently encountered in the context of BFKL \cite{bfkl}. 
+A good entry point is considering the inverse relation $S(\Delta)$, frequently encountered in the context of BFKL \cite{bfkl}, where one also usually sets $n=1$. 
 It satisfies a few basic properties, namely the curve $S(\Delta)$ goes through the points $(\pm J, 0)$ at any coupling, because at $S=0$ the operator is BPS. 
 At the same time for non-BPS states one should have $\Delta(\lambda)\propto \lambda^{1/4}\to\infty$ \cite{Gubser:1998bc} which indicates that if $\Delta$ is fixed, $S$ should go to zero, thus combining this with the knowledge of fixed points $(\pm J, 0)$ we conclude that at infinite coupling $S(\Delta)$ is simply the line $S = 0$. 
 As the coupling becomes finite $S(\Delta)$ starts bending from the $S=0$ line and starts looking like a parabola going through the points $\pm J$, see figure \ref{fig:bfkl}. 
@@ -1190,10 +1196,11 @@ A_1\sqrt{\mu}+A_2+\frac{A_3}{\sqrt{\mu}}+\dots
 -\frac{A_2A_3+A_1A_4}{4J^3}
 \]  \frac{1}{\sqrt\mu}
 +\dots
-\).
+\),
 %+{\cal O}(S^3)\;.
 \eeqa
 \normalsize
+where we introduced the mode number by the naive replacement $\lambda \to \mu \equiv n^2 \lambda$.
 By definition the coefficients of $S$ and $S^2$ are the slope and curvature functions respectively as defined in \eq{eq:slope_definition}, so now we have their expansions at strong coupling in terms of $A_i,\;B_i,\;C_i$, etc. 
 Since the $S$ coefficient only contains the constants $A_i$, we can find all of their values by simply expanding the slope function \eq{eq:slope_function} that we found earlier at strong coupling. 
 We get
@@ -1211,6 +1218,7 @@ Thus we conclude that the letters in $A_i$, $B_i$, $C_i$ etc. are directly linke
 
 \subsubsection{Two-loop prediction}
 
+Let us now consider the case $n=1$.
 We are interested in the coefficients of the strong coupling expansion of $\Delta$, namely
 \beq
 	\Delta = \Delta^{(0)} \lambda^\frac{1}{4} + \Delta^{(1)} \lambda^{-\frac{1}{4}}  + \Delta^{(2)} \lambda^{-\frac{3}{4}} + \Delta^{(3)} \lambda^{-\frac{5}{4}} + \dots
@@ -1275,7 +1283,8 @@ Generalizing the discussion above we conclude that this procedure yields the $n$
 thus e.g. to go to three loops we would need to know $A_{1;2;3;4}$, $B_{1,2,3}$, $C_{1,2}$, $D_1$, where the only unknown at this point is $B_3$.
 In order to find it we would either need to find the curvature function $\gamma^{(2)}$ or quantize the classical string to one more order.
 
-\subsubsection{Inconsistencies for higher mode numbers}\label{inconsistencies}
+\subsubsection{Inconsistencies for higher mode numbers}
+\label{sec:inconsistencies}
 
 %Note that according to our observations there are some inconsistencies in the conjecture that this derivation relies on when $n>1$ and thus this result should be treated with great care.\footnote{We assume that the results of \cite{Basso:2011rs} for the slope function
 %can be lifted by generalizing with the simple replacement $\lambda\to n^2\lambda$ when $n>1$. 
@@ -1301,8 +1310,9 @@ In order to find it we would either need to find the curvature function $\gamma^
 % We discuss this in details in the next section \ref{inconsistencies}.
 
 
-The analysis in the previous sections was done only up to second order in the small $S$ expansion. The appendix \ref{AppS4} contains our result for the
-one-loop quantization of the $n$-times folded string up to the order $S^4$. For $n=1$ our result is in perfect agreement with the conjectured structure \eq{eq:delta_squared_basso}, yet for cases with $n>1$ there are inconsistencies.
+The analysis in the previous sections was done only up to second order in the small spin expansion, namely using the one-loop semi-classical energy given by \eq{delta_oneloop_sj}. 
+%The appendix \ref{AppS4} contains our result for the one-loop quantization of the $n$-times folded string up to the order $S^4$. 
+Extending our results to higher orders in the spin we found perfect agreement with the conjectured structure \eq{eq:delta_squared_basso} for mode number $n=1$, yet for cases with $n>1$ there are inconsistencies.
 For $n=2$ the first inconsistency appears in the $\frac{S^3\mu}{J^4}$ term and for $n=3$ there are already inconsistencies at order $S^2$. We found that for $n>1$ one has to modify the structure in \eq{eq:delta_squared_basso} by
 including negative coefficients in order for it to be consistent with our one-loop results. E.g. for $n=2$ the structure has to be modified starting with the $S^3$ term, which now becomes
 \beq
@@ -1310,7 +1320,7 @@ including negative coefficients in order for it to be consistent with our one-lo
 C_{-2}\;\mu+\frac{C_1}{\sqrt\mu}+\frac{C_2}{\mu}+\dots
 \) S^3
 \eeq
-with $C_{-2}=\frac{12}{J^4}$. To the next order in $S$ we find
+with $C_{-2}=12/J^4$. To the next order in $S$ we find
 \beq
 \(
 D_{-4}\;\mu^{3/2} +D_{-2}\;\sqrt{\mu}+ \frac{D_{0}}{\sqrt\mu}+\frac{D_1}{\mu}+\dots
@@ -1321,10 +1331,12 @@ For $n=3$ the first modification already occurs at order $S^2$ and it can be res
 Thus effectively the conjectured structure \eq{eq:delta_squared_basso} has to be modified as in the $n=2$ case by including negative coefficients, which now depend on $n$ in a non-trivial way.
 It is also worth noticing that since inconsistencies start appearing at orders of $\frac{S^2}{J^2}$ and $\frac{S^3}{J^4}$ for $n=3$ and $n=2$ respectively, one might guess that
 there should be an inconsistency at order $\frac{S^4}{J^6}$ for $n=1$, however we found no such thing.
+% This study of inconsistencies reveals that the proposed modifications to the structure of \eq{eq:delta_squared_basso} have growing powers of $\mu$,
+% thus one should resum them together with similar singular terms which may arise in higher loop levels before being able to make justified predictions
+% for short operators ($S\sim J\sim 1$) at strong coupling when $n>1$.
 
-This study of inconsistencies reveals that the proposed modifications to the structure of \eq{eq:delta_squared_basso} have growing powers of $\mu$,
-thus one should resum them together with similar singular terms which may arise in higher loop levels before being able to make justified predictions
-for short operators ($S\sim J\sim 1$) at strong coupling when $n>1$.
+We will revisit this topic in section \ref{sec:curvature_inconsistencies} when we try to perform this procedure again after having found the curvature function.
+As one might expect, similar issues appear in that case as well.
 
 
 
