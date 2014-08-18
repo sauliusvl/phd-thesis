@@ -40,7 +40,7 @@ where the complex scalar field $Z$ and its conjugate $\tilde{Z}$ have the standa
 	\left< {Z^a}_b(x) {{\tilde{Z^{b'}}}}_{a'}(y) \right>_{\mathrm{tree}} \approx \frac{{\delta^a}_{a'} {\delta_b}^{b'}}{|x-y|^{2}}.
 	\label{eq:z_correlator}
 \end{equation}  
-In order to find the anomalous dimension of the operator $\Psi$ we must calculate $<\Psi(x) \tilde{\Psi}(x)>$. We do this by using Wick's theorem and plugging in the two-point correlator (\ref{eq:z_correlator}), which produces a lot of terms with delta function contractions between the adjoint indices. Some examples are
+In order to find the anomalous dimension of the operator $\Psi$ we must calculate the correlator $<\Psi(x) \tilde{\Psi}(x)>$. We do this by using Wick's theorem and plugging in the two-point correlator (\ref{eq:z_correlator}), which produces a lot of terms with delta function contractions between the adjoint indices. Some examples are
 \begin{subequations}
 	\begin{equation} 
 	\dots {\delta^{a'}}_{a} \; {\delta^{a}}_{a'} \; {\delta^{b'}}_{b} \; {\delta^{b}}_{b'} \; {\delta^{c'}}_{c} \;  {\delta^{c}}_{c'} \; \dots 
@@ -54,7 +54,7 @@ In order to find the anomalous dimension of the operator $\Psi$ we must calculat
 	\end{equation}
 	\label{eq:delta_contractions}
 \end{subequations}
-These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle due to the trace. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in fig. \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
+These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle due to the trace. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in figure \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[scale=0.5,every node/.style={draw,shape=circle,fill=black,scale=0.4}]
@@ -116,7 +116,7 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 \caption{Possible types of Wick contractions (vertical lines) between single trace operators. The constituent scalar fields are represented by dots in the horizontal lines, which represent the successive index contractions due to the trace. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
 \label{fig:planar_nonplanar}
 \end{figure}
-All that's left then are cyclic permutations of lines by shifting all of them as seen in \mbox{fig. \ref{fig:planar_nonplanar}} while going from (a) to (b). 
+All that's left then are cyclic permutations of lines by shifting all of them as seen in \mbox{figure \ref{fig:planar_nonplanar}} while going from (a) to (b). 
 There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. 
 Thus finally for the chiral primary correlator at tree level we find
 \begin{equation}
@@ -207,7 +207,7 @@ And finally we get
 A keen eye might already notice that this expression resembles a Hamiltonian of a spin chain. 
 In fact, this is hardly surprising, since from the very beginning we were talking about fields as objects in some closed line, which indeed resembles a spin chain. 
 Furthermore the correlators that we were calculating are nothing more that propagators from one state of the chain to another, hence no wonder that the operator describing this evolution looks like a Hamiltonian for a spin chain. 
-This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ exactly. 
+This identification is very useful, because the spin chains that appear in AdS/CFT are integrable and can be solved exactly, which gives us hope that we can apply the same techniques here and solve the spectral problem in $\N=4$ super Yang-Mills exactly. 
 The first steps towards this goal were outlined in the seminal paper \cite{Minahan:2002ve}, which launched the integrability program in AdS/CFT. 
 However saying that the spectral problem can be solved exactly in this particular case is too strong, since we are only at one-loop level. 
 Nevertheless one can apply the same techniques going beyond one-loop level, as we shall soon see in the coming sections. 
@@ -242,7 +242,7 @@ which can also be rewritten in terms of Pauli matrices as
 \begin{equation}
 	\mathbf{H} = 2 \sum_{l=1}^L \left( \frac{1}{4} - \vec{S}_l \cdot \vec{S}_{l+1} \right), \;\;\;\; \vec{S}_l = \frac{1}{2} \vec{\sigma}_l.
 \end{equation}
-Hence solving the spectral problem in $\N=4$ SYM translates into solving the Schr\"{o}dinger equation
+Hence solving the spectral problem in this sector translates into solving the Schr\"{o}dinger equation
 \begin{equation}
 	\mathbf{H} \, \ket{\psi} = E \, \ket{\psi},
 	\label{eq:Schrodinger}
@@ -270,7 +270,8 @@ We should also specify the periodicity boundary condition
 	\vec{S}_{L+1} = \vec{S}_1.
 \end{equation}
 The operators $\vec{S}_l$ act as Pauli matrices on the $l$'th spin site and trivially on all the others. 
-Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $(\mathbb{C}^2)^{\otimes_L}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize \footnote{Of course, technically the state space is smaller due to the cyclicity of the chain, however as is common in physics we stick with the redundant description for simplicity.}.
+Since a spin ``chain'' with a single site would have a state space $\mathbb{C}^2$, a spin chain of length $L$ has a state space $(\mathbb{C}^2)^{\otimes_L}$, which has $2^L$ basis vectors and the Hamiltonian is then a $2^L \times 2^L$ matrix, which we need to diagonalize. 
+Of course, technically the state space is smaller due to the cyclicity of the chain, however as is common in physics we stick with the redundant description for simplicity.
 Working directly with Pauli matrices one can find some simple results directly, e.g. it is trivial to show that the chiral primary operator
 \begin{equation}
 	\ket{\Psi} = \tr \; Z^L = \ket{\uparrow \, \uparrow \, \dots \, \uparrow \,}
@@ -542,7 +543,8 @@ This asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact resu
 	\label{eq:slope_definition}
 	\gamma(g) = \gamma^{(1)}(g) \; S + \gamma^{(2)}(g) \; S^2 + \ord{S^3}.
 \eeq
-The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section \ref{sec:curvature}, where we also address the question of what it actually means to send an integer quantity $S$ to zero. 
+The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section \ref{sec:curvature}.
+We address the question of what it actually means to send an integer quantity $S$ to zero in section \ref{sec:ancont}. 
 
 The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \eq{eq:sl2_aba}, given by
 \beq
@@ -596,7 +598,7 @@ which we then stick back into $F(x)$ to produce
 	F(x) = \frac{\Lambda}{2}\( \frac{G(0)}{x^2} - \frac{S}{x} \) + \frac{G(-1)}{x(x+1)} - \frac{G(1)}{x(x-1)},
 \eeq
 thus introducing the parameter $S$, which in principle could now be non-integer.
-Finally we take the small $S$ limit by noting that $G(x) \sim S$, keeping only the leading $S$ term $\gamma^{(1)} \sim S$ in the anomalous dimension and dropping all sub-leading $S$ terms. 
+Finally we take the small $S$ limit by noting that $G(x) \sim S$, keeping only the leading $S$ term $\gamma^{(1)}$ in the anomalous dimension and dropping all sub-leading $S$ terms. 
 What remains is a first order linear differential equation, which after integrating gives
 \beq
 	G(x) = \frac{x^2-1}{x^{J+2}} e^{\Lambda \frac{x^2+1}{2x}} \int_{x_0}^x dy \; F(y) \frac{y^{J+2}}{y^2-1} e^{-\Lambda \frac{y^2+1}{2y}},
@@ -640,9 +642,9 @@ We will be making use of it later in the text to extract non-trivial information
 \label{sec:integrability_strong}
 
 Since integrability seems to be an all loop phenomenon as exemplified by the asymptotic Bethe ansatz, one would expect to find it at strong coupling as well where $N=4$ super Yang-Mills admits a dual string theory formulation as discussed in section \ref{sec:n4_strong}. 
-In this section we showcase integrability of the classical $\adsfive$ string using the elegant language of algebraic curves \cite{Kazakov:2004qf,Beisert:2005bm}. 
+In this section we showcase integrability of the classical $\adsfive$ string using the elegant language of classical spectral curves \cite{Kazakov:2004qf,Beisert:2005bm}. 
 
-\subsubsection{The algebraic curve construction}
+\subsubsection{The classical spectral curve}
 \label{sec:spectral_curve}
 
 Recall that classical string theory on $\adsfive$ can be formulated as a super-coset sigma model, which is defined in terms of the algebra current $J = -g^{-1} \mathrm{d} g$. 
@@ -675,7 +677,8 @@ Furthermore, shifting the $\tau$ value corresponds to doing a similarity transfo
 Thus we have an infinite tower of conserved charges, hinting that the theory is integrable. 
 Technically to prove classical integrability one has to also show that the conserved charges are local and that they are in involution with each other \cite{Das:2004hy,Berkovits:2004jw}.
 In order to find the eigenvalues of the monodromy matrix one has to solve the characteristic equation, which in this case is a polynomial of order eight.
-This equation in turn defines an eight-sheeted Riemann surface called the \emph{algebraic curve} where the sheets can be connected with branch cuts of the square root type. 
+This equation in turn defines an eight-sheeted Riemann surface where the sheets can be connected with branch cuts of the square root type.
+We refer to this surface as the \emph{classical spectral curve} or alternatively the algebraic curve. 
 Denote the eigenvalues of the monodromy matrix as
 \begin{equation}
 	\{ e^{i\hat{p}_1(x)}, \; e^{i\hat{p}_2(x)}, \; e^{i\hat{p}_3(x)}, \; e^{i\hat{p}_4(x)} \; | \; e^{i\tilde{p}_1(x)}, \; e^{i\tilde{p}_2(x)}, \; e^{i\tilde{p}_3(x)}, \; e^{i\tilde{p}_4(x)} \},
@@ -688,7 +691,7 @@ Namely, this description of classical solutions is more natural in light of inte
 \begin{figure}[t]
 	\centering
 		\includegraphics[width=0.75\textwidth]{../graphics/cuts}
-	\caption{Examples of cuts connecting the eight sheets of the Riemann surface corresponding to the spectral curve for strings in $AdS_5 \times S^5$. The wavy line corresponds to the pole at $x = 1$.}
+	\caption{Examples of cuts connecting the eight sheets of the Riemann surface corresponding to the classical spectral curve for strings in $AdS_5 \times S^5$. The wavy line corresponds to the pole at $x = 1$.}
 	\label{fig:cuts}
 \end{figure}
 
@@ -968,7 +971,7 @@ These parameters as expected correspond to the number of scalars $J$ and number 
 In the classical regime these are assumed to scale as $\sqrt{\lambda}$, thus we use $\mathcal{S} = S/ n \sqrt{\lambda}$ and $\mathcal{J} = J / n \sqrt{\lambda}$ when describing the classical solution, which corresponds to long operators in gauge theory. 
 The number of spikes $n$ corresponds to the mode number $n$ in the language of Bethe states.
 
-Given the explicit string solution (see \cite{Tseytlin:2010jv} for details) one could follow the steps outlined in the algebraic curve construction, namely calculate the monodromy matrix \eq{eq:monodromy}, diagonalize it and extract the quasi-momenta. 
+Given the explicit string solution (see \cite{Tseytlin:2010jv} for details) one could follow the steps outlined in the classical spectral curve construction, namely calculate the monodromy matrix \eq{eq:monodromy}, diagonalize it and extract the quasi-momenta. 
 While it is indeed possible to do, we will present an alternative method based on analyticity properties of the quasi-momenta when we discuss the classical limit of cusped Wilson lines in section \ref{sec:wilson_classical}.
 Here we present the result \cite{Gromov:2011de}, which consists of two ``basis'' quasi-momenta
 \beqa
@@ -1036,9 +1039,10 @@ The square of the classical energy has a very nice expansion in this limit
    {\cal J}^2+2}-{\cal S}^3 \, \frac{{\cal J}^2+3}{8
    \left({\cal J}^2+1\right)^{5/2}}
    %+{\cal S}^4\frac{3 {\cal J}^4+18 {\cal J}^2+31}{64 \left({\cal J}^2+1\right)^4}
-   +{\cal O}\left({\cal S}^4\right)\;.
+   +{\cal O}\left({\cal S}^4\right)\;.\qquad
 \eeqa
 The one-loop shift expanded up to two orders in $\mathcal{S}$ reads
+\small
 \beqa
 \label{eq:delta_oneloop_slope}
 \Delta&\simeq&
@@ -1048,6 +1052,7 @@ The one-loop shift expanded up to two orders in $\mathcal{S}$ reads
    \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\] \;\;\;\;\;\;\;\;
    \;.
 \eeqa
+\normalsize
 %The next terms in this expansion can be found in \eq{delta_oneloop_3}, \eq{delta_oneloop_4}. 
 The sum is nothing but a sum over the fluctuation energies,
 whereas the remaining terms originate from the ``zero"-modes
@@ -1064,13 +1069,13 @@ up to a second order and then in small ${\cal J}$ reads
 \left\{
 \begin{array}{ll}
  -\frac{\mathcal{S}}{2 \mathcal{J}}+
- \mathcal{S}^2 \left(+\frac{1}{2\mathcal{J}^3}-\frac{3 \zeta_3}{2 \mathcal{J}}-\frac{1}{16 \mathcal{J}}\right), & \;\;\;\;\mathrm{for}\;n=1 \\
+ \mathcal{S}^2 \left(+\frac{1}{2\mathcal{J}^3}-\frac{3 \zeta_3}{2 \mathcal{J}}-\frac{1}{16 \mathcal{J}}\right) & \;\;\;\;\mathrm{for}\;n=1, \\
  -\frac{\mathcal{S}}{2 \mathcal{J}}+
  \mathcal{S}^2 \left(+\frac{1}{2
-   \mathcal{J}^3}-\frac{12 \zeta_3}{\mathcal{J}}-\frac{17}{16 \mathcal{J}}\right), & \;\;\;\;\mathrm{for}\; n=2 \\
+   \mathcal{J}^3}-\frac{12 \zeta_3}{\mathcal{J}}-\frac{17}{16 \mathcal{J}}\right) & \;\;\;\;\mathrm{for}\; n=2, \\
  -\frac{\mathcal{S}}{2 \mathcal{J}}+
  \mathcal{S}^2 \left(-\frac{5}{8
-   \mathcal{J}^3}-\frac{81 \zeta_3}{2 \mathcal{J}}-\frac{7}{4 \mathcal{J}}\right), & \;\;\;\;\mathrm{for}\;n=3 %\\
+   \mathcal{J}^3}-\frac{81 \zeta_3}{2 \mathcal{J}}-\frac{7}{4 \mathcal{J}}\right) & \;\;\;\;\mathrm{for}\;n=3. %\\
 % -\frac{\mathcal{S}}{2 \mathcal{J}}+
 % \mathcal{S}^2 \left(-\frac{55}{18
 %   \mathcal{J}^3}-\frac{96 \zeta_3}{\mathcal{J}}-\frac{281}{144 \mathcal{J}}\right) & \;\;,\;\;n=4
@@ -1085,7 +1090,7 @@ We note that the contributions ${\cal S}^2/{\cal J}^3$ are universal for $n=1$ a
 \label{sec:short_strings}
 
 Even though semi-classical results are technically only valid for the charges scaling as $\sqrt{\lambda}$, there is evidence that re-expanding the classical energy plus the one-loop shift yields a reasonable result in terms of the unscaled charges $J$ and $S$ \cite{Roiban:2009aa}, thus providing one the possibility to probe so-called short string states, the Konishi operator being a prime example.
-Namely summing up \eq{eq:classical_energy} and \eq{delta_oneloop_sj}, introducing the unscaled charges $S = \sqrt{\mu}\, \mathcal{S}$, $J = \sqrt{\mu}\, \mathcal{J}$ and re-expanding in terms of $\mu \equiv n^2 \lambda$ yields the following one-loop energy for the folded string solution \cite{Gromov:2011de}
+Namely summing up the square root of \eq{eq:classical_energy} and \eq{delta_oneloop_sj}, introducing the unscaled charges $S = \sqrt{\mu}\, \mathcal{S}$, $J = \sqrt{\mu}\, \mathcal{J}$ and re-expanding in terms of $\mu \equiv n^2 \lambda$ yields the following one-loop energy for the folded string solution \cite{Gromov:2011de}
 \beq
 \Delta_{S,J,n}\simeq\sqrt{2S}\mu^{1/4}
 +\frac{2J^2+3S^2-2S}{4\,(2 S)^{1/2}\,\mu^{1/4}}.
@@ -1163,7 +1168,7 @@ Indeed it is not hard to understand this constraint.
 A good entry point is considering the inverse relation $S(\Delta)$, frequently encountered in the context of BFKL \cite{bfkl}, where one also usually sets $n=1$. 
 It satisfies a few basic properties, namely the curve $S(\Delta)$ goes through the points $(\pm J, 0)$ at any coupling, because at $S=0$ the operator is BPS. 
 At the same time for non-BPS states one should have $\Delta(\lambda)\propto \lambda^{1/4}\to\infty$ \cite{Gubser:1998bc} which indicates that if $\Delta$ is fixed, $S$ should go to zero, thus combining this with the knowledge of fixed points $(\pm J, 0)$ we conclude that at infinite coupling $S(\Delta)$ is simply the line $S = 0$. 
-As the coupling becomes finite $S(\Delta)$ starts bending from the $S=0$ line and starts looking like a parabola going through the points $\pm J$, see figure \ref{fig:bfkl}. 
+As the coupling becomes finite $S(\Delta)$ starts bending from the $S=0$ line and starts looking like a parabola going through the points $\pm J$, as shown in figure~\ref{fig:bfkl}. 
 Based on this qualitative picture and the scaling $\Delta(\lambda)\propto \lambda^{1/4}$ at $\lambda\rightarrow\infty$ and fixed $J$ and $S$, one can write down the following ansatz,
 \beqa
 \label{eq:sofdelta}
@@ -1214,7 +1219,7 @@ A_4=J^2-\frac{1}{4}\dots\;.
 Note that in this series the power of $J$ increases by two at every other member, which is a direct consequence of omitting odd powers of $\Delta$ from \eq{eq:sofdelta}. 
 We also expect the same pattern to hold for the coefficients $B_i$, $C_i$, etc.
 It is not hard to see that the sub-leading coefficient in the spin $S$ only contains $A_i$ and $B_i$ coefficients, thus given the $A$'s we could in principle fix all $B$'s.
-Thus we conclude that the letters in $A_i$, $B_i$, $C_i$ etc. are directly linked to the generalizations of the slope function $\gamma^{(n)}$.
+Hence we conclude that the letters in $A_i$, $B_i$, $C_i$ etc. are directly linked to the generalizations of the slope function $\gamma^{(n)}$.
 
 \subsubsection{Two-loop prediction}
 
@@ -1280,7 +1285,7 @@ Generalizing the discussion above we conclude that this procedure yields the $n$
 \beq
 	A_{1,2,\dots,n+1}, \;\;\; B_{1,2,\dots,n}, \;\;\; C_{1,2,\dots,n-1}, \;\;\; \dots, \;\;\; A^{(n+1)}_1,
 \eeq
-thus e.g. to go to three loops we would need to know $A_{1;2;3;4}$, $B_{1,2,3}$, $C_{1,2}$, $D_1$, where the only unknown at this point is $B_3$.
+thus e.g. to go to three loops we would need to know $A_{1,2,3,4}$, $B_{1,2,3}$, $C_{1,2}$, $D_1$, where the only unknown at this point is $B_3$.
 In order to find it we would either need to find the curvature function $\gamma^{(2)}$ or quantize the classical string to one more order.
 
 \subsubsection{Inconsistencies for higher mode numbers}

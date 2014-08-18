@@ -95,7 +95,7 @@ For large $g$, it is  related to the 't Hooft coupling by
 \beq
 \lambda = N/k = 8\,g^{2},
 \eeq
-but, contrary to the \ads\ case, this relation will get corrections at finite $g$, as discussed in the previous subsection.
+but, contrary to the $\adsfive$ case, this relation will get corrections at finite $g$, as discussed in the previous subsection.
 The classical algebraic curve for $\adscp$ is a 10-sheeted Riemann surface. 
 The spectral parameter moves on it and  we shall consider 10 symmetric quasi momenta $q_{i}(x)$ 
 \beq
@@ -265,12 +265,10 @@ The other quasi-momenta are
 && q_{5}(x) = 0.
 \ea
 The above expressions are valid for a folded string with minimal winding. 
-Adding winding is trivial at the classical level, but requires non trivial changes at the one-loop level (see for instance \cite{Gromov:2011bz} for a detailed analysis of the \ads\ case).
-
+Adding winding is trivial at the classical level, but requires non trivial changes at the one-loop level (see for instance \cite{Gromov:2011bz} for a detailed analysis of the $\adsfive$ case).
 The independent off-shell frequencies can be determined by the methods of \cite{Gromov:2008ec}. 
-The result is rather simple and reads\footnote{Notice the important relation
-$\Omega_{B}(x) = -\Omega_{B}(1/x)+\Omega_{B}(0)$.
-}
+The result is rather simple and reads
+%\footnote{Notice the important relation $\Omega_{B}(x) = -\Omega_{B}(1/x)+\Omega_{B}(0)$.}
 \ba
 && \Omega_{A}(x) =  \frac{1}{ab-1}\left(1-\frac{f(x)}{x^{2}-1}\right),   \\
 && \Omega_{B}(x) = \frac{\sqrt{a^{2}-1}\,\sqrt{b^{2}-1}}{ab-1}\,\frac{1}{x^{2}-1}.
@@ -282,16 +280,15 @@ E_{1} = \frac{1}{2}\,\sum_{n=-\infty}^{\infty}\,\sum_{ij}(-1)^{F_{ij}}\,\omega^{
 \omega_{n}^{ij} = \Omega^{ij}(x^{ij}_{n}),
 \eeq
 where the sum over $ij$ is over the $8_{B}+8_{F}$ physical polarizations and $x^{ij}_{n}$ is the unique solution 
-to the equation (\ref{eq:pole})  under the condition $|x_{n}^{ij}|>1$\footnote{ If it happens that for some $ij$ and $n$ the above equation has no solution, then we shall say that the polarization $(ij)$ has the { missing mode} $n$. Missing modes can be treated according to the procedure
-discussed in \cite{Gromov:2008ec}.
-}.
-In the same spirit as \cite{Gromov:2011de,Gromov:2011bz}, the infinite sum over on-shell frequencies can be 
-evaluated by contour integration in the complex plane. The result is quite similar to the \ads\ one and 
-reads
+to the equation (\ref{eq:pole}) under the condition $|x_{n}^{ij}|>1$. 
+If it happens that for some $ij$ and $n$ the above equation has no solution, then we shall say that the polarization $(ij)$ has the { missing mode} $n$. 
+Missing modes can be treated according to the procedure discussed in \cite{Gromov:2008ec}.
+In the same spirit as \cite{Gromov:2011de,Gromov:2011bz}, the infinite sum over on-shell frequencies can be  evaluated by contour integration in the complex plane. 
+The result is quite similar to the $\adsfive$ one and reads
 \beq
 E_{1} = E_{1}^{\rm anomaly, 1}+E_{1}^{\rm anomaly, 2}+E_{1}^{\rm dressing}+E_{1}^{\rm wrapping},
 \eeq
-with\footnote{Here, $x(z) = z+\sqrt{z^{2}-1}$. Also the anomaly contributions are computed integrating on the upper half complex plane.}
+with
 \ba
 E_{1}^{\rm anomaly, 1} &=& 2\,\int_{a}^{b}\,\frac{dx}{2\,\pi\,i}\left[\Omega^{1,10}(x)-\Omega^{1,10}(a)\right]\,
 \partial_{x}\,\log\sin q_{1}(x), \\
@@ -301,6 +298,7 @@ E_{1}^{\rm dressing} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,
 E_{1}^{\rm wrapping} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,i}
 \,\Omega^{ij}(z)\,\partial_{z}\log(1-e^{-i\,(q_{i}(z)-q_{j}(z))}),
 \ea 
+where $x(z) = z+\sqrt{z^{2}-1}$ and the anomaly contributions are computed integrating on the upper half complex plane.
 As in \ads, the labelling of the various contributions reminds their physical origin. In particular, dressing and wrapping contributions have been separated in order to split the asymptotic contribution from finite size effects. As in \ads, the anomaly terms are special 
 contributions arising from the deformation of contours and ultimately due to the presence of the algebraic curve cuts.
 The representation (\ref{eq:one-loop-correction}) is a compact formula for $E_{1}$ and can be evaluated numerically with minor effort. In order to understand it better, we shall now analyse the short and long string limit. In the former case, 
@@ -345,9 +343,9 @@ First, the leading terms at small $\mc J$ are $\mc O(\mc S^{n}/\mc J^{2n})$.
 Instead, they were $\mc O(\mc S^{n}/\mc J^{2n-1})$ in \ads. 
 Also, there are terms with all parities in $\mc J$ while in \ads, there appear only terms odd under $\mc J\to -\mc J$. 
 The additional terms are important and we shall discuss them in more details later. Remarkably, they  imply that if one scales $\mc J\sim \sqrt\mc S$ they give a constant contribution in the short string limit. 
-This is different from \ads\ where the energy correction vanishes like $\sqrt\mc S$ in this regime.
-Second, there are terms proportional to $\log(2)$. As we  discuss in App.~(\ref{app:log2}), 
-these terms can be removed by expressing the energy correction in terms of the coupling in the 
+This is different from $\adsfive$ where the energy correction vanishes like $\sqrt\mc S$ in this regime.
+Second, there are terms proportional to $\log(2)$.
+These terms can be removed by expressing the energy correction in terms of the coupling in the 
 world-sheet scheme. The scheme dependence is universal and agrees with that found in 
 \cite{McLoughlin:2008he} for a circular string solution and in \cite{Abbott:2010yb}
 for the giant magnon.
@@ -400,8 +398,7 @@ and allows to read the coefficients of all terms $\sim \mc S^{n} / \mc J^{2n-3}$
 The explicit sum over the infinite number of on-shell frequencies requires some care and a definite prescription 
 since the sums are not absolutely convergent due to physically sensible cancellations between bosonic and fermionic contributions.
 As discussed in \cite{Gromov:2008fy}, the following summation prescription is natural from the point of view
-of the algebraic curve (see \cite{Bandres:2009kw} for a different prescription)\footnote{Notice that we
-exploit the $x\to -x$ symmetry of the classical algebraic curve as well as triviality of zero mode corrections.}
+of the algebraic curve (see \cite{Bandres:2009kw} for a different prescription)
 \beq
 E_{1} = \sum_{n=1}^{\infty} K_{n}, 
 \eeq
@@ -419,6 +416,7 @@ with
 \omega^{(\mathbb{CP}, 1)}_{n}-2\,\omega^{(F, 1)}_{n}-2\,\omega^{(F, 2)}_{n}, \\
 \omega_{n}^{\rm light} &=& 4\,\omega^{(\mathbb{CP}, 2)}_{n}-2\,\omega^{(F, 3)}_{n}-2\,\omega^{(F, 4)}_{n}.
 \ea
+Notice that we exploit the $x\to -x$ symmetry of the classical algebraic curve as well as triviality of zero mode corrections.
 The short string expansion of $K_{n}$ takes the form
 \ba
 K_{p} &=& (-1)^{p}\,\mc C+\widehat K_{p}
@@ -492,8 +490,8 @@ The slope ratio
 \beq
 \sigma(\mc J) = \lim_{\mc S\to 0}\frac{E_{1}(\mc S, \mc J)}{\mc S},
 \eeq
-is an important quantity  related to the conjectures in \cite{Basso:2011rs}\footnote{The exact slope mentioned in 
-\cite{Basso:2011rs} is the coefficient of $S$ in the expansion of $E^{2}$. This line of analysis is suggested by the simplicity of the marginality condition in \ads (see \cite{Tseytlin:2003ac} for a general discussion). Here, it is simpler to discuss the quantity $\sigma(\mc J)$.} . It is known that it does not receive dressing corrections both in \ads\ and in $\adscp$ since such contributions start at 
+is the analogue of the slope function we encountered in $\adsfive$. 
+It is known that it does not receive dressing corrections both in $\adsfive$ and in $\adscp$ since such contributions start at 
 order $\mc S^{2}$ \cite{Basso:2011rs}. It also 
 does not receive wrapping corrections in $AdS_{5}$.  Instead, in the case of $AdS_{4}$ the slope has a non vanishing wrapping contribution. For instance, a rough evaluation at $\mc J=1$ gives  a definitely non zero value around $-0.042$.
 Indeed, an analytical calculation shows that  the wrapping contribution to the slope in $\adscp$ is exactly
@@ -566,14 +564,14 @@ After a straightforward calculation, one finds that (on the even $N$ branch),
 \eeq
 So, even at weak coupling, we find a correction to the slope coming from the wrapping 
 terms.
-Notice that  the reason why such a contribution is absent in \ads\ is simply that the factor analogous to $\gamma_{2}(N)$ is squared in the wrapping contribution. 
+Notice that  the reason why such a contribution is absent in $\adsfive$ is simply that the factor analogous to $\gamma_{2}(N)$ is squared in the wrapping contribution. 
 This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.
 
 
 % \subsection{Long string limit}
 
 % The large $S$ behaviour of the one-loop energy $E_{1}$ can be computed starting from the integral representation.
-% Let us first summarize the result valid for \ads\ from \cite{Gromov:2011de}. We scale $\mc J$ with $\mc S$ for $\mc S\gg 1$ according to 
+% Let us first summarize the result valid for $\adsfive$ from \cite{Gromov:2011de}. We scale $\mc J$ with $\mc S$ for $\mc S\gg 1$ according to 
 % \beq
 % \mc J = \frac{\ell}{\pi}\,\log\left(\frac{8\,\pi\,\mc S}{\sqrt{\ell^{2}+1}}\right),
 % \eeq
@@ -628,15 +626,15 @@ This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.
 % The explanation of this fact is as follows\footnote{We thank B. Basso for clarifying this point as well as the $\ell\to 0$ limit.}.
 % The low energy effective theory of the Gubser-Klebanov-Polyakov (GKP) 
 % string in $\adscp$  has two massless modes at finite chemical potential $\ell$. Namely, 
-% one massless Dirac Fermion and one massless boson that gives a central charge 2 (in \ads\ 
+% one massless Dirac Fermion and one massless boson that gives a central charge 2 (in $\adsfive$ 
 % one has only one massless boson giving central charge 1). Also, concerning the $\ell\to 0$ limit, 
 % the other low-energy modes acquire a mass proportional to $\ell$ at small $\ell$ and their
  % contribution is exponentially suppressed with the effective length $\log \mc S$ at fixed $\ell$. When $\ell\to 0$
   % they become massless and contribute at leading order to 5 units of central charge 
-  % (there are actually 4 bosons with mass $\ell$ and one with mass $\ell/2$ while there were only four with mass $\ell$ in \ads\ ). In other words it should be true that in the small $\ell$ limit the $1/\log\mc S$  gets corrected by 
+  % (there are actually 4 bosons with mass $\ell$ and one with mass $\ell/2$ while there were only four with mass $\ell$ in $\adsfive$ ). In other words it should be true that in the small $\ell$ limit the $1/\log\mc S$  gets corrected by 
   % 5 extra units of central charge giving a total $-(2+5)\frac{\pi}{12\,\log\mc S}$
 % for the energy of the vacuum state (i.e. the twist 1 state of the theory). Indeed,  $2+5=7$ is the correct central charge of the low-energy effective theory on the GKP background \cite{Alday:2008ut,Alday:2009zz}. Instead, 
-% in \ads\  the final result for $\ell\to 0$ (i.e. for twist 2) was coming with $1+4 = 5$ 
+% in $\adsfive$  the final result for $\ell\to 0$ (i.e. for twist 2) was coming with $1+4 = 5$ 
 % units of central charge, which is the correct central charge of the  $O(6)$ model. 
 
 
@@ -718,7 +716,7 @@ This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.
 % This structure is different from (\ref{eq:marginality}) since higher powers of $S$ are not associated with terms that are 
 % more and more suppressed at large $\Lambda$. This is possible since the new terms not present in (\ref{eq:marginality})
 % are associated with suitable inverse powers of $J$. The same phenomenon  is discussed in  \cite{Gromov:2011bz}
-% for the folded string in \ads\ with non-trivial  winding. As we discussed in Sec.~(\ref{sec:slope}), wrapping corrections are responsible for these terms.
+% for the folded string in $\adsfive$ with non-trivial  winding. As we discussed in Sec.~(\ref{sec:slope}), wrapping corrections are responsible for these terms.
 
 \subsubsection{Prediction for short states}
 

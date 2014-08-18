@@ -7,7 +7,7 @@
 The less effort, the faster and more powerful you will be.
 \end{chapquote}
 
-\noindent In this section we leave the perturbative regime (weak and strong coupling) behind and move on towards exact results in planar $\N=4$ super Yang-Mills, where by ``exact'' we mean available at any value of the coupling constant.
+\noindent In this chapter we leave the perturbative regime (weak and strong coupling) behind and move on towards exact results in planar $\N=4$ super Yang-Mills, where by ``exact'' we mean available at any value of the coupling constant.
 In principle such results are the ultimate goal of the whole AdS/CFT programme and being able to extract them is a remarkable achievement.
 
 One can argue that the spectral problem has been worked out exactly, at least conceptually, as we will review shortly.
@@ -16,8 +16,8 @@ In this section we will present a few examples of exact results, most notably th
 As mentioned before they are indeed exact in the coupling constant, yet they are somewhat abstract and one might say of little use.
 We will argue the opposite by demonstrating how one can use them in order to find new information about physically relevant quantities such as the Konishi anomalous dimension.
 
-We will start the section by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel quantum spectral curve approach.
-We then devote the rest of the section to various exact results, mostly achieved using the quantum spectral curve construction.
+We will start the chapter by reviewing the exact solution to the spectral problem of AdS/CFT, first discussing historic approaches and quickly moving on to the novel quantum spectral curve approach.
+We then devote the rest of the chapter to various exact results, mostly achieved using the quantum spectral curve construction.
 
 
 \subsection{Solution to the spectral problem}
@@ -240,10 +240,12 @@ The advantage of this form is that instead of an infinite set of integral equati
 Another notable feature of this system is that its form is universal for any excited state, which is now encoded in the analyticity properties of the Y-functions. 
 It can also be cast into yet another form by introducing T-functions as
 \beq
+	\label{eq:tyrelation}
 	Y_{a,s} = \frac{T_{a,s+1} \, T_{a,s-1}}{T_{a+1,s} \, T_{a-1,s}},
 \eeq
 thus reducing the Y-system to the T-system
 \beq
+	\label{eq:tsystem}
 	T_{a,s}^+ \, T_{a,s}^- = T_{a+1,s} \, T_{a-1,s} + T_{a,s+1} \,  T_{a,s-1},
 \eeq
 also known as the Hirota discrete bilinear equation, a well studied object in the context of classical integrability.
@@ -278,7 +280,7 @@ In this section we discuss the quantum spectral curve (QSC) approach which many 
 
 \subsubsection{Emergence from the $\mathcal{Q}$-system}
 
-The $\mathcal{Q}$-functions defined in the previous section have a disadvantage of having a very complicated analytic structure, namely they are defined on infinite sheeted Riemann surfaces with square root type cuts parallel to the real axis between the branch points $\pm 2g + i n$ with $n \in \mathbb{Z}$ going either through infinity (long cuts) or through the imaginary axis (short cuts).
+The $\mathcal{Q}$-functions defined in the previous section have a disadvantage of having a rather complicated analytic structure, namely they are defined on infinite sheeted Riemann surfaces with square root type cuts parallel to the real axis between the branch points $\pm 2g + i n$ with $n \in \mathbb{Z}$ going either through infinity (long cuts) or through the imaginary axis (short cuts).
 Apart from the branch cuts the $\mathcal{Q}$ functions do not have other singularities and are otherwise regular functions. 
 However in order to fully define them one has to specify their analytic continuations through all of these cuts.
 Let us now introduce the notation 
@@ -414,9 +416,13 @@ Since they are related it is a matter of convenience to use one or the other and
 Tracing back from the $\mathcal{Q}$-system to the Y-system one can find the following relation
 \beq
 	\label{eq:y_asymp}
-	Y_{11} Y_{22} = 1 + \frac{\bP_1 \tilde{\bP_2} - \bP_2 \tilde{\bP_1}}{\mu_{12}} = \frac{\mu_{12}(u+i)}{\mu_{12}(u)}
+	Y_{11} Y_{22} = 1 + \frac{\bP_1 \tilde{\bP_2} - \bP_2 \tilde{\bP_1}}{\mu_{12}} = \frac{\mu_{12}(u+i)}{\mu_{12}(u)},
 \eeq
-and thus given a solution to the $\pmu$-system one can fully reconstruct all of the Y-functions using the Y-system equations \eq{eq:ysystem}.
+and from the T-system one can find
+\beq
+	T_{1,s}(u) = \bP_1 \(u+\frac{is}{2}\) \, \bP_2 \(u-\frac{is}{2}\) - \bP_2 \(u+\frac{is}{2}\) \, \bP_1 \(u-\frac{is}{2}\),
+\eeq
+thus given a solution to the $\pmu$-system one can fully reconstruct all of the T-functions using the T-system equations \eq{eq:tsystem} and then reconstruct the Y functions using \eq{eq:tyrelation}.
 The Y-functions encode the global charges in their asymptotics, for example in the $\alg{sl}{2}$ sector one has \cite{Gromov:2011cx} 
 \beq
 	\label{eq:y1122_sl2_asymptotics}
@@ -430,7 +436,7 @@ More precisely one can think of the classical spectral curve as an WKB approxima
 \beq
 	\bP_i \simeq e^{i\int^u \tilde{p}_i(u) \, du}, \;\;\; \bQ_i \simeq e^{i\int^u \hat{p}_i(u) \, du}
 \eeq
-where the four $\bP_i$ functions correspond to the $S^5$ momenta and the four $\bQ_i$ functions to the $AdS_5$ part.
+where the four $\bP_i$ functions correspond to the $S^5$ quasi-momenta and the four $\bQ_i$ functions to the $AdS_5$ part.
 The emergence of the cuts can be seen by recalling that the quasi-momenta are the eigenvalues of the monodromy matrix \eq{eq:lax_monodromy}, which develops the cuts after changing variables from $x$ to $u$ via the Zhukovsky map
 \beq
 	x + \frac{1}{x} = \frac{u}{g},
@@ -517,8 +523,8 @@ We will be using simplified relations for the solutions we will consider later, 
 \label{sec:slope_pmu}
 
 In section \ref{sec:slope_function_aba} we derived the slope function which is the leading small spin expansion coefficient of the anomalous dimension for the generalized Konishi operator in the $\alg{sl}{2}$ sector.
-We used the asymptotic Bethe ansatz as the starting point of the derivation which is justified by the fact that finite size effect are irrelevant for the slope function.
-In this section we will derive the slope function \eq{eq:slope_function} using the $\pmu$-system, which is not only more concise but also generalizes to next orders as we shall demonstrate in the next section when we derive the next coefficient in the small spin expansion, the curvature function.
+We used the asymptotic Bethe ansatz as the starting point of the derivation which is justified by the fact that finite size effects are irrelevant for the slope function.
+In this section we will derive the slope function \eq{eq:slope_function} using the $\pmu$-system, which is not only more concise but also generalizes to higher orders as we shall demonstrate in the next section when we derive the next coefficient in the small spin expansion, the curvature function.
 
 \subsubsection{$\pmu$-system for the $\alg{sl}{2}$ sector}
 \label{sec:pmu_sl2}
@@ -579,8 +585,7 @@ which as discussed in the last section comes from the compatibility condition of
 
 Additionally the simplified $\bP\mu$-system enjoys a symmetry preserving all of its essential features. 
 It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eq{eq:Pmu}-\eq{eq:mudisc} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. 
-Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the system \eq{eq:Pmu}, $\mu$ should
-at the same time be transformed as
+Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the $\pmu$-system equations, $\mu$ should at the same time transform as
 \beq
 \mu'=-R \mu \chi R^{-1}\chi.
 \label{gammaP}
@@ -906,7 +911,7 @@ In the next section we will show how the same prescription can be applied at the
 
 In this section we use the $\bP\mu$-system to compute the next coefficient in the small spin expansion of the folded string solution after the slope, which we call the curvature function $\gamma^{(2)}(g)$. 
 First we will discuss the case $J=2$ in detail and then describe the modifications of the solution for the cases $J=3$ and $J=4$, more details on which can be found in appendix \ref{sec:NLOapp}.
-We also assume the mode number to be $n=1$ and mention the issues encountered while generalizing the result in subsection ?.
+Initially we assume the mode number to be $n=1$ and mention the issues encountered while generalizing the result in subsection \ref{sec:curvature_mode_numbers}.
 
 % \subsubsection{Iterative procedure for the small $S$ expansion of the $\bP\mu$-system}
 % \label{sec:SolvingPmuL2}
@@ -1744,7 +1749,6 @@ The general case can also be reproduced with just a bit more effort.
 We should also note that this result was also found in a completely different manner by utilizing localization techniques \cite{Correa:2012at,Fiol:2012sg}, thus confirming the validity of the $\pmu$-system approach.
 
 \subsubsection{Matrix model formulation}
-\label{sec:wilson_classical}
 
 An obvious complication in the formulation of the result \eq{eq:mainresultIntro} is that it contains determinants of $(2L+1)\times (2L+1)$ sized matrices, which is very problematic if one wants to take the large $L$ limit. 
 It becomes considerably easier once we realize that the cusp anomalous dimension can be expressed in terms of an expectation value of some operator in a matrix model. 
@@ -1791,6 +1795,7 @@ where $\left< \dots \right>_{N}$ denotes the normalized expectation value in the
 Note that this formula is exact and we have not yet taken any limits.
 
 \subsubsection{Classical limit}
+\label{sec:wilson_classical}
 
 As already mentioned before, when $L$ and $\lambda$ are both taken to infinity with $L/\sqrt{\lambda}$ fixed the cusp anomalous dimension $\Gamma_L(\lambda)$ can be matched to the energy of a classical open string solution.
 In this subsection we will take this limit of the exact result \eq{eq:mainresultIntro} and in the next subsection we will do the matching to the string result.
@@ -1803,19 +1808,21 @@ We will be utilizing the matrix model reformulation of the cusp anomalous dimens
 As usual in matrix models, when the size of matrices becomes large, the partition function is dominated by the solution of the saddle point equations. 
 In the leading order it is just equal to the value of the integrand at the saddle point. 
 %We start with this approximation, commenting shortly on the first correction in section \ref{sec:The1loop}. 
-We start by recasting the partition function \eq{eq:Mintegral} into the form\footnote{we take $N=2L$.}
+We start by recasting the partition function \eq{eq:Mintegral} into the form
 \beq
 	\det \M_{2L} = \frac{1}{(2 \pi i)^{2L+1}} \frac{1}{(2L+1)!} \, \oint \prod_{i=1}^{2L+1} d x_i \, e^{-S(x_1, x_2, \dots, x_{2L+1})},
 \eeq
-where the action is given by
+where we take $N=2L$. 
+The action is then given by
 \begin{eqnarray}
 	S &=& \sum_{i=1}^{2L+1} \[ 2 g \theta  \( x_i - \frac{1}{x_i} \)  - \(2L + 2\) \log x_i \] + 2 \sum_{i<j}^{2L+1} \log(x_i - x_j) + \\ \nonumber
 	       &+& \sum_{i=1}^{2L+1} \log \sinh \( 2 \pi g \( x_i + \frac{1}{x_i} \) \).
 \end{eqnarray}
-The saddle point equations $\partial S / \partial x_j = 0$ now read\footnote{Technically the $x_j^{-1}$ term has a coefficient of $L+1$, but since we are taking $L \rightarrow \infty$ we chose to neglect it for simplicity.}
+The saddle point equations $\partial S / \partial x_j = 0$ now read
 \begin{equation}
 	g \theta \left( 1 + \frac{1}{x_j^2} \right) - \frac{L}{x_j} + \sum_{i \neq j}^{2L+1} \frac{1}{x_j - x_i} + \pi g \left( 1- \frac{1}{x_j^2} \right) \coth \left( 2 \pi g \left( x_j + \frac{1}{x_j} \right) \right) = 0.
 \end{equation}
+Technically the $x_j^{-1}$ term has a coefficient of $L+1$, but since we are taking $L \rightarrow \infty$ we chose to neglect it for simplicity.
 We can further simplify them by noting that a large coupling constant $g$ appears inside the cotangent and since the roots $x_i$ are expected to be of order 1, with exponential precision it is possible to replace
 \begin{equation}
 	\coth \left( 2 \pi g \left( x_j + \frac{1}{x_j} \right) \right) \approx \mathrm{sgn}(\mathrm{Re}(x_j)).
