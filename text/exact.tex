@@ -638,6 +638,7 @@ for odd $J$ or
 for even $J$.
 
 \subsubsection{Solving the system}
+\label{sec:slope_pmu_solve}
 
 The description of the $\bP\mu$-system in the previous section was done for physical operators with the charges $S$ and $J$ being integers. 
 Our goal is to take some peculiar limit when the (integer) number of covariant derivatives $S$ goes to zero.  
@@ -903,6 +904,7 @@ In the next section we will show how the same prescription can be applied at the
 
 In this section we use the $\bP\mu$-system to compute the next coefficient in the small spin expansion of the folded string solution after the slope, which we call the curvature function $\gamma^{(2)}(g)$. 
 First we will discuss the case $J=2$ in detail and then describe the modifications of the solution for the cases $J=3$ and $J=4$, more details on which can be found in appendix \ref{sec:NLOapp}.
+We also assume the mode number to be $n=1$ and mention the issues encountered while generalizing the result in subsection ?.
 
 % \subsubsection{Iterative procedure for the small $S$ expansion of the $\bP\mu$-system}
 % \label{sec:SolvingPmuL2}
@@ -1290,7 +1292,6 @@ We defined $\ch_-^x=\cosh_-(x)$ and $\ch_-^y=\cosh_-(y)$, where $\cosh_-(x)$ is 
 \eeq
 The result for $J=4$ is given in appendix \ref{sec:SolvingPmuL4}.
 
-
 \subsubsection{Weak coupling expansion}
 
 Our results for the curvature function $\gamma^{(2)}(g)$ at $J=2,3,4$ given in \eq{gamma2L2}, \eq{gamma2L3} and \eq{gamma2L4} are straightforward to expand at weak coupling. 
@@ -1458,6 +1459,45 @@ For $J=4$ we were not able to get a stable fit for the $1/g^2$ and $1/g^3$ coeff
 However below we will see that based on $J=2$ and $J=3$ results one can make a prediction for these coefficients, which we again confirmed by checking that precision of the fit at the previous orders in $1/g$ increases. 
 The precision of the final fit at orders $1/g^2$ and $1/g^3$ is $10^{-16}$ and $10^{-14}$ respectively.
 
+\subsubsection{Higher mode numbers}
+
+In the main text we discussed the NLO solutions to the $\bP\mu$ system which are based on the leading order solutions \eqref{eq:P1solLOevenL}-\eqref{eq:P4solLOevenL} or \eqref{P1oddL}-\eqref{P4oddL}. One of the assumptions for constructing the leading order solution was to allow $\mu_{ab}$ to have only $e^{\pm 2\pi u}$ in asymptotics at infinity (we recall that this led to all $\mu$'s being constatnt except $\mu_{24}$ which is equal to $\sinh\({2\pi u}\)$ or $\cosh\({2\pi u}\)$), while in principle requiring $\mu_{ab}$ to be periodic one could also allow  to have $e^{2n\pi u}$ with any integer $n$.
+Thus a natural generalization of the leading order solution is to consider $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=
+\cosh\({2\pi n u}\)$, where $n$ is an arbitrary integer. As discussed above (see the end of section \ref{sec:LOresultevenL} and appendix \ref{sec:Sanyn}), we believe that at the leading order in $S$ such solutions correspond to states with mode numbers equal to $n$, and they reproduce the slope function for this case.
+
+Proceeding to order $S^2$, the calculation of the curvature function $\gamma^{(2)}(g)$ with $\mu_{24}=\sinh\({2\pi n u}\)$ or $\mu_{24}=
+\cosh\({2\pi n u}\)$ can be done following the same steps as for $n=1$.
+The final results for $J=2,3$ and $4$ are given by exactly the same formulas as for $n=1$ (\eqref{gamma2L2}, \eqref{gamma2L3} and \eqref{gamma2L4} respectively) -- the only difference is that now one should set in those expressions
+\beqa
+\label{nrep1}
+&&I_k=I_k(4\pi n g ),\\
+&&\sh_-^x=\[\sinh\({2 \pi n u_x}\)\]_-, \\
+&&\sh_-^y=\[\sinh\({2 \pi n u_y}\)\]_-, \\
+&&\ch_-^x=\[\cosh\({2 \pi n u_x}\)\]_-, \\
+\label{nreplast}
+&&\ch_-^y=\[\cosh\({2 \pi n u_y}\)\]_-.
+\eeqa
+It would be natural to assume that this solution of the $\bP\mu$ system describes anomalous dimensions for states with mode number $n$ at order $S^2$. However we found some peculiarities in the strong coupling expansion of the result. The strong coupling data available for comparison in the literature for states with $n>1$ also relies on some conjectures (see \cite{Basso:2011rs}, \cite{Gromov:2011bz}), so the interpretation of this solution is not fully clear to us.
+
+
+
+
+
+
+
+
+The weak coupling expansion for this case turns out to be related in a simple way to the $n=1$ case. One should just replace $\pi\to n\pi$ in the expansions for $n=1$ which were given in \eq{weak22long}, \eq{weak23long}, \eq{weak24long}. For example,
+\beqa
+\nn
+	\gamma_{J=2}^{(2)}&=&-8 g^2 \zeta_3+g^4 \left(140 \zeta_5-\frac{32 n^2\pi ^2 \zeta_3}{3}\right)+g^6
+   \left(200 n^2\pi ^2 \zeta_5-2016 \zeta_7\right)
+	+\dots
+	\\
+\eeqa
+It would be interesting to compare these weak coupling predictions to results obtained from the asymptotic Bethe ansatz (or by other means) as it was done for $n=1$ in section \ref{sec:weak}.
+
+
+
 \subsection{Update on short strings}
 \label{sec:konishi_three_loops}
 
@@ -1526,6 +1566,108 @@ and finally for the Konishi operator, which has $S=2$ and $J=2$ we get
 In order to compare our predictions with numeric data available from explicit Y-system calculations \cite{Frolov:2010wt}, we employed Pad\'{e} type fits as explained in \cite{Gromov:2011bz}. 
 The fit results are shown in table \ref{tab:coefficients}, we see that our predictions are within $5\%$ error bounds, which is a rather good agreement. 
 However we must be honest that for the $J=3$ and especially $J=4$ states we did not have as many data points as for the $J=2$ state and the fit is somewhat shaky.
+
+\subsubsection{Issues with higher mode numbers}
+
+Let us now discuss the strong coupling expansion. According to Basso's conjecture \cite{Basso:2011rs} (see also \cite{Gromov:2011bz}), the structure of the expansion may be obtained from
+\beq
+\label{basso1app}
+\Delta^2=J^2+S
+\(
+A_1\sqrt{\mu}+A_2+\dots
+\)
++S^2
+\(
+B_1+\frac{B_2}{\sqrt\mu}
++\dots
+\)
++S^3
+\(
+\frac{C_1}{\mu^{1/2}}
++\frac{C_2}{\mu^{3/2}}
++\dots
+\)
++{\cal O}({ S}^4)\;,
+\eeq
+where $\mu=n^2\lambda$. This gives
+\beqa
+\label{basso2app}
+\Delta&=&J+\frac{S}{2J}
+\(
+A_1n\sqrt{\lambda}+A_2+\frac{A_3}{n\sqrt{\lambda}}+\dots
+\)\\
+\nn&+&S^2
+\(
+- \frac{A_1^2}{8J^3} \, n^2\lambda
+-  \frac{A_1A_2}{4J^3} \, n\sqrt{\lambda}
++\[\frac{B_1}{2J}-\frac{A_2^2+2A_1 A_3}{8J^3}\]
++
+\[
+\frac{B_2}{2J}
+-\frac{A_2A_3+A_1A_4}{4J^3}
+\]  \frac{1}{n\sqrt\lambda}
++\dots
+\)
++{\cal O}(S^3)\;.
+\eeqa
+where $A_i$ are known from Basso's slope function. Substituting them, we find
+\beq
+\label{gamma2basso}
+	\gamma^{(2)}_{J}(g)=-\frac{8 \pi ^2g^2 n^2}{J^3}+\frac{2 \pi  g n}{J^3}+\frac{B_1-1}{2 J}+\frac{8 B_2 J^2-4 J^2+1}{64 \pi  g J^3 n}+\dots
+\eeq
+However, already in \cite{Gromov:2011bz} some inconsistencies were found if one assumes this structure for $n>1$. Let us extend that analysis by comparing the prediction \eq{gamma2basso} to our results from the $\bP\mu$-system. To compute the expansion of our results, similarly to the $n=1$ case, we evaluated $\gamma_{J}^{(2)}(g)$ numerically for many values of $g$, and then fitted the result by powers of $g$. As for $n=1$ we found with high precision (about $\pm10^{-16}$) that the first several coefficients involve only rational numbers and powers of $\pi$. Our results for $n=2,3$ and $J=2,3,4$ are summarized below:
+\beq
+\label{gamma2L22}
+	\gamma^{(2)}_{J=2,n=2}(g)=-4\pi^2g^2+\frac{\pi g}{2}+\frac{17}{8}-\frac{0.29584877037648771(2)}{g}
+	+\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=3,n=2}(g)=-\frac{32}{27} \pi ^2 g^2+\frac{4 \pi  g}{27}+\frac{17}{12}
+	-\frac{0.2928304112866493(9)}{g}
+	+\dots
+\eeq
+\beq
+\gamma^{(2)}_{J=4,n=2}(g)=-\frac{1}{2} \pi ^2 g^2+\frac{\pi  g}{16}+\frac{17}{16}-\frac{0.319909936615448(9)}{g}
++\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=2,n=3}(g)=-9 \pi ^2 g^2+\frac{3 \pi  g}{4}+\frac{23}{4}-\frac{0.8137483(9)}{g}+\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=3,n=3}(g)=-\frac{8}{3} \pi ^2 g^2+\frac{2 \pi  g}{9}+\frac{23}{6}-\frac{0.892016609(2)}{g}
+	+\dots
+\eeq
+\beq
+	\gamma^{(2)}_{J=4,n=3}(g)=-\frac{9}{8} \pi ^2 g^2+\frac{3 \pi  g}{32}+\frac{23}{8}-\frac{1.035945580(6)}{g}+\dots
+\eeq
+Here in the coefficient of $\ofrac{g}$ the digit in brackets is the last known one within our precision\footnote{We did not seek to achieve high precision in this coefficient for $n=3$.}.
+
+Comparing to \eq{gamma2basso} we find full agreement in the first two terms (of order $g^2$ and of order $g$). The next term in \eq{gamma2basso} (of order $g^0$) is determined by $B_1$, which in \cite{Gromov:2011bz} was found to be
+\beq
+	B_1=\frac{3}{2}
+\eeq
+for all $n,J$, based on consistency with the classical energy. However, comparing our results with \eq{gamma2basso} we find a different value:
+\beqa
+	B_1&=&\frac{19}{2} \ \  \text{for }\ n=2\;,\\ \nn
+	B_1&=&23 \ \ \, \text{for }\ n=3\;.
+\eeqa
+For both $n=2$ and $n=3$ this prediction for $B_1$ is independent of $J$.
+
+The next term is of order $\ofrac{g}$ and is determined by $B_2$, which in \cite{Gromov:2011bz} was fixed to
+\beq
+B_2=
+\left\{
+\bea{ll}
+-3\,\zeta_3+\frac{3}{8}&\;\;,\;\;n=1\\
+-24\,\zeta_3-\frac{13}{8}&\;\;,\;\;n=2\\
+-81\,\zeta_3-\frac{24}{8}&\;\;,\;\;n=3
+\eea
+\right.\;.
+\eeq
+However, this does not agree with our numerical predictions for $n=2$ and $3$. Furthermore, for $n=2$ we extracted the coefficient of $\ofrac{g}$ with high precision (about $10^{-17}$, see \eq{gamma2L22}) but were unable to fit it as a combination of simple zeta values using the EZ-Face calculator \cite{ezface}.
+
+Thus our results appear to disagree with the values of $B_1$ and $B_2$ obtained in \cite{Gromov:2011bz}, but how to interpret this is not clear to us. Although our solution of the $\bP\mu$-system for $n>1$ looks fine at order $S$, it may be that to capture anomalous dimensions at order $S^2$ some other solution should be used.
+Another option is that the ansatz for the structure of anomalous dimensions at strong coupling may need to be modified when $n>1$ (as already suspected in \cite{Gromov:2011bz}), and our results may help provide some guidance in this case.
 
 
 \subsection{Cusped Wilson line}
