@@ -1,4 +1,7 @@
-PhD Thesis
-==========
+## Exact Results in Supersymmetric Gauge Theories
 
-This is my PhD thesis, obviously.
+In this thesis we discuss supersymmetric gauge theories, focusing on exact results achieved using methods of integrability. For the larger portion of the thesis we study the N = 4 super Yang-Mills theory in the planar limit, a recurring concept being the Konishi anomalous dimension, which is roughly the analogue for the mass of the proton in quantum chromodynamics. The N = 4 supersymmetric Yang-Mills theory is known to be integrable in the planar limit, which opens up a wealth of techniques one can employ in order to find results in this limit valid at any value of the coupling.
+
+We begin with perturbation theory where the integrability of the theory first manifests itself. Here we are able to find the first exact result, the so-called slope function, which is the linear small spin expansion coefficient of the generalized Konishi anomalous dimension. We then move on to exact results mainly achieved using the novel quantum spectral curve approach, the method allowing one to find scaling dimensions of operators at arbitrary values of the coupling. As an example we find the second coefficient in the small spin expansion after the slope, which we call the curvature function. This allows us to extract non-trivial information about the Konishi operator.
+
+Methods of integrability are also applicable to other supersymmetric gauge theories such as ABJM, which is also known to be integrable and in fact shares many similarities with N = 4 super Yang-Mills. We briey review these parallel developments in the last chapter of the thesis.
