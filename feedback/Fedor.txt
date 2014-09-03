@@ -1,0 +1,132 @@
+- abstract: "a recurring concept being the
+Konishi anomalous dimension" but it's a quantity, not a concept, so
+maybe consider rephrasing
+
+- when you write about the slope in abstarct, it gives the impression
+that you derived it; maybe mention that you reproduce a known result;
+same in first paragraph of sec 3
+
+- next-to-last sentence in abstract: "which is known to be integrable"
+is a bit redundant
+
+Introduction:
+- "it is a rare instance of a conformal theory in dimensions higher
+than two" not really true...
+
+- "triangulated by the double-line Feynman graphs" - not sure it's
+really a triangulation
+
+- "With integrability methods now being available at both weak and
+strong coupling it was possible to compare results in the BMN limit."
+- not sure whether it's appropriate to call it BMN or instead
+Frolov-Tsytlin limit, are they the same?
+
+- "to consider the partition function of a two dimensional integrable
+CFT" not CFT but QFT
+
+- "Cases such as the sl(2) sector of the theory, containing the
+Konishi operator [40] and cusped Wilson lines"- cusped WLs are not in
+sl(2) sector, this is a different problem altogether
+
+- "reduced to a Riemann-Hilbert problem for
+eight Q functions" - a bit stretched as actually equations are simple
+for mu+P or omega+Q, but not P+Q
+
+- "Probably the most famous
+example" -> "Probably the most famous other
+example"
+
+- "new results were
+being rapidly discovered [51, 52]" consider adding here Volin's to
+appear about 9 loop Konishi, or Gromov's last paper on BFKL
+
+section 2:
+- "the function was shown to be identically zero to all orders in
+perturbation theory [69, 70]" was there also a contribution by Peter
+West? or maybe about dimensional reduction
+
+
+
+sec 3:
+
+- 3.5a-3.5c -- have you tried to honestly follow the logic here and
+reproduce everything? as it seems you follow Minahan's review here,
+some time ago when I tried to check it I thought this argument
+wouldn't work if understood precisly as it's presented (maybe due to
+some typos/small omissions). The problem had to do with the index
+structure in 3.4. But I may be wrong on this.
+
+- 3.52 - would be good to check, asJenia Sobko told me that there are
+some wrong results (in some GKV papers possibly as well) in the
+literature on what exactly is the Konishi at tree level
+
+- section title "... asymptotic length" - maybe better "asymptotically
+large length"
+
+- before 3.65: for starters we only need the strong coupling -> did
+you mean e.g. "for a start?"
+
+section 4:
+
+- beginning of sec 4: you say that slope is a bit abstract but will be
+used for Konishi; in fact it was already used for Konishi dimension in
+sec 3
+
+- sec 4.1, 1st paragraph: Y-system in fact was proposed before TBA in
+the GKV paper, maybe you shouldn't say that TBA was reformulated as
+Ysys but rather e.g. it can be reformulated
+
+- "are overwhelmingly diffi cult" maybe too strong
+
+- sec 4.1.1: "In the spin chain picture we identify operators with
+states of the chain and .." In fact the TBA is not derived from the
+spin chain. It's derived from 2d integrable worldsheet theory on the
+string side, its meaning from the spin chain picture is mysterious.
+E.g. the key eqn 4.2 is derived in the 2d QFT.
+
+- 4.5 would be valid only for a toy model with 1 species of particles,
+you could mention this
+
+- "one can to introduce
+singularities" -> "one has to introduce
+singularities"
+
+- before 4.13 "this is done so that one
+could rewrite" - I would say this is rather just a consequence of TBA
+equations, Y-fucntions are defined here in the same way as for other
+integrable models with TBA. Y-system also appears in many models, even
+those w/o complicated analyticity.
+
+- after 4.16: definition of Q with upper indices seems different from
+Nikolay's long paper on Pmu; is it actually the same?
+
+- sec 4.2.1 - you could menation that all this can be derived from TBA
+
+sec 5:
+
+- nice quote in the beginning of sec 5 :-)
+
+- if I recall correctly there was a typo in 5.62 written in your
+paper, remember to use the correct version
+
+
+conclusions:
+- "the very abstract problem of nding the spectrum of local" - not
+really so abstract, CFTs describe critical phenomena in the real world
+
+- "It was at weak coupling where we also found the first exact result"
+- it's exact, so it wasn't really found at weak coupling
+
+- "is non-local and the applicability of the construction is naively
+questionable" yes, but we do know that it's described by TBA and by
+same Y-system so it's not so surprising
+
+- "which is another notorious integrable" - I think notorious has a
+negative connotaion, right? maybe better - "celebrated" :)
+
+- "there are just wild" -> "these are just wild"
+
+- in the end of conclusions you can mention that already the *QCD*
+pomeron was computed from the N=4 Pmu system
+
+- shouldn't there be an Acknowledgements section?
