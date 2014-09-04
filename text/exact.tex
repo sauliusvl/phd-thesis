@@ -23,8 +23,8 @@ We then devote the rest of the chapter to various exact results, mostly achieved
 \subsection{Solution to the spectral problem}
 \label{sec:tba_y_system}
 
-Historically the first solution to the spectral problem that fully incorporated finite length corrections was the thermodynamic Bethe ansatz (TBA). 
-Being a set of infinite integral equations it was obviously very hard to use in practice and was thus soon reformulated as an infinite set of functional relations, the so called Y-system.
+Historically the first solution to the spectral problem that fully incorporated finite length corrections was the thermodynamic Bethe ansatz (TBA), which can alternatively be reformulated as an infinite set of functional relations, the so called Y-system.
+Being infinite sets of integral or functional equations they are obviously very hard to use in practice.
 Both of these formulations can now be seen as intermediary steps towards the more elegant quantum spectral curve construction, which we cover in more depth in the next section.
 
 \subsubsection{Thermodynamic Bethe ansatz}
@@ -81,6 +81,7 @@ That is why we will only illustrate the basic ideas behind the TBA at a conceptu
 
 In the spin chain picture we identify operators with states of the chain and the dilatation operator with the Hamiltonian. 
 This mapping enables one to use the physical language of magnons with momenta propagating on a closed chain with the time evolution being determined by the Hamiltonian.
+On the string theory side this naturally corresponds to excitations of the string evolving in time with the string Hamiltonian. 
 The key idea of TBA is shown in figure \ref{fig:tba_cylinders}: consider this system with time and space interchanged, more precisely we analytically continue in time by introducing $y \equiv i t$ and consider a theory where $y$ plays the role of space and $\tau$ defined via $x \equiv i \tau$ is time. We call this double Wick rotated theory the \emph{mirror} of the original.
 Obviously it is a completely different theory, for example the dispersion gets inverted by switching from $(E,p) \to i (\tilde{p}, \tilde{E})$, thus if we start from the asymptotic dispersion $E(p)$ for the $\alg{sl}{2}$ sector we end up with 
 \begin{equation}
@@ -135,7 +136,7 @@ Once it is found the ground state energy is given by
 	E_0(L) = - \int \frac{du}{2\pi} (\partial_u \tilde p) \log \(1 + e^{-\epsilon(u)}\).
 \eeq
 Excited states can also be reached in this way via analytic continuation in some parameter, for example the volume of the system \cite{Dorey:1996re}.
-Basically one can to introduce singularities in the integrand of \eq{eq:simple_tba} in such a way that the large $L$ limit of the new solution coincides with the asymptotic Bethe ansatz solution.
+Basically one has to introduce singularities in the integrand of \eq{eq:simple_tba} in such a way that the large $L$ limit of the new solution coincides with the asymptotic Bethe ansatz solution.
 
 \begin{figure}[t]
 \begin{tikzpicture}[scale=0.68]
@@ -912,9 +913,8 @@ In the next section we will show how the same prescription can be applied at the
 In this section we use the $\bP\mu$-system to compute the next coefficient in the small spin expansion of the folded string solution after the slope, which we call the curvature function $\gamma^{(2)}(g)$. 
 First we will discuss the case $J=2$ in detail and then describe the modifications of the solution for the cases $J=3$ and $J=4$, more details on which can be found in appendix \ref{sec:NLOapp}.
 Initially we assume the mode number to be $n=1$ and mention the issues encountered while generalizing the result in subsection \ref{sec:curvature_mode_numbers}.
+The notations used in this section are summarized in appendix \ref{sec:notations}.
 
-% \subsubsection{Iterative procedure for the small $S$ expansion of the $\bP\mu$-system}
-% \label{sec:SolvingPmuL2}
 
 For convenience let us repeat the leading order solution \eq{eq:musolLOevenL}-\eq{eq:P4solLOevenL} of the $\bP\mu$-system for the slope function in the case when $J=2$
 \beqa

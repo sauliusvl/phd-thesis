@@ -76,12 +76,12 @@ These are identified in the following way
 \beq
 	 4\pi g_s = g_{YM}^2 \equiv \frac{\lambda}{N}, \;\;\;\;\;\;\; \frac{R^4}{\alpha'^2} = \lambda,
 \eeq
-where $\lambda$ is the t'Hooft coupling and $R$ is the radius of both $AdS_5$ and $S_5$, which is fixed as only the ratio $R^2/\alpha'$ is measurable.
+where $\lambda$ is the t'Hooft coupling and $R$ is the radius of both $AdS_5$ and $S^5$, which is fixed as only the ratio $R^2/\alpha'$ is measurable.
 A few things are to be noted here. First of all, the identification directly implements t'Hooft's idea of large $N$ expansion of gauge theory, since $g_s \sim 1/N$. 
 In fact in the large $N$ limit only planar Feynman graphs survive and everything simplifies dramatically, a fact that we will take advantage of a lot in this thesis.
 In this limit the effective coupling constant of the gauge theory is $\lambda$. 
 
-The supergravity approximation is valid when $\alpha' \ll R^2$, which corresponds to strongly coupled gauge theory, thus the conjecture is of the weak-strong type. 
+The supergravity approximation is valid when $\alpha' \ll R^2$ for low lying states, which corresponds to strongly coupled gauge theory, thus the conjecture is of the weak-strong type. 
 This fact is a blessing in disguise, since initially it seems very restrictive as one can not easily compare results of the theories. 
 However it provides a possibility to access strongly coupled regimes of both theories, which was beyond reach before. 
 Prescriptions for matching up observables on both sides of the correspondence were given in \cite{Gubser:1998bc, Witten:1998qj}. 
@@ -93,7 +93,7 @@ The situation changed dramatically in 2002 when Berenstein, Maldacena and Nastas
 The idea was to take an operator in gauge theory with large R-charge $J$ and add some some impurities, effectively making it ``near-BPS''.
 The canonical example of such an operator is $\tr(Z^J X^S)$, where $Z$ and $X$ are two complex scalar fields of $\N=4$ SYM, with $X$ being the impurities ($S \ll J$).
 Since anomalous dimensions are suppressed like $\lambda/J^2$, perturbative gauge theory calculations are valid even at large $\lambda$, as long as $\lambda' \equiv \lambda / J^2 \ll 1$ and $N$ is large.
-It is thus possible to compare gauge theory calculations with string theory results.
+Having in mind potential problems with the order of limits, it is thus naively possible to compare gauge theory calculations with string theory results.
 From the string theory point of view this limit corresponds to excitations of point-like strings with angular momentum $J$ moving at the speed of light around the great circle of $S^5$. 
 The background seen by this string is the so-called pp-wave geometry and string theory in this background is tractable.
 
@@ -101,7 +101,7 @@ The discovery of the BMN limit was arguably the first time it was explicitly dem
 Shortly after this discovery Minahan and Zarembo revolutionized the subject once again by discovering Integrability at the end of 2002 \cite{Minahan:2002ve}.
 They showed that in the large $N$ limit single-trace operators of scalar fields can be identified with spin chains and their anomalous dimensions at one-loop in weak coupling are given by the energies of the corresponding spin chain states.
 These spin-chain systems are known to be integrable, which in practice allows one to solve the problem exactly using techniques such as the Bethe ansatz \cite{Bethe:1931}. 
-This discovery sparked a very rapid development of integrability methods in AdS/CFT during the coming years.
+This discovery sparked a very rapid development of integrability methods in AdS/CFT during the coming years \cite{Beisert:2010jr}.
 
 \vspace{20pt}
 \begin{tikzpicture}[scale=2.97]
@@ -142,7 +142,7 @@ Soon after the initial discovery of integrability a spin chain formulation at on
 The result was also extended to two and three loops \cite{Beisert:2003tq}. 
 Integrability was also discovered at strong coupling as it was shown that the Metsaev-Tseytlin sigma model is classically integrable \cite{Bena:2003wd}. 
 With integrability methods now being available at both weak and strong coupling it was possible to compare results in the BMN limit.
-As expected, comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement \cite{Frolov:2003qc, Frolov:2003xy, Arutyunov:2003uj}, however an order of limits problem emerged at three loops \cite{Beisert:2003tq}. 
+As expected, comparisons in the first two orders of the BMN coupling constant $\lambda'$ showed promising agreement \cite{Frolov:2003qc, Frolov:2003xy, Arutyunov:2003uj}, however an order of limits problem emerged at three loops \cite{Beisert:2003tq}, which puzzled the community for some time. 
 
 All of these results seemed to suggest that integrability may be an all loop phenomenon, only the surface of it being scratched so far. 
 This notion was strongly reinforced when classical string integrability was reformulated in the elegant language of algebraic curves by Kazakov, Marshakov, Minahan and Zarembo (KMMZ), which made the connection with weak coupling more manifest \cite{Kazakov:2004qf}. 
@@ -151,6 +151,7 @@ The first such attempt was made by Beisert, Dippel and Staudacher (BDS), who con
 This result was later extended to all sectors of the theory \cite{Beisert:2005fw}.
 The BDS result was quickly shown to be incomplete as it was lacking a so-called dressing phase \cite{Arutyunov:2004vx}, a scalar function not constrained by symmetry of the problem.
 It was found to leading order at strong coupling in \cite{Arutyunov:2004vx} and later to one-loop in \cite{Hernandez:2006tk}.
+The discovery of the dressing phase also cured the infamous three loop discrepancy between weak and strong coupling results.
 A crossing equation satisfied by the dressing phase was soon found \cite{Janik:2006dc} and eventually solved by Beisert, Hernandez and Lopez (BHL) \cite{Beisert:2006ib}.  
 Collectively these results are often referred to as the asymptotic Bethe ansatz (ABA), reminding that they are valid only for asymptotically long spin chains. 
 When the states are short so-called wrapping effects become relevant. 
@@ -187,13 +188,13 @@ At weak coupling they manifest as long-range spin chain interactions wrapping ar
 \vspace{20pt}
 
 Once the asymptotic solution was found attention shifted to finite size corrections, which once resolved would in principle complete the solution to the spectral problem for single trace operators. 
-Scattering corrections in finite volume for arbitrary QFTs were first addressed by L\"{u}scher \cite{Luscher:1986}, who derived a set of universal formulas. 
+Scattering corrections in finite volume for arbitrary QFTs were first addressed by L\"{u}scher \cite{Luscher:1986}, who derived a set of universal formulas, which were later generalized for non-relativistic theories \cite{Janik:2007wt}.
 This approach, while very general and not directly related to integrability, was employed to calculate four \cite{Bajnok:2008bm} and five loop anomalous dimension coefficients \cite{Bajnok:2009vm} of the simplest non-BPS operator with length two, the Konishi operator.
 The results agreed with available diagrammatic four-loop calculations \cite{Fiamberti:2007rj} and gave a new prediction for five loops.
 
 An alternative approach more in line with integrability is the Thermodynamic Bete Ansatz (TBA).
 Its origins can be traced back to Yang and Yang \cite{Yang}, however it was the work of Alexey Zamolodchikov \cite{Zamolodchikov1, Zamolodchikov2} that brought it to the mainstream. 
-The idea is to consider the partition function of a two dimensional integrable CFT and it's ``mirror'' image found after exchanging length and time with a modular transformation.
+The idea is to consider the partition function of a two dimensional integrable QFT and it's ``mirror'' image found after exchanging length and time with a modular transformation.
 At large imaginary times the partition function will be dominated by the ground state energy, whereas in the mirror theory large time means asymptotic length, which is under control using the asymptotic Bethe ansatz techniques.
 Thus one can evaluate the partition function using the saddle point method and after rotating back to the original theory compute the exact ground state energy. 
 Excited states can then be reached using analytic continuation. 
@@ -205,13 +206,13 @@ Ultimately the Konishi anomalous dimension was calculated numerically for a wide
 And so the spectral problem seemed to be solved, at least in the case of Konishi an exact and complete result was finally found, even if only numerically.
 However it was increasingly becoming clear that the solution was not in its final and most elegant form.
 Indeed the TBA equations are an infinite set of coupled integral equations, obviously one has to employ various numerical tricks to actually solve them and this mostly works in a case-by-case basis. 
-Cases such as the $\mathfrak{sl}(2)$ sector of the theory, containing the Konishi operator \cite{Gromov:2009bc} and cusped Wilson lines \cite{Correa:2012hh, Gromov:2012eu} have been worked out explicitly, however it still remains a hard problem in general.
+Cases such as cusped Wilson lines \cite{Correa:2012hh, Gromov:2012eu} and the $\mathfrak{sl}(2)$ sector of the theory, containing the Konishi operator \cite{Gromov:2009bc}, have been worked out explicitly, however it still remains a hard problem in general.
 From the very beginning alternative formulations of the solution were being proposed. 
 An infinite set of non-linear functional equations, the so called Y-system was proposed already in \cite{Gromov:2009bc}, later completed with analytical constraints coming from the TBA equations \cite{Cavaglia:2010nm}.
-Connections of the Y-system with the Hirota bilinear relation were later explored in \cite{Gromov:2011cx} and the Y-system was reduced to a finite set of non-linear integral equations (FiNLIE).
+Connections of the \mbox{Y-system} with the Hirota bilinear relation were later explored in \cite{Gromov:2011cx} and the Y-system was reduced to a finite set of non-linear integral equations (FiNLIE).
 The long sought beauty of the solution to the spectral problem was arguably uncovered with the formulation of the quantum spectral curve (QSC) approach \cite{Gromov:2013pga,Gromov:2014caa}, also referred to as the $\pmu$-system.
-The whole TBA construction was ultimately reduced to a Riemann-Hilbert problem for eight $Q$ functions, which can be though of as the quantum analogues of quasimomenta found in the algebraic curve construction.
-The QSC quickly showed its potential as previously known results were rederived almost without any effort and new results were being rapidly discovered \cite{Gromov:2013qga, Gromov:2014bva}.
+The whole TBA construction was ultimately reduced to a Riemann-Hilbert problem for eight $\cal Q$ functions, which generalize the quasi-momenta found in the algebraic curve construction, namely the classical spectral curve construction amounts to a WKB type approximation of the quantum spectral curve.
+The QSC quickly showed its potential as previously known results were rederived almost without any effort and new results were being rapidly discovered \cite{Gromov:2013qga, Gromov:2014bva, Alfimov:2014bwa}.
 
 Thus one can safely say that the spectral problem in $\N=4$ SYM is by now very well understood with numerical results readily available and deeper understanding of the structure being within reach.
 Integrability methods have also been useful in other areas such as three point functions \cite{Escobedo:2010xs, Gromov:2012vu} and scattering amplitudes \cite{Drummond:2010km, Alday:2010kn}, however the situation there is still not as complete.
@@ -220,7 +221,7 @@ If this programme were to be successfully carried out it would be the first exam
 Undoubtedly this would provide a huge boost to our understanding of QFTs in general and hopefully bring us closed to solving QCD.
 
 It turns out that $\N=4$ SYM is not the only example of an integrable supersymmetric gauge theory having a dual string description.
-Probably the most famous example involves the so called ABJM theory, proposed by Aharony, Bergman, Jafferis and Maldacena \cite{Aharony:2008ug}, following \cite{Schwarz:2004yj, Bagger:2006sk,Gustavsson:2007vu,Gaiotto:2007qi}.
+Probably the most famous other example involves the so called ABJM theory, proposed by Aharony, Bergman, Jafferis and Maldacena \cite{Aharony:2008ug}, following \cite{Schwarz:2004yj, Bagger:2006sk,Gustavsson:2007vu,Gaiotto:2007qi}.
 It is a three-dimensional superconformal Chern-Simons gauge theory with $\N=6$ supersymmetry.
 This theory was conjectured to be the effective theory for a stack of M2 branes at a $Z_k$ orbifold
 point. 
