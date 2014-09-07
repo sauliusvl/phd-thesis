@@ -4,3 +4,5 @@
 *.toc
 text/*.dvi
 text/*.pdf
+text/*.lot
+text/*.lof
