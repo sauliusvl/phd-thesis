@@ -54,7 +54,6 @@ In order to find the anomalous dimension of the operator $\Psi$ we must calculat
 	\end{equation}
 	\label{eq:delta_contractions}
 \end{subequations}
-These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle due to the trace. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in figure \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[scale=0.5,every node/.style={draw,shape=circle,fill=black,scale=0.4}]
@@ -116,6 +115,7 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 \caption[Possible types of Wick contractions between single trace operators]{Possible types of Wick contractions (vertical lines) between single trace operators. The constituent scalar fields are represented by dots in the horizontal lines, which represent the successive index contractions due to the trace. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
 \label{fig:planar_nonplanar}
 \end{figure}
+These contractions have a graphical interpretation. Consider the scalar field ${Z^a}_b$ as a dot and each contraction of the adjoint indices as a line connecting these dots, then the chiral primary operator $\Psi$ is simply a circle due to the trace. Wick's theorem says that in order to find the correlator $<\Psi(x) \tilde{\Psi}(x)>$ we must sum all possible ways we can connect the dots in the circle of $\Psi$ to the dots in the circle of $\tilde{\Psi}$. All the delta function contractions that we get after expanding the correlator represent precisely all the possible ways we can contract the dots in the circles. The three excerpts of contractions shown in (\ref{eq:delta_contractions}) can be represented graphically as shown in figure \ref{fig:planar_nonplanar}. One can immediately notice that the first two are planar, while the third one is intersecting itself. Evaluating the three contractions we immediately see that planar ones produce a factor of $N^3$ while the non-planar one produces a factor of $N$, i.e. non-planar diagrams are suppressed and we can discard them once we take the planar limit $N \rightarrow \infty$. 
 All that's left then are cyclic permutations of lines by shifting all of them as seen in \mbox{figure \ref{fig:planar_nonplanar}} while going from the left to the middle diagram. 
 There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. 
 Thus finally for the chiral primary correlator at tree level we find
@@ -633,6 +633,7 @@ This condition fixes the leading small $S$ coefficient of the anomalous dimensio
 This result is exact in the sense that it is valid at any value of the coupling.
 We will be making use of it later in the text to extract non-trivial information about the Konishi anomalous dimension.
 
+\newpage
 \subsection{Strong coupling}
 \label{sec:integrability_strong}
 
