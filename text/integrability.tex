@@ -113,10 +113,10 @@ These contractions have a graphical interpretation. Consider the scalar field ${
 	\end{scope}
 	
 \end{tikzpicture}
-\caption{Possible types of Wick contractions (vertical lines) between single trace operators. The constituent scalar fields are represented by dots in the horizontal lines, which represent the successive index contractions due to the trace. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
+\caption[Possible types of Wick contractions between single trace operators]{Possible types of Wick contractions (vertical lines) between single trace operators. The constituent scalar fields are represented by dots in the horizontal lines, which represent the successive index contractions due to the trace. First two figures are examples of planar contractions while the last one is an example of a non-planar contraction.}
 \label{fig:planar_nonplanar}
 \end{figure}
-All that's left then are cyclic permutations of lines by shifting all of them as seen in \mbox{figure \ref{fig:planar_nonplanar}} while going from (a) to (b). 
+All that's left then are cyclic permutations of lines by shifting all of them as seen in \mbox{figure \ref{fig:planar_nonplanar}} while going from the left to the middle diagram. 
 There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. 
 Thus finally for the chiral primary correlator at tree level we find
 \begin{equation}
@@ -153,7 +153,7 @@ Because of that it is enough to consider a length two operator $\Phi_{I_k I_{k+1
 where $\lambda = g_{YM}^2 N$ is the t'Hooft coupling. 
 Comparing this to (\ref{eq:tree_correlator}) we see that effectively the interactions permute and contract the delta function indices. 
 We can introduce exchange and trace operators to make this explicit. 
-The permutation operator, also called the exchange operator, $\mathcal{P}_{l,l+1}$ is defined by it's action on a set of delta functions as
+The permutation operator, also called the exchange operator, $\mathcal{P}_{l,l+1}$ is defined by it's action on a set of delta functions,
 \begin{equation}
 	\label{eq:spin_perm}
 	\mathcal{P}_{l,l+1} \; {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l}} {\delta_{I_{l+1}}}^{J_{l+1}} \dots {\delta_{I_{L}}}^{J_{L}} = {\delta_{I_{1}}}^{J_{1}} \dots {\delta_{I_{l}}}^{J_{l+1}} {\delta_{I_{l+1}}}^{J_{l}} \dots {\delta_{I_{L}}}^{J_{L}}
@@ -541,7 +541,7 @@ This asymptotic Bethe ansatz \eq{eq:sl2_aba} is the first non-trivial exact resu
 The subleading coefficient $\gamma^{(2)}(g)$ is called the \emph{curvature function} and it will be the main study object of section \ref{sec:curvature}.
 We address the question of what it actually means to send an integer quantity $S$ to zero in section \ref{sec:ancont}. 
 
-The slope function was initially conjectured in \cite{Basso:2011rs} and later independently proved in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \eq{eq:sl2_aba}, given by
+The slope function was initially conjectured in \cite{Basso:2011rs} and later independently derived in \cite{Gromov:2012eg} and \cite{Basso:2012ex}, our derivation will follow the former reference. The starting point is the logarithm of the asymptotic Bethe ansatz \eq{eq:sl2_aba}, given by
 \beq
 	\label{eq:log_sl2_aba}
 	\frac{J}{i} \log \( \frac{x_k^+}{x_k^-} \) - \sum_{j \neq k}^S \frac{1}{i} \log \( \frac{x_k^- - x_j^+}{x_k^+ - x_j^-} \, \frac{1 - 1/(x_k^+ x_j^-)}{1 - 1/(x_k^- x_j^+)} \; \sigma^2(u_k, u_j) \) = 2 \pi n_k,
@@ -686,7 +686,7 @@ Namely, this description of classical solutions is more natural in light of inte
 \begin{figure}[t]
 	\centering
 		\includegraphics[width=0.75\textwidth]{../graphics/cuts}
-	\caption{Examples of cuts connecting the eight sheets of the Riemann surface corresponding to the classical spectral curve for strings in $AdS_5 \times S^5$. The wavy line corresponds to the pole at $x = 1$.}
+	\caption[Example of a classical spectral curve]{Examples of cuts connecting the eight sheets of the Riemann surface corresponding to the classical spectral curve for strings in $AdS_5 \times S^5$. The wavy line corresponds to the pole at $x = 1$.}
 	\label{fig:cuts}
 \end{figure}
 
@@ -857,7 +857,7 @@ Similarly the asymptotics of the quasi-momenta encode the global charges as seen
 \right) + \ord{\frac{1}{x^2}},
 \label{eq:quasi_shift_asymptotics}
 \end{equation}
-where $\delta\Delta$ is the shift of the classical energy $\mathcal{E}$. From here one can read off the individual fluctuation frequencies
+where $\delta\Delta$ is the energy shift due to the additional excitations. From here one can read off the individual fluctuation frequencies
 \beq
 	\label{eq:quasi_energy}
 	\Omega_n^{ij} = -2 \delta_{i,\hat{1}} + \frac{\lambda}{2\pi} \lim_{x\rightarrow \infty} x \, \delta_n^{ij} p_{\hat{1}}(x)
@@ -973,7 +973,7 @@ Here we present the result \cite{Gromov:2011de}, which consists of two ``basis''
   \label{eq:p_a}\nn
   p_{\hat 2} &=& \pi n - 2\pi n{\cal J} \left( \frac{a}{a^2-1} -
     \frac{x}{x^2-1} \right) \sqrt{\frac{(a^2-1)
-      (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi n a b {\cal S} F_1(x)}{(b-a)(ab+1)} +
+      (b^2-x^2)}{(b^2-1)(a^2-x^2)}} \\ \nn &+& \frac{8\pi\, n\, a b\, {\cal S} F_1(x)}{(b-a)(ab+1)} +
   \frac{2\pi n {\cal J} (a-b) F_2(x)}{\sqrt{(a^2-1)(b^2-1)}},\\
   \label{eq:p_s}
   p_{\tilde 2} &=& \frac{2\pi {\cal J}x}{x^2-1},
@@ -1044,7 +1044,7 @@ The one-loop shift expanded up to two orders in $\mathcal{S}$ reads
 \frac{-{\cal S}}{2 \left({\cal J}^3+{\cal J}\right)}+{\cal S}^2\[\frac{3 {\cal J}^4+11 {\cal J}^2+17
    }{16 {\cal J}^3 \left({\cal J}^2+1\right)^{5/2}}
 \!-\!\sum_{\substack{m>0 \\ m \neq n}}\frac{n^3m^2  \left(2 m^2+n^2 {\cal J}^2-n^2\right)}{{\cal J}^3 \left(m^2-n^2\right)^2
-   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\] \;\;\;\;\;\;\;\;
+   \left(m^2+n^2 {\cal J}^2\right)^{3/2}}\]. \;\;\;\;\;\;\;\;
    \;.
 \eeqa
 \normalsize
@@ -1155,7 +1155,7 @@ where the coefficients $A_i,\;B_i,\;C_i$, etc. are some functions of $J$.
     \begin{tabular}{cc}
     \includegraphics[scale=0.7]{../graphics/bfkl}
     \end{tabular}
-\caption{The BFKL trajectories $S(\Delta)$ for the twist-2 operator at various values of the coupling. Solid black lines are obtained using the known two loop weak coupling expansion \cite{Brower:2006ea,Kotikov:2002ab} and dashed lines are obtained using the strong coupling expansion \cite{Costa:2012cb,Kotikov:2013xu,Brower:2013jga}.}
+\caption[The BFKL trajectories $S(\Delta)$ for the twist-2 operator]{The BFKL trajectories $S(\Delta)$ for the twist-2 operator at various values of the coupling. Solid black lines are obtained using the known two loop weak coupling expansion \cite{Brower:2006ea,Kotikov:2002ab} and dashed lines are obtained using the strong coupling expansion \cite{Costa:2012cb,Kotikov:2013xu,Brower:2013jga}.}
 \label{fig:bfkl}
 \end{figure}
 

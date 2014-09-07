@@ -72,7 +72,7 @@ Both of these formulations can now be seen as intermediary steps towards the mor
 	
 	
 \end{tikzpicture}
-\caption{A high level illustration of the idea behind the TBA method: by double Wick rotating the theory one can exchange time with length and thus finite volume scattering with the ground state scattering at finite length.}
+\caption[A high level illustration of the idea behind the TBA method]{A high level illustration of the idea behind the TBA method: by double Wick rotating the theory one can exchange time with length and thus finite volume scattering with the ground state scattering at finite length.}
 \label{fig:tba_cylinders}
 \end{figure}
 
@@ -83,7 +83,7 @@ In the spin chain picture we identify operators with states of the chain and the
 This mapping enables one to use the physical language of magnons with momenta propagating on a closed chain with the time evolution being determined by the Hamiltonian.
 On the string theory side this naturally corresponds to excitations of the string evolving in time with the string Hamiltonian. 
 The key idea of TBA is shown in figure \ref{fig:tba_cylinders}: consider this system with time and space interchanged, more precisely we analytically continue in time by introducing $y \equiv i t$ and consider a theory where $y$ plays the role of space and $\tau$ defined via $x \equiv i \tau$ is time. We call this double Wick rotated theory the \emph{mirror} of the original.
-Obviously it is a completely different theory, for example the dispersion gets inverted by switching from $(E,p) \to i (\tilde{p}, \tilde{E})$, thus if we start from the asymptotic dispersion $E(p)$ for the $\alg{sl}{2}$ sector we end up with 
+Obviously it is a completely different theory, for example the dispersion gets inverted by switching $(E,p) \to i (\tilde{p}, \tilde{E})$, thus if we start from the asymptotic dispersion $E(p)$ for the $\alg{sl}{2}$ sector we end up with 
 \begin{equation}
 	E(p) = \sqrt{1+4g^2 \sin^2 \frac{p}{2}}  \;\;\;\; \Longleftrightarrow \;\;\;\; 
 	\tilde{E}(\tilde{p}) = 2 \, \mathrm{arcsinh} \( \frac{1}{2g} \sqrt{\tilde{p}^2 + 1} \).
@@ -206,7 +206,7 @@ Basically one has to introduce singularities in the integrand of \eq{eq:simple_t
 	\end{scope}
 	
 \end{tikzpicture}
-\caption{The domains of the $Y_{a,s}$ and $T_{a,s}$ functions (left and right respectively). The $Y_{a,s}$ functions are defined on the nodes, where the type of node signifies the type of excitation. The $T_{a,s}$ functions are defined on the latttice points of the grid.}
+\caption[The domains of the $Y_{a,s}$ and $T_{a,s}$ functions]{The domains of the $Y_{a,s}$ and $T_{a,s}$ functions (left and right respectively). The $Y_{a,s}$ functions are defined on the nodes, where the type of node signifies the type of excitation. The $T_{a,s}$ functions are defined on the latttice points of the grid.}
 \label{fig:yt_hooks}
 \end{figure}
 
@@ -384,7 +384,7 @@ For the short cut versions $\mu_{ab}(u) \equiv \hat{\mu}_{ab}(u)$ of the functio
 	\end{scope}
 	
 \end{tikzpicture}
-\caption{The location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\hat{\mu}_{ab}(u)$ (right). The infinitely many cuts of $\tilde{\bP}_a$ are shown on the left picture with dashed lines.}
+\caption[The location of branch cuts in $u$ for the functions $\bP_a(u)$ and $\hat{\mu}_{ab}(u)$]{The location of branch cuts in $u$ for the functions $\bP_a(u)$ (left) and $\hat{\mu}_{ab}(u)$ (right). The infinitely many cuts of $\tilde{\bP}_a$ are shown on the left picture with dashed lines.}
 \label{fig:pmu_cuts}
 \end{figure}
 The magic of the whole quantum spectral curve construction is that the analytic continuations of the monodromies $\mu_{ab}$ through the cuts are again given by the same functions \cite{Gromov:2014caa}
@@ -457,10 +457,10 @@ Similarly how the classical quasi-momenta encoded the global charges in their as
 \right)\simeq
 \left(
 \bea{l}
-A_1\; u^\frac{-J_1-J_2+J_3-2}{2}\\
-A_2\; u^\frac{-J_1+J_2-J_3}{2}\\
-A_3\; u^\frac{+J_1-J_2-J_3-2}{2}\\
-A_4\; u^\frac{+J_1+J_2+J_3}{2}
+A_1\; u^\frac{-J_1+J_2-J_3}{2}\\
+A_2\; u^\frac{-J_1-J_2+J_3-2}{2}\\
+A_3\; u^\frac{+J_1+J_2+J_3}{2}\\
+A_4\; u^\frac{+J_1-J_2-J_3-2}{2}
 \eea
 \right)\;\;,\;\;
 \left(
@@ -473,10 +473,10 @@ A_4\; u^\frac{+J_1+J_2+J_3}{2}
 \right)\simeq
 \left(
 \bea{l}
-A^1\; u^\frac{+J_1+J_2-J_3}{2}\\
-A^2\; u^\frac{+J_1-J_2+J_3-2}{2}\\
-A^3\; u^\frac{-J_1+J_2+J_3}{2}\\
-A^4\; u^\frac{-J_1-J_2-J_3-2}{2}
+A^1\; u^\frac{+J_1-J_2+J_3-2}{2}\\
+A^2\; u^\frac{+J_1+J_2-J_3}{2}\\
+A^3\; u^\frac{-J_1-J_2-J_3-2}{2}\\
+A^4\; u^\frac{-J_1+J_2+J_3}{2}
 \eea
 \right)\; \vspace{3pt}
 \eeq
@@ -493,10 +493,10 @@ and similarly for $\bQ$
 \right)\simeq
 \left(
 \bea{l}
-B_1\; u^\frac{+\Delta-S_1-S_2}{2}\\
-B_2\; u^\frac{+\Delta+S_1+S_2-2}{2}\\
-B_3\; u^\frac{-\Delta-S_1+S_2}{2}\\
-B_4\; u^\frac{-\Delta+S_1-S_2-2}{2}
+B_1\; u^\frac{+\Delta+S_1+S_2-2}{2}\\
+B_2\; u^\frac{+\Delta-S_1-S_2}{2}\\
+B_3\; u^\frac{-\Delta+S_1-S_2-2}{2}\\
+B_4\; u^\frac{-\Delta-S_1+S_2}{2}
 \eea
 \right)\;\;,\;\;
 \left(
@@ -509,10 +509,10 @@ B_4\; u^\frac{-\Delta+S_1-S_2-2}{2}
 \right)\simeq
 \left(
 \bea{l}
-B^1\; u^\frac{-\Delta+S_1+S_2-2}{2}\\
-B^2\; u^\frac{-\Delta-S_1-S_2}{2}\\
-B^3\; u^\frac{+\Delta+S_1-S_2-2}{2}\\
-B^4\; u^\frac{+\Delta-S_1+S_2}{2}
+B^1\; u^\frac{-\Delta-S_1-S_2}{2}\\
+B^2\; u^\frac{-\Delta+S_1+S_2-2}{2}\\
+B^3\; u^\frac{+\Delta-S_1+S_2}{2}\\
+B^4\; u^\frac{+\Delta+S_1-S_2-2}{2}
 \eea
 \right).\vspace{5pt}
 \eeq
@@ -585,7 +585,7 @@ Lastly, the spin $S$ of the operator is related \cite{Gromov:2013pga} to the lea
 which as discussed in the last section comes from the compatibility condition of the asymptotics for the $\pmu$ and $\bQ\omega$-systems.
 
 Additionally the simplified $\bP\mu$-system enjoys a symmetry preserving all of its essential features. 
-It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eq{eq:Pmu}-\eq{eq:mudisc} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. 
+It has the form of a linear transformation of $\bP_a$ and $\mu_{ab}$ which leaves the system \eq{eq:Pmu}, \eq{eq:mudisc} and the asymptotics \eq{eq:asymptotics}, \eq{eq:muasymptotics} invariant. 
 Indeed, consider a general linear transformation $\bP_a'={R_a}^b \bP_b$ with a non-degenerate constant matrix $R$. In order to preserve the $\pmu$-system equations, $\mu$ should at the same time transform as
 \beq
 \mu'=-R \mu \chi R^{-1}\chi.
@@ -660,7 +660,7 @@ Thus at leading order in $S$ all $\mu_{ab}$ are just periodic entire functions w
 For power-like asymptotics of $\mu_{ab}$ like in \eq{eq:muasymptotics} the only possibility is that they are all constants.
 However, we found that in this case there is only a trivial solution, i.e. $\bP_a$ can only be zero.
 The reason for this is that for physical states $S$ must be integer and thus cannot be arbitrarily small, nevertheless, it is a sensible question how to define an analytical continuation from integer values of $S$.
-Restricting the large positive $S$ behaviour one can show uniqueness of the continuation.
+%Restricting the large positive $S$ behaviour one can show uniqueness of the continuation.
 
 Thus we have to relax the requirement of power-like behaviour at infinity. The first possibility is
 to allow for $e^{2\pi u}$ asymptotics at $u\to +\infty$.
@@ -826,7 +826,7 @@ A=&1&2&3&4&5\\ \hline\hline
 \label{tablemu}
 \eea
 \eeq
-where we fix the normalization of our solutions so that some coefficients are set to $1$. 
+where we fix the normalization of our solutions so that some coefficients are set to one.
 The coefficients $C_{a,A}$ are some rational functions of $S,\Delta,J$ and $A_1,A_2$ and in the small $S$ limit all $C_{a,A}\to 0$ in our normalization.
 As it was pointed out in \cite{Gromov:2013pga} the asymptotics for different $A's$ are obtained by replacing $\Delta$ in \eq{eq:muasymptotics} by $\pm \Delta,\pm (S-1) $ and $0$.
 We label these solutions so that in the small $S$ regime these asymptotics are ordered $\Delta> 1-S>0>S-1>-\Delta$.
@@ -1069,7 +1069,7 @@ From the second equation one can see that this linear combination can be normali
 \eeq 
 where $C$ is some constant, which is of order ${\cal O}(\epsilon)$, because the coefficient of $\sinh{2\pi u}$ in the first equation is ${\cal O}(\epsilon)$.
 Taking into account that $c_{1,24}$ is ${\cal O}(\epsilon)$ itself, we find that $c_{1,34}=\mathcal{O}(\epsilon^2)$, i.e. it does not contribute at the order which we are considering. 
-So the final form of the zero mode in \eq{eq:sol13} is
+So the final form of the zero modes in \eq{eq:sol13} is
 \beq
 	\pi_{12} = \pi_{13} = \pi_{14} = \pi_{34}=0, \;\;\; \pi_{24}=c_{1,24}\cosh{2\pi u}.
 	\label{eq:periodicpart}
@@ -1316,7 +1316,7 @@ We give expansions to 10 loops in \text{appendix \ref{sec:weakS3}}. Let us start
    \pi ^4 \zeta_7+45440 \pi ^2 \zeta_9-377520 \zeta_{11}\right)
 	+\dots
 \eeqa
-Remarkably, at each loop order all contributions have the same transcendentality, and only simple zeta values (i.e. $\zeta_n$) appear. 
+Remarkably, at each loop order all contributions have the same transcendentality and only simple zeta values (i.e. $\zeta_n$) appear. 
 This is also true for the $J=3$ and $J=4$ cases.
 We can check this expansion against known results, as the anomalous dimensions of twist two operators have been computed up to five loops for arbitrary spin \cite{Kotikov:2001sc,Kotikov:2003fb,Kotikov:2004er,Moch:2004pa,Staudacher:2004tk,Kotikov:2007cy,Bajnok:2008qj,Lukowski:2009ce} (see also \cite{Velizhanin:2013vla} and the review \cite{Freyhult:2010kc}).
 To three loops they can be found solely from the ABA equations, while at four and five loops wrapping corrections need to be taken into account which was done in \cite{Bajnok:2008qj,Lukowski:2009ce} by utilizing generalized Luscher formulas. 
@@ -1352,7 +1352,7 @@ In particular, we found that multiple zeta values appear in this expansion, whic
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{../graphics/j4plot}
-\caption{The dashed line shows the result from the $\bP\mu$-system for the coefficient of $S^2$ in the 1-loop energy at $J=4$, i.e. $-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi
+\caption[$\bP\mu$ and ABA predictions for the curvature at 1-loop for $J=4$]{The dashed line shows the result from the $\bP\mu$-system for the coefficient of $S^2$ in the 1-loop energy at $J=4$, i.e. $-\frac{14 \zeta_3}{5}+\frac{48 \zeta_5}{\pi ^2}-\frac{252 \zeta_7}{\pi
    ^4}\approx-0.931$ (see \eq{gamma42weak}). The dots show the Bethe ansatz prediction \eq{gammaJ} expanded to orders $1/J^3,1/J^4,\dots,1/J^8$ (the order of expansion $n$ corresponds to the horizontal axis), and it appears to converge to the $\bP\mu$-system result.}
 \label{fig:j4plot}
 \end{figure}
@@ -1458,14 +1458,14 @@ and finally for $J=4$
 \\ \nn
 &+&\frac{0.004697583899}{g^3}+ \dots\;.
 \eeqa
-To fix coefficients for the first four terms in the expansion we were guided by known analytic predictions which will be discussed below, and found that our numerical result matches these predictions with high precision. 
+To fix coefficients for the first four terms in the expansion we were guided by known analytic predictions and found that our numerical result matches these predictions with high precision. 
 Then for $J=2$ and $J=3$ we extracted the numerical values obtained from the fit for the coefficients of $1/g^2$ and $1/g^3$, and plugging them into the online calculator EZFace \cite{ezface} we obtained a prediction for their exact values as combinations of $\zeta_3$ and $\zeta_5$. 
 Fitting again our numerical results with these exact values fixed, we found that the precision of the fit at the previous orders in $1/g$ increased. 
 This is a highly non-trivial test for the proposed exact values of $1/g^2$ and $1/g^3$ terms. 
 For $J=2$ we confirmed the coefficients of these terms with absolute precision $10^{-17}$ and $10^{-15}$ at $1/g^2$ and $1/g^3$ respectively (at previous orders of the expansion the precision is even higher). 
 For $J=3$ the precision was correspondingly $10^{-15}$ and $10^{-13}$.
 For $J=4$ we were not able to get a stable fit for the $1/g^2$ and $1/g^3$ coefficients from EZFace, so above we gave their numerical values (with uncertainty in the last digit). 
-However below we will see that based on $J=2$ and $J=3$ results one can make a prediction for these coefficients, which we again confirmed by checking that precision of the fit at the previous orders in $1/g$ increases. 
+However in the next section on short strings we will see that based on $J=2$ and $J=3$ results one can make a prediction for these coefficients, which we again confirmed by checking that precision of the fit at the previous orders in $1/g$ increases. 
 The precision of the final fit at orders $1/g^2$ and $1/g^3$ is $10^{-16}$ and $10^{-14}$ respectively.
 
 \subsubsection{Higher mode numbers}
@@ -1553,7 +1553,7 @@ Expanding $\gamma^{(2)}_{J=4}$ defined in \eq{gamma2L4} at strong coupling numer
   $(2,4)$ & $\frac{21 \, \zeta_3}{2} + \frac{15 \, \zeta_5}{2} - \frac{25}{8}$&$= 17.27355565$ & $16.46106336$ & $4.94\%$ & 7\\
   \hline
 \end{tabular}
-\caption{Comparisons of strong coupling expansion coefficients for $\lambda^{-5/4}$ obtained from fits to TBA data versus our predictions for various operators. The fit order is the order of polynomials used for the rational fit function (see \cite{Gromov:2011bz} for details).}
+\caption[Comparisons of TBA numerics with fits from strong coupling]{Comparisons of strong coupling expansion coefficients for $\lambda^{-5/4}$ obtained from fits to TBA data versus our predictions for various operators. The fit order is the order of polynomials used for the rational fit function (see \cite{Gromov:2011bz} for details).}
 \label{tab:coefficients}
 \end{table}
 
@@ -1622,7 +1622,7 @@ Another option is that the ansatz for the structure of anomalous dimensions at s
 \subsection{Cusped Wilson line}
 \label{sec:wilson_line}
 
-In this section we will consider an observable illustrated in figure \ref{fig:wilson_line}, it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a scalar of ${\cal N}=4$ super Yang-Mills. 
+In this section we will consider an observable illustrated in figure \ref{fig:wilson_line}, it consists of two rays of a supersymmetric Wilson line forming a cusp with the angle $\phi$ and an operator $Z^L$ inserted at the cusp, where $Z$ is a complex scalar of ${\cal N}=4$ super Yang-Mills. 
 To completely define a supersymmetric Wilson line we should also specify the coupling to scalars, which is parametrized by a six-dimensional unit vector $\vec n(t)$ at each point of the line, where $t$ is a parameter on the line. 
 In our case $\vec n(t)$ is constant and equal $\vec n$ on one ray and $\vec n_\theta$ on another ray, so that $\vec n\cdot \vec n_\theta=\cos\theta$. 
 Because of R-symmetry the observable depends on $\vec n,\vec n_\theta$ only through $\theta$.
@@ -1659,7 +1659,7 @@ The AdS/CFT duality allows one to relate the observable in ${\cal N}=4$ SYM desc
 	\node at (9,1.6) {\Large $\phi$};
 	
 \end{tikzpicture}
-\caption{The cusped Wilson line with an operator insertion.}
+\caption[The cusped Wilson line with an operator insertion]{The cusped Wilson line with an operator insertion.}
 \label{fig:wilson_line}
 \end{figure}
 
@@ -1727,7 +1727,7 @@ as it does not change sign when crossing the cut, meanwhile from \eq{eq:cusp_p3}
 as it does change sign when crossing the cut $u \in [-2g, 2g]$.
 From \eq{eq:cusp_p2} we can find $\bP_2$ which is given by a Hilbert transform of $\sinh(2\pi u)$,
 \beq
-	\frac{-\bP_2}{C A_4 \sqrt{u}} = \oint_{-2g}^{2g} \frac{\sqrt{u^2-4g^2}}{\sqrt{v^2-4g^2}} \frac{\sinh(2\pi v)}{4 \pi i (v-u)} = \sum_{n=1}^\infty \frac{I_{2n-1}(4\pi g)}{x^{2n-1}},
+	\frac{-\bP_2}{C A_4 \sqrt{u}} = \oint_{-2g}^{2g} dv \frac{\sqrt{u^2-4g^2}}{\sqrt{v^2-4g^2}} \frac{\sinh(2\pi v)}{4 \pi i (v-u)} = \sum_{n=1}^\infty \frac{I_{2n-1}(4\pi g)}{x^{2n-1}},
 \eeq
 furthermore we find that $A_2 = -g\, C A_4\, I_1 \( 4 \pi g \)$.
 Finally the solution for $\bP_1$ can be easily verified to be
@@ -1851,7 +1851,7 @@ As expected, for the case $\theta=0$ we recover two symmetric arcs on the unit c
 \begin{figure}[t]
 	\centering
 		\includegraphics[width=0.95\textwidth]{../graphics/roots_cuts}
-	\caption{Distribution of roots on the complex plane for $\theta=0$ (gray) and $\theta=1$ (black) on the left and the condensation of the roots to corresponding smooth cuts on the right with the algebraic curve parameters $r$ and $\psi$ identified. The dashed circle is the unit circle.}
+	\caption[Distributions of roots for the cusped Wilson line]{Distribution of the roots of $P_L(x)$ on the complex plane for $\theta=0$ (gray) and $\theta=1$ (black) on the left and the condensation of the roots to corresponding smooth cuts on the right with the algebraic curve parameters $r$ and $\psi$ identified. The dashed circle is the unit circle.}
 	\label{fig:roots}
 \end{figure}
 Now, following \cite{Gromov:2012eu,Beisert:2005bm,Gromov:2007aq}, we introduce the quasi-momentum $p(x)$ as
@@ -1987,7 +1987,7 @@ Finally we obtain a very simple result in terms of $r$ and $\psi$
 \label{eq:GammaL}
 \eeq
 We can now check our formula \eq{eq:GammaL} in the limit $\phi=0$ and $\theta\rightarrow 0$ considered in section E.2 of \cite{Gromov:2012eu}. 
-As the angles go to zero, the branch points approach the unit circle: $r\rightarrow 1$, thus the formula \eq{eq:GammaL} gives
+As the angles go to zero, the branch points approach the unit circle $r\rightarrow 1$, thus the formula \eq{eq:GammaL} gives
 \beq
 	\Gamma_L(g)=2\,g\,\theta (r-1)\cos\psi.
 \eeq
