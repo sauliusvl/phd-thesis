@@ -95,7 +95,7 @@ One can use this fact, since the partition functions for these theories satisfy 
 	Z(L,R) = \tilde{Z}(R,L),
 \end{equation}
 where $L$ is the length scale of the original theory and $R$ is the time scale. 
-At asymptotic time scales the partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
+At asymptotic time scales the original partition function is dominated by contributions from the ground state, this applies to any length scale of the system, thus in the asymptotic time limit 
 \begin{equation}
 	Z(L,R) = \tr \, e^{-R \, H(L)} \xrightarrow[\text{$R \rightarrow \infty$}]{} e^{-R \, E_0(L)}.
 \end{equation}
@@ -627,7 +627,7 @@ The simplest \text{$\gamma$-transformation} is the following rescaling:
 \mu_{34} \to \frac{1}{\alpha\beta}\,\mu_{34},\;\;
 \eeq
 with $\alpha,\beta$ being constants.
-In all the solutions that we consider all functions $\bP_a$ turn out to be functions of definite parity, so it makes sense to consider $\gamma$-transformations which preserve parity. 
+In all the solutions that we consider all functions $\bP_a$ turn out to be functions of definite parity with respect to the spectral parameter $u$, so it makes sense to consider $\gamma$-transformations which preserve parity. 
 $\bP_1$ and $\bP_2$  always have opposite parity as one can see from from \eq{eq:asymptotics} and thus should not mix under such transformations, the same is true about $\bP_3$ and $\bP_4$. 
 Thus depending on parity of $J$ the parity-preserving $\gamma$-transformations are either
 \beqa
@@ -956,7 +956,7 @@ f(u+i)-f(u)=h(u).
 \eeq
 More precisely, we consider functions $f(u)$ and $h(u)$ with one cut in $u$ between $-2g$ and $2g$, and no poles. 
 Such functions can be represented as infinite Laurent series in the Zhukovsky variable $x(u)$, and we additionally restrict ourselves to the case where for $h(u)$ this expansion does not have a constant term. 
-Note that the right hand side of of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.
+Note that the right hand side of \eq{eq:mudiscNLO} has the form $F(u)-\tilde F(u)$ and therefore indeed does not have a constant term in its expansion, as the constant in $F$ would cancel in the difference $F(u)-\tilde F(u)$.
 One can see that the general solution of \eq{eqperiod} has a form of a particular solution plus an arbitrary $i$-periodic function, which we also call a zero mode. 
 % The class of $i$-periodic function we consider here is restricted to $\sinh(2\pi u)$, $\cosh(2\pi u)$ and constants (for discussion of higher modes $\sinh(2\pi n u), \cosh(2\pi n u)$ see appendix \ref{sec:appHigher}).
 First we will describe the construction of the particular solution and later deal with zero modes. 
@@ -1235,7 +1235,7 @@ As in the case of $J=2$, we use a combination of the Pfaffian constraint, prescr
 \pi_{12}=0,\;\pi_{13}=0,\;\pi_{14}=0,\;\pi_{24}=c_{24,2} \sinh\(2\pi u\),\;\pi_{34}=0.
 \label{eq:periodicpartL3}
 \eeq
-As in the previous section, the next step is to find $\bP_a^{(1)}$ from the $P\mu$ system expanded to the first order, namely from
+As in the previous section, the next step is to find $\bP_a^{(1)}$ from the $\bP\mu$-system expanded to the first order, namely from
 \beqa
 \label{eq:P1L3}
 &&\tilde \bP_1^{(1)}+\bP_3^{(1)}=r_1,\\
@@ -1843,7 +1843,7 @@ x^{-L}& x^{1-L}& \cdots & x^{L-1} &x^{L}\\
 \end{matrix}\right|.
 \label{eq:PLrepr}
 \eeq
-The numerator is the same as $\det \M_{2L}$ except in the last line $x_{2L+1}$ is replaced by $x$ which is not integrated over. 
+The numerator is the same as $\det \M_{2L}$ except in the last line $I^\theta$ is replaced by $x$ which is not integrated over. 
 In the classical limit all integrals are saturated by their saddle point values, i.e. one can remove the integrals by simply replacing $x_i \rightarrow x_i^{cl}$. 
 If we replace $x$ with any saddle point value $x_i^{cl}$ the determinant will contain two identical rows and will automatically become zero, thus the zeros of $P_L(x)$ are the saddle point values. 
 On the complex plane they are distributed on two arcs as shown in figure \ref{fig:roots}. 
