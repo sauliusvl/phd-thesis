@@ -10,21 +10,21 @@ Everything is interesting if you go into it deeply enough.
 After all there is no evidence that supersymmetry is a true symmetry of nature and supersymmetric theories are mostly toy theories, we can not observe them in particle accelerators, as opposed to the Standard Model of particle physics. 
 And indeed these are all valid points, however there are very good reasons for studying them. 
 
-Consider $\N=4$ super Yang-Mills, from a pragmatic point of view it is the simplest non-trivial quantum field theory in four spacetime dimensions and since attempts at solving realistic QFTs such as the theory of strong interactions (QCD) have so far been futile, it seems like a good starting point -- some go as far as calling it the harmonic oscillator of QFTs. 
+Consider $\N=4$ super Yang-Mills, from a pragmatic point of view it is the simplest non-trivial quantum field theory in four spacetime dimensions and since attempts at solving realistic QFTs such as the theory of strong interactions (QCD) have so far mostly resorted to numerical methods, it seems like a good starting point -- some go as far as calling it the harmonic oscillator of QFTs. 
 
 Another (and probably the main) reason why $\N=4$ has been receiving so much attention in the last decades is the long list of mysterious and intriguing properties it seems to posses, making it almost an intellectual pursuit of understanding it. 
-The theory has been surprising the theoretical physics community from the very beginning: it is a rare instance of a conformal theory in dimensions higher than two, it has a dual description in terms of a string theory and more recently it was discovered to be integrable in the planar limit. 
-All of these properties give reasonable hope for actually solving the theory exactly, something that has never been achieved before for any four dimensional interacting QFT.
+The theory has been surprising the theoretical physics community from the very beginning: it is a conformal theory in dimensions higher than two, it has a dual description in terms of a string theory and more recently it was discovered to be integrable in the planar limit. 
+All of these properties give reasonable hope for actually solving the theory exactly, something that is highly non-trivial to achieve in any four dimensional interacting QFT.
 
 In the remainder of the section we give a proper introduction to the subject from a historic point of view focusing on $\N=4$ SYM and its integrability aspect, for it is integrability that allows one to actually find exact results in the theory. We then give an overview of the thesis itself, emphasizing which parts of the text are reviews of known material and which parts constitute original work.
 
 \subsection{Brief history of the subject}
 
-Quantum field theory has been at the spot light of theoretical physics since the beginning of the century when it was found that electromagnetism is described by the theory of quantum electrodynamics (QED). Since then people have been trying to fit other forces of nature into the QFT framework. 
+Quantum field theory has been at the spotlight of theoretical physics since the middle of the last century when it was found that electromagnetism is described by the theory of quantum electrodynamics (QED). Since then people have been trying to fit other forces of nature into the QFT framework. 
 Ultimately it worked: the theory of strong interactions, quantum chromodynamics or QCD for short, together with the electroweak theory, spontaneously broken down to QED, collectively make up the \emph{Standard Model} of particle physics, which has been extensively tested in particle accelerators since then. 
 
 However nature did not give away her secrets without a fight. 
-For some time it was though that strong interactions were described by a theory of vibrating strings, as it seemed to incorporate the so-called Regge trajectories observed in experiments \cite{Veneziano:1968}. 
+For some time it was thought that strong interactions were described by a theory of vibrating strings, as it seemed to incorporate the so-called Regge trajectories observed in experiments \cite{Veneziano:1968}. 
 Even after discovering QCD, which is a Yang-Mills gauge theory, stringy aspects of it were still evident and largely mysterious. 
 Most notably lattice gauge theory calculations at strong coupling suggested that surfaces of color-electric fluxes between quarks could be given the interpretation of stretched strings \cite{Wilson:1974}, thus an idea of a gauge-string duality was starting to emerge. 
 It was strongly re-enforced by t'Hooft, who showed that the perturbative expansion of $U(N)$ gauge theories in the large $N$ limit could be rearranged into a genus expansion of surfaces triangulated by the double-line Feynman graphs, which strongly resembles string theory genus expansions \cite{THooft:1974}.
@@ -57,8 +57,8 @@ Maldacena's conjecture was consistent with this view, as the gauge theory was de
 The idea of a higher dimensional theory being fully described by a theory living on the boundary was also considered before in the context of black hole physics \cite{'tHooft:1993gx, Susskind:1994vu} and goes by the name of holography, thus AdS/CFT is also referred to as a holographic duality.
 
 The duality can be motivated by considering a stack of $N$ parallel D3 branes in type IIB string theory. 
-Open strings moving on the branes can be described by $\N=4$ SYM with the gauge group $SU(N)$. 
-Roughly the idea is that there are six extra dimensions transverse to the stack of branes, thus a string stretching between two of them can be viewed as a set of six scalar fields ${(\Phi^i)^a}_b$ defined in four dimensional spacetime carrying two extra indices denoting the branes it is attached to. 
+Open strings moving on the branes can at low energies be described by $\N=4$ SYM with the gauge group $U(N)$. 
+Roughly, the idea is that there are six extra dimensions transverse to the stack of branes, thus a string stretching between two of them can be viewed as a set of six scalar fields ${(\Phi^i)^a}_b$ defined in four dimensional spacetime carrying two extra indices denoting the branes it is attached to. 
 These are precisely the indices of the adjoint representation of $SU(N)$.
 A similar argument can be put forward for other fields thus recovering the field content of $\N=4$ SYM.
 Far away from the branes we have closed strings propagating in empty space. 
@@ -83,15 +83,15 @@ In this limit the effective coupling constant of the gauge theory is $\lambda$.
 
 The supergravity approximation is valid for low lying states when $\alpha' \ll R^2$, which corresponds to strongly coupled gauge theory, thus the conjecture is of the weak-strong type. 
 This fact is a blessing in disguise, since initially it seems very restrictive as one can not easily compare results of the theories. 
-However it provides a possibility to access strongly coupled regimes of both theories, which was beyond reach before. 
+However, it provides a possibility to access strongly coupled regimes of both theories, which was beyond reach before. 
 Prescriptions for matching up observables on both sides of the correspondence were given in \cite{Gubser:1998bc, Witten:1998qj}. 
-However because of the weak-strong nature of the duality initial tests were performed only for BPS states, which are protected from quantum corrections.
+However, because of the weak-strong nature of the duality initial tests were performed only for BPS states, which are protected from quantum corrections.
 The first direct match was observed in \cite{Witten:1998qj} where it was shown that the spectrum of half-BPS single trace operators matches the Kaluza-Klein modes of type IIB supergravity.
-Another indirect confirmation of the conjecture was the formulation of type IIB string theory as a super-coset sigma model on the target space $PSU(2,2|4) / SO(2,4) \otimes SO(6)$, which has the same global symmetries as $\N=4$ SYM \cite{Metsaev:1998it}.
+An important step in further understanding the conjecture was the formulation of type IIB string theory as a super-coset sigma model on the target space $PSU(2,2|4) / SO(2,4) \otimes SO(6)$, which of course has the same global symmetries as $\N=4$ SYM \cite{Metsaev:1998it}.
 
 The situation changed dramatically in 2002 when Berenstein, Maldacena and Nastase devised a way to go beyond BPS checks \cite{Berenstein:2002jq}. 
-The idea was to take an operator in gauge theory with large R-charge $J$ and add some some impurities, effectively making it ``near-BPS''.
-The canonical example of such an operator is $\tr(Z^J X^S)$, where $Z$ and $X$ are two complex scalar fields of $\N=4$ SYM, with $X$ being the impurities ($S \ll J$).
+The idea was to take an operator in gauge theory with large R-charge $J \sim \sqrt{N}$ and add some some impurities, effectively making it ``near-BPS''.
+The canonical example of such an operator can be schematically written as $\tr(Z^J X^S)$, where $Z$ and $X$ are two complex scalar fields of $\N=4$ SYM, with $X$ being the impurities ($S \ll J$).
 Since anomalous dimensions are suppressed like $\lambda/J^2$, perturbative gauge theory calculations are valid even at large $\lambda$, as long as $\lambda' \equiv \lambda / J^2 \ll 1$ and $N$ is large.
 Keeping in mind potential problems with the order of limits, it is thus naively possible to compare gauge theory calculations with string theory results.
 From the string theory point of view this limit corresponds to excitations of point-like strings with angular momentum $J$ moving at the speed of light around the great circle of $S^5$. 
@@ -153,7 +153,7 @@ The BDS result was quickly shown to be incomplete as it was lacking a so-called 
 It was found to leading order at strong coupling in \cite{Arutyunov:2004vx} and later to one-loop in \cite{Hernandez:2006tk}.
 The discovery of the dressing phase also cured the infamous three loop discrepancy between weak and strong coupling results.
 A crossing equation satisfied by the dressing phase was soon found \cite{Janik:2006dc} and eventually solved by Beisert, Hernandez and Lopez (BHL) \cite{Beisert:2006ib}.  
-Collectively these results are often referred to as the asymptotic Bethe ansatz (ABA), reminding that they are valid only for asymptotically long spin chains. 
+Collectively these results are often referred to as the asymptotic Bethe ansatz (ABA), since they are valid only for asymptotically long spin chains. 
 When the states are short so-called wrapping effects become relevant. 
 At weak coupling they manifest as long-range spin chain interactions wrapping around the chain, whereas at strong coupling they are due to virtual particles self-interacting across the circumference of the worldsheet \cite{Sieg:2005kd, Ambjorn:2005wa}.
 
@@ -214,11 +214,11 @@ The long sought beauty of the solution to the spectral problem was arguably unco
 The whole TBA construction was ultimately reduced to a Riemann-Hilbert problem for eight $\cal Q$ functions, which generalize the quasi-momenta found in the algebraic curve construction, namely the classical spectral curve construction amounts to a WKB type approximation of the quantum spectral curve.
 The QSC quickly showed its potential as previously known results were rederived almost without any effort and new results were being rapidly discovered \cite{Gromov:2013qga, Gromov:2014bva, Alfimov:2014bwa}.
 
-Thus one can safely say that the spectral problem in $\N=4$ SYM is by now very well understood with numerical results readily available and deeper understanding of the structure being within reach.
+Thus one can safely say that the spectral problem in planar $\N=4$ SYM is by now very well understood with numerical results readily available and deeper understanding of the structure being within reach.
 Integrability methods have also been useful in other areas such as three point functions \cite{Escobedo:2010xs, Gromov:2012vu} and scattering amplitudes \cite{Drummond:2010km, Alday:2010kn}, however the situation there is still not as complete.
 Having witnessed the successful resolution of the spectral problem it appears that $\N=4$ SYM is within reach of being solved completely.
 If this programme were to be successfully carried out it would be the first example of a four dimensional interacting quantum field theory being solved exactly.
-Undoubtedly this would provide a huge boost to our understanding of QFTs in general and hopefully bring us closed to solving QCD.
+Undoubtedly this would provide a huge boost to our understanding of QFTs in general and hopefully bring us closer to solving QCD.
 
 It turns out that $\N=4$ SYM is not the only example of an integrable supersymmetric gauge theory having a dual string description.
 Probably the most famous other example involves the so-called ABJM theory, proposed by Aharony, Bergman, Jafferis and Maldacena \cite{Aharony:2008ug}, following \cite{Schwarz:2004yj, Bagger:2006sk,Gustavsson:2007vu,Gaiotto:2007qi}.
