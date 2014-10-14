@@ -974,9 +974,10 @@ Thus for such $\alpha$ and $\beta$ we define
 \eeq
 We also define $\Sigma\cdot x^{-n}=\Gamma'\cdot x^{-n}$ for $n>0$, where the integral operator $\Gamma'$ defined as
 \beq
-\(\Gamma'\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\partial_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)]}h(v).
+\(\Gamma'\cdot h\)(u)\equiv \oint_{-2g}^{2g}\frac{dv}{{4\pi i}}\partial_u \log \frac{\Gamma[i (u-v)+1]}{\Gamma[-i (u-v)]}h(v),
 \label{Gammaprime}
 \eeq
+where we integrate around the cut. 
 This requirement is consistent because of the following relation
 \beq
 \(\Gamma'\cdot h\)(u+i)-\(\Gamma'\cdot h\)(u)
@@ -987,7 +988,7 @@ This requirement is consistent because of the following relation
 We remind that $f_+$ and $f_-$ stand for the part of the Laurent expansion with, respectively, positive and negative powers of $x$, while $\tilde f$ is the analytic continuation around the branch point at $u=2g$ (which amounts to replacing $x\to 1/x$).
 What is left is to define $\Sigma$ on positive powers of $x$, which we do by requiring
 \beq
-\Sigma\cdot\left[x^a+1/x^a\right]\equiv p_a'(u) %=2 \Sigma\cdot\left[T_a\(\frac{u}{2g}\)\right],
+\Sigma\cdot\left[x^a+1/x^a\right]\equiv 2 p_a'(u) %=2 \Sigma\cdot\left[T_a\(\frac{u}{2g}\)\right],
 \label{paprime}
 \eeq
 where $p_a'(u)$ is a polynomial in $u$ of degree $a+1$, which is a solution of

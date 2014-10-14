@@ -148,16 +148,16 @@ Semiclassical quantization is achieved by perturbing quasi-momenta introducing e
 Virasoro constraints and inversion properties of the variations $\delta q_{i}$ follow from those of the $q_{i}$'s. 
 In order to find the asymptotic expression of $\delta q_{i}$ in terms of the number $N_{ij}$ of extra fluctuations we can look at the details of polarized states and obtain 
 
-\footnotesize
+\small
 \beq
 \label{eq:asym2}
 \left(\begin{array}{c} \delta q_{1}(x) \\ \delta q_{2}(x) \\ \delta q_{3}(x) \\ \delta q_{4}(x) \\ \delta q_{5}(x) \end{array}\right) = 
-\frac{1}{2\,g\,x}\,\left(\begin{array}{ccc} 
-\delta E+N_{19}+2\,N_{1, 10} & +N_{15}+N_{16}+N_{17}+N_{18} & \\
-\delta E+2\,N_{29}+N_{19} & +N_{25}+N_{26}+N_{27}+N_{28} & \\
-& -N_{18}-N_{28} & -N_{35}-N_{36}-N_{37} \\
-& -N_{17}-N_{27} & -N_{45}-N_{46}-N_{37} 	\\
-& +N_{15}-N_{16}+N_{25}-N_{26} & +N_{35}-N_{36}+N_{45}-N_{46}
+\frac{1}{2\,g\,x}\,\left(\begin{array}{c} 
+\delta E+N_{19}+2\,N_{1, 10} +N_{15}+N_{16}+N_{17}+N_{18}  \\
+\delta E+2\,N_{29}+N_{19}  +N_{25}+N_{26}+N_{27}+N_{28}  \\
+ -N_{18}-N_{28}  -N_{35}-N_{36}-N_{37} \\
+ -N_{17}-N_{27}  -N_{45}-N_{46}-N_{37} 	\\
+ +N_{15}-N_{16}+N_{25}-N_{26}  +N_{35}-N_{36}+N_{45}-N_{46}
 \end{array}\right).
 \eeq
 \normalsize
@@ -238,7 +238,7 @@ where the small $\mc S$ expansion of the classical contribution $\mc E_{0}$ read
 % \ea
 The quasi-momenta are closely related to those of the \ads folded string since motion is still in $AdS_{3}\times S^{1}$
 and the $\mathbb{CP}^{3}$ part of the background plays almost no role. 
-The only non trivial case is 
+The only non trivial quasi-momentum is
 \ba
 q_{1}(x) &=& \pi\,f(x)\,\left\{-\frac{J}{4\,\pi\,g}\,\left(\frac{1}{f(1)\,(1-x)}-\frac{1}{f(-1)(1+x)}\right)+ \right. \\
 && \left. -\frac{4}{\pi\,(a+b)(a-x)(a+x)}\left[
@@ -301,7 +301,7 @@ E_{1}^{\rm wrapping} &=& \sum_{ij}(-1)^{F_{ij}}\,\int_{-1}^{1}\frac{dz}{2\,\pi\,
 \,\Omega^{ij}(z)\,\partial_{z}\log(1-e^{-i\,(q_{i}(z)-q_{j}(z))}),
 \ea 
 where $x(z) = z+\sqrt{z^{2}-1}$ and the anomaly contributions are computed integrating on the upper half complex plane.
-As in \ads, the labelling of the various contributions reminds their physical origin. In particular, dressing and wrapping contributions have been separated in order to split the asymptotic contribution from finite size effects. As in \ads, the anomaly terms are special 
+As in \ads, the labelling of the various contributions denote their physical origin. In particular, dressing and wrapping contributions have been separated in order to split the asymptotic contribution from finite size effects. As in \ads, the anomaly terms are special 
 contributions arising from the deformation of contours and ultimately due to the presence of the algebraic curve cuts.
 The representation (\ref{eq:one-loop-correction}) is a compact formula for $E_{1}$ and can be evaluated numerically with minor effort. In order to understand it better, we shall now analyse the short and long string limit. In the former case, 
 we shall evaluate the explicit sum over frequencies clarifying the relation with the contour integrals. In the latter, we shall extract the analytical expansion at large spin directly from (\ref{eq:one-loop-correction}).
@@ -312,7 +312,7 @@ The short string limit is generically $\mc S\to 0$. Regarding $\mc J$, we shall 
 keeping $\mc J$ fixed, expanding in the end each coefficient of powers of $\mc S$ at small $\mc J$. This is 
 precisely the procedure worked out in \cite{Gromov:2011bz} in $\adsfive$. In the second case, we shall keep the ratio
 $\rho = \mc J/\sqrt\mc S$ fixed as in \cite{Beccaria:2012tu}. The two expansions are related, but not equivalent and provide useful different information.
-After a straightforward computation, our main result is
+After a straightforward computation the result is
 \small 
 \ba
 \label{eq:GV}
@@ -351,7 +351,7 @@ for the giant magnon.
 The result in the fixed $\rho = \mc J / \sqrt\mc S$ limit is 
 \ba
 \label{eq:our-expansion}
-&& E_{1} = -\frac{1}{2}\,\mc C(\rho, \mc S)+a_{01}(\rho)\,\sqrt\mathcal S+ a_{1,1}(\rho)\,\mathcal S^{3/2}+\mc O(\mc S^{5/2}),
+&& E_{1} = -\frac{1}{2}\,\mc C(\rho, \mc S)+a_{1,0}(\rho)\,\sqrt\mathcal S+ a_{1,1}(\rho)\,\mathcal S^{3/2}+\mc O(\mc S^{5/2}),
 \ea
 where
 \ba
@@ -439,7 +439,7 @@ Notice also that the expansion of $\mc C$ at fixed $\mc J$ is
  so, upon expanding at small $\mc J$, it provides precisely 
  the terms with even/odd $\mc J$ exponents in the coefficients of the odd/even powers of $\mc S$ in (\ref{eq:GV}).
 
-Apart from the $\mc C$ term, the integral representation implements the Gromov-Mikhailov (GM) prescription. The reason is that the singularities at $|x|=1$ are avoided by implicitly encircling them by a small circumference. This cut-off on $|x-1|$ translates in a bound on the highest mode $n$ that correlates heavy/light polarizations according to GM. In other words the highest mode for light polarizations is asymptotically half the highest mode for heavy polarizations. 
+Apart from the $\mc C$ term, the integral representation implements the Gromov-Mikhaylov (GM) prescription. The reason is that the singularities at $|x|=1$ are avoided by implicitly encircling them by a small circumference. This cut-off on $|x-1|$ translates in a bound on the highest mode $n$ that correlates heavy/light polarizations according to GM. In other words the highest mode for light polarizations is asymptotically half the highest mode for heavy polarizations. 
 
 As a numerical check of the agreement between the integral representation and the series expansion, 
 we fix $\rho=1$ in table \ref{tab:check1} and show
@@ -487,7 +487,7 @@ The slope ratio
 is the analogue of the slope function we encountered in $\adsfive$. 
 It is known that it does not receive dressing corrections both in $\adsfive$ and in $\adscp$ since such contributions start at 
 order $\mc S^{2}$ \cite{Basso:2011rs}. It also 
-does not receive wrapping corrections in $AdS_{5}$.  Instead, in the case of $AdS_{4}$ the slope has a non vanishing wrapping contribution. For instance, a rough evaluation at $\mc J=1$ gives  a definitely non zero value around $-0.042$.
+does not receive wrapping corrections in $AdS_{5}$.  Instead, in the case of $AdS_{4}$ the slope has a non vanishing wrapping contribution. For instance, a rough evaluation at $\mc J=1$ gives  a definitely non zero value of approximately $-0.042$.
 Indeed, an analytical calculation shows that  the wrapping contribution to the slope in $\adscp$ is exactly
 \beq
 \sigma^{\rm wrap}(\mc J) = \sum_{n=-\infty}^{\infty}\sigma_{n} = -\frac{1}{2\,\mc J}\,\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}}{
