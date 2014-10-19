@@ -40,6 +40,7 @@ After dimensional reduction the gauge field $A_M$ decomposes to the four dimensi
 	\Psi_A \, \, (A = 1, ..., 16) \, \, \, \rightarrow \, \, \,  \bar{\psi}^a_{\dot{\alpha}}, \; \psi_{a\alpha} \, \, (\alpha, \dot{\alpha} = 1, 2, \; \; a = 1, ..., 4).
 \end{equation}
 It also gives rise to the $SO(6) \simeq SU(4)$ symmetry called \emph{R-symmetry}, which originally was part of the ten dimensional Poincare group, but now acts as an internal symmetry of the supercharges.
+The matrices $\sigma_I^{ab}$ in \eq{eq:n4_action} are the gamma matrices for this group.
 It permutes the scalars, which live in the fundamental ${\bf 6}$ of $SO(6)$ and the spinors, which live in the fundamental of $SU(4)$, namely the lower index $a$ in $\psi_{a\alpha}$ transforms in ${\bf 4}$, while $\bar{\psi}_{\dot{\alpha}}^a$ transforms in ${\bf \bar{4}}$. 
 From this it follows that we can combine the six real scalars $\Phi^I$ into three complex scalars $\Phi^{ab}$, often denoted as $X$, $Y$ and $Z$, which then transform under the second rank antisymmetric ${\bf 6}$ of $SU(4)$. 
 The gauge field is a singlet under R-symmetry.
@@ -67,7 +68,7 @@ They have the general form
 \end{eqnarray} 
 In this thesis we will be exclusively focusing on the planar limit, which is the limit when the number of colors $N$ is sent to infinity. 
 Diagrams involving multi-trace operators are non-planar, hence suppressed in the large $N$ limit and therefore we will only be considering single trace operators.
-An example of a non-local operator is the Wilson loop, given by
+An example of a non-local operator is the Wilson loop, given by \cite{Rey:1998bq, Maldacena:1998im} 
 \beq
 	W_L= \tr \, \( {\mathcal P}\exp\!\oint_C \! dt\(i  A\cdot\dot{x}+\vec\Phi\cdot\vec n\,|\dot x|\) \),
 \eeq
@@ -78,10 +79,10 @@ In later sections of the text we will be considering cusped Wilson lines with ot
 
 \subsection{Symmetry}
 
-Conformal symmetry, supersymmetry and R-symmetry are a part of a bigger group $PSU(2,2|4)$, which is also known as the \emph{$\N=4$ superconformal group}. 
+Conformal symmetry, supersymmetry and R-symmetry are a part of a bigger group $PSU(2,2|4)$, which is also known as the \emph{$\N=4$ superconformal group} \cite{Nahm:1978ab}. 
 It is the full symmetry group of $\N=4$ super Yang-Mills and is unbroken by quantum corrections. 
 It is an example of a \emph{supergroup}, i.e. a graded group containing bosonic and fermionic generators. 
-The theory of supergroups is highly developed \cite{Sohnius:1981ab,Mandelstam:1983, Brink:1983,Beisert:2010kp} and much of the techniques from studying bosonic groups carry over to supergroups with some additional complications, i.e. Dynkin diagrams, root spaces, weights etc. 
+The theory of supergroups is highly developed \cite{Sohnius:1981ab,Kac:1977ab,Brink:1983,Beisert:2010kp} and much of the techniques from studying bosonic groups carry over to supergroups with some additional complications, i.e. Dynkin diagrams, root spaces, weights etc. 
 
 $PSU(2,2|4)$ has the bosonic subgroup of $SU(2,2) \times SU(4)$, where $SU(2,2) \simeq SO(2,4)$ is the conformal group in four dimensions and $SU(4) \simeq SO(6)$ is the R-symmetry. 
 The conformal group has the Poincar\'{e} group as a subgroup, which has a total of 10 generators including four translations $P_\mu$ and six Lorentz transformations $M_{\mu\nu}$, in addition there is the generator for dilatations $D$ and four special conformal generators $K_\mu$. 
@@ -184,7 +185,7 @@ Acting on these with $P_\mu$ keeps producing operators with a dimension one high
 We can also act with the supercharges and looking at the commutators in (\ref{eq:dq_commutators}) we see that they raise the dimension by $1/2$, while the special conformal supercharges lower it by $1/2$. 
 Operators annihilated by special conformal supercharges are called \emph{superconformal primaries}, which is a stronger condition that being a conformal primary.
 
-(Super-)conformal primaries and their descendants make up multiplets that constitute the three families of discrete representations in the classification.
+(Super-)conformal primaries and their descendants make up multiplets that constitute three families of discrete representations in the classification.
 They are further distinguished by the number of supercharges the primary commutes with.
 One example is a class of operators that satisfy the condition 
 \beq
@@ -195,11 +196,12 @@ a canonical representative would be a single-trace symmetrized scalar field oper
 \beq
 	\mathcal{O}^{i j \dots k}(x) = \tr \( \Phi(x)^{(i} \Phi(x)^j \dots \Phi(x)^{k)} \).
 \eeq
-These operators commute with half of the supercharges, thus they are referred to as \text{half-BPS}. 
+These operators commute with half of the supercharges, thus they are referred to as \text{1/2-BPS}. 
+Similarly, operators commuting with a quarter and an eight of the supercharges are respectively denoted by 1/4-BPS and 1/8-BPS, they constitute the other two families of discrete representations.  
 A key fact is that operators in the same representation must have the same anomalous dimension, because the generators of the group can only change it by half integer steps and there's only a finite number of generators. 
 What is more, operators in the discrete BPS representations are protected from quantum corrections, because at any coupling the total dimension is always algebraically related to the Dynkin labels of the R-symmetry, e.g. as in \eq{eq:halfBPS}. 
 Since charges of compact groups are quantized it must mean that the dimension can't continuously depend on the coupling and hence the anomalous dimension must vanish. 
-This is however not true for the fourth continuous non-BPS family of representations, hence operators from these multiplets do acquire anomalous dimensions.
+This is however not true for the fourth continuous non-BPS family of representations, whose operators do not commute with any of the supercharges, hence operators from these multiplets do acquire anomalous dimensions.
 
 Let us conclude the section with an elegant argument for why the beta function of $\N=4$ super Yang-Mills is zero.
 One can use the algebra and shown that the operators $\tr \, F_+ F_+$ and $\tr \, F_- F_- $, where $F_\mp$ are the (anti-)self-dual field strengths, belong to the same multiplet as a superconformal primary \cite{Minahan:2010js}, meaning that the $\tr \, F_{\mu\nu} F^{\mu\nu}$ term in the Lagrangian is protected from quantum corrections, hence so is the coupling constant $g_{YM}$. 
@@ -228,7 +230,7 @@ The takeaway here is that one can formulate strongly coupled planar $\N=4$ super
 
 \subsubsection{Sigma model formulation}
 
-A very useful formulation of string theory on $AdS_5 \times S^5$ is the coset space sigma model \cite{Metsaev:1998it} with the target superspace of
+A very useful formulation of string theory on $AdS_5 \times S^5$ is the coset space sigma model \cite{Henneaux:1984mh, Metsaev:1998it} with the target superspace of
 \begin{equation}
 	\frac{PSU(2,2|4)}{SO(1,4) \times SO(5)}.
 \end{equation}
@@ -276,7 +278,7 @@ E = \( {\begin{array}{cccc}
  0 & 0 & 1 & 0 \\
  \end{array} } \),
 \eeq
-which endows the algebra with a $\mathbb{Z}_4$ grading, since one can easily check that $\Omega^4 = 1$.
+which endows the algebra with a $\mathbb{Z}_4$ grading \cite{Berkovits:1999zq}, since one can easily check that $\Omega^4 = 1$.
 This in turn means that any element of the algebra can be decomposed under this grading as
 \beq
 	M = \sum_{i=0}^3 M^{(i)},
