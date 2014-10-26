@@ -83,7 +83,7 @@ It is not fixed by symmetry and its asymptotic expansions have the structure
     \sqrt{\frac{\lambda}{2}} + a_1 + \frac{a_2}{\sqrt{\lambda}} + \ldots   & \mbox{for $\lambda\gg 1$} \;.
   \end{cases}
 \eeq
-In the last section we will briefly describe how this function was found using the quantum algebraic curve construction.
+%In the last section we will briefly describe how this function was found using the quantum algebraic curve construction.
 The analogue of this function in $\N=4$ super Yang-Mills is the trivial relation $g = \frac{\sqrt{\lambda}}{4\pi}$. 
 
 \subsubsection{Strong coupling}
@@ -747,71 +747,71 @@ This leads immediately to a contribution to the slope of order $\mc O(N^{2})$.
 % \eeq
 % without $\log(2)$ term. This is correct since in world-sheet regularization all modes are treated with uniform cutoff.
 
-\subsection{Exact results}
-\label{sec:abjm_exact}
+% \subsection{Exact results}
+% \label{sec:abjm_exact}
 
-The spectral problem of $AdS_4/CFT_3$ was eventually solved exactly by formulating a set of TBA equations \cite{Gromov:2009tv} and equivalently a Y-system \cite{Bombardelli:2009xz,Gromov:2009at}.
-This eventually led to a formulation of the quantum spectral curve \cite{Cavaglia:2014exa}.
+% The spectral problem of $AdS_4/CFT_3$ was eventually solved exactly by formulating a set of TBA equations \cite{Gromov:2009tv} and equivalently a Y-system \cite{Bombardelli:2009xz,Gromov:2009at}.
+% This eventually led to a formulation of the quantum spectral curve \cite{Cavaglia:2014exa}.
 
-\subsubsection{Quantum spectral curve}
+% \subsubsection{Quantum spectral curve}
 
-The main objects in the construction are $5$ functions ${\bf P}_A,\;A=1,\dots,5$ and $4$ function $\nu_a,\;a=1,\dots,4$ depending on the spectral parameter $u$.
-${\bf P}_A$ are restricted by a quadratic constraint 
-\beq
-	\bP_5=\sqrt{1-\bP_1\bP_4+\bP_2\bP_3}.
-\eeq
-Depending on the choice of the branch cuts $\nu_a$ could be made $i$-periodic.
-With the choice of branch cuts with infinitely many cuts going from $-2h+i n$ to $2h+i n$ for any integer $n$ the functions $\nu_a$ are quasi-periodic and satisfy
-\beq
-	\nu_a(u+i)=-{\bf P}_{ab}(u)\,\nu^b(u),
-\eeq
-where $\nu^1=-\nu_4,\;,\nu^2=\nu_3,\;\nu^3=-\nu_2,\;\nu^4=\nu_1$ and ${\bf P}_{ab}$ is a $4\times 4$ matrix built out of ${\bf P}_A$:
-\beq\label{Pab}
-{\bf P}_{ab}=
-\left( \begin{array}{cccc} 0 & - {\bf P}_1 & -{\bf P}_2 & -{\bf P}_5 \\ {\bf P}_1 & 0 & -{\bf P}_5  & -{\bf P}_3 \\ {\bf P}_2 & {\bf P}_5 & 0 & -{\bf P}_4 \\ {\bf P}_5 & {\bf P}_3 &  {\bf P}_4 & 0 \end{array} \right)_{ab}\;.
-\eeq
-Analytical continuation of $\nu_a$ under the cut $[-2h,2h]$ denoted as $\tilde \nu_a$ is related to $\nu_a$ itself simply by $\tilde \nu_a(u)=\nu_a(u+i)$.
-Finally the functions ${\bf P}_A$ have only one cut $[-2h,2h]$ and their analytical continuation $\tilde\bP_A$ under this cut is given by
-\beq
-\tilde \bP_{ab}=\bP_{ab}+\nu_a\tilde\nu_b-\nu_b\tilde\nu_a\;.
-\label{Pmonodromy}
-\eeq
-The full details of the construction can be found in \cite{Cavaglia:2014exa}.
-An interesting fact about it is that under the replacements
-\beqa
-	{\bP}_{ab} &\to& \mu_{ab}^{{\cal N}=4} \nn \\
-	\nu_a &\to& \bP_a^{{\cal N}=4},
-\eeqa
-algebraically we recover the $\N=4$ super Yang-Mills $\pmu$-system equations, however their analytical properties are interchanged.
+% The main objects in the construction are $5$ functions ${\bf P}_A,\;A=1,\dots,5$ and $4$ function $\nu_a,\;a=1,\dots,4$ depending on the spectral parameter $u$.
+% ${\bf P}_A$ are restricted by a quadratic constraint 
+% \beq
+	% \bP_5=\sqrt{1-\bP_1\bP_4+\bP_2\bP_3}.
+% \eeq
+% Depending on the choice of the branch cuts $\nu_a$ could be made $i$-periodic.
+% With the choice of branch cuts with infinitely many cuts going from $-2h+i n$ to $2h+i n$ for any integer $n$ the functions $\nu_a$ are quasi-periodic and satisfy
+% \beq
+	% \nu_a(u+i)=-{\bf P}_{ab}(u)\,\nu^b(u),
+% \eeq
+% where $\nu^1=-\nu_4,\;,\nu^2=\nu_3,\;\nu^3=-\nu_2,\;\nu^4=\nu_1$ and ${\bf P}_{ab}$ is a $4\times 4$ matrix built out of ${\bf P}_A$:
+% \beq\label{Pab}
+% {\bf P}_{ab}=
+% \left( \begin{array}{cccc} 0 & - {\bf P}_1 & -{\bf P}_2 & -{\bf P}_5 \\ {\bf P}_1 & 0 & -{\bf P}_5  & -{\bf P}_3 \\ {\bf P}_2 & {\bf P}_5 & 0 & -{\bf P}_4 \\ {\bf P}_5 & {\bf P}_3 &  {\bf P}_4 & 0 \end{array} \right)_{ab}\;.
+% \eeq
+% Analytical continuation of $\nu_a$ under the cut $[-2h,2h]$ denoted as $\tilde \nu_a$ is related to $\nu_a$ itself simply by $\tilde \nu_a(u)=\nu_a(u+i)$.
+% Finally the functions ${\bf P}_A$ have only one cut $[-2h,2h]$ and their analytical continuation $\tilde\bP_A$ under this cut is given by
+% \beq
+% \tilde \bP_{ab}=\bP_{ab}+\nu_a\tilde\nu_b-\nu_b\tilde\nu_a\;.
+% \label{Pmonodromy}
+% \eeq
+% The full details of the construction can be found in \cite{Cavaglia:2014exa}.
+% An interesting fact about it is that under the replacements
+% \beqa
+	% {\bP}_{ab} &\to& \mu_{ab}^{{\cal N}=4} \nn \\
+	% \nu_a &\to& \bP_a^{{\cal N}=4},
+% \eeqa
+% algebraically we recover the $\N=4$ super Yang-Mills $\pmu$-system equations, however their analytical properties are interchanged.
 
-\subsubsection{Exact interpolating function}
+% \subsubsection{Exact interpolating function}
 
-Finally let us very briefly remark on how an exact expression for the interpolating function $h(\lambda)$ was found using the algebraic curve construction \cite{Gromov:2014eha}.
-The result is found quite unexpectedly as a side effect of derivation of the exact slope function.
-Since the quantum algebraic curve is an integrability construct, it is formulated in terms of the interpolating function $h(\lambda)$. 
-The strategy is to compare an exact result obtained using integrability, which in this case is the slope, to an exact result computed in some other method.
-The authors of \cite{Gromov:2014eha} noticed that an exact result for the expectation value of a $1/6$ BPS Wilson loop \cite{Marino:2009jd} (which in $\N=4$ super Yang-Mills is known to be similar to the slope function) found using the localization technique contained expressions very similar to theirs.
-With a suitable change of variables they were able to match their expressions and extract a conjecture for the interpolating function
-\beq
-	\lambda = \frac{\sinh(2\pi h)}{2\pi} {}_3 F_2\( \frac{1}{2},\frac{1}{2},\frac{1}{2};1,\frac{3}{2};-\sinh^2 \( 2\pi h \) \).
-\eeq
-The weak and strong coupling expansions are given by
-\beq 
-  h(\lambda) = \begin{cases} 
-    \lambda-\frac{\pi^2
-   \lambda^3}{3}+\frac{5 \pi^4
- \lambda^5}{12}-\frac{893 \pi^6 \lambda
-^7}{1260}+{\cal O}(\lambda^9)  \\[2mm]
-    \sqrt{\frac{1}{2}\left(\lambda-\frac{1}{24}\right)
-   }-\frac{\log 2}{2 \pi }+{\cal O}\left(
-   e^{-
-    \pi  \sqrt{8\lambda
-   }}\right)  \;,
-  \end{cases}
-\eeq
-which reproduced all known coefficients at weak and strong coupling at the time, a total of four non-trivial coefficients \cite{Minahan:2009aq,Leoni:2010tb,McLoughlin:2008he,Abbott:2010yb,LopezArcos:2012gb}.
-It was further checked with an explicit two-loop strong coupling calculation \cite{Bianchi:2014ada}.
+% Finally let us very briefly remark on how an exact expression for the interpolating function $h(\lambda)$ was found using the algebraic curve construction \cite{Gromov:2014eha}.
+% The result is found quite unexpectedly as a side effect of derivation of the exact slope function.
+% Since the quantum algebraic curve is an integrability construct, it is formulated in terms of the interpolating function $h(\lambda)$. 
+% The strategy is to compare an exact result obtained using integrability, which in this case is the slope, to an exact result computed in some other method.
+% The authors of \cite{Gromov:2014eha} noticed that an exact result for the expectation value of a $1/6$ BPS Wilson loop \cite{Marino:2009jd} (which in $\N=4$ super Yang-Mills is known to be similar to the slope function) found using the localization technique contained expressions very similar to theirs.
+% With a suitable change of variables they were able to match their expressions and extract a conjecture for the interpolating function
+% \beq
+	% \lambda = \frac{\sinh(2\pi h)}{2\pi} {}_3 F_2\( \frac{1}{2},\frac{1}{2},\frac{1}{2};1,\frac{3}{2};-\sinh^2 \( 2\pi h \) \).
+% \eeq
+% The weak and strong coupling expansions are given by
+% \beq 
+  % h(\lambda) = \begin{cases} 
+    % \lambda-\frac{\pi^2
+   % \lambda^3}{3}+\frac{5 \pi^4
+ % \lambda^5}{12}-\frac{893 \pi^6 \lambda
+% ^7}{1260}+{\cal O}(\lambda^9)  \\[2mm]
+    % \sqrt{\frac{1}{2}\left(\lambda-\frac{1}{24}\right)
+   % }-\frac{\log 2}{2 \pi }+{\cal O}\left(
+   % e^{-
+    % \pi  \sqrt{8\lambda
+   % }}\right)  \;,
+  % \end{cases}
+% \eeq
+% which reproduced all known coefficients at weak and strong coupling at the time, a total of four non-trivial coefficients \cite{Minahan:2009aq,Leoni:2010tb,McLoughlin:2008he,Abbott:2010yb,LopezArcos:2012gb}.
+% It was further checked with an explicit two-loop strong coupling calculation \cite{Bianchi:2014ada}.
 
-It is interesting to note that under the identification of the localization result and the exact slope function the eigenvalues of the Wilson loop matrix model were mapped to the spectral parameter $u$, which would suggest a unified structure being probed by localization and integrability.
-It is tempting to suggest a generalization of the quantum spectral curve construction for the non-planar regime by discretizing the Zhukovsky cuts on the $u$ plane to some eigenvalues.
-An explicit realization of this idea, if it is indeed possible, would be an important step to solving the $AdS/CFT$ dualities at a finite number of colours $N$. 
+% It is interesting to note that under the identification of the localization result and the exact slope function the eigenvalues of the Wilson loop matrix model were mapped to the spectral parameter $u$, which would suggest a unified structure being probed by localization and integrability.
+% It is tempting to suggest a generalization of the quantum spectral curve construction for the non-planar regime by discretizing the Zhukovsky cuts on the $u$ plane to some eigenvalues.
+% An explicit realization of this idea, if it is indeed possible, would be an important step to solving the $AdS/CFT$ dualities at a finite number of colours $N$. 
