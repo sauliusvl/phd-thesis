@@ -251,9 +251,10 @@ thus reducing the Y-system to the T-system
 \eeq
 also known as the Hirota discrete bilinear equation, a well studied object in the context of classical integrability.
 The T-functions are defined on the lattice points of the T-hook shown on the right of figure \ref{fig:yt_hooks}.
-The advantage of this reformulation is that solutions of the T-system can be parametrized in terms of Wronskians built from eight independent $\mathcal{Q}$-functions, which have much simpler analytic properties than the Y-functions \cite{Gromov:2010km}.
+The advantage of this reformulation is that solutions of the T-system can be parametrized in terms of Wronskians built from eight independent $\mathcal{Q}$-functions, which have much simpler analytic properties than the Y-functions \cite{Gromov:2010km}. 
+The exact formulae expressing the $T$s in terms of the $\mathcal{Q}$s are very involved, see \cite{Gromov:2010km} for details.
 One can then build up a total of $2^8$ $\mathcal{Q}$--functions denoted by $\mathcal{Q}_{A|J}(u)$ where $A,J \in \{1,2,3,4\}$ are two ordered subsets of indices.
-These functions are defined through the QQ-relations
+These functions are defined through the QQ-relations by reshuffling indices, denoted by $a, b, i, j$, as
 \begin{subequations}\label{definingQQ}
     \begin{align}
        \label{QQbb}
@@ -265,9 +266,10 @@ These functions are defined through the QQ-relations
        \mathcal{Q}_{A|I i}^{-} \mathcal{Q}_{A|I j}^{+}\,,\\
        \label{QQbf}
        \mathcal{Q}_{A a|I}\mathcal{Q}_{A|I i} &= \mathcal{Q}_{A a|I i}^{+}\mathcal{Q}_{A|I}^{-}-
-       \mathcal{Q}_{A|I}^{+} \mathcal{Q}_{A a|I i}^{-}. \,
+       \mathcal{Q}_{A|I}^{+} \mathcal{Q}_{A a|I i}^{-}, \,
      \end{align}
 \end{subequations} 
+where $\pm$ superscripts denote shifts in the spectral parameter by $\pm i/2$.
 In addition we impose the constraints $\mathcal{Q}_{\emptyset |\emptyset}=\mathcal{Q}_{1234|1234}=1$ coming from normalization and the unimodularity of the superconformal group.
 A dual QQ system can then be introduced by $\mathcal{Q}^{A|J}\equiv (-1)^{|A|\;|J|}\mathcal{Q}_{\bar A|\bar J}$ which satisfies the same QQ-relations.
 Here  the bar over a subset means the subset complementary with respect to the full~set $\{1,2,3,4\}$ and  $|X|$ denotes the number of indexes in $X$. 
