@@ -812,7 +812,7 @@ For that we combine the periodicity constraint \eq{muper} with \eq{eq:Pmu} and \
 \beq\label{5bax}
 \mu_{ab}(u+i)=\mu_{ab}(u)-\mu_{bc}(u)\chi^{cd}\bP_d\bP_a+\mu_{ac}(u)\chi^{cd}\bP_d\bP_b.
 \eeq
-As there are $5$ linear independent components of $\mu_{ab}$ this is a 5th order finite-difference equation which has $5$ independent solutions which we denote $\mu_{ab,A},\;A=1,\dots,5$.
+As there are $5$ linear independent components of $\mu_{ab}$ this is a 5th order finite-difference equation.
 Given the asymptotics of $\bP_a$ in \eq{eq:asymptotics} and \eq{AA1}, \eq{AA2} there are exactly $5$ different asymptotics a solution of \eq{5bax} could have as discussed in \cite{Gromov:2013pga}.
 We denote these $5$ independent solutions of \eq{5bax} as $\mu_{12,A}$ where $A=1,\dots,5$ and summarize their leading asymptotics at large $u>0$ in the table below
 \beq
@@ -1754,7 +1754,7 @@ We should also note that this result was also found in a completely different ma
 An obvious complication in the formulation of the result \eq{eq:mainresultIntro} is that it contains determinants of $(2L+1)\times (2L+1)$ sized matrices, which is very problematic if one wants to take the large $L$ limit. 
 It becomes considerably easier once we realize that the cusp anomalous dimension can be expressed in terms of an expectation value of some operator in a matrix model. 
 %In this section we will show how to use this approach to find the large $N$ expansion of the determinant of ${\cal M}_N$ defined in \eq{eq:M}.
-One can check that the quantities $I^\theta_n$ defined in the previous section can be rewritten in the following integral representation
+One can check that the quantities $I^\theta_n$ defined in \eq{eq:M} can be rewritten in the following integral representation
 \begin{equation}
 	I_n^\theta = \frac{1}{2\pi i} \oint \frac{dx}{x^{n+1}} \sinh(2\pi g \, (x + 1/x)) \, e^{2 g \theta (x - 1/x)},
 \end{equation}
@@ -1917,9 +1917,10 @@ We use this condition to fix $A_1$ and we get
 \eeq
 where
 \beq
-E_1=\mathbb{E}\(a^2\sin^2(\psi)\),\;K_1=\mathbb{K}\(a^2\sin^2(\psi)\),\;a = \frac{2r}{r^2+1}.
+E_1=\mathbb{E}\(a^2\sin^2(\psi)\),\;K_1=\mathbb{K}\(a^2\sin^2(\psi)\),\;a = \frac{2r}{r^2+1}
 \label{eq:E1K1}
 \eeq
+and $\mathbb{K}, \mathbb{E}$ are complete elliptic integrals of the first and second kind.
 Finally we can use the $x \rightarrow -1/x$ symmetry on the quasi-momentum itself, as before we only used it on the derivative. Imposing the symmetry yields
 \beq
 	A_3 = \frac{8}{a}\(E_1+K_1-2\,a^2\,\cos^2(\psi)K_1\).
@@ -1934,8 +1935,9 @@ where
 	\mathbb{F}_1(x) = \mathbb{F}\left( \left. \sin^{-1} \sqrt{ \left( \frac{x -r e^{-i\psi}}{x+ \frac{1}{r} e^{i\psi}} \right) \left( \frac{ e^{ i \psi}}{ia\,r\sin\psi} \right)} \; \right| a^2 \sin^2(\psi) \right),
 \end{equation}
 \begin{equation}
-	\mathbb{F}_2(x) = \mathbb{E}\left( \left. \sin^{-1} \sqrt{ \left( \frac{x -r e^{-i\psi}}{x+ \frac{1}{r} e^{i\psi}} \right) \left( \frac{ e^{ i \psi}}{ia\,r\sin\psi} \right) } \; \right| a^2 \sin^2(\psi) \right).
+	\mathbb{F}_2(x) = \mathbb{E}\left( \left. \sin^{-1} \sqrt{ \left( \frac{x -r e^{-i\psi}}{x+ \frac{1}{r} e^{i\psi}} \right) \left( \frac{ e^{ i \psi}}{ia\,r\sin\psi} \right) } \; \right| a^2 \sin^2(\psi) \right)
 \end{equation}
+and $\mathbb{F}, \mathbb{E}$ are incomplete elliptic integrals of the first and second kind.
 We verified this result numerically by comparing it to the extrapolation of the discrete quasi-momentum \eq{eq:quantum_quasimomentum} at large $L$ and got an agreement up to thirty digits. 
 We also compared this expression at $\theta = 0$ with the quasi-momentum obtained in \cite{Gromov:2012eu} and the expressions agree perfectly.
 The resulting quasi-momentum is parametrized in terms of the branchpoints, i.e. the parameters are the radius $r$ and angle $\psi$. 

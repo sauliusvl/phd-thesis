@@ -18,7 +18,7 @@ After discussing results achievable via integrability in the perturbative regime
 We begin with two point correlation functions of local operators.
 In any conformal field theory they are constrained by symmetry, namely for operators that are eigenvalues of dilatations they have the following form at all loop levels up to unphysical normalization factors \cite{Belavin:1984ab, Osborn:1993cr}
 \begin{equation}
-	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta}},
+	\left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> = \frac{1}{|x-y|^{2\Delta}},
 \end{equation}
 where $\Delta$ is the scaling dimension of the operator. 
 Classically $\Delta = \Delta_0$ is simply the mass dimension, but at the quantum level it receives radiative corrections and acquires an anomalous dimension $\gamma$, such that $\Delta(g_{YM}) = \Delta_0 + \gamma(g_{YM})$, where the anomalous dimension depends on the coupling. 
@@ -26,7 +26,7 @@ Usually the corrections are small and the correlator can be expanded perturbativ
 Of course one has to be careful here, as expanding in $\gamma$ would result in expressions like $\log|x-y|$, which do not make sense. 
 To that end we introduce a scale $\mu$ and expand the following quantity instead 
 \begin{equation}
-	\mu^{-2\gamma} \left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> \approx \frac{1}{|x-y|^{2\Delta_0}} \left(1 - \gamma \log \mu^2 |x-y|^2 \right),
+	\mu^{-2\gamma} \left< \mathcal{O}(x) \, \tilde{\mathcal{O}}(y) \right> = \frac{1}{|x-y|^{2\Delta_0}} \left(1 - \gamma \log \mu^2 |x-y|^2 \right),
 	\label{eq:anomdim_expansion}
 \end{equation}
 however we will formally assume that the factor $\mu^{-\gamma}$ is absorbed into the field definition and thus we will ignore it from now on. We can now take some explicit local operator $\mathcal{O}(x)$, calculate the correlator using perturbation theory and read off the anomalous dimension $\gamma$.
@@ -37,7 +37,7 @@ Let us start with a very simple chiral primary operator
 \end{equation}
 where the complex scalar field $Z$ and its conjugate $\tilde{Z}$ have the standard tree level correlators
 \begin{equation}
-	\left< {Z^a}_b(x) {{\tilde{Z^{b'}}}}_{a'}(y) \right>_{\mathrm{tree}} \approx \frac{{\delta^a}_{a'} {\delta_b}^{b'}}{|x-y|^{2}}.
+	\left< {Z^a}_b(x) {{\tilde{Z^{b'}}}}_{a'}(y) \right>_{\mathrm{tree}} = \frac{{\delta^a}_{a'} {\delta_b}^{b'}}{|x-y|^{2}}.
 	\label{eq:z_correlator}
 \end{equation}  
 In order to find the anomalous dimension of the operator $\Psi$ we must calculate the correlator $\langle\Psi(x) \tilde{\Psi}(x)\rangle$. We do this by using Wick's theorem and plugging in the two-point correlator (\ref{eq:z_correlator}), which produces a lot of terms with delta function contractions between the adjoint indices. Some examples are
@@ -120,12 +120,12 @@ All that's left then are cyclic permutations of lines by shifting all of them as
 There are $L-1$ shifts that can be done in this way, since after making a full circle we return to the initial configuration. 
 Thus finally for the chiral primary correlator at tree level we find
 \begin{equation}
-	\left< \Psi(x) \, \tilde{\Psi}(y) \right>_{\mathrm{tree}} \approx \frac{L N^L}{|x-y|^{2L}},
+	\left< \Psi(x) \, \tilde{\Psi}(y) \right>_{\mathrm{tree}} = \frac{L N^L}{|x-y|^{2L}},
 \end{equation}
 where $N^L$ comes from the contractions and $L$ from all the possible planar ways we can contract. 
 This can easily be generalized for correlators of operators with arbitrary scalar fields $\Phi_{I_1 I_2 \dots I_L}(x) = \tr \left[ \Phi_{I_1}(x) \Phi_{I_2}(x) \dots \Phi_{I_L}(x) \right]$ to
 \begin{equation}
-	\left< \Phi_{I_1 I_2 \dots I_L}(x) \, \tilde{\Phi}^{J_1 J_2 \dots J_L}(y)  \right>_{\mathrm{tree}} \approx \frac{1}{|x-y|^{2L}} \left( \delta_{I_1}^{J_1} \delta_{I_2}^{J_2} \dots \delta_{I_L}^{J_L} + \mathrm{cycles} \right),
+	\left< \Phi_{I_1 I_2 \dots I_L}(x) \, \tilde{\Phi}^{J_1 J_2 \dots J_L}(y)  \right>_{\mathrm{tree}} = \frac{1}{|x-y|^{2L}} \left( \delta_{I_1}^{J_1} \delta_{I_2}^{J_2} \dots \delta_{I_L}^{J_L} + \mathrm{cycles} \right),
 	\label{eq:tree_correlator}
 \end{equation}
 where ``cycles'' refers to terms with the $J$ indices pushed. 
@@ -237,6 +237,7 @@ We neglect it since operators in this sector do not contain both scalars and the
 Up to a constant factor this is the same as the Hamiltonian for the Heisenberg spin chain (also called the XXX spin chain), which is a quantum description of a one dimensional magnet. 
 The Hamiltonian is given by
 \begin{equation}
+	\label{eq:su2_hamiltonian}
 	\mathbf{H} = \sum_{l=1}^L \left(1 - \mathcal{P}_{l,l+1} \right),
 \end{equation}
 which can also be rewritten in terms of Pauli matrices as
@@ -281,7 +282,7 @@ is an eigenstate of the Hamiltonian with zero energy, i.e. it is the ferromagnet
 This is expected, since we know that chiral primaries have zero anomalous dimensions. 
 Another eigenstate of the Hamiltonian is the \emph{single magnon} state, defined as
 \begin{equation}
-	\ket{p} = \sum_{n=1}^L e^{ipn} \ket{n},
+	\ket{\psi^{(p)}} = \sum_{n=1}^L e^{ipn} \ket{n},
 \end{equation} 
 where $\ket{n}$ is the ground state with the $n$'th spin flipped,
 \begin{equation}
@@ -293,30 +294,30 @@ Due to the cyclicity of the chain the momentum is quantized,
 	p = \frac{2\pi}{L} n, \,\,\,\,\, n \in \mathbb{Z},
 \end{equation}
 where $n$ is the mode number. 
-The energy of the excitation is given by the dispersion relation
+The energy of the excitation is given by the dispersion relation, which we find using the Hamiltonian \eq{eq:su2_hamiltonian},
 \begin{equation}
 	E(p) = 4 \, \mathrm{sin}^2 \, \frac{p}{2}.
 	\label{eq:magnon_energy}
 \end{equation}
 Now consider a two magnon state
 \begin{equation}
-	\ket{\psi} = \sum_{n<m} \psi(n, m) \, \ket{n,m},  \,\,\,\,\, \ket{n,m} = S^-_n \, S^-_m \, \ket{0}.
+	\ket{\psi^{(k,p)}} = \sum_{n<m} \psi^{(k,p)}(n, m) \, \ket{n,m},  \,\,\,\,\, \ket{n,m} = S^-_n \, S^-_m \, \ket{0},
 \end{equation}
-The situation is not so trivial this time, since the two magnons might scatter among themselves. We now plug this into (\ref{eq:Schrodinger}) and find the conditions for $\psi(n,m)$, which are
+where $k$ and $p$ are the momenta of the excitations. The situation is not so trivial this time, since the two magnons might scatter among themselves. We now plug this into (\ref{eq:Schrodinger}) and find the conditions for $\psi^{(k,p)}(n,m)$, which are
 \begin{equation}
 \begin{split}
-	E \, \psi(n,m) = 4 \, \psi(n,m) & -  \psi(n+1,m)  -  \psi(n-1,m) \\ 
-	                              & -  \psi(n, m+1)  -  \psi(n, m-1)
+	E \, \psi^{(k,p)}(n,m) = 4 \, \psi^{(k,p)}(n,m) & -  \psi^{(k,p)}(n+1,m)  -  \psi^{(k,p)}(n-1,m) \\ 
+	                              & -  \psi^{(k,p)}(n, m+1)  -  \psi^{(k,p)}(n, m-1),
 \end{split}
 \end{equation}
 when $m > n+1$ and
 \begin{equation}
-	E \, \psi(n, n+1) = 2 \, \psi(n, n+1) - \psi(n-1, n+1) - \psi(n, n+2)
+	E \, \psi^{(k,p)}(n, n+1) = 2 \, \psi^{(k,p)}(n, n+1) - \psi^{(k,p)}(n-1, n+1) - \psi^{(k,p)}(n, n+2),
 \end{equation}
 when $m = n+1$, i.e. when the two magnons scatter. 
 The solution is now a superposition of single magnon states
 \begin{equation}
-	\psi(n,m) = e^{ikn + ipm} + S(k,p) e^{ipn + ikm},
+	\psi^{(k,p)}(n,m) = e^{ikn + ipm} + S(k,p) e^{ipn + ikm},
 \end{equation}
 where
 \begin{equation}
@@ -335,11 +336,11 @@ Finally the spin chain periodicity condition imposes the following equations
 It is now straightforward to generalize this procedure, which is exactly what Bethe did. 
 The wave function for $M$ spins down can be written as
 \begin{equation}
-	\ket{\psi} = \sum_{1 \leq l_1 < l_2 < \dots < l_M \leq L} \psi(l_1, l_2, \dots, l_M) \, S^-_{l_1} \, S^-_{l_2} \, \dots \, S^-_{l_M} \, \ket{0}.
+	\ket{\psi^{(p_1,p_2,\dots,p_M)}} = \sum_{1 \leq l_1 < l_2 < \dots < l_M \leq L} \psi^{(p_1,p_2,\dots,p_M)}(l_1, l_2, \dots, l_M) \, S^-_{l_1} \, S^-_{l_2} \, \dots \, S^-_{l_M} \, \ket{0}.
 \end{equation}
 The sum is chosen in a way so as not to over count states. The Bethe ansatz is the educated guess of the wave function
 \begin{equation}
-	\psi(l_1, l_2, \dots, l_M) = \sum_{\sigma \, \in \; perm(1,2,\dots\,M)} A(p) \, e^{ip_{\sigma_1} l_1 + ip_{\sigma_2} l_2 + \dots + ip_{\sigma_M} l_M}, 
+	\psi^{(p_1,p_2,\dots,p_M)}(l_1, l_2, \dots, l_M) = \sum_{\sigma \, \in \; perm(1,2,\dots\,M)} A(p) \, e^{ip_{\sigma_1} l_1 + ip_{\sigma_2} l_2 + \dots + ip_{\sigma_M} l_M}, 
 \end{equation}
 where the sum runs over all permutations of the down spin labels $1, 2, \dots, M$. 
 $p_i$ are the momenta of the down spins, which can be treated as excitations moving in the vacuum state of the spin chain. 
@@ -485,10 +486,10 @@ Surprisingly the only changes that have to be introduced are the rapidity map
 \beq
 	u_k + \frac{i}{2} V_k \rightarrow x\(u_k + \frac{i}{2} V_k\), \;\;\; u(x) = x + \sum_{k=3}^\infty \frac{\alpha_k}{x^{k-2}},
 \eeq
-and the dressing phase for the scattering matrix
+and the dressing phase $\sigma^2(u_k, u_j)$ for the scattering matrix
 \beq
 	\label{eq:deformed_dressing}
-	S(u_k - u_j) \rightarrow S(u_k - u_j) \exp\( 2i\theta(u_k, u_j) \),
+	S(u_k, u_j) \rightarrow S(u_k, u_j) \, \sigma^2(u_k, u_j) \equiv S(u_k, u_j) \exp\( 2i\theta(u_k, u_j) \) ,
 \eeq
 with
 \beq
@@ -496,7 +497,7 @@ with
 	\theta(u_k, u_j) = \sum_{s>r=2}^\infty \beta_{r,s} \( q_r(u_k)q_s(u_j) - q_s(u_k)q_r(u_j) \),
 \eeq
 where $q_r(u_k)$ is the eigenvalue of the conserved charge $\mathbf{Q}_r$ on the single magnon state $\ket{u_k}$.
-The constants $\alpha_k$ and $\beta_{r,s}$ contain dynamical information about the theory and should be determined by other means, such as loop calculations.
+The constants $\alpha_k$ and $\beta_{r,s}$ contain dynamical information about the theory and should be determined by other means, such as loop calculations \cite{Bargheer:2009xy}.
 
 Going higher up in loops poses an additional complication, namely the fact that interactions get long ranged and can start wrapping around short operators, this is the so-called \emph{wrapping problem}.
 For starters it is easiest to avoid it by considering asymptotically long operators. 
@@ -620,7 +621,7 @@ We fix the final unknown $\gamma^{(1)}$ by requiring analyticity at the origin, 
 \beq
 	I_\nu(\Lambda) = \frac{(-1)^{-\nu}}{2\pi i} \oint dy \; y^{\nu-1} e^{\Lambda \frac{y^2+1}{2y}},
 \eeq
-where the integration contour starts at the origin, goes around counter-clockwise and returns to the origin. 
+where the integration contour goes around the origin counter-clockwise. 
 Since this integral has no branchpoints at the origin, we see that if we tune the integrand of \eq{eq:Gfinal} in the following way
 \beq
 	\gamma^{(1)} J (-1)^J I_J(\Lambda) + \Lambda S (-1)^{J+1} I_{J+1}(\Lambda) = 0,
@@ -771,18 +772,18 @@ Thus we see that we can characterize the quasi-momenta by describing their behav
 Finally one may ask how this picture of Riemann surfaces with cuts emerges from the gauge theory perspective where the spectrum is described by the Bethe ansatz. 
 In the scaling limit when lengths of operators become large the Bethe roots $u_i$ start condensing in the complex plane and start looking like cuts. 
 Naturally it is tempting to interpret the cuts of the algebraic curve as collections of very large numbers of poles.
-Ultimately a string Bethe ansatz was proposed describing the distribution of these poles \cite{Arutyunov:2004vx},
+Ultimately a string Bethe ansatz was proposed by Arutyunov, Frolov and Staudacher describing the distribution of these poles \cite{Arutyunov:2004vx},
 \beq
-	\(\frac{x_j^+}{x_j^-}\)^L = \prod_{j\neq i}^M \frac{u_i - u_j + i}{u_i - u_j - i} \sigma^2_{AFS}(u_i, u_j),
+	\(\frac{x_j^+}{x_j^-}\)^L = \prod_{j\neq i}^M \frac{u_i - u_j + i}{u_i - u_j - i} \, \sigma^2_{AFS}(u_i, u_j),
 \eeq
-where $\sigma_{AFS}$ is the dressing phase.
+where $\sigma_{AFS}$ is the dressing phase found at strong coupling.
 Compared to the asymptotic Bethe ansatz for the $\alg{su}{2}$ sector
 \beq
 	\(\frac{x_j^+}{x_j^-}\)^L = \prod_{j\neq i}^M \frac{u_i - u_j + i}{u_i - u_j - i},
 \eeq
 it is natural to assume that there should be an interpolating Bethe ansatz valid to all orders of the coupling constant.
 Indeed the all-loop asymptotic Bethe ansatz for the full superconformal algebra was formulated \cite{Beisert:2005fw} as we described briefly in the previous sections, which interpolated nicely between gauge theory and the algebraic curve. 
-In particular the dressing phase $\sigma_{AFS}$ is a limit of the full dressing phase \eq{eq:deformed_dressing} one finds when deforming to long range spin chains.
+In particular the dressing phase $\sigma_{AFS}$ is a strong coupling limit of the full dressing phase \eq{eq:deformed_dressing} one finds when deforming to long range spin chains.
 
 \subsubsection{Quantization and semi-classics}
 
@@ -1086,7 +1087,7 @@ We note that the contributions ${\cal S}^2/{\cal J}^3$ are universal for $n=1$ a
 \subsection{Short strings}
 \label{sec:short_strings}
 
-Even though semi-classical results are technically only valid for the charges scaling as $\sqrt{\lambda}$, there is evidence that re-expanding the classical energy plus the one-loop shift yields a reasonable result in terms of the unscaled charges $J$ and $S$ \cite{Roiban:2009aa}, thus providing one the possibility to probe so-called short string states, the Konishi operator being a prime example.
+Even though semi-classical results are technically only valid for the charges scaling as $\sqrt{\lambda}$, there is evidence \cite{Roiban:2009aa} that re-expanding the classical energy plus the one-loop shift yields a reasonable result in terms of the unscaled charges $J$ and $S$, thus providing one the possibility to probe so-called short string states, the Konishi operator being a prime example.
 Namely summing up the square root of \eq{eq:classical_energy} and \eq{delta_oneloop_sj}, introducing the unscaled charges $S = \sqrt{\mu}\, \mathcal{S}$, $J = \sqrt{\mu}\, \mathcal{J}$ and re-expanding in terms of $\mu \equiv n^2 \lambda$ yields the following one-loop energy for the folded string solution \cite{Gromov:2011de}
 \beq
 \Delta_{S,J,n}\simeq\sqrt{2S}\mu^{1/4}
